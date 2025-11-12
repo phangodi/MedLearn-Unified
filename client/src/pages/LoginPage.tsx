@@ -87,7 +87,7 @@ export function LoginPage() {
             </motion.div>
             <div className="text-center space-y-2">
               <CardTitle className="text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                MedLearn
+                Lara's MedLearn
               </CardTitle>
               <CardDescription className="text-base">
                 Your AI-Powered Medical Study Companion
