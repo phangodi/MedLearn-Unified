@@ -71,9 +71,9 @@ export function DashboardPage() {
       {/* Angled background pattern */}
       <AngledBackground />
 
-      {/* Decorative borders */}
-      <div className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-primary opacity-30 z-10" />
-      <div className="fixed top-0 left-0 bottom-0 w-1 bg-gradient-to-b from-primary via-secondary to-primary opacity-20 z-10" />
+      {/* Decorative borders - More visible */}
+      <div className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-primary z-10 opacity-60" />
+      <div className="fixed top-0 left-0 bottom-0 w-1 bg-gradient-to-b from-primary via-secondary to-primary z-10 opacity-50" />
 
       {/* Sidebar */}
       <Sidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
@@ -82,17 +82,8 @@ export function DashboardPage() {
       <div className="flex-1 flex flex-col lg:ml-0">
         {/* Top header */}
         <header className="sticky top-0 z-20 bg-card/80 backdrop-blur-lg border-b border-border">
-          <div className="container mx-auto px-4 lg:px-8 py-4">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-4">
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent lg:block hidden">
-                  Lara's MedLearn
-                </h1>
-                <span className="text-sm text-muted-foreground hidden md:block">
-                  Your Medical Study Desktop
-                </span>
-              </div>
-
+          <div className="px-4 lg:px-8 py-4">
+            <div className="flex items-center justify-end">
               <div className="flex items-center space-x-2">
                 <ThemeToggle />
                 <Button variant="ghost" size="sm" onClick={handleLogout}>
