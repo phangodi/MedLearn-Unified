@@ -71,9 +71,9 @@ export function DashboardPage() {
       {/* Angled background pattern */}
       <AngledBackground />
 
-      {/* Narrow decorative border bands (Compass-style) */}
-      <div className="fixed top-0 left-0 right-0 h-2 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 z-50 border-b border-primary/30" />
-      <div className="fixed top-0 left-0 bottom-0 w-2 bg-gradient-to-b from-primary/20 via-secondary/20 to-primary/20 z-50 border-r border-primary/30" />
+      {/* Narrow decorative border bands (Compass-style) - INCREASED VISIBILITY */}
+      <div className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/50 via-secondary/40 to-primary/50 z-50 shadow-sm" />
+      <div className="fixed top-0 left-0 bottom-0 w-1 bg-gradient-to-b from-primary/50 via-secondary/40 to-primary/50 z-50 shadow-sm" />
 
       {/* Sidebar */}
       <Sidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
