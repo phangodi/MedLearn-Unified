@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { useNavigate } from 'react-router-dom'
 import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
 import { Label } from '@/components/ui/Label'
@@ -7,14 +8,29 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import { Activity } from 'lucide-react'
 
+// TEMPORARY: Demo credentials for development
+// TODO: Remove this when implementing real authentication
+const DEMO_EMAIL = 'demo@medlearn.com'
+const DEMO_PASSWORD = 'demo'
+
 export function LoginPage() {
+  const navigate = useNavigate()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [error, setError] = useState('')
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Login attempt:', { email, password })
-    // TODO: Implement actual login logic
+    setError('')
+
+    // TEMPORARY: Check for demo credentials
+    // TODO: Replace with real authentication
+    if (email === DEMO_EMAIL && password === DEMO_PASSWORD) {
+      console.log('✅ Demo login successful')
+      navigate('/dashboard')
+    } else {
+      setError('Invalid credentials. Try: demo@medlearn.com / demo')
+    }
   }
 
   return (
@@ -81,6 +97,29 @@ export function LoginPage() {
 
           <form onSubmit={handleSubmit}>
             <CardContent className="space-y-4">
+              {/* Demo credentials hint */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.2 }}
+                className="p-3 rounded-lg bg-primary/10 border border-primary/20"
+              >
+                <p className="text-xs text-primary font-medium">
+                  🔓 <strong>Demo Mode:</strong> Use <code className="bg-primary/20 px-1 rounded">demo@medlearn.com</code> / <code className="bg-primary/20 px-1 rounded">demo</code>
+                </p>
+              </motion.div>
+
+              {/* Error message */}
+              {error && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  className="p-3 rounded-lg bg-destructive/10 border border-destructive/20"
+                >
+                  <p className="text-sm text-destructive">{error}</p>
+                </motion.div>
+              )}
+
               <motion.div
                 initial={{ x: -20, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
@@ -91,7 +130,7 @@ export function LoginPage() {
                 <Input
                   id="email"
                   type="email"
-                  placeholder="student@medschool.edu"
+                  placeholder="demo@medlearn.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
