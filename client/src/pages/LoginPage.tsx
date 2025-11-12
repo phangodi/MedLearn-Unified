@@ -23,13 +23,13 @@ export function LoginPage() {
     e.preventDefault()
     setError('')
 
-    // TEMPORARY: Check for demo credentials
+    // TEMPORARY: Check for demo credentials (hidden bypass)
     // TODO: Replace with real authentication
     if (email === DEMO_EMAIL && password === DEMO_PASSWORD) {
       console.log('✅ Demo login successful')
       navigate('/dashboard')
     } else {
-      setError('Invalid credentials. Try: demo@medlearn.com / demo')
+      setError('Invalid email or password. Please try again.')
     }
   }
 
@@ -97,19 +97,6 @@ export function LoginPage() {
 
           <form onSubmit={handleSubmit}>
             <CardContent className="space-y-4">
-              {/* Demo credentials hint */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.2 }}
-                className="p-3 rounded-lg bg-primary/10 border border-primary/20"
-              >
-                <p className="text-xs text-primary font-medium">
-                  🔓 <strong>Demo Mode:</strong> Use <code className="bg-primary/20 px-1 rounded">demo@medlearn.com</code> / <code className="bg-primary/20 px-1 rounded">demo</code>
-                </p>
-              </motion.div>
-
-              {/* Error message */}
               {error && (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
@@ -130,7 +117,7 @@ export function LoginPage() {
                 <Input
                   id="email"
                   type="email"
-                  placeholder="demo@medlearn.com"
+                  placeholder="student@medschool.edu"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
