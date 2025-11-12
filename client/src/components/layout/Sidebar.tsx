@@ -12,7 +12,8 @@ import {
   Home,
   Settings,
   Menu,
-  X
+  X,
+  ChevronLeft
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 
@@ -22,6 +23,7 @@ interface SidebarProps {
 }
 
 export function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
+  const [isCollapsed, setIsCollapsed] = useState(false)
   const [expandedSections, setExpandedSections] = useState<string[]>(['subjects'])
 
   const toggleSection = (section: string) => {
@@ -52,9 +54,11 @@ export function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
           <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
             <span className="text-white font-bold text-sm">L</span>
           </div>
-          <span className="font-bold text-lg bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            Lara's MedLearn
-          </span>
+          {!isCollapsed && (
+            <span className="font-bold text-lg bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              Lara's MedLearn
+            </span>
+          )}
         </div>
         <Button
           variant="ghost"
@@ -71,7 +75,7 @@ export function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
         {/* Dashboard */}
         <button className="w-full flex items-center space-x-3 px-3 py-2 rounded-lg hover:bg-accent transition-colors text-left">
           <Home className="w-5 h-5 text-muted-foreground" />
-          <span className="text-sm font-medium">Dashboard</span>
+          {!isCollapsed && <span className="text-sm font-medium">Dashboard</span>}
         </button>
 
         {/* Subjects Section */}
@@ -81,17 +85,17 @@ export function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
             className="w-full flex items-center justify-between px-3 py-2 rounded-lg hover:bg-accent transition-colors text-left"
           >
             <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
-              Subjects
+              {!isCollapsed ? 'Subjects' : 'SUB'}
             </span>
-            {expandedSections.includes('subjects') ? (
+            {!isCollapsed && (expandedSections.includes('subjects') ? (
               <ChevronDown className="w-4 h-4 text-muted-foreground" />
             ) : (
               <ChevronRight className="w-4 h-4 text-muted-foreground" />
-            )}
+            ))}
           </button>
 
           <AnimatePresence>
-            {expandedSections.includes('subjects') && (
+            {expandedSections.includes('subjects') && !isCollapsed && (
               <motion.div
                 initial={{ height: 0, opacity: 0 }}
                 animate={{ height: 'auto', opacity: 1 }}
@@ -116,6 +120,24 @@ export function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
               </motion.div>
             )}
           </AnimatePresence>
+
+          {/* Collapsed view - show icons only */}
+          {isCollapsed && (
+            <div className="space-y-1 pt-1">
+              {subjects.map((subject) => {
+                const Icon = subject.icon
+                return (
+                  <button
+                    key={subject.name}
+                    className="w-full flex items-center justify-center px-3 py-2 rounded-lg hover:bg-accent transition-colors"
+                    title={subject.name}
+                  >
+                    <Icon className={`w-5 h-5 ${subject.color}`} />
+                  </button>
+                )
+              })}
+            </div>
+          )}
         </div>
 
         {/* Tools Section */}
@@ -125,17 +147,17 @@ export function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
             className="w-full flex items-center justify-between px-3 py-2 rounded-lg hover:bg-accent transition-colors text-left"
           >
             <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
-              Tools
+              {!isCollapsed ? 'Tools' : 'TOO'}
             </span>
-            {expandedSections.includes('tools') ? (
+            {!isCollapsed && (expandedSections.includes('tools') ? (
               <ChevronDown className="w-4 h-4 text-muted-foreground" />
             ) : (
               <ChevronRight className="w-4 h-4 text-muted-foreground" />
-            )}
+            ))}
           </button>
 
           <AnimatePresence>
-            {expandedSections.includes('tools') && (
+            {expandedSections.includes('tools') && !isCollapsed && (
               <motion.div
                 initial={{ height: 0, opacity: 0 }}
                 animate={{ height: 'auto', opacity: 1 }}
@@ -160,14 +182,40 @@ export function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
               </motion.div>
             )}
           </AnimatePresence>
+
+          {/* Collapsed view - show icons only */}
+          {isCollapsed && (
+            <div className="space-y-1 pt-1">
+              {tools.map((tool) => {
+                const Icon = tool.icon
+                return (
+                  <button
+                    key={tool.name}
+                    className="w-full flex items-center justify-center px-3 py-2 rounded-lg hover:bg-accent transition-colors"
+                    title={tool.name}
+                  >
+                    <Icon className={`w-5 h-5 ${tool.color}`} />
+                  </button>
+                )
+              })}
+            </div>
+          )}
         </div>
       </nav>
 
       {/* Footer */}
-      <div className="p-4 border-t border-border">
+      <div className="p-4 border-t border-border space-y-2">
         <button className="w-full flex items-center space-x-3 px-3 py-2 rounded-lg hover:bg-accent transition-colors text-left">
           <Settings className="w-5 h-5 text-muted-foreground" />
-          <span className="text-sm">Settings</span>
+          {!isCollapsed && <span className="text-sm">Settings</span>}
+        </button>
+
+        {/* Collapse button - Desktop only */}
+        <button
+          onClick={() => setIsCollapsed(!isCollapsed)}
+          className="hidden lg:flex w-full items-center justify-center px-3 py-2 rounded-lg hover:bg-accent transition-colors"
+        >
+          <ChevronLeft className={`w-4 h-4 transition-transform ${isCollapsed ? 'rotate-180' : ''}`} />
         </button>
       </div>
     </>
@@ -188,10 +236,14 @@ export function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
         )}
       </AnimatePresence>
 
-      {/* Desktop Sidebar - always visible */}
-      <aside className="hidden lg:flex lg:flex-col w-72 bg-card border-r border-border">
+      {/* Desktop Sidebar - collapsible */}
+      <motion.aside
+        animate={{ width: isCollapsed ? 80 : 288 }}
+        transition={{ duration: 0.3, ease: 'easeInOut' }}
+        className="hidden lg:flex lg:flex-col bg-card border-r border-border"
+      >
         <SidebarContent />
-      </aside>
+      </motion.aside>
 
       {/* Mobile Sidebar - slides in/out */}
       <motion.aside

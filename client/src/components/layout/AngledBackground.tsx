@@ -2,69 +2,44 @@ import { motion } from 'framer-motion'
 
 export function AngledBackground() {
   return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-      {/* Top left - Medical blue angled shape */}
-      <motion.div
-        initial={{ opacity: 0, x: -100 }}
-        animate={{ opacity: 0.4, x: 0 }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
-        className="absolute -top-32 -left-32 w-[500px] h-[500px]"
-        style={{
-          background: 'linear-gradient(135deg, #0066CC 0%, #00A896 100%)',
-          transform: 'rotate(-15deg) skewY(-8deg)',
-          filter: 'blur(60px)',
-        }}
-      />
+    <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+      {/* Subtle angled decorative elements on the EDGES only */}
 
-      {/* Top right - Teal accent */}
-      <motion.div
-        initial={{ opacity: 0, x: 100 }}
-        animate={{ opacity: 0.35, x: 0 }}
-        transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
-        className="absolute top-20 -right-32 w-[450px] h-[450px]"
-        style={{
-          background: 'linear-gradient(225deg, #00A896 0%, #06D6A0 100%)',
-          transform: 'rotate(25deg) skewY(12deg)',
-          filter: 'blur(70px)',
-        }}
-      />
+      {/* Top right corner decoration */}
+      <div className="absolute top-0 right-0 w-96 h-96 opacity-[0.03]">
+        <svg viewBox="0 0 400 400" className="w-full h-full">
+          <defs>
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style={{ stopColor: '#0066CC', stopOpacity: 1 }} />
+              <stop offset="100%" style={{ stopColor: '#00A896', stopOpacity: 1 }} />
+            </linearGradient>
+          </defs>
+          <path d="M400 0 L400 400 L0 0 Z" fill="url(#grad1)" />
+        </svg>
+      </div>
 
-      {/* Bottom - Purple gradient */}
-      <motion.div
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 0.3, y: 0 }}
-        transition={{ duration: 1.5, ease: "easeOut", delay: 0.4 }}
-        className="absolute bottom-0 left-[10%] w-[600px] h-[400px]"
-        style={{
-          background: 'linear-gradient(45deg, #8B5CF6 0%, #0066CC 100%)',
-          transform: 'rotate(-20deg) skewX(-8deg)',
-          filter: 'blur(80px)',
-        }}
-      />
+      {/* Bottom left corner decoration */}
+      <div className="absolute bottom-0 left-0 w-96 h-96 opacity-[0.03]">
+        <svg viewBox="0 0 400 400" className="w-full h-full">
+          <defs>
+            <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style={{ stopColor: '#00A896', stopOpacity: 1 }} />
+              <stop offset="100%" style={{ stopColor: '#8B5CF6', stopOpacity: 1 }} />
+            </linearGradient>
+          </defs>
+          <path d="M0 400 L0 0 L400 400 Z" fill="url(#grad2)" />
+        </svg>
+      </div>
 
-      {/* Diagonal line pattern overlay */}
-      <div className="absolute inset-0 opacity-[0.08]">
+      {/* Subtle diagonal lines pattern on edges */}
+      <div className="absolute top-0 right-0 w-64 h-full opacity-[0.02]">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <pattern
-              id="diagonalLines"
-              patternUnits="userSpaceOnUse"
-              width="40"
-              height="40"
-              patternTransform="rotate(45)"
-            >
-              <line
-                x1="0"
-                y1="0"
-                x2="0"
-                y2="40"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                className="text-primary"
-              />
+            <pattern id="diagonals" patternUnits="userSpaceOnUse" width="20" height="20" patternTransform="rotate(45)">
+              <line x1="0" y1="0" x2="0" y2="20" stroke="#0066CC" strokeWidth="1" />
             </pattern>
           </defs>
-          <rect width="100%" height="100%" fill="url(#diagonalLines)" />
+          <rect width="100%" height="100%" fill="url(#diagonals)" />
         </svg>
       </div>
     </div>
