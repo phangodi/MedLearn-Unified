@@ -13,18 +13,21 @@ import {
   Settings,
   Menu,
   X,
-  ChevronLeft
+  ChevronLeft,
+  Activity
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 
 interface SidebarProps {
   isOpen: boolean
   setIsOpen: (open: boolean) => void
+  isCollapsed: boolean
+  setIsCollapsed: (collapsed: boolean) => void
 }
 
-export function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
-  const [isCollapsed, setIsCollapsed] = useState(false)
+export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: SidebarProps) {
   const [expandedSections, setExpandedSections] = useState<string[]>(['subjects'])
+  const [showExpandTooltip, setShowExpandTooltip] = useState(false)
 
   const toggleSection = (section: string) => {
     setExpandedSections(prev =>
@@ -35,31 +38,31 @@ export function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
   }
 
   const subjects = [
-    { name: 'Physiology', icon: Brain, path: '/physiology', color: 'text-blue-500' },
-    { name: 'Histology', icon: Microscope, path: '/histology', color: 'text-purple-500' },
-    { name: 'Pathology', icon: Stethoscope, path: '/pathology', color: 'text-red-500' },
-    { name: 'Anatomy', icon: User, path: '/anatomy', color: 'text-green-500' },
+    { name: 'Physiology', icon: Brain, path: '/physiology' },
+    { name: 'Histology', icon: Microscope, path: '/histology' },
+    { name: 'Sociology', icon: Users, path: '/sociology' },
+    { name: 'Anatomy', icon: User, path: '/anatomy' },
   ]
 
   const tools = [
-    { name: 'AI Exam Prep', icon: Sparkles, path: '/ai-prep', color: 'text-amber-500' },
-    { name: 'Community', icon: Users, path: '/community', color: 'text-teal-500' },
+    { name: 'AI Exam Prep', icon: Sparkles, path: '/ai-prep' },
+    { name: 'Community', icon: Users, path: '/community' },
   ]
 
   const SidebarContent = () => (
     <>
-      {/* Header */}
-      <div className="p-4 border-b border-border flex items-center justify-between">
-        <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-            <span className="text-white font-bold text-sm">L</span>
-          </div>
-          {!isCollapsed && (
-            <span className="font-bold text-lg bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+      {/* Header - EXACT same height as navbar */}
+      <div className="px-4 h-[60px] border-b border-border/50 flex items-center justify-between">
+        {!isCollapsed && (
+          <div className="flex items-center space-x-2.5">
+            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-md">
+              <Activity className="w-4 h-4 text-primary-foreground" />
+            </div>
+            <span className="font-bold text-base bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Lara's MedLearn
             </span>
-          )}
-        </div>
+          </div>
+        )}
         <Button
           variant="ghost"
           size="sm"
@@ -70,19 +73,19 @@ export function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
         </Button>
       </div>
 
-      {/* Navigation */}
-      <nav className="flex-1 overflow-y-auto p-4 space-y-1">
-        {/* Dashboard */}
-        <button className="w-full flex items-center space-x-3 px-3 py-2 rounded-lg hover:bg-accent transition-colors text-left">
-          <Home className="w-5 h-5 text-muted-foreground" />
-          {!isCollapsed && <span className="text-sm font-medium">Dashboard</span>}
+      {/* Navigation - Aurora style */}
+      <nav className="flex-1 overflow-y-auto p-3 space-y-0.5 min-h-0">
+        {/* Dashboard - Active state */}
+        <button className="w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg bg-blue-100 dark:bg-blue-900/60 hover:bg-blue-100 dark:hover:bg-blue-900/60 transition-colors text-left">
+          <Home className="w-4.5 h-4.5 text-blue-600 dark:text-blue-400" />
+          {!isCollapsed && <span className="text-sm font-medium text-blue-600 dark:text-blue-400">Dashboard</span>}
         </button>
 
         {/* Subjects Section */}
         <div className="pt-4">
           <button
             onClick={() => toggleSection('subjects')}
-            className="w-full flex items-center justify-between px-3 py-2 rounded-lg hover:bg-accent transition-colors text-left"
+            className="w-full flex items-center justify-between px-3 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-950/50 transition-colors text-left"
           >
             <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
               {!isCollapsed ? 'Subjects' : 'SUB'}
@@ -109,9 +112,9 @@ export function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
                     return (
                       <button
                         key={subject.name}
-                        className="w-full flex items-center space-x-3 px-3 py-2 rounded-lg hover:bg-accent transition-colors text-left group"
+                        className="w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-950/50 transition-colors text-left group"
                       >
-                        <Icon className={`w-5 h-5 ${subject.color}`} />
+                        <Icon className="w-4.5 h-4.5 text-foreground/70" />
                         <span className="text-sm">{subject.name}</span>
                       </button>
                     )
@@ -129,10 +132,10 @@ export function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
                 return (
                   <button
                     key={subject.name}
-                    className="w-full flex items-center justify-center px-3 py-2 rounded-lg hover:bg-accent transition-colors"
+                    className="w-full flex items-center justify-center px-3 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-950/50 transition-colors"
                     title={subject.name}
                   >
-                    <Icon className={`w-5 h-5 ${subject.color}`} />
+                    <Icon className="w-5 h-5 text-foreground/70" />
                   </button>
                 )
               })}
@@ -144,7 +147,7 @@ export function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
         <div className="pt-4">
           <button
             onClick={() => toggleSection('tools')}
-            className="w-full flex items-center justify-between px-3 py-2 rounded-lg hover:bg-accent transition-colors text-left"
+            className="w-full flex items-center justify-between px-3 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-950/50 transition-colors text-left"
           >
             <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
               {!isCollapsed ? 'Tools' : 'TOO'}
@@ -171,9 +174,9 @@ export function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
                     return (
                       <button
                         key={tool.name}
-                        className="w-full flex items-center space-x-3 px-3 py-2 rounded-lg hover:bg-accent transition-colors text-left group"
+                        className="w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-950/50 transition-colors text-left group"
                       >
-                        <Icon className={`w-5 h-5 ${tool.color}`} />
+                        <Icon className="w-4.5 h-4.5 text-foreground/70" />
                         <span className="text-sm">{tool.name}</span>
                       </button>
                     )
@@ -191,10 +194,10 @@ export function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
                 return (
                   <button
                     key={tool.name}
-                    className="w-full flex items-center justify-center px-3 py-2 rounded-lg hover:bg-accent transition-colors"
+                    className="w-full flex items-center justify-center px-3 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-950/50 transition-colors"
                     title={tool.name}
                   >
-                    <Icon className={`w-5 h-5 ${tool.color}`} />
+                    <Icon className="w-5 h-5 text-foreground/70" />
                   </button>
                 )
               })}
@@ -203,20 +206,38 @@ export function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
         </div>
       </nav>
 
-      {/* Footer */}
-      <div className="p-4 border-t border-border space-y-2">
-        <button className="w-full flex items-center space-x-3 px-3 py-2 rounded-lg hover:bg-accent transition-colors text-left">
-          <Settings className="w-5 h-5 text-muted-foreground" />
+      {/* Footer - Aurora style - Always stick to bottom */}
+      <div className="p-3 border-t border-border/50 mt-auto">
+        <button className="w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-950/50 transition-colors text-left">
+          <Settings className="w-4.5 h-4.5 text-foreground/70" />
           {!isCollapsed && <span className="text-sm">Settings</span>}
         </button>
+      </div>
 
-        {/* Collapse button - Desktop only */}
-        <button
-          onClick={() => setIsCollapsed(!isCollapsed)}
-          className="hidden lg:flex w-full items-center justify-center px-3 py-2 rounded-lg hover:bg-accent transition-colors"
-        >
-          <ChevronLeft className={`w-4 h-4 transition-transform ${isCollapsed ? 'rotate-180' : ''}`} />
-        </button>
+      {/* Small hover marker for collapse/expand - Aurora style */}
+      <div
+        className="hidden lg:flex absolute top-1/2 -translate-y-1/2 right-0 w-6 h-16 items-center justify-center cursor-pointer z-20 group"
+        onMouseEnter={() => setShowExpandTooltip(true)}
+        onMouseLeave={() => setShowExpandTooltip(false)}
+        onClick={() => setIsCollapsed(!isCollapsed)}
+      >
+        {/* Small visible marker line */}
+        <div className="w-1 h-8 bg-border/40 group-hover:bg-border/80 transition-colors rounded-full" />
+
+        {/* Tooltip */}
+        <AnimatePresence>
+          {showExpandTooltip && (
+            <motion.div
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -10 }}
+              transition={{ duration: 0.15 }}
+              className="absolute right-8 bg-foreground text-background px-3 py-1.5 rounded-md text-xs font-medium whitespace-nowrap shadow-lg"
+            >
+              {isCollapsed ? 'Expand' : 'Collapse'}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </>
   )
@@ -236,23 +257,23 @@ export function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
         )}
       </AnimatePresence>
 
-      {/* Desktop Sidebar - collapsible */}
+      {/* Desktop Sidebar - clean card background, above diagonal borders */}
       <motion.aside
         animate={{ width: isCollapsed ? 80 : 288 }}
         transition={{ duration: 0.3, ease: 'easeInOut' }}
-        className="hidden lg:flex lg:flex-col bg-card border-r border-border"
+        className="hidden lg:flex lg:flex-col bg-card border-r border-border/50 z-10 relative h-screen sticky top-0"
       >
         <SidebarContent />
       </motion.aside>
 
-      {/* Mobile Sidebar - slides in/out */}
+      {/* Mobile Sidebar - clean card background, above diagonal borders */}
       <motion.aside
         initial={false}
         animate={{
           x: isOpen ? 0 : -288,
         }}
         transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-        className="fixed left-0 top-0 h-full w-72 bg-card border-r border-border z-50 lg:hidden flex flex-col"
+        className="fixed left-0 top-0 h-full w-72 bg-card border-r border-border/50 z-50 lg:hidden flex flex-col"
       >
         <SidebarContent />
       </motion.aside>

@@ -41,9 +41,11 @@
 
     --primary: 211 100% 40%;        /* Medical Blue #0066CC */
     --primary-foreground: 210 40% 98%;
+    --primary-rgb: 0, 102, 204;     /* RGB for shadows */
 
     --secondary: 166 77% 33%;       /* Accent Teal #00A896 */
     --secondary-foreground: 210 40% 98%;
+    --secondary-rgb: 0, 168, 150;   /* RGB for shadows */
 
     --muted: 210 40% 96%;
     --muted-foreground: 215 16% 47%;
@@ -79,9 +81,11 @@
 
     --primary: 211 100% 50%;        /* Brighter blue for dark mode */
     --primary-foreground: 210 40% 98%;
+    --primary-rgb: 0, 128, 255;     /* RGB for shadows (brighter) */
 
     --secondary: 166 77% 40%;       /* Brighter teal */
     --secondary-foreground: 210 40% 98%;
+    --secondary-rgb: 0, 194, 173;   /* RGB for shadows (brighter) */
 
     --muted: 228 40% 18%;
     --muted-foreground: 215 20% 65%;

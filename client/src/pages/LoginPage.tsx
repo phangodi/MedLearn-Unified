@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/Input'
 import { Label } from '@/components/ui/Label'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/Card'
 import { ThemeToggle } from '@/components/ui/ThemeToggle'
+import { BorderFrame } from '@/components/layout/BorderFrame'
 import { Activity } from 'lucide-react'
 
 // TEMPORARY: Demo credentials for development
@@ -35,6 +36,9 @@ export function LoginPage() {
 
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-primary/5 via-background to-secondary/5 relative overflow-hidden">
+      {/* Continuous diagonal-line border frame */}
+      <BorderFrame />
+
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
