@@ -28,7 +28,12 @@ import {
   Clock,
   Eye,
   Download,
-  Play
+  Play,
+  Hash,
+  X as XIcon,
+  Trash2,
+  Edit3,
+  Pin
 } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 
@@ -63,6 +68,8 @@ interface Post {
   attachments: Attachment[]
   liked: boolean
   bookmarked: boolean
+  pinned?: boolean  // Admin can pin important posts to top
+  isAdmin?: boolean  // Whether the current user viewing has admin privileges
 }
 
 // Mock data for posts
@@ -129,7 +136,9 @@ const mockPosts: Post[] = [
       }
     ],
     liked: true,
-    bookmarked: false
+    bookmarked: false,
+    pinned: true,  // This post is pinned by admin
+    isAdmin: true  // Current user has admin privileges (for demo)
   },
   {
     id: 3,
@@ -202,6 +211,26 @@ const activeUsers = [
   { name: 'Lisa K.', avatar: '👩‍⚕️', online: true }
 ]
 
+// Available topics/tags for posts
+const availableTags = [
+  'Physiology',
+  'Histology',
+  'Anatomy',
+  'Pathology',
+  'Pharmacology',
+  'Biochemistry',
+  'Cardiology',
+  'Neuroscience',
+  'Clinical Skills',
+  'Exam Tips',
+  'Study Notes',
+  'Video Tutorial',
+  'Microscopy',
+  'Study Groups',
+  'Research',
+  'Case Studies'
+]
+
 export function CommunityPage() {
   const navigate = useNavigate()
   const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -209,6 +238,8 @@ export function CommunityPage() {
   const [selectedFilter] = useState('All Posts')
   const [posts, setPosts] = useState(mockPosts)
   const [composeOpen, setComposeOpen] = useState(false)
+  const [selectedTags, setSelectedTags] = useState<string[]>([])
+  const [showTagPicker, setShowTagPicker] = useState(false)
 
   const handleLogout = () => {
     navigate('/login')
@@ -237,6 +268,20 @@ export function CommunityPage() {
       }
       return post
     }))
+  }
+
+  const toggleTag = (tag: string) => {
+    if (selectedTags.includes(tag)) {
+      setSelectedTags(selectedTags.filter(t => t !== tag))
+    } else {
+      if (selectedTags.length < 5) {  // Limit to 5 tags
+        setSelectedTags([...selectedTags, tag])
+      }
+    }
+  }
+
+  const removeTag = (tag: string) => {
+    setSelectedTags(selectedTags.filter(t => t !== tag))
   }
 
   const getFileIcon = (type: string) => {
@@ -407,9 +452,84 @@ export function CommunityPage() {
                         </motion.button>
                       </div>
 
+                      {/* Tag Selection System */}
+                      <div className="space-y-2">
+                        <div className="flex items-center justify-between">
+                          <label className="text-sm font-medium text-foreground flex items-center gap-2">
+                            <Hash className="w-4 h-4 text-primary" />
+                            Topics/Tags {selectedTags.length > 0 && `(${selectedTags.length}/5)`}
+                          </label>
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            onClick={() => setShowTagPicker(!showTagPicker)}
+                            className="text-xs"
+                          >
+                            {showTagPicker ? 'Hide Topics' : 'Add Topics'}
+                          </Button>
+                        </div>
+
+                        {/* Selected Tags Display */}
+                        {selectedTags.length > 0 && (
+                          <div className="flex flex-wrap gap-2">
+                            {selectedTags.map((tag) => (
+                              <motion.div
+                                key={tag}
+                                initial={{ scale: 0 }}
+                                animate={{ scale: 1 }}
+                                exit={{ scale: 0 }}
+                                className="px-3 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium flex items-center gap-2 border border-primary/20"
+                              >
+                                #{tag}
+                                <button
+                                  onClick={() => removeTag(tag)}
+                                  className="hover:bg-primary/20 rounded-full p-0.5 transition-colors"
+                                >
+                                  <XIcon className="w-3 h-3" />
+                                </button>
+                              </motion.div>
+                            ))}
+                          </div>
+                        )}
+
+                        {/* Tag Picker Dropdown */}
+                        <AnimatePresence>
+                          {showTagPicker && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: 'auto', opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.2 }}
+                              className="overflow-hidden"
+                            >
+                              <div className="p-3 bg-muted/30 rounded-lg border border-border max-h-40 overflow-y-auto">
+                                <div className="flex flex-wrap gap-2">
+                                  {availableTags.map((tag) => (
+                                    <button
+                                      key={tag}
+                                      onClick={() => toggleTag(tag)}
+                                      className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all ${
+                                        selectedTags.includes(tag)
+                                          ? 'bg-primary text-primary-foreground'
+                                          : 'bg-background hover:bg-primary/10 text-foreground hover:text-primary border border-border'
+                                      }`}
+                                    >
+                                      #{tag}
+                                    </button>
+                                  ))}
+                                </div>
+                              </div>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
+
                       <div className="flex justify-between items-center">
-                        <div className="text-sm text-muted-foreground">
-                          Tip: Add relevant tags to help others find your post
+                        <div className="text-xs text-muted-foreground">
+                          {selectedTags.length === 0
+                            ? 'Add topics to help others find your post'
+                            : `${5 - selectedTags.length} more tags available`
+                          }
                         </div>
                         <div className="flex gap-2">
                           <Button variant="ghost" onClick={() => setComposeOpen(false)}>
@@ -438,8 +558,22 @@ export function CommunityPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-card border border-border rounded-xl overflow-hidden hover:border-primary/50 hover:shadow-lg transition-all duration-300"
+                  className={`bg-card border rounded-xl overflow-hidden hover:border-primary/50 hover:shadow-lg transition-all duration-300 ${
+                    post.pinned ? 'border-amber-500/50 shadow-amber-500/10' : 'border-border'
+                  }`}
                 >
+                  {/* Pinned Badge */}
+                  {post.pinned && (
+                    <div className="px-6 pt-3 pb-2 bg-gradient-to-r from-amber-500/10 to-orange-500/10 border-b border-amber-500/20">
+                      <div className="flex items-center gap-2 text-amber-600 dark:text-amber-400">
+                        <Pin className="w-4 h-4 fill-current" />
+                        <span className="text-xs font-semibold uppercase tracking-wide">
+                          Pinned by Admin
+                        </span>
+                      </div>
+                    </div>
+                  )}
+
                   {/* Post Header */}
                   <div className="p-6 pb-4">
                     <div className="flex items-start justify-between mb-4">
@@ -471,9 +605,47 @@ export function CommunityPage() {
                           </div>
                         </div>
                       </div>
-                      <Button variant="ghost" size="sm">
-                        <MoreHorizontal className="w-4 h-4" />
-                      </Button>
+
+                      {/* Admin Controls or Regular Menu */}
+                      <div className="flex gap-1">
+                        {post.isAdmin && (
+                          <>
+                            <motion.button
+                              whileHover={{ scale: 1.05 }}
+                              whileTap={{ scale: 0.95 }}
+                              className="p-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-950/30 text-blue-600 dark:text-blue-400 transition-colors"
+                              title="Edit Post"
+                            >
+                              <Edit3 className="w-4 h-4" />
+                            </motion.button>
+                            <motion.button
+                              whileHover={{ scale: 1.05 }}
+                              whileTap={{ scale: 0.95 }}
+                              className={`p-2 rounded-lg transition-colors ${
+                                post.pinned
+                                  ? 'bg-amber-50 dark:bg-amber-950/30 text-amber-600 dark:text-amber-400'
+                                  : 'hover:bg-amber-50 dark:hover:bg-amber-950/30 text-muted-foreground hover:text-amber-600'
+                              }`}
+                              title={post.pinned ? 'Unpin Post' : 'Pin Post'}
+                            >
+                              <Pin className={`w-4 h-4 ${post.pinned ? 'fill-current' : ''}`} />
+                            </motion.button>
+                            <motion.button
+                              whileHover={{ scale: 1.05 }}
+                              whileTap={{ scale: 0.95 }}
+                              className="p-2 rounded-lg hover:bg-red-50 dark:hover:bg-red-950/30 text-red-600 dark:text-red-400 transition-colors"
+                              title="Delete Post"
+                            >
+                              <Trash2 className="w-4 h-4" />
+                            </motion.button>
+                          </>
+                        )}
+                        {!post.isAdmin && (
+                          <Button variant="ghost" size="sm">
+                            <MoreHorizontal className="w-4 h-4" />
+                          </Button>
+                        )}
+                      </div>
                     </div>
 
                     {/* Post Content */}
@@ -601,7 +773,7 @@ export function CommunityPage() {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.2 }}
-                className="bg-card border border-border rounded-xl p-6 shadow-lg sticky top-24"
+                className="bg-card border border-border rounded-xl p-6 shadow-lg"
               >
                 <div className="flex items-center gap-2 mb-4">
                   <TrendingUp className="w-5 h-5 text-primary" />
