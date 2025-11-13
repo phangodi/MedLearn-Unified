@@ -1,0 +1,197 @@
+import { createContext, useContext, useEffect, useState } from 'react'
+import type { ReactNode } from 'react'
+import type { User } from 'firebase/auth'
+import {
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+  signInWithPopup,
+  GoogleAuthProvider,
+  OAuthProvider,
+  signOut as firebaseSignOut,
+  sendPasswordResetEmail,
+  updateProfile,
+} from 'firebase/auth'
+import { doc, getDoc, setDoc, serverTimestamp } from 'firebase/firestore'
+import { auth, db } from '@/firebase/config'
+
+interface UserProfile {
+  uid: string
+  email: string
+  name: string
+  avatar: string
+  role: 'user' | 'moderator' | 'admin' | 'superadmin'
+  isAdmin: boolean
+  permissions: {
+    canPin: boolean
+    canDelete: boolean
+    canEdit: boolean
+    canPromoteUsers: boolean
+    canManageAdmins: boolean
+  }
+  createdAt: any
+  lastLogin: any
+}
+
+interface AuthContextType {
+  user: User | null
+  userProfile: UserProfile | null
+  loading: boolean
+  signInWithEmail: (email: string, password: string) => Promise<void>
+  signUpWithEmail: (email: string, password: string, name: string) => Promise<void>
+  signInWithGoogle: () => Promise<void>
+  signInWithApple: () => Promise<void>
+  signOut: () => Promise<void>
+  resetPassword: (email: string) => Promise<void>
+}
+
+const AuthContext = createContext<AuthContextType | undefined>(undefined)
+
+export function useAuth() {
+  const context = useContext(AuthContext)
+  if (!context) {
+    throw new Error('useAuth must be used within an AuthProvider')
+  }
+  return context
+}
+
+interface AuthProviderProps {
+  children: ReactNode
+}
+
+export function AuthProvider({ children }: AuthProviderProps) {
+  const [user, setUser] = useState<User | null>(null)
+  const [userProfile, setUserProfile] = useState<UserProfile | null>(null)
+  const [loading, setLoading] = useState(true)
+
+  // Fetch or create user profile
+  const fetchUserProfile = async (user: User) => {
+    if (!db || !auth) {
+      console.error('Firebase not initialized')
+      return
+    }
+
+    try {
+      const userDoc = await getDoc(doc(db, 'users', user.uid))
+
+      if (userDoc.exists()) {
+        // Update last login
+        await setDoc(
+          doc(db, 'users', user.uid),
+          { lastLogin: serverTimestamp() },
+          { merge: true }
+        )
+        setUserProfile(userDoc.data() as UserProfile)
+      } else {
+        // Create new user profile
+        const superAdminEmail = import.meta.env.VITE_SUPER_ADMIN_EMAIL
+
+        const newProfile: UserProfile = {
+          uid: user.uid,
+          email: user.email || '',
+          name: user.displayName || user.email?.split('@')[0] || 'User',
+          avatar: user.photoURL || '',
+          role: user.email === superAdminEmail ? 'superadmin' : 'user',
+          isAdmin: user.email === superAdminEmail,
+          permissions: {
+            canPin: user.email === superAdminEmail,
+            canDelete: user.email === superAdminEmail,
+            canEdit: user.email === superAdminEmail,
+            canPromoteUsers: user.email === superAdminEmail,
+            canManageAdmins: user.email === superAdminEmail,
+          },
+          createdAt: serverTimestamp(),
+          lastLogin: serverTimestamp(),
+        }
+
+        await setDoc(doc(db, 'users', user.uid), newProfile)
+        setUserProfile(newProfile)
+
+        if (user.email === superAdminEmail) {
+          console.log('🎉 Super Admin account created!')
+        }
+      }
+    } catch (error) {
+      console.error('Error fetching user profile:', error)
+    }
+  }
+
+  // Listen to auth state changes
+  useEffect(() => {
+    if (!auth) {
+      setLoading(false)
+      return
+    }
+
+    const unsubscribe = auth.onAuthStateChanged(async (user: User | null) => {
+      setUser(user)
+
+      if (user) {
+        await fetchUserProfile(user)
+      } else {
+        setUserProfile(null)
+      }
+
+      setLoading(false)
+    })
+
+    return unsubscribe
+  }, [])
+
+  // Sign in with email/password
+  const signInWithEmail = async (email: string, password: string) => {
+    if (!auth) throw new Error('Firebase not initialized')
+    await signInWithEmailAndPassword(auth, email, password)
+  }
+
+  // Sign up with email/password
+  const signUpWithEmail = async (email: string, password: string, name: string) => {
+    if (!auth) throw new Error('Firebase not initialized')
+    const { user } = await createUserWithEmailAndPassword(auth, email, password)
+    await updateProfile(user, { displayName: name })
+  }
+
+  // Sign in with Google
+  const signInWithGoogle = async () => {
+    if (!auth) throw new Error('Firebase not initialized')
+    const provider = new GoogleAuthProvider()
+    provider.setCustomParameters({
+      prompt: 'select_account',
+    })
+    await signInWithPopup(auth, provider)
+  }
+
+  // Sign in with Apple
+  const signInWithApple = async () => {
+    if (!auth) throw new Error('Firebase not initialized')
+    const provider = new OAuthProvider('apple.com')
+    provider.addScope('email')
+    provider.addScope('name')
+    await signInWithPopup(auth, provider)
+  }
+
+  // Sign out
+  const signOut = async () => {
+    if (!auth) throw new Error('Firebase not initialized')
+    await firebaseSignOut(auth)
+  }
+
+  // Reset password
+  const resetPassword = async (email: string) => {
+    if (!auth) throw new Error('Firebase not initialized')
+    await sendPasswordResetEmail(auth, email)
+  }
+
+  const value: AuthContextType = {
+    user,
+    userProfile,
+    loading,
+    signInWithEmail,
+    signUpWithEmail,
+    signInWithGoogle,
+    signInWithApple,
+    signOut,
+    resetPassword,
+  }
+
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
+}
