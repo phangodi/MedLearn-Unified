@@ -194,7 +194,6 @@ export function DashboardPage() {
           {/* Enhanced subject grid with wow animations */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {subjects.map((subject, index) => {
-              const Icon = subject.icon
               return (
                 <motion.div
                   key={subject.name}

@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import {
   Brain,
   Microscope,
-  Stethoscope,
   User,
   Sparkles,
   Users,
@@ -13,10 +12,10 @@ import {
   Settings,
   Menu,
   X,
-  ChevronLeft,
   Activity
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 interface SidebarProps {
   isOpen: boolean
@@ -26,6 +25,8 @@ interface SidebarProps {
 }
 
 export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: SidebarProps) {
+  const navigate = useNavigate()
+  const location = useLocation()
   const [expandedSections, setExpandedSections] = useState<string[]>(['subjects'])
   const [showExpandTooltip, setShowExpandTooltip] = useState(false)
 
@@ -75,10 +76,27 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
 
       {/* Navigation - Aurora style */}
       <nav className="flex-1 overflow-y-auto p-3 space-y-0.5 min-h-0">
-        {/* Dashboard - Active state */}
-        <button className="w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg bg-blue-100 dark:bg-blue-900/60 hover:bg-blue-100 dark:hover:bg-blue-900/60 transition-colors text-left">
-          <Home className="w-4.5 h-4.5 text-blue-600 dark:text-blue-400" />
-          {!isCollapsed && <span className="text-sm font-medium text-blue-600 dark:text-blue-400">Dashboard</span>}
+        {/* Dashboard */}
+        <button
+          onClick={() => navigate('/dashboard')}
+          className={`w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg transition-colors text-left ${
+            location.pathname === '/dashboard'
+              ? 'bg-blue-100 dark:bg-blue-900/60'
+              : 'hover:bg-blue-50 dark:hover:bg-blue-950/50'
+          }`}
+        >
+          <Home className={`w-4.5 h-4.5 ${
+            location.pathname === '/dashboard'
+              ? 'text-blue-600 dark:text-blue-400'
+              : 'text-foreground/70'
+          }`} />
+          {!isCollapsed && (
+            <span className={`text-sm font-medium ${
+              location.pathname === '/dashboard'
+                ? 'text-blue-600 dark:text-blue-400'
+                : ''
+            }`}>Dashboard</span>
+          )}
         </button>
 
         {/* Subjects Section */}
@@ -171,13 +189,25 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
                 <div className="space-y-1 pt-1">
                   {tools.map((tool) => {
                     const Icon = tool.icon
+                    const isActive = location.pathname === tool.path
                     return (
                       <button
                         key={tool.name}
-                        className="w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-950/50 transition-colors text-left group"
+                        onClick={() => navigate(tool.path)}
+                        className={`w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg transition-colors text-left group ${
+                          isActive
+                            ? 'bg-blue-100 dark:bg-blue-900/60'
+                            : 'hover:bg-blue-50 dark:hover:bg-blue-950/50'
+                        }`}
                       >
-                        <Icon className="w-4.5 h-4.5 text-foreground/70" />
-                        <span className="text-sm">{tool.name}</span>
+                        <Icon className={`w-4.5 h-4.5 ${
+                          isActive
+                            ? 'text-blue-600 dark:text-blue-400'
+                            : 'text-foreground/70'
+                        }`} />
+                        <span className={`text-sm ${
+                          isActive ? 'font-medium text-blue-600 dark:text-blue-400' : ''
+                        }`}>{tool.name}</span>
                       </button>
                     )
                   })}
@@ -191,13 +221,23 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
             <div className="space-y-1 pt-1">
               {tools.map((tool) => {
                 const Icon = tool.icon
+                const isActive = location.pathname === tool.path
                 return (
                   <button
                     key={tool.name}
-                    className="w-full flex items-center justify-center px-3 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-950/50 transition-colors"
+                    onClick={() => navigate(tool.path)}
+                    className={`w-full flex items-center justify-center px-3 py-2 rounded-lg transition-colors ${
+                      isActive
+                        ? 'bg-blue-100 dark:bg-blue-900/60'
+                        : 'hover:bg-blue-50 dark:hover:bg-blue-950/50'
+                    }`}
                     title={tool.name}
                   >
-                    <Icon className="w-5 h-5 text-foreground/70" />
+                    <Icon className={`w-5 h-5 ${
+                      isActive
+                        ? 'text-blue-600 dark:text-blue-400'
+                        : 'text-foreground/70'
+                    }`} />
                   </button>
                 )
               })}
