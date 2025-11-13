@@ -240,6 +240,8 @@ export function CommunityPage() {
   const [composeOpen, setComposeOpen] = useState(false)
   const [selectedTags, setSelectedTags] = useState<string[]>([])
   const [showTagPicker, setShowTagPicker] = useState(false)
+  const [selectedFiles, setSelectedFiles] = useState<File[]>([])
+  const [postContent, setPostContent] = useState('')
 
   const handleLogout = () => {
     navigate('/login')
@@ -282,6 +284,36 @@ export function CommunityPage() {
 
   const removeTag = (tag: string) => {
     setSelectedTags(selectedTags.filter(t => t !== tag))
+  }
+
+  const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const files = event.target.files
+    if (!files || files.length === 0) return
+
+    const newFiles = Array.from(files)
+    setSelectedFiles(prev => [...prev, ...newFiles])
+
+    // Reset input so same file can be selected again if removed
+    event.target.value = ''
+  }
+
+  const removeFile = (index: number) => {
+    setSelectedFiles(prev => prev.filter((_, i) => i !== index))
+  }
+
+  const formatFileSize = (bytes: number): string => {
+    if (bytes === 0) return '0 Bytes'
+    const k = 1024
+    const sizes = ['Bytes', 'KB', 'MB', 'GB']
+    const i = Math.floor(Math.log(bytes) / Math.log(k))
+    return Math.round(bytes / Math.pow(k, i) * 100) / 100 + ' ' + sizes[i]
+  }
+
+  const getFileType = (file: File): string => {
+    if (file.type.startsWith('image/')) return 'image'
+    if (file.type === 'application/pdf') return 'pdf'
+    if (file.type.startsWith('video/')) return 'video'
+    return 'other'
   }
 
   const getFileIcon = (type: string) => {
@@ -419,17 +451,47 @@ export function CommunityPage() {
                     </div>
                     <div className="flex-1 space-y-4">
                       <textarea
+                        value={postContent}
+                        onChange={(e) => setPostContent(e.target.value)}
                         placeholder="Share your knowledge, ask questions, or upload study materials..."
                         className="w-full px-4 py-3 bg-background border border-border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
                         rows={4}
                       />
 
-                      {/* Attachment preview area */}
+                      {/* Hidden File Inputs */}
+                      <input
+                        type="file"
+                        id="image-upload"
+                        accept="image/*"
+                        multiple
+                        onChange={handleFileSelect}
+                        className="hidden"
+                      />
+                      <input
+                        type="file"
+                        id="pdf-upload"
+                        accept=".pdf"
+                        multiple
+                        onChange={handleFileSelect}
+                        className="hidden"
+                      />
+                      <input
+                        type="file"
+                        id="video-upload"
+                        accept="video/*"
+                        multiple
+                        onChange={handleFileSelect}
+                        className="hidden"
+                      />
+
+                      {/* File Selection Buttons */}
                       <div className="flex gap-2 flex-wrap">
                         <motion.button
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
+                          onClick={() => document.getElementById('image-upload')?.click()}
                           className="px-4 py-2 bg-blue-50 dark:bg-blue-950/30 text-blue-600 dark:text-blue-400 rounded-lg border border-blue-200 dark:border-blue-800 flex items-center gap-2 hover:bg-blue-100 dark:hover:bg-blue-950/50 transition-colors"
+                          type="button"
                         >
                           <ImageIcon className="w-4 h-4" />
                           Image
@@ -437,7 +499,9 @@ export function CommunityPage() {
                         <motion.button
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
+                          onClick={() => document.getElementById('pdf-upload')?.click()}
                           className="px-4 py-2 bg-red-50 dark:bg-red-950/30 text-red-600 dark:text-red-400 rounded-lg border border-red-200 dark:border-red-800 flex items-center gap-2 hover:bg-red-100 dark:hover:bg-red-950/50 transition-colors"
+                          type="button"
                         >
                           <FileText className="w-4 h-4" />
                           PDF
@@ -445,12 +509,53 @@ export function CommunityPage() {
                         <motion.button
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
+                          onClick={() => document.getElementById('video-upload')?.click()}
                           className="px-4 py-2 bg-purple-50 dark:bg-purple-950/30 text-purple-600 dark:text-purple-400 rounded-lg border border-purple-200 dark:border-purple-800 flex items-center gap-2 hover:bg-purple-100 dark:hover:bg-purple-950/50 transition-colors"
+                          type="button"
                         >
                           <Video className="w-4 h-4" />
                           Video
                         </motion.button>
                       </div>
+
+                      {/* Selected Files Preview */}
+                      {selectedFiles.length > 0 && (
+                        <div className="space-y-2">
+                          <p className="text-sm font-medium text-foreground">
+                            Attached Files ({selectedFiles.length})
+                          </p>
+                          {selectedFiles.map((file, index) => (
+                            <motion.div
+                              key={index}
+                              initial={{ opacity: 0, y: -10 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              exit={{ opacity: 0, y: -10 }}
+                              className={`p-3 rounded-lg border flex items-center justify-between ${getFileColor(getFileType(file))}`}
+                            >
+                              <div className="flex items-center gap-3 flex-1 min-w-0">
+                                <div className="w-10 h-10 rounded-lg bg-white/50 dark:bg-black/20 flex items-center justify-center flex-shrink-0">
+                                  {getFileIcon(getFileType(file))}
+                                </div>
+                                <div className="flex-1 min-w-0">
+                                  <p className="font-medium text-sm truncate">
+                                    {file.name}
+                                  </p>
+                                  <p className="text-xs opacity-75">
+                                    {formatFileSize(file.size)}
+                                  </p>
+                                </div>
+                              </div>
+                              <button
+                                onClick={() => removeFile(index)}
+                                className="p-1.5 rounded-lg hover:bg-red-100 dark:hover:bg-red-950/50 text-red-600 dark:text-red-400 transition-colors flex-shrink-0"
+                                title="Remove file"
+                              >
+                                <XIcon className="w-4 h-4" />
+                              </button>
+                            </motion.div>
+                          ))}
+                        </div>
+                      )}
 
                       {/* Tag Selection System */}
                       <div className="space-y-2">
