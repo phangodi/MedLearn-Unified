@@ -58,20 +58,20 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
           onClick={() => navigate('/dashboard')}
           className={`w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg transition-colors text-left ${
             location.pathname === '/dashboard'
-              ? 'bg-gray-200 dark:bg-gray-800'
+              ? 'bg-gray-200 dark:bg-white/10'
               : 'hover:bg-gray-100 dark:hover:bg-gray-800/50'
           }`}
         >
           <Home className={`w-4.5 h-4.5 ${
             location.pathname === '/dashboard'
-              ? 'text-foreground'
-              : 'text-gray-600 dark:text-gray-200'
+              ? 'text-foreground dark:text-gray-100'
+              : 'text-gray-600 dark:text-gray-400'
           }`} />
           {!isCollapsed && (
             <span className={`text-sm ${
               location.pathname === '/dashboard'
-                ? 'font-medium text-foreground'
-                : 'text-gray-600 dark:text-gray-200'
+                ? 'font-medium text-foreground dark:text-gray-100'
+                : 'text-gray-600 dark:text-gray-400'
             }`}>Dashboard</span>
           )}
         </button>
@@ -109,8 +109,8 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
                         key={subject.name}
                         className="w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors text-left group"
                       >
-                        <Icon className="w-4.5 h-4.5 text-gray-600 dark:text-gray-200" />
-                        <span className="text-sm text-gray-600 dark:text-gray-200">{subject.name}</span>
+                        <Icon className="w-4.5 h-4.5 text-gray-600 dark:text-gray-400" />
+                        <span className="text-sm text-gray-600 dark:text-gray-400">{subject.name}</span>
                       </button>
                     )
                   })}
@@ -130,7 +130,7 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
                     className="w-full flex items-center justify-center px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors"
                     title={subject.name}
                   >
-                    <Icon className="w-5 h-5 text-gray-600 dark:text-gray-200" />
+                    <Icon className="w-5 h-5 text-gray-600 dark:text-gray-400" />
                   </button>
                 )
               })}
@@ -173,17 +173,17 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
                         onClick={() => navigate(tool.path)}
                         className={`w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg transition-colors text-left group ${
                           isActive
-                            ? 'bg-gray-200 dark:bg-gray-800'
+                            ? 'bg-gray-200 dark:bg-white/10'
                             : 'hover:bg-gray-100 dark:hover:bg-gray-800/50'
                         }`}
                       >
                         <Icon className={`w-4.5 h-4.5 ${
                           isActive
-                            ? 'text-foreground'
-                            : 'text-gray-600 dark:text-gray-200'
+                            ? 'text-foreground dark:text-gray-100'
+                            : 'text-gray-600 dark:text-gray-400'
                         }`} />
                         <span className={`text-sm ${
-                          isActive ? 'font-medium text-foreground' : 'text-gray-600 dark:text-gray-200'
+                          isActive ? 'font-medium text-foreground dark:text-gray-100' : 'text-gray-600 dark:text-gray-400'
                         }`}>{tool.name}</span>
                       </button>
                     )
@@ -205,15 +205,15 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
                     onClick={() => navigate(tool.path)}
                     className={`w-full flex items-center justify-center px-3 py-2 rounded-lg transition-colors ${
                       isActive
-                        ? 'bg-gray-200 dark:bg-gray-800'
+                        ? 'bg-gray-200 dark:bg-white/10'
                         : 'hover:bg-gray-100 dark:hover:bg-gray-800/50'
                     }`}
                     title={tool.name}
                   >
                     <Icon className={`w-5 h-5 ${
                       isActive
-                        ? 'text-foreground'
-                        : 'text-gray-600 dark:text-gray-200'
+                        ? 'text-foreground dark:text-gray-100'
+                        : 'text-gray-600 dark:text-gray-400'
                     }`} />
                   </button>
                 )
@@ -254,8 +254,8 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
       {/* Footer - Aurora style - Always stick to bottom */}
       <div className="p-3 border-t border-border/50 mt-auto">
         <button className="w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors text-left">
-          <Settings className="w-4.5 h-4.5 text-gray-600 dark:text-gray-200" />
-          {!isCollapsed && <span className="text-sm text-gray-600 dark:text-gray-200">Settings</span>}
+          <Settings className="w-4.5 h-4.5 text-gray-600 dark:text-gray-400" />
+          {!isCollapsed && <span className="text-sm text-gray-600 dark:text-gray-400">Settings</span>}
         </button>
       </div>
 
