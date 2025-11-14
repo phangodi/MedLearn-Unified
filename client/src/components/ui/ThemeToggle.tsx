@@ -11,7 +11,7 @@ export function ThemeToggle() {
       variant="ghost"
       size="sm"
       onClick={toggleTheme}
-      className="w-9 px-0 hover:bg-blue-100 dark:hover:bg-blue-900/60 text-foreground hover:text-foreground"
+      className="w-9 px-0 hover:bg-gray-100 dark:hover:bg-gray-800/50 text-gray-600 dark:text-gray-400 hover:text-foreground"
     >
       <motion.div
         initial={false}

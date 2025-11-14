@@ -124,7 +124,7 @@ export function DashboardPage() {
             {/* Right side actions */}
             <div className={`flex items-center gap-1.5 ${!sidebarCollapsed ? 'ml-auto' : ''}`}>
               <ThemeToggle />
-              <Button variant="ghost" size="sm" onClick={handleLogout} className="hover:bg-blue-100 dark:hover:bg-blue-900/60 text-foreground hover:text-foreground">
+              <Button variant="ghost" size="sm" onClick={handleLogout} className="hover:bg-gray-100 dark:hover:bg-gray-800/50 text-gray-600 dark:text-gray-400 hover:text-foreground">
                 <LogOut className="w-4 h-4 mr-1.5" />
                 <span className="hidden sm:inline text-sm">Logout</span>
               </Button>
