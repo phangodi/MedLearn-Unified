@@ -10,13 +10,16 @@ import { RotatingCard } from '@/components/ui/RotatingCard'
 import { Particles } from '@/components/ui/Particles'
 import { LogOut, Brain, Microscope, User, Sparkles, Users, Activity } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
+import { useAuth } from '@/contexts/AuthContext'
 
 export function DashboardPage() {
   const navigate = useNavigate()
+  const { userProfile, signOut } = useAuth()
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
 
-  const handleLogout = () => {
+  const handleLogout = async () => {
+    await signOut()
     navigate('/login')
   }
 
@@ -149,7 +152,7 @@ export function DashboardPage() {
               </motion.div>
               <div>
                 <h2 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-foreground via-primary to-secondary bg-clip-text text-transparent">
-                  Welcome back, Demo User!
+                  Welcome back, {userProfile?.name || 'Student'}!
                 </h2>
               </div>
             </div>

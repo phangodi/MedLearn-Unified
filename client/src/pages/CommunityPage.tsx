@@ -726,10 +726,10 @@ export function CommunityPage() {
                             <motion.button
                               whileHover={{ scale: 1.05 }}
                               whileTap={{ scale: 0.95 }}
-                              className={`p-2 rounded-lg transition-colors ${
+                              className={`p-2 rounded-lg transition-colors hover:bg-background ${
                                 post.pinned
-                                  ? 'bg-amber-50 dark:bg-amber-950/30 text-amber-600 dark:text-amber-400'
-                                  : 'hover:bg-amber-50 dark:hover:bg-amber-950/30 text-muted-foreground hover:text-amber-600'
+                                  ? 'text-amber-600 dark:text-amber-400'
+                                  : 'text-muted-foreground hover:text-amber-600'
                               }`}
                               title={post.pinned ? 'Unpin Post' : 'Pin Post'}
                             >
@@ -821,10 +821,8 @@ export function CommunityPage() {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={() => toggleLike(post.id)}
-                        className={`px-4 py-2 rounded-lg flex items-center gap-2 transition-all ${
-                          post.liked
-                            ? 'bg-red-50 dark:bg-red-950/30 text-red-600 dark:text-red-400'
-                            : 'hover:bg-background'
+                        className={`px-4 py-2 rounded-lg flex items-center gap-2 transition-all hover:bg-background ${
+                          post.liked ? 'text-red-600 dark:text-red-400' : ''
                         }`}
                       >
                         <Heart
@@ -856,10 +854,8 @@ export function CommunityPage() {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       onClick={() => toggleBookmark(post.id)}
-                      className={`p-2 rounded-lg transition-all ${
-                        post.bookmarked
-                          ? 'bg-blue-50 dark:bg-blue-950/30 text-blue-600 dark:text-blue-400'
-                          : 'hover:bg-background'
+                      className={`p-2 rounded-lg transition-all hover:bg-background ${
+                        post.bookmarked ? 'text-blue-600 dark:text-blue-400' : ''
                       }`}
                     >
                       <Bookmark
