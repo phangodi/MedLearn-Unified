@@ -10,13 +10,16 @@ import { RotatingCard } from '@/components/ui/RotatingCard'
 import { Particles } from '@/components/ui/Particles'
 import { LogOut, Brain, Microscope, User, Sparkles, Users, Activity } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
+import { useAuth } from '@/contexts/AuthContext'
 
 export function DashboardPage() {
   const navigate = useNavigate()
+  const { userProfile, signOut } = useAuth()
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
 
-  const handleLogout = () => {
+  const handleLogout = async () => {
+    await signOut()
     navigate('/login')
   }
 
@@ -121,7 +124,7 @@ export function DashboardPage() {
             {/* Right side actions */}
             <div className={`flex items-center gap-1.5 ${!sidebarCollapsed ? 'ml-auto' : ''}`}>
               <ThemeToggle />
-              <Button variant="ghost" size="sm" onClick={handleLogout} className="hover:bg-blue-100 dark:hover:bg-blue-900/60">
+              <Button variant="ghost" size="sm" onClick={handleLogout} className="hover:bg-blue-100 dark:hover:bg-blue-900/60 text-foreground hover:text-foreground">
                 <LogOut className="w-4 h-4 mr-1.5" />
                 <span className="hidden sm:inline text-sm">Logout</span>
               </Button>
@@ -149,7 +152,7 @@ export function DashboardPage() {
               </motion.div>
               <div>
                 <h2 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-foreground via-primary to-secondary bg-clip-text text-transparent">
-                  Welcome back, Demo User!
+                  Welcome back, {userProfile?.name || 'Student'}!
                 </h2>
               </div>
             </div>
@@ -194,7 +197,6 @@ export function DashboardPage() {
           {/* Enhanced subject grid with wow animations */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {subjects.map((subject, index) => {
-              const Icon = subject.icon
               return (
                 <motion.div
                   key={subject.name}

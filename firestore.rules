@@ -1,0 +1,73 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return request.auth.uid == userId;
+    }
+
+    function isAdmin() {
+      return isSignedIn() &&
+             get(/databases/$(database)/documents/users/$(request.auth.uid)).data.isAdmin == true;
+    }
+
+    // Users collection
+    match /users/{userId} {
+      // Anyone can read user profiles (for displaying names, avatars)
+      allow read: if true;
+
+      // Only the user themselves can create their profile
+      allow create: if isSignedIn() && isOwner(userId);
+
+      // Only the user can update their own profile (except admin field)
+      allow update: if isSignedIn() &&
+                      isOwner(userId) &&
+                      !request.resource.data.diff(resource.data).affectedKeys().hasAny(['isAdmin']);
+
+      // Only admins can delete users
+      allow delete: if isAdmin();
+    }
+
+    // Posts collection
+    match /posts/{postId} {
+      // Anyone can read posts (public community)
+      allow read: if true;
+
+      // Only authenticated users can create posts
+      allow create: if isSignedIn() &&
+                      request.resource.data.authorId == request.auth.uid;
+
+      // Post author can update their own posts (but not pinned status)
+      allow update: if isSignedIn() &&
+                      resource.data.authorId == request.auth.uid &&
+                      !request.resource.data.diff(resource.data).affectedKeys().hasAny(['pinned', 'pinnedBy', 'pinnedAt']);
+
+      // Admins can update any post (including pinning)
+      allow update: if isAdmin();
+
+      // Only post author or admin can delete
+      allow delete: if isSignedIn() &&
+                      (resource.data.authorId == request.auth.uid || isAdmin());
+    }
+
+    // Comments collection (future feature)
+    match /posts/{postId}/comments/{commentId} {
+      allow read: if true;
+      allow create: if isSignedIn();
+      allow update, delete: if isSignedIn() &&
+                              (resource.data.authorId == request.auth.uid || isAdmin());
+    }
+
+    // Admin actions log
+    match /adminActions/{actionId} {
+      allow read: if isAdmin();
+      allow create: if isAdmin();
+      allow update, delete: if false; // Logs are immutable
+    }
+  }
+}
