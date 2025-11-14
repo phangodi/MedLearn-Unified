@@ -141,21 +141,9 @@ export function DashboardPage() {
             transition={{ duration: 0.5 }}
             className="mb-8 relative"
           >
-            <div className="flex items-center gap-3">
-              <motion.div
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ type: 'spring', delay: 0.2, stiffness: 200 }}
-                className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg"
-              >
-                <span className="text-lg">👋</span>
-              </motion.div>
-              <div>
-                <h2 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-foreground via-primary to-secondary bg-clip-text text-transparent">
-                  Welcome back, {userProfile?.name || 'Student'}!
-                </h2>
-              </div>
-            </div>
+            <h2 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-foreground via-primary to-secondary bg-clip-text text-transparent">
+              Welcome back, {userProfile?.name || 'Student'}! 👋
+            </h2>
           </motion.div>
 
           {/* Hero Section with Typewriter and Rotating Card */}
