@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Brain,
@@ -27,7 +27,7 @@ interface SidebarProps {
 export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: SidebarProps) {
   const navigate = useNavigate()
   const location = useLocation()
-  const [expandedSections, setExpandedSections] = useState<string[]>(['subjects'])
+  const [expandedSections, setExpandedSections] = useState<string[]>(['subjects', 'tools'])
   const [showExpandTooltip, setShowExpandTooltip] = useState(false)
 
   const toggleSection = (section: string) => {
@@ -50,39 +50,16 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
     { name: 'Community', icon: Users, path: '/community' },
   ]
 
-  const SidebarContent = () => (
-    <>
-      {/* Header - EXACT same height as navbar */}
-      <div className="px-4 h-[60px] border-b border-border/50 flex items-center justify-between">
-        {!isCollapsed && (
-          <div className="flex items-center space-x-2.5">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-md">
-              <Activity className="w-4 h-4 text-primary-foreground" />
-            </div>
-            <span className="font-bold text-base bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Lara's MedLearn
-            </span>
-          </div>
-        )}
-        <Button
-          variant="ghost"
-          size="sm"
-          onClick={() => setIsOpen(false)}
-          className="lg:hidden"
-        >
-          <X className="w-4 h-4" />
-        </Button>
-      </div>
-
-      {/* Navigation - Aurora style */}
-      <nav className="flex-1 overflow-y-auto p-3 space-y-0.5 min-h-0">
+  // Memoize navigation content to prevent re-renders when tooltip state changes
+  const navigationContent = useMemo(() => (
+    <nav className="flex-1 overflow-y-auto p-3 space-y-0.5 min-h-0">
         {/* Dashboard */}
         <button
           onClick={() => navigate('/dashboard')}
           className={`w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg transition-colors text-left ${
             location.pathname === '/dashboard'
-              ? 'bg-background dark:bg-blue-900/60'
-              : 'hover:bg-background dark:hover:bg-blue-950/50'
+              ? 'bg-blue-100 dark:bg-blue-900/60'
+              : 'hover:bg-blue-50 dark:hover:bg-blue-950/50'
           }`}
         >
           <Home className={`w-4.5 h-4.5 ${
@@ -245,6 +222,34 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
           )}
         </div>
       </nav>
+  ), [location.pathname, expandedSections, isCollapsed, navigate])
+
+  const SidebarContent = () => (
+    <>
+      {/* Header - EXACT same height as navbar */}
+      <div className="px-4 h-[60px] border-b border-border/50 flex items-center justify-between">
+        {!isCollapsed && (
+          <div className="flex items-center space-x-2.5">
+            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-md">
+              <Activity className="w-4 h-4 text-primary-foreground" />
+            </div>
+            <span className="font-bold text-base bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              Lara's MedLearn
+            </span>
+          </div>
+        )}
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={() => setIsOpen(false)}
+          className="lg:hidden"
+        >
+          <X className="w-4 h-4" />
+        </Button>
+      </div>
+
+      {/* Navigation Content (Memoized) */}
+      {navigationContent}
 
       {/* Footer - Aurora style - Always stick to bottom */}
       <div className="p-3 border-t border-border/50 mt-auto">
