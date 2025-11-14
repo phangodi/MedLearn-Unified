@@ -196,8 +196,8 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
                         onClick={() => navigate(tool.path)}
                         className={`w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg transition-colors text-left group ${
                           isActive
-                            ? 'bg-background dark:bg-blue-900/60'
-                            : 'hover:bg-background dark:hover:bg-blue-950/50'
+                            ? 'bg-blue-100 dark:bg-blue-900/60'
+                            : 'hover:bg-blue-50 dark:hover:bg-blue-950/50'
                         }`}
                       >
                         <Icon className={`w-4.5 h-4.5 ${
@@ -228,8 +228,8 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
                     onClick={() => navigate(tool.path)}
                     className={`w-full flex items-center justify-center px-3 py-2 rounded-lg transition-colors ${
                       isActive
-                        ? 'bg-background dark:bg-blue-900/60'
-                        : 'hover:bg-background dark:hover:bg-blue-950/50'
+                        ? 'bg-blue-100 dark:bg-blue-900/60'
+                        : 'hover:bg-blue-50 dark:hover:bg-blue-950/50'
                     }`}
                     title={tool.name}
                   >
