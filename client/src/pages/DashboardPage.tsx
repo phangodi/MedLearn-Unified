@@ -10,13 +10,16 @@ import { RotatingCard } from '@/components/ui/RotatingCard'
 import { Particles } from '@/components/ui/Particles'
 import { LogOut, Brain, Microscope, User, Sparkles, Users, Activity } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
+import { useAuth } from '@/contexts/AuthContext'
 
 export function DashboardPage() {
   const navigate = useNavigate()
+  const { userProfile, signOut } = useAuth()
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
 
-  const handleLogout = () => {
+  const handleLogout = async () => {
+    await signOut()
     navigate('/login')
   }
 
@@ -121,7 +124,7 @@ export function DashboardPage() {
             {/* Right side actions */}
             <div className={`flex items-center gap-1.5 ${!sidebarCollapsed ? 'ml-auto' : ''}`}>
               <ThemeToggle />
-              <Button variant="ghost" size="sm" onClick={handleLogout}>
+              <Button variant="ghost" size="sm" onClick={handleLogout} className="hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-100 hover:text-gray-900 dark:hover:text-white">
                 <LogOut className="w-4 h-4 mr-1.5" />
                 <span className="hidden sm:inline text-sm">Logout</span>
               </Button>
@@ -138,21 +141,9 @@ export function DashboardPage() {
             transition={{ duration: 0.5 }}
             className="mb-8 relative"
           >
-            <div className="flex items-center gap-3">
-              <motion.div
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ type: 'spring', delay: 0.2, stiffness: 200 }}
-                className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg"
-              >
-                <span className="text-lg">👋</span>
-              </motion.div>
-              <div>
-                <h2 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-foreground via-primary to-secondary bg-clip-text text-transparent">
-                  Welcome back, Demo User!
-                </h2>
-              </div>
-            </div>
+            <h2 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-foreground via-primary to-secondary bg-clip-text text-transparent">
+              Welcome back, {userProfile?.name || 'Student'}! 👋
+            </h2>
           </motion.div>
 
           {/* Hero Section with Typewriter and Rotating Card */}
@@ -194,7 +185,6 @@ export function DashboardPage() {
           {/* Enhanced subject grid with wow animations */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {subjects.map((subject, index) => {
-              const Icon = subject.icon
               return (
                 <motion.div
                   key={subject.name}

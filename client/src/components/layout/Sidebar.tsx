@@ -1,9 +1,8 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Brain,
   Microscope,
-  Stethoscope,
   User,
   Sparkles,
   Users,
@@ -13,10 +12,10 @@ import {
   Settings,
   Menu,
   X,
-  ChevronLeft,
   Activity
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 interface SidebarProps {
   isOpen: boolean
@@ -26,7 +25,9 @@ interface SidebarProps {
 }
 
 export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: SidebarProps) {
-  const [expandedSections, setExpandedSections] = useState<string[]>(['subjects'])
+  const navigate = useNavigate()
+  const location = useLocation()
+  const [expandedSections, setExpandedSections] = useState<string[]>(['subjects', 'tools'])
   const [showExpandTooltip, setShowExpandTooltip] = useState(false)
 
   const toggleSection = (section: string) => {
@@ -48,6 +49,207 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
     { name: 'AI Exam Prep', icon: Sparkles, path: '/ai-prep' },
     { name: 'Community', icon: Users, path: '/community' },
   ]
+
+  // Memoize navigation content to prevent re-renders when tooltip state changes
+  const navigationContent = useMemo(() => (
+    <nav className="flex-1 overflow-y-auto p-3 space-y-0.5 min-h-0">
+        {/* Dashboard */}
+        <button
+          onClick={() => navigate('/dashboard')}
+          data-selected={(location.pathname === '/dashboard' || location.pathname === '/') ? 'true' : undefined}
+          className={`w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg transition-colors text-left ${
+            (location.pathname === '/dashboard' || location.pathname === '/')
+              ? 'bg-gray-200 dark:!bg-transparent'
+              : 'hover:bg-gray-100 dark:hover:bg-gray-800'
+          }`}
+        >
+          <Home className={`w-4.5 h-4.5 ${
+            (location.pathname === '/dashboard' || location.pathname === '/')
+              ? 'text-foreground dark:!text-gray-200'
+              : 'text-gray-600 dark:text-gray-100'
+          }`} />
+          {!isCollapsed && (
+            <span className={`text-sm ${
+              (location.pathname === '/dashboard' || location.pathname === '/')
+                ? 'font-medium text-foreground dark:!text-gray-200'
+                : 'text-gray-600 dark:text-gray-100'
+            }`}>Dashboard</span>
+          )}
+        </button>
+
+        {/* Subjects Section */}
+        <div className="pt-4">
+          <button
+            onClick={() => toggleSection('subjects')}
+            className="w-full flex items-center justify-between px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/40 transition-colors text-left"
+          >
+            <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+              {!isCollapsed ? 'Subjects' : 'SUB'}
+            </span>
+            {!isCollapsed && (expandedSections.includes('subjects') ? (
+              <ChevronDown className="w-4 h-4 text-muted-foreground" />
+            ) : (
+              <ChevronRight className="w-4 h-4 text-muted-foreground" />
+            ))}
+          </button>
+
+          <AnimatePresence initial={false}>
+            {expandedSections.includes('subjects') && !isCollapsed && (
+              <motion.div
+                initial={false}
+                animate={{ height: 'auto', opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.2 }}
+                className="overflow-hidden"
+              >
+                <div className="space-y-1 pt-1">
+                  {subjects.map((subject) => {
+                    const Icon = subject.icon
+                    const isActive = location.pathname === subject.path
+                    return (
+                      <button
+                        key={subject.name}
+                        onClick={() => navigate(subject.path)}
+                        data-selected={isActive ? 'true' : undefined}
+                        className={`w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg transition-colors text-left group ${
+                          isActive
+                            ? 'bg-gray-200 dark:!bg-transparent'
+                            : 'hover:bg-gray-100 dark:hover:bg-gray-800'
+                        }`}
+                      >
+                        <Icon className={`w-4.5 h-4.5 ${
+                          isActive
+                            ? 'text-foreground dark:!text-gray-200'
+                            : 'text-gray-600 dark:text-gray-100'
+                        }`} />
+                        <span className={`text-sm ${
+                          isActive ? 'font-medium text-foreground dark:!text-gray-200' : 'text-gray-600 dark:text-gray-100'
+                        }`}>{subject.name}</span>
+                      </button>
+                    )
+                  })}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          {/* Collapsed view - show icons only */}
+          {isCollapsed && (
+            <div className="space-y-1 pt-1">
+              {subjects.map((subject) => {
+                const Icon = subject.icon
+                const isActive = location.pathname === subject.path
+                return (
+                  <button
+                    key={subject.name}
+                    onClick={() => navigate(subject.path)}
+                    data-selected={isActive ? 'true' : undefined}
+                    className={`w-full flex items-center justify-center px-3 py-2 rounded-lg transition-colors ${
+                      isActive
+                        ? 'bg-gray-200 dark:!bg-transparent'
+                        : 'hover:bg-gray-100 dark:hover:bg-gray-800'
+                    }`}
+                    title={subject.name}
+                  >
+                    <Icon className={`w-5 h-5 ${
+                      isActive
+                        ? 'text-foreground dark:!text-gray-200'
+                        : 'text-gray-600 dark:text-gray-100'
+                    }`} />
+                  </button>
+                )
+              })}
+            </div>
+          )}
+        </div>
+
+        {/* Tools Section */}
+        <div className="pt-4">
+          <button
+            onClick={() => toggleSection('tools')}
+            className="w-full flex items-center justify-between px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/40 transition-colors text-left"
+          >
+            <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+              {!isCollapsed ? 'Tools' : 'TOO'}
+            </span>
+            {!isCollapsed && (expandedSections.includes('tools') ? (
+              <ChevronDown className="w-4 h-4 text-muted-foreground" />
+            ) : (
+              <ChevronRight className="w-4 h-4 text-muted-foreground" />
+            ))}
+          </button>
+
+          <AnimatePresence initial={false}>
+            {expandedSections.includes('tools') && !isCollapsed && (
+              <motion.div
+                initial={false}
+                animate={{ height: 'auto', opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.2 }}
+                className="overflow-hidden"
+              >
+                <div className="space-y-1 pt-1">
+                  {tools.map((tool) => {
+                    const Icon = tool.icon
+                    const isActive = location.pathname === tool.path
+                    return (
+                      <button
+                        key={tool.name}
+                        onClick={() => navigate(tool.path)}
+                        data-selected={isActive ? 'true' : undefined}
+                        className={`w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg transition-colors text-left group ${
+                          isActive
+                            ? 'bg-gray-200 dark:!bg-transparent'
+                            : 'hover:bg-gray-100 dark:hover:bg-gray-800'
+                        }`}
+                      >
+                        <Icon className={`w-4.5 h-4.5 ${
+                          isActive
+                            ? 'text-foreground dark:!text-gray-200'
+                            : 'text-gray-600 dark:text-gray-100'
+                        }`} />
+                        <span className={`text-sm ${
+                          isActive ? 'font-medium text-foreground dark:!text-gray-200' : 'text-gray-600 dark:text-gray-100'
+                        }`}>{tool.name}</span>
+                      </button>
+                    )
+                  })}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          {/* Collapsed view - show icons only */}
+          {isCollapsed && (
+            <div className="space-y-1 pt-1">
+              {tools.map((tool) => {
+                const Icon = tool.icon
+                const isActive = location.pathname === tool.path
+                return (
+                  <button
+                    key={tool.name}
+                    onClick={() => navigate(tool.path)}
+                    data-selected={isActive ? 'true' : undefined}
+                    className={`w-full flex items-center justify-center px-3 py-2 rounded-lg transition-colors ${
+                      isActive
+                        ? 'bg-gray-200 dark:!bg-transparent'
+                        : 'hover:bg-gray-100 dark:hover:bg-gray-800'
+                    }`}
+                    title={tool.name}
+                  >
+                    <Icon className={`w-5 h-5 ${
+                      isActive
+                        ? 'text-foreground dark:!text-gray-200'
+                        : 'text-gray-600 dark:text-gray-200'
+                    }`} />
+                  </button>
+                )
+              })}
+            </div>
+          )}
+        </div>
+      </nav>
+  ), [location.pathname, expandedSections, isCollapsed, navigate])
 
   const SidebarContent = () => (
     <>
@@ -73,150 +275,20 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
         </Button>
       </div>
 
-      {/* Navigation - Aurora style */}
-      <nav className="flex-1 overflow-y-auto p-3 space-y-0.5 min-h-0">
-        {/* Dashboard - Active state */}
-        <button className="w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg bg-blue-100 dark:bg-blue-900/60 hover:bg-blue-100 dark:hover:bg-blue-900/60 transition-colors text-left">
-          <Home className="w-4.5 h-4.5 text-blue-600 dark:text-blue-400" />
-          {!isCollapsed && <span className="text-sm font-medium text-blue-600 dark:text-blue-400">Dashboard</span>}
-        </button>
-
-        {/* Subjects Section */}
-        <div className="pt-4">
-          <button
-            onClick={() => toggleSection('subjects')}
-            className="w-full flex items-center justify-between px-3 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-950/50 transition-colors text-left"
-          >
-            <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
-              {!isCollapsed ? 'Subjects' : 'SUB'}
-            </span>
-            {!isCollapsed && (expandedSections.includes('subjects') ? (
-              <ChevronDown className="w-4 h-4 text-muted-foreground" />
-            ) : (
-              <ChevronRight className="w-4 h-4 text-muted-foreground" />
-            ))}
-          </button>
-
-          <AnimatePresence>
-            {expandedSections.includes('subjects') && !isCollapsed && (
-              <motion.div
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: 'auto', opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                transition={{ duration: 0.2 }}
-                className="overflow-hidden"
-              >
-                <div className="space-y-1 pt-1">
-                  {subjects.map((subject) => {
-                    const Icon = subject.icon
-                    return (
-                      <button
-                        key={subject.name}
-                        className="w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-950/50 transition-colors text-left group"
-                      >
-                        <Icon className="w-4.5 h-4.5 text-foreground/70" />
-                        <span className="text-sm">{subject.name}</span>
-                      </button>
-                    )
-                  })}
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-
-          {/* Collapsed view - show icons only */}
-          {isCollapsed && (
-            <div className="space-y-1 pt-1">
-              {subjects.map((subject) => {
-                const Icon = subject.icon
-                return (
-                  <button
-                    key={subject.name}
-                    className="w-full flex items-center justify-center px-3 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-950/50 transition-colors"
-                    title={subject.name}
-                  >
-                    <Icon className="w-5 h-5 text-foreground/70" />
-                  </button>
-                )
-              })}
-            </div>
-          )}
-        </div>
-
-        {/* Tools Section */}
-        <div className="pt-4">
-          <button
-            onClick={() => toggleSection('tools')}
-            className="w-full flex items-center justify-between px-3 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-950/50 transition-colors text-left"
-          >
-            <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
-              {!isCollapsed ? 'Tools' : 'TOO'}
-            </span>
-            {!isCollapsed && (expandedSections.includes('tools') ? (
-              <ChevronDown className="w-4 h-4 text-muted-foreground" />
-            ) : (
-              <ChevronRight className="w-4 h-4 text-muted-foreground" />
-            ))}
-          </button>
-
-          <AnimatePresence>
-            {expandedSections.includes('tools') && !isCollapsed && (
-              <motion.div
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: 'auto', opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                transition={{ duration: 0.2 }}
-                className="overflow-hidden"
-              >
-                <div className="space-y-1 pt-1">
-                  {tools.map((tool) => {
-                    const Icon = tool.icon
-                    return (
-                      <button
-                        key={tool.name}
-                        className="w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-950/50 transition-colors text-left group"
-                      >
-                        <Icon className="w-4.5 h-4.5 text-foreground/70" />
-                        <span className="text-sm">{tool.name}</span>
-                      </button>
-                    )
-                  })}
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-
-          {/* Collapsed view - show icons only */}
-          {isCollapsed && (
-            <div className="space-y-1 pt-1">
-              {tools.map((tool) => {
-                const Icon = tool.icon
-                return (
-                  <button
-                    key={tool.name}
-                    className="w-full flex items-center justify-center px-3 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-950/50 transition-colors"
-                    title={tool.name}
-                  >
-                    <Icon className="w-5 h-5 text-foreground/70" />
-                  </button>
-                )
-              })}
-            </div>
-          )}
-        </div>
-      </nav>
+      {/* Navigation Content (Memoized) */}
+      {navigationContent}
 
       {/* Footer - Aurora style - Always stick to bottom */}
       <div className="p-3 border-t border-border/50 mt-auto">
-        <button className="w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-950/50 transition-colors text-left">
-          <Settings className="w-4.5 h-4.5 text-foreground/70" />
-          {!isCollapsed && <span className="text-sm">Settings</span>}
+        <button className="w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/40 transition-colors text-left">
+          <Settings className="w-4.5 h-4.5 text-gray-600 dark:text-gray-100" />
+          {!isCollapsed && <span className="text-sm text-gray-600 dark:text-gray-100">Settings</span>}
         </button>
       </div>
 
-      {/* Small hover marker for collapse/expand - Aurora style */}
+      {/* Small hover marker for collapse/expand - Position OUTSIDE sidebar on the right edge */}
       <div
-        className="hidden lg:flex absolute top-1/2 -translate-y-1/2 right-0 w-6 h-16 items-center justify-center cursor-pointer z-20 group"
+        className="hidden lg:flex absolute top-1/2 -translate-y-1/2 -right-3 w-6 h-16 items-center justify-center cursor-pointer z-20 group"
         onMouseEnter={() => setShowExpandTooltip(true)}
         onMouseLeave={() => setShowExpandTooltip(false)}
         onClick={() => setIsCollapsed(!isCollapsed)}
