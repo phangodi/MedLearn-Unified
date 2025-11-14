@@ -381,7 +381,7 @@ export function CommunityPage() {
             {/* Right side actions */}
             <div className={`flex items-center gap-1.5 ${!sidebarCollapsed ? 'ml-auto' : ''}`}>
               <ThemeToggle />
-              <Button variant="ghost" size="sm" onClick={handleLogout} className="hover:bg-gray-100 dark:hover:bg-gray-800/50 text-gray-600 dark:text-gray-400 hover:text-foreground dark:hover:text-gray-100">
+              <Button variant="ghost" size="sm" onClick={handleLogout} className="hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-100 hover:text-gray-900 dark:hover:text-white">
                 <LogOut className="w-4 h-4 mr-1.5" />
                 <span className="hidden sm:inline text-sm">Logout</span>
               </Button>

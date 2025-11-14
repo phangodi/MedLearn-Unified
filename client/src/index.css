@@ -124,4 +124,14 @@
   .glass-dark {
     @apply bg-black/10 backdrop-blur-lg border border-white/10;
   }
+
+  /* Dark mode: selected sidebar items should not have a chip background,
+     and their text/icons should be slightly brighter for readability. */
+  .dark [data-selected='true'] {
+    @apply bg-transparent;
+  }
+  .dark [data-selected='true'] svg,
+  .dark [data-selected='true'] span {
+    @apply text-gray-200;
+  }
 }

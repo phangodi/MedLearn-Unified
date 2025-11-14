@@ -56,22 +56,23 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
         {/* Dashboard */}
         <button
           onClick={() => navigate('/dashboard')}
+          data-selected={(location.pathname === '/dashboard' || location.pathname === '/') ? 'true' : undefined}
           className={`w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg transition-colors text-left ${
-            location.pathname === '/dashboard'
-              ? 'bg-gray-200 dark:bg-white/10'
-              : 'hover:bg-gray-100 dark:hover:bg-gray-800/50'
+            (location.pathname === '/dashboard' || location.pathname === '/')
+              ? 'bg-gray-200 dark:!bg-transparent'
+              : 'hover:bg-gray-100 dark:hover:bg-gray-800'
           }`}
         >
           <Home className={`w-4.5 h-4.5 ${
-            location.pathname === '/dashboard'
-              ? 'text-foreground dark:text-gray-100'
-              : 'text-gray-600 dark:text-gray-400'
+            (location.pathname === '/dashboard' || location.pathname === '/')
+              ? 'text-foreground dark:!text-gray-200'
+              : 'text-gray-600 dark:text-gray-100'
           }`} />
           {!isCollapsed && (
             <span className={`text-sm ${
-              location.pathname === '/dashboard'
-                ? 'font-medium text-foreground dark:text-gray-100'
-                : 'text-gray-600 dark:text-gray-400'
+              (location.pathname === '/dashboard' || location.pathname === '/')
+                ? 'font-medium text-foreground dark:!text-gray-200'
+                : 'text-gray-600 dark:text-gray-100'
             }`}>Dashboard</span>
           )}
         </button>
@@ -80,7 +81,7 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
         <div className="pt-4">
           <button
             onClick={() => toggleSection('subjects')}
-            className="w-full flex items-center justify-between px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors text-left"
+            className="w-full flex items-center justify-between px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/40 transition-colors text-left"
           >
             <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
               {!isCollapsed ? 'Subjects' : 'SUB'}
@@ -104,13 +105,26 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
                 <div className="space-y-1 pt-1">
                   {subjects.map((subject) => {
                     const Icon = subject.icon
+                    const isActive = location.pathname === subject.path
                     return (
                       <button
                         key={subject.name}
-                        className="w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors text-left group"
+                        onClick={() => navigate(subject.path)}
+                        data-selected={isActive ? 'true' : undefined}
+                        className={`w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg transition-colors text-left group ${
+                          isActive
+                            ? 'bg-gray-200 dark:!bg-transparent'
+                            : 'hover:bg-gray-100 dark:hover:bg-gray-800'
+                        }`}
                       >
-                        <Icon className="w-4.5 h-4.5 text-gray-600 dark:text-gray-400" />
-                        <span className="text-sm text-gray-600 dark:text-gray-400">{subject.name}</span>
+                        <Icon className={`w-4.5 h-4.5 ${
+                          isActive
+                            ? 'text-foreground dark:!text-gray-200'
+                            : 'text-gray-600 dark:text-gray-100'
+                        }`} />
+                        <span className={`text-sm ${
+                          isActive ? 'font-medium text-foreground dark:!text-gray-200' : 'text-gray-600 dark:text-gray-100'
+                        }`}>{subject.name}</span>
                       </button>
                     )
                   })}
@@ -124,13 +138,24 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
             <div className="space-y-1 pt-1">
               {subjects.map((subject) => {
                 const Icon = subject.icon
+                const isActive = location.pathname === subject.path
                 return (
                   <button
                     key={subject.name}
-                    className="w-full flex items-center justify-center px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors"
+                    onClick={() => navigate(subject.path)}
+                    data-selected={isActive ? 'true' : undefined}
+                    className={`w-full flex items-center justify-center px-3 py-2 rounded-lg transition-colors ${
+                      isActive
+                        ? 'bg-gray-200 dark:!bg-transparent'
+                        : 'hover:bg-gray-100 dark:hover:bg-gray-800'
+                    }`}
                     title={subject.name}
                   >
-                    <Icon className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+                    <Icon className={`w-5 h-5 ${
+                      isActive
+                        ? 'text-foreground dark:!text-gray-200'
+                        : 'text-gray-600 dark:text-gray-100'
+                    }`} />
                   </button>
                 )
               })}
@@ -142,7 +167,7 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
         <div className="pt-4">
           <button
             onClick={() => toggleSection('tools')}
-            className="w-full flex items-center justify-between px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors text-left"
+            className="w-full flex items-center justify-between px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/40 transition-colors text-left"
           >
             <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
               {!isCollapsed ? 'Tools' : 'TOO'}
@@ -171,19 +196,20 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
                       <button
                         key={tool.name}
                         onClick={() => navigate(tool.path)}
+                        data-selected={isActive ? 'true' : undefined}
                         className={`w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg transition-colors text-left group ${
                           isActive
-                            ? 'bg-gray-200 dark:bg-white/10'
-                            : 'hover:bg-gray-100 dark:hover:bg-gray-800/50'
+                            ? 'bg-gray-200 dark:!bg-transparent'
+                            : 'hover:bg-gray-100 dark:hover:bg-gray-800'
                         }`}
                       >
                         <Icon className={`w-4.5 h-4.5 ${
                           isActive
-                            ? 'text-foreground dark:text-gray-100'
-                            : 'text-gray-600 dark:text-gray-400'
+                            ? 'text-foreground dark:!text-gray-200'
+                            : 'text-gray-600 dark:text-gray-100'
                         }`} />
                         <span className={`text-sm ${
-                          isActive ? 'font-medium text-foreground dark:text-gray-100' : 'text-gray-600 dark:text-gray-400'
+                          isActive ? 'font-medium text-foreground dark:!text-gray-200' : 'text-gray-600 dark:text-gray-100'
                         }`}>{tool.name}</span>
                       </button>
                     )
@@ -203,17 +229,18 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
                   <button
                     key={tool.name}
                     onClick={() => navigate(tool.path)}
+                    data-selected={isActive ? 'true' : undefined}
                     className={`w-full flex items-center justify-center px-3 py-2 rounded-lg transition-colors ${
                       isActive
-                        ? 'bg-gray-200 dark:bg-white/10'
-                        : 'hover:bg-gray-100 dark:hover:bg-gray-800/50'
+                        ? 'bg-gray-200 dark:!bg-transparent'
+                        : 'hover:bg-gray-100 dark:hover:bg-gray-800'
                     }`}
                     title={tool.name}
                   >
                     <Icon className={`w-5 h-5 ${
                       isActive
-                        ? 'text-foreground dark:text-gray-100'
-                        : 'text-gray-600 dark:text-gray-400'
+                        ? 'text-foreground dark:!text-gray-200'
+                        : 'text-gray-600 dark:text-gray-200'
                     }`} />
                   </button>
                 )
@@ -253,9 +280,9 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
 
       {/* Footer - Aurora style - Always stick to bottom */}
       <div className="p-3 border-t border-border/50 mt-auto">
-        <button className="w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors text-left">
-          <Settings className="w-4.5 h-4.5 text-gray-600 dark:text-gray-400" />
-          {!isCollapsed && <span className="text-sm text-gray-600 dark:text-gray-400">Settings</span>}
+        <button className="w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/40 transition-colors text-left">
+          <Settings className="w-4.5 h-4.5 text-gray-600 dark:text-gray-100" />
+          {!isCollapsed && <span className="text-sm text-gray-600 dark:text-gray-100">Settings</span>}
         </button>
       </div>
 
