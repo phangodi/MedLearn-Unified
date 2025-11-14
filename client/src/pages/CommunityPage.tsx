@@ -332,13 +332,13 @@ export function CommunityPage() {
   const getFileColor = (type: string) => {
     switch (type) {
       case 'pdf':
-        return 'bg-red-100 dark:bg-red-950/30 text-red-700 dark:text-red-400 border-red-300 dark:border-red-800'
+        return 'bg-card dark:bg-card text-red-700 dark:text-red-400 border-border dark:border-border'
       case 'image':
-        return 'bg-purple-100 dark:bg-purple-950/30 text-purple-700 dark:text-purple-400 border-purple-300 dark:border-purple-800'
+        return 'bg-card dark:bg-card text-purple-700 dark:text-purple-400 border-border dark:border-border'
       case 'video':
-        return 'bg-blue-100 dark:bg-blue-950/30 text-blue-700 dark:text-blue-400 border-blue-300 dark:border-blue-800'
+        return 'bg-card dark:bg-card text-blue-700 dark:text-blue-400 border-border dark:border-border'
       default:
-        return 'bg-gray-100 dark:bg-gray-950/30 text-gray-700 dark:text-gray-400 border-gray-300 dark:border-gray-800'
+        return 'bg-card dark:bg-card text-gray-700 dark:text-gray-400 border-border dark:border-border'
     }
   }
 
@@ -490,7 +490,7 @@ export function CommunityPage() {
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
                           onClick={() => document.getElementById('image-upload')?.click()}
-                          className="px-4 py-2 bg-blue-50 dark:bg-blue-950/30 text-blue-600 dark:text-blue-400 rounded-lg border border-blue-200 dark:border-blue-800 flex items-center gap-2 hover:bg-blue-100 dark:hover:bg-blue-950/50 transition-colors"
+                          className="px-4 py-2 bg-card text-blue-600 dark:text-blue-400 rounded-lg border border-border flex items-center gap-2 hover:bg-muted transition-colors"
                           type="button"
                         >
                           <ImageIcon className="w-4 h-4" />
@@ -500,7 +500,7 @@ export function CommunityPage() {
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
                           onClick={() => document.getElementById('pdf-upload')?.click()}
-                          className="px-4 py-2 bg-red-50 dark:bg-red-950/30 text-red-600 dark:text-red-400 rounded-lg border border-red-200 dark:border-red-800 flex items-center gap-2 hover:bg-red-100 dark:hover:bg-red-950/50 transition-colors"
+                          className="px-4 py-2 bg-card text-red-600 dark:text-red-400 rounded-lg border border-border flex items-center gap-2 hover:bg-muted transition-colors"
                           type="button"
                         >
                           <FileText className="w-4 h-4" />
@@ -510,7 +510,7 @@ export function CommunityPage() {
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
                           onClick={() => document.getElementById('video-upload')?.click()}
-                          className="px-4 py-2 bg-purple-50 dark:bg-purple-950/30 text-purple-600 dark:text-purple-400 rounded-lg border border-purple-200 dark:border-purple-800 flex items-center gap-2 hover:bg-purple-100 dark:hover:bg-purple-950/50 transition-colors"
+                          className="px-4 py-2 bg-card text-purple-600 dark:text-purple-400 rounded-lg border border-border flex items-center gap-2 hover:bg-muted transition-colors"
                           type="button"
                         >
                           <Video className="w-4 h-4" />
@@ -533,7 +533,7 @@ export function CommunityPage() {
                               className={`p-3 rounded-lg border flex items-center justify-between ${getFileColor(getFileType(file))}`}
                             >
                               <div className="flex items-center gap-3 flex-1 min-w-0">
-                                <div className="w-10 h-10 rounded-lg bg-white/50 dark:bg-black/20 flex items-center justify-center flex-shrink-0">
+                                <div className="w-10 h-10 rounded-lg bg-muted/30 dark:bg-muted/30 flex items-center justify-center flex-shrink-0">
                                   {getFileIcon(getFileType(file))}
                                 </div>
                                 <div className="flex-1 min-w-0">
@@ -664,13 +664,13 @@ export function CommunityPage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   className={`bg-card border rounded-xl overflow-hidden hover:border-primary/50 hover:shadow-lg transition-all duration-300 ${
-                    post.pinned ? 'border-amber-500/50 shadow-amber-500/10' : 'border-border'
+                    post.pinned ? 'border-blue-500/50 shadow-blue-500/10' : 'border-border'
                   }`}
                 >
                   {/* Pinned Badge */}
                   {post.pinned && (
-                    <div className="px-6 pt-3 pb-2 bg-gradient-to-r from-amber-500/10 to-orange-500/10 border-b border-amber-500/20">
-                      <div className="flex items-center gap-2 text-amber-600 dark:text-amber-400">
+                    <div className="px-6 pt-3 pb-2 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border-b border-blue-500/20">
+                      <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400">
                         <Pin className="w-4 h-4 fill-current" />
                         <span className="text-xs font-semibold uppercase tracking-wide">
                           Pinned by Admin
@@ -728,8 +728,8 @@ export function CommunityPage() {
                               whileTap={{ scale: 0.95 }}
                               className={`p-2 rounded-lg transition-colors hover:bg-background ${
                                 post.pinned
-                                  ? 'text-amber-600 dark:text-amber-400'
-                                  : 'text-muted-foreground hover:text-amber-600'
+                                  ? 'text-blue-600 dark:text-blue-400'
+                                  : 'text-muted-foreground hover:text-blue-600'
                               }`}
                               title={post.pinned ? 'Unpin Post' : 'Pin Post'}
                             >
@@ -780,7 +780,7 @@ export function CommunityPage() {
                             className={`p-4 rounded-lg border flex items-center justify-between cursor-pointer transition-all ${getFileColor(attachment.type)}`}
                           >
                             <div className="flex items-center gap-3">
-                              <div className="w-10 h-10 rounded-lg bg-white/50 dark:bg-black/20 flex items-center justify-center">
+                              <div className="w-10 h-10 rounded-lg bg-muted/30 dark:bg-muted/30 flex items-center justify-center">
                                 {attachment.type === 'video' ? (
                                   <Play className="w-5 h-5" />
                                 ) : (
