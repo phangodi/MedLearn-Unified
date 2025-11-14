@@ -303,7 +303,7 @@ export function AuthPage() {
 
         {/* Footer */}
         <p className="text-center text-xs text-muted-foreground mt-4">
-          Free for all medical students. Built with ❤️ for learning.
+          Free for all medical students. Always. 
         </p>
       </motion.div>
     </div>
