@@ -214,16 +214,8 @@ export function CommunityPage() {
   }
 
   const getFileColor = (type: string) => {
-    switch (type) {
-      case 'pdf':
-        return 'bg-card dark:bg-card text-red-700 dark:text-red-400 border-border dark:border-border'
-      case 'image':
-        return 'bg-card dark:bg-card text-purple-700 dark:text-purple-400 border-border dark:border-border'
-      case 'video':
-        return 'bg-card dark:bg-card text-blue-700 dark:text-blue-400 border-border dark:border-border'
-      default:
-        return 'bg-card dark:bg-card text-gray-700 dark:text-gray-400 border-border dark:border-border'
-    }
+    // Professional gray theme for all file types
+    return 'bg-card dark:bg-card text-muted-foreground border-border dark:border-border'
   }
 
   const handleCreatePost = async () => {
@@ -465,7 +457,7 @@ export function CommunityPage() {
               <div className="relative">
                 <Button
                   variant="outline"
-                  className="gap-2 min-w-[160px] justify-between"
+                  className="gap-2 min-w-[160px] justify-between hover:bg-muted hover:text-foreground"
                   onClick={() => setShowFilterDropdown(!showFilterDropdown)}
                 >
                   <div className="flex items-center gap-2">
@@ -503,8 +495,8 @@ export function CommunityPage() {
                               }}
                               className={`w-full px-4 py-2.5 text-left text-sm transition-colors ${
                                 selectedFilter === filter
-                                  ? 'bg-primary/10 text-primary font-medium'
-                                  : 'hover:bg-muted text-foreground'
+                                  ? 'bg-muted text-foreground font-normal'
+                                  : 'hover:bg-muted/50 text-muted-foreground font-normal'
                               }`}
                             >
                               {filter}
@@ -545,7 +537,7 @@ export function CommunityPage() {
               >
                 <div className="bg-card border border-border rounded-xl p-6 shadow-lg">
                   <div className="flex gap-4">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-xl shadow-md">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-muted to-muted-foreground/30 flex items-center justify-center text-xl shadow-sm">
                       {currentUser?.avatar || '👤'}
                     </div>
                     <div className="flex-1 space-y-4">
@@ -586,30 +578,30 @@ export function CommunityPage() {
                       {/* File Selection Buttons */}
                       <div className="flex gap-2 flex-wrap">
                         <motion.button
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
                           onClick={() => document.getElementById('image-upload')?.click()}
-                          className="px-4 py-2 bg-card text-blue-600 dark:text-blue-400 rounded-lg border border-border flex items-center gap-2 hover:bg-muted transition-colors"
+                          className="px-3 py-1.5 bg-card text-muted-foreground rounded-lg border border-border flex items-center gap-2 hover:bg-muted transition-colors text-sm"
                           type="button"
                         >
                           <ImageIcon className="w-4 h-4" />
                           Image
                         </motion.button>
                         <motion.button
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
                           onClick={() => document.getElementById('pdf-upload')?.click()}
-                          className="px-4 py-2 bg-card text-red-600 dark:text-red-400 rounded-lg border border-border flex items-center gap-2 hover:bg-muted transition-colors"
+                          className="px-3 py-1.5 bg-card text-muted-foreground rounded-lg border border-border flex items-center gap-2 hover:bg-muted transition-colors text-sm"
                           type="button"
                         >
                           <FileText className="w-4 h-4" />
                           PDF
                         </motion.button>
                         <motion.button
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
                           onClick={() => document.getElementById('video-upload')?.click()}
-                          className="px-4 py-2 bg-card text-purple-600 dark:text-purple-400 rounded-lg border border-border flex items-center gap-2 hover:bg-muted transition-colors"
+                          className="px-3 py-1.5 bg-card text-muted-foreground rounded-lg border border-border flex items-center gap-2 hover:bg-muted transition-colors text-sm"
                           type="button"
                         >
                           <Video className="w-4 h-4" />
@@ -675,21 +667,21 @@ export function CommunityPage() {
 
                         {/* Selected Tags Display */}
                         {selectedTags.length > 0 && (
-                          <div className="flex flex-wrap gap-2">
+                          <div className="flex flex-wrap gap-1.5">
                             {selectedTags.map((tag) => (
                               <motion.div
                                 key={tag}
                                 initial={{ scale: 0 }}
                                 animate={{ scale: 1 }}
                                 exit={{ scale: 0 }}
-                                className="px-3 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium flex items-center gap-2 border border-primary/20"
+                                className="px-2.5 py-1 bg-muted text-muted-foreground rounded-md text-xs font-normal flex items-center gap-1.5 border border-border"
                               >
                                 #{tag}
                                 <button
                                   onClick={() => removeTag(tag)}
-                                  className="hover:bg-primary/20 rounded-full p-0.5 transition-colors"
+                                  className="hover:bg-background rounded-full p-0.5 transition-colors"
                                 >
-                                  <XIcon className="w-3 h-3" />
+                                  <XIcon className="w-2.5 h-2.5" />
                                 </button>
                               </motion.div>
                             ))}
@@ -707,15 +699,15 @@ export function CommunityPage() {
                               className="overflow-hidden"
                             >
                               <div className="p-3 bg-muted/30 rounded-lg border border-border max-h-40 overflow-y-auto">
-                                <div className="flex flex-wrap gap-2">
+                                <div className="flex flex-wrap gap-1.5">
                                   {availableTags.map((tag) => (
                                     <button
                                       key={tag}
                                       onClick={() => toggleTag(tag)}
-                                      className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all ${
+                                      className={`px-2.5 py-1 rounded-md text-xs font-normal transition-all ${
                                         selectedTags.includes(tag)
-                                          ? 'bg-primary text-primary-foreground'
-                                          : 'bg-background hover:bg-primary/10 text-foreground hover:text-primary border border-border'
+                                          ? 'bg-foreground/10 text-foreground border border-foreground/20'
+                                          : 'bg-background hover:bg-muted text-muted-foreground border border-border'
                                       }`}
                                     >
                                       #{tag}
@@ -808,17 +800,16 @@ export function CommunityPage() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    className={`bg-card border rounded-xl overflow-hidden hover:border-primary/50 hover:shadow-lg transition-all duration-300 backdrop-blur-none ${
-                      post.pinned ? 'border-blue-500/50 shadow-blue-500/10' : 'border-border'
+                    className={`bg-card border rounded-xl overflow-hidden hover:border-muted-foreground/30 hover:shadow-md transition-all duration-300 ${
+                      post.pinned ? 'border-muted-foreground/40 shadow-sm' : 'border-border'
                     }`}
-                    style={{ backgroundColor: 'var(--card)', opacity: 1 }}
                   >
                     {/* Pinned Badge */}
                     {post.pinned && (
-                      <div className="px-6 pt-3 pb-2 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border-b border-blue-500/20">
-                        <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400">
+                      <div className="px-6 pt-3 pb-2 bg-muted/30 border-b border-border">
+                        <div className="flex items-center gap-2 text-muted-foreground">
                           <Pin className="w-4 h-4 fill-current" />
-                          <span className="text-xs font-semibold uppercase tracking-wide">
+                          <span className="text-xs font-normal uppercase tracking-wide">
                             Pinned by Admin
                           </span>
                         </div>
@@ -829,7 +820,7 @@ export function CommunityPage() {
                     <div className="p-6 pb-4">
                       <div className="flex items-start justify-between mb-4">
                         <div className="flex gap-3">
-                          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-2xl shadow-md">
+                          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-muted to-muted-foreground/30 flex items-center justify-center text-2xl shadow-sm">
                             {post.author.avatar}
                           </div>
                           <div>
@@ -838,7 +829,7 @@ export function CommunityPage() {
                                 {post.author.name}
                               </h3>
                               {post.author.verified && (
-                                <Award className="w-4 h-4 text-blue-500" />
+                                <Award className="w-4 h-4 text-muted-foreground" />
                               )}
                             </div>
                             <p className="text-sm text-muted-foreground">
@@ -862,31 +853,31 @@ export function CommunityPage() {
                           {isUserAdmin && (
                             <>
                               <motion.button
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                                className="p-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-950/30 text-blue-600 dark:text-blue-400 transition-colors"
+                                whileHover={{ scale: 1.03 }}
+                                whileTap={{ scale: 0.97 }}
+                                className="p-2 rounded-lg hover:bg-muted text-muted-foreground transition-colors"
                                 title="Edit Post"
                               >
                                 <Edit3 className="w-4 h-4" />
                               </motion.button>
                               <motion.button
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
+                                whileHover={{ scale: 1.03 }}
+                                whileTap={{ scale: 0.97 }}
                                 onClick={() => handleTogglePin(post.id)}
-                                className={`p-2 rounded-lg transition-colors hover:bg-background ${
+                                className={`p-2 rounded-lg transition-colors ${
                                   post.pinned
-                                    ? 'text-blue-600 dark:text-blue-400'
-                                    : 'text-muted-foreground hover:text-blue-600'
+                                    ? 'text-foreground bg-muted'
+                                    : 'text-muted-foreground hover:bg-muted hover:text-foreground'
                                 }`}
                                 title={post.pinned ? 'Unpin Post' : 'Pin Post'}
                               >
                                 <Pin className={`w-4 h-4 ${post.pinned ? 'fill-current' : ''}`} />
                               </motion.button>
                               <motion.button
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
+                                whileHover={{ scale: 1.03 }}
+                                whileTap={{ scale: 0.97 }}
                                 onClick={() => handleDeletePost(post.id)}
-                                className="p-2 rounded-lg hover:bg-red-50 dark:hover:bg-red-950/30 text-red-600 dark:text-red-400 transition-colors"
+                                className="p-2 rounded-lg hover:bg-muted text-muted-foreground hover:text-red-600 dark:hover:text-red-400 transition-colors"
                                 title="Delete Post"
                               >
                                 <Trash2 className="w-4 h-4" />
@@ -907,11 +898,11 @@ export function CommunityPage() {
                       </p>
 
                       {/* Tags */}
-                      <div className="flex flex-wrap gap-2 mb-4">
+                      <div className="flex flex-wrap gap-1.5 mb-4">
                         {post.tags.map((tag, i) => (
                           <span
                             key={i}
-                            className="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium hover:bg-primary/20 cursor-pointer transition-colors"
+                            className="px-2.5 py-0.5 bg-muted text-muted-foreground rounded-md text-xs font-normal hover:bg-muted/70 cursor-pointer transition-colors border border-border"
                           >
                             #{tag}
                           </span>
@@ -988,20 +979,20 @@ export function CommunityPage() {
                 className="bg-card border border-border rounded-xl p-6 shadow-lg"
               >
                 <div className="flex items-center gap-2 mb-4">
-                  <TrendingUp className="w-5 h-5 text-primary" />
-                  <h2 className="font-bold text-lg">Trending Topics</h2>
+                  <TrendingUp className="w-5 h-5 text-muted-foreground" />
+                  <h2 className="font-semibold text-base">Trending Topics</h2>
                 </div>
-                <div className="space-y-3">
+                <div className="space-y-2">
                   {trendingTopics.map((topic, i) => (
                     <motion.div
                       key={i}
                       initial={{ opacity: 0, x: 10 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.3 + i * 0.1 }}
-                      className="flex items-center justify-between p-3 rounded-lg hover:bg-muted/50 cursor-pointer transition-colors group"
+                      className="flex items-center justify-between p-2.5 rounded-lg hover:bg-muted/50 cursor-pointer transition-colors group"
                     >
                       <div className="flex-1">
-                        <p className="font-medium text-sm group-hover:text-primary transition-colors">
+                        <p className="font-normal text-sm group-hover:text-foreground transition-colors">
                           {topic.name}
                         </p>
                         <p className="text-xs text-muted-foreground">
@@ -1014,7 +1005,7 @@ export function CommunityPage() {
                             ? 'text-green-500'
                             : topic.trend === 'down'
                             ? 'text-red-500'
-                            : 'text-gray-500'
+                            : 'text-muted-foreground/40'
                         }`}
                       />
                     </motion.div>
@@ -1030,10 +1021,10 @@ export function CommunityPage() {
                 className="bg-card border border-border rounded-xl p-6 shadow-lg"
               >
                 <div className="flex items-center gap-2 mb-4">
-                  <Users className="w-5 h-5 text-secondary" />
-                  <h2 className="font-bold text-lg">Active Now</h2>
+                  <Users className="w-5 h-5 text-muted-foreground" />
+                  <h2 className="font-semibold text-base">Active Now</h2>
                 </div>
-                <div className="space-y-3">
+                <div className="space-y-2">
                   {activeUsers.map((user, i) => (
                     <motion.div
                       key={i}
@@ -1043,15 +1034,17 @@ export function CommunityPage() {
                       className="flex items-center gap-3 p-2 rounded-lg hover:bg-muted/50 cursor-pointer transition-colors"
                     >
                       <div className="relative">
-                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-lg shadow-md">
+                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-muted to-muted-foreground/30 flex items-center justify-center text-lg shadow-sm">
                           {user.avatar}
                         </div>
-                        {user.online && (
+                        {user.online ? (
                           <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-card rounded-full" />
+                        ) : (
+                          <div className="absolute bottom-0 right-0 w-3 h-3 bg-muted-foreground/40 border-2 border-card rounded-full" />
                         )}
                       </div>
                       <div className="flex-1">
-                        <p className="font-medium text-sm">{user.name}</p>
+                        <p className="font-normal text-sm">{user.name}</p>
                         <p className="text-xs text-muted-foreground">
                           {user.online ? 'Online' : 'Offline'}
                         </p>

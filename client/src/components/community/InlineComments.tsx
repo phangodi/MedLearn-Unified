@@ -91,37 +91,39 @@ export function InlineComments({
         <div className="flex items-center gap-1">
           {/* Like Button */}
           <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
             onClick={(e) => {
               e.stopPropagation()
               onToggleLike()
             }}
-            className={`px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition-all hover:bg-background ${
-              isLiked ? 'text-red-600 dark:text-red-400' : 'text-muted-foreground'
+            className={`px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition-all hover:bg-muted ${
+              isLiked ? 'text-foreground bg-muted' : 'text-muted-foreground'
             }`}
           >
             <Heart className={`w-4 h-4 ${isLiked ? 'fill-current' : ''}`} />
-            <span className="text-sm font-medium">{likes}</span>
+            <span className="text-sm font-normal">{likes}</span>
           </motion.button>
 
           {/* Share Button */}
           <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-3 py-1.5 rounded-lg hover:bg-background flex items-center gap-1.5 transition-all text-muted-foreground"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="px-3 py-1.5 rounded-lg hover:bg-muted flex items-center gap-1.5 transition-all text-muted-foreground"
           >
             <Share2 className="w-4 h-4" />
-            <span className="text-sm font-medium">{shares}</span>
+            <span className="text-sm font-normal">{shares}</span>
           </motion.button>
 
           {/* Comments Toggle */}
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="px-3 py-1.5 rounded-lg hover:bg-background flex items-center gap-1.5 transition-all text-muted-foreground"
+            className={`px-3 py-1.5 rounded-lg hover:bg-muted flex items-center gap-1.5 transition-all ${
+              isExpanded ? 'text-foreground bg-muted' : 'text-muted-foreground'
+            }`}
           >
             <MessageSquare className="w-4 h-4" />
-            <span className="text-sm font-medium">{commentCount}</span>
+            <span className="text-sm font-normal">{commentCount}</span>
             {isExpanded ? (
               <ChevronUp className="w-3.5 h-3.5" />
             ) : (
@@ -132,14 +134,14 @@ export function InlineComments({
 
         {/* Right side - Bookmark */}
         <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
           onClick={(e) => {
             e.stopPropagation()
             onToggleBookmark()
           }}
-          className={`p-1.5 rounded-lg transition-all hover:bg-background ${
-            isBookmarked ? 'text-blue-600 dark:text-blue-400' : 'text-muted-foreground'
+          className={`p-1.5 rounded-lg transition-all hover:bg-muted ${
+            isBookmarked ? 'text-foreground bg-muted' : 'text-muted-foreground'
           }`}
         >
           <Bookmark className={`w-4 h-4 ${isBookmarked ? 'fill-current' : ''}`} />
@@ -193,7 +195,7 @@ export function InlineComments({
 
               {/* Comment Input */}
               <div className="flex gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-lg shadow-md flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-muted to-muted-foreground/30 flex items-center justify-center text-lg shadow-sm flex-shrink-0">
                   {currentUser?.avatar || '👤'}
                 </div>
                 <div className="flex-1 space-y-2">
@@ -260,7 +262,7 @@ export function InlineComments({
                       transition={{ delay: index * 0.05 }}
                       className="flex gap-3 p-3 rounded-lg bg-card hover:bg-muted/30 transition-colors"
                     >
-                      <div className="w-9 h-9 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-base shadow-md flex-shrink-0">
+                      <div className="w-9 h-9 rounded-full bg-gradient-to-br from-muted to-muted-foreground/30 flex items-center justify-center text-base shadow-sm flex-shrink-0">
                         {comment.author.avatar}
                       </div>
                       <div className="flex-1 min-w-0">
@@ -269,7 +271,7 @@ export function InlineComments({
                             {comment.author.name}
                           </span>
                           {comment.author.verified && (
-                            <Award className="w-3.5 h-3.5 text-blue-500" />
+                            <Award className="w-3.5 h-3.5 text-muted-foreground" />
                           )}
                           <span className="text-xs text-muted-foreground">
                             · {comment.author.role}
