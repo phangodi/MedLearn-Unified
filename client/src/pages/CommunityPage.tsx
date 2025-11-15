@@ -38,7 +38,7 @@ import { useCommunityStore } from '@/store/communityStore'
 import { sampleUsers, seedSampleData } from '@/lib/sampleData'
 import { formatTimestamp } from '@/lib/dateUtils'
 import type { Attachment } from '@/types/community'
-import { CommentsModal } from '@/components/community/CommentsModal'
+import { InlineComments } from '@/components/community/InlineComments'
 
 // Available topics/tags for posts
 const availableTags = [
@@ -86,16 +86,16 @@ export function CommunityPage() {
     return state?.activeSection || 'feed'
   })
 
-  const [selectedFilter] = useState('All Posts')
+  const [selectedFilter, setSelectedFilter] = useState('Most Recent')
+  const [showFilterDropdown, setShowFilterDropdown] = useState(false)
   const [composeOpen, setComposeOpen] = useState(false)
   const [selectedTags, setSelectedTags] = useState<string[]>([])
   const [showTagPicker, setShowTagPicker] = useState(false)
   const [selectedFiles, setSelectedFiles] = useState<File[]>([])
   const [postContent, setPostContent] = useState('')
-  const [showCommentsModal, setShowCommentsModal] = useState(false)
-  const [selectedPostId, setSelectedPostId] = useState<string | null>(null)
   const [showSeedButton, setShowSeedButton] = useState(true)
   const [seeding, setSeeding] = useState(false)
+  const [searchQuery, setSearchQuery] = useState('')
 
   // Get state and actions from store
   const {
@@ -265,34 +265,71 @@ export function CommunityPage() {
     }
   }
 
-  const handleShowComments = (postId: string) => {
-    setSelectedPostId(postId)
-    setShowCommentsModal(true)
-  }
-
-  // Filter posts based on active section
+  // Filter posts based on active section AND search query
   const filteredPosts = posts.filter(post => {
-    if (!currentUser) return true
-
-    switch (activeSection) {
-      case 'feed':
-        return true // Show all posts
-      case 'bookmarks':
-        return post.bookmarkedBy.includes(currentUser.id)
-      case 'liked':
-        return post.likedBy.includes(currentUser.id)
-      case 'my-posts':
-        return post.author.id === currentUser.id
-      default:
-        return true
+    // First, filter by section
+    if (currentUser) {
+      switch (activeSection) {
+        case 'feed':
+          break // Show all posts
+        case 'bookmarks':
+          if (!post.bookmarkedBy.includes(currentUser.id)) return false
+          break
+        case 'liked':
+          if (!post.likedBy.includes(currentUser.id)) return false
+          break
+        case 'my-posts':
+          if (post.author.id !== currentUser.id) return false
+          break
+        default:
+          break
+      }
     }
+
+    // Then, filter by search query
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase()
+
+      // Search in post content
+      if (post.content.toLowerCase().includes(query)) return true
+
+      // Search in author name
+      if (post.author.name.toLowerCase().includes(query)) return true
+
+      // Search in tags
+      if (post.tags.some(tag => tag.toLowerCase().includes(query))) return true
+
+      // Search in attachment names
+      if (post.attachments.some(att => att.name.toLowerCase().includes(query))) return true
+
+      // If no match found, exclude this post
+      return false
+    }
+
+    return true
   })
 
-  // Sort posts: pinned first, then by timestamp
+  // Sort posts based on selected filter
   const sortedPosts = [...filteredPosts].sort((a, b) => {
+    // Always keep pinned posts at the top
     if (a.pinned && !b.pinned) return -1
     if (!a.pinned && b.pinned) return 1
-    return b.timestamp.toMillis() - a.timestamp.toMillis()
+
+    // Then sort by selected filter
+    switch (selectedFilter) {
+      case 'Most Recent':
+        return b.timestamp.toMillis() - a.timestamp.toMillis()
+      case 'Most Liked':
+        return b.likes - a.likes
+      case 'Most Commented':
+        return b.comments - a.comments
+      case 'Most Viewed':
+        return b.views - a.views
+      case 'Oldest First':
+        return a.timestamp.toMillis() - b.timestamp.toMillis()
+      default:
+        return b.timestamp.toMillis() - a.timestamp.toMillis()
+    }
   })
 
   return (
@@ -407,16 +444,93 @@ export function CommunityPage() {
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                 <input
                   type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Search posts, files, or topics..."
-                  className="w-full pl-10 pr-4 py-2.5 bg-card border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                  className="w-full pl-10 pr-10 py-2.5 bg-card border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
                 />
+                {/* Clear search button */}
+                {searchQuery && (
+                  <button
+                    onClick={() => setSearchQuery('')}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 p-1 hover:bg-muted rounded-full transition-colors"
+                    title="Clear search"
+                  >
+                    <XIcon className="w-4 h-4 text-muted-foreground" />
+                  </button>
+                )}
               </div>
-              <Button variant="outline" className="gap-2">
-                <Filter className="w-4 h-4" />
-                {selectedFilter}
-                <ChevronDown className="w-4 h-4" />
-              </Button>
+
+              {/* Filter Dropdown */}
+              <div className="relative">
+                <Button
+                  variant="outline"
+                  className="gap-2 min-w-[160px] justify-between"
+                  onClick={() => setShowFilterDropdown(!showFilterDropdown)}
+                >
+                  <div className="flex items-center gap-2">
+                    <Filter className="w-4 h-4" />
+                    {selectedFilter}
+                  </div>
+                  <ChevronDown className={`w-4 h-4 transition-transform ${showFilterDropdown ? 'rotate-180' : ''}`} />
+                </Button>
+
+                {/* Dropdown Menu */}
+                <AnimatePresence>
+                  {showFilterDropdown && (
+                    <>
+                      {/* Backdrop to close dropdown */}
+                      <div
+                        className="fixed inset-0 z-10"
+                        onClick={() => setShowFilterDropdown(false)}
+                      />
+
+                      {/* Dropdown Content */}
+                      <motion.div
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.2 }}
+                        className="absolute right-0 mt-2 w-56 bg-card border border-border rounded-lg shadow-xl z-20 overflow-hidden"
+                      >
+                        <div className="py-1">
+                          {['Most Recent', 'Most Liked', 'Most Commented', 'Most Viewed', 'Oldest First'].map((filter) => (
+                            <button
+                              key={filter}
+                              onClick={() => {
+                                setSelectedFilter(filter)
+                                setShowFilterDropdown(false)
+                              }}
+                              className={`w-full px-4 py-2.5 text-left text-sm transition-colors ${
+                                selectedFilter === filter
+                                  ? 'bg-primary/10 text-primary font-medium'
+                                  : 'hover:bg-muted text-foreground'
+                              }`}
+                            >
+                              {filter}
+                            </button>
+                          ))}
+                        </div>
+                      </motion.div>
+                    </>
+                  )}
+                </AnimatePresence>
+              </div>
             </div>
+
+            {/* Search Results Counter */}
+            {searchQuery && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="flex items-center gap-2 text-sm text-muted-foreground"
+              >
+                <Search className="w-4 h-4" />
+                <span>
+                  Found {filteredPosts.length} {filteredPosts.length === 1 ? 'result' : 'results'} for "{searchQuery}"
+                </span>
+              </motion.div>
+            )}
           </motion.div>
 
           {/* Compose Area */}
@@ -848,56 +962,17 @@ export function CommunityPage() {
                       )}
                     </div>
 
-                    {/* Post Actions */}
-                    <div className="px-6 py-4 bg-muted/30 border-t border-border flex items-center justify-between">
-                      <div className="flex gap-1">
-                        <motion.button
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                          onClick={() => handleToggleLike(post.id)}
-                          className={`px-4 py-2 rounded-lg flex items-center gap-2 transition-all hover:bg-background ${
-                            isLiked ? 'text-red-600 dark:text-red-400' : ''
-                          }`}
-                        >
-                          <Heart
-                            className={`w-4 h-4 ${isLiked ? 'fill-current' : ''}`}
-                          />
-                          <span className="text-sm font-medium">{post.likes}</span>
-                        </motion.button>
-
-                        <motion.button
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                          onClick={() => handleShowComments(post.id)}
-                          className="px-4 py-2 rounded-lg hover:bg-background flex items-center gap-2 transition-all"
-                        >
-                          <MessageSquare className="w-4 h-4" />
-                          <span className="text-sm font-medium">{post.comments}</span>
-                        </motion.button>
-
-                        <motion.button
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                          className="px-4 py-2 rounded-lg hover:bg-background flex items-center gap-2 transition-all"
-                        >
-                          <Share2 className="w-4 h-4" />
-                          <span className="text-sm font-medium">{post.shares}</span>
-                        </motion.button>
-                      </div>
-
-                      <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        onClick={() => handleToggleBookmark(post.id)}
-                        className={`p-2 rounded-lg transition-all hover:bg-background ${
-                          isBookmarked ? 'text-blue-600 dark:text-blue-400' : ''
-                        }`}
-                      >
-                        <Bookmark
-                          className={`w-4 h-4 ${isBookmarked ? 'fill-current' : ''}`}
-                        />
-                      </motion.button>
-                    </div>
+                    {/* Inline Comments Section with Integrated Actions */}
+                    <InlineComments
+                      postId={post.id}
+                      commentCount={post.comments}
+                      likes={post.likes}
+                      shares={post.shares}
+                      isLiked={isLiked}
+                      isBookmarked={isBookmarked}
+                      onToggleLike={() => handleToggleLike(post.id)}
+                      onToggleBookmark={() => handleToggleBookmark(post.id)}
+                    />
                   </motion.div>
                 )
               })}
@@ -989,17 +1064,6 @@ export function CommunityPage() {
           </div>
         </main>
       </div>
-
-      {/* Comments Modal */}
-      {showCommentsModal && selectedPostId && (
-        <CommentsModal
-          postId={selectedPostId}
-          onClose={() => {
-            setShowCommentsModal(false)
-            setSelectedPostId(null)
-          }}
-        />
-      )}
     </div>
   )
 }

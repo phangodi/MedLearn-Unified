@@ -8,7 +8,8 @@ import {
   Bookmark,
   User,
   Heart,
-  FileText
+  FileText,
+  ArrowLeft
 } from 'lucide-react'
 
 interface CommunitySidebarProps {
@@ -51,17 +52,67 @@ export function CommunitySidebar({ activeSection, onSectionChange }: CommunitySi
 
       {/* Navigation Menu */}
       <nav className="flex-1 overflow-y-auto p-4">
+        <style>{`
+          /* Light mode colors - matching Dashboard sidebar */
+          .community-sidebar-item {
+            color: rgb(107, 114, 128); /* gray-500 - lighter for unselected */
+            transition: all 0.2s;
+          }
+          .community-sidebar-item:hover {
+            background-color: rgb(243, 244, 246); /* gray-100 - more visible */
+            color: rgb(0, 0, 0);
+          }
+          .community-sidebar-item.active {
+            background-color: rgb(229, 231, 235); /* gray-200 */
+            color: rgb(0, 0, 0);
+            font-weight: 600;
+          }
+          .community-sidebar-icon {
+            color: rgb(107, 114, 128); /* gray-500 - lighter for unselected */
+            transition: all 0.2s;
+          }
+          .community-sidebar-item:hover .community-sidebar-icon {
+            color: rgb(0, 0, 0);
+          }
+          .community-sidebar-item.active .community-sidebar-icon {
+            color: rgb(0, 0, 0);
+          }
+
+          /* Dark mode colors - same hierarchy as light mode */
+          .dark .community-sidebar-item {
+            color: rgb(156, 163, 175); /* gray-400 - medium brightness for unselected */
+          }
+          .dark .community-sidebar-item:hover {
+            background-color: rgb(55, 65, 81); /* gray-700 - visible but subtle */
+            color: rgb(243, 244, 246); /* gray-100 - bright on hover */
+          }
+          .dark .community-sidebar-item.active {
+            background-color: rgb(55, 65, 81); /* gray-700 - darker background for selected */
+            color: rgb(243, 244, 246); /* gray-100 - brightest for selected */
+            font-weight: 600;
+          }
+          .dark .community-sidebar-icon {
+            color: rgb(156, 163, 175); /* gray-400 - medium brightness for unselected */
+          }
+          .dark .community-sidebar-item:hover .community-sidebar-icon {
+            color: rgb(243, 244, 246); /* gray-100 - bright on hover */
+          }
+          .dark .community-sidebar-item.active .community-sidebar-icon {
+            color: rgb(243, 244, 246); /* gray-100 - brightest for selected */
+          }
+        `}</style>
+
         <div className="space-y-1">
           {/* Back to Dashboard - Prominent Position */}
           <motion.button
             onClick={() => navigate('/dashboard')}
             whileHover={{ scale: 1.02, x: 4 }}
             whileTap={{ scale: 0.98 }}
-            className="w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all bg-primary/10 hover:bg-primary/20 text-primary border border-primary/20 mb-3"
+            className="community-sidebar-item w-full flex items-center gap-3 px-4 py-3 rounded-lg mb-3"
           >
-            <Home className="w-5 h-5" />
+            <ArrowLeft className="community-sidebar-icon w-5 h-5" />
             <div className="flex-1 text-left">
-              <div className="font-semibold text-sm">
+              <div className="text-sm font-semibold">
                 Back to Dashboard
               </div>
             </div>
@@ -86,21 +137,15 @@ export function CommunitySidebar({ activeSection, onSectionChange }: CommunitySi
                 }}
                 whileHover={{ scale: 1.02, x: 4 }}
                 whileTap={{ scale: 0.98 }}
-                className={`
-                  w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all relative
-                  ${isActive
-                    ? 'bg-primary text-primary-foreground shadow-lg'
-                    : 'hover:bg-muted text-foreground'
-                  }
-                `}
+                className={`community-sidebar-item ${isActive ? 'active' : ''} w-full flex items-center gap-3 px-4 py-3 rounded-lg relative`}
               >
-                <Icon className={`w-5 h-5 ${isActive ? 'text-primary-foreground' : 'text-muted-foreground'}`} />
+                <Icon className="community-sidebar-icon w-5 h-5" />
                 <div className="flex-1 text-left">
-                  <div className={`font-medium text-sm ${isActive ? 'text-primary-foreground' : ''}`}>
+                  <div className="text-sm">
                     {item.label}
                   </div>
                   {!isActive && (
-                    <div className="text-xs text-muted-foreground">
+                    <div className="text-xs opacity-75">
                       {item.description}
                     </div>
                   )}
