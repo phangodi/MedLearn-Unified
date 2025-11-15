@@ -361,7 +361,7 @@ function PostCard({
             {post.tags.map((tag, i) => (
               <span
                 key={i}
-                className="px-2.5 py-0.5 bg-muted text-muted-foreground text-xs rounded-md font-normal border border-border"
+                className="px-2.5 py-0.5 bg-card text-muted-foreground text-xs rounded-md font-normal border border-border hover:bg-muted/50 cursor-pointer transition-colors"
               >
                 #{tag}
               </span>
@@ -375,7 +375,7 @@ function PostCard({
             {post.attachments.map((attachment, i) => (
               <div
                 key={i}
-                className="flex items-center gap-3 p-3 bg-muted rounded-lg border border-border"
+                className="flex items-center gap-3 p-3 bg-card rounded-lg border border-border hover:bg-muted/30 transition-colors cursor-pointer"
               >
                 <FileText className="w-5 h-5 text-muted-foreground flex-shrink-0" />
                 <div className="flex-1 min-w-0">

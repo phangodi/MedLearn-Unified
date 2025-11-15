@@ -902,7 +902,7 @@ export function CommunityPage() {
                         {post.tags.map((tag, i) => (
                           <span
                             key={i}
-                            className="px-2.5 py-0.5 bg-muted text-muted-foreground rounded-md text-xs font-normal hover:bg-muted/70 cursor-pointer transition-colors border border-border"
+                            className="px-2.5 py-0.5 bg-card text-muted-foreground rounded-md text-xs font-normal hover:bg-muted/50 cursor-pointer transition-colors border border-border"
                           >
                             #{tag}
                           </span>
@@ -915,38 +915,33 @@ export function CommunityPage() {
                           {post.attachments.map((attachment, i) => (
                             <motion.div
                               key={i}
-                              whileHover={{ scale: 1.02 }}
-                              className={`p-4 rounded-lg border flex items-center justify-between cursor-pointer transition-all ${getFileColor(getAttachmentFileType(attachment))}`}
+                              whileHover={{ scale: 1.01 }}
+                              className="p-3 rounded-lg border border-border bg-card flex items-center gap-3 cursor-pointer transition-all hover:bg-muted/30"
                             >
-                              <div className="flex items-center gap-3">
-                                <div className="w-10 h-10 rounded-lg bg-muted/30 dark:bg-muted/30 flex items-center justify-center">
-                                  {attachment.type === 'video' ? (
-                                    <Play className="w-5 h-5" />
-                                  ) : (
-                                    getFileIcon(attachment.type)
+                              <div className="flex-shrink-0">
+                                {attachment.type === 'video' ? (
+                                  <Play className="w-5 h-5 text-muted-foreground" />
+                                ) : (
+                                  getFileIcon(attachment.type)
+                                )}
+                              </div>
+                              <div className="flex-1 min-w-0">
+                                <p className="font-medium text-sm truncate">
+                                  {attachment.name}
+                                </p>
+                                <div className="flex items-center gap-3 text-xs text-muted-foreground">
+                                  <span>{attachment.size}</span>
+                                  {attachment.downloads !== undefined && (
+                                    <span className="flex items-center gap-1">
+                                      <Download className="w-3 h-3" />
+                                      {attachment.downloads}
+                                    </span>
+                                  )}
+                                  {attachment.duration && (
+                                    <span>{attachment.duration}</span>
                                   )}
                                 </div>
-                                <div>
-                                  <p className="font-medium text-sm">
-                                    {attachment.name}
-                                  </p>
-                                  <div className="flex items-center gap-3 text-xs opacity-75">
-                                    <span>{attachment.size}</span>
-                                    {attachment.downloads !== undefined && (
-                                      <span className="flex items-center gap-1">
-                                        <Download className="w-3 h-3" />
-                                        {attachment.downloads}
-                                      </span>
-                                    )}
-                                    {attachment.duration && (
-                                      <span>{attachment.duration}</span>
-                                    )}
-                                  </div>
-                                </div>
                               </div>
-                              <Button size="sm" variant="ghost">
-                                <Download className="w-4 h-4" />
-                              </Button>
                             </motion.div>
                           ))}
                         </div>
