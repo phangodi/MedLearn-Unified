@@ -1,0 +1,449 @@
+import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
+import { useNavigate } from 'react-router-dom'
+import {
+  LogOut,
+  Settings,
+  Calendar,
+  Heart,
+  MessageSquare,
+  FileText,
+  Bookmark,
+  CheckCircle2,
+  ThumbsUp,
+  Eye
+} from 'lucide-react'
+import { useCommunityStore } from '@/store/communityStore'
+import { ThemeToggle } from '@/components/ui/ThemeToggle'
+import { CommunitySidebar } from '@/components/community/CommunitySidebar'
+import { formatTimestamp } from '@/lib/dateUtils'
+import type { Post } from '@/types/community'
+
+export function ProfilePage() {
+  const navigate = useNavigate()
+  const { posts, comments, currentUser, fetchPosts, fetchComments, toggleLike, toggleBookmark } = useCommunityStore()
+  const [activeTab, setActiveTab] = useState<'posts' | 'activity'>('posts')
+
+  useEffect(() => {
+    fetchPosts()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  if (!currentUser) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold mb-4">Not Logged In</h2>
+          <button
+            onClick={() => navigate('/login')}
+            className="px-6 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90"
+          >
+            Go to Login
+          </button>
+        </div>
+      </div>
+    )
+  }
+
+  // Calculate user statistics
+  const userPosts = posts.filter(p => p.author.id === currentUser.id)
+  const totalLikesReceived = userPosts.reduce((sum, p) => sum + p.likes, 0)
+  const userComments = comments.filter(c => c.author.id === currentUser.id)
+  const totalBookmarks = posts.filter(p => p.bookmarkedBy.includes(currentUser.id)).length
+
+  const handleLogout = () => {
+    navigate('/login')
+  }
+
+  const handleLike = async (postId: string) => {
+    await toggleLike(postId)
+    await fetchPosts()
+  }
+
+  const handleBookmark = async (postId: string) => {
+    await toggleBookmark(postId)
+    await fetchPosts()
+  }
+
+  return (
+    <div className="min-h-screen bg-background flex">
+      {/* Community Sidebar */}
+      <CommunitySidebar
+        activeSection="profile"
+        onSectionChange={(section) => {
+          if (section === 'profile') return
+          // Navigate to community page with the selected section
+          navigate('/community', { state: { activeSection: section } })
+        }}
+      />
+
+      {/* Main Content */}
+      <div className="flex-1 flex flex-col ml-64">
+        {/* Header */}
+        <header className="sticky top-0 z-30 bg-card/80 backdrop-blur-md border-b border-border">
+          <div className="max-w-7xl mx-auto px-6 py-4">
+            <div className="flex items-center justify-between">
+              <div>
+                <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                  Profile
+                </h1>
+                <p className="text-sm text-muted-foreground">
+                  View and manage your profile
+                </p>
+              </div>
+              <div className="flex items-center gap-3">
+                <ThemeToggle />
+                <button
+                  onClick={handleLogout}
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-destructive/10 text-destructive transition-colors"
+                >
+                  <LogOut className="w-4 h-4" />
+                  <span className="text-sm font-medium">Logout</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        {/* Profile Content */}
+        <main className="flex-1 overflow-y-auto">
+          <div className="max-w-4xl mx-auto px-6 py-8">
+            {/* Profile Header Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="bg-card border border-border rounded-xl overflow-hidden mb-6"
+            >
+              <div className="relative h-32 bg-gradient-to-br from-primary to-secondary">
+                <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjEiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-20" />
+              </div>
+
+              <div className="px-6 pb-6">
+                <div className="flex items-end gap-4 -mt-12">
+                  {/* Avatar */}
+                  <div className="relative">
+                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-4xl border-4 border-card shadow-xl">
+                      {currentUser.avatar}
+                    </div>
+                    {currentUser.verified && (
+                      <div className="absolute bottom-0 right-0 w-7 h-7 bg-primary rounded-full flex items-center justify-center border-2 border-card">
+                        <CheckCircle2 className="w-4 h-4 text-primary-foreground" />
+                      </div>
+                    )}
+                  </div>
+
+                  {/* User Info */}
+                  <div className="flex-1 mt-4">
+                    <div className="flex items-center gap-2 mb-1">
+                      <h2 className="text-2xl font-bold">{currentUser.name}</h2>
+                      {currentUser.verified && (
+                        <CheckCircle2 className="w-5 h-5 text-primary" />
+                      )}
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-2">{currentUser.role}</p>
+                    <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                      <Calendar className="w-4 h-4" />
+                      <span>Joined {formatTimestamp(currentUser.createdAt)}</span>
+                    </div>
+                  </div>
+
+                  {/* Edit Profile Button */}
+                  <button className="flex items-center gap-2 px-4 py-2 rounded-lg border border-border hover:bg-muted transition-colors">
+                    <Settings className="w-4 h-4" />
+                    <span className="text-sm font-medium">Edit Profile</span>
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Statistics Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+                className="bg-card border border-border rounded-xl p-4"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <FileText className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold">{userPosts.length}</div>
+                    <div className="text-xs text-muted-foreground">Posts</div>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="bg-card border border-border rounded-xl p-4"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-red-500/10 flex items-center justify-center">
+                    <Heart className="w-5 h-5 text-red-500" />
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold">{totalLikesReceived}</div>
+                    <div className="text-xs text-muted-foreground">Likes Received</div>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+                className="bg-card border border-border rounded-xl p-4"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center">
+                    <MessageSquare className="w-5 h-5 text-blue-500" />
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold">{userComments.length}</div>
+                    <div className="text-xs text-muted-foreground">Comments Made</div>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="bg-card border border-border rounded-xl p-4"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center">
+                    <Bookmark className="w-5 h-5 text-amber-500" />
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold">{totalBookmarks}</div>
+                    <div className="text-xs text-muted-foreground">Bookmarks</div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Tabs */}
+            <div className="flex gap-4 mb-6 border-b border-border">
+              <button
+                onClick={() => setActiveTab('posts')}
+                className={`px-4 py-3 text-sm font-medium transition-colors relative ${
+                  activeTab === 'posts'
+                    ? 'text-primary'
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                My Posts ({userPosts.length})
+                {activeTab === 'posts' && (
+                  <motion.div
+                    layoutId="activeTab"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"
+                  />
+                )}
+              </button>
+              <button
+                onClick={() => setActiveTab('activity')}
+                className={`px-4 py-3 text-sm font-medium transition-colors relative ${
+                  activeTab === 'activity'
+                    ? 'text-primary'
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                Activity
+                {activeTab === 'activity' && (
+                  <motion.div
+                    layoutId="activeTab"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"
+                  />
+                )}
+              </button>
+            </div>
+
+            {/* Tab Content */}
+            {activeTab === 'posts' ? (
+              <div className="space-y-4">
+                {userPosts.length === 0 ? (
+                  <div className="text-center py-12">
+                    <FileText className="w-12 h-12 text-muted-foreground mx-auto mb-3" />
+                    <p className="text-muted-foreground">No posts yet</p>
+                    <button
+                      onClick={() => navigate('/community')}
+                      className="mt-4 px-6 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90"
+                    >
+                      Create Your First Post
+                    </button>
+                  </div>
+                ) : (
+                  userPosts.map((post, index) => (
+                    <PostCard
+                      key={post.id}
+                      post={post}
+                      index={index}
+                      currentUser={currentUser}
+                      onLike={handleLike}
+                      onBookmark={handleBookmark}
+                    />
+                  ))
+                )}
+              </div>
+            ) : (
+              <div className="space-y-4">
+                <div className="text-center py-12">
+                  <MessageSquare className="w-12 h-12 text-muted-foreground mx-auto mb-3" />
+                  <p className="text-muted-foreground">Activity feed coming soon</p>
+                  <p className="text-sm text-muted-foreground mt-2">
+                    See your recent likes, comments, and interactions
+                  </p>
+                </div>
+              </div>
+            )}
+          </div>
+        </main>
+      </div>
+    </div>
+  )
+}
+
+// Post Card Component (reused from CommunityPage)
+function PostCard({
+  post,
+  index,
+  currentUser,
+  onLike,
+  onBookmark
+}: {
+  post: Post
+  index: number
+  currentUser: any
+  onLike: (postId: string) => void
+  onBookmark: (postId: string) => void
+}) {
+  const isLiked = post.likedBy.includes(currentUser?.id || '')
+  const isBookmarked = post.bookmarkedBy.includes(currentUser?.id || '')
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.05 }}
+      className="bg-card border border-border rounded-xl overflow-hidden hover:border-primary/50 hover:shadow-lg transition-all duration-300"
+      style={{ backgroundColor: 'var(--card)', opacity: 1 }}
+    >
+      <div className="p-6">
+        {/* Post Header */}
+        <div className="flex items-start gap-3 mb-4">
+          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-lg flex-shrink-0">
+            {post.author.avatar}
+          </div>
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center gap-2 flex-wrap">
+              <span className="font-semibold">{post.author.name}</span>
+              {post.author.verified && (
+                <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+              )}
+              <span className="text-sm text-muted-foreground">• {post.author.role}</span>
+            </div>
+            <div className="text-xs text-muted-foreground">
+              {formatTimestamp(post.timestamp)}
+            </div>
+          </div>
+        </div>
+
+        {/* Post Content */}
+        <p className="mb-4 whitespace-pre-wrap">{post.content}</p>
+
+        {/* Tags */}
+        {post.tags.length > 0 && (
+          <div className="flex flex-wrap gap-2 mb-4">
+            {post.tags.map((tag, i) => (
+              <span
+                key={i}
+                className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium"
+              >
+                #{tag}
+              </span>
+            ))}
+          </div>
+        )}
+
+        {/* Attachments */}
+        {post.attachments.length > 0 && (
+          <div className="grid grid-cols-1 gap-2 mb-4">
+            {post.attachments.map((attachment, i) => (
+              <div
+                key={i}
+                className="flex items-center gap-3 p-3 bg-muted rounded-lg border border-border"
+              >
+                <FileText className="w-5 h-5 text-primary flex-shrink-0" />
+                <div className="flex-1 min-w-0">
+                  <div className="font-medium text-sm truncate">{attachment.name}</div>
+                  <div className="text-xs text-muted-foreground">{attachment.size}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Post Actions */}
+        <div className="flex items-center justify-between pt-4 border-t border-border">
+          <div className="flex items-center gap-6">
+            {/* Like */}
+            <button
+              onClick={() => onLike(post.id)}
+              className="flex items-center gap-2 group"
+            >
+              <div
+                className={`p-2 rounded-full transition-colors ${
+                  isLiked
+                    ? 'bg-red-500/10'
+                    : 'hover:bg-muted group-hover:bg-red-500/10'
+                }`}
+              >
+                <Heart
+                  className={`w-4 h-4 transition-colors ${
+                    isLiked ? 'text-red-500 fill-red-500' : 'text-muted-foreground'
+                  }`}
+                />
+              </div>
+              <span className="text-sm text-muted-foreground">{post.likes}</span>
+            </button>
+
+            {/* Comment */}
+            <div className="flex items-center gap-2">
+              <div className="p-2 rounded-full hover:bg-muted">
+                <MessageSquare className="w-4 h-4 text-muted-foreground" />
+              </div>
+              <span className="text-sm text-muted-foreground">{post.comments}</span>
+            </div>
+
+            {/* Views */}
+            <div className="flex items-center gap-2">
+              <Eye className="w-4 h-4 text-muted-foreground" />
+              <span className="text-sm text-muted-foreground">{post.views}</span>
+            </div>
+          </div>
+
+          {/* Bookmark */}
+          <button
+            onClick={() => onBookmark(post.id)}
+            className={`p-2 rounded-full transition-colors ${
+              isBookmarked
+                ? 'bg-amber-500/10'
+                : 'hover:bg-muted hover:bg-amber-500/10'
+            }`}
+          >
+            <Bookmark
+              className={`w-4 h-4 transition-colors ${
+                isBookmarked ? 'text-amber-500 fill-amber-500' : 'text-muted-foreground'
+              }`}
+            />
+          </button>
+        </div>
+      </div>
+    </motion.div>
+  )
+}

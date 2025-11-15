@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import { Button } from '@/components/ui/Button'
-import { Sidebar } from '@/components/layout/Sidebar'
 import { CommunitySidebar } from '@/components/community/CommunitySidebar'
 import {
   LogOut,
@@ -34,7 +33,7 @@ import {
   Loader2,
   AlertCircle
 } from 'lucide-react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { useCommunityStore } from '@/store/communityStore'
 import { sampleUsers, seedSampleData } from '@/lib/sampleData'
 import { formatTimestamp } from '@/lib/dateUtils'
@@ -79,13 +78,13 @@ const activeUsers = [
 
 export function CommunityPage() {
   const navigate = useNavigate()
-  // Main sidebar control (for navigating back to dashboard)
-  const [showMainSidebar, setShowMainSidebar] = useState(false)
-  const [sidebarOpen, setSidebarOpen] = useState(false)
-  const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
+  const location = useLocation()
 
-  // Community section control
-  const [activeSection, setActiveSection] = useState('feed')
+  // Community section control - check location state for initial section
+  const [activeSection, setActiveSection] = useState(() => {
+    const state = location.state as { activeSection?: string } | null
+    return state?.activeSection || 'feed'
+  })
 
   const [selectedFilter] = useState('All Posts')
   const [composeOpen, setComposeOpen] = useState(false)
@@ -129,6 +128,14 @@ export function CommunityPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []) // Only run once on mount
 
+  // Update active section when navigating from other pages with state
+  useEffect(() => {
+    const state = location.state as { activeSection?: string } | null
+    if (state?.activeSection) {
+      setActiveSection(state.activeSection)
+    }
+  }, [location.state])
+
   const handleLogout = () => {
     navigate('/login')
   }
@@ -145,14 +152,6 @@ export function CommunityPage() {
 
   const handleSectionChange = (section: string) => {
     setActiveSection(section)
-  }
-
-  const handleHomeClick = () => {
-    setShowMainSidebar(true)
-  }
-
-  const handleBackToCommunity = () => {
-    setShowMainSidebar(false)
   }
 
   const toggleTag = (tag: string) => {
@@ -298,21 +297,11 @@ export function CommunityPage() {
 
   return (
     <div className="min-h-screen bg-background flex">
-      {/* Conditional Sidebar Rendering */}
-      {showMainSidebar ? (
-        <Sidebar
-          isOpen={sidebarOpen}
-          setIsOpen={setSidebarOpen}
-          isCollapsed={sidebarCollapsed}
-          setIsCollapsed={setSidebarCollapsed}
-        />
-      ) : (
-        <CommunitySidebar
-          activeSection={activeSection}
-          onSectionChange={handleSectionChange}
-          onHomeClick={handleHomeClick}
-        />
-      )}
+      {/* Community Sidebar */}
+      <CommunitySidebar
+        activeSection={activeSection}
+        onSectionChange={handleSectionChange}
+      />
 
       <div className="flex-1 flex flex-col ml-64">
         <style>{`
@@ -335,20 +324,8 @@ export function CommunityPage() {
 
         {/* Header */}
         <header className="sticky top-0 z-30 bg-card/95 backdrop-blur-sm border-b border-border/50 h-[60px]">
-          <div className="px-6 lg:px-10 h-full flex items-center justify-between">
-            {/* Show "Back to Community" when main sidebar is active */}
-            {showMainSidebar && (
-              <Button
-                variant="ghost"
-                onClick={handleBackToCommunity}
-                className="navbar-btn flex items-center gap-2"
-              >
-                <MessageSquare className="w-4 h-4" />
-                <span className="font-medium">Back to Community</span>
-              </Button>
-            )}
-
-            <div className={`flex items-center gap-1.5 ${showMainSidebar ? 'ml-auto' : 'ml-auto'}`}>
+          <div className="px-6 lg:px-10 h-full flex items-center justify-end">
+            <div className="flex items-center gap-1.5">
               <ThemeToggle />
               <Button
                 variant="ghost"
