@@ -84,7 +84,7 @@ export function ProfilePage() {
           <div className="max-w-7xl mx-auto px-6 py-4">
             <div className="flex items-center justify-between">
               <div>
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                <h1 className="text-2xl font-bold text-foreground">
                   Profile
                 </h1>
                 <p className="text-sm text-muted-foreground">
@@ -114,7 +114,7 @@ export function ProfilePage() {
               animate={{ opacity: 1, y: 0 }}
               className="bg-card border border-border rounded-xl overflow-hidden mb-6"
             >
-              <div className="relative h-32 bg-gradient-to-br from-primary to-secondary">
+              <div className="relative h-32 bg-gradient-to-br from-muted to-muted-foreground/20">
                 <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjEiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-20" />
               </div>
 
@@ -122,12 +122,12 @@ export function ProfilePage() {
                 <div className="flex items-end gap-4 -mt-12">
                   {/* Avatar */}
                   <div className="relative">
-                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-4xl border-4 border-card shadow-xl">
+                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-muted to-muted-foreground/30 flex items-center justify-center text-4xl border-4 border-card shadow-xl">
                       {currentUser.avatar}
                     </div>
                     {currentUser.verified && (
-                      <div className="absolute bottom-0 right-0 w-7 h-7 bg-primary rounded-full flex items-center justify-center border-2 border-card">
-                        <CheckCircle2 className="w-4 h-4 text-primary-foreground" />
+                      <div className="absolute bottom-0 right-0 w-7 h-7 bg-muted-foreground rounded-full flex items-center justify-center border-2 border-card">
+                        <CheckCircle2 className="w-4 h-4 text-card" />
                       </div>
                     )}
                   </div>
@@ -137,7 +137,7 @@ export function ProfilePage() {
                     <div className="flex items-center gap-2 mb-1">
                       <h2 className="text-2xl font-bold">{currentUser.name}</h2>
                       {currentUser.verified && (
-                        <CheckCircle2 className="w-5 h-5 text-primary" />
+                        <CheckCircle2 className="w-5 h-5 text-muted-foreground" />
                       )}
                     </div>
                     <p className="text-sm text-muted-foreground mb-2">{currentUser.role}</p>
@@ -165,8 +165,8 @@ export function ProfilePage() {
                 className="bg-card border border-border rounded-xl p-4"
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <FileText className="w-5 h-5 text-primary" />
+                  <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center">
+                    <FileText className="w-5 h-5 text-muted-foreground" />
                   </div>
                   <div>
                     <div className="text-2xl font-bold">{userPosts.length}</div>
@@ -182,8 +182,8 @@ export function ProfilePage() {
                 className="bg-card border border-border rounded-xl p-4"
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-red-500/10 flex items-center justify-center">
-                    <Heart className="w-5 h-5 text-red-500" />
+                  <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center">
+                    <Heart className="w-5 h-5 text-muted-foreground" />
                   </div>
                   <div>
                     <div className="text-2xl font-bold">{totalLikesReceived}</div>
@@ -199,8 +199,8 @@ export function ProfilePage() {
                 className="bg-card border border-border rounded-xl p-4"
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center">
-                    <MessageSquare className="w-5 h-5 text-blue-500" />
+                  <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center">
+                    <MessageSquare className="w-5 h-5 text-muted-foreground" />
                   </div>
                   <div>
                     <div className="text-2xl font-bold">{userComments.length}</div>
@@ -216,8 +216,8 @@ export function ProfilePage() {
                 className="bg-card border border-border rounded-xl p-4"
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center">
-                    <Bookmark className="w-5 h-5 text-amber-500" />
+                  <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center">
+                    <Bookmark className="w-5 h-5 text-muted-foreground" />
                   </div>
                   <div>
                     <div className="text-2xl font-bold">{totalBookmarks}</div>
@@ -231,9 +231,9 @@ export function ProfilePage() {
             <div className="flex gap-4 mb-6 border-b border-border">
               <button
                 onClick={() => setActiveTab('posts')}
-                className={`px-4 py-3 text-sm font-medium transition-colors relative ${
+                className={`px-4 py-3 text-sm font-normal transition-colors relative ${
                   activeTab === 'posts'
-                    ? 'text-primary'
+                    ? 'text-foreground'
                     : 'text-muted-foreground hover:text-foreground'
                 }`}
               >
@@ -241,15 +241,15 @@ export function ProfilePage() {
                 {activeTab === 'posts' && (
                   <motion.div
                     layoutId="activeTab"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-foreground"
                   />
                 )}
               </button>
               <button
                 onClick={() => setActiveTab('activity')}
-                className={`px-4 py-3 text-sm font-medium transition-colors relative ${
+                className={`px-4 py-3 text-sm font-normal transition-colors relative ${
                   activeTab === 'activity'
-                    ? 'text-primary'
+                    ? 'text-foreground'
                     : 'text-muted-foreground hover:text-foreground'
                 }`}
               >
@@ -257,7 +257,7 @@ export function ProfilePage() {
                 {activeTab === 'activity' && (
                   <motion.div
                     layoutId="activeTab"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-foreground"
                   />
                 )}
               </button>
@@ -330,20 +330,19 @@ function PostCard({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.05 }}
-      className="bg-card border border-border rounded-xl overflow-hidden hover:border-primary/50 hover:shadow-lg transition-all duration-300"
-      style={{ backgroundColor: 'var(--card)', opacity: 1 }}
+      className="bg-card border border-border rounded-xl overflow-hidden hover:border-muted-foreground/30 hover:shadow-md transition-all duration-300"
     >
       <div className="p-6">
         {/* Post Header */}
         <div className="flex items-start gap-3 mb-4">
-          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-lg flex-shrink-0">
+          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-muted to-muted-foreground/30 flex items-center justify-center text-lg flex-shrink-0 shadow-sm">
             {post.author.avatar}
           </div>
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 flex-wrap">
               <span className="font-semibold">{post.author.name}</span>
               {post.author.verified && (
-                <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-muted-foreground flex-shrink-0" />
               )}
               <span className="text-sm text-muted-foreground">• {post.author.role}</span>
             </div>
@@ -358,11 +357,11 @@ function PostCard({
 
         {/* Tags */}
         {post.tags.length > 0 && (
-          <div className="flex flex-wrap gap-2 mb-4">
+          <div className="flex flex-wrap gap-1.5 mb-4">
             {post.tags.map((tag, i) => (
               <span
                 key={i}
-                className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium"
+                className="px-2.5 py-0.5 bg-muted text-muted-foreground text-xs rounded-md font-normal border border-border"
               >
                 #{tag}
               </span>
@@ -378,7 +377,7 @@ function PostCard({
                 key={i}
                 className="flex items-center gap-3 p-3 bg-muted rounded-lg border border-border"
               >
-                <FileText className="w-5 h-5 text-primary flex-shrink-0" />
+                <FileText className="w-5 h-5 text-muted-foreground flex-shrink-0" />
                 <div className="flex-1 min-w-0">
                   <div className="font-medium text-sm truncate">{attachment.name}</div>
                   <div className="text-xs text-muted-foreground">{attachment.size}</div>
@@ -399,13 +398,13 @@ function PostCard({
               <div
                 className={`p-2 rounded-full transition-colors ${
                   isLiked
-                    ? 'bg-red-500/10'
-                    : 'hover:bg-muted group-hover:bg-red-500/10'
+                    ? 'bg-muted'
+                    : 'hover:bg-muted'
                 }`}
               >
                 <Heart
                   className={`w-4 h-4 transition-colors ${
-                    isLiked ? 'text-red-500 fill-red-500' : 'text-muted-foreground'
+                    isLiked ? 'text-foreground fill-current' : 'text-muted-foreground'
                   }`}
                 />
               </div>
@@ -432,13 +431,13 @@ function PostCard({
             onClick={() => onBookmark(post.id)}
             className={`p-2 rounded-full transition-colors ${
               isBookmarked
-                ? 'bg-amber-500/10'
-                : 'hover:bg-muted hover:bg-amber-500/10'
+                ? 'bg-muted'
+                : 'hover:bg-muted'
             }`}
           >
             <Bookmark
               className={`w-4 h-4 transition-colors ${
-                isBookmarked ? 'text-amber-500 fill-amber-500' : 'text-muted-foreground'
+                isBookmarked ? 'text-foreground fill-current' : 'text-muted-foreground'
               }`}
             />
           </button>
