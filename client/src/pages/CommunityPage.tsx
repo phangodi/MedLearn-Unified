@@ -1,14 +1,10 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import { Button } from '@/components/ui/Button'
-import { Sidebar } from '@/components/layout/Sidebar'
-import { AngledBackground } from '@/components/layout/AngledBackground'
-import { BorderFrame } from '@/components/layout/BorderFrame'
-import { Particles } from '@/components/ui/Particles'
+import { CommunitySidebar } from '@/components/community/CommunitySidebar'
 import {
   LogOut,
-  Activity,
   MessageSquare,
   Heart,
   Share2,
@@ -33,183 +29,16 @@ import {
   X as XIcon,
   Trash2,
   Edit3,
-  Pin
+  Pin,
+  Loader2,
+  AlertCircle
 } from 'lucide-react'
-import { useNavigate } from 'react-router-dom'
-
-// Type definitions
-interface Attachment {
-  type: string
-  name: string
-  size: string
-  downloads?: number
-  preview?: boolean
-  duration?: string
-  views?: number
-}
-
-interface Author {
-  name: string
-  avatar: string
-  role: string
-  verified: boolean
-}
-
-interface Post {
-  id: number
-  author: Author
-  content: string
-  timestamp: string
-  likes: number
-  comments: number
-  shares: number
-  views: number
-  tags: string[]
-  attachments: Attachment[]
-  liked: boolean
-  bookmarked: boolean
-  pinned?: boolean  // Admin can pin important posts to top
-  isAdmin?: boolean  // Whether the current user viewing has admin privileges
-}
-
-// Mock data for posts
-const mockPosts: Post[] = [
-  {
-    id: 1,
-    author: {
-      name: 'Sarah Johnson',
-      avatar: '👩‍⚕️',
-      role: 'Med Student - Year 3',
-      verified: true
-    },
-    content: 'Just finished reviewing the cardiovascular physiology module! Here are my comprehensive notes on cardiac cycle regulation. Hope this helps everyone preparing for finals! 📚',
-    timestamp: '2 hours ago',
-    likes: 45,
-    comments: 12,
-    shares: 8,
-    views: 234,
-    tags: ['Physiology', 'Cardiology', 'Study Notes'],
-    attachments: [
-      {
-        type: 'pdf',
-        name: 'Cardiac_Cycle_Notes.pdf',
-        size: '2.4 MB',
-        downloads: 23
-      },
-      {
-        type: 'image',
-        name: 'ECG_diagram.png',
-        size: '450 KB',
-        preview: true
-      }
-    ],
-    liked: false,
-    bookmarked: true
-  },
-  {
-    id: 2,
-    author: {
-      name: 'Dr. Michael Chen',
-      avatar: '👨‍🏫',
-      role: 'Teaching Assistant',
-      verified: true
-    },
-    content: 'Quick tip for tomorrow\'s histology exam: Focus on distinguishing between different types of epithelial tissue. I\'ve uploaded high-resolution microscopy slides with annotations!',
-    timestamp: '4 hours ago',
-    likes: 89,
-    comments: 24,
-    shares: 15,
-    views: 456,
-    tags: ['Histology', 'Exam Tips', 'Microscopy'],
-    attachments: [
-      {
-        type: 'image',
-        name: 'epithelial_tissue_comparison.jpg',
-        size: '1.8 MB',
-        preview: true
-      },
-      {
-        type: 'pdf',
-        name: 'Histology_Quick_Reference.pdf',
-        size: '3.1 MB',
-        downloads: 67
-      }
-    ],
-    liked: true,
-    bookmarked: false,
-    pinned: true,  // This post is pinned by admin
-    isAdmin: true  // Current user has admin privileges (for demo)
-  },
-  {
-    id: 3,
-    author: {
-      name: 'Emma Williams',
-      avatar: '👩‍🎓',
-      role: 'Med Student - Year 2',
-      verified: false
-    },
-    content: 'Created a visual mind map for the nervous system pathways. This really helped me connect all the concepts together. Feel free to download and modify for your own studies!',
-    timestamp: '6 hours ago',
-    likes: 67,
-    comments: 18,
-    shares: 22,
-    views: 389,
-    tags: ['Anatomy', 'Neuroscience', 'Study Tools'],
-    attachments: [
-      {
-        type: 'pdf',
-        name: 'Nervous_System_Mindmap.pdf',
-        size: '5.2 MB',
-        downloads: 45
-      }
-    ],
-    liked: true,
-    bookmarked: true
-  },
-  {
-    id: 4,
-    author: {
-      name: 'James Martinez',
-      avatar: '👨‍🔬',
-      role: 'Med Student - Year 4',
-      verified: true
-    },
-    content: 'Video tutorial on interpreting arterial blood gas (ABG) results! Covered all the major acid-base disorders with clinical cases. Let me know if you have questions!',
-    timestamp: '1 day ago',
-    likes: 123,
-    comments: 31,
-    shares: 28,
-    views: 678,
-    tags: ['Clinical Skills', 'Pathophysiology', 'Video Tutorial'],
-    attachments: [
-      {
-        type: 'video',
-        name: 'ABG_Interpretation_Tutorial.mp4',
-        size: '45.6 MB',
-        duration: '12:34',
-        views: 234
-      }
-    ],
-    liked: false,
-    bookmarked: true
-  }
-]
-
-const trendingTopics = [
-  { name: 'Cardiology Finals', count: 234, trend: 'up' },
-  { name: 'Histology Slides', count: 189, trend: 'up' },
-  { name: 'Clinical Skills', count: 156, trend: 'stable' },
-  { name: 'Study Groups', count: 134, trend: 'up' },
-  { name: 'Exam Prep', count: 98, trend: 'down' }
-]
-
-const activeUsers = [
-  { name: 'Sarah J.', avatar: '👩‍⚕️', online: true },
-  { name: 'Michael C.', avatar: '👨‍🏫', online: true },
-  { name: 'Emma W.', avatar: '👩‍🎓', online: true },
-  { name: 'James M.', avatar: '👨‍🔬', online: false },
-  { name: 'Lisa K.', avatar: '👩‍⚕️', online: true }
-]
+import { useNavigate, useLocation } from 'react-router-dom'
+import { useCommunityStore } from '@/store/communityStore'
+import { sampleUsers, seedSampleData } from '@/lib/sampleData'
+import { formatTimestamp } from '@/lib/dateUtils'
+import type { Attachment } from '@/types/community'
+import { CommentsModal } from '@/components/community/CommentsModal'
 
 // Available topics/tags for posts
 const availableTags = [
@@ -231,52 +60,105 @@ const availableTags = [
   'Case Studies'
 ]
 
+const trendingTopics = [
+  { name: 'Cardiology Finals', count: 234, trend: 'up' },
+  { name: 'Histology Slides', count: 189, trend: 'up' },
+  { name: 'Clinical Skills', count: 156, trend: 'stable' },
+  { name: 'Study Groups', count: 134, trend: 'up' },
+  { name: 'Exam Prep', count: 98, trend: 'down' }
+]
+
+const activeUsers = [
+  { name: 'Sarah J.', avatar: '👩‍⚕️', online: true },
+  { name: 'Michael C.', avatar: '👨‍🏫', online: true },
+  { name: 'Emma W.', avatar: '👩‍🎓', online: true },
+  { name: 'James M.', avatar: '👨‍🔬', online: false },
+  { name: 'Demo User', avatar: '👤', online: true }
+]
+
 export function CommunityPage() {
   const navigate = useNavigate()
-  const [sidebarOpen, setSidebarOpen] = useState(false)
-  const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
+  const location = useLocation()
+
+  // Community section control - check location state for initial section
+  const [activeSection, setActiveSection] = useState(() => {
+    const state = location.state as { activeSection?: string } | null
+    return state?.activeSection || 'feed'
+  })
+
   const [selectedFilter] = useState('All Posts')
-  const [posts, setPosts] = useState(mockPosts)
   const [composeOpen, setComposeOpen] = useState(false)
   const [selectedTags, setSelectedTags] = useState<string[]>([])
   const [showTagPicker, setShowTagPicker] = useState(false)
   const [selectedFiles, setSelectedFiles] = useState<File[]>([])
   const [postContent, setPostContent] = useState('')
+  const [showCommentsModal, setShowCommentsModal] = useState(false)
+  const [selectedPostId, setSelectedPostId] = useState<string | null>(null)
+  const [showSeedButton, setShowSeedButton] = useState(true)
+  const [seeding, setSeeding] = useState(false)
+
+  // Get state and actions from store
+  const {
+    posts,
+    currentUser,
+    loading,
+    error,
+    setCurrentUser,
+    fetchPosts,
+    createPost,
+    deletePost,
+    toggleLike,
+    toggleBookmark,
+    togglePin
+  } = useCommunityStore()
+
+  // Initialize user on mount
+  useEffect(() => {
+    // Set demo user as current user (in production, this would come from auth)
+    const demoUser = sampleUsers.find(u => u.id === 'demo-user')
+    if (demoUser) {
+      setCurrentUser(demoUser)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []) // Only run once on mount
+
+  // Fetch posts on mount
+  useEffect(() => {
+    fetchPosts()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []) // Only run once on mount
+
+  // Update active section when navigating from other pages with state
+  useEffect(() => {
+    const state = location.state as { activeSection?: string } | null
+    if (state?.activeSection) {
+      setActiveSection(state.activeSection)
+    }
+  }, [location.state])
 
   const handleLogout = () => {
     navigate('/login')
   }
 
-  const toggleLike = (postId: number) => {
-    setPosts(posts.map(post => {
-      if (post.id === postId) {
-        return {
-          ...post,
-          liked: !post.liked,
-          likes: post.liked ? post.likes - 1 : post.likes + 1
-        }
-      }
-      return post
-    }))
+  const handleSeedData = async () => {
+    setSeeding(true)
+    const result = await seedSampleData()
+    if (result.success) {
+      await fetchPosts()
+      setShowSeedButton(false)
+    }
+    setSeeding(false)
   }
 
-  const toggleBookmark = (postId: number) => {
-    setPosts(posts.map(post => {
-      if (post.id === postId) {
-        return {
-          ...post,
-          bookmarked: !post.bookmarked
-        }
-      }
-      return post
-    }))
+  const handleSectionChange = (section: string) => {
+    setActiveSection(section)
   }
 
   const toggleTag = (tag: string) => {
     if (selectedTags.includes(tag)) {
       setSelectedTags(selectedTags.filter(t => t !== tag))
     } else {
-      if (selectedTags.length < 5) {  // Limit to 5 tags
+      if (selectedTags.length < 5) {
         setSelectedTags([...selectedTags, tag])
       }
     }
@@ -292,8 +174,6 @@ export function CommunityPage() {
 
     const newFiles = Array.from(files)
     setSelectedFiles(prev => [...prev, ...newFiles])
-
-    // Reset input so same file can be selected again if removed
     event.target.value = ''
   }
 
@@ -314,6 +194,10 @@ export function CommunityPage() {
     if (file.type === 'application/pdf') return 'pdf'
     if (file.type.startsWith('video/')) return 'video'
     return 'other'
+  }
+
+  const getAttachmentFileType = (attachment: Attachment): 'pdf' | 'image' | 'video' | 'other' => {
+    return attachment.type
   }
 
   const getFileIcon = (type: string) => {
@@ -342,62 +226,106 @@ export function CommunityPage() {
     }
   }
 
+  const handleCreatePost = async () => {
+    if (!postContent.trim()) return
+
+    // Convert File objects to Attachment format
+    const attachments: Attachment[] = selectedFiles.map(file => ({
+      type: getFileType(file) as 'pdf' | 'image' | 'video' | 'other',
+      name: file.name,
+      size: formatFileSize(file.size),
+      downloads: 0,
+      preview: getFileType(file) === 'image'
+    }))
+
+    await createPost(postContent, selectedTags, attachments)
+
+    // Reset form
+    setPostContent('')
+    setSelectedTags([])
+    setSelectedFiles([])
+    setComposeOpen(false)
+  }
+
+  const handleToggleLike = async (postId: string) => {
+    await toggleLike(postId)
+  }
+
+  const handleToggleBookmark = async (postId: string) => {
+    await toggleBookmark(postId)
+  }
+
+  const handleTogglePin = async (postId: string) => {
+    await togglePin(postId)
+  }
+
+  const handleDeletePost = async (postId: string) => {
+    if (confirm('Are you sure you want to delete this post?')) {
+      await deletePost(postId)
+    }
+  }
+
+  const handleShowComments = (postId: string) => {
+    setSelectedPostId(postId)
+    setShowCommentsModal(true)
+  }
+
+  // Filter posts based on active section
+  const filteredPosts = posts.filter(post => {
+    if (!currentUser) return true
+
+    switch (activeSection) {
+      case 'feed':
+        return true // Show all posts
+      case 'bookmarks':
+        return post.bookmarkedBy.includes(currentUser.id)
+      case 'liked':
+        return post.likedBy.includes(currentUser.id)
+      case 'my-posts':
+        return post.author.id === currentUser.id
+      default:
+        return true
+    }
+  })
+
+  // Sort posts: pinned first, then by timestamp
+  const sortedPosts = [...filteredPosts].sort((a, b) => {
+    if (a.pinned && !b.pinned) return -1
+    if (!a.pinned && b.pinned) return 1
+    return b.timestamp.toMillis() - a.timestamp.toMillis()
+  })
+
   return (
-    <div className="min-h-screen bg-background flex lg:ml-[80px] lg:mr-[80px]">
-      {/* Animated particle background */}
-      <Particles quantity={40} ease={60} />
-
-      {/* Subtle background pattern */}
-      <AngledBackground />
-
-      {/* Continuous diagonal-line border frame */}
-      <BorderFrame />
-
-      {/* Sidebar */}
-      <Sidebar
-        isOpen={sidebarOpen}
-        setIsOpen={setSidebarOpen}
-        isCollapsed={sidebarCollapsed}
-        setIsCollapsed={setSidebarCollapsed}
+    <div className="min-h-screen bg-background flex">
+      {/* Community Sidebar */}
+      <CommunitySidebar
+        activeSection={activeSection}
+        onSectionChange={handleSectionChange}
       />
 
-      {/* Main content */}
-      <div className="flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col ml-64">
         <style>{`
           .navbar-btn {
-            color: rgb(31, 41, 55); /* gray-800 */
+            color: rgb(31, 41, 55);
             transition: all 0.2s;
           }
           .navbar-btn:hover {
-            background-color: rgb(243, 244, 246); /* gray-100 */
+            background-color: rgb(243, 244, 246);
             color: rgb(0, 0, 0);
           }
           .dark .navbar-btn {
-            color: rgb(156, 163, 175); /* gray-400 - medium brightness */
+            color: rgb(156, 163, 175);
           }
           .dark .navbar-btn:hover {
-            background-color: rgb(55, 65, 81); /* gray-700 */
-            color: rgb(243, 244, 246); /* gray-100 - bright on hover */
+            background-color: rgb(55, 65, 81);
+            color: rgb(243, 244, 246);
           }
         `}</style>
 
         {/* Header */}
         <header className="sticky top-0 z-30 bg-card/95 backdrop-blur-sm border-b border-border/50 h-[60px]">
-          <div className="px-6 lg:px-10 h-full flex items-center justify-between">
-            {/* Show branding when sidebar is collapsed */}
-            {sidebarCollapsed && (
-              <div className="hidden lg:flex items-center space-x-2.5">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-md">
-                  <Activity className="w-4 h-4 text-primary-foreground" />
-                </div>
-                <span className="font-bold text-base bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                  Lara's MedLearn
-                </span>
-              </div>
-            )}
-
-            {/* Right side actions */}
-            <div className={`flex items-center gap-1.5 ${!sidebarCollapsed ? 'ml-auto' : ''}`}>
+          <div className="px-6 lg:px-10 h-full flex items-center justify-end">
+            <div className="flex items-center gap-1.5">
               <ThemeToggle />
               <Button
                 variant="ghost"
@@ -414,6 +342,18 @@ export function CommunityPage() {
 
         {/* Main content */}
         <main className="flex-1 container mx-auto px-4 lg:px-6 py-6">
+          {/* Error Display */}
+          {error && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="mb-4 p-4 bg-red-100 dark:bg-red-900/20 border border-red-300 dark:border-red-700 rounded-lg flex items-center gap-2 text-red-800 dark:text-red-300"
+            >
+              <AlertCircle className="w-5 h-5" />
+              {error}
+            </motion.div>
+          )}
+
           {/* Page Header */}
           <motion.div
             initial={{ opacity: 0, y: -10 }}
@@ -430,13 +370,35 @@ export function CommunityPage() {
                   Share knowledge, collaborate, and succeed together
                 </p>
               </div>
-              <Button
-                onClick={() => setComposeOpen(!composeOpen)}
-                className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                <MessageSquare className="w-4 h-4 mr-2" />
-                New Post
-              </Button>
+              <div className="flex gap-2">
+                {showSeedButton && posts.length === 0 && (
+                  <Button
+                    onClick={handleSeedData}
+                    disabled={seeding}
+                    variant="outline"
+                    className="gap-2"
+                  >
+                    {seeding ? (
+                      <>
+                        <Loader2 className="w-4 h-4 animate-spin" />
+                        Seeding...
+                      </>
+                    ) : (
+                      <>
+                        <Download className="w-4 h-4" />
+                        Load Sample Data
+                      </>
+                    )}
+                  </Button>
+                )}
+                <Button
+                  onClick={() => setComposeOpen(!composeOpen)}
+                  className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  <MessageSquare className="w-4 h-4 mr-2" />
+                  New Post
+                </Button>
+              </div>
             </div>
 
             {/* Search and Filter Bar */}
@@ -457,7 +419,7 @@ export function CommunityPage() {
             </div>
           </motion.div>
 
-          {/* Compose Area (Expandable) */}
+          {/* Compose Area */}
           <AnimatePresence>
             {composeOpen && (
               <motion.div
@@ -470,7 +432,7 @@ export function CommunityPage() {
                 <div className="bg-card border border-border rounded-xl p-6 shadow-lg">
                   <div className="flex gap-4">
                     <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-xl shadow-md">
-                      👤
+                      {currentUser?.avatar || '👤'}
                     </div>
                     <div className="flex-1 space-y-4">
                       <textarea
@@ -481,7 +443,7 @@ export function CommunityPage() {
                         rows={4}
                       />
 
-                      {/* Hidden File Inputs */}
+                      {/* File Inputs */}
                       <input
                         type="file"
                         id="image-upload"
@@ -663,7 +625,11 @@ export function CommunityPage() {
                           <Button variant="ghost" onClick={() => setComposeOpen(false)}>
                             Cancel
                           </Button>
-                          <Button className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white">
+                          <Button
+                            onClick={handleCreatePost}
+                            disabled={!postContent.trim()}
+                            className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white"
+                          >
                             <Send className="w-4 h-4 mr-2" />
                             Post
                           </Button>
@@ -676,218 +642,265 @@ export function CommunityPage() {
             )}
           </AnimatePresence>
 
+          {/* Loading State */}
+          {loading && posts.length === 0 && (
+            <div className="flex justify-center items-center py-12">
+              <Loader2 className="w-8 h-8 animate-spin text-primary" />
+            </div>
+          )}
+
+          {/* Empty State */}
+          {!loading && posts.length === 0 && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="text-center py-12"
+            >
+              <MessageSquare className="w-16 h-16 mx-auto mb-4 text-muted-foreground" />
+              <h3 className="text-xl font-semibold mb-2">No posts yet</h3>
+              <p className="text-muted-foreground mb-4">
+                Be the first to share knowledge with the community!
+              </p>
+              {showSeedButton && (
+                <Button onClick={handleSeedData} disabled={seeding}>
+                  {seeding ? (
+                    <>
+                      <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                      Loading Sample Data...
+                    </>
+                  ) : (
+                    <>
+                      <Download className="w-4 h-4 mr-2" />
+                      Load Sample Data
+                    </>
+                  )}
+                </Button>
+              )}
+            </motion.div>
+          )}
+
           {/* Main Grid Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            {/* Posts Feed - Takes up 2 columns on large screens */}
+            {/* Posts Feed */}
             <div className="lg:col-span-2 space-y-4">
-              {posts.map((post, index) => (
-                <motion.div
-                  key={post.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className={`bg-card border rounded-xl overflow-hidden hover:border-primary/50 hover:shadow-lg transition-all duration-300 ${
-                    post.pinned ? 'border-blue-500/50 shadow-blue-500/10' : 'border-border'
-                  }`}
-                >
-                  {/* Pinned Badge */}
-                  {post.pinned && (
-                    <div className="px-6 pt-3 pb-2 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border-b border-blue-500/20">
-                      <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400">
-                        <Pin className="w-4 h-4 fill-current" />
-                        <span className="text-xs font-semibold uppercase tracking-wide">
-                          Pinned by Admin
-                        </span>
-                      </div>
-                    </div>
-                  )}
+              {sortedPosts.map((post, index) => {
+                const isLiked = currentUser ? post.likedBy.includes(currentUser.id) : false
+                const isBookmarked = currentUser ? post.bookmarkedBy.includes(currentUser.id) : false
+                const isUserAdmin = currentUser?.isAdmin || false
 
-                  {/* Post Header */}
-                  <div className="p-6 pb-4">
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="flex gap-3">
-                        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-2xl shadow-md">
-                          {post.author.avatar}
+                return (
+                  <motion.div
+                    key={post.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    className={`bg-card border rounded-xl overflow-hidden hover:border-primary/50 hover:shadow-lg transition-all duration-300 backdrop-blur-none ${
+                      post.pinned ? 'border-blue-500/50 shadow-blue-500/10' : 'border-border'
+                    }`}
+                    style={{ backgroundColor: 'var(--card)', opacity: 1 }}
+                  >
+                    {/* Pinned Badge */}
+                    {post.pinned && (
+                      <div className="px-6 pt-3 pb-2 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border-b border-blue-500/20">
+                        <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400">
+                          <Pin className="w-4 h-4 fill-current" />
+                          <span className="text-xs font-semibold uppercase tracking-wide">
+                            Pinned by Admin
+                          </span>
                         </div>
-                        <div>
-                          <div className="flex items-center gap-2">
-                            <h3 className="font-semibold text-foreground">
-                              {post.author.name}
-                            </h3>
-                            {post.author.verified && (
-                              <Award className="w-4 h-4 text-blue-500" />
-                            )}
-                          </div>
-                          <p className="text-sm text-muted-foreground">
-                            {post.author.role}
-                          </p>
-                          <div className="flex items-center gap-3 mt-1 text-xs text-muted-foreground">
-                            <div className="flex items-center gap-1">
-                              <Clock className="w-3 h-3" />
-                              {post.timestamp}
-                            </div>
-                            <div className="flex items-center gap-1">
-                              <Eye className="w-3 h-3" />
-                              {post.views}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Admin Controls or Regular Menu */}
-                      <div className="flex gap-1">
-                        {post.isAdmin && (
-                          <>
-                            <motion.button
-                              whileHover={{ scale: 1.05 }}
-                              whileTap={{ scale: 0.95 }}
-                              className="p-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-950/30 text-blue-600 dark:text-blue-400 transition-colors"
-                              title="Edit Post"
-                            >
-                              <Edit3 className="w-4 h-4" />
-                            </motion.button>
-                            <motion.button
-                              whileHover={{ scale: 1.05 }}
-                              whileTap={{ scale: 0.95 }}
-                              className={`p-2 rounded-lg transition-colors hover:bg-background ${
-                                post.pinned
-                                  ? 'text-blue-600 dark:text-blue-400'
-                                  : 'text-muted-foreground hover:text-blue-600'
-                              }`}
-                              title={post.pinned ? 'Unpin Post' : 'Pin Post'}
-                            >
-                              <Pin className={`w-4 h-4 ${post.pinned ? 'fill-current' : ''}`} />
-                            </motion.button>
-                            <motion.button
-                              whileHover={{ scale: 1.05 }}
-                              whileTap={{ scale: 0.95 }}
-                              className="p-2 rounded-lg hover:bg-red-50 dark:hover:bg-red-950/30 text-red-600 dark:text-red-400 transition-colors"
-                              title="Delete Post"
-                            >
-                              <Trash2 className="w-4 h-4" />
-                            </motion.button>
-                          </>
-                        )}
-                        {!post.isAdmin && (
-                          <Button variant="ghost" size="sm">
-                            <MoreHorizontal className="w-4 h-4" />
-                          </Button>
-                        )}
-                      </div>
-                    </div>
-
-                    {/* Post Content */}
-                    <p className="text-foreground mb-4 leading-relaxed">
-                      {post.content}
-                    </p>
-
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {post.tags.map((tag, i) => (
-                        <span
-                          key={i}
-                          className="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium hover:bg-primary/20 cursor-pointer transition-colors"
-                        >
-                          #{tag}
-                        </span>
-                      ))}
-                    </div>
-
-                    {/* Attachments */}
-                    {post.attachments.length > 0 && (
-                      <div className="space-y-2 mb-4">
-                        {post.attachments.map((attachment, i) => (
-                          <motion.div
-                            key={i}
-                            whileHover={{ scale: 1.02 }}
-                            className={`p-4 rounded-lg border flex items-center justify-between cursor-pointer transition-all ${getFileColor(attachment.type)}`}
-                          >
-                            <div className="flex items-center gap-3">
-                              <div className="w-10 h-10 rounded-lg bg-muted/30 dark:bg-muted/30 flex items-center justify-center">
-                                {attachment.type === 'video' ? (
-                                  <Play className="w-5 h-5" />
-                                ) : (
-                                  getFileIcon(attachment.type)
-                                )}
-                              </div>
-                              <div>
-                                <p className="font-medium text-sm">
-                                  {attachment.name}
-                                </p>
-                                <div className="flex items-center gap-3 text-xs opacity-75">
-                                  <span>{attachment.size}</span>
-                                  {attachment.downloads !== undefined && (
-                                    <span className="flex items-center gap-1">
-                                      <Download className="w-3 h-3" />
-                                      {attachment.downloads}
-                                    </span>
-                                  )}
-                                  {attachment.duration && (
-                                    <span>{attachment.duration}</span>
-                                  )}
-                                </div>
-                              </div>
-                            </div>
-                            <Button size="sm" variant="ghost">
-                              <Download className="w-4 h-4" />
-                            </Button>
-                          </motion.div>
-                        ))}
                       </div>
                     )}
-                  </div>
 
-                  {/* Post Actions */}
-                  <div className="px-6 py-4 bg-muted/30 border-t border-border flex items-center justify-between">
-                    <div className="flex gap-1">
-                      <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        onClick={() => toggleLike(post.id)}
-                        className={`px-4 py-2 rounded-lg flex items-center gap-2 transition-all hover:bg-background ${
-                          post.liked ? 'text-red-600 dark:text-red-400' : ''
-                        }`}
-                      >
-                        <Heart
-                          className={`w-4 h-4 ${post.liked ? 'fill-current' : ''}`}
-                        />
-                        <span className="text-sm font-medium">{post.likes}</span>
-                      </motion.button>
+                    {/* Post Header */}
+                    <div className="p-6 pb-4">
+                      <div className="flex items-start justify-between mb-4">
+                        <div className="flex gap-3">
+                          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-2xl shadow-md">
+                            {post.author.avatar}
+                          </div>
+                          <div>
+                            <div className="flex items-center gap-2">
+                              <h3 className="font-semibold text-foreground">
+                                {post.author.name}
+                              </h3>
+                              {post.author.verified && (
+                                <Award className="w-4 h-4 text-blue-500" />
+                              )}
+                            </div>
+                            <p className="text-sm text-muted-foreground">
+                              {post.author.role}
+                            </p>
+                            <div className="flex items-center gap-3 mt-1 text-xs text-muted-foreground">
+                              <div className="flex items-center gap-1">
+                                <Clock className="w-3 h-3" />
+                                {formatTimestamp(post.timestamp)}
+                              </div>
+                              <div className="flex items-center gap-1">
+                                <Eye className="w-3 h-3" />
+                                {post.views}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
 
-                      <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="px-4 py-2 rounded-lg hover:bg-background flex items-center gap-2 transition-all"
-                      >
-                        <MessageSquare className="w-4 h-4" />
-                        <span className="text-sm font-medium">{post.comments}</span>
-                      </motion.button>
+                        {/* Admin Controls */}
+                        <div className="flex gap-1">
+                          {isUserAdmin && (
+                            <>
+                              <motion.button
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="p-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-950/30 text-blue-600 dark:text-blue-400 transition-colors"
+                                title="Edit Post"
+                              >
+                                <Edit3 className="w-4 h-4" />
+                              </motion.button>
+                              <motion.button
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                onClick={() => handleTogglePin(post.id)}
+                                className={`p-2 rounded-lg transition-colors hover:bg-background ${
+                                  post.pinned
+                                    ? 'text-blue-600 dark:text-blue-400'
+                                    : 'text-muted-foreground hover:text-blue-600'
+                                }`}
+                                title={post.pinned ? 'Unpin Post' : 'Pin Post'}
+                              >
+                                <Pin className={`w-4 h-4 ${post.pinned ? 'fill-current' : ''}`} />
+                              </motion.button>
+                              <motion.button
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                onClick={() => handleDeletePost(post.id)}
+                                className="p-2 rounded-lg hover:bg-red-50 dark:hover:bg-red-950/30 text-red-600 dark:text-red-400 transition-colors"
+                                title="Delete Post"
+                              >
+                                <Trash2 className="w-4 h-4" />
+                              </motion.button>
+                            </>
+                          )}
+                          {!isUserAdmin && (
+                            <Button variant="ghost" size="sm">
+                              <MoreHorizontal className="w-4 h-4" />
+                            </Button>
+                          )}
+                        </div>
+                      </div>
 
-                      <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="px-4 py-2 rounded-lg hover:bg-background flex items-center gap-2 transition-all"
-                      >
-                        <Share2 className="w-4 h-4" />
-                        <span className="text-sm font-medium">{post.shares}</span>
-                      </motion.button>
+                      {/* Post Content */}
+                      <p className="text-foreground mb-4 leading-relaxed">
+                        {post.content}
+                      </p>
+
+                      {/* Tags */}
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {post.tags.map((tag, i) => (
+                          <span
+                            key={i}
+                            className="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium hover:bg-primary/20 cursor-pointer transition-colors"
+                          >
+                            #{tag}
+                          </span>
+                        ))}
+                      </div>
+
+                      {/* Attachments */}
+                      {post.attachments.length > 0 && (
+                        <div className="space-y-2 mb-4">
+                          {post.attachments.map((attachment, i) => (
+                            <motion.div
+                              key={i}
+                              whileHover={{ scale: 1.02 }}
+                              className={`p-4 rounded-lg border flex items-center justify-between cursor-pointer transition-all ${getFileColor(getAttachmentFileType(attachment))}`}
+                            >
+                              <div className="flex items-center gap-3">
+                                <div className="w-10 h-10 rounded-lg bg-muted/30 dark:bg-muted/30 flex items-center justify-center">
+                                  {attachment.type === 'video' ? (
+                                    <Play className="w-5 h-5" />
+                                  ) : (
+                                    getFileIcon(attachment.type)
+                                  )}
+                                </div>
+                                <div>
+                                  <p className="font-medium text-sm">
+                                    {attachment.name}
+                                  </p>
+                                  <div className="flex items-center gap-3 text-xs opacity-75">
+                                    <span>{attachment.size}</span>
+                                    {attachment.downloads !== undefined && (
+                                      <span className="flex items-center gap-1">
+                                        <Download className="w-3 h-3" />
+                                        {attachment.downloads}
+                                      </span>
+                                    )}
+                                    {attachment.duration && (
+                                      <span>{attachment.duration}</span>
+                                    )}
+                                  </div>
+                                </div>
+                              </div>
+                              <Button size="sm" variant="ghost">
+                                <Download className="w-4 h-4" />
+                              </Button>
+                            </motion.div>
+                          ))}
+                        </div>
+                      )}
                     </div>
 
-                    <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      onClick={() => toggleBookmark(post.id)}
-                      className={`p-2 rounded-lg transition-all hover:bg-background ${
-                        post.bookmarked ? 'text-blue-600 dark:text-blue-400' : ''
-                      }`}
-                    >
-                      <Bookmark
-                        className={`w-4 h-4 ${post.bookmarked ? 'fill-current' : ''}`}
-                      />
-                    </motion.button>
-                  </div>
-                </motion.div>
-              ))}
+                    {/* Post Actions */}
+                    <div className="px-6 py-4 bg-muted/30 border-t border-border flex items-center justify-between">
+                      <div className="flex gap-1">
+                        <motion.button
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                          onClick={() => handleToggleLike(post.id)}
+                          className={`px-4 py-2 rounded-lg flex items-center gap-2 transition-all hover:bg-background ${
+                            isLiked ? 'text-red-600 dark:text-red-400' : ''
+                          }`}
+                        >
+                          <Heart
+                            className={`w-4 h-4 ${isLiked ? 'fill-current' : ''}`}
+                          />
+                          <span className="text-sm font-medium">{post.likes}</span>
+                        </motion.button>
+
+                        <motion.button
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                          onClick={() => handleShowComments(post.id)}
+                          className="px-4 py-2 rounded-lg hover:bg-background flex items-center gap-2 transition-all"
+                        >
+                          <MessageSquare className="w-4 h-4" />
+                          <span className="text-sm font-medium">{post.comments}</span>
+                        </motion.button>
+
+                        <motion.button
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                          className="px-4 py-2 rounded-lg hover:bg-background flex items-center gap-2 transition-all"
+                        >
+                          <Share2 className="w-4 h-4" />
+                          <span className="text-sm font-medium">{post.shares}</span>
+                        </motion.button>
+                      </div>
+
+                      <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        onClick={() => handleToggleBookmark(post.id)}
+                        className={`p-2 rounded-lg transition-all hover:bg-background ${
+                          isBookmarked ? 'text-blue-600 dark:text-blue-400' : ''
+                        }`}
+                      >
+                        <Bookmark
+                          className={`w-4 h-4 ${isBookmarked ? 'fill-current' : ''}`}
+                        />
+                      </motion.button>
+                    </div>
+                  </motion.div>
+                )
+              })}
             </div>
 
             {/* Sidebar - Trending & Active Users */}
@@ -976,6 +989,17 @@ export function CommunityPage() {
           </div>
         </main>
       </div>
+
+      {/* Comments Modal */}
+      {showCommentsModal && selectedPostId && (
+        <CommentsModal
+          postId={selectedPostId}
+          onClose={() => {
+            setShowCommentsModal(false)
+            setSelectedPostId(null)
+          }}
+        />
+      )}
     </div>
   )
 }
