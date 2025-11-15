@@ -4,10 +4,10 @@ type Theme = 'dark' | 'light'
 
 export function useTheme() {
   const [theme, setTheme] = useState<Theme>(() => {
-    const stored = localStorage.getItem('theme') as Theme
-    if (stored) return stored
-
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    const stored = localStorage.getItem('theme') as Theme | null
+    if (stored === 'dark' || stored === 'light') return stored
+    // Default to light unless the user explicitly chose dark
+    return 'light'
   })
 
   useEffect(() => {

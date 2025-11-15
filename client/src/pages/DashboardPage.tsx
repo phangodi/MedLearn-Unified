@@ -106,6 +106,24 @@ export function DashboardPage() {
 
       {/* Main content */}
       <div className="flex-1 flex flex-col">
+        <style>{`
+          .navbar-btn {
+            color: rgb(31, 41, 55); /* gray-800 */
+            transition: all 0.2s;
+          }
+          .navbar-btn:hover {
+            background-color: rgb(243, 244, 246); /* gray-100 */
+            color: rgb(0, 0, 0);
+          }
+          .dark .navbar-btn {
+            color: rgb(156, 163, 175); /* gray-400 - medium brightness */
+          }
+          .dark .navbar-btn:hover {
+            background-color: rgb(55, 65, 81); /* gray-700 */
+            color: rgb(243, 244, 246); /* gray-100 - bright on hover */
+          }
+        `}</style>
+
         {/* Header - clean continuous bar, NO diagonal lines, EXACT same height as sidebar */}
         <header className="sticky top-0 z-30 bg-card/95 backdrop-blur-sm border-b border-border/50 h-[60px]">
           <div className="px-6 lg:px-10 h-full flex items-center justify-between">
@@ -124,7 +142,12 @@ export function DashboardPage() {
             {/* Right side actions */}
             <div className={`flex items-center gap-1.5 ${!sidebarCollapsed ? 'ml-auto' : ''}`}>
               <ThemeToggle />
-              <Button variant="ghost" size="sm" onClick={handleLogout} className="hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-100 hover:text-gray-900 dark:hover:text-white">
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={handleLogout}
+                className="navbar-btn"
+              >
                 <LogOut className="w-4 h-4 mr-1.5" />
                 <span className="hidden sm:inline text-sm">Logout</span>
               </Button>

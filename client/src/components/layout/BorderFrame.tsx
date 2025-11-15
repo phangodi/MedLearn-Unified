@@ -4,7 +4,7 @@ export function BorderFrame() {
       {/* Tailwind-style border frame - ONLY left/right, NO top/bottom */}
 
       {/* Right border - VERY WIDE with LIGHT diagonal lines */}
-      <div className="fixed top-0 right-0 bottom-0 w-[80px] z-50 pointer-events-none overflow-hidden">
+      <div className="fixed top-0 right-0 bottom-0 w-[80px] -z-10 pointer-events-none overflow-hidden">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
           <defs>
             <pattern id="diagonal-right" patternUnits="userSpaceOnUse" width="10" height="10" patternTransform="rotate(45)">
@@ -16,7 +16,7 @@ export function BorderFrame() {
       </div>
 
       {/* Left border - VERY WIDE with LIGHT diagonal lines */}
-      <div className="fixed top-0 left-0 bottom-0 w-[80px] z-0 pointer-events-none overflow-hidden">
+      <div className="fixed top-0 left-0 bottom-0 w-[80px] -z-10 pointer-events-none overflow-hidden">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
           <defs>
             <pattern id="diagonal-left" patternUnits="userSpaceOnUse" width="10" height="10" patternTransform="rotate(45)">
