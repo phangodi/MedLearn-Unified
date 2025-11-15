@@ -3,12 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import { Button } from '@/components/ui/Button'
 import { Sidebar } from '@/components/layout/Sidebar'
-import { AngledBackground } from '@/components/layout/AngledBackground'
-import { BorderFrame } from '@/components/layout/BorderFrame'
-import { Particles } from '@/components/ui/Particles'
+import { CommunitySidebar } from '@/components/community/CommunitySidebar'
 import {
   LogOut,
-  Activity,
   MessageSquare,
   Heart,
   Share2,
@@ -82,8 +79,14 @@ const activeUsers = [
 
 export function CommunityPage() {
   const navigate = useNavigate()
+  // Main sidebar control (for navigating back to dashboard)
+  const [showMainSidebar, setShowMainSidebar] = useState(false)
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
+
+  // Community section control
+  const [activeSection, setActiveSection] = useState('feed')
+
   const [selectedFilter] = useState('All Posts')
   const [composeOpen, setComposeOpen] = useState(false)
   const [selectedTags, setSelectedTags] = useState<string[]>([])
@@ -138,6 +141,18 @@ export function CommunityPage() {
       setShowSeedButton(false)
     }
     setSeeding(false)
+  }
+
+  const handleSectionChange = (section: string) => {
+    setActiveSection(section)
+  }
+
+  const handleHomeClick = () => {
+    setShowMainSidebar(true)
+  }
+
+  const handleBackToCommunity = () => {
+    setShowMainSidebar(false)
   }
 
   const toggleTag = (tag: string) => {
@@ -256,27 +271,50 @@ export function CommunityPage() {
     setShowCommentsModal(true)
   }
 
+  // Filter posts based on active section
+  const filteredPosts = posts.filter(post => {
+    if (!currentUser) return true
+
+    switch (activeSection) {
+      case 'feed':
+        return true // Show all posts
+      case 'bookmarks':
+        return post.bookmarkedBy.includes(currentUser.id)
+      case 'liked':
+        return post.likedBy.includes(currentUser.id)
+      case 'my-posts':
+        return post.author.id === currentUser.id
+      default:
+        return true
+    }
+  })
+
   // Sort posts: pinned first, then by timestamp
-  const sortedPosts = [...posts].sort((a, b) => {
+  const sortedPosts = [...filteredPosts].sort((a, b) => {
     if (a.pinned && !b.pinned) return -1
     if (!a.pinned && b.pinned) return 1
     return b.timestamp.toMillis() - a.timestamp.toMillis()
   })
 
   return (
-    <div className="min-h-screen bg-background flex lg:ml-[80px] lg:mr-[80px]">
-      <Particles quantity={40} ease={60} />
-      <AngledBackground />
-      <BorderFrame />
+    <div className="min-h-screen bg-background flex">
+      {/* Conditional Sidebar Rendering */}
+      {showMainSidebar ? (
+        <Sidebar
+          isOpen={sidebarOpen}
+          setIsOpen={setSidebarOpen}
+          isCollapsed={sidebarCollapsed}
+          setIsCollapsed={setSidebarCollapsed}
+        />
+      ) : (
+        <CommunitySidebar
+          activeSection={activeSection}
+          onSectionChange={handleSectionChange}
+          onHomeClick={handleHomeClick}
+        />
+      )}
 
-      <Sidebar
-        isOpen={sidebarOpen}
-        setIsOpen={setSidebarOpen}
-        isCollapsed={sidebarCollapsed}
-        setIsCollapsed={setSidebarCollapsed}
-      />
-
-      <div className="flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col ml-64">
         <style>{`
           .navbar-btn {
             color: rgb(31, 41, 55);
@@ -298,18 +336,19 @@ export function CommunityPage() {
         {/* Header */}
         <header className="sticky top-0 z-30 bg-card/95 backdrop-blur-sm border-b border-border/50 h-[60px]">
           <div className="px-6 lg:px-10 h-full flex items-center justify-between">
-            {sidebarCollapsed && (
-              <div className="hidden lg:flex items-center space-x-2.5">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-md">
-                  <Activity className="w-4 h-4 text-primary-foreground" />
-                </div>
-                <span className="font-bold text-base bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                  Lara's MedLearn
-                </span>
-              </div>
+            {/* Show "Back to Community" when main sidebar is active */}
+            {showMainSidebar && (
+              <Button
+                variant="ghost"
+                onClick={handleBackToCommunity}
+                className="navbar-btn flex items-center gap-2"
+              >
+                <MessageSquare className="w-4 h-4" />
+                <span className="font-medium">Back to Community</span>
+              </Button>
             )}
 
-            <div className={`flex items-center gap-1.5 ${!sidebarCollapsed ? 'ml-auto' : ''}`}>
+            <div className={`flex items-center gap-1.5 ${showMainSidebar ? 'ml-auto' : 'ml-auto'}`}>
               <ThemeToggle />
               <Button
                 variant="ghost"
@@ -678,9 +717,10 @@ export function CommunityPage() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    className={`bg-card border rounded-xl overflow-hidden hover:border-primary/50 hover:shadow-lg transition-all duration-300 ${
+                    className={`bg-card border rounded-xl overflow-hidden hover:border-primary/50 hover:shadow-lg transition-all duration-300 backdrop-blur-none ${
                       post.pinned ? 'border-blue-500/50 shadow-blue-500/10' : 'border-border'
                     }`}
+                    style={{ backgroundColor: 'var(--card)', opacity: 1 }}
                   >
                     {/* Pinned Badge */}
                     {post.pinned && (
