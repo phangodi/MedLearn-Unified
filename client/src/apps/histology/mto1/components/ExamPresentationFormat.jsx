@@ -11,6 +11,7 @@ function useAudioPlayer() {
   const [repeat, setRepeat] = React.useState(false);
   const soundRef = React.useRef(null);
   const progressIntervalRef = React.useRef(null);
+  const repeatRef = React.useRef(false);
 
   const load = React.useCallback((audioPath) => {
     // Stop current sound if any
@@ -108,8 +109,9 @@ function useAudioPlayer() {
             clearInterval(progressIntervalRef.current);
             progressIntervalRef.current = null;
           }
-          
-          if (repeat) {
+
+          // Use ref to get current repeat value (avoids stale closure)
+          if (repeatRef.current) {
             // Restart playback if repeat is enabled
             if (soundRef.current) {
               soundRef.current.seek(0);
@@ -127,17 +129,19 @@ function useAudioPlayer() {
       setIsLoading(false);
       setIsPlaying(false);
     }
-  }, [speed, repeat]);
+  }, [speed]);
 
   const togglePlayPause = React.useCallback(() => {
     if (!soundRef.current) return;
 
-    if (isPlaying) {
+    // Check actual playing state from Howl, not React state
+    // This prevents race conditions and overlapping audio
+    if (soundRef.current.playing()) {
       soundRef.current.pause();
     } else {
       soundRef.current.play();
     }
-  }, [isPlaying]);
+  }, []);
 
   const reset = React.useCallback(() => {
     if (soundRef.current) {
@@ -177,7 +181,11 @@ function useAudioPlayer() {
 
   // Function to toggle repeat
   const toggleRepeat = React.useCallback(() => {
-    setRepeat(prev => !prev);
+    setRepeat(prev => {
+      const newValue = !prev;
+      repeatRef.current = newValue; // Keep ref in sync
+      return newValue;
+    });
   }, []);
 
   // Function to restart playback from the beginning

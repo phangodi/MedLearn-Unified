@@ -120,7 +120,9 @@ export const useAudioPlayer = (onTrackEnd) => {
   };
 
   const togglePlayPause = () => {
-    if (isPlaying) {
+    // Check actual playing state from Howl, not React state
+    // This prevents race conditions and overlapping audio
+    if (soundRef.current && soundRef.current.playing && soundRef.current.playing()) {
       pause();
     } else {
       play();
