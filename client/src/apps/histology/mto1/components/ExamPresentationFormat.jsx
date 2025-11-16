@@ -13,17 +13,13 @@ function useAudioPlayer() {
   const progressIntervalRef = React.useRef(null);
 
   const load = React.useCallback((audioPath) => {
-    console.log('Loading audio file:', audioPath);
-    
     // Stop current sound if any
     if (soundRef.current) {
-      console.log('Unloading existing sound');
       soundRef.current.unload();
     }
 
     // If no audio path, don't try to load
     if (!audioPath) {
-      console.log('No audio path provided, resetting player');
       setIsLoading(false);
       setIsPlaying(false);
       setError(null);
@@ -51,13 +47,11 @@ function useAudioPlayer() {
     
     // Create a simple timeout to prevent infinite loading
     const loadingTimeout = setTimeout(() => {
-      console.warn('AudioPlayer - Loading timeout reached for:', audioPath);
       setIsLoading(false);
       setIsPlaying(false);
       setError('Loading timeout reached');
     }, 8000); // 8 second timeout
 
-    console.log('Creating Howl instance with src:', [audioPath]);
     // Create new Howl instance
     try {
       soundRef.current = new window.Howl({
@@ -65,7 +59,6 @@ function useAudioPlayer() {
         html5: true,
         rate: 1,
         onload: () => {
-          console.log('Audio loaded successfully:', audioPath);
           clearTimeout(loadingTimeout);
           setIsLoading(false);
           setDuration(soundRef.current.duration());
@@ -78,9 +71,8 @@ function useAudioPlayer() {
           setError(`Error loading audio: ${error}`);
         },
         onplay: () => {
-          console.log('Audio playing');
           setIsPlaying(true);
-          
+
           // Start progress tracking
           if (progressIntervalRef.current) {
             clearInterval(progressIntervalRef.current);
@@ -92,9 +84,8 @@ function useAudioPlayer() {
           }, 100);
         },
         onpause: () => {
-          console.log('Audio paused');
           setIsPlaying(false);
-          
+
           // Stop progress tracking
           if (progressIntervalRef.current) {
             clearInterval(progressIntervalRef.current);
@@ -102,10 +93,9 @@ function useAudioPlayer() {
           }
         },
         onstop: () => {
-          console.log('Audio stopped');
           setIsPlaying(false);
           setCurrentTime(0);
-          
+
           // Stop progress tracking
           if (progressIntervalRef.current) {
             clearInterval(progressIntervalRef.current);
@@ -113,8 +103,6 @@ function useAudioPlayer() {
           }
         },
         onend: () => {
-          console.log('Audio ended');
-          
           // Stop progress tracking
           if (progressIntervalRef.current) {
             clearInterval(progressIntervalRef.current);
@@ -142,14 +130,11 @@ function useAudioPlayer() {
   }, [speed, repeat]);
 
   const togglePlayPause = React.useCallback(() => {
-    console.log('Toggling play/pause, isPlaying:', isPlaying);
     if (!soundRef.current) return;
-    
+
     if (isPlaying) {
-      console.log('Pausing audio');
       soundRef.current.pause();
     } else {
-      console.log('Playing audio');
       soundRef.current.play();
     }
   }, [isPlaying]);
@@ -248,42 +233,29 @@ function MiniAudioPlayer({ audioUrl }) {
   const player = useAudioPlayer();
   
   React.useEffect(() => {
-    console.log('MiniAudioPlayer - useEffect triggered with audioUrl:', audioUrl);
     if (audioUrl) {
-      console.log('MiniAudioPlayer - calling player.load with audioUrl:', audioUrl);
       player.load(audioUrl);
     } else {
-      console.log('MiniAudioPlayer - calling player.reset (no audioUrl)');
       player.reset();
     }
-    
+
     // Cleanup function
     return () => {
-      console.log('MiniAudioPlayer - cleanup function called');
       player.reset();
     };
   }, [audioUrl]);
 
-  const handlePlayPause = React.useCallback(() => {
-    console.log('MiniAudioPlayer - Play/Pause button clicked');
+  const handlePlayPause = () => {
     player.togglePlayPause();
-  }, [player]);
+  };
 
-  const handleRestart = React.useCallback(() => {
-    console.log('MiniAudioPlayer - Restart button clicked');
+  const handleRestart = () => {
     player.seek(0);
-  }, [player]);
+  };
 
-  const handleRepeatToggle = React.useCallback(() => {
-    console.log('MiniAudioPlayer - Repeat button clicked');
+  const handleRepeatToggle = () => {
     player.toggleRepeat();
-  }, [player]);
-
-  console.log('MiniAudioPlayer - Rendering player with state:', {
-    audioUrl,
-    isPlaying: player.isPlaying,
-    isLoading: player.isLoading
-  });
+  };
   
   if (!audioUrl) return null;
 
@@ -291,7 +263,6 @@ function MiniAudioPlayer({ audioUrl }) {
   React.useEffect(() => {
     fetch(audioUrl, { method: 'HEAD' })
       .then(response => {
-        console.log('Audio file HEAD request response:', response.status, response.ok);
         if (!response.ok) {
           console.error('Audio file does not exist or is not accessible:', audioUrl);
         }
@@ -534,20 +505,12 @@ const FormattedParagraph = ({ text, isIntro = false }) => {
 
 const ExamPresentationFormat = ({ data }) => {
   const presentation = data.examPresentation;
-  
-  // Debug logging
-  console.log('ExamPresentationFormat - Full data:', data);
-  console.log('ExamPresentationFormat - examPresentation:', presentation);
-  console.log('ExamPresentationFormat - data keys:', Object.keys(data));
-  console.log('ExamPresentationFormat - slideNumber:', data.slideNumber, 'Type:', typeof data.slideNumber);
-  
+
   // Check if audio file exists for this slide
   const slideNumber = Number(data.slideNumber);
   const audioFileExists = [
     15, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89
   ].includes(slideNumber);
-  
-  console.log('ExamPresentationFormat - Checking audio for slide:', slideNumber, 'Exists:', audioFileExists);
   
   if (!presentation) {
     return (
@@ -580,7 +543,7 @@ const ExamPresentationFormat = ({ data }) => {
       {/* Audio Player */}
       {audioFileExists && (
         <div className="px-6">
-          <MiniAudioPlayer audioUrl={`/audio/histology/mto1/Slide_${data.slideNumber}.mp3`} />
+          <MiniAudioPlayer audioUrl={`/Audio/histology/mto1/Slide_${data.slideNumber}.mp3`} />
         </div>
       )}
       

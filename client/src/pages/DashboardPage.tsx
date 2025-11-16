@@ -70,6 +70,7 @@ export function DashboardPage() {
       subtitle: '122 Topics',
       enabled: true,
       image: '/subjects/physiology.png',
+      path: '/physiology',
       color: 'bg-blue-50 dark:bg-blue-950/30',
       iconColor: 'text-blue-600 dark:text-blue-400',
     },
