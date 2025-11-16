@@ -1,20 +1,59 @@
 import { useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion, useMotionValue, useTransform } from 'framer-motion'
 import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import { Button } from '@/components/ui/Button'
 import { Sidebar } from '@/components/layout/Sidebar'
-import { AngledBackground } from '@/components/layout/AngledBackground'
 import { BorderFrame } from '@/components/layout/BorderFrame'
-import { TypewriterSequence } from '@/components/ui/TypewriterSequence'
-import { RotatingCard } from '@/components/ui/RotatingCard'
 import { Particles } from '@/components/ui/Particles'
-import { LogOut, Brain, Microscope, User, Sparkles, Users, Activity } from 'lucide-react'
+import { LogOut, Brain, Microscope, User, Users, Activity } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '@/contexts/AuthContext'
 
+// 3D Card Component with mouse tracking
+function Card3D({ children, enabled }: { children: React.ReactNode; enabled: boolean }) {
+  const mouseX = useMotionValue(0)
+  const mouseY = useMotionValue(0)
+
+  const rotateX = useTransform(mouseY, [-150, 150], [8, -8])
+  const rotateY = useTransform(mouseX, [-150, 150], [-8, 8])
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!enabled) return
+    const rect = e.currentTarget.getBoundingClientRect()
+    const x = e.clientX - rect.left - rect.width / 2
+    const y = e.clientY - rect.top - rect.height / 2
+    mouseX.set(x)
+    mouseY.set(y)
+  }
+
+  const handleMouseLeave = () => {
+    mouseX.set(0)
+    mouseY.set(0)
+  }
+
+  return (
+    <motion.div
+      style={{ perspective: 1000 }}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+    >
+      <motion.div
+        style={{
+          rotateX: enabled ? rotateX : 0,
+          rotateY: enabled ? rotateY : 0,
+          transformStyle: 'preserve-3d',
+        }}
+        transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+      >
+        {children}
+      </motion.div>
+    </motion.div>
+  )
+}
+
 export function DashboardPage() {
   const navigate = useNavigate()
-  const { userProfile, signOut } = useAuth()
+  const { signOut } = useAuth()
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
 
@@ -65,15 +104,6 @@ export function DashboardPage() {
       iconColor: 'text-emerald-600 dark:text-emerald-400',
     },
     {
-      name: 'AI Exam Prep',
-      icon: Sparkles,
-      description: 'AI-Powered Practice Tests • Personalized Learning',
-      subtitle: 'AI Assistant',
-      enabled: true,
-      color: 'bg-amber-50 dark:bg-amber-950/30',
-      iconColor: 'text-amber-600 dark:text-amber-400',
-    },
-    {
       name: 'Immunology',
       icon: Activity,
       description: 'Coming Soon',
@@ -86,26 +116,25 @@ export function DashboardPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-background flex lg:ml-[80px] lg:mr-[80px]">
+    <div className="min-h-screen bg-background flex">
       {/* Animated particle background */}
       <Particles quantity={60} ease={50} />
 
-      {/* Subtle background pattern */}
-      <AngledBackground />
-
-      {/* Continuous diagonal-line border frame (Tailwind + Compass style) */}
-      <BorderFrame />
-
       {/* Sidebar */}
-      <Sidebar
-        isOpen={sidebarOpen}
-        setIsOpen={setSidebarOpen}
-        isCollapsed={sidebarCollapsed}
-        setIsCollapsed={setSidebarCollapsed}
-      />
+      <div className="relative z-10">
+        <Sidebar
+          isOpen={sidebarOpen}
+          setIsOpen={setSidebarOpen}
+          isCollapsed={sidebarCollapsed}
+          setIsCollapsed={setSidebarCollapsed}
+        />
+      </div>
 
       {/* Main content */}
-      <div className="flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col relative z-10">
+        {/* Diagonal line pattern background for main content */}
+        <BorderFrame sidebarCollapsed={sidebarCollapsed} />
+
         <style>{`
           .navbar-btn {
             color: rgb(31, 41, 55); /* gray-800 */
@@ -125,7 +154,7 @@ export function DashboardPage() {
         `}</style>
 
         {/* Header - clean continuous bar, NO diagonal lines, EXACT same height as sidebar */}
-        <header className="sticky top-0 z-30 bg-card/95 backdrop-blur-sm border-b border-border/50 h-[60px]">
+        <header className="sticky top-0 z-30 bg-card/95 backdrop-blur-sm border-b border-border/50 h-[60px] relative">
           <div className="px-6 lg:px-10 h-full flex items-center justify-between">
             {/* Show branding when sidebar is collapsed */}
             {sidebarCollapsed && (
@@ -156,54 +185,29 @@ export function DashboardPage() {
         </header>
 
         {/* Main content */}
-        <main className="flex-1 container mx-auto px-6 lg:px-10 py-8">
-          {/* Welcome Banner */}
+        <main className="flex-1 container mx-auto px-6 lg:px-10 py-8 relative z-10">
+          {/* Hero Section - Centered */}
           <motion.div
-            initial={{ opacity: 0, y: -10 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="mb-8 relative"
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12 max-w-4xl mx-auto"
           >
-            <h2 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-foreground via-primary to-secondary bg-clip-text text-transparent">
-              Welcome back, {userProfile?.name || 'Student'}! 👋
-            </h2>
-          </motion.div>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight mb-4 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
+              AI-assisted exam preparation
+              <br />
+              for all medical students
+            </h1>
 
-          {/* Hero Section with Typewriter and Rotating Card */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12">
-            {/* Hero Text with Typewriter */}
-            <motion.div
+            <motion.p
+              className="text-base lg:text-lg text-muted-foreground"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 1, delay: 0.2 }}
             >
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight mb-4 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
-                <span className="inline-block">
-                  AI-assisted exam preparation for
-                  {'\u00A0'}
-                </span>
-                <TypewriterSequence className="text-3xl sm:text-4xl lg:text-5xl font-extrabold" />
-              </h1>
-
-              <motion.p
-                className="text-base lg:text-lg text-muted-foreground mb-6"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.2 }}
-              >
-                Consolidates study materials into interactive content to help you learn more effectively.
-              </motion.p>
-            </motion.div>
-
-            {/* Rotating Card */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: 0.3 }}
-            >
-              <RotatingCard />
-            </motion.div>
-          </div>
+              Consolidates study materials into interactive content to help you learn more effectively.
+            </motion.p>
+          </motion.div>
 
           {/* Enhanced subject grid with wow animations */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -217,10 +221,10 @@ export function DashboardPage() {
                     duration: 0.4,
                     delay: index * 0.1,
                   }}
-                  whileHover={subject.enabled ? { y: -10 } : {}}
-                  className={`group ${subject.enabled ? 'cursor-pointer' : 'cursor-not-allowed opacity-60'}`}
+                  className={`${subject.enabled ? 'cursor-pointer' : 'cursor-not-allowed opacity-60'}`}
                 >
-                  <div className="relative bg-card border border-border/50 rounded-xl overflow-hidden h-[280px] hover:border-primary/50 hover:shadow-[0_20px_40px_rgba(var(--primary-rgb),0.15)] dark:hover:shadow-[0_20px_40px_rgba(var(--primary-rgb),0.25)] transition-all duration-400">
+                  <Card3D enabled={subject.enabled}>
+                    <div className="relative bg-card border-2 border-border/50 rounded-xl overflow-hidden h-[280px] hover:border-primary hover:shadow-[0_0_60px_rgba(6,182,212,0.6),0_0_100px_rgba(6,182,212,0.4)] dark:hover:shadow-[0_0_60px_rgba(6,182,212,0.7),0_0_100px_rgba(6,182,212,0.5)] transition-all duration-400 group">
                     {/* Background Image with zoom effect or colored background fallback */}
                     {subject.image ? (
                       <div className="absolute inset-0 transition-transform duration-500 group-hover:scale-110">
@@ -261,6 +265,7 @@ export function DashboardPage() {
                     {/* Subtle glow on hover */}
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
                   </div>
+                  </Card3D>
                 </motion.div>
               )
             })}

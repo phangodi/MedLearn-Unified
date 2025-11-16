@@ -1,6 +1,6 @@
 export function AngledBackground() {
   return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+    <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
       {/* Tailwind-style angled shapes - VERY SUBTLE */}
 
       {/* Top right angled shape with light gradient */}
