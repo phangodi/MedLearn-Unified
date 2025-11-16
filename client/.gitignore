@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Audio files - stored locally, deployed to Netlify separately
+public/audio/

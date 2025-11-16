@@ -1,0 +1,27 @@
+/* Scoped Histology MTO1 Styles */
+.histology-mto1-app {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  .mini-audio-player { display: flex; align-items: center; gap: 12px; padding: 16px; border-radius: 12px; background: #f0fdf4; border: 2px solid #bbf7d0; margin-bottom: 24px; }
+  .mini-player-btn { width: 36px; height: 36px; border-radius: 8px; border: none; background: #22c55e; color: white; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s; flex-shrink: 0; }
+  .mini-player-btn:hover:not(:disabled) { background: #16a34a; transform: scale(1.05); }
+  .mini-player-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+  .mini-player-btn-restart { background: #94a3b8; }
+  .mini-player-btn-restart:hover:not(:disabled) { background: #64748b; }
+  .mini-player-progress-container { flex: 1; display: flex; align-items: center; gap: 12px; }
+  .mini-player-progress-bar { flex: 1; height: 6px; background: #e2e8f0; border-radius: 3px; cursor: pointer; position: relative; }
+  .mini-player-progress-fill { height: 100%; background: #22c55e; border-radius: 3px; transition: width 0.1s; }
+  .mini-player-time { font-size: 14px; font-weight: 600; color: #334155; min-width: 40px; text-align: center; }
+  .mini-player-speed-container { display: flex; align-items: center; gap: 6px; }
+  .mini-player-speed-label { font-size: 12px; color: #64748b; font-weight: 500; }
+  .mini-player-speed { padding: 4px 8px; border-radius: 6px; border: 1px solid #cbd5e1; background: white; font-size: 12px; font-weight: 500; color: #334155; }
+  .mini-player-btn-repeat { display: flex; align-items: center; gap: 4px; padding: 6px 10px; border-radius: 8px; border: 1px solid #cbd5e1; background: white; color: #64748b; font-size: 12px; font-weight: 500; cursor: pointer; transition: all 0.2s; }
+  .mini-player-btn-repeat:hover { background: #f1f5f9; color: #475569; }
+  .mini-player-btn-repeat-active { background: #dcfce7; border-color: #22c55e; color: #16a34a; font-weight: 600; }
+  .mini-player-repeat-text { display: none; }
+  @media (min-width: 768px) { .mini-player-repeat-text { display: inline; } }
+  .mini-player-loader { font-size: 16px; }
+}

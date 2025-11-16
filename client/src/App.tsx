@@ -5,6 +5,8 @@ import { AuthPage } from './pages/AuthPage'
 import { DashboardPage } from './pages/DashboardPage'
 import { CommunityPage } from './pages/CommunityPage'
 import { ProfilePage } from './pages/ProfilePage'
+import { HistologyPage } from './pages/HistologyPage'
+import { HistologyMTO1Page } from './pages/HistologyMTO1Page'
 
 function App() {
   return (
@@ -36,6 +38,8 @@ function App() {
               </ProtectedRoute>
             }
           />
+          <Route path="/histology" element={<ProtectedRoute><HistologyPage /></ProtectedRoute>} />
+          <Route path="/histology/mto1" element={<ProtectedRoute><HistologyMTO1Page /></ProtectedRoute>} />
           <Route path="/" element={<Navigate to="/login" replace />} />
           <Route path="*" element={<Navigate to="/login" replace />} />
         </Routes>

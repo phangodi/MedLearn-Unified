@@ -76,12 +76,13 @@ export function DashboardPage() {
     {
       name: 'Histology',
       icon: Microscope,
-      description: '21 Nervous System Slides • Staining Tips',
-      subtitle: '21 Slides',
+      description: 'Nervous System • Slides 15, 70-89 (22 Slides)',
+      subtitle: '22 Slides',
       enabled: true,
       image: '/subjects/histology.png',
       color: 'bg-purple-50 dark:bg-purple-950/30',
       iconColor: 'text-purple-600 dark:text-purple-400',
+      path: '/histology/mto1',
     },
     {
       name: 'Sociology',
@@ -222,6 +223,7 @@ export function DashboardPage() {
                     delay: index * 0.1,
                   }}
                   className={`${subject.enabled ? 'cursor-pointer' : 'cursor-not-allowed opacity-60'}`}
+                  onClick={() => subject.enabled && subject.path && navigate(subject.path)}
                 >
                   <Card3D enabled={subject.enabled}>
                     <div className="relative bg-card border-2 border-border/50 rounded-xl overflow-hidden h-[280px] hover:border-primary hover:shadow-[0_0_60px_rgba(6,182,212,0.6),0_0_100px_rgba(6,182,212,0.4)] dark:hover:shadow-[0_0_60px_rgba(6,182,212,0.7),0_0_100px_rgba(6,182,212,0.5)] transition-all duration-400 group">
