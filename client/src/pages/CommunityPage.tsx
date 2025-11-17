@@ -370,7 +370,7 @@ export function CommunityPage() {
         </header>
 
         {/* Main content */}
-        <main className="flex-1 container mx-auto px-4 lg:px-6 py-6">
+        <main className="flex-1 mx-auto px-4 lg:px-6 py-6 max-w-7xl">
           {/* Error Display */}
           {error && (
             <motion.div

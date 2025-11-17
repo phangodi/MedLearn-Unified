@@ -189,7 +189,7 @@ export function DashboardPage() {
         </header>
 
         {/* Main content */}
-        <main className="flex-1 container mx-auto px-6 lg:px-10 py-8 relative z-10">
+        <main className="flex-1 mx-auto px-6 lg:px-10 py-8 relative z-10 max-w-7xl">
           {/* Hero Section - Centered */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}

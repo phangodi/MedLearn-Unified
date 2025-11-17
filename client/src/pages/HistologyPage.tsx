@@ -37,7 +37,7 @@ export function HistologyPage() {
             <div className="flex items-center gap-1.5"><ThemeToggle /><Button variant="ghost" size="sm" onClick={handleLogout}><LogOut className="w-4 h-4 mr-1.5" /><span className="hidden sm:inline text-sm">Logout</span></Button></div>
           </div>
         </header>
-        <main className="flex-1 container mx-auto px-6 lg:px-10 py-8 relative z-10">
+        <main className="flex-1 mx-auto px-6 lg:px-10 py-8 relative z-10 max-w-7xl">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-12 max-w-4xl mx-auto">
             <div className="flex items-center justify-center gap-3 mb-4"><Microscope className="w-12 h-12 text-purple-600 dark:text-purple-400" /><h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold bg-gradient-to-r from-foreground to-purple-600 dark:to-purple-400 bg-clip-text text-transparent">Histology</h1></div>
             <p className="text-base lg:text-lg text-muted-foreground">Select a module to begin studying</p>
