@@ -159,21 +159,9 @@ export function DashboardPage() {
 
         {/* Header - clean continuous bar, NO diagonal lines, EXACT same height as sidebar */}
         <header className="sticky top-0 z-30 bg-card/95 backdrop-blur-sm border-b border-border/50 h-[60px] relative">
-          <div className="px-6 lg:px-10 h-full flex items-center justify-between">
-            {/* Show branding when sidebar is collapsed */}
-            {sidebarCollapsed && (
-              <div className="hidden lg:flex items-center space-x-2.5">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-md">
-                  <Activity className="w-4 h-4 text-primary-foreground" />
-                </div>
-                <span className="font-bold text-base bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                  Lara's MedLearn
-                </span>
-              </div>
-            )}
-
-            {/* Right side actions */}
-            <div className={`flex items-center gap-1.5 ${!sidebarCollapsed ? 'ml-auto' : ''}`}>
+          <div className="px-6 lg:px-10 h-full flex items-center justify-end">
+            {/* Right side actions - logo stays only in sidebar */}
+            <div className="flex items-center gap-1.5">
               <ThemeToggle />
               <Button
                 variant="ghost"

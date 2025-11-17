@@ -4,15 +4,17 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**Lara's MedLearn** is a unified medical education platform for students preparing for exams. The platform consolidates multiple existing medical study apps (Histology, Physiology, MedLearn Portal) into one modern, professionally-designed application with AI-powered features. The platform is completely free for all medical students.
+**Lara's MedLearn** is a unified medical education platform consolidating multiple legacy medical study apps (Histology, Physiology, Sociology, Anatomy) into one modern, professionally-designed application. The platform is completely free for all medical students.
 
 **Tech Stack:**
 - Vite + React 18 + TypeScript
 - Tailwind CSS v4 with @tailwindcss/vite plugin
 - Framer Motion (animations)
 - React Router v6 (routing)
+- Firebase (authentication, Firestore database, storage)
 - Zustand (state management - installed but not yet configured)
 - Lucide React (icons)
+- Howler.js (audio playback in legacy apps)
 
 ## Development Commands
 
@@ -44,18 +46,26 @@ npm run lint
 client/
 ├── src/
 │   ├── components/
-│   │   ├── ui/              # Reusable UI primitives (Button, Card, Input, Label, ThemeToggle)
-│   │   └── layout/          # Layout components (Sidebar, AngledBackground)
-│   ├── pages/               # Page components (LoginPage, DashboardPage)
-│   ├── hooks/               # Custom hooks (useTheme for dark/light mode)
+│   │   ├── ui/              # Reusable UI primitives (Button, Card, Input, etc.)
+│   │   ├── layout/          # Layout components (Sidebar, AngledBackground)
+│   │   └── auth/            # Auth components (ProtectedRoute)
+│   ├── pages/               # Page components (AuthPage, DashboardPage, etc.)
+│   ├── apps/                # Legacy app integrations
+│   │   ├── physiology/      # Physiology app (32 topics, audio, MCQs)
+│   │   ├── histology/       # Histology app (5 study formats)
+│   │   ├── sociology/       # Sociology app (5 chapters)
+│   │   └── anatomy/         # Anatomy CNS app (cranial nerves, brainstem)
+│   ├── contexts/            # React contexts (AuthContext)
+│   ├── firebase/            # Firebase configuration
+│   ├── hooks/               # Custom hooks (useTheme)
 │   ├── lib/                 # Utilities (utils.ts with cn() function)
-│   ├── store/               # Zustand stores (directory exists but empty)
+│   ├── store/               # Zustand stores (empty, ready to use)
 │   ├── App.tsx              # Router configuration
 │   ├── main.tsx             # Application entry point
 │   └── index.css            # Design system with CSS variables
 ├── vite.config.ts           # Vite configuration with path aliases
 ├── tsconfig.json            # TypeScript project references
-└── package.json             # Dependencies and scripts
+└── .env.example             # Environment variable template
 ```
 
 ### Path Aliases
@@ -64,24 +74,76 @@ The project uses `@/` as an import alias for `./src/`:
 
 ```typescript
 import { Button } from '@/components/ui/Button'
-import { useTheme } from '@/hooks/useTheme'
+import { useAuth } from '@/contexts/AuthContext'
 ```
 
-### Routing
+### Authentication System
+
+**Firebase Authentication** is implemented with:
+- Email/password authentication
+- Google OAuth
+- Apple OAuth
+- Protected routes using `<ProtectedRoute>` wrapper
+- User profile storage in Firestore with role-based permissions
+- Super admin configuration via `VITE_SUPER_ADMIN_EMAIL` environment variable
+
+**Setup Requirements:**
+1. Copy `client/.env.example` to `client/.env.local`
+2. Fill in Firebase configuration values from Firebase Console
+3. Set `VITE_SUPER_ADMIN_EMAIL` to grant super admin privileges
+
+### Routing Architecture
 
 Routes are defined in `src/App.tsx`:
-- `/login` - Login page with demo authentication
-- `/dashboard` - Main dashboard with subject tiles
-- `/` - Redirects to `/login`
-- All other routes redirect to `/login`
+
+```typescript
+/login              → AuthPage (login/signup)
+/dashboard          → DashboardPage (main subject selection)
+/profile            → ProfilePage (user profile)
+/community          → CommunityPage (blog/discussions)
+/histology          → HistologyPage (histology subject hub)
+/histology/mto1     → HistologyMTO1Page (legacy histology app)
+/physiology/*       → PhysiologyPage (legacy physiology app)
+/sociology          → SociologyPage (sociology subject hub)
+/sociology/exam1/*  → SociologyExam1Page (legacy sociology app)
+/anatomy            → AnatomyPage (anatomy subject hub)
+/anatomy/cns        → AnatomyCNSPage (legacy anatomy CNS app)
+/                   → Redirects to /login
+*                   → Redirects to /login
+```
+
+All routes except `/login` are protected and require authentication.
+
+### Legacy App Integration Pattern
+
+Legacy apps are integrated as standalone React apps embedded within page wrappers. Each wrapper:
+1. Includes the unified `<Sidebar>` component for navigation
+2. Mounts the legacy app in the main content area
+3. Preserves original app functionality and styling
+
+**Example structure:**
+```typescript
+export function PhysiologyPage() {
+  return (
+    <div className="min-h-screen bg-background flex">
+      <Sidebar /> {/* Unified navigation */}
+      <main className="flex-1 overflow-auto">
+        <PhysiologyApp /> {/* Legacy app */}
+      </main>
+    </div>
+  )
+}
+```
+
+**CSS Scoping:** Legacy apps use CSS Modules (e.g., `App.module.css`) to prevent style conflicts with the unified platform's Tailwind CSS.
 
 ### Theme System
 
-Dark/light theme is managed by `useTheme()` hook in `src/hooks/useTheme.ts`:
+Dark/light theme is managed by `useTheme()` hook:
 - Persists to localStorage
 - Respects system preference on initial load
 - Uses CSS variables defined in `src/index.css`
-- All components support both themes
+- All new components must support both themes
 
 ### Design System
 
@@ -112,31 +174,6 @@ Dark mode:
 - Active/tap: `scale(0.98)`
 - Use Framer Motion's `motion` components with spring physics
 
-### Dashboard Layout
-
-The dashboard (`src/pages/DashboardPage.tsx`) features:
-- Collapsible sidebar (always visible on desktop, drawer on mobile)
-- Angled gradient background with diagonal line patterns
-- Decorative border framing (top and left edges)
-- Desktop-like subject tiles in responsive grid
-- Circular progress indicators for each subject
-- Quick stats cards showing study metrics
-
-Subject tiles include:
-- Physiology, Histology, Pathology, Anatomy (core medical subjects)
-- AI Exam Prep (AI-powered practice tests)
-- Community (peer connections and discussions)
-
-### Authentication
-
-**Current Implementation:**
-- Demo bypass in `src/pages/LoginPage.tsx`
-- Email: `demo@medlearn.com` / Password: `demo`
-- No real authentication backend yet
-- Simple navigation to dashboard on successful "login"
-
-**TODO:** Replace with proper authentication system (Supabase/Firebase recommended)
-
 ## Important Implementation Notes
 
 ### UI Component Creation
@@ -152,42 +189,66 @@ When building new components:
 
 ### Responsive Design
 
-Mobile-first approach with specific breakpoints:
+Mobile-first approach with breakpoints:
 - Base styles: Mobile (< 640px)
 - `sm:` Tablet (640px+)
 - `md:` Larger tablet (768px+)
 - `lg:` Desktop (1024px+) - Sidebar becomes always visible
 - `xl:` Wide desktop (1280px+)
 
-### Content Structure (Future Implementation)
+### Working with Legacy Apps
 
-Based on the legacy histology app, subjects should support 4 study formats:
-1. **Hierarchical** - Comprehensive nested structure
-2. **Quick Cards** - Flashcard-style rapid review
-3. **Relationships** - Visual connection maps
-4. **Ultra-Minimal** - Essential exam prep facts
+When modifying legacy apps in `src/apps/`:
+- **DO NOT** refactor to TypeScript unless explicitly requested
+- Preserve existing functionality and file structure
+- Use CSS Modules to avoid style conflicts
+- Test thoroughly as these apps have complex state management
+- Legacy apps use contexts for state (see `context/` folders)
 
-## Known Issues & TODOs
+### Firebase Integration
 
-- No real authentication (using demo bypass)
-- Subject cards don't navigate to actual subject pages yet (placeholders)
-- Sidebar navigation buttons don't have routes configured
-- No actual study content implemented
-- Zustand state management not configured
-- No form validation library (React Hook Form recommended)
-- No toast notifications (sonner recommended)
+The app uses Firebase for backend services:
+- **Authentication:** Email/password, Google, Apple OAuth
+- **Firestore:** User profiles, community posts, comments
+- **Storage:** Future use for file uploads
+- **Emulators:** Can be enabled in dev with `VITE_USE_FIREBASE_EMULATORS=true`
 
-## Next Development Priorities
+Configuration is validated on startup. Missing environment variables will show console warnings.
 
-1. **Subject Pages** - Create template for subject content pages with topic navigation
-2. **Content Viewers** - Implement the 4 study format viewers (Hierarchical, Quick Cards, Relationships, Ultra-Minimal)
-3. **AI Integration** - Build AI Exam Prep page with question generation (Claude/OpenAI API)
-4. **Community Features** - Implement blog/discussion board with commenting and contributions
-5. **Real Authentication** - Replace demo bypass with proper auth system
+### Content Structure (Legacy Apps)
 
-## Context Files
+Legacy apps provide different study formats:
+1. **Histology App:** Hierarchical, Quick Cards, Relationships, Ultra-Minimal, Final Check, Exam Presentation
+2. **Physiology App:** 32 topics with audio explanations, MCQ practice, exam answers
+3. **Sociology App:** 5 chapters with hierarchical content and search
+4. **Anatomy CNS App:** Cranial nerves reference, brainstem anatomy
 
-- `README.md` - Quick start guide and project overview
-- `DEVELOPMENT_GUIDE.md` - Detailed development documentation and continuation prompts
-- `SESSION_SUMMARY.md` - Latest session summary with design decisions and current status
-- `design-refs/` - Reference screenshots for design inspiration
+## Known Technical Debt
+
+- Zustand state management not yet configured
+- Some legacy apps use older React patterns (class components)
+- Audio player implementation in physiology has known race condition bugs
+- No global error boundary implementation
+- Community page comments system incomplete
+- Profile page user stats not implemented
+
+## Environment Variables
+
+Required for development (see `.env.example`):
+```bash
+VITE_FIREBASE_API_KEY=              # Firebase API key
+VITE_FIREBASE_AUTH_DOMAIN=          # Firebase auth domain
+VITE_FIREBASE_PROJECT_ID=           # Firebase project ID
+VITE_FIREBASE_STORAGE_BUCKET=       # Firebase storage bucket
+VITE_FIREBASE_MESSAGING_SENDER_ID=  # Firebase messaging sender ID
+VITE_FIREBASE_APP_ID=               # Firebase app ID
+VITE_FIREBASE_MEASUREMENT_ID=       # (Optional) Firebase analytics
+VITE_SUPER_ADMIN_EMAIL=             # Super admin email address
+VITE_USE_FIREBASE_EMULATORS=        # (Optional) true/false for emulators
+```
+
+## Reference Documentation
+
+- `README.md` - Quick start guide
+- `DEVELOPMENT_GUIDE.md` - Detailed development documentation
+- `design-refs/` - Design inspiration screenshots

@@ -128,7 +128,7 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
         onClick={() => navigate('/dashboard')}
         className={`sidebar-item ${
           (location.pathname === '/dashboard' || location.pathname === '/') ? 'active' : ''
-        } w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg text-left`}
+        } w-full flex items-center ${isCollapsed ? 'justify-center' : 'space-x-2.5'} px-3 py-2 rounded-lg text-left`}
       >
         <Home className="sidebar-icon w-4.5 h-4.5" />
         {!isCollapsed && (
@@ -136,21 +136,26 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
         )}
       </button>
 
+      {/* Divider between Dashboard and Subjects */}
+      {isCollapsed && (
+        <div className="my-3 mx-auto w-8 h-px bg-border/50" />
+      )}
+
       {/* Subjects Section */}
       <div className="pt-4">
-        <button
-          onClick={() => toggleSection('subjects')}
-          className="sidebar-header w-full flex items-center justify-between px-3 py-2 rounded-lg dark:hover:bg-gray-800/40 transition-colors text-left"
-        >
-          <span className="text-xs uppercase tracking-wider">
-            {!isCollapsed ? 'Subjects' : 'SUB'}
-          </span>
-          {!isCollapsed && (expandedSections.includes('subjects') ? (
-            <ChevronDown className="sidebar-icon w-4 h-4" />
-          ) : (
-            <ChevronRight className="sidebar-icon w-4 h-4" />
-          ))}
-        </button>
+        {!isCollapsed && (
+          <button
+            onClick={() => toggleSection('subjects')}
+            className="sidebar-header w-full flex items-center justify-between px-3 py-2 rounded-lg dark:hover:bg-gray-800/40 transition-colors text-left"
+          >
+            <span className="text-xs uppercase tracking-wider">Subjects</span>
+            {expandedSections.includes('subjects') ? (
+              <ChevronDown className="sidebar-icon w-4 h-4" />
+            ) : (
+              <ChevronRight className="sidebar-icon w-4 h-4" />
+            )}
+          </button>
+        )}
 
         <AnimatePresence initial={false}>
           {expandedSections.includes('subjects') && !isCollapsed && (
@@ -202,21 +207,26 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
         )}
       </div>
 
+      {/* Divider between Subjects and Tools */}
+      {isCollapsed && (
+        <div className="my-3 mx-auto w-8 h-px bg-border/50" />
+      )}
+
       {/* Tools Section */}
       <div className="pt-4">
-        <button
-          onClick={() => toggleSection('tools')}
-          className="sidebar-header w-full flex items-center justify-between px-3 py-2 rounded-lg dark:hover:bg-gray-800/40 transition-colors text-left"
-        >
-          <span className="text-xs uppercase tracking-wider">
-            {!isCollapsed ? 'Tools' : 'TOO'}
-          </span>
-          {!isCollapsed && (expandedSections.includes('tools') ? (
-            <ChevronDown className="sidebar-icon w-4 h-4" />
-          ) : (
-            <ChevronRight className="sidebar-icon w-4 h-4" />
-          ))}
-        </button>
+        {!isCollapsed && (
+          <button
+            onClick={() => toggleSection('tools')}
+            className="sidebar-header w-full flex items-center justify-between px-3 py-2 rounded-lg dark:hover:bg-gray-800/40 transition-colors text-left"
+          >
+            <span className="text-xs uppercase tracking-wider">Tools</span>
+            {expandedSections.includes('tools') ? (
+              <ChevronDown className="sidebar-icon w-4 h-4" />
+            ) : (
+              <ChevronRight className="sidebar-icon w-4 h-4" />
+            )}
+          </button>
+        )}
 
         <AnimatePresence initial={false}>
           {expandedSections.includes('tools') && !isCollapsed && (
@@ -304,35 +314,78 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
 
       {/* Footer - Settings */}
       <div className="p-3 border-t border-border/50 mt-auto">
-        <button className="sidebar-item w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg text-left">
+        <button className={`sidebar-item w-full flex items-center ${isCollapsed ? 'justify-center' : 'space-x-2.5'} px-3 py-2 rounded-lg text-left`}>
           <Settings className="sidebar-icon w-4.5 h-4.5" />
           {!isCollapsed && <span className="text-sm">Settings</span>}
         </button>
       </div>
 
-      {/* Collapse/Expand marker */}
-      <div
-        className="hidden lg:flex absolute top-1/2 -translate-y-1/2 -right-3 w-6 h-16 items-center justify-center cursor-pointer z-20 group"
+      {/* Collapse/Expand interaction area - WIDER and DRAGGABLE */}
+      <motion.div
+        className="hidden lg:flex absolute top-0 bottom-0 -right-3 w-6 items-center justify-center cursor-col-resize z-20 group"
         onMouseEnter={() => setShowExpandTooltip(true)}
         onMouseLeave={() => setShowExpandTooltip(false)}
         onClick={() => setIsCollapsed(!isCollapsed)}
-      >
-        <div className="w-1 h-8 bg-border/40 group-hover:bg-border/80 transition-colors rounded-full" />
+        drag="x"
+        dragConstraints={{ left: 0, right: 0 }}
+        dragElastic={0.1}
+        onDragEnd={(_e, info) => {
+          // Detect drag direction and velocity for smooth interaction
+          const threshold = 30 // pixels to trigger
+          const velocityThreshold = 200 // velocity to auto-trigger
 
+          if (Math.abs(info.offset.x) > threshold || Math.abs(info.velocity.x) > velocityThreshold) {
+            if (isCollapsed) {
+              // If collapsed, dragging left expands
+              if (info.offset.x < -threshold || info.velocity.x < -velocityThreshold) {
+                setIsCollapsed(false)
+              }
+            } else {
+              // If expanded, dragging right collapses
+              if (info.offset.x > threshold || info.velocity.x > velocityThreshold) {
+                setIsCollapsed(true)
+              }
+            }
+          }
+        }}
+        whileDrag={{ scale: 1.05 }}
+      >
+        {/* Subtle marker line (always visible) - centered in drag area */}
+        <div className="w-1 h-8 bg-gradient-to-b from-primary/30 via-primary/50 to-primary/30 group-hover:from-primary/50 group-hover:via-primary/70 group-hover:to-primary/50 transition-all duration-300 rounded-full shadow-sm" />
+
+        {/* Simple integrated tab (appears on hover) - COLLAPSE left, EXPAND right */}
         <AnimatePresence>
           {showExpandTooltip && (
             <motion.div
-              initial={{ opacity: 0, x: -10 }}
+              initial={{ opacity: 0, x: isCollapsed ? 10 : -10 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -10 }}
-              transition={{ duration: 0.15 }}
-              className="absolute right-8 bg-foreground text-background px-3 py-1.5 rounded-md text-xs font-medium whitespace-nowrap shadow-lg"
+              exit={{ opacity: 0, x: isCollapsed ? 10 : -10 }}
+              transition={{
+                duration: 0.15,
+                ease: 'easeOut'
+              }}
+              className={`absolute ${isCollapsed ? 'left-4' : 'right-4'} flex items-center cursor-col-resize pointer-events-none`}
             >
-              {isCollapsed ? 'Expand' : 'Collapse'}
+              {/* Simple tab - integrated with sidebar style */}
+              <div className="bg-card border border-border rounded-md shadow-md">
+                {/* Rotated text - clean and minimal */}
+                <div className="px-1.5 py-3 flex items-center justify-center">
+                  <span
+                    className="text-[9px] font-semibold uppercase tracking-wider text-muted-foreground"
+                    style={{
+                      writingMode: 'vertical-rl',
+                      textOrientation: 'mixed',
+                      transform: 'rotate(180deg)'
+                    }}
+                  >
+                    {isCollapsed ? 'Expand' : 'Collapse'}
+                  </span>
+                </div>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
-      </div>
+      </motion.div>
     </>
   )
 

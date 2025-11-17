@@ -5,7 +5,7 @@ import { BorderFrame } from '@/components/layout/BorderFrame'
 import { Particles } from '@/components/ui/Particles'
 import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import { Button } from '@/components/ui/Button'
-import { LogOut, ArrowLeft, Microscope } from 'lucide-react'
+import { LogOut, Microscope } from 'lucide-react'
 import { useState } from 'react'
 import { useAuth } from '@/contexts/AuthContext'
 
@@ -32,14 +32,13 @@ export function HistologyPage() {
       <div className="flex-1 flex flex-col relative z-10">
         <BorderFrame sidebarCollapsed={sidebarCollapsed} />
         <header className="sticky top-0 z-30 bg-card/95 backdrop-blur-sm border-b border-border/50 h-[60px]">
-          <div className="px-6 lg:px-10 h-full flex items-center justify-between">
-            <Button variant="ghost" size="sm" onClick={() => navigate('/dashboard')}><ArrowLeft className="w-4 h-4 mr-1.5" /><span className="hidden sm:inline text-sm">Back to Dashboard</span></Button>
+          <div className="px-6 lg:px-10 h-full flex items-center justify-end">
             <div className="flex items-center gap-1.5"><ThemeToggle /><Button variant="ghost" size="sm" onClick={handleLogout}><LogOut className="w-4 h-4 mr-1.5" /><span className="hidden sm:inline text-sm">Logout</span></Button></div>
           </div>
         </header>
         <main className="flex-1 mx-auto px-6 lg:px-10 py-8 relative z-10 max-w-7xl">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-12 max-w-4xl mx-auto">
-            <div className="flex items-center justify-center gap-3 mb-4"><Microscope className="w-12 h-12 text-purple-600 dark:text-purple-400" /><h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold bg-gradient-to-r from-foreground to-purple-600 dark:to-purple-400 bg-clip-text text-transparent">Histology</h1></div>
+            <div className="flex items-center justify-center gap-3 mb-4"><Microscope className="w-12 h-12 text-purple-600 dark:text-purple-400" /><h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight pb-1 bg-gradient-to-r from-foreground to-purple-600 dark:to-purple-400 bg-clip-text text-transparent">Histology</h1></div>
             <p className="text-base lg:text-lg text-muted-foreground">Select a module to begin studying</p>
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
