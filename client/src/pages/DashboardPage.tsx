@@ -103,6 +103,7 @@ export function DashboardPage() {
       subtitle: 'Neuroanatomy',
       enabled: true,
       image: '/subjects/anatomy.png',
+      path: '/anatomy',
       color: 'bg-emerald-50 dark:bg-emerald-950/30',
       iconColor: 'text-emerald-600 dark:text-emerald-400',
     },

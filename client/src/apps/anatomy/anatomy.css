@@ -1,0 +1,99 @@
+/* Anatomy App - Scoped CSS */
+/* Minimal scoping - let Tailwind handle most styling */
+
+.anatomyRoot {
+  /* Only essential base styles */
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+.anatomyRoot *,
+.anatomyRoot *::before,
+.anatomyRoot *::after {
+  box-sizing: border-box;
+}
+
+/* Professional Table Styling - Scoped to anatomy app */
+.anatomyRoot table {
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  width: 100% !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  margin-bottom: 24px !important;
+  background-color: white !important;
+}
+
+.anatomyRoot table thead {
+  background: #2563eb !important;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+}
+
+.anatomyRoot table thead tr {
+  background: #2563eb !important;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+}
+
+.anatomyRoot table thead th {
+  background: #2563eb !important;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+  color: white !important;
+  font-weight: 700 !important;
+  padding: 18px 20px !important;
+  text-align: left !important;
+  font-size: 13px !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
+  border: none !important;
+}
+
+.anatomyRoot table tbody {
+  background-color: white !important;
+}
+
+.anatomyRoot table tbody tr {
+  background-color: white !important;
+  border-bottom: 1px solid #e5e7eb !important;
+  transition: all 0.2s ease !important;
+}
+
+.anatomyRoot table tbody tr:hover {
+  background-color: #eff6ff !important;
+  transform: scale(1.001);
+}
+
+.anatomyRoot table tbody tr:last-child {
+  border-bottom: none !important;
+}
+
+.anatomyRoot table tbody tr:nth-child(even) {
+  background-color: #f8fafc !important;
+}
+
+.anatomyRoot table tbody tr:nth-child(even):hover {
+  background-color: #eff6ff !important;
+}
+
+.anatomyRoot table tbody td {
+  padding: 16px 20px !important;
+  border: none !important;
+  vertical-align: top !important;
+  line-height: 1.7 !important;
+  font-size: 14px !important;
+  color: #374151 !important;
+  background-color: transparent !important;
+}
+
+.anatomyRoot table tbody td:first-child {
+  font-weight: 600 !important;
+  color: #1f2937 !important;
+}
+
+/* Section headers */
+.anatomyRoot h3 {
+  margin-top: 32px !important;
+  margin-bottom: 16px !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
