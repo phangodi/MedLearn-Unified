@@ -145,7 +145,16 @@ export function NotificationProvider({ children }: { children: React.ReactNode }
   }, [])
 
   const dismissNotification = useCallback((notificationId: string) => {
-    setDismissedIds((prev) => new Set(prev).add(notificationId))
+    setDismissedIds((prev) => {
+      const updated = new Set(prev).add(notificationId)
+      // Immediately persist to localStorage (synchronous)
+      try {
+        localStorage.setItem(DISMISSED_KEY, JSON.stringify([...updated]))
+      } catch (error) {
+        console.error('Failed to persist dismissed notification:', error)
+      }
+      return updated
+    })
     setNotifications((prev) => prev.filter((n) => n.id !== notificationId))
   }, [])
 

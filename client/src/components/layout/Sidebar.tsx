@@ -32,6 +32,7 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
   const { userProfile } = useAuth()
   const [expandedSections, setExpandedSections] = useState<string[]>(['subjects', 'tools'])
   const [showExpandTooltip, setShowExpandTooltip] = useState(false)
+  const [notificationsOpen, setNotificationsOpen] = useState(false)
 
   const toggleSection = (section: string) => {
     setExpandedSections(prev =>
@@ -242,7 +243,7 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
             >
               <div className="space-y-1 pt-1">
                 {/* Notifications */}
-                <NotificationSidebarItem isCollapsed={false} />
+                <NotificationSidebarItem isCollapsed={false} onOpenChange={setNotificationsOpen} />
 
                 {/* Other tools */}
                 {tools.map((tool) => {
@@ -268,7 +269,7 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
         {isCollapsed && (
           <div className="space-y-1 pt-1">
             {/* Notifications */}
-            <NotificationSidebarItem isCollapsed={true} />
+            <NotificationSidebarItem isCollapsed={true} onOpenChange={setNotificationsOpen} />
 
             {/* Other tools */}
             {tools.map((tool) => {
@@ -351,7 +352,8 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
         </button>
       </div>
 
-      {/* Collapse/Expand interaction area - WIDER and DRAGGABLE */}
+      {/* Collapse/Expand interaction area - DISABLED when notifications are open */}
+      {!notificationsOpen && (
       <motion.div
         className="hidden lg:flex absolute top-0 bottom-0 -right-3 w-6 items-center justify-center cursor-col-resize z-20 group"
         onMouseEnter={() => setShowExpandTooltip(true)}
@@ -417,6 +419,7 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
           )}
         </AnimatePresence>
       </motion.div>
+      )}
     </>
   )
 
