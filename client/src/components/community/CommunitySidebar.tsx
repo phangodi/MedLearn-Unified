@@ -3,14 +3,14 @@ import { useNavigate } from 'react-router-dom'
 import {
   Home,
   Compass,
-  Bell,
-  MessageCircle,
   Bookmark,
   User,
   Heart,
   FileText,
-  ArrowLeft
+  ArrowLeft,
+  Users
 } from 'lucide-react'
+import { NotificationSidebarItem } from '@/components/notifications/NotificationSidebarItem'
 
 interface CommunitySidebarProps {
   activeSection: string
@@ -20,8 +20,6 @@ interface CommunitySidebarProps {
 const menuItems = [
   { id: 'feed', label: 'Feed', icon: Home, description: 'All posts' },
   { id: 'explore', label: 'Explore', icon: Compass, description: 'Discover content' },
-  { id: 'notifications', label: 'Notifications', icon: Bell, description: 'Stay updated', badge: 3 },
-  { id: 'messages', label: 'Messages', icon: MessageCircle, description: 'Direct messages', badge: 5 },
   { id: 'bookmarks', label: 'Bookmarks', icon: Bookmark, description: 'Saved posts' },
   { id: 'liked', label: 'Liked', icon: Heart, description: 'Posts you liked' },
   { id: 'my-posts', label: 'My Posts', icon: FileText, description: 'Your posts' },
@@ -37,7 +35,7 @@ export function CommunitySidebar({ activeSection, onSectionChange }: CommunitySi
       <div className="p-6 border-b border-border">
         <div className="flex items-center gap-3 w-full">
           <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-md">
-            <MessageCircle className="w-4 h-4 text-primary-foreground" />
+            <Users className="w-4 h-4 text-primary-foreground" />
           </div>
           <div className="text-left flex-1">
             <div className="font-bold text-sm bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
@@ -120,6 +118,13 @@ export function CommunitySidebar({ activeSection, onSectionChange }: CommunitySi
 
           {/* Divider */}
           <div className="h-px bg-border my-2"></div>
+
+          {/* Notifications - Working notification system */}
+          <NotificationSidebarItem isCollapsed={false} />
+
+          {/* Divider */}
+          <div className="h-px bg-border my-2"></div>
+
           {menuItems.map((item) => {
             const Icon = item.icon
             const isActive = activeSection === item.id

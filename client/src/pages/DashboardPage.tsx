@@ -1,13 +1,15 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, useMotionValue, useTransform } from 'framer-motion'
 import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import { Button } from '@/components/ui/Button'
 import { Sidebar } from '@/components/layout/Sidebar'
 import { BorderFrame } from '@/components/layout/BorderFrame'
 import { Particles } from '@/components/ui/Particles'
+import { DashboardMessageCard } from '@/components/notifications/DashboardMessageCard'
 import { LogOut, Brain, Microscope, User, Users, Activity } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '@/contexts/AuthContext'
+import { useNotifications } from '@/contexts/NotificationContext'
 
 // 3D Card Component with mouse tracking
 function Card3D({ children, enabled }: { children: React.ReactNode; enabled: boolean }) {
@@ -54,8 +56,14 @@ function Card3D({ children, enabled }: { children: React.ReactNode; enabled: boo
 export function DashboardPage() {
   const navigate = useNavigate()
   const { signOut } = useAuth()
+  const { setCurrentTarget } = useNotifications()
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
+
+  // Set notification target to global for dashboard
+  useEffect(() => {
+    setCurrentTarget('global')
+  }, [setCurrentTarget])
 
   const handleLogout = async () => {
     await signOut()
@@ -200,6 +208,9 @@ export function DashboardPage() {
               Consolidates study materials into interactive content to help you learn more effectively.
             </motion.p>
           </motion.div>
+
+          {/* Dashboard Message Card */}
+          <DashboardMessageCard />
 
           {/* Enhanced subject grid with wow animations */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

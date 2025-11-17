@@ -15,7 +15,9 @@ import {
   Activity
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { NotificationSidebarItem } from '@/components/notifications/NotificationSidebarItem'
 import { useNavigate, useLocation } from 'react-router-dom'
+import { useAuth } from '@/contexts/AuthContext'
 
 interface SidebarProps {
   isOpen: boolean
@@ -27,6 +29,7 @@ interface SidebarProps {
 export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: SidebarProps) {
   const navigate = useNavigate()
   const location = useLocation()
+  const { userProfile } = useAuth()
   const [expandedSections, setExpandedSections] = useState<string[]>(['subjects', 'tools'])
   const [showExpandTooltip, setShowExpandTooltip] = useState(false)
 
@@ -238,6 +241,10 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
               className="overflow-hidden"
             >
               <div className="space-y-1 pt-1">
+                {/* Notifications */}
+                <NotificationSidebarItem isCollapsed={false} />
+
+                {/* Other tools */}
                 {tools.map((tool) => {
                   const Icon = tool.icon
                   const isActive = location.pathname === tool.path
@@ -260,6 +267,10 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
         {/* Collapsed view - show icons only */}
         {isCollapsed && (
           <div className="space-y-1 pt-1">
+            {/* Notifications */}
+            <NotificationSidebarItem isCollapsed={true} />
+
+            {/* Other tools */}
             {tools.map((tool) => {
               const Icon = tool.icon
               const isActive = location.pathname === tool.path
@@ -312,9 +323,29 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
       {/* Navigation Content */}
       {navigationContent}
 
-      {/* Footer - Settings */}
-      <div className="p-3 border-t border-border/50 mt-auto">
-        <button className={`sidebar-item w-full flex items-center ${isCollapsed ? 'justify-center' : 'space-x-2.5'} px-3 py-2 rounded-lg text-left`}>
+      {/* Footer - Settings & Admin */}
+      <div className="p-3 border-t border-border/50 mt-auto space-y-1">
+        {/* Admin link (super admin only) */}
+        {userProfile?.role === 'superadmin' && (
+          <button
+            onClick={() => navigate('/admin/notifications')}
+            className={`sidebar-item ${
+              location.pathname === '/admin/notifications' ? 'active' : ''
+            } w-full flex items-center ${isCollapsed ? 'justify-center' : 'space-x-2.5'} px-3 py-2 rounded-lg text-left`}
+            title={isCollapsed ? 'Notifications Admin' : undefined}
+          >
+            <Activity className="sidebar-icon w-4.5 h-4.5" />
+            {!isCollapsed && <span className="text-sm">Notifications Admin</span>}
+          </button>
+        )}
+
+        <button
+          onClick={() => navigate('/profile')}
+          className={`sidebar-item ${
+            location.pathname === '/profile' ? 'active' : ''
+          } w-full flex items-center ${isCollapsed ? 'justify-center' : 'space-x-2.5'} px-3 py-2 rounded-lg text-left`}
+          title={isCollapsed ? 'Settings' : undefined}
+        >
           <Settings className="sidebar-icon w-4.5 h-4.5" />
           {!isCollapsed && <span className="text-sm">Settings</span>}
         </button>
