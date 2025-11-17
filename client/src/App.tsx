@@ -8,6 +8,8 @@ import { ProfilePage } from './pages/ProfilePage'
 import { HistologyPage } from './pages/HistologyPage'
 import { HistologyMTO1Page } from './pages/HistologyMTO1Page'
 import { PhysiologyPage } from './pages/PhysiologyPage'
+import { SociologyPage } from './pages/SociologyPage'
+import { SociologyExam1Page } from './pages/SociologyExam1Page'
 
 function App() {
   return (
@@ -42,6 +44,8 @@ function App() {
           <Route path="/histology" element={<ProtectedRoute><HistologyPage /></ProtectedRoute>} />
           <Route path="/histology/mto1" element={<ProtectedRoute><HistologyMTO1Page /></ProtectedRoute>} />
           <Route path="/physiology/*" element={<ProtectedRoute><PhysiologyPage /></ProtectedRoute>} />
+          <Route path="/sociology" element={<ProtectedRoute><SociologyPage /></ProtectedRoute>} />
+          <Route path="/sociology/exam1/*" element={<ProtectedRoute><SociologyExam1Page /></ProtectedRoute>} />
           <Route path="/" element={<Navigate to="/login" replace />} />
           <Route path="*" element={<Navigate to="/login" replace />} />
         </Routes>

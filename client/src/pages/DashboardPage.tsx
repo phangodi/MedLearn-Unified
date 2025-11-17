@@ -92,6 +92,7 @@ export function DashboardPage() {
       subtitle: 'Social Health',
       enabled: true,
       image: '/subjects/sociology.png',
+      path: '/sociology',
       color: 'bg-teal-50 dark:bg-teal-950/30',
       iconColor: 'text-teal-600 dark:text-teal-400',
     },
