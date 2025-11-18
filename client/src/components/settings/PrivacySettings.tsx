@@ -173,6 +173,27 @@ export function PrivacySettings({ settings, anonymousPseudonym, year, onSave }: 
               </button>
             ))}
           </div>
+
+          {/* Show Year Toggle */}
+          <label className="flex items-center gap-3 p-3 rounded-lg border border-border cursor-pointer hover:bg-muted/50 transition-colors">
+            <input
+              type="checkbox"
+              checked={localSettings.showYear}
+              onChange={(e) => setLocalSettings({ ...localSettings, showYear: e.target.checked })}
+              className="w-4 h-4 text-primary"
+            />
+            <div className="flex-1">
+              <div className="flex items-center gap-2">
+                <Eye className="w-4 h-4 text-muted-foreground" />
+                <span className="text-sm font-medium">Show year in posts and comments</span>
+              </div>
+              <p className="text-xs text-muted-foreground mt-1">
+                {localSettings.showYear
+                  ? `Posts will show "Medical Student Year ${localYear}"`
+                  : `Posts will only show "Medical Student"`}
+              </p>
+            </div>
+          </label>
         </div>
 
         {/* Profile Visibility */}

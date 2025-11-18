@@ -46,6 +46,8 @@ export function AvatarPicker({ currentAvatar, oauthAvatar, onSave }: AvatarPicke
       await onSave(selectedAvatar)
       setSaved(true)
       setTimeout(() => setSaved(false), 3000)
+      // Close the picker after successful save
+      setIsExpanded(false)
     } catch (error) {
       console.error('Error saving avatar:', error)
     } finally {

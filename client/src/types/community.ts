@@ -14,6 +14,7 @@ export interface Attachment {
 
 export interface PrivacySettings {
   postAnonymously: 'always' | 'ask' | 'never'
+  showYear: boolean // Whether to show medical school year in posts/comments
 }
 
 export interface Author {
@@ -40,6 +41,7 @@ export interface Comment {
 
 export interface Post {
   id: string
+  title: string  // Post title/headline
   author: Author
   content: string
   timestamp: Timestamp

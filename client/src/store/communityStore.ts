@@ -34,7 +34,7 @@ interface CommunityState {
   setCurrentUser: (user: UserProfile | null) => void
   fetchPosts: () => Promise<void>
   fetchComments: (postId: string) => Promise<void>
-  createPost: (content: string, tags: string[], attachments: Attachment[], isAnonymous?: boolean) => Promise<void>
+  createPost: (title: string, content: string, tags: string[], attachments: Attachment[], isAnonymous?: boolean) => Promise<void>
   deletePost: (postId: string) => Promise<void>
   toggleLike: (postId: string) => Promise<void>
   toggleBookmark: (postId: string) => Promise<void>
@@ -44,6 +44,23 @@ interface CommunityState {
   incrementViews: (postId: string) => Promise<void>
   subscribeToPost: (postId: string, callback: (post: Post) => void) => () => void
   updatePrivacySettings: (settings: PrivacySettings, year?: number, newPseudonym?: string) => Promise<void>
+}
+
+// Helper function to get role display with year if privacy settings allow
+const getRoleDisplay = (user: UserProfile, isAnonymous: boolean): string => {
+  if (isAnonymous) {
+    // For anonymous posts, show year if user has showYear enabled
+    if (user.year && user.privacySettings?.showYear) {
+      return `Medical Student Year ${user.year}`
+    }
+    return 'Medical Student'
+  }
+
+  // For non-anonymous posts, show year if user has it set and showYear enabled
+  if (user.year && user.privacySettings?.showYear) {
+    return `Medical Student Year ${user.year}`
+  }
+  return 'Medical Student'
 }
 
 export const useCommunityStore = create<CommunityState>((set, get) => ({
@@ -102,37 +119,60 @@ export const useCommunityStore = create<CommunityState>((set, get) => ({
   },
 
   // Create a new post
-  createPost: async (content: string, tags: string[], attachments: Attachment[], isAnonymous: boolean = false) => {
+  createPost: async (title: string, content: string, tags: string[], attachments: Attachment[], isAnonymous: boolean = false) => {
     const { currentUser } = get()
     if (!currentUser) {
       set({ error: 'You must be logged in to create a post' })
       return
     }
 
+    // Validate required fields
+    if (!title.trim()) {
+      set({ error: 'Post title is required' })
+      return
+    }
+
+    if (!isAnonymous) {
+      if (!currentUser.id || !currentUser.name) {
+        console.error('Missing required fields in currentUser:', {
+          id: currentUser.id,
+          name: currentUser.name,
+          year: currentUser.year,
+          avatar: currentUser.avatar
+        })
+        set({ error: 'User profile incomplete. Please refresh the page.' })
+        return
+      }
+    }
+
     try {
       const postsRef = collection(db, 'posts')
       const now = Timestamp.now()
+
+      // Get role display with year based on privacy settings
+      const roleDisplay = getRoleDisplay(currentUser, isAnonymous)
 
       // Determine author display based on anonymity
       const authorDisplay = isAnonymous
         ? {
             id: 'anonymous', // Generic ID for display
             name: currentUser.anonymousPseudonym || 'Anonymous Medical Student',
-            avatar: getAvatarForPseudonym(currentUser.anonymousPseudonym || 'Anonymous'),
-            role: 'Medical Student',
+            avatar: '👤', // Generic no-profile avatar for all anonymous posts
+            role: roleDisplay,
             verified: false,
             isAnonymous: true
           }
         : {
             id: currentUser.id,
             name: currentUser.name,
-            avatar: currentUser.avatar,
-            role: currentUser.role,
-            verified: currentUser.verified,
+            avatar: currentUser.avatar || '👤', // Fallback to default avatar
+            role: roleDisplay,
+            verified: currentUser.verified || false,
             isAnonymous: false
           }
 
       const newPost = {
+        title: title.trim(),
         author: authorDisplay,
         content,
         timestamp: now,
@@ -149,7 +189,7 @@ export const useCommunityStore = create<CommunityState>((set, get) => ({
         createdAt: now,
         updatedAt: now,
         isAnonymous,
-        actualAuthorId: isAnonymous ? currentUser.id : undefined // Store real author for ownership
+        ...(isAnonymous && { actualAuthorId: currentUser.id }) // Only include when anonymous
       }
 
       await addDoc(postsRef, newPost)
@@ -333,25 +373,42 @@ export const useCommunityStore = create<CommunityState>((set, get) => ({
       return
     }
 
+    // Validate required fields for non-anonymous comments
+    if (!isAnonymous) {
+      if (!currentUser.id || !currentUser.name) {
+        console.error('Missing required fields in currentUser:', {
+          id: currentUser.id,
+          name: currentUser.name,
+          year: currentUser.year,
+          avatar: currentUser.avatar
+        })
+        set({ error: 'User profile incomplete. Please refresh the page.' })
+        return
+      }
+    }
+
     try {
       const commentsRef = collection(db, 'comments')
+
+      // Get role display with year based on privacy settings
+      const roleDisplay = getRoleDisplay(currentUser, isAnonymous)
 
       // Determine author display based on anonymity (same logic as posts)
       const authorDisplay = isAnonymous
         ? {
             id: 'anonymous', // Generic ID for display
             name: currentUser.anonymousPseudonym || 'Anonymous Medical Student',
-            avatar: getAvatarForPseudonym(currentUser.anonymousPseudonym || 'Anonymous'),
-            role: 'Medical Student',
+            avatar: '👤', // Generic no-profile avatar for all anonymous comments
+            role: roleDisplay,
             verified: false,
             isAnonymous: true
           }
         : {
             id: currentUser.id,
             name: currentUser.name,
-            avatar: currentUser.avatar,
-            role: currentUser.role,
-            verified: currentUser.verified,
+            avatar: currentUser.avatar || '👤', // Fallback to default avatar
+            role: roleDisplay,
+            verified: currentUser.verified || false,
             isAnonymous: false
           }
 
@@ -363,7 +420,7 @@ export const useCommunityStore = create<CommunityState>((set, get) => ({
         likes: 0,
         likedBy: [],
         isAnonymous,
-        actualAuthorId: isAnonymous ? currentUser.id : undefined, // Store real author for ownership
+        ...(isAnonymous && { actualAuthorId: currentUser.id }), // Only include when anonymous
         ...(parentCommentId && { parentCommentId })
       }
 

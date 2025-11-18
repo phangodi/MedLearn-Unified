@@ -4,12 +4,24 @@ import type { Post } from '@/types/community'
 
 interface TrendingDiscussionsProps {
   posts: Post[]
+  onPostClick?: (postId: string) => void
 }
 
-export function TrendingDiscussions({ posts }: TrendingDiscussionsProps) {
+export function TrendingDiscussions({ posts, onPostClick }: TrendingDiscussionsProps) {
   // Calculate trending discussions based on recent activity
   // Factors: comments, likes, views in last 24 hours (for demo, just sort by engagement)
-  const trendingPosts = [...posts]
+
+  // First, ensure unique posts only using Map (most robust deduplication)
+  const uniquePostsMap = new Map<string, Post>()
+  posts.forEach(post => {
+    // Only keep first occurrence of each post ID
+    if (!uniquePostsMap.has(post.id)) {
+      uniquePostsMap.set(post.id, post)
+    }
+  })
+  const uniquePosts = Array.from(uniquePostsMap.values())
+
+  const trendingPosts = [...uniquePosts]
     .sort((a, b) => {
       // Simple engagement score: comments * 2 + likes + views/10
       const scoreA = a.comments * 2 + a.likes + a.views / 10
@@ -62,6 +74,7 @@ export function TrendingDiscussions({ posts }: TrendingDiscussionsProps) {
               initial={{ opacity: 0, x: 10 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4 + i * 0.1 }}
+              onClick={() => onPostClick?.(post.id)}
               className="p-3 rounded-lg hover:bg-muted/50 cursor-pointer transition-colors group"
             >
               {/* Post preview */}

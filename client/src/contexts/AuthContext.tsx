@@ -18,6 +18,7 @@ import { generateMedicalPseudonym } from '@/lib/anonymousNames'
 
 interface PrivacySettings {
   postAnonymously: 'always' | 'ask' | 'never'
+  showYear: boolean
 }
 
 interface UserProfile {
@@ -52,6 +53,7 @@ interface AuthContextType {
   signInWithApple: () => Promise<void>
   signOut: () => Promise<void>
   resetPassword: (email: string) => Promise<void>
+  updateUserProfile: (updates: Partial<UserProfile>) => void
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined)
@@ -114,6 +116,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
           lastLogin: serverTimestamp(),
           privacySettings: {
             postAnonymously: 'ask',
+            showYear: true, // Show year by default
           },
           anonymousPseudonym: generateMedicalPseudonym(user.uid),
         }
@@ -199,6 +202,13 @@ export function AuthProvider({ children }: AuthProviderProps) {
     await sendPasswordResetEmail(auth, email)
   }
 
+  // Update user profile in memory (for immediate UI updates)
+  const updateUserProfile = (updates: Partial<UserProfile>) => {
+    if (userProfile) {
+      setUserProfile({ ...userProfile, ...updates })
+    }
+  }
+
   const value: AuthContextType = {
     user,
     userProfile,
@@ -209,6 +219,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
     signInWithApple,
     signOut,
     resetPassword,
+    updateUserProfile,
   }
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>

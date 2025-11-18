@@ -28,7 +28,7 @@ import { db } from '@/firebase/config'
 
 export function ProfilePage() {
   const navigate = useNavigate()
-  const { userProfile, signOut } = useAuth()
+  const { userProfile, signOut, updateUserProfile } = useAuth()
   const { posts, comments, currentUser, setCurrentUser, fetchPosts, fetchComments, toggleLike, toggleBookmark, updatePrivacySettings } = useCommunityStore()
   const [activeTab, setActiveTab] = useState<'posts' | 'activity' | 'privacy'>('posts')
   const [composeOpen, setComposeOpen] = useState(false)
@@ -59,6 +59,7 @@ export function ProfilePage() {
         year: userProfile.year,
         privacySettings: userProfile.privacySettings || {
           postAnonymously: 'ask',
+          showYear: true,
         },
         anonymousPseudonym: userProfile.anonymousPseudonym || generateMedicalPseudonym(userProfile.uid),
       }
@@ -125,25 +126,34 @@ export function ProfilePage() {
     year?: number,
     newPseudonym?: string
   ) => {
-    // Update privacy settings
+    // Update privacy settings in communityStore and Firestore
     await updatePrivacySettings(settings, year, newPseudonym)
 
-    // Refresh user profile if needed
-    if (userProfile && (year !== undefined || newPseudonym !== undefined)) {
+    // Always update currentUser with new settings (not just when year/pseudonym change)
+    if (userProfile && currentUser) {
+      const updatedYear = year !== undefined ? year : currentUser.year
+      const updatedPseudonym = newPseudonym || currentUser.anonymousPseudonym
+
       const updatedUser = {
-        ...currentUser!,
-        year: year !== undefined ? year : currentUser!.year,
-        anonymousPseudonym: newPseudonym || currentUser!.anonymousPseudonym,
+        ...currentUser,
+        privacySettings: settings, // Include the updated privacy settings!
+        year: updatedYear,
+        anonymousPseudonym: updatedPseudonym,
         role:
           userProfile.role === 'superadmin' || userProfile.role === 'admin'
             ? 'Admin'
-            : year
-              ? `Medical Student Year ${year}`
-              : currentUser?.year
-                ? `Medical Student Year ${currentUser.year}`
-                : 'Medical Student',
+            : updatedYear
+              ? `Medical Student Year ${updatedYear}`
+              : 'Medical Student',
       }
       setCurrentUser(updatedUser)
+
+      // Update AuthContext userProfile to prevent reset
+      updateUserProfile({
+        privacySettings: settings,
+        year: updatedYear,
+        anonymousPseudonym: updatedPseudonym,
+      })
     }
   }
 
@@ -156,6 +166,9 @@ export function ProfilePage() {
       await updateDoc(userRef, {
         avatar: newAvatar
       })
+
+      // Update AuthContext userProfile to prevent reset
+      updateUserProfile({ avatar: newAvatar })
 
       // Update local state
       setCurrentUser({
@@ -417,6 +430,7 @@ export function ProfilePage() {
                 {/* Avatar Picker */}
                 <AvatarPicker
                   currentAvatar={currentUser?.avatar || '👤'}
+                  oauthAvatar={userProfile?.avatar}
                   onSave={handleSaveAvatar}
                 />
 

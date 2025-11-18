@@ -32,7 +32,8 @@ import {
   Edit3,
   Pin,
   Loader2,
-  AlertCircle
+  AlertCircle,
+  GraduationCap
 } from 'lucide-react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { useCommunityStore } from '@/store/communityStore'
@@ -89,11 +90,13 @@ export function CommunityPage() {
   const [selectedTags, setSelectedTags] = useState<string[]>([])
   const [showTagPicker, setShowTagPicker] = useState(false)
   const [selectedFiles, setSelectedFiles] = useState<File[]>([])
+  const [postTitle, setPostTitle] = useState('')
   const [postContent, setPostContent] = useState('')
   const [showSeedButton, setShowSeedButton] = useState(true)
   const [seeding, setSeeding] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
   const [postAnonymously, setPostAnonymously] = useState(false)
+  const [expandedPosts, setExpandedPosts] = useState<Set<string>>(new Set())
 
   // Get state and actions from store
   const {
@@ -150,6 +153,7 @@ export function CommunityPage() {
         // Ensure privacy settings and pseudonym exist with defaults
         privacySettings: userProfile.privacySettings || {
           postAnonymously: 'ask',
+          showYear: true,
         },
         anonymousPseudonym: userProfile.anonymousPseudonym || generateMedicalPseudonym(userProfile.uid),
       }
@@ -176,6 +180,57 @@ export function CommunityPage() {
       window.history.replaceState({}, document.title)
     }
   }, [location.state])
+
+  // Intersection Observer for view counting (impression-based like Twitter/LinkedIn)
+  useEffect(() => {
+    if (!currentUser) return
+
+    const { incrementViews } = useCommunityStore.getState()
+    const viewedPosts = new Set<string>()
+    const viewTimers = new Map<string, NodeJS.Timeout>()
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const postId = entry.target.getAttribute('data-post-id')
+          if (!postId) return
+
+          // Post is 50%+ visible
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+            // Only count if not already viewed by this user
+            if (!viewedPosts.has(postId)) {
+              // Wait 1 second of visibility before counting view
+              const timer = setTimeout(() => {
+                incrementViews(postId)
+                viewedPosts.add(postId)
+              }, 1000)
+              viewTimers.set(postId, timer)
+            }
+          } else {
+            // Post left viewport, cancel pending timer
+            const timer = viewTimers.get(postId)
+            if (timer) {
+              clearTimeout(timer)
+              viewTimers.delete(postId)
+            }
+          }
+        })
+      },
+      {
+        threshold: 0.5, // 50% visibility
+        rootMargin: '0px'
+      }
+    )
+
+    // Observe all post elements
+    const postElements = document.querySelectorAll('[data-post-id]')
+    postElements.forEach((el) => observer.observe(el))
+
+    return () => {
+      observer.disconnect()
+      viewTimers.forEach((timer) => clearTimeout(timer))
+    }
+  }, [currentUser, posts]) // Re-run when posts change
 
   const handleLogout = async () => {
     try {
@@ -265,7 +320,7 @@ export function CommunityPage() {
   }
 
   const handleCreatePost = async () => {
-    if (!postContent.trim()) return
+    if (!postTitle.trim() || !postContent.trim()) return
 
     // Convert File objects to Attachment format
     const attachments: Attachment[] = selectedFiles.map(file => ({
@@ -276,9 +331,10 @@ export function CommunityPage() {
       preview: getFileType(file) === 'image'
     }))
 
-    await createPost(postContent, selectedTags, attachments, postAnonymously)
+    await createPost(postTitle, postContent, selectedTags, attachments, postAnonymously)
 
     // Reset form
+    setPostTitle('')
     setPostContent('')
     setSelectedTags([])
     setSelectedFiles([])
@@ -313,6 +369,33 @@ export function CommunityPage() {
     if (confirm('Are you sure you want to delete this post?')) {
       await deletePost(postId)
     }
+  }
+
+  const handleToggleExpand = (postId: string) => {
+    setExpandedPosts(prev => {
+      const newSet = new Set(prev)
+      if (newSet.has(postId)) {
+        newSet.delete(postId) // Collapse
+      } else {
+        newSet.add(postId) // Expand
+      }
+      return newSet
+    })
+  }
+
+  const handleTrendingPostClick = (postId: string) => {
+    // Expand the post if not already expanded
+    if (!expandedPosts.has(postId)) {
+      handleToggleExpand(postId)
+    }
+
+    // Scroll to the post
+    setTimeout(() => {
+      const postElement = document.getElementById(`post-${postId}`)
+      if (postElement) {
+        postElement.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      }
+    }, 100)
   }
 
   // Filter posts based on active section AND search query
@@ -600,6 +683,17 @@ export function CommunityPage() {
                       {currentUser?.avatar || '👤'}
                     </div>
                     <div className="flex-1 space-y-4">
+                      {/* Post Title */}
+                      <input
+                        type="text"
+                        value={postTitle}
+                        onChange={(e) => setPostTitle(e.target.value)}
+                        placeholder="Give your post a title..."
+                        className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all text-lg font-semibold"
+                        maxLength={100}
+                      />
+
+                      {/* Post Content */}
                       <textarea
                         value={postContent}
                         onChange={(e) => setPostContent(e.target.value)}
@@ -861,10 +955,16 @@ export function CommunityPage() {
                 const isLiked = currentUser ? post.likedBy.includes(currentUser.id) : false
                 const isBookmarked = currentUser ? post.bookmarkedBy.includes(currentUser.id) : false
                 const isUserAdmin = currentUser?.isAdmin || false
+                const isExpanded = expandedPosts.has(post.id)
+                const contentPreview = post.content.length > 150
+                  ? post.content.slice(0, 150) + '...'
+                  : post.content
 
                 return (
                   <motion.div
                     key={post.id}
+                    id={`post-${post.id}`}
+                    data-post-id={post.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
@@ -872,113 +972,125 @@ export function CommunityPage() {
                       post.pinned ? 'border-muted-foreground/40 shadow-sm' : 'border-border'
                     }`}
                   >
-                    {/* Pinned Badge */}
-                    {post.pinned && (
-                      <div className="px-6 pt-3 pb-2 bg-muted/30 border-b border-border">
-                        <div className="flex items-center gap-2 text-muted-foreground">
-                          <Pin className="w-4 h-4 fill-current" />
-                          <span className="text-xs font-normal uppercase tracking-wide">
-                            Pinned by Admin
-                          </span>
-                        </div>
-                      </div>
-                    )}
-
-                    {/* Post Header */}
-                    <div className="p-6 pb-4">
-                      <div className="flex items-start justify-between mb-4">
-                        <div className="flex gap-3">
-                          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-muted to-muted-foreground/30 flex items-center justify-center text-2xl shadow-sm">
+                    {/* Compact Post Header */}
+                    <div className="p-4">
+                      <div className="flex items-center justify-between mb-3">
+                        <div className="flex items-center gap-2 min-w-0 flex-1">
+                          {/* Small Avatar */}
+                          <div className="w-9 h-9 rounded-full bg-gradient-to-br from-muted to-muted-foreground/30 flex items-center justify-center text-lg shadow-sm flex-shrink-0">
                             {post.author.avatar}
                           </div>
-                          <div>
-                            <div className="flex items-center gap-2">
-                              <h3 className="font-semibold text-foreground">
+
+                          {/* Compact User Info */}
+                          <div className="flex items-center gap-2 min-w-0 flex-1">
+                            <div className="flex items-center gap-1.5 min-w-0">
+                              <h3 className="font-semibold text-sm text-foreground truncate">
                                 {post.author.name}
                               </h3>
                               {post.author.verified && (
-                                <Award className="w-4 h-4 text-muted-foreground" />
+                                <Award className="w-3.5 h-3.5 text-muted-foreground flex-shrink-0" />
                               )}
+                              {/* Year Badge - Only show if role contains year */}
+                              {(() => {
+                                const yearMatch = post.author.role.match(/Year (\d+)/)
+                                if (yearMatch) {
+                                  return (
+                                    <div className="inline-flex items-center gap-0.5 text-muted-foreground flex-shrink-0" title={`Medical Student Year ${yearMatch[1]}`}>
+                                      <GraduationCap className="w-3.5 h-3.5" />
+                                      <span className="text-xs font-medium">{yearMatch[1]}</span>
+                                    </div>
+                                  )
+                                }
+                                return null
+                              })()}
                             </div>
-                            <p className="text-sm text-muted-foreground">
-                              {post.author.role}
-                            </p>
-                            <div className="flex items-center gap-3 mt-1 text-xs text-muted-foreground">
-                              <div className="flex items-center gap-1">
-                                <Clock className="w-3 h-3" />
-                                {formatTimestamp(post.timestamp)}
-                              </div>
-                              <div className="flex items-center gap-1">
-                                <Eye className="w-3 h-3" />
-                                {post.views}
-                              </div>
-                            </div>
+                            <span className="text-muted-foreground text-xs">•</span>
+                            <span className="text-xs text-muted-foreground whitespace-nowrap">
+                              {formatTimestamp(post.timestamp)}
+                            </span>
+                            {post.pinned && (
+                              <>
+                                <span className="text-muted-foreground text-xs">•</span>
+                                <div className="flex items-center gap-1 text-muted-foreground">
+                                  <Pin className="w-3 h-3 fill-current" />
+                                  <span className="text-xs">Pinned</span>
+                                </div>
+                              </>
+                            )}
                           </div>
                         </div>
 
-                        {/* Admin Controls */}
-                        <div className="flex gap-1">
-                          {isUserAdmin && (
-                            <>
-                              <motion.button
-                                whileHover={{ scale: 1.03 }}
-                                whileTap={{ scale: 0.97 }}
-                                className="p-2 rounded-lg hover:bg-muted text-muted-foreground transition-colors"
-                                title="Edit Post"
-                              >
-                                <Edit3 className="w-4 h-4" />
-                              </motion.button>
-                              <motion.button
-                                whileHover={{ scale: 1.03 }}
-                                whileTap={{ scale: 0.97 }}
-                                onClick={() => handleTogglePin(post.id)}
-                                className={`p-2 rounded-lg transition-colors ${
-                                  post.pinned
-                                    ? 'text-foreground bg-muted'
-                                    : 'text-muted-foreground hover:bg-muted hover:text-foreground'
-                                }`}
-                                title={post.pinned ? 'Unpin Post' : 'Pin Post'}
-                              >
-                                <Pin className={`w-4 h-4 ${post.pinned ? 'fill-current' : ''}`} />
-                              </motion.button>
-                              <motion.button
-                                whileHover={{ scale: 1.03 }}
-                                whileTap={{ scale: 0.97 }}
-                                onClick={() => handleDeletePost(post.id)}
-                                className="p-2 rounded-lg hover:bg-muted text-muted-foreground hover:text-red-600 dark:hover:text-red-400 transition-colors"
-                                title="Delete Post"
-                              >
-                                <Trash2 className="w-4 h-4" />
-                              </motion.button>
-                            </>
-                          )}
-                          {!isUserAdmin && (
-                            <Button variant="ghost" size="sm">
-                              <MoreHorizontal className="w-4 h-4" />
-                            </Button>
-                          )}
+                        {/* Overflow Menu */}
+                        <div className="relative flex-shrink-0">
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            className="h-8 w-8 p-0"
+                          >
+                            <MoreHorizontal className="w-4 h-4" />
+                          </Button>
                         </div>
                       </div>
 
-                      {/* Post Content */}
-                      <p className="text-foreground mb-4 leading-relaxed">
-                        {post.content}
-                      </p>
+                      {/* Post Title - Compact */}
+                      <h2 className="text-base font-bold text-foreground mb-1.5 leading-tight">
+                        {post.title}
+                      </h2>
 
-                      {/* Tags */}
-                      <div className="flex flex-wrap gap-1.5 mb-4">
-                        {post.tags.map((tag, i) => (
-                          <span
-                            key={i}
-                            className="px-2.5 py-0.5 bg-card text-muted-foreground rounded-md text-xs font-normal hover:bg-muted/50 cursor-pointer transition-colors border border-border"
-                          >
-                            #{tag}
-                          </span>
-                        ))}
+                      {/* Post Content - Always 2 lines when collapsed */}
+                      <div
+                        onClick={() => !isExpanded && handleToggleExpand(post.id)}
+                        className={!isExpanded ? "cursor-pointer" : ""}
+                      >
+                        {!isExpanded ? (
+                          <>
+                            <p className="text-sm text-foreground/80 mb-2 leading-relaxed line-clamp-2">
+                              {post.content}
+                            </p>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation()
+                                handleToggleExpand(post.id)
+                              }}
+                              className="text-primary hover:text-primary/80 text-sm font-medium transition-colors"
+                            >
+                              Read more
+                            </button>
+                          </>
+                        ) : (
+                          <>
+                            <p className="text-sm text-foreground mb-3 leading-relaxed whitespace-pre-wrap">
+                              {post.content}
+                            </p>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation()
+                                handleToggleExpand(post.id)
+                              }}
+                              className="text-primary hover:text-primary/80 text-sm font-medium transition-colors"
+                            >
+                              Show less
+                            </button>
+                          </>
+                        )}
                       </div>
 
-                      {/* Attachments */}
-                      {post.attachments.length > 0 && (
+                      {/* Tags - Only show when expanded */}
+                      {isExpanded && post.tags.length > 0 && (
+                        <div className="flex flex-wrap gap-1.5 mb-4 mt-4">
+                          {post.tags.map((tag, i) => (
+                            <span
+                              key={i}
+                              className="px-2.5 py-0.5 bg-card text-muted-foreground rounded-md text-xs font-normal hover:bg-muted/50 cursor-pointer transition-colors border border-border"
+                            >
+                              #{tag}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+
+                      {/* Attachments - Only show when expanded */}
+                      {isExpanded && post.attachments.length > 0 && (
                         <div className="space-y-2 mb-4">
                           {post.attachments.map((attachment, i) => (
                             <motion.div
@@ -1079,7 +1191,7 @@ export function CommunityPage() {
 
               {/* Trending Discussions - Replaces Active Now */}
               {features.showTrendingDiscussions && !features.showActiveNow && (
-                <TrendingDiscussions posts={sortedPosts} />
+                <TrendingDiscussions posts={sortedPosts} onPostClick={handleTrendingPostClick} />
               )}
             </div>
           </div>
