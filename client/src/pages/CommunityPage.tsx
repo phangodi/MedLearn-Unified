@@ -3,13 +3,14 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import { Button } from '@/components/ui/Button'
 import { CommunitySidebar } from '@/components/community/CommunitySidebar'
+import { AnonymousToggle } from '@/components/community/AnonymousToggle'
+import { TrendingDiscussions } from '@/components/community/TrendingDiscussions'
 import {
   LogOut,
   MessageSquare,
   Heart,
   Share2,
   Bookmark,
-  TrendingUp,
   Users,
   FileText,
   Image as ImageIcon,
@@ -39,6 +40,9 @@ import { sampleUsers, seedSampleData } from '@/lib/sampleData'
 import { formatTimestamp } from '@/lib/dateUtils'
 import type { Attachment } from '@/types/community'
 import { InlineComments } from '@/components/community/InlineComments'
+import { features } from '@/config/features'
+import { useAuth } from '@/contexts/AuthContext'
+import { generateMedicalPseudonym } from '@/lib/anonymousNames'
 
 // Available topics/tags for posts
 const availableTags = [
@@ -60,14 +64,6 @@ const availableTags = [
   'Case Studies'
 ]
 
-const trendingTopics = [
-  { name: 'Cardiology Finals', count: 234, trend: 'up' },
-  { name: 'Histology Slides', count: 189, trend: 'up' },
-  { name: 'Clinical Skills', count: 156, trend: 'stable' },
-  { name: 'Study Groups', count: 134, trend: 'up' },
-  { name: 'Exam Prep', count: 98, trend: 'down' }
-]
-
 const activeUsers = [
   { name: 'Sarah J.', avatar: '👩‍⚕️', online: true },
   { name: 'Michael C.', avatar: '👨‍🏫', online: true },
@@ -79,6 +75,7 @@ const activeUsers = [
 export function CommunityPage() {
   const navigate = useNavigate()
   const location = useLocation()
+  const { userProfile, signOut } = useAuth()
 
   // Community section control - check location state for initial section
   const [activeSection, setActiveSection] = useState(() => {
@@ -96,6 +93,7 @@ export function CommunityPage() {
   const [showSeedButton, setShowSeedButton] = useState(true)
   const [seeding, setSeeding] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
+  const [postAnonymously, setPostAnonymously] = useState(false)
 
   // Get state and actions from store
   const {
@@ -112,15 +110,53 @@ export function CommunityPage() {
     togglePin
   } = useCommunityStore()
 
-  // Initialize user on mount
+  // Initialize anonymous posting based on user's privacy settings
   useEffect(() => {
-    // Set demo user as current user (in production, this would come from auth)
-    const demoUser = sampleUsers.find(u => u.id === 'demo-user')
-    if (demoUser) {
-      setCurrentUser(demoUser)
+    if (currentUser?.privacySettings) {
+      const { postAnonymously: preference } = currentUser.privacySettings
+      if (preference === 'always') {
+        setPostAnonymously(true)
+      } else if (preference === 'never') {
+        setPostAnonymously(false)
+      }
+      // 'ask' leaves it to user's choice via toggle
+    }
+  }, [currentUser])
+
+  // Initialize user from auth
+  useEffect(() => {
+    if (userProfile) {
+      // Map Firebase userProfile to communityStore UserProfile
+      const communityUser = {
+        id: userProfile.uid,
+        email: userProfile.email,
+        name: userProfile.name,
+        avatar: userProfile.avatar || '👤', // Default avatar if none
+        role: userProfile.role === 'superadmin' || userProfile.role === 'admin'
+          ? 'Admin'
+          : userProfile.year
+            ? `Medical Student Year ${userProfile.year}`
+            : 'Medical Student',
+        verified: userProfile.isAdmin || false,
+        createdAt: userProfile.createdAt,
+        bio: '',
+        posts: [],
+        followers: 0,
+        following: 0,
+        likedPosts: [],
+        bookmarkedPosts: [],
+        isAdmin: userProfile.isAdmin || false,
+        year: userProfile.year,
+        // Ensure privacy settings and pseudonym exist with defaults
+        privacySettings: userProfile.privacySettings || {
+          postAnonymously: 'ask',
+        },
+        anonymousPseudonym: userProfile.anonymousPseudonym || generateMedicalPseudonym(userProfile.uid),
+      }
+      setCurrentUser(communityUser)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []) // Only run once on mount
+  }, [userProfile])
 
   // Fetch posts on mount
   useEffect(() => {
@@ -130,14 +166,24 @@ export function CommunityPage() {
 
   // Update active section when navigating from other pages with state
   useEffect(() => {
-    const state = location.state as { activeSection?: string } | null
+    const state = location.state as { activeSection?: string; openCompose?: boolean } | null
     if (state?.activeSection) {
       setActiveSection(state.activeSection)
     }
+    if (state?.openCompose) {
+      setComposeOpen(true)
+      // Clear the state to prevent reopening on refresh
+      window.history.replaceState({}, document.title)
+    }
   }, [location.state])
 
-  const handleLogout = () => {
-    navigate('/login')
+  const handleLogout = async () => {
+    try {
+      await signOut()
+      navigate('/login')
+    } catch (error) {
+      console.error('Error logging out:', error)
+    }
   }
 
   const handleSeedData = async () => {
@@ -230,13 +276,25 @@ export function CommunityPage() {
       preview: getFileType(file) === 'image'
     }))
 
-    await createPost(postContent, selectedTags, attachments)
+    await createPost(postContent, selectedTags, attachments, postAnonymously)
 
     // Reset form
     setPostContent('')
     setSelectedTags([])
     setSelectedFiles([])
     setComposeOpen(false)
+
+    // Reset anonymity to user's default preference
+    if (currentUser?.privacySettings) {
+      const { postAnonymously: preference } = currentUser.privacySettings
+      if (preference === 'always') {
+        setPostAnonymously(true)
+      } else if (preference === 'never') {
+        setPostAnonymously(false)
+      } else {
+        setPostAnonymously(false) // Reset to false for 'ask' mode
+      }
+    }
   }
 
   const handleToggleLike = async (postId: string) => {
@@ -271,7 +329,8 @@ export function CommunityPage() {
           if (!post.likedBy.includes(currentUser.id)) return false
           break
         case 'my-posts':
-          if (post.author.id !== currentUser.id) return false
+          // Include both regular posts and anonymous posts made by this user
+          if (post.author.id !== currentUser.id && post.actualAuthorId !== currentUser.id) return false
           break
         default:
           break
@@ -720,6 +779,15 @@ export function CommunityPage() {
                         </AnimatePresence>
                       </div>
 
+                      {/* Anonymous Posting Toggle */}
+                      {features.allowAnonymousPosts && currentUser?.anonymousPseudonym && (
+                        <AnonymousToggle
+                          isAnonymous={postAnonymously}
+                          onToggle={setPostAnonymously}
+                          pseudonym={currentUser.anonymousPseudonym}
+                        />
+                      )}
+
                       <div className="flex justify-between items-center">
                         <div className="text-xs text-muted-foreground">
                           {selectedTags.length === 0
@@ -964,90 +1032,55 @@ export function CommunityPage() {
               })}
             </div>
 
-            {/* Sidebar - Trending & Active Users */}
+            {/* Sidebar - Active Users & Trending Discussions */}
             <div className="space-y-6">
-              {/* Trending Topics */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.2 }}
-                className="bg-card border border-border rounded-xl p-6 shadow-lg"
-              >
-                <div className="flex items-center gap-2 mb-4">
-                  <TrendingUp className="w-5 h-5 text-muted-foreground" />
-                  <h2 className="font-semibold text-base">Trending Topics</h2>
-                </div>
-                <div className="space-y-2">
-                  {trendingTopics.map((topic, i) => (
-                    <motion.div
-                      key={i}
-                      initial={{ opacity: 0, x: 10 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.3 + i * 0.1 }}
-                      className="flex items-center justify-between p-2.5 rounded-lg hover:bg-muted/50 cursor-pointer transition-colors group"
-                    >
-                      <div className="flex-1">
-                        <p className="font-normal text-sm group-hover:text-foreground transition-colors">
-                          {topic.name}
-                        </p>
-                        <p className="text-xs text-muted-foreground">
-                          {topic.count} posts
-                        </p>
-                      </div>
-                      <TrendingUp
-                        className={`w-4 h-4 ${
-                          topic.trend === 'up'
-                            ? 'text-green-500'
-                            : topic.trend === 'down'
-                            ? 'text-red-500'
-                            : 'text-muted-foreground/40'
-                        }`}
-                      />
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-
-              {/* Active Users */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.3 }}
-                className="bg-card border border-border rounded-xl p-6 shadow-lg"
-              >
-                <div className="flex items-center gap-2 mb-4">
-                  <Users className="w-5 h-5 text-muted-foreground" />
-                  <h2 className="font-semibold text-base">Active Now</h2>
-                </div>
-                <div className="space-y-2">
-                  {activeUsers.map((user, i) => (
-                    <motion.div
-                      key={i}
-                      initial={{ opacity: 0, x: 10 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.4 + i * 0.1 }}
-                      className="flex items-center gap-3 p-2 rounded-lg hover:bg-muted/50 cursor-pointer transition-colors"
-                    >
-                      <div className="relative">
-                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-muted to-muted-foreground/30 flex items-center justify-center text-lg shadow-sm">
-                          {user.avatar}
+              {/* Active Users - Hidden by default, kept in codebase for potential future activation */}
+              {features.showActiveNow && (
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.3 }}
+                  className="bg-card border border-border rounded-xl p-6 shadow-lg"
+                >
+                  <div className="flex items-center gap-2 mb-4">
+                    <Users className="w-5 h-5 text-muted-foreground" />
+                    <h2 className="font-semibold text-base">Active Now</h2>
+                  </div>
+                  <div className="space-y-2">
+                    {activeUsers.map((user, i) => (
+                      <motion.div
+                        key={i}
+                        initial={{ opacity: 0, x: 10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.4 + i * 0.1 }}
+                        className="flex items-center gap-3 p-2 rounded-lg hover:bg-muted/50 cursor-pointer transition-colors"
+                      >
+                        <div className="relative">
+                          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-muted to-muted-foreground/30 flex items-center justify-center text-lg shadow-sm">
+                            {user.avatar}
+                          </div>
+                          {user.online ? (
+                            <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-card rounded-full" />
+                          ) : (
+                            <div className="absolute bottom-0 right-0 w-3 h-3 bg-muted-foreground/40 border-2 border-card rounded-full" />
+                          )}
                         </div>
-                        {user.online ? (
-                          <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-card rounded-full" />
-                        ) : (
-                          <div className="absolute bottom-0 right-0 w-3 h-3 bg-muted-foreground/40 border-2 border-card rounded-full" />
-                        )}
-                      </div>
-                      <div className="flex-1">
-                        <p className="font-normal text-sm">{user.name}</p>
-                        <p className="text-xs text-muted-foreground">
-                          {user.online ? 'Online' : 'Offline'}
-                        </p>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
+                        <div className="flex-1">
+                          <p className="font-normal text-sm">{user.name}</p>
+                          <p className="text-xs text-muted-foreground">
+                            {user.online ? 'Online' : 'Offline'}
+                          </p>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+
+              {/* Trending Discussions - Replaces Active Now */}
+              {features.showTrendingDiscussions && !features.showActiveNow && (
+                <TrendingDiscussions posts={sortedPosts} />
+              )}
             </div>
           </div>
         </main>

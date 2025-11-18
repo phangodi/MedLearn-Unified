@@ -19,7 +19,8 @@ import {
   writeBatch
 } from 'firebase/firestore'
 import { db } from '@/lib/firebase'
-import type { Post, Comment, UserProfile, Attachment } from '@/types/community'
+import type { Post, Comment, UserProfile, Attachment, PrivacySettings } from '@/types/community'
+import { getAvatarForPseudonym } from '@/lib/anonymousNames'
 
 interface CommunityState {
   // State
@@ -33,15 +34,16 @@ interface CommunityState {
   setCurrentUser: (user: UserProfile | null) => void
   fetchPosts: () => Promise<void>
   fetchComments: (postId: string) => Promise<void>
-  createPost: (content: string, tags: string[], attachments: Attachment[]) => Promise<void>
+  createPost: (content: string, tags: string[], attachments: Attachment[], isAnonymous?: boolean) => Promise<void>
   deletePost: (postId: string) => Promise<void>
   toggleLike: (postId: string) => Promise<void>
   toggleBookmark: (postId: string) => Promise<void>
   togglePin: (postId: string) => Promise<void>
-  addComment: (postId: string, content: string, parentCommentId?: string) => Promise<void>
+  addComment: (postId: string, content: string, parentCommentId?: string, isAnonymous?: boolean) => Promise<void>
   deleteComment: (commentId: string, postId: string) => Promise<void>
   incrementViews: (postId: string) => Promise<void>
   subscribeToPost: (postId: string, callback: (post: Post) => void) => () => void
+  updatePrivacySettings: (settings: PrivacySettings, year?: number, newPseudonym?: string) => Promise<void>
 }
 
 export const useCommunityStore = create<CommunityState>((set, get) => ({
@@ -100,7 +102,7 @@ export const useCommunityStore = create<CommunityState>((set, get) => ({
   },
 
   // Create a new post
-  createPost: async (content: string, tags: string[], attachments: Attachment[]) => {
+  createPost: async (content: string, tags: string[], attachments: Attachment[], isAnonymous: boolean = false) => {
     const { currentUser } = get()
     if (!currentUser) {
       set({ error: 'You must be logged in to create a post' })
@@ -111,14 +113,27 @@ export const useCommunityStore = create<CommunityState>((set, get) => ({
       const postsRef = collection(db, 'posts')
       const now = Timestamp.now()
 
+      // Determine author display based on anonymity
+      const authorDisplay = isAnonymous
+        ? {
+            id: 'anonymous', // Generic ID for display
+            name: currentUser.anonymousPseudonym || 'Anonymous Medical Student',
+            avatar: getAvatarForPseudonym(currentUser.anonymousPseudonym || 'Anonymous'),
+            role: 'Medical Student',
+            verified: false,
+            isAnonymous: true
+          }
+        : {
+            id: currentUser.id,
+            name: currentUser.name,
+            avatar: currentUser.avatar,
+            role: currentUser.role,
+            verified: currentUser.verified,
+            isAnonymous: false
+          }
+
       const newPost = {
-        author: {
-          id: currentUser.id,
-          name: currentUser.name,
-          avatar: currentUser.avatar,
-          role: currentUser.role,
-          verified: currentUser.verified
-        },
+        author: authorDisplay,
         content,
         timestamp: now,
         likes: 0,
@@ -132,7 +147,9 @@ export const useCommunityStore = create<CommunityState>((set, get) => ({
         bookmarkedBy: [],
         pinned: false,
         createdAt: now,
-        updatedAt: now
+        updatedAt: now,
+        isAnonymous,
+        actualAuthorId: isAnonymous ? currentUser.id : undefined // Store real author for ownership
       }
 
       await addDoc(postsRef, newPost)
@@ -309,7 +326,7 @@ export const useCommunityStore = create<CommunityState>((set, get) => ({
   },
 
   // Add a comment to a post
-  addComment: async (postId: string, content: string, parentCommentId?: string) => {
+  addComment: async (postId: string, content: string, parentCommentId?: string, isAnonymous: boolean = false) => {
     const { currentUser } = get()
     if (!currentUser) {
       set({ error: 'You must be logged in to comment' })
@@ -318,19 +335,35 @@ export const useCommunityStore = create<CommunityState>((set, get) => ({
 
     try {
       const commentsRef = collection(db, 'comments')
+
+      // Determine author display based on anonymity (same logic as posts)
+      const authorDisplay = isAnonymous
+        ? {
+            id: 'anonymous', // Generic ID for display
+            name: currentUser.anonymousPseudonym || 'Anonymous Medical Student',
+            avatar: getAvatarForPseudonym(currentUser.anonymousPseudonym || 'Anonymous'),
+            role: 'Medical Student',
+            verified: false,
+            isAnonymous: true
+          }
+        : {
+            id: currentUser.id,
+            name: currentUser.name,
+            avatar: currentUser.avatar,
+            role: currentUser.role,
+            verified: currentUser.verified,
+            isAnonymous: false
+          }
+
       const newComment = {
         postId,
-        author: {
-          id: currentUser.id,
-          name: currentUser.name,
-          avatar: currentUser.avatar,
-          role: currentUser.role,
-          verified: currentUser.verified
-        },
+        author: authorDisplay,
         content,
         timestamp: Timestamp.now(),
         likes: 0,
         likedBy: [],
+        isAnonymous,
+        actualAuthorId: isAnonymous ? currentUser.id : undefined, // Store real author for ownership
         ...(parentCommentId && { parentCommentId })
       }
 
@@ -409,5 +442,45 @@ export const useCommunityStore = create<CommunityState>((set, get) => ({
         callback({ id: doc.id, ...doc.data() } as Post)
       }
     })
+  },
+
+  // Update user's privacy settings
+  updatePrivacySettings: async (settings: PrivacySettings, year?: number, newPseudonym?: string) => {
+    const { currentUser } = get()
+    if (!currentUser) {
+      set({ error: 'You must be logged in to update settings' })
+      return
+    }
+
+    try {
+      const userRef = doc(db, 'users', currentUser.id)
+      const updates: any = {
+        privacySettings: settings
+      }
+
+      if (year !== undefined) {
+        updates.year = year
+      }
+
+      if (newPseudonym) {
+        updates.anonymousPseudonym = newPseudonym
+      }
+
+      await updateDoc(userRef, updates)
+
+      // Update local state
+      set({
+        currentUser: {
+          ...currentUser,
+          privacySettings: settings,
+          year: year !== undefined ? year : currentUser.year,
+          anonymousPseudonym: newPseudonym || currentUser.anonymousPseudonym
+        }
+      })
+    } catch (error) {
+      console.error('Error updating privacy settings:', error)
+      set({ error: 'Failed to update privacy settings' })
+      throw error
+    }
   }
 }))

@@ -4,6 +4,7 @@ import { Send, Heart, Award, Clock, Loader2, MessageSquare, ChevronDown, Chevron
 import { Button } from '@/components/ui/Button'
 import { useCommunityStore } from '@/store/communityStore'
 import { formatTimestamp } from '@/lib/dateUtils'
+import { AnonymousToggle } from './AnonymousToggle'
 
 interface InlineCommentsProps {
   postId: string
@@ -30,9 +31,23 @@ export function InlineComments({
   const [commentText, setCommentText] = useState('')
   const [submitting, setSubmitting] = useState(false)
   const [isFocused, setIsFocused] = useState(false)
+  const [commentAnonymously, setCommentAnonymously] = useState(false)
   const textareaRef = useRef<HTMLTextAreaElement>(null)
 
   const { comments, currentUser, fetchComments, addComment } = useCommunityStore()
+
+  // Initialize anonymous commenting based on user's privacy settings
+  useEffect(() => {
+    if (currentUser?.privacySettings) {
+      const { postAnonymously: preference } = currentUser.privacySettings
+      if (preference === 'always') {
+        setCommentAnonymously(true)
+      } else if (preference === 'never') {
+        setCommentAnonymously(false)
+      }
+      // 'ask' leaves it to user's choice via toggle
+    }
+  }, [currentUser])
 
   useEffect(() => {
     if (isExpanded) {
@@ -45,9 +60,21 @@ export function InlineComments({
     if (!commentText.trim()) return
 
     setSubmitting(true)
-    await addComment(postId, commentText)
+    await addComment(postId, commentText, undefined, commentAnonymously)
     setCommentText('')
     setSubmitting(false)
+
+    // Reset anonymity to user's default preference
+    if (currentUser?.privacySettings) {
+      const { postAnonymously: preference } = currentUser.privacySettings
+      if (preference === 'always') {
+        setCommentAnonymously(true)
+      } else if (preference === 'never') {
+        setCommentAnonymously(false)
+      } else {
+        setCommentAnonymously(false) // Reset to false for 'ask' mode
+      }
+    }
   }
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -211,6 +238,15 @@ export function InlineComments({
                     style={{ height: 'auto', overflowY: 'hidden' }}
                     disabled={submitting}
                   />
+
+                  {/* Anonymous Toggle */}
+                  {currentUser?.anonymousPseudonym && (
+                    <AnonymousToggle
+                      isAnonymous={commentAnonymously}
+                      onToggle={setCommentAnonymously}
+                      pseudonym={currentUser.anonymousPseudonym}
+                    />
+                  )}
 
                   {/* Submit Button and Helper Text */}
                   <AnimatePresence>

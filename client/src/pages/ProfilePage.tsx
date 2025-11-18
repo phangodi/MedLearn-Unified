@@ -16,19 +16,66 @@ import {
 import { useCommunityStore } from '@/store/communityStore'
 import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import { CommunitySidebar } from '@/components/community/CommunitySidebar'
+import { PrivacySettings } from '@/components/settings/PrivacySettings'
+import { AvatarPicker } from '@/components/settings/AvatarPicker'
 import { formatTimestamp } from '@/lib/dateUtils'
 import type { Post } from '@/types/community'
+import type { PrivacySettings as PrivacySettingsType } from '@/types/community'
+import { useAuth } from '@/contexts/AuthContext'
+import { generateMedicalPseudonym } from '@/lib/anonymousNames'
+import { doc, updateDoc } from 'firebase/firestore'
+import { db } from '@/firebase/config'
 
 export function ProfilePage() {
   const navigate = useNavigate()
-  const { posts, comments, currentUser, fetchPosts, fetchComments, toggleLike, toggleBookmark } = useCommunityStore()
-  const [activeTab, setActiveTab] = useState<'posts' | 'activity'>('posts')
+  const { userProfile, signOut } = useAuth()
+  const { posts, comments, currentUser, setCurrentUser, fetchPosts, fetchComments, toggleLike, toggleBookmark, updatePrivacySettings } = useCommunityStore()
+  const [activeTab, setActiveTab] = useState<'posts' | 'activity' | 'privacy'>('posts')
+  const [composeOpen, setComposeOpen] = useState(false)
+
+  // Initialize user from auth
+  useEffect(() => {
+    if (userProfile) {
+      // Map Firebase userProfile to communityStore UserProfile
+      const communityUser = {
+        id: userProfile.uid,
+        email: userProfile.email,
+        name: userProfile.name,
+        avatar: userProfile.avatar || '👤',
+        role: userProfile.role === 'superadmin' || userProfile.role === 'admin'
+          ? 'Admin'
+          : userProfile.year
+            ? `Medical Student Year ${userProfile.year}`
+            : 'Medical Student',
+        verified: userProfile.isAdmin || false,
+        createdAt: userProfile.createdAt,
+        bio: '',
+        posts: [],
+        followers: 0,
+        following: 0,
+        likedPosts: [],
+        bookmarkedPosts: [],
+        isAdmin: userProfile.isAdmin || false,
+        year: userProfile.year,
+        privacySettings: userProfile.privacySettings || {
+          postAnonymously: 'ask',
+        },
+        anonymousPseudonym: userProfile.anonymousPseudonym || generateMedicalPseudonym(userProfile.uid),
+      }
+      setCurrentUser(communityUser)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [userProfile])
 
   useEffect(() => {
     fetchPosts()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  // Profiles are private - only the owner can view their profile
+  // Note: In the current implementation, /profile route shows currentUser's own profile
+  // If we later implement /profile/:userId routes, add a check here:
+  // if (userId !== currentUser?.id) { navigate('/community'); return null; }
   if (!currentUser) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
@@ -46,13 +93,21 @@ export function ProfilePage() {
   }
 
   // Calculate user statistics
-  const userPosts = posts.filter(p => p.author.id === currentUser.id)
+  // Include both regular posts and anonymous posts made by this user
+  const userPosts = posts.filter(p =>
+    p.author.id === currentUser.id || p.actualAuthorId === currentUser.id
+  )
   const totalLikesReceived = userPosts.reduce((sum, p) => sum + p.likes, 0)
   const userComments = comments.filter(c => c.author.id === currentUser.id)
   const totalBookmarks = posts.filter(p => p.bookmarkedBy.includes(currentUser.id)).length
 
-  const handleLogout = () => {
-    navigate('/login')
+  const handleLogout = async () => {
+    try {
+      await signOut()
+      navigate('/login')
+    } catch (error) {
+      console.error('Error logging out:', error)
+    }
   }
 
   const handleLike = async (postId: string) => {
@@ -63,6 +118,54 @@ export function ProfilePage() {
   const handleBookmark = async (postId: string) => {
     await toggleBookmark(postId)
     await fetchPosts()
+  }
+
+  const handleSavePrivacySettings = async (
+    settings: PrivacySettingsType,
+    year?: number,
+    newPseudonym?: string
+  ) => {
+    // Update privacy settings
+    await updatePrivacySettings(settings, year, newPseudonym)
+
+    // Refresh user profile if needed
+    if (userProfile && (year !== undefined || newPseudonym !== undefined)) {
+      const updatedUser = {
+        ...currentUser!,
+        year: year !== undefined ? year : currentUser!.year,
+        anonymousPseudonym: newPseudonym || currentUser!.anonymousPseudonym,
+        role:
+          userProfile.role === 'superadmin' || userProfile.role === 'admin'
+            ? 'Admin'
+            : year
+              ? `Medical Student Year ${year}`
+              : currentUser?.year
+                ? `Medical Student Year ${currentUser.year}`
+                : 'Medical Student',
+      }
+      setCurrentUser(updatedUser)
+    }
+  }
+
+  const handleSaveAvatar = async (newAvatar: string) => {
+    if (!userProfile || !currentUser) return
+
+    try {
+      // Update in Firebase
+      const userRef = doc(db, 'users', userProfile.uid)
+      await updateDoc(userRef, {
+        avatar: newAvatar
+      })
+
+      // Update local state
+      setCurrentUser({
+        ...currentUser,
+        avatar: newAvatar
+      })
+    } catch (error) {
+      console.error('Error updating avatar:', error)
+      throw error
+    }
   }
 
   return (
@@ -148,7 +251,10 @@ export function ProfilePage() {
                   </div>
 
                   {/* Edit Profile Button */}
-                  <button className="flex items-center gap-2 px-4 py-2 rounded-lg border border-border hover:bg-muted transition-colors">
+                  <button
+                    onClick={() => setActiveTab('privacy')}
+                    className="flex items-center gap-2 px-4 py-2 rounded-lg border border-border hover:bg-muted transition-colors"
+                  >
                     <Settings className="w-4 h-4" />
                     <span className="text-sm font-medium">Edit Profile</span>
                   </button>
@@ -261,6 +367,22 @@ export function ProfilePage() {
                   />
                 )}
               </button>
+              <button
+                onClick={() => setActiveTab('privacy')}
+                className={`px-4 py-3 text-sm font-normal transition-colors relative ${
+                  activeTab === 'privacy'
+                    ? 'text-foreground'
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                Privacy Settings
+                {activeTab === 'privacy' && (
+                  <motion.div
+                    layoutId="activeTab"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-foreground"
+                  />
+                )}
+              </button>
             </div>
 
             {/* Tab Content */}
@@ -271,7 +393,7 @@ export function ProfilePage() {
                     <FileText className="w-12 h-12 text-muted-foreground mx-auto mb-3" />
                     <p className="text-muted-foreground">No posts yet</p>
                     <button
-                      onClick={() => navigate('/community')}
+                      onClick={() => navigate('/community', { state: { openCompose: true } })}
                       className="mt-4 px-6 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90"
                     >
                       Create Your First Post
@@ -290,14 +412,151 @@ export function ProfilePage() {
                   ))
                 )}
               </div>
+            ) : activeTab === 'privacy' ? (
+              <div className="space-y-6">
+                {/* Avatar Picker */}
+                <AvatarPicker
+                  currentAvatar={currentUser?.avatar || '👤'}
+                  onSave={handleSaveAvatar}
+                />
+
+                {/* Privacy Settings */}
+                {currentUser?.privacySettings && currentUser?.anonymousPseudonym && (
+                  <PrivacySettings
+                    settings={currentUser.privacySettings}
+                    anonymousPseudonym={currentUser.anonymousPseudonym}
+                    year={currentUser.year}
+                    onSave={handleSavePrivacySettings}
+                  />
+                )}
+              </div>
             ) : (
-              <div className="space-y-4">
-                <div className="text-center py-12">
-                  <MessageSquare className="w-12 h-12 text-muted-foreground mx-auto mb-3" />
-                  <p className="text-muted-foreground">Activity feed coming soon</p>
-                  <p className="text-sm text-muted-foreground mt-2">
-                    See your recent likes, comments, and interactions
-                  </p>
+              <div className="space-y-6">
+                {/* Recent Comments */}
+                <div>
+                  <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                    <MessageSquare className="w-5 h-5" />
+                    Recent Comments ({userComments.length})
+                  </h3>
+                  {userComments.length === 0 ? (
+                    <div className="text-center py-8 bg-muted/30 rounded-lg">
+                      <MessageSquare className="w-8 h-8 text-muted-foreground mx-auto mb-2" />
+                      <p className="text-sm text-muted-foreground">No comments yet</p>
+                    </div>
+                  ) : (
+                    <div className="space-y-3">
+                      {userComments.slice(0, 10).map((comment, index) => (
+                        <motion.div
+                          key={comment.id}
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: index * 0.05 }}
+                          className="bg-card border border-border rounded-lg p-4"
+                        >
+                          <p className="text-sm mb-2">{comment.content}</p>
+                          <div className="flex items-center gap-4 text-xs text-muted-foreground">
+                            <span>{formatTimestamp(comment.timestamp)}</span>
+                            <span className="flex items-center gap-1">
+                              <Heart className="w-3 h-3" />
+                              {comment.likes}
+                            </span>
+                          </div>
+                        </motion.div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {/* Liked Posts */}
+                <div>
+                  <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                    <Heart className="w-5 h-5" />
+                    Liked Posts
+                  </h3>
+                  {posts.filter(p => p.likedBy.includes(currentUser.id)).length === 0 ? (
+                    <div className="text-center py-8 bg-muted/30 rounded-lg">
+                      <Heart className="w-8 h-8 text-muted-foreground mx-auto mb-2" />
+                      <p className="text-sm text-muted-foreground">No liked posts yet</p>
+                    </div>
+                  ) : (
+                    <div className="space-y-3">
+                      {posts
+                        .filter(p => p.likedBy.includes(currentUser.id))
+                        .slice(0, 5)
+                        .map((post, index) => (
+                          <motion.div
+                            key={post.id}
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: index * 0.05 }}
+                            className="bg-card border border-border rounded-lg p-4"
+                          >
+                            <div className="flex items-center gap-2 mb-2">
+                              <span className="text-sm font-medium">{post.author.name}</span>
+                              <span className="text-xs text-muted-foreground">•</span>
+                              <span className="text-xs text-muted-foreground">{formatTimestamp(post.timestamp)}</span>
+                            </div>
+                            <p className="text-sm line-clamp-2">{post.content}</p>
+                            <div className="flex items-center gap-4 mt-2 text-xs text-muted-foreground">
+                              <span className="flex items-center gap-1">
+                                <Heart className="w-3 h-3" />
+                                {post.likes}
+                              </span>
+                              <span className="flex items-center gap-1">
+                                <MessageSquare className="w-3 h-3" />
+                                {post.comments}
+                              </span>
+                            </div>
+                          </motion.div>
+                        ))}
+                    </div>
+                  )}
+                </div>
+
+                {/* Bookmarked Posts */}
+                <div>
+                  <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                    <Bookmark className="w-5 h-5" />
+                    Bookmarked Posts ({totalBookmarks})
+                  </h3>
+                  {totalBookmarks === 0 ? (
+                    <div className="text-center py-8 bg-muted/30 rounded-lg">
+                      <Bookmark className="w-8 h-8 text-muted-foreground mx-auto mb-2" />
+                      <p className="text-sm text-muted-foreground">No bookmarked posts yet</p>
+                    </div>
+                  ) : (
+                    <div className="space-y-3">
+                      {posts
+                        .filter(p => p.bookmarkedBy.includes(currentUser.id))
+                        .slice(0, 5)
+                        .map((post, index) => (
+                          <motion.div
+                            key={post.id}
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: index * 0.05 }}
+                            className="bg-card border border-border rounded-lg p-4"
+                          >
+                            <div className="flex items-center gap-2 mb-2">
+                              <span className="text-sm font-medium">{post.author.name}</span>
+                              <span className="text-xs text-muted-foreground">•</span>
+                              <span className="text-xs text-muted-foreground">{formatTimestamp(post.timestamp)}</span>
+                            </div>
+                            <p className="text-sm line-clamp-2">{post.content}</p>
+                            <div className="flex items-center gap-4 mt-2 text-xs text-muted-foreground">
+                              <span className="flex items-center gap-1">
+                                <Heart className="w-3 h-3" />
+                                {post.likes}
+                              </span>
+                              <span className="flex items-center gap-1">
+                                <MessageSquare className="w-3 h-3" />
+                                {post.comments}
+                              </span>
+                            </div>
+                          </motion.div>
+                        ))}
+                    </div>
+                  )}
                 </div>
               </div>
             )}
