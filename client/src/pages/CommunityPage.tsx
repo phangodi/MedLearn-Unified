@@ -8,10 +8,6 @@ import { TrendingDiscussions } from '@/components/community/TrendingDiscussions'
 import {
   LogOut,
   MessageSquare,
-  Heart,
-  Share2,
-  Bookmark,
-  Users,
   FileText,
   Image as ImageIcon,
   Video,
@@ -22,14 +18,10 @@ import {
   ChevronDown,
   MoreHorizontal,
   Award,
-  Clock,
-  Eye,
   Download,
   Play,
   Hash,
   X as XIcon,
-  Trash2,
-  Edit3,
   Pin,
   Loader2,
   AlertCircle,
@@ -37,7 +29,7 @@ import {
 } from 'lucide-react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { useCommunityStore } from '@/store/communityStore'
-import { sampleUsers, seedSampleData } from '@/lib/sampleData'
+import { seedSampleData } from '@/lib/sampleData'
 import { formatTimestamp } from '@/lib/dateUtils'
 import type { Attachment } from '@/types/community'
 import { InlineComments } from '@/components/community/InlineComments'
@@ -65,14 +57,6 @@ const availableTags = [
   'Case Studies'
 ]
 
-const activeUsers = [
-  { name: 'Sarah J.', avatar: '👩‍⚕️', online: true },
-  { name: 'Michael C.', avatar: '👨‍🏫', online: true },
-  { name: 'Emma W.', avatar: '👩‍🎓', online: true },
-  { name: 'James M.', avatar: '👨‍🔬', online: false },
-  { name: 'Demo User', avatar: '👤', online: true }
-]
-
 export function CommunityPage() {
   const navigate = useNavigate()
   const location = useLocation()
@@ -97,6 +81,10 @@ export function CommunityPage() {
   const [searchQuery, setSearchQuery] = useState('')
   const [postAnonymously, setPostAnonymously] = useState(false)
   const [expandedPosts, setExpandedPosts] = useState<Set<string>>(new Set())
+  const [validationErrors, setValidationErrors] = useState<{
+    title?: string
+    content?: string
+  }>({})
 
   // Get state and actions from store
   const {
@@ -320,7 +308,23 @@ export function CommunityPage() {
   }
 
   const handleCreatePost = async () => {
-    if (!postTitle.trim() || !postContent.trim()) return
+    // Validate form
+    const errors: { title?: string; content?: string } = {}
+
+    if (!postTitle.trim()) {
+      errors.title = 'Title is required to post'
+    }
+    if (!postContent.trim()) {
+      errors.content = 'Content is required to post'
+    }
+
+    if (Object.keys(errors).length > 0) {
+      setValidationErrors(errors)
+      return
+    }
+
+    // Clear any previous errors
+    setValidationErrors({})
 
     // Convert File objects to Attachment format
     const attachments: Attachment[] = selectedFiles.map(file => ({
@@ -684,23 +688,67 @@ export function CommunityPage() {
                     </div>
                     <div className="flex-1 space-y-4">
                       {/* Post Title */}
-                      <input
-                        type="text"
-                        value={postTitle}
-                        onChange={(e) => setPostTitle(e.target.value)}
-                        placeholder="Give your post a title..."
-                        className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all text-lg font-semibold"
-                        maxLength={100}
-                      />
+                      <div>
+                        <input
+                          type="text"
+                          value={postTitle}
+                          onChange={(e) => {
+                            setPostTitle(e.target.value)
+                            // Clear title error when user starts typing
+                            if (validationErrors.title) {
+                              setValidationErrors(prev => ({ ...prev, title: undefined }))
+                            }
+                          }}
+                          placeholder="Give your post a title..."
+                          className={`w-full px-4 py-3 bg-background border rounded-lg focus:outline-none focus:ring-2 transition-all text-lg font-semibold ${
+                            validationErrors.title
+                              ? 'border-red-500 focus:ring-red-500/50'
+                              : 'border-border focus:ring-primary/50'
+                          }`}
+                          maxLength={100}
+                        />
+                        {validationErrors.title && (
+                          <motion.p
+                            initial={{ opacity: 0, y: -5 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="mt-1.5 text-sm text-red-500 dark:text-red-400 flex items-center gap-1"
+                          >
+                            <AlertCircle className="w-4 h-4" />
+                            {validationErrors.title}
+                          </motion.p>
+                        )}
+                      </div>
 
                       {/* Post Content */}
-                      <textarea
-                        value={postContent}
-                        onChange={(e) => setPostContent(e.target.value)}
-                        placeholder="Share your knowledge, ask questions, or upload study materials..."
-                        className="w-full px-4 py-3 bg-background border border-border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
-                        rows={4}
-                      />
+                      <div>
+                        <textarea
+                          value={postContent}
+                          onChange={(e) => {
+                            setPostContent(e.target.value)
+                            // Clear content error when user starts typing
+                            if (validationErrors.content) {
+                              setValidationErrors(prev => ({ ...prev, content: undefined }))
+                            }
+                          }}
+                          placeholder="Share your knowledge, ask questions, or upload study materials..."
+                          className={`w-full px-4 py-3 bg-background border rounded-lg resize-none focus:outline-none focus:ring-2 transition-all ${
+                            validationErrors.content
+                              ? 'border-red-500 focus:ring-red-500/50'
+                              : 'border-border focus:ring-primary/50'
+                          }`}
+                          rows={4}
+                        />
+                        {validationErrors.content && (
+                          <motion.p
+                            initial={{ opacity: 0, y: -5 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="mt-1.5 text-sm text-red-500 dark:text-red-400 flex items-center gap-1"
+                          >
+                            <AlertCircle className="w-4 h-4" />
+                            {validationErrors.content}
+                          </motion.p>
+                        )}
+                      </div>
 
                       {/* File Inputs */}
                       <input
@@ -1133,7 +1181,6 @@ export function CommunityPage() {
                       postId={post.id}
                       commentCount={post.comments}
                       likes={post.likes}
-                      shares={post.shares}
                       isLiked={isLiked}
                       isBookmarked={isBookmarked}
                       onToggleLike={() => handleToggleLike(post.id)}
@@ -1144,53 +1191,10 @@ export function CommunityPage() {
               })}
             </div>
 
-            {/* Sidebar - Active Users & Trending Discussions */}
+            {/* Sidebar - Trending Discussions */}
             <div className="space-y-6">
-              {/* Active Users - Hidden by default, kept in codebase for potential future activation */}
-              {features.showActiveNow && (
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.3 }}
-                  className="bg-card border border-border rounded-xl p-6 shadow-lg"
-                >
-                  <div className="flex items-center gap-2 mb-4">
-                    <Users className="w-5 h-5 text-muted-foreground" />
-                    <h2 className="font-semibold text-base">Active Now</h2>
-                  </div>
-                  <div className="space-y-2">
-                    {activeUsers.map((user, i) => (
-                      <motion.div
-                        key={i}
-                        initial={{ opacity: 0, x: 10 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.4 + i * 0.1 }}
-                        className="flex items-center gap-3 p-2 rounded-lg hover:bg-muted/50 cursor-pointer transition-colors"
-                      >
-                        <div className="relative">
-                          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-muted to-muted-foreground/30 flex items-center justify-center text-lg shadow-sm">
-                            {user.avatar}
-                          </div>
-                          {user.online ? (
-                            <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-card rounded-full" />
-                          ) : (
-                            <div className="absolute bottom-0 right-0 w-3 h-3 bg-muted-foreground/40 border-2 border-card rounded-full" />
-                          )}
-                        </div>
-                        <div className="flex-1">
-                          <p className="font-normal text-sm">{user.name}</p>
-                          <p className="text-xs text-muted-foreground">
-                            {user.online ? 'Online' : 'Offline'}
-                          </p>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-                </motion.div>
-              )}
-
-              {/* Trending Discussions - Replaces Active Now */}
-              {features.showTrendingDiscussions && !features.showActiveNow && (
+              {/* Trending Discussions - Always shown when feature is enabled */}
+              {features.showTrendingDiscussions && (
                 <TrendingDiscussions posts={sortedPosts} onPostClick={handleTrendingPostClick} />
               )}
             </div>
