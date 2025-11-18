@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { AuthProvider } from './contexts/AuthContext'
 import { NotificationProvider } from './contexts/NotificationContext'
+import { ToastProvider } from './components/ui/Toast'
 import { ProtectedRoute } from './components/auth/ProtectedRoute'
 import { NotificationModal } from './components/notifications/NotificationModal'
 import { AuthPage } from './pages/AuthPage'
@@ -21,10 +22,11 @@ function App() {
     <BrowserRouter>
       <AuthProvider>
         <NotificationProvider>
-          {/* Global notification modal for critical announcements */}
-          <NotificationModal />
+          <ToastProvider>
+            {/* Global notification modal for critical announcements */}
+            <NotificationModal />
 
-          <Routes>
+            <Routes>
             <Route path="/login" element={<AuthPage />} />
             <Route
               path="/dashboard"
@@ -68,6 +70,7 @@ function App() {
             <Route path="/" element={<Navigate to="/login" replace />} />
             <Route path="*" element={<Navigate to="/login" replace />} />
           </Routes>
+          </ToastProvider>
         </NotificationProvider>
       </AuthProvider>
     </BrowserRouter>

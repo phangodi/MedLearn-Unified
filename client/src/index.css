@@ -205,3 +205,22 @@
 .dark .notification-scroll::-webkit-scrollbar-thumb:hover {
   background-color: rgba(255, 255, 255, 0.25) !important;
 }
+
+/* Dashboard notification card - more transparent with less blur */
+.dashboard-notification-glass {
+  background-color: rgba(255, 255, 255, 0.05) !important; /* 95% transparent */
+  -webkit-backdrop-filter: blur(12px) saturate(120%) !important;
+  backdrop-filter: blur(12px) saturate(120%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.05),
+              0 0 0 1px rgba(255, 255, 255, 0.1) inset !important;
+}
+
+.dark .dashboard-notification-glass {
+  background-color: rgba(0, 0, 0, 0.05) !important; /* 95% transparent */
+  -webkit-backdrop-filter: blur(12px) saturate(120%) !important;
+  backdrop-filter: blur(12px) saturate(120%) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.3),
+              0 0 0 1px rgba(255, 255, 255, 0.08) inset !important;
+}

@@ -21,10 +21,8 @@ export function SociologyPage() {
   }
 
   const exams = [
-    { id: 'exam1', name: 'Exam 1', title: 'All 7 Chapters', description: 'Chapters 1-7: Fundamentals, Medicine, Research, Stratification, Poverty, Deviance', enabled: true, image: '/subjects/sociology.png', path: '/sociology/exam1' },
-    { id: 'exam2', name: 'Exam 2', title: 'Semester 2 - Part 1', description: 'Coming Soon', enabled: false, image: '/subjects/sociology.png', path: '#' },
-    { id: 'exam3', name: 'Exam 3', title: 'Semester 2 - Part 2', description: 'Coming Soon', enabled: false, image: '/subjects/sociology.png', path: '#' },
-    { id: 'exam4', name: 'Exam 4', title: 'Final Review', description: 'Coming Soon', enabled: false, image: '/subjects/sociology.png', path: '#' },
+    { id: 'exam1', name: 'Exam 1', title: 'Chapters 1-7', description: 'Fundamentals, Medicine, Research, Stratification, Poverty, Deviance', enabled: true, image: '/subjects/socio_exam1.png', path: '/sociology/exam1' },
+    { id: 'exam2', name: 'Exam 2', title: 'Semester 1, Part 2', description: 'Coming Soon', enabled: false, image: '/subjects/socio_exam2.png', path: '#' },
   ]
 
   return (

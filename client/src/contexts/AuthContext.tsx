@@ -9,6 +9,7 @@ import {
   OAuthProvider,
   signOut as firebaseSignOut,
   sendPasswordResetEmail,
+  sendEmailVerification,
   updateProfile,
 } from 'firebase/auth'
 import { doc, getDoc, setDoc, serverTimestamp } from 'firebase/firestore'
@@ -148,6 +149,9 @@ export function AuthProvider({ children }: AuthProviderProps) {
     if (!auth) throw new Error('Firebase not initialized')
     const { user } = await createUserWithEmailAndPassword(auth, email, password)
     await updateProfile(user, { displayName: name })
+
+    // Send email verification
+    await sendEmailVerification(user)
   }
 
   // Sign in with Google

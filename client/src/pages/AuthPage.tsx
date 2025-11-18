@@ -9,10 +9,15 @@ import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import { BorderFrame } from '@/components/layout/BorderFrame'
 import { Activity, Mail, Lock, User, AlertCircle } from 'lucide-react'
 import { useAuth } from '@/contexts/AuthContext'
+import { useToast } from '@/components/ui/Toast'
+import { getAuthErrorMessage } from '@/lib/authErrors'
+import { validatePassword } from '@/lib/passwordValidation'
+import { PasswordStrengthIndicator } from '@/components/ui/PasswordStrengthIndicator'
 
 export function AuthPage() {
   const navigate = useNavigate()
-  const { signInWithEmail, signUpWithEmail, signInWithGoogle, signInWithApple } = useAuth()
+  const { signInWithEmail, signUpWithEmail, signInWithGoogle, signInWithApple, resetPassword } = useAuth()
+  const toast = useToast()
 
   const [mode, setMode] = useState<'signin' | 'signup' | 'reset'>('signin')
   const [email, setEmail] = useState('')
@@ -27,15 +32,38 @@ export function AuthPage() {
     setLoading(true)
 
     try {
-      if (mode === 'signup') {
+      if (mode === 'reset') {
+        // Password Reset
+        await resetPassword(email)
+        toast.success('Password reset email sent! Check your inbox (or emulator console if using emulators).')
+        // Clear form and switch back to sign in
+        setEmail('')
+        setTimeout(() => setMode('signin'), 2000)
+      } else if (mode === 'signup') {
+        // Validate password strength before signup
+        const passwordError = validatePassword(password)
+        if (passwordError) {
+          setError(passwordError)
+          toast.error(passwordError)
+          setLoading(false)
+          return
+        }
+
+        // Sign Up
         await signUpWithEmail(email, password, name)
+        toast.success('Account created! Please check your email to verify your address.')
+        navigate('/dashboard')
       } else {
+        // Sign In
         await signInWithEmail(email, password)
+        toast.success('Welcome back!')
+        navigate('/dashboard')
       }
-      navigate('/dashboard')
     } catch (err: any) {
       console.error('Auth error:', err)
-      setError(err.message || 'Authentication failed. Please try again.')
+      const friendlyMessage = getAuthErrorMessage(err)
+      setError(friendlyMessage)
+      toast.error(friendlyMessage)
     } finally {
       setLoading(false)
     }
@@ -47,10 +75,13 @@ export function AuthPage() {
 
     try {
       await signInWithGoogle()
+      toast.success('Successfully signed in with Google!')
       navigate('/dashboard')
     } catch (err: any) {
       console.error('Google sign-in error:', err)
-      setError(err.message || 'Google sign-in failed. Please try again.')
+      const friendlyMessage = getAuthErrorMessage(err)
+      setError(friendlyMessage)
+      toast.error(friendlyMessage)
     } finally {
       setLoading(false)
     }
@@ -62,10 +93,13 @@ export function AuthPage() {
 
     try {
       await signInWithApple()
+      toast.success('Successfully signed in with Apple!')
       navigate('/dashboard')
     } catch (err: any) {
       console.error('Apple sign-in error:', err)
-      setError(err.message || 'Apple sign-in failed. Please try again.')
+      const friendlyMessage = getAuthErrorMessage(err)
+      setError(friendlyMessage)
+      toast.error(friendlyMessage)
     } finally {
       setLoading(false)
     }
@@ -243,7 +277,18 @@ export function AuthPage() {
 
               {mode !== 'reset' && (
                 <div className="space-y-2">
-                  <Label htmlFor="password">Password</Label>
+                  <div className="flex items-center justify-between">
+                    <Label htmlFor="password">Password</Label>
+                    {mode === 'signin' && (
+                      <button
+                        onClick={() => setMode('reset')}
+                        className="text-xs text-primary hover:underline"
+                        type="button"
+                      >
+                        Forgot password?
+                      </button>
+                    )}
+                  </div>
                   <div className="relative">
                     <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                     <Input
@@ -255,9 +300,16 @@ export function AuthPage() {
                       className="pl-10"
                       required
                       disabled={loading}
-                      minLength={6}
+                      minLength={mode === 'signup' ? 8 : 6}
                     />
                   </div>
+
+                  {/* Password Strength Indicator (only show during signup) */}
+                  {mode === 'signup' && password.length > 0 && (
+                    <div className="mt-3">
+                      <PasswordStrengthIndicator password={password} showRequirements={true} />
+                    </div>
+                  )}
                 </div>
               )}
 
@@ -294,6 +346,18 @@ export function AuthPage() {
                     type="button"
                   >
                     Sign in
+                  </button>
+                </>
+              )}
+              {mode === 'reset' && (
+                <>
+                  Remember your password?{' '}
+                  <button
+                    onClick={() => setMode('signin')}
+                    className="text-primary hover:underline"
+                    type="button"
+                  >
+                    Back to sign in
                   </button>
                 </>
               )}

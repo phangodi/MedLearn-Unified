@@ -21,8 +21,8 @@ export function AnatomyPage() {
   }
 
   const topics = [
-    { id: 'cns', name: 'CNS Neuroanatomy', title: 'Brainstem & Cranial Nerves', description: 'Complete study guide: Brainstem structures, all 12 cranial nerves, quick reference & practice quiz', enabled: true, image: '/subjects/anatomy.png', path: '/anatomy/cns' },
-    { id: 'peripheral', name: 'Peripheral Nervous System', title: 'Peripheral Nerves & Plexuses', description: 'Coming Soon', enabled: false, image: '/subjects/anatomy.png', path: '#' },
+    { id: 'cns', name: 'CNS Neuroanatomy', title: 'Brainstem & Cranial Nerves', description: 'Complete study guide: Brainstem structures, all 12 cranial nerves, quick reference & practice quiz', enabled: true, image: '/subjects/anatomy1.png', path: '/anatomy/cns' },
+    { id: 'peripheral', name: 'Anatomy Part 2', title: 'New Anatomy Module', description: 'Coming Soon', enabled: false, image: '/subjects/anatomy2.png', path: '#' },
   ]
 
   return (
