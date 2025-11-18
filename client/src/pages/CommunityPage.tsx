@@ -3,14 +3,11 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import { Button } from '@/components/ui/Button'
 import { CommunitySidebar } from '@/components/community/CommunitySidebar'
+import { AnonymousToggle } from '@/components/community/AnonymousToggle'
+import { TrendingDiscussions } from '@/components/community/TrendingDiscussions'
 import {
   LogOut,
   MessageSquare,
-  Heart,
-  Share2,
-  Bookmark,
-  TrendingUp,
-  Users,
   FileText,
   Image as ImageIcon,
   Video,
@@ -21,24 +18,24 @@ import {
   ChevronDown,
   MoreHorizontal,
   Award,
-  Clock,
-  Eye,
   Download,
   Play,
   Hash,
   X as XIcon,
-  Trash2,
-  Edit3,
   Pin,
   Loader2,
-  AlertCircle
+  AlertCircle,
+  GraduationCap
 } from 'lucide-react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { useCommunityStore } from '@/store/communityStore'
-import { sampleUsers, seedSampleData } from '@/lib/sampleData'
+import { seedSampleData } from '@/lib/sampleData'
 import { formatTimestamp } from '@/lib/dateUtils'
 import type { Attachment } from '@/types/community'
 import { InlineComments } from '@/components/community/InlineComments'
+import { features } from '@/config/features'
+import { useAuth } from '@/contexts/AuthContext'
+import { generateMedicalPseudonym } from '@/lib/anonymousNames'
 
 // Available topics/tags for posts
 const availableTags = [
@@ -60,25 +57,10 @@ const availableTags = [
   'Case Studies'
 ]
 
-const trendingTopics = [
-  { name: 'Cardiology Finals', count: 234, trend: 'up' },
-  { name: 'Histology Slides', count: 189, trend: 'up' },
-  { name: 'Clinical Skills', count: 156, trend: 'stable' },
-  { name: 'Study Groups', count: 134, trend: 'up' },
-  { name: 'Exam Prep', count: 98, trend: 'down' }
-]
-
-const activeUsers = [
-  { name: 'Sarah J.', avatar: '👩‍⚕️', online: true },
-  { name: 'Michael C.', avatar: '👨‍🏫', online: true },
-  { name: 'Emma W.', avatar: '👩‍🎓', online: true },
-  { name: 'James M.', avatar: '👨‍🔬', online: false },
-  { name: 'Demo User', avatar: '👤', online: true }
-]
-
 export function CommunityPage() {
   const navigate = useNavigate()
   const location = useLocation()
+  const { userProfile, signOut } = useAuth()
 
   // Community section control - check location state for initial section
   const [activeSection, setActiveSection] = useState(() => {
@@ -92,10 +74,17 @@ export function CommunityPage() {
   const [selectedTags, setSelectedTags] = useState<string[]>([])
   const [showTagPicker, setShowTagPicker] = useState(false)
   const [selectedFiles, setSelectedFiles] = useState<File[]>([])
+  const [postTitle, setPostTitle] = useState('')
   const [postContent, setPostContent] = useState('')
   const [showSeedButton, setShowSeedButton] = useState(true)
   const [seeding, setSeeding] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
+  const [postAnonymously, setPostAnonymously] = useState(false)
+  const [expandedPosts, setExpandedPosts] = useState<Set<string>>(new Set())
+  const [validationErrors, setValidationErrors] = useState<{
+    title?: string
+    content?: string
+  }>({})
 
   // Get state and actions from store
   const {
@@ -112,15 +101,54 @@ export function CommunityPage() {
     togglePin
   } = useCommunityStore()
 
-  // Initialize user on mount
+  // Initialize anonymous posting based on user's privacy settings
   useEffect(() => {
-    // Set demo user as current user (in production, this would come from auth)
-    const demoUser = sampleUsers.find(u => u.id === 'demo-user')
-    if (demoUser) {
-      setCurrentUser(demoUser)
+    if (currentUser?.privacySettings) {
+      const { postAnonymously: preference } = currentUser.privacySettings
+      if (preference === 'always') {
+        setPostAnonymously(true)
+      } else if (preference === 'never') {
+        setPostAnonymously(false)
+      }
+      // 'ask' leaves it to user's choice via toggle
+    }
+  }, [currentUser])
+
+  // Initialize user from auth
+  useEffect(() => {
+    if (userProfile) {
+      // Map Firebase userProfile to communityStore UserProfile
+      const communityUser = {
+        id: userProfile.uid,
+        email: userProfile.email,
+        name: userProfile.name,
+        avatar: userProfile.avatar || '👤', // Default avatar if none
+        role: userProfile.role === 'superadmin' || userProfile.role === 'admin'
+          ? 'Admin'
+          : userProfile.year
+            ? `Medical Student Year ${userProfile.year}`
+            : 'Medical Student',
+        verified: userProfile.isAdmin || false,
+        createdAt: userProfile.createdAt,
+        bio: '',
+        posts: [],
+        followers: 0,
+        following: 0,
+        likedPosts: [],
+        bookmarkedPosts: [],
+        isAdmin: userProfile.isAdmin || false,
+        year: userProfile.year,
+        // Ensure privacy settings and pseudonym exist with defaults
+        privacySettings: userProfile.privacySettings || {
+          postAnonymously: 'ask',
+          showYear: true,
+        },
+        anonymousPseudonym: userProfile.anonymousPseudonym || generateMedicalPseudonym(userProfile.uid),
+      }
+      setCurrentUser(communityUser)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []) // Only run once on mount
+  }, [userProfile])
 
   // Fetch posts on mount
   useEffect(() => {
@@ -130,14 +158,75 @@ export function CommunityPage() {
 
   // Update active section when navigating from other pages with state
   useEffect(() => {
-    const state = location.state as { activeSection?: string } | null
+    const state = location.state as { activeSection?: string; openCompose?: boolean } | null
     if (state?.activeSection) {
       setActiveSection(state.activeSection)
     }
+    if (state?.openCompose) {
+      setComposeOpen(true)
+      // Clear the state to prevent reopening on refresh
+      window.history.replaceState({}, document.title)
+    }
   }, [location.state])
 
-  const handleLogout = () => {
-    navigate('/login')
+  // Intersection Observer for view counting (impression-based like Twitter/LinkedIn)
+  useEffect(() => {
+    if (!currentUser) return
+
+    const { incrementViews } = useCommunityStore.getState()
+    const viewedPosts = new Set<string>()
+    const viewTimers = new Map<string, NodeJS.Timeout>()
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const postId = entry.target.getAttribute('data-post-id')
+          if (!postId) return
+
+          // Post is 50%+ visible
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+            // Only count if not already viewed by this user
+            if (!viewedPosts.has(postId)) {
+              // Wait 1 second of visibility before counting view
+              const timer = setTimeout(() => {
+                incrementViews(postId)
+                viewedPosts.add(postId)
+              }, 1000)
+              viewTimers.set(postId, timer)
+            }
+          } else {
+            // Post left viewport, cancel pending timer
+            const timer = viewTimers.get(postId)
+            if (timer) {
+              clearTimeout(timer)
+              viewTimers.delete(postId)
+            }
+          }
+        })
+      },
+      {
+        threshold: 0.5, // 50% visibility
+        rootMargin: '0px'
+      }
+    )
+
+    // Observe all post elements
+    const postElements = document.querySelectorAll('[data-post-id]')
+    postElements.forEach((el) => observer.observe(el))
+
+    return () => {
+      observer.disconnect()
+      viewTimers.forEach((timer) => clearTimeout(timer))
+    }
+  }, [currentUser, posts]) // Re-run when posts change
+
+  const handleLogout = async () => {
+    try {
+      await signOut()
+      navigate('/login')
+    } catch (error) {
+      console.error('Error logging out:', error)
+    }
   }
 
   const handleSeedData = async () => {
@@ -219,7 +308,23 @@ export function CommunityPage() {
   }
 
   const handleCreatePost = async () => {
-    if (!postContent.trim()) return
+    // Validate form
+    const errors: { title?: string; content?: string } = {}
+
+    if (!postTitle.trim()) {
+      errors.title = 'Title is required to post'
+    }
+    if (!postContent.trim()) {
+      errors.content = 'Content is required to post'
+    }
+
+    if (Object.keys(errors).length > 0) {
+      setValidationErrors(errors)
+      return
+    }
+
+    // Clear any previous errors
+    setValidationErrors({})
 
     // Convert File objects to Attachment format
     const attachments: Attachment[] = selectedFiles.map(file => ({
@@ -230,13 +335,26 @@ export function CommunityPage() {
       preview: getFileType(file) === 'image'
     }))
 
-    await createPost(postContent, selectedTags, attachments)
+    await createPost(postTitle, postContent, selectedTags, attachments, postAnonymously)
 
     // Reset form
+    setPostTitle('')
     setPostContent('')
     setSelectedTags([])
     setSelectedFiles([])
     setComposeOpen(false)
+
+    // Reset anonymity to user's default preference
+    if (currentUser?.privacySettings) {
+      const { postAnonymously: preference } = currentUser.privacySettings
+      if (preference === 'always') {
+        setPostAnonymously(true)
+      } else if (preference === 'never') {
+        setPostAnonymously(false)
+      } else {
+        setPostAnonymously(false) // Reset to false for 'ask' mode
+      }
+    }
   }
 
   const handleToggleLike = async (postId: string) => {
@@ -257,6 +375,33 @@ export function CommunityPage() {
     }
   }
 
+  const handleToggleExpand = (postId: string) => {
+    setExpandedPosts(prev => {
+      const newSet = new Set(prev)
+      if (newSet.has(postId)) {
+        newSet.delete(postId) // Collapse
+      } else {
+        newSet.add(postId) // Expand
+      }
+      return newSet
+    })
+  }
+
+  const handleTrendingPostClick = (postId: string) => {
+    // Expand the post if not already expanded
+    if (!expandedPosts.has(postId)) {
+      handleToggleExpand(postId)
+    }
+
+    // Scroll to the post
+    setTimeout(() => {
+      const postElement = document.getElementById(`post-${postId}`)
+      if (postElement) {
+        postElement.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      }
+    }, 100)
+  }
+
   // Filter posts based on active section AND search query
   const filteredPosts = posts.filter(post => {
     // First, filter by section
@@ -271,7 +416,8 @@ export function CommunityPage() {
           if (!post.likedBy.includes(currentUser.id)) return false
           break
         case 'my-posts':
-          if (post.author.id !== currentUser.id) return false
+          // Include both regular posts and anonymous posts made by this user
+          if (post.author.id !== currentUser.id && post.actualAuthorId !== currentUser.id) return false
           break
         default:
           break
@@ -541,13 +687,68 @@ export function CommunityPage() {
                       {currentUser?.avatar || '👤'}
                     </div>
                     <div className="flex-1 space-y-4">
-                      <textarea
-                        value={postContent}
-                        onChange={(e) => setPostContent(e.target.value)}
-                        placeholder="Share your knowledge, ask questions, or upload study materials..."
-                        className="w-full px-4 py-3 bg-background border border-border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
-                        rows={4}
-                      />
+                      {/* Post Title */}
+                      <div>
+                        <input
+                          type="text"
+                          value={postTitle}
+                          onChange={(e) => {
+                            setPostTitle(e.target.value)
+                            // Clear title error when user starts typing
+                            if (validationErrors.title) {
+                              setValidationErrors(prev => ({ ...prev, title: undefined }))
+                            }
+                          }}
+                          placeholder="Give your post a title..."
+                          className={`w-full px-4 py-3 bg-background border rounded-lg focus:outline-none focus:ring-2 transition-all text-lg font-semibold ${
+                            validationErrors.title
+                              ? 'border-red-500 focus:ring-red-500/50'
+                              : 'border-border focus:ring-primary/50'
+                          }`}
+                          maxLength={100}
+                        />
+                        {validationErrors.title && (
+                          <motion.p
+                            initial={{ opacity: 0, y: -5 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="mt-1.5 text-sm text-red-500 dark:text-red-400 flex items-center gap-1"
+                          >
+                            <AlertCircle className="w-4 h-4" />
+                            {validationErrors.title}
+                          </motion.p>
+                        )}
+                      </div>
+
+                      {/* Post Content */}
+                      <div>
+                        <textarea
+                          value={postContent}
+                          onChange={(e) => {
+                            setPostContent(e.target.value)
+                            // Clear content error when user starts typing
+                            if (validationErrors.content) {
+                              setValidationErrors(prev => ({ ...prev, content: undefined }))
+                            }
+                          }}
+                          placeholder="Share your knowledge, ask questions, or upload study materials..."
+                          className={`w-full px-4 py-3 bg-background border rounded-lg resize-none focus:outline-none focus:ring-2 transition-all ${
+                            validationErrors.content
+                              ? 'border-red-500 focus:ring-red-500/50'
+                              : 'border-border focus:ring-primary/50'
+                          }`}
+                          rows={4}
+                        />
+                        {validationErrors.content && (
+                          <motion.p
+                            initial={{ opacity: 0, y: -5 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="mt-1.5 text-sm text-red-500 dark:text-red-400 flex items-center gap-1"
+                          >
+                            <AlertCircle className="w-4 h-4" />
+                            {validationErrors.content}
+                          </motion.p>
+                        )}
+                      </div>
 
                       {/* File Inputs */}
                       <input
@@ -720,6 +921,15 @@ export function CommunityPage() {
                         </AnimatePresence>
                       </div>
 
+                      {/* Anonymous Posting Toggle */}
+                      {features.allowAnonymousPosts && currentUser?.anonymousPseudonym && (
+                        <AnonymousToggle
+                          isAnonymous={postAnonymously}
+                          onToggle={setPostAnonymously}
+                          pseudonym={currentUser.anonymousPseudonym}
+                        />
+                      )}
+
                       <div className="flex justify-between items-center">
                         <div className="text-xs text-muted-foreground">
                           {selectedTags.length === 0
@@ -793,10 +1003,16 @@ export function CommunityPage() {
                 const isLiked = currentUser ? post.likedBy.includes(currentUser.id) : false
                 const isBookmarked = currentUser ? post.bookmarkedBy.includes(currentUser.id) : false
                 const isUserAdmin = currentUser?.isAdmin || false
+                const isExpanded = expandedPosts.has(post.id)
+                const contentPreview = post.content.length > 150
+                  ? post.content.slice(0, 150) + '...'
+                  : post.content
 
                 return (
                   <motion.div
                     key={post.id}
+                    id={`post-${post.id}`}
+                    data-post-id={post.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
@@ -804,113 +1020,125 @@ export function CommunityPage() {
                       post.pinned ? 'border-muted-foreground/40 shadow-sm' : 'border-border'
                     }`}
                   >
-                    {/* Pinned Badge */}
-                    {post.pinned && (
-                      <div className="px-6 pt-3 pb-2 bg-muted/30 border-b border-border">
-                        <div className="flex items-center gap-2 text-muted-foreground">
-                          <Pin className="w-4 h-4 fill-current" />
-                          <span className="text-xs font-normal uppercase tracking-wide">
-                            Pinned by Admin
-                          </span>
-                        </div>
-                      </div>
-                    )}
-
-                    {/* Post Header */}
-                    <div className="p-6 pb-4">
-                      <div className="flex items-start justify-between mb-4">
-                        <div className="flex gap-3">
-                          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-muted to-muted-foreground/30 flex items-center justify-center text-2xl shadow-sm">
+                    {/* Compact Post Header */}
+                    <div className="p-4">
+                      <div className="flex items-center justify-between mb-3">
+                        <div className="flex items-center gap-2 min-w-0 flex-1">
+                          {/* Small Avatar */}
+                          <div className="w-9 h-9 rounded-full bg-gradient-to-br from-muted to-muted-foreground/30 flex items-center justify-center text-lg shadow-sm flex-shrink-0">
                             {post.author.avatar}
                           </div>
-                          <div>
-                            <div className="flex items-center gap-2">
-                              <h3 className="font-semibold text-foreground">
+
+                          {/* Compact User Info */}
+                          <div className="flex items-center gap-2 min-w-0 flex-1">
+                            <div className="flex items-center gap-1.5 min-w-0">
+                              <h3 className="font-semibold text-sm text-foreground truncate">
                                 {post.author.name}
                               </h3>
                               {post.author.verified && (
-                                <Award className="w-4 h-4 text-muted-foreground" />
+                                <Award className="w-3.5 h-3.5 text-muted-foreground flex-shrink-0" />
                               )}
+                              {/* Year Badge - Only show if role contains year */}
+                              {(() => {
+                                const yearMatch = post.author.role.match(/Year (\d+)/)
+                                if (yearMatch) {
+                                  return (
+                                    <div className="inline-flex items-center gap-0.5 text-muted-foreground flex-shrink-0" title={`Medical Student Year ${yearMatch[1]}`}>
+                                      <GraduationCap className="w-3.5 h-3.5" />
+                                      <span className="text-xs font-medium">{yearMatch[1]}</span>
+                                    </div>
+                                  )
+                                }
+                                return null
+                              })()}
                             </div>
-                            <p className="text-sm text-muted-foreground">
-                              {post.author.role}
-                            </p>
-                            <div className="flex items-center gap-3 mt-1 text-xs text-muted-foreground">
-                              <div className="flex items-center gap-1">
-                                <Clock className="w-3 h-3" />
-                                {formatTimestamp(post.timestamp)}
-                              </div>
-                              <div className="flex items-center gap-1">
-                                <Eye className="w-3 h-3" />
-                                {post.views}
-                              </div>
-                            </div>
+                            <span className="text-muted-foreground text-xs">•</span>
+                            <span className="text-xs text-muted-foreground whitespace-nowrap">
+                              {formatTimestamp(post.timestamp)}
+                            </span>
+                            {post.pinned && (
+                              <>
+                                <span className="text-muted-foreground text-xs">•</span>
+                                <div className="flex items-center gap-1 text-muted-foreground">
+                                  <Pin className="w-3 h-3 fill-current" />
+                                  <span className="text-xs">Pinned</span>
+                                </div>
+                              </>
+                            )}
                           </div>
                         </div>
 
-                        {/* Admin Controls */}
-                        <div className="flex gap-1">
-                          {isUserAdmin && (
-                            <>
-                              <motion.button
-                                whileHover={{ scale: 1.03 }}
-                                whileTap={{ scale: 0.97 }}
-                                className="p-2 rounded-lg hover:bg-muted text-muted-foreground transition-colors"
-                                title="Edit Post"
-                              >
-                                <Edit3 className="w-4 h-4" />
-                              </motion.button>
-                              <motion.button
-                                whileHover={{ scale: 1.03 }}
-                                whileTap={{ scale: 0.97 }}
-                                onClick={() => handleTogglePin(post.id)}
-                                className={`p-2 rounded-lg transition-colors ${
-                                  post.pinned
-                                    ? 'text-foreground bg-muted'
-                                    : 'text-muted-foreground hover:bg-muted hover:text-foreground'
-                                }`}
-                                title={post.pinned ? 'Unpin Post' : 'Pin Post'}
-                              >
-                                <Pin className={`w-4 h-4 ${post.pinned ? 'fill-current' : ''}`} />
-                              </motion.button>
-                              <motion.button
-                                whileHover={{ scale: 1.03 }}
-                                whileTap={{ scale: 0.97 }}
-                                onClick={() => handleDeletePost(post.id)}
-                                className="p-2 rounded-lg hover:bg-muted text-muted-foreground hover:text-red-600 dark:hover:text-red-400 transition-colors"
-                                title="Delete Post"
-                              >
-                                <Trash2 className="w-4 h-4" />
-                              </motion.button>
-                            </>
-                          )}
-                          {!isUserAdmin && (
-                            <Button variant="ghost" size="sm">
-                              <MoreHorizontal className="w-4 h-4" />
-                            </Button>
-                          )}
+                        {/* Overflow Menu */}
+                        <div className="relative flex-shrink-0">
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            className="h-8 w-8 p-0"
+                          >
+                            <MoreHorizontal className="w-4 h-4" />
+                          </Button>
                         </div>
                       </div>
 
-                      {/* Post Content */}
-                      <p className="text-foreground mb-4 leading-relaxed">
-                        {post.content}
-                      </p>
+                      {/* Post Title - Compact */}
+                      <h2 className="text-base font-bold text-foreground mb-1.5 leading-tight">
+                        {post.title}
+                      </h2>
 
-                      {/* Tags */}
-                      <div className="flex flex-wrap gap-1.5 mb-4">
-                        {post.tags.map((tag, i) => (
-                          <span
-                            key={i}
-                            className="px-2.5 py-0.5 bg-card text-muted-foreground rounded-md text-xs font-normal hover:bg-muted/50 cursor-pointer transition-colors border border-border"
-                          >
-                            #{tag}
-                          </span>
-                        ))}
+                      {/* Post Content - Always 2 lines when collapsed */}
+                      <div
+                        onClick={() => !isExpanded && handleToggleExpand(post.id)}
+                        className={!isExpanded ? "cursor-pointer" : ""}
+                      >
+                        {!isExpanded ? (
+                          <>
+                            <p className="text-sm text-foreground/80 mb-2 leading-relaxed line-clamp-2">
+                              {post.content}
+                            </p>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation()
+                                handleToggleExpand(post.id)
+                              }}
+                              className="text-primary hover:text-primary/80 text-sm font-medium transition-colors"
+                            >
+                              Read more
+                            </button>
+                          </>
+                        ) : (
+                          <>
+                            <p className="text-sm text-foreground mb-3 leading-relaxed whitespace-pre-wrap">
+                              {post.content}
+                            </p>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation()
+                                handleToggleExpand(post.id)
+                              }}
+                              className="text-primary hover:text-primary/80 text-sm font-medium transition-colors"
+                            >
+                              Show less
+                            </button>
+                          </>
+                        )}
                       </div>
 
-                      {/* Attachments */}
-                      {post.attachments.length > 0 && (
+                      {/* Tags - Only show when expanded */}
+                      {isExpanded && post.tags.length > 0 && (
+                        <div className="flex flex-wrap gap-1.5 mb-4 mt-4">
+                          {post.tags.map((tag, i) => (
+                            <span
+                              key={i}
+                              className="px-2.5 py-0.5 bg-card text-muted-foreground rounded-md text-xs font-normal hover:bg-muted/50 cursor-pointer transition-colors border border-border"
+                            >
+                              #{tag}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+
+                      {/* Attachments - Only show when expanded */}
+                      {isExpanded && post.attachments.length > 0 && (
                         <div className="space-y-2 mb-4">
                           {post.attachments.map((attachment, i) => (
                             <motion.div
@@ -953,7 +1181,6 @@ export function CommunityPage() {
                       postId={post.id}
                       commentCount={post.comments}
                       likes={post.likes}
-                      shares={post.shares}
                       isLiked={isLiked}
                       isBookmarked={isBookmarked}
                       onToggleLike={() => handleToggleLike(post.id)}
@@ -964,90 +1191,12 @@ export function CommunityPage() {
               })}
             </div>
 
-            {/* Sidebar - Trending & Active Users */}
+            {/* Sidebar - Trending Discussions */}
             <div className="space-y-6">
-              {/* Trending Topics */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.2 }}
-                className="bg-card border border-border rounded-xl p-6 shadow-lg"
-              >
-                <div className="flex items-center gap-2 mb-4">
-                  <TrendingUp className="w-5 h-5 text-muted-foreground" />
-                  <h2 className="font-semibold text-base">Trending Topics</h2>
-                </div>
-                <div className="space-y-2">
-                  {trendingTopics.map((topic, i) => (
-                    <motion.div
-                      key={i}
-                      initial={{ opacity: 0, x: 10 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.3 + i * 0.1 }}
-                      className="flex items-center justify-between p-2.5 rounded-lg hover:bg-muted/50 cursor-pointer transition-colors group"
-                    >
-                      <div className="flex-1">
-                        <p className="font-normal text-sm group-hover:text-foreground transition-colors">
-                          {topic.name}
-                        </p>
-                        <p className="text-xs text-muted-foreground">
-                          {topic.count} posts
-                        </p>
-                      </div>
-                      <TrendingUp
-                        className={`w-4 h-4 ${
-                          topic.trend === 'up'
-                            ? 'text-green-500'
-                            : topic.trend === 'down'
-                            ? 'text-red-500'
-                            : 'text-muted-foreground/40'
-                        }`}
-                      />
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-
-              {/* Active Users */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.3 }}
-                className="bg-card border border-border rounded-xl p-6 shadow-lg"
-              >
-                <div className="flex items-center gap-2 mb-4">
-                  <Users className="w-5 h-5 text-muted-foreground" />
-                  <h2 className="font-semibold text-base">Active Now</h2>
-                </div>
-                <div className="space-y-2">
-                  {activeUsers.map((user, i) => (
-                    <motion.div
-                      key={i}
-                      initial={{ opacity: 0, x: 10 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.4 + i * 0.1 }}
-                      className="flex items-center gap-3 p-2 rounded-lg hover:bg-muted/50 cursor-pointer transition-colors"
-                    >
-                      <div className="relative">
-                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-muted to-muted-foreground/30 flex items-center justify-center text-lg shadow-sm">
-                          {user.avatar}
-                        </div>
-                        {user.online ? (
-                          <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-card rounded-full" />
-                        ) : (
-                          <div className="absolute bottom-0 right-0 w-3 h-3 bg-muted-foreground/40 border-2 border-card rounded-full" />
-                        )}
-                      </div>
-                      <div className="flex-1">
-                        <p className="font-normal text-sm">{user.name}</p>
-                        <p className="text-xs text-muted-foreground">
-                          {user.online ? 'Online' : 'Offline'}
-                        </p>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
+              {/* Trending Discussions - Always shown when feature is enabled */}
+              {features.showTrendingDiscussions && (
+                <TrendingDiscussions posts={sortedPosts} onPostClick={handleTrendingPostClick} />
+              )}
             </div>
           </div>
         </main>

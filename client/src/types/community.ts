@@ -12,12 +12,18 @@ export interface Attachment {
   views?: number
 }
 
+export interface PrivacySettings {
+  postAnonymously: 'always' | 'ask' | 'never'
+  showYear: boolean // Whether to show medical school year in posts/comments
+}
+
 export interface Author {
   id: string
   name: string
   avatar: string
   role: string
   verified: boolean
+  isAnonymous?: boolean  // Flag to indicate if this is an anonymous post
 }
 
 export interface Comment {
@@ -29,10 +35,13 @@ export interface Comment {
   likes: number
   likedBy: string[]
   parentCommentId?: string  // For nested replies
+  isAnonymous?: boolean  // Whether this comment was made anonymously
+  actualAuthorId?: string  // The real author ID (for owner's view of anonymous comments)
 }
 
 export interface Post {
   id: string
+  title: string  // Post title/headline
   author: Author
   content: string
   timestamp: Timestamp
@@ -49,6 +58,8 @@ export interface Post {
   pinnedBy?: string  // Admin user ID who pinned it
   createdAt: Timestamp
   updatedAt: Timestamp
+  isAnonymous?: boolean  // Whether this post was made anonymously
+  actualAuthorId?: string  // The real author ID (for owner's view of anonymous posts)
 }
 
 // For display purposes (with computed properties)
@@ -62,12 +73,16 @@ export interface PostDisplay extends Omit<Post, 'timestamp' | 'createdAt' | 'upd
 export interface UserProfile {
   id: string
   name: string
+  displayName?: string  // Optional username chosen by user
   email: string
   avatar: string
   role: string
+  year?: number  // Medical school year (1-6)
   verified: boolean
   likedPosts: string[]
   bookmarkedPosts: string[]
   createdAt: Timestamp
   isAdmin?: boolean
+  privacySettings?: PrivacySettings
+  anonymousPseudonym?: string  // Generated medical-themed pseudonym
 }

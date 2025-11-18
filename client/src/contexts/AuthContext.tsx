@@ -14,13 +14,21 @@ import {
 } from 'firebase/auth'
 import { doc, getDoc, setDoc, serverTimestamp } from 'firebase/firestore'
 import { auth, db } from '@/firebase/config'
+import { generateMedicalPseudonym } from '@/lib/anonymousNames'
+
+interface PrivacySettings {
+  postAnonymously: 'always' | 'ask' | 'never'
+  showYear: boolean
+}
 
 interface UserProfile {
   uid: string
   email: string
   name: string
+  displayName?: string
   avatar: string
   role: 'user' | 'moderator' | 'admin' | 'superadmin'
+  year?: number
   isAdmin: boolean
   permissions: {
     canPin: boolean
@@ -31,6 +39,8 @@ interface UserProfile {
   }
   createdAt: any
   lastLogin: any
+  privacySettings: PrivacySettings
+  anonymousPseudonym: string
 }
 
 interface AuthContextType {
@@ -43,6 +53,7 @@ interface AuthContextType {
   signInWithApple: () => Promise<void>
   signOut: () => Promise<void>
   resetPassword: (email: string) => Promise<void>
+  updateUserProfile: (updates: Partial<UserProfile>) => void
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined)
@@ -92,6 +103,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
           name: user.displayName || user.email?.split('@')[0] || 'User',
           avatar: user.photoURL || '',
           role: user.email === superAdminEmail ? 'superadmin' : 'user',
+          year: 1, // Default to Year 1, user can change later
           isAdmin: user.email === superAdminEmail,
           permissions: {
             canPin: user.email === superAdminEmail,
@@ -102,6 +114,11 @@ export function AuthProvider({ children }: AuthProviderProps) {
           },
           createdAt: serverTimestamp(),
           lastLogin: serverTimestamp(),
+          privacySettings: {
+            postAnonymously: 'ask',
+            showYear: true, // Show year by default
+          },
+          anonymousPseudonym: generateMedicalPseudonym(user.uid),
         }
 
         await setDoc(doc(db, 'users', user.uid), newProfile)
@@ -185,6 +202,13 @@ export function AuthProvider({ children }: AuthProviderProps) {
     await sendPasswordResetEmail(auth, email)
   }
 
+  // Update user profile in memory (for immediate UI updates)
+  const updateUserProfile = (updates: Partial<UserProfile>) => {
+    if (userProfile) {
+      setUserProfile({ ...userProfile, ...updates })
+    }
+  }
+
   const value: AuthContextType = {
     user,
     userProfile,
@@ -195,6 +219,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
     signInWithApple,
     signOut,
     resetPassword,
+    updateUserProfile,
   }
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>

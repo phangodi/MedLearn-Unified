@@ -1,15 +1,15 @@
 import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Send, Heart, Award, Clock, Loader2, MessageSquare, ChevronDown, ChevronUp, Share2, Bookmark } from 'lucide-react'
+import { Send, Heart, Award, Clock, Loader2, MessageSquare, ChevronDown, ChevronUp, Bookmark } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { useCommunityStore } from '@/store/communityStore'
 import { formatTimestamp } from '@/lib/dateUtils'
+import { AnonymousToggle } from './AnonymousToggle'
 
 interface InlineCommentsProps {
   postId: string
   commentCount: number
   likes: number
-  shares: number
   isLiked: boolean
   isBookmarked: boolean
   onToggleLike: () => void
@@ -20,7 +20,6 @@ export function InlineComments({
   postId,
   commentCount,
   likes,
-  shares,
   isLiked,
   isBookmarked,
   onToggleLike,
@@ -30,9 +29,29 @@ export function InlineComments({
   const [commentText, setCommentText] = useState('')
   const [submitting, setSubmitting] = useState(false)
   const [isFocused, setIsFocused] = useState(false)
+  const [commentAnonymously, setCommentAnonymously] = useState(false)
+  const [replyBoxOpen, setReplyBoxOpen] = useState<string | null>(null) // ID of comment being replied to
+  const [replyText, setReplyText] = useState<Record<string, string>>({}) // Reply text for each comment
+  const [replyAnonymous, setReplyAnonymous] = useState<Record<string, boolean>>({}) // Anonymous state for each reply
+  const [replySubmitting, setReplySubmitting] = useState<string | null>(null)
+  const [expandedReplies, setExpandedReplies] = useState<Set<string>>(new Set()) // Set of comment IDs with expanded replies
   const textareaRef = useRef<HTMLTextAreaElement>(null)
+  const replyRefs = useRef<Record<string, HTMLTextAreaElement | null>>({})
 
   const { comments, currentUser, fetchComments, addComment } = useCommunityStore()
+
+  // Initialize anonymous commenting based on user's privacy settings
+  useEffect(() => {
+    if (currentUser?.privacySettings) {
+      const { postAnonymously: preference } = currentUser.privacySettings
+      if (preference === 'always') {
+        setCommentAnonymously(true)
+      } else if (preference === 'never') {
+        setCommentAnonymously(false)
+      }
+      // 'ask' leaves it to user's choice via toggle
+    }
+  }, [currentUser])
 
   useEffect(() => {
     if (isExpanded) {
@@ -41,13 +60,55 @@ export function InlineComments({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isExpanded, postId])
 
+  // Handle top-level comment submission
   const handleSubmitComment = async () => {
     if (!commentText.trim()) return
 
     setSubmitting(true)
-    await addComment(postId, commentText)
+    await addComment(postId, commentText, undefined, commentAnonymously)
     setCommentText('')
     setSubmitting(false)
+
+    // Reset anonymity to user's default preference
+    if (currentUser?.privacySettings) {
+      const { postAnonymously: preference } = currentUser.privacySettings
+      if (preference === 'always') {
+        setCommentAnonymously(true)
+      } else if (preference === 'never') {
+        setCommentAnonymously(false)
+      } else {
+        setCommentAnonymously(false) // Reset to false for 'ask' mode
+      }
+    }
+  }
+
+  // Handle inline reply submission
+  const handleSubmitReply = async (parentCommentId: string) => {
+    const text = replyText[parentCommentId]
+    if (!text?.trim()) return
+
+    setReplySubmitting(parentCommentId)
+    await addComment(postId, text, parentCommentId, replyAnonymous[parentCommentId] || false)
+
+    // Clear reply state
+    setReplyText(prev => ({ ...prev, [parentCommentId]: '' }))
+    setReplyBoxOpen(null)
+    setReplySubmitting(null)
+
+    // Automatically expand replies to show the new reply
+    setExpandedReplies(prev => new Set(prev).add(parentCommentId))
+
+    // Reset anonymity to user's default preference
+    if (currentUser?.privacySettings) {
+      const { postAnonymously: preference } = currentUser.privacySettings
+      if (preference === 'always') {
+        setReplyAnonymous(prev => ({ ...prev, [parentCommentId]: true }))
+      } else if (preference === 'never') {
+        setReplyAnonymous(prev => ({ ...prev, [parentCommentId]: false }))
+      } else {
+        setReplyAnonymous(prev => ({ ...prev, [parentCommentId]: false }))
+      }
+    }
   }
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -87,7 +148,7 @@ export function InlineComments({
     <div className="border-t border-border">
       {/* Consolidated Actions Bar with Comments Toggle */}
       <div className="px-6 py-2.5 bg-muted/30 flex items-center justify-between">
-        {/* Left side - Like, Share, Comments */}
+        {/* Left side - Like, Comments */}
         <div className="flex items-center gap-1">
           {/* Like Button */}
           <motion.button
@@ -103,16 +164,6 @@ export function InlineComments({
           >
             <Heart className={`w-4 h-4 ${isLiked ? 'fill-current' : ''}`} />
             <span className="text-sm font-normal">{likes}</span>
-          </motion.button>
-
-          {/* Share Button */}
-          <motion.button
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="px-3 py-1.5 rounded-lg hover:bg-muted flex items-center gap-1.5 transition-all text-muted-foreground"
-          >
-            <Share2 className="w-4 h-4" />
-            <span className="text-sm font-normal">{shares}</span>
           </motion.button>
 
           {/* Comments Toggle */}
@@ -196,7 +247,7 @@ export function InlineComments({
               {/* Comment Input */}
               <div className="flex gap-3">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-muted to-muted-foreground/30 flex items-center justify-center text-lg shadow-sm flex-shrink-0">
-                  {currentUser?.avatar || '👤'}
+                  {commentAnonymously ? '👤' : (currentUser?.avatar || '👤')}
                 </div>
                 <div className="flex-1 space-y-2">
                   <textarea
@@ -211,6 +262,15 @@ export function InlineComments({
                     style={{ height: 'auto', overflowY: 'hidden' }}
                     disabled={submitting}
                   />
+
+                  {/* Anonymous Toggle */}
+                  {currentUser?.anonymousPseudonym && (
+                    <AnonymousToggle
+                      isAnonymous={commentAnonymously}
+                      onToggle={setCommentAnonymously}
+                      pseudonym={currentUser.anonymousPseudonym}
+                    />
+                  )}
 
                   {/* Submit Button and Helper Text */}
                   <AnimatePresence>
@@ -245,7 +305,7 @@ export function InlineComments({
                 </div>
               </div>
 
-              {/* Comments List */}
+              {/* Comments List - Twitter Style */}
               {comments.length === 0 ? (
                 <div className="text-center py-8">
                   <MessageSquare className="w-10 h-10 mx-auto mb-2 text-muted-foreground" />
@@ -254,47 +314,199 @@ export function InlineComments({
                 </div>
               ) : (
                 <div className="space-y-3 mt-4">
-                  {comments.map((comment, index) => (
-                    <motion.div
-                      key={comment.id}
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: index * 0.05 }}
-                      className="flex gap-3 p-3 rounded-lg bg-card hover:bg-muted/30 transition-colors"
-                    >
-                      <div className="w-9 h-9 rounded-full bg-gradient-to-br from-muted to-muted-foreground/30 flex items-center justify-center text-base shadow-sm flex-shrink-0">
-                        {comment.author.avatar}
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center gap-2 mb-1">
-                          <span className="font-semibold text-sm">
-                            {comment.author.name}
-                          </span>
-                          {comment.author.verified && (
-                            <Award className="w-3.5 h-3.5 text-muted-foreground" />
-                          )}
-                          <span className="text-xs text-muted-foreground">
-                            · {comment.author.role}
-                          </span>
-                          <span className="text-xs text-muted-foreground">
-                            · {formatTimestamp(comment.timestamp)}
-                          </span>
-                        </div>
-                        <p className="text-sm text-foreground mb-2 leading-relaxed whitespace-pre-wrap">
-                          {comment.content}
-                        </p>
-                        <div className="flex items-center gap-4">
-                          <button className="flex items-center gap-1 text-xs text-muted-foreground hover:text-red-500 transition-colors">
-                            <Heart className="w-3.5 h-3.5" />
-                            <span>{comment.likes}</span>
-                          </button>
-                          <button className="text-xs text-muted-foreground hover:text-primary transition-colors">
-                            Reply
-                          </button>
-                        </div>
-                      </div>
-                    </motion.div>
-                  ))}
+                  {(() => {
+                    // Separate top-level comments from replies
+                    const topLevelComments = comments.filter(c => !c.parentCommentId)
+                    const repliesByParent = comments
+                      .filter(c => c.parentCommentId)
+                      .reduce((acc, reply) => {
+                        if (!acc[reply.parentCommentId!]) acc[reply.parentCommentId!] = []
+                        acc[reply.parentCommentId!].push(reply)
+                        return acc
+                      }, {} as Record<string, typeof comments>)
+
+                    return topLevelComments.map((comment, index) => {
+                      const replies = repliesByParent[comment.id] || []
+                      const isRepliesExpanded = expandedReplies.has(comment.id)
+                      const isReplyBoxOpen = replyBoxOpen === comment.id
+                      const isAnonymous = replyAnonymous[comment.id] || false
+
+                      return (
+                        <motion.div
+                          key={comment.id}
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: index * 0.05 }}
+                          className="space-y-2"
+                        >
+                          {/* Main Comment */}
+                          <div className="flex gap-3 p-3 rounded-lg bg-card hover:bg-muted/30 transition-colors">
+                            <div className="w-9 h-9 rounded-full bg-gradient-to-br from-muted to-muted-foreground/30 flex items-center justify-center text-base shadow-sm flex-shrink-0">
+                              {comment.author.avatar}
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-center gap-2 mb-1">
+                                <span className="font-semibold text-sm">{comment.author.name}</span>
+                                {comment.author.verified && (
+                                  <Award className="w-3.5 h-3.5 text-muted-foreground" />
+                                )}
+                                <span className="text-xs text-muted-foreground">· {comment.author.role}</span>
+                                <span className="text-xs text-muted-foreground">· {formatTimestamp(comment.timestamp)}</span>
+                              </div>
+                              <p className="text-sm text-foreground mb-2 leading-relaxed whitespace-pre-wrap">
+                                {comment.content}
+                              </p>
+                              <div className="flex items-center gap-4">
+                                <button className="flex items-center gap-1 text-xs text-muted-foreground hover:text-red-500 transition-colors">
+                                  <Heart className="w-3.5 h-3.5" />
+                                  <span>{comment.likes}</span>
+                                </button>
+                                <button
+                                  onClick={() => {
+                                    setReplyBoxOpen(isReplyBoxOpen ? null : comment.id)
+                                    // Initialize reply anonymous state based on user preference
+                                    if (!isReplyBoxOpen && currentUser?.privacySettings) {
+                                      const pref = currentUser.privacySettings.postAnonymously
+                                      setReplyAnonymous(prev => ({ ...prev, [comment.id]: pref === 'always' }))
+                                    }
+                                  }}
+                                  className="text-xs text-muted-foreground hover:text-primary transition-colors"
+                                >
+                                  Reply
+                                </button>
+                                {replies.length > 0 && (
+                                  <button
+                                    onClick={() => {
+                                      setExpandedReplies(prev => {
+                                        const newSet = new Set(prev)
+                                        if (newSet.has(comment.id)) {
+                                          newSet.delete(comment.id)
+                                        } else {
+                                          newSet.add(comment.id)
+                                        }
+                                        return newSet
+                                      })
+                                    }}
+                                    className="text-xs text-primary hover:text-primary/80 transition-colors font-medium"
+                                  >
+                                    {isRepliesExpanded ? 'Hide' : 'View'} {replies.length} {replies.length === 1 ? 'reply' : 'replies'}
+                                  </button>
+                                )}
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Inline Reply Box */}
+                          <AnimatePresence>
+                            {isReplyBoxOpen && (
+                              <motion.div
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: 'auto' }}
+                                exit={{ opacity: 0, height: 0 }}
+                                className="ml-12 flex gap-3 p-3 rounded-lg bg-muted/20 border-l-2 border-primary/30"
+                              >
+                                <div className="w-9 h-9 rounded-full bg-gradient-to-br from-muted to-muted-foreground/30 flex items-center justify-center text-base shadow-sm flex-shrink-0">
+                                  {isAnonymous ? '👤' : (currentUser?.avatar || '👤')}
+                                </div>
+                                <div className="flex-1 space-y-2">
+                                  <textarea
+                                    ref={el => { replyRefs.current[comment.id] = el }}
+                                    value={replyText[comment.id] || ''}
+                                    onChange={(e) => setReplyText(prev => ({ ...prev, [comment.id]: e.target.value }))}
+                                    onKeyDown={(e) => {
+                                      if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) {
+                                        e.preventDefault()
+                                        handleSubmitReply(comment.id)
+                                      }
+                                    }}
+                                    placeholder={`Reply to ${comment.author.name}...`}
+                                    className="comment-textarea w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all resize-none min-h-[42px]"
+                                    autoFocus
+                                  />
+                                  {currentUser?.anonymousPseudonym && (
+                                    <AnonymousToggle
+                                      isAnonymous={isAnonymous}
+                                      onToggle={() => setReplyAnonymous(prev => ({ ...prev, [comment.id]: !prev[comment.id] }))}
+                                      pseudonym={currentUser.anonymousPseudonym}
+                                    />
+                                  )}
+                                  <div className="flex items-center justify-between">
+                                    <p className="text-xs text-muted-foreground">Press Cmd/Ctrl + Enter to submit</p>
+                                    <div className="flex gap-2">
+                                      <Button
+                                        onClick={() => setReplyBoxOpen(null)}
+                                        size="sm"
+                                        variant="outline"
+                                      >
+                                        Cancel
+                                      </Button>
+                                      <Button
+                                        onClick={() => handleSubmitReply(comment.id)}
+                                        disabled={!replyText[comment.id]?.trim() || replySubmitting === comment.id}
+                                        size="sm"
+                                        className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white"
+                                      >
+                                        {replySubmitting === comment.id ? (
+                                          <Loader2 className="w-4 h-4 animate-spin" />
+                                        ) : (
+                                          <>
+                                            <Send className="w-3.5 h-3.5 mr-1.5" />
+                                            Reply
+                                          </>
+                                        )}
+                                      </Button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+
+                          {/* Nested Replies */}
+                          <AnimatePresence>
+                            {isRepliesExpanded && replies.length > 0 && (
+                              <motion.div
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: 'auto' }}
+                                exit={{ opacity: 0, height: 0 }}
+                                className="ml-12 space-y-2"
+                              >
+                                {replies.map((reply, replyIndex) => (
+                                  <motion.div
+                                    key={reply.id}
+                                    initial={{ opacity: 0, x: -10 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ delay: replyIndex * 0.05 }}
+                                    className="flex gap-3 p-3 rounded-lg bg-muted/20 border-l-2 border-primary/30 hover:bg-muted/40 transition-colors"
+                                  >
+                                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-muted to-muted-foreground/30 flex items-center justify-center text-sm shadow-sm flex-shrink-0">
+                                      {reply.author.avatar}
+                                    </div>
+                                    <div className="flex-1 min-w-0">
+                                      <div className="flex items-center gap-2 mb-1">
+                                        <span className="font-semibold text-sm">{reply.author.name}</span>
+                                        {reply.author.verified && (
+                                          <Award className="w-3 h-3 text-muted-foreground" />
+                                        )}
+                                        <span className="text-xs text-muted-foreground">· {reply.author.role}</span>
+                                        <span className="text-xs text-muted-foreground">· {formatTimestamp(reply.timestamp)}</span>
+                                      </div>
+                                      <p className="text-xs text-primary/70 mb-1.5">
+                                        Replying to <span className="font-semibold">{comment.author.name}</span>
+                                      </p>
+                                      <p className="text-sm text-foreground leading-relaxed whitespace-pre-wrap">
+                                        {reply.content}
+                                      </p>
+                                    </div>
+                                  </motion.div>
+                                ))}
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </motion.div>
+                      )
+                    })
+                  })()}
                 </div>
               )}
             </div>
