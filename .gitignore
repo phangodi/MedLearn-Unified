@@ -1,1 +1,10 @@
 *.log
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Development/Documentation files
+NEW_SESSION_PROMPT*.md
+PHYSIOLOGY_INTEGRATION_FINAL*.md
