@@ -7,6 +7,8 @@ import { Label } from '@/components/ui/Label'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/Card'
 import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import { BorderFrame } from '@/components/layout/BorderFrame'
+import { Particles } from '@/components/ui/Particles'
+import { HeroSection } from '@/components/layout/HeroSection'
 import { Activity, Mail, Lock, User, AlertCircle } from 'lucide-react'
 import { useAuth } from '@/contexts/AuthContext'
 import { useToast } from '@/components/ui/Toast'
@@ -113,51 +115,34 @@ export function AuthPage() {
   }
 
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-primary/5 via-background to-secondary/5 relative overflow-hidden">
-      {/* Continuous diagonal-line border frame */}
-      <BorderFrame />
+    <div className="min-h-screen w-full bg-background relative overflow-hidden">
+      {/* Animated particle background - same as dashboard */}
+      <Particles quantity={60} ease={50} />
 
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div
-          className="absolute top-20 -left-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-        />
-        <motion.div
-          className="absolute bottom-20 -right-20 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"
-          animate={{
-            scale: [1.2, 1, 1.2],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-        />
+      {/* Diagonal line pattern background - full width for login page */}
+      <BorderFrame fullWidth={true} />
+
+      {/* Background Hero Section - full visibility, pointer-events disabled */}
+      <div className="absolute inset-0 overflow-auto pointer-events-none">
+        <div className="min-h-screen mx-auto px-6 lg:px-10 py-8 max-w-7xl">
+          <HeroSection interactive={false} />
+        </div>
       </div>
 
       {/* Theme Toggle */}
-      <div className="absolute top-4 right-4 z-10">
+      <div className="absolute top-4 right-4 z-50 pointer-events-auto">
         <ThemeToggle />
       </div>
 
-      {/* Login Card */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="relative z-10 w-full max-w-md mx-4"
-      >
-        <Card className="backdrop-blur-sm bg-card/95 shadow-2xl border-border/50">
+      {/* Login Card - Centered Overlay with strong glassmorphism */}
+      <div className="relative z-40 min-h-screen w-full flex items-center justify-center px-4 pointer-events-none">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="w-full max-w-md pointer-events-auto"
+        >
+        <Card className="backdrop-blur-xl bg-card/98 shadow-[0_8px_32px_0_rgba(0,0,0,0.4)] border-2 border-border/60">
           <CardHeader className="space-y-3">
             <div className="flex items-center justify-center mb-2">
               <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
@@ -369,14 +354,15 @@ export function AuthPage() {
                 </>
               )}
             </div>
+
+            {/* Free for medical students message */}
+            <p className="text-center text-xs text-muted-foreground pt-2 border-t border-border/30">
+              Free for all medical students. Always.
+            </p>
           </CardFooter>
         </Card>
-
-        {/* Footer */}
-        <p className="text-center text-xs text-muted-foreground mt-4">
-          Free for all medical students. Always. 
-        </p>
-      </motion.div>
+        </motion.div>
+      </div>
     </div>
   )
 }

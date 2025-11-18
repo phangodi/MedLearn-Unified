@@ -1,12 +1,13 @@
 interface BorderFrameProps {
   sidebarCollapsed?: boolean
+  fullWidth?: boolean
 }
 
-export function BorderFrame({ sidebarCollapsed = false }: BorderFrameProps) {
+export function BorderFrame({ sidebarCollapsed = false, fullWidth = false }: BorderFrameProps) {
   return (
     <div
       className="fixed inset-0 pointer-events-none overflow-hidden z-0 transition-all duration-300"
-      style={{ left: sidebarCollapsed ? '80px' : '288px' }}
+      style={{ left: fullWidth ? '0' : (sidebarCollapsed ? '80px' : '288px') }}
     >
       {/* Full page diagonal lines pattern - fixed, doesn't scroll */}
       <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
