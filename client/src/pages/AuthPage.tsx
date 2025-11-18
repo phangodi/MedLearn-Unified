@@ -181,7 +181,7 @@ export function AuthPage() {
                 onClick={handleGoogleSignIn}
                 disabled={localLoading}
                 variant="outline"
-                className="w-full flex items-center justify-center gap-2"
+                className="w-full flex items-center justify-center gap-2 hover:bg-gradient-to-r hover:from-primary/10 hover:to-secondary/10 hover:text-foreground transition-all duration-200"
                 type="button"
               >
                 <svg className="w-5 h-5" viewBox="0 0 24 24">
@@ -209,7 +209,7 @@ export function AuthPage() {
                 onClick={handleAppleSignIn}
                 disabled={localLoading}
                 variant="outline"
-                className="w-full flex items-center justify-center gap-2"
+                className="w-full flex items-center justify-center gap-2 hover:bg-gradient-to-r hover:from-primary/10 hover:to-secondary/10 hover:text-foreground transition-all duration-200"
                 type="button"
               >
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
