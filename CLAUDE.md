@@ -196,6 +196,43 @@ Mobile-first approach with breakpoints:
 - `lg:` Desktop (1024px+) - Sidebar becomes always visible
 - `xl:` Wide desktop (1280px+)
 
+### Common CSS Layout Issues
+
+**Grid Container Width Collapsing:**
+
+When using CSS Grid with `grid-cols-2` (or any multi-column layout) without explicit width constraints, the grid container will shrink to fit its intrinsic content width rather than expanding to fill available space.
+
+**Symptoms:**
+- Cards with short text content appear narrow and cramped
+- Images get cropped to show only vertical/center portions (looking like "tall vertical tiles")
+- Layout appears correct on pages with longer text but breaks on pages with short text
+- Grid is technically rendering in multiple columns, but columns are too narrow to display properly
+
+**Root Cause:**
+1. **Grid without width:** `grid grid-cols-2 gap-6 max-w-4xl mx-auto` only sets a maximum width, not a minimum or explicit width
+2. **Flex parent shrinking:** When the grid is inside a flex container (`flex-1 flex flex-col`), the flex item also shrinks to content width by default
+
+**Solution:**
+Add `w-full` to BOTH the grid container AND its parent flex container:
+
+```tsx
+{/* Parent flex container needs w-full */}
+<main className="flex-1 w-full mx-auto px-6 lg:px-10 py-8 relative z-10 max-w-7xl">
+  {/* Grid container also needs w-full */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto w-full">
+    {/* Card content */}
+  </div>
+</main>
+```
+
+**Why this works:**
+- `w-full` forces both containers to take full available width
+- `max-w-4xl` / `max-w-7xl` still caps the maximum width
+- `mx-auto` centers the content
+- Cards maintain consistent sizing regardless of text content length
+
+**Example Issue:** HistologyPage.tsx had narrow cards because text content was short ("MTO1", "Nervous System") compared to SociologyPage.tsx with longer text ("Chapters 1-7", "Fundamentals, Medicine, Research..."). Fixed by adding `w-full` to both containers.
+
 ### Working with Legacy Apps
 
 When modifying legacy apps in `src/apps/`:
