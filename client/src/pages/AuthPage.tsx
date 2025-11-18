@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import { Button } from '@/components/ui/Button'
@@ -16,7 +16,7 @@ import { PasswordStrengthIndicator } from '@/components/ui/PasswordStrengthIndic
 
 export function AuthPage() {
   const navigate = useNavigate()
-  const { signInWithEmail, signUpWithEmail, signInWithGoogle, signInWithApple, resetPassword } = useAuth()
+  const { user, loading, signInWithEmail, signUpWithEmail, signInWithGoogle, signInWithApple, resetPassword } = useAuth()
   const toast = useToast()
 
   const [mode, setMode] = useState<'signin' | 'signup' | 'reset'>('signin')
@@ -24,12 +24,19 @@ export function AuthPage() {
   const [password, setPassword] = useState('')
   const [name, setName] = useState('')
   const [error, setError] = useState('')
-  const [loading, setLoading] = useState(false)
+  const [localLoading, setLocalLoading] = useState(false)
+
+  // Redirect to dashboard if user is already logged in
+  useEffect(() => {
+    if (!loading && user) {
+      navigate('/dashboard', { replace: true })
+    }
+  }, [user, loading, navigate])
 
   const handleEmailAuth = async (e: React.FormEvent) => {
     e.preventDefault()
     setError('')
-    setLoading(true)
+    setLocalLoading(true)
 
     try {
       if (mode === 'reset') {
@@ -45,7 +52,7 @@ export function AuthPage() {
         if (passwordError) {
           setError(passwordError)
           toast.error(passwordError)
-          setLoading(false)
+          setLocalLoading(false)
           return
         }
 
@@ -65,13 +72,13 @@ export function AuthPage() {
       setError(friendlyMessage)
       toast.error(friendlyMessage)
     } finally {
-      setLoading(false)
+      setLocalLoading(false)
     }
   }
 
   const handleGoogleSignIn = async () => {
     setError('')
-    setLoading(true)
+    setLocalLoading(true)
 
     try {
       await signInWithGoogle()
@@ -83,13 +90,13 @@ export function AuthPage() {
       setError(friendlyMessage)
       toast.error(friendlyMessage)
     } finally {
-      setLoading(false)
+      setLocalLoading(false)
     }
   }
 
   const handleAppleSignIn = async () => {
     setError('')
-    setLoading(true)
+    setLocalLoading(true)
 
     try {
       await signInWithApple()
@@ -101,7 +108,7 @@ export function AuthPage() {
       setError(friendlyMessage)
       toast.error(friendlyMessage)
     } finally {
-      setLoading(false)
+      setLocalLoading(false)
     }
   }
 
@@ -187,7 +194,7 @@ export function AuthPage() {
             <div className="space-y-2">
               <Button
                 onClick={handleGoogleSignIn}
-                disabled={loading}
+                disabled={localLoading}
                 variant="outline"
                 className="w-full flex items-center justify-center gap-2"
                 type="button"
@@ -215,7 +222,7 @@ export function AuthPage() {
 
               <Button
                 onClick={handleAppleSignIn}
-                disabled={loading}
+                disabled={localLoading}
                 variant="outline"
                 className="w-full flex items-center justify-center gap-2"
                 type="button"
@@ -252,7 +259,7 @@ export function AuthPage() {
                       onChange={(e) => setName(e.target.value)}
                       className="pl-10"
                       required
-                      disabled={loading}
+                      disabled={localLoading}
                     />
                   </div>
                 </div>
@@ -270,7 +277,7 @@ export function AuthPage() {
                     onChange={(e) => setEmail(e.target.value)}
                     className="pl-10"
                     required
-                    disabled={loading}
+                    disabled={localLoading}
                   />
                 </div>
               </div>
@@ -299,7 +306,7 @@ export function AuthPage() {
                       onChange={(e) => setPassword(e.target.value)}
                       className="pl-10"
                       required
-                      disabled={loading}
+                      disabled={localLoading}
                       minLength={mode === 'signup' ? 8 : 6}
                     />
                   </div>
@@ -316,9 +323,9 @@ export function AuthPage() {
               <Button
                 type="submit"
                 className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white"
-                disabled={loading}
+                disabled={localLoading}
               >
-                {loading ? 'Please wait...' : mode === 'signin' ? 'Sign In' : mode === 'signup' ? 'Sign Up' : 'Send Reset Link'}
+                {localLoading ? 'Please wait...' : mode === 'signin' ? 'Sign In' : mode === 'signup' ? 'Sign Up' : 'Send Reset Link'}
               </Button>
             </form>
           </CardContent>

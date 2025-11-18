@@ -67,8 +67,8 @@ function App() {
             <Route path="/sociology/exam1/*" element={<ProtectedRoute><SociologyExam1Page /></ProtectedRoute>} />
             <Route path="/anatomy" element={<ProtectedRoute><AnatomyPage /></ProtectedRoute>} />
             <Route path="/anatomy/cns" element={<ProtectedRoute><AnatomyCNSPage /></ProtectedRoute>} />
-            <Route path="/" element={<Navigate to="/login" replace />} />
-            <Route path="*" element={<Navigate to="/login" replace />} />
+            <Route path="/" element={<Navigate to="/dashboard" replace />} />
+            <Route path="*" element={<Navigate to="/dashboard" replace />} />
           </Routes>
           </ToastProvider>
         </NotificationProvider>
