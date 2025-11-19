@@ -16,6 +16,7 @@ import { SociologyExam1Page } from './pages/SociologyExam1Page'
 import { AnatomyPage } from './pages/AnatomyPage'
 import { AnatomyCNSPage } from './pages/AnatomyCNSPage'
 import { AdminNotificationsPage } from './pages/AdminNotificationsPage'
+import { AIExamPrepPage } from './pages/AIExamPrepPage'
 
 function App() {
   return (
@@ -57,6 +58,14 @@ function App() {
               element={
                 <ProtectedRoute requireSuperAdmin>
                   <AdminNotificationsPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/ai-prep"
+              element={
+                <ProtectedRoute>
+                  <AIExamPrepPage />
                 </ProtectedRoute>
               }
             />

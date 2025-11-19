@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Brain,
@@ -12,12 +12,16 @@ import {
   Settings,
   Menu,
   X,
-  Activity
+  Activity,
+  LogOut,
+  Moon,
+  Sun
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { NotificationSidebarItem } from '@/components/notifications/NotificationSidebarItem'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { useAuth } from '@/contexts/AuthContext'
+import { useTheme } from '@/hooks/useTheme'
 
 interface SidebarProps {
   isOpen: boolean
@@ -29,10 +33,43 @@ interface SidebarProps {
 export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: SidebarProps) {
   const navigate = useNavigate()
   const location = useLocation()
-  const { userProfile } = useAuth()
+  const { userProfile, signOut } = useAuth()
+  const { theme, toggleTheme } = useTheme()
   const [expandedSections, setExpandedSections] = useState<string[]>(['subjects', 'tools'])
   const [showExpandTooltip, setShowExpandTooltip] = useState(false)
   const [notificationsOpen, setNotificationsOpen] = useState(false)
+  const [settingsOpen, setSettingsOpen] = useState(false)
+  const settingsPanelRef = useRef<HTMLDivElement>(null)
+  const settingsButtonRef = useRef<HTMLButtonElement>(null)
+
+  // Close settings panel when clicking outside (only when expanded)
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      const target = event.target as Node
+
+      // Don't close if clicking the settings button or inside the panel
+      if (
+        settingsButtonRef.current?.contains(target) ||
+        settingsPanelRef.current?.contains(target)
+      ) {
+        return
+      }
+
+      // Close the panel if clicking outside
+      setSettingsOpen(false)
+    }
+
+    // Only enable click-outside detection when sidebar is expanded
+    if (settingsOpen && !isCollapsed) {
+      setTimeout(() => {
+        document.addEventListener('click', handleClickOutside)
+      }, 0)
+
+      return () => {
+        document.removeEventListener('click', handleClickOutside)
+      }
+    }
+  }, [settingsOpen, isCollapsed])
 
   const toggleSection = (section: string) => {
     setExpandedSections(prev =>
@@ -40,6 +77,12 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
         ? prev.filter(s => s !== section)
         : [...prev, section]
     )
+  }
+
+  const handleLogout = async () => {
+    await signOut()
+    navigate('/login')
+    setSettingsOpen(false)
   }
 
   const subjects = [
@@ -340,20 +383,112 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
           </button>
         )}
 
-        <button
-          onClick={() => navigate('/profile')}
-          className={`sidebar-item ${
-            location.pathname === '/profile' ? 'active' : ''
-          } w-full flex items-center ${isCollapsed ? 'justify-center' : 'space-x-2.5'} px-3 py-2 rounded-lg text-left`}
-          title={isCollapsed ? 'Settings' : undefined}
-        >
-          <Settings className="sidebar-icon w-4.5 h-4.5" />
-          {!isCollapsed && <span className="text-sm">Settings</span>}
-        </button>
+        {/* Settings Button with Dropdown */}
+        <div className="relative">
+          <button
+            ref={settingsButtonRef}
+            onClick={() => setSettingsOpen(!settingsOpen)}
+            className={`sidebar-item ${
+              settingsOpen ? 'active' : ''
+            } w-full flex items-center ${isCollapsed ? 'justify-center' : 'space-x-2.5'} px-3 py-2 rounded-lg text-left`}
+            title={isCollapsed ? 'Settings' : undefined}
+          >
+            <Settings className="sidebar-icon w-4.5 h-4.5" />
+            {!isCollapsed && <span className="text-sm">Settings</span>}
+          </button>
+
+          {/* Settings Dropdown Panel */}
+          <AnimatePresence>
+            {settingsOpen && (
+              <>
+                {/* Backdrop for mobile */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="fixed inset-0 bg-black/20 z-40 lg:hidden"
+                  onClick={() => setSettingsOpen(false)}
+                />
+
+                {/* Settings Panel */}
+                <motion.div
+                  ref={settingsPanelRef}
+                  initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                  transition={{ duration: 0.15, ease: 'easeOut' }}
+                  className={`absolute ${
+                    isCollapsed ? 'left-full ml-2 bottom-0 w-48' : 'bottom-full left-0 right-0 mb-2'
+                  } bg-card border border-border/50 rounded-lg shadow-lg overflow-hidden z-50`}
+                >
+                  <div className="p-2 space-y-1">
+                    {/* Edit Profile */}
+                    <button
+                      type="button"
+                      onClick={() => {
+                        navigate('/profile')
+                        setSettingsOpen(false)
+                      }}
+                      className="sidebar-item w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg text-left"
+                    >
+                      <User className="sidebar-icon w-4.5 h-4.5" />
+                      <span className="text-sm">Edit Profile</span>
+                    </button>
+
+                    {/* Theme Toggle */}
+                    <button
+                      type="button"
+                      onClick={() => {
+                        toggleTheme()
+                      }}
+                      className="sidebar-item w-full flex items-center justify-between px-3 py-2 rounded-lg text-left"
+                    >
+                      <div className="flex items-center space-x-2.5">
+                        {theme === 'dark' ? (
+                          <Moon className="sidebar-icon w-4.5 h-4.5" />
+                        ) : (
+                          <Sun className="sidebar-icon w-4.5 h-4.5" />
+                        )}
+                        <span className="text-sm">Theme</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs text-muted-foreground capitalize">{theme}</span>
+                        {/* Toggle Switch Visual */}
+                        <div className={`relative w-9 h-5 rounded-full transition-colors ${
+                          theme === 'dark' ? 'bg-primary' : 'bg-gray-300'
+                        }`}>
+                          <motion.div
+                            layout
+                            transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+                            className="absolute top-0.5 w-4 h-4 bg-white rounded-full shadow-md"
+                            style={{ left: theme === 'dark' ? '18px' : '2px' }}
+                          />
+                        </div>
+                      </div>
+                    </button>
+
+                    {/* Divider */}
+                    <div className="h-px bg-border/50 my-1" />
+
+                    {/* Logout */}
+                    <button
+                      type="button"
+                      onClick={handleLogout}
+                      className="sidebar-item w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg text-left text-red-500 dark:text-red-400"
+                    >
+                      <LogOut className="w-4.5 h-4.5" />
+                      <span className="text-sm">Logout</span>
+                    </button>
+                  </div>
+                </motion.div>
+              </>
+            )}
+          </AnimatePresence>
+        </div>
       </div>
 
-      {/* Collapse/Expand interaction area - DISABLED when notifications are open */}
-      {!notificationsOpen && (
+      {/* Collapse/Expand interaction area - DISABLED when notifications or settings are open */}
+      {!notificationsOpen && !settingsOpen && (
       <motion.div
         className="hidden lg:flex absolute top-0 bottom-0 -right-3 w-6 items-center justify-center cursor-col-resize z-20 group"
         onMouseEnter={() => setShowExpandTooltip(true)}
@@ -442,7 +577,7 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
       <motion.aside
         animate={{ width: isCollapsed ? 80 : 288 }}
         transition={{ duration: 0.3, ease: 'easeInOut' }}
-        className="hidden lg:flex lg:flex-col bg-card border-r border-border/50 z-10 relative h-screen sticky top-0"
+        className="hidden lg:flex lg:flex-col bg-card border-r border-border/50 z-40 relative h-screen sticky top-0"
       >
         <SidebarContent />
       </motion.aside>
