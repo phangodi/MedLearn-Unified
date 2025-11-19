@@ -21,6 +21,7 @@
   --color-popover-foreground: hsl(var(--popover-foreground));
   --color-card: hsl(var(--card));
   --color-card-foreground: hsl(var(--card-foreground));
+  --color-definition: hsl(var(--definition));
 
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
@@ -67,6 +68,9 @@
 
     /* Warning */
     --warning: 38 100% 51%;         /* #FFB703 */
+
+    /* Definition text - subtle deep blue for highlighted terms */
+    --definition: 221 83% 20%;      /* Deep blue-gray */
   }
 
   .dark {
@@ -102,6 +106,9 @@
 
     --success: 166 84% 50%;
     --warning: 38 100% 55%;
+
+    /* Definition text - bright white for highlighted terms in dark mode */
+    --definition: 210 20% 98%;      /* Very bright white */
   }
 }
 

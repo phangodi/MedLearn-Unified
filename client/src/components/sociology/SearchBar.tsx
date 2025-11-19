@@ -203,8 +203,8 @@ export function SearchBar({ chapters, basePath }: SearchBarProps) {
         {/* Glow effect on focus */}
         <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-xl blur-xl opacity-0 group-focus-within:opacity-100 transition-opacity duration-300" />
 
-        <div className="relative flex items-center bg-white dark:bg-card border-2 border-gray-200 dark:border-border rounded-xl px-4 py-3 transition-all duration-300 focus-within:border-primary dark:focus-within:border-primary focus-within:shadow-[0_0_0_3px_rgba(0,102,204,0.1)] dark:focus-within:shadow-[0_0_0_3px_rgba(0,128,255,0.1)]">
-          <Search className="w-5 h-5 text-gray-400 dark:text-gray-500 mr-3 flex-shrink-0" />
+        <div className="relative flex items-center bg-card border-2 border-border rounded-xl px-4 py-3 transition-all duration-300 focus-within:border-primary focus-within:shadow-lg">
+          <Search className="w-5 h-5 text-muted-foreground mr-3 flex-shrink-0" />
           <input
             type="text"
             placeholder="Search definitions, terms, or questions..."
@@ -214,7 +214,7 @@ export function SearchBar({ chapters, basePath }: SearchBarProps) {
             onFocus={() =>
               searchTerm.length >= 2 && suggestions.length > 0 && setShowSuggestions(true)
             }
-            className="flex-1 bg-transparent border-none outline-none text-gray-900 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-500"
+            className="flex-1 bg-transparent border-none outline-none text-foreground placeholder:text-muted-foreground"
           />
           {searchTerm && (
             <button
@@ -223,10 +223,10 @@ export function SearchBar({ chapters, basePath }: SearchBarProps) {
                 setSuggestions([]);
                 setShowSuggestions(false);
               }}
-              className="ml-2 p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              className="ml-2 p-1 rounded-full hover:bg-muted transition-colors"
               aria-label="Clear search"
             >
-              <X className="w-4 h-4 text-gray-400 dark:text-gray-500" />
+              <X className="w-4 h-4 text-muted-foreground" />
             </button>
           )}
         </div>
@@ -240,24 +240,24 @@ export function SearchBar({ chapters, basePath }: SearchBarProps) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-full mt-2 left-0 right-0 bg-white dark:bg-card border-2 border-gray-200 dark:border-border rounded-xl shadow-2xl max-h-96 overflow-y-auto z-50"
+            className="absolute top-full mt-2 left-0 right-0 bg-card border-2 border-border rounded-xl shadow-2xl max-h-96 overflow-y-auto z-50"
           >
             {suggestions.map((suggestion, index) => (
               <button
                 key={index}
                 onClick={() => handleSuggestionClick(suggestion)}
                 onMouseEnter={() => setSelectedIndex(index)}
-                className={`w-full text-left px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors border-b border-gray-100 dark:border-border last:border-b-0 ${
+                className={`w-full text-left px-4 py-3 hover:bg-muted/50 transition-colors border-b border-border last:border-b-0 ${
                   index === selectedIndex
-                    ? 'bg-primary/5 dark:bg-primary/10'
+                    ? 'bg-primary/10'
                     : ''
                 }`}
               >
-                <div className="font-medium text-gray-900 dark:text-gray-100 mb-1">
+                <div className="font-medium text-foreground mb-1">
                   {suggestion.text}
                 </div>
-                <div className="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
-                  <span className="px-2 py-0.5 rounded bg-primary/10 dark:bg-primary/20 text-primary dark:text-cyan-400 font-medium">
+                <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                  <span className="px-2 py-0.5 rounded bg-primary/10 text-primary font-medium">
                     {suggestion.type}
                   </span>
                   <span>

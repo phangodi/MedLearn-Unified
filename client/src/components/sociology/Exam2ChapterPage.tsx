@@ -28,7 +28,7 @@ export function Exam2ChapterPage({
   }, [chapter.id]);
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-background">
+    <div className="min-h-screen bg-background">
       {/* Chapter Hero Header */}
       <ChapterHeader
         chapterNum={chapter.id}
@@ -44,23 +44,23 @@ export function Exam2ChapterPage({
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 mb-6"
+          className="flex items-center gap-2 text-sm text-muted-foreground mb-6"
         >
           <Link
             to="/sociology"
-            className="hover:text-primary dark:hover:text-cyan-400 transition-colors"
+            className="hover:text-primary transition-colors"
           >
             Sociology
           </Link>
           <ChevronRight className="w-4 h-4" />
           <Link
             to={basePath}
-            className="hover:text-primary dark:hover:text-cyan-400 transition-colors"
+            className="hover:text-primary transition-colors"
           >
             Exam {examNumber}
           </Link>
           <ChevronRight className="w-4 h-4" />
-          <span className="text-gray-900 dark:text-gray-100 font-semibold">
+          <span className="text-foreground font-semibold">
             Chapter {chapter.id}
           </span>
         </motion.div>
@@ -73,7 +73,7 @@ export function Exam2ChapterPage({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="bg-white dark:bg-card rounded-2xl shadow-sm border border-gray-200 dark:border-border p-8 md:p-12"
+          className="bg-card rounded-2xl shadow-sm border border-border p-8 md:p-12"
         >
           <ContentRenderer content={chapter.content} />
         </motion.div>

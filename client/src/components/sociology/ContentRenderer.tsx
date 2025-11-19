@@ -7,7 +7,7 @@ interface ContentRendererProps {
 
 export function ContentRenderer({ content }: ContentRendererProps) {
   return (
-    <div className="space-y-8">
+    <div className="space-y-4">
       {content.map((block, index) => {
         switch (block.type) {
           case 'question':
@@ -15,14 +15,14 @@ export function ContentRenderer({ content }: ContentRendererProps) {
               <div key={index}>
                 {/* Divider above question (except for first question) */}
                 {index > 0 && (
-                  <div className="border-t border-gray-200 dark:border-border mb-8" />
+                  <div className="border-t border-border mb-6 mt-8" />
                 )}
                 {block.badge && (
-                  <div className="mb-3">
+                  <div className="mb-4">
                     <QuestionBadge type={block.badge} />
                   </div>
                 )}
-                <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
+                <h2 className="text-xl font-semibold text-foreground mb-6">
                   {block.text}
                 </h2>
               </div>
@@ -32,11 +32,11 @@ export function ContentRenderer({ content }: ContentRendererProps) {
             return (
               <div
                 key={index}
-                className="prose dark:prose-invert max-w-none"
+                className="prose dark:prose-invert max-w-none text-foreground leading-relaxed"
                 dangerouslySetInnerHTML={{
                   __html: block.text?.replace(
                     /<strong>(.*?)<\/strong>/g,
-                    '<strong class="font-semibold text-primary dark:text-cyan-400">$1</strong>'
+                    '<strong class="font-bold text-definition">$1</strong>'
                   ) || '',
                 }}
               />
@@ -44,15 +44,15 @@ export function ContentRenderer({ content }: ContentRendererProps) {
 
           case 'list':
             return (
-              <ul key={index} className="space-y-2 ml-6 list-disc marker:text-primary dark:marker:text-cyan-400">
+              <ul key={index} className="space-y-2 ml-6 list-disc marker:text-foreground/60">
                 {block.items?.map((item, i) => (
                   <li
                     key={i}
-                    className="text-gray-700 dark:text-gray-300 leading-relaxed"
+                    className="text-foreground leading-relaxed"
                     dangerouslySetInnerHTML={{
                       __html: item.replace(
                         /<strong>(.*?)<\/strong>/g,
-                        '<strong class="font-semibold text-primary dark:text-cyan-400">$1</strong>'
+                        '<strong class="font-bold text-definition">$1</strong>'
                       ),
                     }}
                   />
@@ -62,15 +62,15 @@ export function ContentRenderer({ content }: ContentRendererProps) {
 
           case 'orderedList':
             return (
-              <ol key={index} className="space-y-2 ml-6 list-decimal marker:text-primary dark:marker:text-cyan-400 marker:font-semibold">
+              <ol key={index} className="space-y-2 ml-6 list-decimal marker:text-foreground/60 marker:font-semibold">
                 {block.items?.map((item, i) => (
                   <li
                     key={i}
-                    className="text-gray-700 dark:text-gray-300 leading-relaxed"
+                    className="text-foreground leading-relaxed"
                     dangerouslySetInnerHTML={{
                       __html: item.replace(
                         /<strong>(.*?)<\/strong>/g,
-                        '<strong class="font-semibold text-primary dark:text-cyan-400">$1</strong>'
+                        '<strong class="font-bold text-definition">$1</strong>'
                       ),
                     }}
                   />
@@ -81,13 +81,13 @@ export function ContentRenderer({ content }: ContentRendererProps) {
           case 'table':
             return (
               <div key={index} className="overflow-x-auto -mx-4 sm:mx-0">
-                <table className="min-w-full border-collapse bg-gray-50 dark:bg-gray-900/20 rounded-lg overflow-hidden">
+                <table className="min-w-full border-collapse bg-card/50 rounded-lg overflow-hidden">
                   <thead>
-                    <tr className="bg-primary/10 dark:bg-primary/20">
+                    <tr className="bg-muted/50">
                       {block.headers?.map((header, i) => (
                         <th
                           key={i}
-                          className="px-4 py-3 text-left text-sm font-bold text-gray-900 dark:text-gray-100 border-b-2 border-primary/20 dark:border-primary/30"
+                          className="px-4 py-3 text-left text-sm font-bold text-foreground border-b-2 border-border"
                         >
                           {header}
                         </th>
@@ -98,16 +98,16 @@ export function ContentRenderer({ content }: ContentRendererProps) {
                     {block.rows?.map((row, i) => (
                       <tr
                         key={i}
-                        className="border-b border-gray-200 dark:border-border hover:bg-gray-100 dark:hover:bg-gray-800/30 transition-colors"
+                        className="border-b border-border hover:bg-muted/50 transition-colors"
                       >
                         {row.map((cell, j) => (
                           <td
                             key={j}
-                            className="px-4 py-3 text-sm text-gray-700 dark:text-gray-300"
+                            className="px-4 py-3 text-sm text-foreground"
                             dangerouslySetInnerHTML={{
                               __html: cell.replace(
                                 /<strong>(.*?)<\/strong>/g,
-                                '<strong class="font-semibold text-primary dark:text-cyan-400">$1</strong>'
+                                '<strong class="font-bold text-definition">$1</strong>'
                               ),
                             }}
                           />

@@ -13,13 +13,13 @@ export function ChapterCard({ num, icon, title, description, basePath }: Chapter
       <motion.div
         whileHover={{ scale: 1.03, y: -4 }}
         whileTap={{ scale: 0.98 }}
-        className="group relative bg-white dark:bg-card border-2 border-gray-200 dark:border-border rounded-2xl p-6 overflow-hidden transition-all duration-300 hover:border-primary dark:hover:border-primary hover:shadow-[0_8px_30px_rgba(0,102,204,0.2)] dark:hover:shadow-[0_8px_30px_rgba(0,128,255,0.2)] h-full"
+        className="group relative bg-card border-2 border-border rounded-2xl p-6 overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-lg h-full"
       >
         {/* Gradient background effect on hover */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
         {/* Icon with gradient background */}
-        <div className="relative mb-4 w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-100 to-blue-100 dark:from-cyan-900/30 dark:to-blue-900/30 flex items-center justify-center text-2xl">
+        <div className="relative mb-4 w-14 h-14 rounded-xl bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center text-2xl">
           {icon}
         </div>
 
@@ -31,15 +31,15 @@ export function ChapterCard({ num, icon, title, description, basePath }: Chapter
         </div>
 
         {/* Title and description */}
-        <h3 className="relative text-xl font-bold text-gray-900 dark:text-gray-100 mb-2 group-hover:text-primary dark:group-hover:text-cyan-400 transition-colors">
+        <h3 className="relative text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
           {title}
         </h3>
-        <p className="relative text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+        <p className="relative text-sm text-muted-foreground leading-relaxed mb-4">
           {description}
         </p>
 
         {/* Arrow indicator */}
-        <div className="relative mt-auto flex items-center text-primary dark:text-cyan-400 font-semibold text-sm">
+        <div className="relative mt-auto flex items-center text-primary font-semibold text-sm">
           Start Learning
           <motion.div
             className="ml-1"

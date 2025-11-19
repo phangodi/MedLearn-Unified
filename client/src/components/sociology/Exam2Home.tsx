@@ -22,9 +22,9 @@ export function Exam2Home({
   basePath,
 }: Exam2HomeProps) {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-background">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-primary via-cyan-600 to-secondary py-16 px-6 overflow-hidden">
+      <div className="relative bg-gradient-to-br from-primary via-cyan-600 to-secondary py-20 px-6 overflow-hidden">
         {/* Animated background orbs */}
         <motion.div
           animate={{
@@ -55,32 +55,22 @@ export function Exam2Home({
             <span className="text-white font-semibold">Exam {examNumber}</span>
           </motion.div>
 
-          {/* Branding */}
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 drop-shadow-lg"
-          >
-            Lara's Sociology Studies
-          </motion.h2>
-
-          {/* Title */}
+          {/* Branding - Main Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-xl sm:text-2xl text-white/90 mb-2"
+            transition={{ delay: 0.1 }}
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg"
           >
-            Sociology Exam {examNumber}
+            Lara's Sociology Studies
           </motion.h1>
 
-          {/* Subtitle */}
+          {/* Exam Title */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="text-lg sm:text-xl text-white/80 mb-2"
+            transition={{ delay: 0.2 }}
+            className="text-xl sm:text-2xl md:text-3xl text-white/90 font-semibold mb-3"
           >
             {examTitle}
           </motion.p>
@@ -89,8 +79,8 @@ export function Exam2Home({
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="text-base sm:text-lg text-white/70 max-w-3xl"
+            transition={{ delay: 0.3 }}
+            className="text-lg sm:text-xl text-white/80 max-w-3xl"
           >
             {examDescription}
           </motion.p>
@@ -109,10 +99,10 @@ export function Exam2Home({
           transition={{ delay: 0.4 }}
           className="mb-8"
         >
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+          <h2 className="text-3xl font-bold text-foreground mb-2">
             Study Chapters
           </h2>
-          <p className="text-gray-600 dark:text-gray-400">
+          <p className="text-muted-foreground">
             Explore minimalist answers to all Activity Tasks and Exam questions
           </p>
         </motion.div>
