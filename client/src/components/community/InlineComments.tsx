@@ -350,7 +350,9 @@ export function InlineComments({
                                 {comment.author.verified && (
                                   <Award className="w-3.5 h-3.5 text-muted-foreground" />
                                 )}
-                                <span className="text-xs text-muted-foreground">· {comment.author.role}</span>
+                                {comment.author.role && (
+                                  <span className="text-xs text-muted-foreground">· {comment.author.role}</span>
+                                )}
                                 <span className="text-xs text-muted-foreground">· {formatTimestamp(comment.timestamp)}</span>
                               </div>
                               <p className="text-sm text-foreground mb-2 leading-relaxed whitespace-pre-wrap">

@@ -189,8 +189,8 @@ export function PrivacySettings({ settings, anonymousPseudonym, year, onSave }: 
               </div>
               <p className="text-xs text-muted-foreground mt-1">
                 {localSettings.showYear
-                  ? `Posts will show "Medical Student Year ${localYear}"`
-                  : `Posts will only show "Medical Student"`}
+                  ? `Posts will show: 🎓 ${localYear}`
+                  : `Posts will not show any year information`}
               </p>
             </div>
           </label>

@@ -48,19 +48,13 @@ interface CommunityState {
 
 // Helper function to get role display with year if privacy settings allow
 const getRoleDisplay = (user: UserProfile, isAnonymous: boolean): string => {
-  if (isAnonymous) {
-    // For anonymous posts, show year if user has showYear enabled
-    if (user.year && user.privacySettings?.showYear) {
-      return `Medical Student Year ${user.year}`
-    }
-    return 'Medical Student'
+  // If user has enabled showYear and has a year set, show graduation cap + year number
+  if (user.year && user.privacySettings?.showYear) {
+    return `🎓 ${user.year}`
   }
 
-  // For non-anonymous posts, show year if user has it set and showYear enabled
-  if (user.year && user.privacySettings?.showYear) {
-    return `Medical Student Year ${user.year}`
-  }
-  return 'Medical Student'
+  // If showYear is disabled, return empty string (no year info shown)
+  return ''
 }
 
 export const useCommunityStore = create<CommunityState>((set, get) => ({

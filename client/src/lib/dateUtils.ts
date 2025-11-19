@@ -1,6 +1,11 @@
 import { Timestamp } from 'firebase/firestore'
 
-export function formatTimestamp(timestamp: Timestamp): string {
+export function formatTimestamp(timestamp: Timestamp | null | undefined): string {
+  // Handle null/undefined timestamps (can happen with serverTimestamp() before it's set)
+  if (!timestamp || !timestamp.toDate) {
+    return 'just now'
+  }
+
   const now = new Date()
   const date = timestamp.toDate()
   const diffInSeconds = Math.floor((now.getTime() - date.getTime()) / 1000)
@@ -43,7 +48,18 @@ export function formatTimestamp(timestamp: Timestamp): string {
   return date.toLocaleDateString('en-US', options)
 }
 
-export function formatDate(timestamp: Timestamp): string {
+export function formatDate(timestamp: Timestamp | null | undefined): string {
+  // Handle null/undefined timestamps (can happen with serverTimestamp() before it's set)
+  if (!timestamp || !timestamp.toDate) {
+    return new Date().toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
+    })
+  }
+
   const date = timestamp.toDate()
   const options: Intl.DateTimeFormatOptions = {
     year: 'numeric',

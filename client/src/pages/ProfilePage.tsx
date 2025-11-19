@@ -18,6 +18,7 @@ import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import { CommunitySidebar } from '@/components/community/CommunitySidebar'
 import { PrivacySettings } from '@/components/settings/PrivacySettings'
 import { AvatarPicker } from '@/components/settings/AvatarPicker'
+import { DisplayNameEditor } from '@/components/settings/DisplayNameEditor'
 import { formatTimestamp } from '@/lib/dateUtils'
 import type { Post } from '@/types/community'
 import type { PrivacySettings as PrivacySettingsType } from '@/types/community'
@@ -28,7 +29,7 @@ import { db } from '@/firebase/config'
 
 export function ProfilePage() {
   const navigate = useNavigate()
-  const { userProfile, signOut, updateUserProfile } = useAuth()
+  const { userProfile, loading: authLoading, signOut, updateUserProfile } = useAuth()
   const { posts, comments, currentUser, setCurrentUser, fetchPosts, fetchComments, toggleLike, toggleBookmark, updatePrivacySettings } = useCommunityStore()
   const [activeTab, setActiveTab] = useState<'posts' | 'activity' | 'privacy'>('posts')
   const [composeOpen, setComposeOpen] = useState(false)
@@ -73,21 +74,27 @@ export function ProfilePage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  // Profiles are private - only the owner can view their profile
-  // Note: In the current implementation, /profile route shows currentUser's own profile
-  // If we later implement /profile/:userId routes, add a check here:
-  // if (userId !== currentUser?.id) { navigate('/community'); return null; }
-  if (!currentUser) {
+  // Show loading state while authentication is in progress or user profile is being set up
+  if (authLoading || !currentUser) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
-          <h2 className="text-2xl font-bold mb-4">Not Logged In</h2>
-          <button
-            onClick={() => navigate('/login')}
-            className="px-6 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90"
-          >
-            Go to Login
-          </button>
+          {authLoading ? (
+            <>
+              <div className="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+              <p className="text-muted-foreground">Loading your profile...</p>
+            </>
+          ) : (
+            <>
+              <h2 className="text-2xl font-bold mb-4">Not Logged In</h2>
+              <button
+                onClick={() => navigate('/login')}
+                className="px-6 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90"
+              >
+                Go to Login
+              </button>
+            </>
+          )}
         </div>
       </div>
     )
@@ -181,6 +188,30 @@ export function ProfilePage() {
     }
   }
 
+  const handleSaveDisplayName = async (newName: string) => {
+    if (!userProfile || !currentUser) return
+
+    try {
+      // Update in Firebase
+      const userRef = doc(db, 'users', userProfile.uid)
+      await updateDoc(userRef, {
+        name: newName
+      })
+
+      // Update AuthContext userProfile to prevent reset
+      updateUserProfile({ name: newName })
+
+      // Update local state
+      setCurrentUser({
+        ...currentUser,
+        name: newName
+      })
+    } catch (error) {
+      console.error('Error updating display name:', error)
+      throw error
+    }
+  }
+
   return (
     <div className="min-h-screen bg-background flex">
       {/* Community Sidebar */}
@@ -263,13 +294,13 @@ export function ProfilePage() {
                     </div>
                   </div>
 
-                  {/* Edit Profile Button */}
+                  {/* Settings Button */}
                   <button
                     onClick={() => setActiveTab('privacy')}
                     className="flex items-center gap-2 px-4 py-2 rounded-lg border border-border hover:bg-muted transition-colors"
                   >
                     <Settings className="w-4 h-4" />
-                    <span className="text-sm font-medium">Edit Profile</span>
+                    <span className="text-sm font-medium">Settings</span>
                   </button>
                 </div>
               </div>
@@ -388,7 +419,7 @@ export function ProfilePage() {
                     : 'text-muted-foreground hover:text-foreground'
                 }`}
               >
-                Privacy Settings
+                Settings
                 {activeTab === 'privacy' && (
                   <motion.div
                     layoutId="activeTab"
@@ -427,6 +458,12 @@ export function ProfilePage() {
               </div>
             ) : activeTab === 'privacy' ? (
               <div className="space-y-6">
+                {/* Display Name Editor */}
+                <DisplayNameEditor
+                  currentName={currentUser?.name || ''}
+                  onSave={handleSaveDisplayName}
+                />
+
                 {/* Avatar Picker */}
                 <AvatarPicker
                   currentAvatar={currentUser?.avatar || '👤'}

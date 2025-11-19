@@ -72,8 +72,7 @@ export interface PostDisplay extends Omit<Post, 'timestamp' | 'createdAt' | 'upd
 
 export interface UserProfile {
   id: string
-  name: string
-  displayName?: string  // Optional username chosen by user
+  name: string  // Display name - shown on profile and posts (user can choose any name)
   email: string
   avatar: string
   role: string
@@ -84,5 +83,5 @@ export interface UserProfile {
   createdAt: Timestamp
   isAdmin?: boolean
   privacySettings?: PrivacySettings
-  anonymousPseudonym?: string  // Generated medical-themed pseudonym
+  anonymousPseudonym?: string  // Generated medical-themed pseudonym for anonymous posting
 }

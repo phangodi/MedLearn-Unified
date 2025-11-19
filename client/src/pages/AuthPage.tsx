@@ -15,6 +15,7 @@ import { useToast } from '@/components/ui/Toast'
 import { getAuthErrorMessage } from '@/lib/authErrors'
 import { validatePassword } from '@/lib/passwordValidation'
 import { PasswordStrengthIndicator } from '@/components/ui/PasswordStrengthIndicator'
+import { validateDisplayName } from '@/lib/displayNameValidation'
 
 export function AuthPage() {
   const navigate = useNavigate()
@@ -49,6 +50,15 @@ export function AuthPage() {
         setEmail('')
         setTimeout(() => setMode('signin'), 2000)
       } else if (mode === 'signup') {
+        // Validate display name
+        const displayNameValidation = validateDisplayName(name)
+        if (!displayNameValidation.isValid) {
+          setError(displayNameValidation.error || 'Invalid display name')
+          toast.error(displayNameValidation.error || 'Invalid display name')
+          setLocalLoading(false)
+          return
+        }
+
         // Validate password strength before signup
         const passwordError = validatePassword(password)
         if (passwordError) {
@@ -88,6 +98,22 @@ export function AuthPage() {
       navigate('/dashboard')
     } catch (err: any) {
       console.error('Google sign-in error:', err)
+
+      // Handle popup closed by user - don't show scary error, just reset
+      if (err?.code === 'auth/popup-closed-by-user' ||
+          err?.code === 'auth/cancelled-popup-request' ||
+          err?.code === 'auth/timeout') {
+        // User cancelled or timeout, silently reset without showing error
+        return
+      }
+
+      // Handle popup blocked
+      if (err?.code === 'auth/popup-blocked') {
+        setError('Please allow popups for this site to sign in with Google.')
+        toast.error('Please allow popups for this site to sign in with Google.')
+        return
+      }
+
       const friendlyMessage = getAuthErrorMessage(err)
       setError(friendlyMessage)
       toast.error(friendlyMessage)
@@ -106,6 +132,22 @@ export function AuthPage() {
       navigate('/dashboard')
     } catch (err: any) {
       console.error('Apple sign-in error:', err)
+
+      // Handle popup closed by user - don't show scary error, just reset
+      if (err?.code === 'auth/popup-closed-by-user' ||
+          err?.code === 'auth/cancelled-popup-request' ||
+          err?.code === 'auth/timeout') {
+        // User cancelled or timeout, silently reset without showing error
+        return
+      }
+
+      // Handle popup blocked
+      if (err?.code === 'auth/popup-blocked') {
+        setError('Please allow popups for this site to sign in with Apple.')
+        toast.error('Please allow popups for this site to sign in with Apple.')
+        return
+      }
+
       const friendlyMessage = getAuthErrorMessage(err)
       setError(friendlyMessage)
       toast.error(friendlyMessage)
@@ -233,18 +275,19 @@ export function AuthPage() {
             <form onSubmit={handleEmailAuth} className="space-y-3">
               {mode === 'signup' && (
                 <div className="space-y-2">
-                  <Label htmlFor="name">Full Name</Label>
+                  <Label htmlFor="name">Name</Label>
                   <div className="relative">
                     <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                     <Input
                       id="name"
                       type="text"
-                      placeholder="John Doe"
+                      placeholder="Your name"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       className="pl-10"
                       required
                       disabled={localLoading}
+                      maxLength={30}
                     />
                   </div>
                 </div>

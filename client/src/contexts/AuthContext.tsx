@@ -24,8 +24,7 @@ interface PrivacySettings {
 interface UserProfile {
   uid: string
   email: string
-  name: string
-  displayName?: string
+  name: string  // Display name - shown on profile and posts
   avatar: string
   role: 'user' | 'moderator' | 'admin' | 'superadmin'
   year?: number
@@ -178,7 +177,16 @@ export function AuthProvider({ children }: AuthProviderProps) {
     provider.setCustomParameters({
       prompt: 'select_account',
     })
-    await signInWithPopup(auth, provider)
+
+    // Add timeout to prevent hanging if popup is blocked or closed
+    const timeoutPromise = new Promise((_, reject) => {
+      setTimeout(() => reject({ code: 'auth/timeout', message: 'Sign-in timeout' }), 60000) // 60 second timeout
+    })
+
+    await Promise.race([
+      signInWithPopup(auth, provider),
+      timeoutPromise
+    ])
   }
 
   // Sign in with Apple
@@ -187,7 +195,16 @@ export function AuthProvider({ children }: AuthProviderProps) {
     const provider = new OAuthProvider('apple.com')
     provider.addScope('email')
     provider.addScope('name')
-    await signInWithPopup(auth, provider)
+
+    // Add timeout to prevent hanging if popup is blocked or closed
+    const timeoutPromise = new Promise((_, reject) => {
+      setTimeout(() => reject({ code: 'auth/timeout', message: 'Sign-in timeout' }), 60000) // 60 second timeout
+    })
+
+    await Promise.race([
+      signInWithPopup(auth, provider),
+      timeoutPromise
+    ])
   }
 
   // Sign out

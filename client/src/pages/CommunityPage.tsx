@@ -1038,19 +1038,12 @@ export function CommunityPage() {
                               {post.author.verified && (
                                 <Award className="w-3.5 h-3.5 text-muted-foreground flex-shrink-0" />
                               )}
-                              {/* Year Badge - Only show if role contains year */}
-                              {(() => {
-                                const yearMatch = post.author.role.match(/Year (\d+)/)
-                                if (yearMatch) {
-                                  return (
-                                    <div className="inline-flex items-center gap-0.5 text-muted-foreground flex-shrink-0" title={`Medical Student Year ${yearMatch[1]}`}>
-                                      <GraduationCap className="w-3.5 h-3.5" />
-                                      <span className="text-xs font-medium">{yearMatch[1]}</span>
-                                    </div>
-                                  )
-                                }
-                                return null
-                              })()}
+                              {/* Year Badge - Only show if role is not empty */}
+                              {post.author.role && (
+                                <span className="text-xs text-muted-foreground flex-shrink-0">
+                                  {post.author.role}
+                                </span>
+                              )}
                             </div>
                             <span className="text-muted-foreground text-xs">•</span>
                             <span className="text-xs text-muted-foreground whitespace-nowrap">
