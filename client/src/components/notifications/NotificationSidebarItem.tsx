@@ -15,6 +15,7 @@ export function NotificationSidebarItem({ isCollapsed, onOpenChange }: Notificat
   const [isOpen, setIsOpen] = useState(false)
   const panelRef = useRef<HTMLDivElement>(null)
   const buttonRef = useRef<HTMLButtonElement>(null)
+  const hoverGuardRef = useRef(false)
 
   // Close dropdown when clicking outside - SIMPLE VERSION
   useEffect(() => {
@@ -32,6 +33,7 @@ export function NotificationSidebarItem({ isCollapsed, onOpenChange }: Notificat
       }
 
       // Close if clicking anywhere else
+      hoverGuardRef.current = false
       setIsOpen(false)
       onOpenChange?.(false)
     }
@@ -55,10 +57,25 @@ export function NotificationSidebarItem({ isCollapsed, onOpenChange }: Notificat
           markAsRead(n.id)
         }
       })
+      hoverGuardRef.current = false
     }
 
     setIsOpen(newIsOpen)
     onOpenChange?.(newIsOpen)
+  }
+
+  const handleHoverStart = () => {
+    if (!isOpen && !hoverGuardRef.current) {
+      hoverGuardRef.current = true
+      onOpenChange?.(true)
+    }
+  }
+
+  const handleHoverEnd = () => {
+    if (!isOpen && hoverGuardRef.current) {
+      hoverGuardRef.current = false
+      onOpenChange?.(false)
+    }
   }
 
   const handleAction = (notification: Notification) => {
@@ -66,6 +83,7 @@ export function NotificationSidebarItem({ isCollapsed, onOpenChange }: Notificat
 
     // ALWAYS dismiss first, then take action
     dismissNotification(notification.id)
+    hoverGuardRef.current = false
     setIsOpen(false)
     onOpenChange?.(false) // Notify parent
 
@@ -100,6 +118,10 @@ export function NotificationSidebarItem({ isCollapsed, onOpenChange }: Notificat
         ref={buttonRef}
         type="button"
         onClick={handleOpen}
+        onMouseEnter={handleHoverStart}
+        onFocus={handleHoverStart}
+        onMouseLeave={handleHoverEnd}
+        onBlur={handleHoverEnd}
         className={`sidebar-item w-full flex items-center ${
           isCollapsed ? 'justify-center' : 'space-x-2.5'
         } px-3 py-2 rounded-lg text-left relative outline-none focus:outline-none`}
