@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Sidebar } from '@/components/layout/Sidebar'
+import { DashboardReturnMarker } from '@/components/layout/DashboardReturnMarker'
 import SociologyApp from '@/apps/sociology/App'
 
 export function SociologyExam1Page() {
@@ -8,7 +9,8 @@ export function SociologyExam1Page() {
 
   return (
     <div className="min-h-screen bg-background flex">
-      <div className="relative z-10">
+      {/* Desktop sidebar - hidden on mobile */}
+      <div className="hidden lg:block">
         <Sidebar
           isOpen={sidebarOpen}
           setIsOpen={setSidebarOpen}
@@ -16,6 +18,12 @@ export function SociologyExam1Page() {
           setIsCollapsed={setSidebarCollapsed}
         />
       </div>
+
+      {/* Mobile-only dashboard return marker */}
+      <div className="lg:hidden">
+        <DashboardReturnMarker />
+      </div>
+
       <main className="flex-1 overflow-auto">
         <SociologyApp />
       </main>

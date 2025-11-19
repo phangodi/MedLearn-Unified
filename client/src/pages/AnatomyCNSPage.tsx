@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Sidebar } from '@/components/layout/Sidebar'
+import { DashboardReturnMarker } from '@/components/layout/DashboardReturnMarker'
 import AnatomyApp from '@/apps/anatomy/App'
 
 export function AnatomyCNSPage() {
@@ -24,7 +25,8 @@ export function AnatomyCNSPage() {
 
   return (
     <div className="min-h-screen bg-background flex">
-      <div className="relative z-10">
+      {/* Desktop sidebar - hidden on mobile */}
+      <div className="hidden lg:block">
         <Sidebar
           isOpen={sidebarOpen}
           setIsOpen={setSidebarOpen}
@@ -32,6 +34,12 @@ export function AnatomyCNSPage() {
           setIsCollapsed={setSidebarCollapsed}
         />
       </div>
+
+      {/* Mobile-only dashboard return marker */}
+      <div className="lg:hidden">
+        <DashboardReturnMarker />
+      </div>
+
       <main className="flex-1 overflow-auto">
         <AnatomyApp />
       </main>
