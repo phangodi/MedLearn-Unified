@@ -260,6 +260,27 @@ Legacy apps provide different study formats:
 3. **Sociology App:** 5 chapters with hierarchical content and search
 4. **Anatomy CNS App:** Cranial nerves reference, brainstem anatomy
 
+## Recent Updates (January 2025)
+
+### Settings Dropdown Panel
+- **Location:** `client/src/components/layout/Sidebar.tsx`
+- **Feature:** Replaced direct profile navigation with dropdown settings panel
+- **Includes:** Edit Profile, Theme Toggle (light/dark), Logout
+- **Status:** ✅ Working in both expanded and collapsed sidebar states
+- **Design:** Matches sidebar aesthetic with smooth animations and proper z-index handling
+
+### Notification Panel Single-Click Fix
+- **Location:** `client/src/components/notifications/NotificationSidebarItem.tsx`
+- **Issue:** Notifications required double-click to open (timing conflict with collapse/expand hover)
+- **Fix:** Resolved click event timing to enable single-click opening
+- **Status:** ✅ Working - maintains all collapse/expand functionality
+
+### AI Exam Prep Coming Soon Page
+- **Location:** `client/src/pages/AIExamPrepPage.tsx`
+- **Route:** `/ai-prep`
+- **Features:** Premium coming soon design with animated background, floating icons, hero section
+- **Status:** ✅ Implemented with `showFullContent` toggle for future sections
+
 ## Known Technical Debt
 
 - Zustand state management not yet configured
