@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Sidebar } from '@/components/layout/Sidebar'
 import { DashboardReturnMarker } from '@/components/layout/DashboardReturnMarker'
 import HistologyApp from '@/apps/histology/mto1/App'
@@ -7,6 +7,12 @@ import '@/apps/histology/mto1/index.css'
 export function HistologyMTO1Page() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
+
+  // Auto-collapse sidebar on legacy app pages (desktop only)
+  useEffect(() => {
+    setSidebarCollapsed(true)
+    localStorage.setItem('sidebarCollapsed', 'true')
+  }, [])
 
   return (
     <div className="min-h-screen bg-background flex">

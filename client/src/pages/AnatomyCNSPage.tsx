@@ -16,6 +16,10 @@ export function AnatomyCNSPage() {
     root.classList.remove('dark', 'light')
     root.classList.add('light')
 
+    // Auto-collapse sidebar on legacy app pages (desktop only)
+    setSidebarCollapsed(true)
+    localStorage.setItem('sidebarCollapsed', 'true')
+
     // Restore original theme when leaving this page
     return () => {
       root.classList.remove('dark', 'light')

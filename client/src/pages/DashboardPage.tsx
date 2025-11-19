@@ -21,6 +21,10 @@ export function DashboardPage() {
   // Set notification target to global for dashboard
   useEffect(() => {
     setCurrentTarget('global')
+
+    // Auto-expand sidebar when returning to dashboard
+    setSidebarCollapsed(false)
+    localStorage.setItem('sidebarCollapsed', 'false')
   }, [setCurrentTarget])
 
   const handleLogout = async () => {

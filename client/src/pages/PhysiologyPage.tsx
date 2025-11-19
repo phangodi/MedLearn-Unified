@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Sidebar } from '@/components/layout/Sidebar'
 import { DashboardReturnMarker } from '@/components/layout/DashboardReturnMarker'
 import PhysiologyApp from '@/apps/physiology'
@@ -6,6 +6,12 @@ import PhysiologyApp from '@/apps/physiology'
 export function PhysiologyPage() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
+
+  // Auto-collapse sidebar on legacy app pages (desktop only)
+  useEffect(() => {
+    setSidebarCollapsed(true)
+    localStorage.setItem('sidebarCollapsed', 'true')
+  }, [])
 
   return (
     <div className="min-h-screen bg-background flex">

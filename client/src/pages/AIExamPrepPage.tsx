@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import {
   Sparkles,
@@ -24,6 +24,12 @@ export function AIExamPrepPage() {
   const [isSubscribed, setIsSubscribed] = useState(false)
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
+
+  // Auto-expand sidebar on non-legacy pages
+  useEffect(() => {
+    setSidebarCollapsed(false)
+    localStorage.setItem('sidebarCollapsed', 'false')
+  }, [])
 
   // Toggle to show/hide additional content sections
   const showFullContent = false

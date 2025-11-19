@@ -6,7 +6,7 @@ import { Particles } from '@/components/ui/Particles'
 import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import { Button } from '@/components/ui/Button'
 import { LogOut, User } from 'lucide-react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useAuth } from '@/contexts/AuthContext'
 
 export function AnatomyPage() {
@@ -14,6 +14,12 @@ export function AnatomyPage() {
   const { signOut } = useAuth()
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
+
+  // Auto-expand sidebar on subject landing pages
+  useEffect(() => {
+    setSidebarCollapsed(false)
+    localStorage.setItem('sidebarCollapsed', 'false')
+  }, [])
 
   const handleLogout = async () => {
     await signOut()
