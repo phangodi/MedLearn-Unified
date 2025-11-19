@@ -1,4 +1,5 @@
-import { useState, useMemo, useRef, useEffect } from 'react'
+import { useState, useMemo, useRef, useEffect, useLayoutEffect, useCallback } from 'react'
+import { createPortal } from 'react-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Brain,
@@ -39,15 +40,22 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
   const [showExpandTooltip, setShowExpandTooltip] = useState(false)
   const [notificationsOpen, setNotificationsOpen] = useState(false)
   const [settingsOpen, setSettingsOpen] = useState(false)
+  const [settingsPosition, setSettingsPosition] = useState<{
+    top: number
+    left: number
+    width: number
+    transform: string
+  } | null>(null)
   const settingsPanelRef = useRef<HTMLDivElement>(null)
   const settingsButtonRef = useRef<HTMLButtonElement>(null)
 
-  // Close settings panel when clicking outside (only when expanded)
+  // Close settings panel when clicking outside
   useEffect(() => {
+    if (!settingsOpen) return
+
     function handleClickOutside(event: MouseEvent) {
       const target = event.target as Node
 
-      // Don't close if clicking the settings button or inside the panel
       if (
         settingsButtonRef.current?.contains(target) ||
         settingsPanelRef.current?.contains(target)
@@ -55,21 +63,60 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
         return
       }
 
-      // Close the panel if clicking outside
       setSettingsOpen(false)
     }
 
-    // Only enable click-outside detection when sidebar is expanded
-    if (settingsOpen && !isCollapsed) {
-      setTimeout(() => {
-        document.addEventListener('click', handleClickOutside)
-      }, 0)
-
-      return () => {
-        document.removeEventListener('click', handleClickOutside)
-      }
+    document.addEventListener('click', handleClickOutside)
+    return () => {
+      document.removeEventListener('click', handleClickOutside)
     }
-  }, [settingsOpen, isCollapsed])
+  }, [settingsOpen])
+
+  const updateSettingsPanelPosition = useCallback((anchor?: HTMLButtonElement | null) => {
+    const button = anchor ?? settingsButtonRef.current
+    if (!button) return
+
+    const rect = button.getBoundingClientRect()
+    const scrollX = window.scrollX || window.pageXOffset
+    const scrollY = window.scrollY || window.pageYOffset
+
+    if (isCollapsed) {
+      setSettingsPosition({
+        top: rect.top + scrollY + rect.height / 2,
+        left: rect.right + scrollX + 12,
+        width: 192,
+        transform: 'translateY(-50%)'
+      })
+    } else {
+      setSettingsPosition({
+        top: rect.top + scrollY - 8,
+        left: rect.left + scrollX,
+        width: rect.width,
+        transform: 'translateY(-100%)'
+      })
+    }
+  }, [isCollapsed])
+
+  useLayoutEffect(() => {
+    if (!settingsOpen) return
+
+    const handleWindowChange = () => updateSettingsPanelPosition()
+    updateSettingsPanelPosition()
+
+    window.addEventListener('resize', handleWindowChange)
+    window.addEventListener('scroll', handleWindowChange, true)
+
+    return () => {
+      window.removeEventListener('resize', handleWindowChange)
+      window.removeEventListener('scroll', handleWindowChange, true)
+    }
+  }, [settingsOpen, updateSettingsPanelPosition])
+
+  useEffect(() => {
+    if (!settingsOpen) {
+      setSettingsPosition(null)
+    }
+  }, [settingsOpen])
 
   const toggleSection = (section: string) => {
     setExpandedSections(prev =>
@@ -386,8 +433,17 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
         {/* Settings Button with Dropdown */}
         <div className="relative">
           <button
-            ref={settingsButtonRef}
-            onClick={() => setSettingsOpen(!settingsOpen)}
+            onClick={(event) => {
+              const button = event.currentTarget
+              settingsButtonRef.current = button
+
+              if (settingsOpen) {
+                setSettingsOpen(false)
+              } else {
+                updateSettingsPanelPosition(button)
+                setSettingsOpen(true)
+              }
+            }}
             className={`sidebar-item ${
               settingsOpen ? 'active' : ''
             } w-full flex items-center ${isCollapsed ? 'justify-center' : 'space-x-2.5'} px-3 py-2 rounded-lg text-left`}
@@ -398,126 +454,197 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
           </button>
 
           {/* Settings Dropdown Panel */}
-          <AnimatePresence>
-            {settingsOpen && (
-              <>
-                {/* Backdrop for mobile */}
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  className="fixed inset-0 bg-black/20 z-40 lg:hidden"
-                  onClick={() => setSettingsOpen(false)}
-                />
+          {isCollapsed
+            ? createPortal(
+                <AnimatePresence>
+                  {settingsOpen && settingsPosition && (
+                    <>
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 bg-black/20 z-40 lg:hidden"
+                        onClick={() => setSettingsOpen(false)}
+                      />
 
-                {/* Settings Panel */}
-                <motion.div
-                  ref={settingsPanelRef}
-                  initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                  transition={{ duration: 0.15, ease: 'easeOut' }}
-                  className={`absolute ${
-                    isCollapsed ? 'left-full ml-2 bottom-0 w-48' : 'bottom-full left-0 right-0 mb-2'
-                  } bg-card border border-border/50 rounded-lg shadow-lg overflow-hidden z-50`}
-                >
-                  <div className="p-2 space-y-1">
-                    {/* Edit Profile */}
-                    <button
-                      type="button"
-                      onClick={() => {
-                        navigate('/profile')
-                        setSettingsOpen(false)
-                      }}
-                      className="sidebar-item w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg text-left"
-                    >
-                      <User className="sidebar-icon w-4.5 h-4.5" />
-                      <span className="text-sm">Edit Profile</span>
-                    </button>
+                      <motion.div
+                        ref={settingsPanelRef}
+                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                        transition={{ duration: 0.15, ease: 'easeOut' }}
+                        className="fixed bg-card border border-border/50 rounded-lg shadow-lg overflow-hidden z-[9999]"
+                        style={{
+                          top: settingsPosition.top,
+                          left: settingsPosition.left,
+                          width: settingsPosition.width,
+                          transform: settingsPosition.transform,
+                          transformOrigin: 'top left'
+                        }}
+                      >
+                        <div className="p-2 space-y-1">
+                          <button
+                            type="button"
+                            onClick={() => {
+                              navigate('/profile')
+                              setSettingsOpen(false)
+                            }}
+                            className="sidebar-item w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg text-left"
+                          >
+                            <User className="sidebar-icon w-4.5 h-4.5" />
+                            <span className="text-sm">Edit Profile</span>
+                          </button>
 
-                    {/* Theme Toggle */}
-                    <button
-                      type="button"
-                      onClick={() => {
-                        toggleTheme()
-                      }}
-                      className="sidebar-item w-full flex items-center justify-between px-3 py-2 rounded-lg text-left"
-                    >
-                      <div className="flex items-center space-x-2.5">
-                        {theme === 'dark' ? (
-                          <Moon className="sidebar-icon w-4.5 h-4.5" />
-                        ) : (
-                          <Sun className="sidebar-icon w-4.5 h-4.5" />
-                        )}
-                        <span className="text-sm">Theme</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <span className="text-xs text-muted-foreground capitalize">{theme}</span>
-                        {/* Toggle Switch Visual */}
-                        <div className={`relative w-9 h-5 rounded-full transition-colors ${
-                          theme === 'dark' ? 'bg-primary' : 'bg-gray-300'
-                        }`}>
-                          <motion.div
-                            layout
-                            transition={{ type: 'spring', stiffness: 500, damping: 30 }}
-                            className="absolute top-0.5 w-4 h-4 bg-white rounded-full shadow-md"
-                            style={{ left: theme === 'dark' ? '18px' : '2px' }}
-                          />
+                          <button
+                            type="button"
+                            onClick={() => {
+                              toggleTheme()
+                            }}
+                            className="sidebar-item w-full flex items-center justify-between px-3 py-2 rounded-lg text-left"
+                          >
+                            <div className="flex items-center space-x-2.5">
+                              {theme === 'dark' ? (
+                                <Moon className="sidebar-icon w-4.5 h-4.5" />
+                              ) : (
+                                <Sun className="sidebar-icon w-4.5 h-4.5" />
+                              )}
+                              <span className="text-sm">Theme</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                              <span className="text-xs text-muted-foreground capitalize">{theme}</span>
+                              <div className={`relative w-9 h-5 rounded-full transition-colors ${
+                                theme === 'dark' ? 'bg-primary' : 'bg-gray-300'
+                              }`}>
+                                <motion.div
+                                  layout
+                                  transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+                                  className="absolute top-0.5 w-4 h-4 bg-white rounded-full shadow-md"
+                                  style={{ left: theme === 'dark' ? '18px' : '2px' }}
+                                />
+                              </div>
+                            </div>
+                          </button>
+
+                          <div className="h-px bg-border/50 my-1" />
+
+                          <button
+                            type="button"
+                            onClick={handleLogout}
+                            className="sidebar-item w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg text-left text-red-500 dark:text-red-400"
+                          >
+                            <LogOut className="w-4.5 h-4.5" />
+                            <span className="text-sm">Logout</span>
+                          </button>
                         </div>
-                      </div>
-                    </button>
-
-                    {/* Divider */}
-                    <div className="h-px bg-border/50 my-1" />
-
-                    {/* Logout */}
-                    <button
-                      type="button"
-                      onClick={handleLogout}
-                      className="sidebar-item w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg text-left text-red-500 dark:text-red-400"
+                      </motion.div>
+                    </>
+                  )}
+                </AnimatePresence>,
+                document.body
+              )
+            : (
+                <AnimatePresence>
+                  {settingsOpen && (
+                    <motion.div
+                      ref={settingsPanelRef}
+                      initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                      transition={{ duration: 0.15, ease: 'easeOut' }}
+                      className="absolute bottom-full left-0 right-0 mb-2 bg-card border border-border/50 rounded-lg shadow-lg overflow-hidden z-50"
                     >
-                      <LogOut className="w-4.5 h-4.5" />
-                      <span className="text-sm">Logout</span>
-                    </button>
-                  </div>
-                </motion.div>
-              </>
-            )}
-          </AnimatePresence>
+                      <div className="p-2 space-y-1">
+                        <button
+                          type="button"
+                          onClick={() => {
+                            navigate('/profile')
+                            setSettingsOpen(false)
+                          }}
+                          className="sidebar-item w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg text-left"
+                        >
+                          <User className="sidebar-icon w-4.5 h-4.5" />
+                          <span className="text-sm">Edit Profile</span>
+                        </button>
+
+                        <button
+                          type="button"
+                          onClick={() => {
+                            toggleTheme()
+                          }}
+                          className="sidebar-item w-full flex items-center justify-between px-3 py-2 rounded-lg text-left"
+                        >
+                          <div className="flex items-center space-x-2.5">
+                            {theme === 'dark' ? (
+                              <Moon className="sidebar-icon w-4.5 h-4.5" />
+                            ) : (
+                              <Sun className="sidebar-icon w-4.5 h-4.5" />
+                            )}
+                            <span className="text-sm">Theme</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <span className="text-xs text-muted-foreground capitalize">{theme}</span>
+                            <div className={`relative w-9 h-5 rounded-full transition-colors ${
+                              theme === 'dark' ? 'bg-primary' : 'bg-gray-300'
+                            }`}>
+                              <motion.div
+                                layout
+                                transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+                                className="absolute top-0.5 w-4 h-4 bg-white rounded-full shadow-md"
+                                style={{ left: theme === 'dark' ? '18px' : '2px' }}
+                              />
+                            </div>
+                          </div>
+                        </button>
+
+                        <div className="h-px bg-border/50 my-1" />
+
+                        <button
+                          type="button"
+                          onClick={handleLogout}
+                          className="sidebar-item w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg text-left text-red-500 dark:text-red-400"
+                        >
+                          <LogOut className="w-4.5 h-4.5" />
+                          <span className="text-sm">Logout</span>
+                        </button>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              )}
         </div>
       </div>
 
       {/* Collapse/Expand interaction area - DISABLED when notifications or settings are open */}
       {!notificationsOpen && !settingsOpen && (
-      <motion.div
-        className="hidden lg:flex absolute top-0 bottom-0 -right-3 w-6 items-center justify-center cursor-col-resize z-20 group"
-        onMouseEnter={() => setShowExpandTooltip(true)}
-        onMouseLeave={() => setShowExpandTooltip(false)}
-        onClick={() => setIsCollapsed(!isCollapsed)}
-        drag="x"
-        dragConstraints={{ left: 0, right: 0 }}
-        dragElastic={0.1}
-        onDragEnd={(_e, info) => {
-          // Detect drag direction and velocity for smooth interaction
-          const threshold = 30 // pixels to trigger
-          const velocityThreshold = 200 // velocity to auto-trigger
+        <motion.div
+          className="hidden lg:flex absolute top-0 bottom-0 -right-3 w-6 items-center justify-center cursor-col-resize z-20 group"
+          onMouseEnter={() => setShowExpandTooltip(true)}
+          onMouseLeave={() => setShowExpandTooltip(false)}
+          onClick={() => setIsCollapsed(!isCollapsed)}
+          drag="x"
+          dragConstraints={{ left: 0, right: 0 }}
+          dragElastic={0.1}
+          onDragEnd={(_e, info) => {
+            // Detect drag direction and velocity for smooth interaction
+            const threshold = 30 // pixels to trigger
+            const velocityThreshold = 200 // velocity to auto-trigger
 
-          if (Math.abs(info.offset.x) > threshold || Math.abs(info.velocity.x) > velocityThreshold) {
-            if (isCollapsed) {
-              // If collapsed, dragging left expands
-              if (info.offset.x < -threshold || info.velocity.x < -velocityThreshold) {
-                setIsCollapsed(false)
-              }
-            } else {
-              // If expanded, dragging right collapses
-              if (info.offset.x > threshold || info.velocity.x > velocityThreshold) {
-                setIsCollapsed(true)
+            if (Math.abs(info.offset.x) > threshold || Math.abs(info.velocity.x) > velocityThreshold) {
+              if (isCollapsed) {
+                // If collapsed, dragging left expands
+                if (info.offset.x < -threshold || info.velocity.x < -velocityThreshold) {
+                  setIsCollapsed(false)
+                }
+              } else {
+                // If expanded, dragging right collapses
+                if (info.offset.x > threshold || info.velocity.x > velocityThreshold) {
+                  setIsCollapsed(true)
+                }
               }
             }
-          }
-        }}
-        whileDrag={{ scale: 1.05 }}
-      >
+          }}
+          whileDrag={{ scale: 1.05 }}
+        >
         {/* Subtle marker line (always visible) - centered in drag area */}
         <div className="w-1 h-8 bg-gradient-to-b from-primary/30 via-primary/50 to-primary/30 group-hover:from-primary/50 group-hover:via-primary/70 group-hover:to-primary/50 transition-all duration-300 rounded-full shadow-sm" />
 
