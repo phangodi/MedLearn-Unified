@@ -33,6 +33,7 @@ export function ProfilePage() {
   const { posts, comments, currentUser, setCurrentUser, fetchPosts, fetchComments, toggleLike, toggleBookmark, updatePrivacySettings } = useCommunityStore()
   const [activeTab, setActiveTab] = useState<'posts' | 'activity' | 'privacy'>('posts')
   const [composeOpen, setComposeOpen] = useState(false)
+  const [sidebarOpen, setSidebarOpen] = useState(false)
 
   // Initialize user from auth
   useEffect(() => {
@@ -222,10 +223,12 @@ export function ProfilePage() {
           // Navigate to community page with the selected section
           navigate('/community', { state: { activeSection: section } })
         }}
+        isOpen={sidebarOpen}
+        setIsOpen={setSidebarOpen}
       />
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col ml-64">
+      <div className="flex-1 flex flex-col lg:ml-64">
         {/* Header */}
         <header className="sticky top-0 z-30 bg-card/80 backdrop-blur-md border-b border-border">
           <div className="max-w-7xl mx-auto px-6 py-4">

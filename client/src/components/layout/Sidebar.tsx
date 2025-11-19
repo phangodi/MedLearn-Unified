@@ -49,6 +49,33 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
   const settingsPanelRef = useRef<HTMLDivElement>(null)
   const settingsButtonRef = useRef<HTMLButtonElement>(null)
 
+  // Auto-hide hamburger menu on scroll
+  const [showHamburger, setShowHamburger] = useState(true)
+  const [lastScrollY, setLastScrollY] = useState(0)
+  const scrollThreshold = 10 // Minimum scroll distance to trigger hide/show
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+
+      if (currentScrollY < scrollThreshold) {
+        // At the top of the page - always show
+        setShowHamburger(true)
+      } else if (currentScrollY > lastScrollY) {
+        // Scrolling down - hide hamburger
+        setShowHamburger(false)
+      } else if (lastScrollY - currentScrollY > scrollThreshold) {
+        // Scrolling up - show hamburger
+        setShowHamburger(true)
+      }
+
+      setLastScrollY(currentScrollY)
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [lastScrollY])
+
   // Close settings panel when clicking outside
   useEffect(() => {
     if (!settingsOpen) return
@@ -721,15 +748,27 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
         <SidebarContent />
       </motion.aside>
 
-      {/* Mobile menu button */}
-      <Button
-        variant="outline"
-        size="sm"
-        onClick={() => setIsOpen(true)}
-        className="fixed top-4 left-4 z-30 lg:hidden"
-      >
-        <Menu className="w-4 h-4" />
-      </Button>
+      {/* Mobile menu button with auto-hide */}
+      <AnimatePresence>
+        {showHamburger && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.2 }}
+            className="fixed top-4 left-4 z-[60] lg:hidden"
+          >
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => setIsOpen(true)}
+              className="shadow-lg bg-card hover:bg-muted border-border"
+            >
+              <Menu className="w-4 h-4" />
+            </Button>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   )
 }

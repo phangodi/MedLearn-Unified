@@ -8,14 +8,12 @@ export function PhysiologyPage() {
 
   return (
     <div className="min-h-screen bg-background flex">
-      <div className="relative z-10">
-        <Sidebar
-          isOpen={sidebarOpen}
-          setIsOpen={setSidebarOpen}
-          isCollapsed={sidebarCollapsed}
-          setIsCollapsed={setSidebarCollapsed}
-        />
-      </div>
+      <Sidebar
+        isOpen={sidebarOpen}
+        setIsOpen={setSidebarOpen}
+        isCollapsed={sidebarCollapsed}
+        setIsCollapsed={setSidebarCollapsed}
+      />
       <main className="flex-1 overflow-auto">
         <PhysiologyApp />
       </main>

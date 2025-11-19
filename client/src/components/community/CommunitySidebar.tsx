@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion'
+import { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import {
   Home,
@@ -8,13 +9,18 @@ import {
   Heart,
   FileText,
   ArrowLeft,
-  Users
+  Users,
+  Menu,
+  X
 } from 'lucide-react'
 import { NotificationSidebarItem } from '@/components/notifications/NotificationSidebarItem'
+import { Button } from '@/components/ui/Button'
 
 interface CommunitySidebarProps {
   activeSection: string
   onSectionChange: (section: string) => void
+  isOpen: boolean
+  setIsOpen: (open: boolean) => void
 }
 
 const menuItems = [
@@ -26,14 +32,47 @@ const menuItems = [
   { id: 'profile', label: 'Profile', icon: User, description: 'Your profile' },
 ]
 
-export function CommunitySidebar({ activeSection, onSectionChange }: CommunitySidebarProps) {
+export function CommunitySidebar({ activeSection, onSectionChange, isOpen, setIsOpen }: CommunitySidebarProps) {
   const navigate = useNavigate()
 
-  return (
-    <div className="w-64 h-screen bg-card border-r border-border flex flex-col fixed left-0 top-0 z-40">
-      {/* Logo / Branding */}
-      <div className="p-6 border-b border-border">
-        <div className="flex items-center gap-3 w-full">
+  // Auto-hide hamburger menu on scroll
+  const [showHamburger, setShowHamburger] = useState(true)
+  const [lastScrollY, setLastScrollY] = useState(0)
+  const scrollThreshold = 10 // Minimum scroll distance to trigger hide/show
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+
+      if (currentScrollY < scrollThreshold) {
+        // At the top of the page - always show
+        setShowHamburger(true)
+      } else if (currentScrollY > lastScrollY) {
+        // Scrolling down - hide hamburger
+        setShowHamburger(false)
+      } else if (lastScrollY - currentScrollY > scrollThreshold) {
+        // Scrolling up - show hamburger
+        setShowHamburger(true)
+      }
+
+      setLastScrollY(currentScrollY)
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [lastScrollY])
+
+  const handleNavigate = (callback: () => void) => {
+    callback()
+    // Close sidebar on mobile after navigation
+    setIsOpen(false)
+  }
+
+  const SidebarContent = () => (
+    <>
+      {/* Header with close button for mobile */}
+      <div className="p-6 border-b border-border flex items-center justify-between">
+        <div className="flex items-center gap-3">
           <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-md">
             <Users className="w-4 h-4 text-primary-foreground" />
           </div>
@@ -46,6 +85,14 @@ export function CommunitySidebar({ activeSection, onSectionChange }: CommunitySi
             </div>
           </div>
         </div>
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={() => setIsOpen(false)}
+          className="lg:hidden"
+        >
+          <X className="w-4 h-4" />
+        </Button>
       </div>
 
       {/* Navigation Menu */}
@@ -103,7 +150,7 @@ export function CommunitySidebar({ activeSection, onSectionChange }: CommunitySi
         <div className="space-y-1">
           {/* Back to Dashboard - Prominent Position */}
           <motion.button
-            onClick={() => navigate('/dashboard')}
+            onClick={() => handleNavigate(() => navigate('/dashboard'))}
             whileHover={{ scale: 1.02, x: 4 }}
             whileTap={{ scale: 0.98 }}
             className="community-sidebar-item w-full flex items-center gap-3 px-4 py-3 rounded-lg mb-3"
@@ -135,9 +182,9 @@ export function CommunitySidebar({ activeSection, onSectionChange }: CommunitySi
                 onClick={() => {
                   // Navigate to profile page if profile is clicked
                   if (item.id === 'profile') {
-                    navigate('/profile')
+                    handleNavigate(() => navigate('/profile'))
                   } else {
-                    onSectionChange(item.id)
+                    handleNavigate(() => onSectionChange(item.id))
                   }
                 }}
                 whileHover={{ scale: 1.02, x: 4 }}
@@ -155,11 +202,6 @@ export function CommunitySidebar({ activeSection, onSectionChange }: CommunitySi
                     </div>
                   )}
                 </div>
-                {item.badge && (
-                  <div className="w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center font-bold">
-                    {item.badge}
-                  </div>
-                )}
               </motion.button>
             )
           })}
@@ -172,6 +214,62 @@ export function CommunitySidebar({ activeSection, onSectionChange }: CommunitySi
           <p>Collaborate & Learn Together</p>
         </div>
       </div>
-    </div>
+    </>
+  )
+
+  return (
+    <>
+      {/* Mobile overlay */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setIsOpen(false)}
+            className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+          />
+        )}
+      </AnimatePresence>
+
+      {/* Desktop Sidebar */}
+      <aside className="hidden lg:flex lg:flex-col w-64 h-screen bg-card border-r border-border fixed left-0 top-0 z-40">
+        <SidebarContent />
+      </aside>
+
+      {/* Mobile Sidebar */}
+      <motion.aside
+        initial={false}
+        animate={{
+          x: isOpen ? 0 : -288,
+        }}
+        transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+        className="fixed left-0 top-0 h-full w-72 bg-card border-r border-border z-50 lg:hidden flex flex-col"
+      >
+        <SidebarContent />
+      </motion.aside>
+
+      {/* Mobile menu button with auto-hide */}
+      <AnimatePresence>
+        {showHamburger && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.2 }}
+            className="fixed top-4 left-4 z-[60] lg:hidden"
+          >
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => setIsOpen(true)}
+              className="shadow-lg bg-card hover:bg-muted border-border"
+            >
+              <Menu className="w-4 h-4" />
+            </Button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   )
 }

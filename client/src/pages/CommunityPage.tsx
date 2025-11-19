@@ -85,6 +85,7 @@ export function CommunityPage() {
     title?: string
     content?: string
   }>({})
+  const [sidebarOpen, setSidebarOpen] = useState(false)
 
   // Get state and actions from store
   const {
@@ -476,9 +477,11 @@ export function CommunityPage() {
       <CommunitySidebar
         activeSection={activeSection}
         onSectionChange={handleSectionChange}
+        isOpen={sidebarOpen}
+        setIsOpen={setSidebarOpen}
       />
 
-      <div className="flex-1 flex flex-col ml-64">
+      <div className="flex-1 flex flex-col lg:ml-64">
         <style>{`
           .navbar-btn {
             color: rgb(31, 41, 55);

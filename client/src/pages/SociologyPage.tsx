@@ -28,7 +28,7 @@ export function SociologyPage() {
   return (
     <div className="min-h-screen bg-background flex">
       <Particles quantity={60} ease={50} />
-      <div className="relative z-10"><Sidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} isCollapsed={sidebarCollapsed} setIsCollapsed={setSidebarCollapsed} /></div>
+      <Sidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} isCollapsed={sidebarCollapsed} setIsCollapsed={setSidebarCollapsed} />
       <div className="flex-1 flex flex-col relative z-10">
         <BorderFrame sidebarCollapsed={sidebarCollapsed} />
         <header className="sticky top-0 z-30 bg-card/95 backdrop-blur-sm border-b border-border/50 h-[60px]">

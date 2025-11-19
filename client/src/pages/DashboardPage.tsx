@@ -34,14 +34,12 @@ export function DashboardPage() {
       <Particles quantity={60} ease={50} />
 
       {/* Sidebar */}
-      <div className="relative z-10">
-        <Sidebar
-          isOpen={sidebarOpen}
-          setIsOpen={setSidebarOpen}
-          isCollapsed={sidebarCollapsed}
-          setIsCollapsed={setSidebarCollapsed}
-        />
-      </div>
+      <Sidebar
+        isOpen={sidebarOpen}
+        setIsOpen={setSidebarOpen}
+        isCollapsed={sidebarCollapsed}
+        setIsCollapsed={setSidebarCollapsed}
+      />
 
       {/* Main content */}
       <div className="flex-1 flex flex-col relative z-10">
