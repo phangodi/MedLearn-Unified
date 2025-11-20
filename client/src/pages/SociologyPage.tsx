@@ -29,6 +29,8 @@ export function SociologyPage() {
   const exams = [
     { id: 'exam1', name: 'Exam 1', title: 'Chapters 1-7', description: 'Fundamentals, Medicine, Research, Stratification, Poverty, Deviance', enabled: true, image: '/subjects/socio_exam1.png', path: '/sociology/exam1' },
     { id: 'exam2', name: 'Exam 2', title: 'Chapters 8-14', description: 'Disability, Stigma, Family, Socialisation, Professions, Doctor-Patient, Health', enabled: true, image: '/subjects/socio_exam2.png', path: '/sociology/exam2' },
+    { id: 'exam3', name: 'Exam 3', title: 'Chapters 15-21', description: 'Coming in Semester 2', enabled: false, image: '/subjects/socio_exam3.png', path: '/sociology/exam3' },
+    { id: 'exam4', name: 'Exam 4', title: 'Chapters 22-28', description: 'Coming in Semester 2', enabled: false, image: '/subjects/socio_exam4.png', path: '/sociology/exam4' },
   ]
 
   return (
@@ -53,7 +55,7 @@ export function SociologyPage() {
                 <div className="relative bg-card border-2 border-border/50 rounded-xl overflow-hidden h-[320px] hover:border-primary hover:shadow-[0_0_60px_rgba(6,182,212,0.4)] transition-all group">
                   <div className="absolute inset-0 transition-transform group-hover:scale-110"><img src={exam.image} alt={exam.title} className="w-full h-full object-cover" /><div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent" /></div>
                   <div className="relative z-10 h-full flex flex-col justify-end p-6">
-                    {!exam.enabled && <div className="absolute top-4 right-4"><span className="text-xs font-semibold text-white bg-black/50 px-3 py-1.5 rounded-full">Coming Soon</span></div>}
+                    {!exam.enabled && <div className="absolute top-4 right-4"><span className="text-xs font-semibold text-white bg-black/50 px-3 py-1.5 rounded-full">{exam.description}</span></div>}
                     <div className="mb-2"><span className="inline-block px-3 py-1 rounded-lg bg-cyan-600/90 text-white text-xs font-semibold shadow-lg">{exam.name}</span></div>
                     <h3 className="text-2xl font-bold mb-1 drop-shadow-lg text-white group-hover:bg-gradient-to-r group-hover:from-cyan-300 group-hover:to-blue-300 group-hover:bg-clip-text group-hover:text-transparent transition-all">{exam.title}</h3>
                     <p className="text-sm mb-2 text-white/90 font-medium">{exam.description}</p>

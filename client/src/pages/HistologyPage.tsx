@@ -27,7 +27,7 @@ export function HistologyPage() {
   }
 
   const mtos = [
-    { id: 'mto1', name: 'MTO1', title: 'Nervous System', description: 'Slides 15, 70-89 (22 Slides)', enabled: true, image: '/subjects/histo_mto1.png', path: '/histology/mto1' },
+    { id: 'mto1', name: 'MTO1', title: 'Nervous System', description: 'Slides 15, 70-89 (21 Slides)', enabled: true, image: '/subjects/histo_mto1.png', path: '/histology/mto1' },
     { id: 'mto2', name: 'MTO2', title: 'Additional Slides', description: 'Coming Soon', enabled: false, image: '/subjects/histo_mto2.png', path: '#' },
   ]
 
