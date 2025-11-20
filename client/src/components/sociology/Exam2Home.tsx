@@ -22,7 +22,7 @@ export function Exam2Home({
   basePath,
 }: Exam2HomeProps) {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen exam2-bg">
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-primary via-cyan-600 to-secondary py-20 px-6 overflow-hidden">
         {/* Animated background orbs */}
@@ -108,7 +108,7 @@ export function Exam2Home({
         </motion.div>
 
         {/* Chapter Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
           {chapters.map((chapter, idx) => (
             <motion.div
               key={chapter.num}
@@ -119,6 +119,7 @@ export function Exam2Home({
                 duration: 0.5,
                 ease: [0.22, 1, 0.36, 1],
               }}
+              className="flex"
             >
               <ChapterCard {...chapter} basePath={basePath} />
             </motion.div>

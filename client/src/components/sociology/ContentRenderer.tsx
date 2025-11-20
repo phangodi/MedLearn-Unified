@@ -36,7 +36,7 @@ export function ContentRenderer({ content }: ContentRendererProps) {
                 dangerouslySetInnerHTML={{
                   __html: block.text?.replace(
                     /<strong>(.*?)<\/strong>/g,
-                    '<strong class="font-bold text-definition">$1</strong>'
+                    '<strong class="text-definition">$1</strong>'
                   ) || '',
                 }}
               />
@@ -52,7 +52,7 @@ export function ContentRenderer({ content }: ContentRendererProps) {
                     dangerouslySetInnerHTML={{
                       __html: item.replace(
                         /<strong>(.*?)<\/strong>/g,
-                        '<strong class="font-bold text-definition">$1</strong>'
+                        '<strong class="text-definition">$1</strong>'
                       ),
                     }}
                   />
@@ -70,7 +70,7 @@ export function ContentRenderer({ content }: ContentRendererProps) {
                     dangerouslySetInnerHTML={{
                       __html: item.replace(
                         /<strong>(.*?)<\/strong>/g,
-                        '<strong class="font-bold text-definition">$1</strong>'
+                        '<strong class="text-definition">$1</strong>'
                       ),
                     }}
                   />
@@ -107,7 +107,7 @@ export function ContentRenderer({ content }: ContentRendererProps) {
                             dangerouslySetInnerHTML={{
                               __html: cell.replace(
                                 /<strong>(.*?)<\/strong>/g,
-                                '<strong class="font-bold text-definition">$1</strong>'
+                                '<strong class="text-definition">$1</strong>'
                               ),
                             }}
                           />

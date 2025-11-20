@@ -28,7 +28,7 @@ export function Exam2ChapterPage({
   }, [chapter.id]);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen exam2-bg">
       {/* Chapter Hero Header */}
       <ChapterHeader
         chapterNum={chapter.id}
@@ -73,7 +73,7 @@ export function Exam2ChapterPage({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="bg-card rounded-2xl shadow-sm border border-border p-8 md:p-12"
+          className="bg-card rounded-2xl shadow-sm border border-border p-8 md:p-12 relative z-10"
         >
           <ContentRenderer content={chapter.content} />
         </motion.div>
