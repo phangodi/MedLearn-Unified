@@ -76,8 +76,16 @@ export function CommentsModal({ postId, onClose }: CommentsModalProps) {
           {post && (
             <div className="px-6 py-4 border-b border-border bg-muted/20">
               <div className="flex gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-lg shadow-md flex-shrink-0">
-                  {post.author.avatar}
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-lg shadow-md flex-shrink-0 overflow-hidden">
+                  {post.author.avatar.startsWith('http') ? (
+                    <img
+                      src={post.author.avatar}
+                      alt={post.author.name}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    post.author.avatar
+                  )}
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 mb-1">
@@ -130,8 +138,16 @@ export function CommentsModal({ postId, onClose }: CommentsModalProps) {
                     transition={{ delay: index * 0.05 }}
                     className="flex gap-3 p-4 rounded-lg hover:bg-muted/30 transition-colors"
                   >
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-lg shadow-md flex-shrink-0">
-                      {comment.author.avatar}
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-lg shadow-md flex-shrink-0 overflow-hidden">
+                      {comment.author.avatar.startsWith('http') ? (
+                        <img
+                          src={comment.author.avatar}
+                          alt={comment.author.name}
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        comment.author.avatar
+                      )}
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 mb-1">

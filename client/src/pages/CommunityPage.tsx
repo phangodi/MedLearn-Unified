@@ -549,7 +549,7 @@ export function CommunityPage() {
                 </p>
               </div>
               <div className="flex gap-2">
-                {showSeedButton && posts.length === 0 && (
+                {showSeedButton && posts.length === 0 && userProfile?.isAdmin && (
                   <Button
                     onClick={handleSeedData}
                     disabled={seeding}
@@ -980,7 +980,7 @@ export function CommunityPage() {
               <p className="text-muted-foreground mb-4">
                 Be the first to share knowledge with the community!
               </p>
-              {showSeedButton && (
+              {showSeedButton && userProfile?.isAdmin && (
                 <Button onClick={handleSeedData} disabled={seeding}>
                   {seeding ? (
                     <>
@@ -1028,8 +1028,16 @@ export function CommunityPage() {
                       <div className="flex items-center justify-between mb-3">
                         <div className="flex items-center gap-2 min-w-0 flex-1">
                           {/* Small Avatar */}
-                          <div className="w-9 h-9 rounded-full bg-gradient-to-br from-muted to-muted-foreground/30 flex items-center justify-center text-lg shadow-sm flex-shrink-0">
-                            {post.author.avatar}
+                          <div className="w-9 h-9 rounded-full bg-gradient-to-br from-muted to-muted-foreground/30 flex items-center justify-center text-lg shadow-sm flex-shrink-0 overflow-hidden">
+                            {post.author.avatar.startsWith('http') ? (
+                              <img
+                                src={post.author.avatar}
+                                alt={post.author.name}
+                                className="w-full h-full object-cover"
+                              />
+                            ) : (
+                              post.author.avatar
+                            )}
                           </div>
 
                           {/* Compact User Info */}
@@ -1191,7 +1199,11 @@ export function CommunityPage() {
             <div className="space-y-6">
               {/* Trending Discussions - Always shown when feature is enabled */}
               {features.showTrendingDiscussions && (
-                <TrendingDiscussions posts={sortedPosts} onPostClick={handleTrendingPostClick} />
+                <TrendingDiscussions
+                  posts={sortedPosts}
+                  onPostClick={handleTrendingPostClick}
+                  onNewPostClick={() => setComposeOpen(true)}
+                />
               )}
             </div>
           </div>

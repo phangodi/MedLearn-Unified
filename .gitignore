@@ -8,3 +8,6 @@
 # Development/Documentation files
 NEW_SESSION_PROMPT*.md
 PHYSIOLOGY_INTEGRATION_FINAL*.md
+
+# Local Netlify folder
+.netlify

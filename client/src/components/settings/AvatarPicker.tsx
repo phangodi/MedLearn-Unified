@@ -72,7 +72,9 @@ export function AvatarPicker({ currentAvatar, oauthAvatar, onSave }: AvatarPicke
           <div>
             <h2 className="text-xl font-semibold">Avatar</h2>
             <p className="text-sm text-muted-foreground">
-              {isExpanded ? 'Choose an emoji to represent you' : `Current: ${selectedAvatar}`}
+              {isExpanded ? 'Choose an emoji to represent you' : (
+                selectedAvatar.startsWith('http') ? 'Current: Your profile photo' : `Current: ${selectedAvatar}`
+              )}
             </p>
           </div>
         </div>
@@ -103,7 +105,17 @@ export function AvatarPicker({ currentAvatar, oauthAvatar, onSave }: AvatarPicke
           >
             {/* Current Selection Preview */}
             <div className="flex items-center gap-4 pt-4 border-t border-border">
-              <div className="text-5xl">{selectedAvatar}</div>
+              <div className="flex items-center justify-center">
+                {selectedAvatar.startsWith('http') ? (
+                  <img
+                    src={selectedAvatar}
+                    alt="Selected avatar"
+                    className="w-20 h-20 rounded-full object-cover border-2 border-border"
+                  />
+                ) : (
+                  <div className="text-5xl">{selectedAvatar}</div>
+                )}
+              </div>
               <div className="flex-1">
                 <p className="text-sm font-medium mb-1">Current Selection</p>
                 <p className="text-xs text-muted-foreground">

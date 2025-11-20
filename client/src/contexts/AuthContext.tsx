@@ -100,7 +100,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
           uid: user.uid,
           email: user.email || '',
           name: user.displayName || user.email?.split('@')[0] || 'User',
-          avatar: user.photoURL || '',
+          avatar: user.photoURL || '👤',
           role: user.email === superAdminEmail ? 'superadmin' : 'user',
           year: 1, // Default to Year 1, user can change later
           isAdmin: user.email === superAdminEmail,

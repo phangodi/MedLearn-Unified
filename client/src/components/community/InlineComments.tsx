@@ -341,8 +341,16 @@ export function InlineComments({
                         >
                           {/* Main Comment */}
                           <div className="flex gap-3 p-3 rounded-lg bg-card hover:bg-muted/30 transition-colors">
-                            <div className="w-9 h-9 rounded-full bg-gradient-to-br from-muted to-muted-foreground/30 flex items-center justify-center text-base shadow-sm flex-shrink-0">
-                              {comment.author.avatar}
+                            <div className="w-9 h-9 rounded-full bg-gradient-to-br from-muted to-muted-foreground/30 flex items-center justify-center text-base shadow-sm flex-shrink-0 overflow-hidden">
+                              {comment.author.avatar.startsWith('http') ? (
+                                <img
+                                  src={comment.author.avatar}
+                                  alt={comment.author.name}
+                                  className="w-full h-full object-cover"
+                                />
+                              ) : (
+                                comment.author.avatar
+                              )}
                             </div>
                             <div className="flex-1 min-w-0">
                               <div className="flex items-center gap-2 mb-1">
@@ -481,8 +489,16 @@ export function InlineComments({
                                     transition={{ delay: replyIndex * 0.05 }}
                                     className="flex gap-3 p-3 rounded-lg bg-muted/20 border-l-2 border-primary/30 hover:bg-muted/40 transition-colors"
                                   >
-                                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-muted to-muted-foreground/30 flex items-center justify-center text-sm shadow-sm flex-shrink-0">
-                                      {reply.author.avatar}
+                                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-muted to-muted-foreground/30 flex items-center justify-center text-sm shadow-sm flex-shrink-0 overflow-hidden">
+                                      {reply.author.avatar.startsWith('http') ? (
+                                        <img
+                                          src={reply.author.avatar}
+                                          alt={reply.author.name}
+                                          className="w-full h-full object-cover"
+                                        />
+                                      ) : (
+                                        reply.author.avatar
+                                      )}
                                     </div>
                                     <div className="flex-1 min-w-0">
                                       <div className="flex items-center gap-2 mb-1">

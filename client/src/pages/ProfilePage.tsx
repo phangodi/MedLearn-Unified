@@ -19,13 +19,15 @@ import { CommunitySidebar } from '@/components/community/CommunitySidebar'
 import { PrivacySettings } from '@/components/settings/PrivacySettings'
 import { AvatarPicker } from '@/components/settings/AvatarPicker'
 import { DisplayNameEditor } from '@/components/settings/DisplayNameEditor'
+import { DeleteAccount } from '@/components/settings/DeleteAccount'
 import { formatTimestamp } from '@/lib/dateUtils'
 import type { Post } from '@/types/community'
 import type { PrivacySettings as PrivacySettingsType } from '@/types/community'
 import { useAuth } from '@/contexts/AuthContext'
 import { generateMedicalPseudonym } from '@/lib/anonymousNames'
-import { doc, updateDoc } from 'firebase/firestore'
-import { db } from '@/firebase/config'
+import { doc, updateDoc, deleteDoc, collection, query, where, getDocs, writeBatch } from 'firebase/firestore'
+import { db, auth as firebaseAuth } from '@/firebase/config'
+import { deleteUser } from 'firebase/auth'
 
 export function ProfilePage() {
   const navigate = useNavigate()
@@ -213,6 +215,50 @@ export function ProfilePage() {
     }
   }
 
+  const handleDeleteAccount = async () => {
+    if (!userProfile || !currentUser || !firebaseAuth.currentUser) {
+      throw new Error('No user logged in')
+    }
+
+    try {
+      const userId = userProfile.uid
+      const batch = writeBatch(db)
+
+      // 1. Delete user's posts
+      const postsQuery = query(collection(db, 'posts'), where('author.id', '==', userId))
+      const postsSnapshot = await getDocs(postsQuery)
+      postsSnapshot.forEach((doc) => {
+        batch.delete(doc.ref)
+      })
+
+      // 2. Delete user's comments
+      const commentsQuery = query(collection(db, 'comments'), where('author.id', '==', userId))
+      const commentsSnapshot = await getDocs(commentsQuery)
+      commentsSnapshot.forEach((doc) => {
+        batch.delete(doc.ref)
+      })
+
+      // 3. Delete user profile
+      batch.delete(doc(db, 'users', userId))
+
+      // Commit all deletions
+      await batch.commit()
+
+      // 4. Delete Firebase Auth user (must be last)
+      await deleteUser(firebaseAuth.currentUser)
+
+      // 5. Navigate to login
+      navigate('/login')
+    } catch (error: any) {
+      console.error('Error deleting account:', error)
+      // Re-authentication might be needed if user signed in long ago
+      if (error.code === 'auth/requires-recent-login') {
+        throw new Error('Please sign out and sign in again before deleting your account')
+      }
+      throw new Error('Failed to delete account. Please try again.')
+    }
+  }
+
   return (
     <div className="min-h-screen bg-background flex">
       {/* Community Sidebar */}
@@ -272,8 +318,16 @@ export function ProfilePage() {
                 <div className="flex items-end gap-4 -mt-12">
                   {/* Avatar */}
                   <div className="relative">
-                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-muted to-muted-foreground/30 flex items-center justify-center text-4xl border-4 border-card shadow-xl">
-                      {currentUser.avatar}
+                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-muted to-muted-foreground/30 flex items-center justify-center text-4xl border-4 border-card shadow-xl overflow-hidden">
+                      {currentUser.avatar.startsWith('http') ? (
+                        <img
+                          src={currentUser.avatar}
+                          alt={currentUser.name}
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        currentUser.avatar
+                      )}
                     </div>
                     {currentUser.verified && (
                       <div className="absolute bottom-0 right-0 w-7 h-7 bg-muted-foreground rounded-full flex items-center justify-center border-2 border-card">
@@ -483,6 +537,9 @@ export function ProfilePage() {
                     onSave={handleSavePrivacySettings}
                   />
                 )}
+
+                {/* Delete Account - At Bottom */}
+                <DeleteAccount onDelete={handleDeleteAccount} />
               </div>
             ) : (
               <div className="space-y-6">
@@ -648,8 +705,16 @@ function PostCard({
       <div className="p-6">
         {/* Post Header */}
         <div className="flex items-start gap-3 mb-4">
-          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-muted to-muted-foreground/30 flex items-center justify-center text-lg flex-shrink-0 shadow-sm">
-            {post.author.avatar}
+          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-muted to-muted-foreground/30 flex items-center justify-center text-lg flex-shrink-0 shadow-sm overflow-hidden">
+            {post.author.avatar.startsWith('http') ? (
+              <img
+                src={post.author.avatar}
+                alt={post.author.name}
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              post.author.avatar
+            )}
           </div>
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 flex-wrap">

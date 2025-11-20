@@ -305,6 +305,107 @@ VITE_SUPER_ADMIN_EMAIL=             # Super admin email address
 VITE_USE_FIREBASE_EMULATORS=        # (Optional) true/false for emulators
 ```
 
+## Netlify Deployment Guidelines
+
+**⚠️ CRITICAL: Do NOT deploy to Netlify or push to GitHub unless explicitly requested by the user.**
+
+### Deployment Rules
+
+1. **Manual deployments only** - GitHub pushes do NOT automatically trigger Netlify builds
+2. **Deploy only when user explicitly requests it** - Never proactively deploy
+3. **No automatic GitHub pushes** - Only commit and push to GitHub when user explicitly requests it
+4. **Test locally first** - Always use `npm run dev` locally before considering deployment
+5. **Local build verification** - Use `netlify build` to test builds locally (costs no credits)
+6. **Credit conservation** - Minimize deployments to conserve Netlify build credits
+
+### Netlify Credit System (2025)
+
+- **Free Plan:** 300 credits/month
+- **Production deploy cost:** 15 credits per deploy
+- **Bandwidth cost:** 10 credits per GB
+- **Free Plan limit:** ~20 deploys per month (300 ÷ 15)
+- **Local testing is FREE:** `netlify build` and `netlify dev` cost zero credits
+
+### Deployment URLs
+
+- **Production:** `https://medlearn-szeged.netlify.app`
+- **Staging:** `https://staging--medlearn-szeged.netlify.app`
+- **Custom domain:** To be configured later
+
+### Deployment Workflow
+
+**Local Testing (FREE - no credits):**
+```bash
+cd client
+npm run dev                        # Test locally with hot reload
+netlify build                      # Build locally to verify (no credits)
+netlify build --dry                # Preview build steps (no credits)
+```
+
+**Staging Deployment (when needed - 15 credits):**
+```bash
+netlify deploy --alias=staging     # Deploy to staging URL
+# Test at: https://staging--medlearn-szeged.netlify.app
+```
+
+**Production Deployment (15 credits):**
+```bash
+netlify deploy --prod              # Deploy to production URL
+# Live at: https://medlearn-szeged.netlify.app
+```
+
+### When to Use Staging vs Production
+
+- **Use staging** only for features that CANNOT be tested locally:
+  - API integrations requiring live environment
+  - Edge functions or serverless functions
+  - Third-party service integrations
+  - OAuth redirect testing (after initial setup)
+
+- **Skip staging** for:
+  - UI changes (test with `npm run dev`)
+  - Component updates (test locally)
+  - Content updates (test locally)
+  - Style changes (test locally)
+
+### Firebase Configuration for Netlify
+
+After first deployment, user must manually configure Firebase Console:
+
+1. **Add Authorized Domains** (Firebase Console → Authentication → Settings → Authorized domains):
+   - `medlearn-szeged.netlify.app`
+   - `staging--medlearn-szeged.netlify.app`
+   - Custom domain (when configured)
+
+2. **Update OAuth Settings:**
+   - **Google Cloud Console:** Add authorized JavaScript origins and redirect URIs
+   - **Apple Developer Console:** Add return URLs with Netlify domains
+
+3. **Environment Variables:** All VITE_* variables from `.env.local` must be added to Netlify
+
+### Git Workflow Rules
+
+**⚠️ NEVER push to GitHub unless user explicitly requests it**
+
+- User may have uncommitted changes they want to test first
+- User may want to review changes before committing
+- Always ask before creating commits or pushing to remote
+- Follow Git Safety Protocol (see below) when explicitly requested to commit
+
+### Build Configuration
+
+- **Build command:** `npm run build` (runs TypeScript check + Vite build)
+- **Publish directory:** `client/dist`
+- **Base directory:** `client`
+- **Node version:** 18.x or higher
+
+### Audio Files and Bandwidth
+
+- Physiology app contains audio files served via Howler.js
+- Free plan includes 100GB bandwidth/month
+- If bandwidth becomes an issue, migrate audio to Firebase Storage
+- Current Netlify hosting is sufficient for small community launch
+
 ## Reference Documentation
 
 - `README.md` - Quick start guide
