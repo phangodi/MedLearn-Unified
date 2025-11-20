@@ -233,20 +233,48 @@ export const useCommunityStore = create<CommunityState>((set, get) => ({
       return
     }
 
+    // Get current post state for rollback
+    const currentPost = get().posts.find(p => p.id === postId)
+    if (!currentPost) return
+
+    const isLiked = currentPost.likedBy?.includes(currentUser.id) || false
+
+    // Optimistic update - update UI immediately
+    set(state => ({
+      posts: state.posts.map(p =>
+        p.id === postId
+          ? {
+              ...p,
+              liked: !isLiked,
+              likes: Math.max(0, isLiked ? p.likes - 1 : p.likes + 1), // Prevent negative
+              likedBy: isLiked
+                ? p.likedBy.filter(id => id !== currentUser.id)
+                : [...(p.likedBy || []), currentUser.id]
+            }
+          : p
+      )
+    }))
+
     try {
       const postRef = doc(db, 'posts', postId)
       const postSnap = await getDoc(postRef)
 
-      if (!postSnap.exists()) return
+      if (!postSnap.exists()) {
+        // Rollback on error
+        set(state => ({
+          posts: state.posts.map(p => p.id === postId ? currentPost : p)
+        }))
+        return
+      }
 
       const post = postSnap.data() as Post
-      const isLiked = post.likedBy.includes(currentUser.id)
+      const actualIsLiked = post.likedBy.includes(currentUser.id)
 
-      if (isLiked) {
-        // Unlike
+      if (actualIsLiked) {
+        // Unlike - with safeguard against negative
         await updateDoc(postRef, {
           likedBy: arrayRemove(currentUser.id),
-          likes: increment(-1),
+          likes: post.likes > 0 ? increment(-1) : 0,
           updatedAt: Timestamp.now()
         })
       } else {
@@ -257,24 +285,12 @@ export const useCommunityStore = create<CommunityState>((set, get) => ({
           updatedAt: Timestamp.now()
         })
       }
-
-      // Update local state
-      set(state => ({
-        posts: state.posts.map(p =>
-          p.id === postId
-            ? {
-                ...p,
-                liked: !isLiked,
-                likes: isLiked ? p.likes - 1 : p.likes + 1,
-                likedBy: isLiked
-                  ? p.likedBy.filter(id => id !== currentUser.id)
-                  : [...p.likedBy, currentUser.id]
-              }
-            : p
-        )
-      }))
     } catch (error) {
       console.error('Error toggling like:', error)
+      // Rollback optimistic update
+      set(state => ({
+        posts: state.posts.map(p => p.id === postId ? currentPost : p)
+      }))
       set({ error: 'Failed to like post' })
     }
   },
@@ -287,16 +303,42 @@ export const useCommunityStore = create<CommunityState>((set, get) => ({
       return
     }
 
+    // Get current post state for rollback
+    const currentPost = get().posts.find(p => p.id === postId)
+    if (!currentPost) return
+
+    const isBookmarked = currentPost.bookmarkedBy?.includes(currentUser.id) || false
+
+    // Optimistic update - update UI immediately
+    set(state => ({
+      posts: state.posts.map(p =>
+        p.id === postId
+          ? {
+              ...p,
+              bookmarkedBy: isBookmarked
+                ? p.bookmarkedBy.filter(id => id !== currentUser.id)
+                : [...(p.bookmarkedBy || []), currentUser.id]
+            }
+          : p
+      )
+    }))
+
     try {
       const postRef = doc(db, 'posts', postId)
       const postSnap = await getDoc(postRef)
 
-      if (!postSnap.exists()) return
+      if (!postSnap.exists()) {
+        // Rollback on error
+        set(state => ({
+          posts: state.posts.map(p => p.id === postId ? currentPost : p)
+        }))
+        return
+      }
 
       const post = postSnap.data() as Post
-      const isBookmarked = post.bookmarkedBy.includes(currentUser.id)
+      const actualIsBookmarked = post.bookmarkedBy.includes(currentUser.id)
 
-      if (isBookmarked) {
+      if (actualIsBookmarked) {
         // Remove bookmark
         await updateDoc(postRef, {
           bookmarkedBy: arrayRemove(currentUser.id),
@@ -309,22 +351,12 @@ export const useCommunityStore = create<CommunityState>((set, get) => ({
           updatedAt: Timestamp.now()
         })
       }
-
-      // Update local state
-      set(state => ({
-        posts: state.posts.map(p =>
-          p.id === postId
-            ? {
-                ...p,
-                bookmarkedBy: isBookmarked
-                  ? p.bookmarkedBy.filter(id => id !== currentUser.id)
-                  : [...p.bookmarkedBy, currentUser.id]
-              }
-            : p
-        )
-      }))
     } catch (error) {
       console.error('Error toggling bookmark:', error)
+      // Rollback optimistic update
+      set(state => ({
+        posts: state.posts.map(p => p.id === postId ? currentPost : p)
+      }))
       set({ error: 'Failed to bookmark post' })
     }
   },
