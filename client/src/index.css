@@ -21,6 +21,7 @@
   --color-popover-foreground: hsl(var(--popover-foreground));
   --color-card: hsl(var(--card));
   --color-card-foreground: hsl(var(--card-foreground));
+  --color-definition: hsl(var(--definition));
 
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
@@ -67,6 +68,9 @@
 
     /* Warning */
     --warning: 38 100% 51%;         /* #FFB703 */
+
+    /* Definition text - cyan matching Activity Task badge (darker side) */
+    --definition: 188 94% 37%;      /* Cyan-700 - matches badge */
   }
 
   .dark {
@@ -102,6 +106,9 @@
 
     --success: 166 84% 50%;
     --warning: 38 100% 55%;
+
+    /* Definition text - cyan matching Activity Task badge in dark mode */
+    --definition: 188 94% 51%;      /* Cyan-600 - matches badge */
   }
 }
 
@@ -223,4 +230,112 @@
   border-color: rgba(255, 255, 255, 0.1) !important;
   box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.3),
               0 0 0 1px rgba(255, 255, 255, 0.08) inset !important;
+}
+
+/* ========================================
+   SUBTLE BACKGROUND PATTERNS FOR READING PAGES
+   ======================================== */
+
+/* OPTION 1: Soft Dot Grid Pattern - Minimalist & Professional */
+.bg-pattern-dots {
+  background-image: radial-gradient(circle, hsl(211 100% 40% / 0.20) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.dark .bg-pattern-dots {
+  background-image: radial-gradient(circle, hsl(211 100% 50% / 0.25) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* OPTION 2: Diagonal Grid Lines - Modern & Structured */
+.bg-pattern-grid {
+  background-image:
+    linear-gradient(to right, hsl(211 100% 40% / 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, hsl(211 100% 40% / 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.dark .bg-pattern-grid {
+  background-image:
+    linear-gradient(to right, hsl(211 100% 50% / 0.20) 1px, transparent 1px),
+    linear-gradient(to bottom, hsl(211 100% 50% / 0.20) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* OPTION 3: Subtle Noise Texture - Organic & Paper-like */
+.bg-pattern-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.5' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.20'/%3E%3C/svg%3E");
+}
+
+.dark .bg-pattern-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.5' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.25'/%3E%3C/svg%3E");
+}
+
+/* OPTION 4: Medical Hexagon Pattern - Themed & Scientific */
+.bg-pattern-hexagon {
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='35' viewBox='0 0 60 52' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l15 8.66v17.32L30 34.64 15 26V8.66L30 0zm0 52l15-8.66V26.02L30 17.36l-15 8.66v17.32L30 52z' fill='%230066CC' fill-opacity='0.15' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-size: 40px 35px;
+}
+
+.dark .bg-pattern-hexagon {
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='35' viewBox='0 0 60 52' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l15 8.66v17.32L30 34.64 15 26V8.66L30 0zm0 52l15-8.66V26.02L30 17.36l-15 8.66v17.32L30 52z' fill='%230080FF' fill-opacity='0.20' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-size: 40px 35px;
+}
+
+/* OPTION 5: Gradient Overlay with Radial Fade - Elegant & Sophisticated */
+.bg-pattern-gradient {
+  background-image:
+    radial-gradient(ellipse at top left, hsl(211 100% 40% / 0.20) 0%, transparent 50%),
+    radial-gradient(ellipse at top right, hsl(166 77% 33% / 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom, hsl(211 100% 40% / 0.15) 0%, transparent 50%);
+}
+
+.dark .bg-pattern-gradient {
+  background-image:
+    radial-gradient(ellipse at top left, hsl(211 100% 50% / 0.25) 0%, transparent 50%),
+    radial-gradient(ellipse at top right, hsl(166 77% 40% / 0.20) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom, hsl(211 100% 50% / 0.20) 0%, transparent 50%);
+}
+
+/* OPTION 6: Cross-hatch Lines - Academic & Classic */
+.bg-pattern-crosshatch {
+  background-image:
+    repeating-linear-gradient(45deg, transparent, transparent 10px, hsl(211 100% 40% / 0.12) 10px, hsl(211 100% 40% / 0.12) 11px),
+    repeating-linear-gradient(-45deg, transparent, transparent 10px, hsl(211 100% 40% / 0.12) 10px, hsl(211 100% 40% / 0.12) 11px);
+}
+
+.dark .bg-pattern-crosshatch {
+  background-image:
+    repeating-linear-gradient(45deg, transparent, transparent 10px, hsl(211 100% 50% / 0.15) 10px, hsl(211 100% 50% / 0.15) 11px),
+    repeating-linear-gradient(-45deg, transparent, transparent 10px, hsl(211 100% 50% / 0.15) 10px, hsl(211 100% 50% / 0.15) 11px);
+}
+
+/* Exam 2 Sociology Background - Cream in light mode, dark in dark mode */
+.exam2-bg {
+  background-color: #faf8f3; /* Cream color for light mode */
+}
+
+.dark .exam2-bg {
+  background-color: hsl(228 65% 7%); /* Dark blue-black for dark mode */
+}
+
+/* OPTION 7: Dashboard Diagonal Lines - EXACT copy from BorderFrame component */
+.bg-pattern-diagonal {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgb(156 163 175 / 0.15) 10px,
+    rgb(156 163 175 / 0.15) 11px
+  );
+}
+
+.dark .bg-pattern-diagonal {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgb(156 163 175 / 0.15) 10px,
+    rgb(156 163 175 / 0.15) 11px
+  );
 }

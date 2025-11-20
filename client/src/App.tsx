@@ -13,6 +13,8 @@ import { HistologyMTO1Page } from './pages/HistologyMTO1Page'
 import { PhysiologyPage } from './pages/PhysiologyPage'
 import { SociologyPage } from './pages/SociologyPage'
 import { SociologyExam1Page } from './pages/SociologyExam1Page'
+import { SociologyExam2Page } from './pages/SociologyExam2Page'
+import { SociologyExam2ChapterPage } from './pages/SociologyExam2ChapterPage'
 import { AnatomyPage } from './pages/AnatomyPage'
 import { AnatomyCNSPage } from './pages/AnatomyCNSPage'
 import { AdminNotificationsPage } from './pages/AdminNotificationsPage'
@@ -74,6 +76,8 @@ function App() {
             <Route path="/physiology/*" element={<ProtectedRoute><PhysiologyPage /></ProtectedRoute>} />
             <Route path="/sociology" element={<ProtectedRoute><SociologyPage /></ProtectedRoute>} />
             <Route path="/sociology/exam1/*" element={<ProtectedRoute><SociologyExam1Page /></ProtectedRoute>} />
+            <Route path="/sociology/exam2" element={<ProtectedRoute><SociologyExam2Page /></ProtectedRoute>} />
+            <Route path="/sociology/exam2/chapter/:id" element={<ProtectedRoute><SociologyExam2ChapterPage /></ProtectedRoute>} />
             <Route path="/anatomy" element={<ProtectedRoute><AnatomyPage /></ProtectedRoute>} />
             <Route path="/anatomy/cns" element={<ProtectedRoute><AnatomyCNSPage /></ProtectedRoute>} />
             <Route path="/" element={<Navigate to="/dashboard" replace />} />
