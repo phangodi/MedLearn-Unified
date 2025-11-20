@@ -29,8 +29,6 @@ export function SociologyPage() {
   const exams = [
     { id: 'exam1', name: 'Exam 1', title: 'Chapters 1-7', description: 'Fundamentals, Medicine, Research, Stratification, Poverty, Deviance', enabled: true, image: '/subjects/socio_exam1.png', path: '/sociology/exam1' },
     { id: 'exam2', name: 'Exam 2', title: 'Chapters 8-14', description: 'Disability, Stigma, Family, Socialisation, Professions, Doctor-Patient, Health', enabled: true, image: '/subjects/socio_exam2.png', path: '/sociology/exam2' },
-    { id: 'exam3', name: 'Exam 3', title: 'Chapters 15-21', description: 'Coming in Semester 2', enabled: false, image: '/subjects/socio_exam3.png', path: '/sociology/exam3' },
-    { id: 'exam4', name: 'Exam 4', title: 'Chapters 22-28', description: 'Coming in Semester 2', enabled: false, image: '/subjects/socio_exam4.png', path: '/sociology/exam4' },
   ]
 
   return (
