@@ -6,9 +6,10 @@ import type { Post } from '@/types/community'
 interface TrendingDiscussionsProps {
   posts: Post[]
   onPostClick?: (postId: string) => void
+  onNewPostClick?: () => void
 }
 
-function TrendingDiscussionsComponent({ posts, onPostClick }: TrendingDiscussionsProps) {
+function TrendingDiscussionsComponent({ posts, onPostClick, onNewPostClick }: TrendingDiscussionsProps) {
   // Calculate trending posts using useMemo to prevent recalculation on every render
   const trendingPosts = useMemo(() => {
     // Remove duplicates first
@@ -86,7 +87,13 @@ function TrendingDiscussionsComponent({ posts, onPostClick }: TrendingDiscussion
           <h2 className="font-semibold text-base">Trending Discussions</h2>
         </div>
         <p className="text-sm text-muted-foreground text-center py-4">
-          No discussions yet. Start a conversation!
+          No discussions yet.{' '}
+          <button
+            onClick={onNewPostClick}
+            className="text-primary hover:underline font-medium"
+          >
+            Start a conversation!
+          </button>
         </p>
       </motion.div>
     )

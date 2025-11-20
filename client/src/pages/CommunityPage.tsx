@@ -25,7 +25,8 @@ import {
   Pin,
   Loader2,
   AlertCircle,
-  GraduationCap
+  GraduationCap,
+  Trash2
 } from 'lucide-react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { useCommunityStore } from '@/store/communityStore'
@@ -36,6 +37,8 @@ import { InlineComments } from '@/components/community/InlineComments'
 import { features } from '@/config/features'
 import { useAuth } from '@/contexts/AuthContext'
 import { generateMedicalPseudonym } from '@/lib/anonymousNames'
+import { storage } from '@/lib/firebase'
+import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'
 
 // Available topics/tags for posts
 const availableTags = [
@@ -86,6 +89,7 @@ export function CommunityPage() {
     content?: string
   }>({})
   const [sidebarOpen, setSidebarOpen] = useState(false)
+  const [openMenuPostId, setOpenMenuPostId] = useState<string | null>(null)
 
   // Get state and actions from store
   const {
@@ -327,14 +331,43 @@ export function CommunityPage() {
     // Clear any previous errors
     setValidationErrors({})
 
-    // Convert File objects to Attachment format
-    const attachments: Attachment[] = selectedFiles.map(file => ({
-      type: getFileType(file) as 'pdf' | 'image' | 'video' | 'other',
-      name: file.name,
-      size: formatFileSize(file.size),
-      downloads: 0,
-      preview: getFileType(file) === 'image'
-    }))
+    // Upload files to Firebase Storage and get download URLs
+    const attachments: Attachment[] = await Promise.all(
+      selectedFiles.map(async (file) => {
+        try {
+          // Create a unique filename with timestamp
+          const timestamp = Date.now()
+          const filename = `${timestamp}_${file.name}`
+          const storageRef = ref(storage, `attachments/${filename}`)
+
+          // Upload the file
+          await uploadBytes(storageRef, file)
+
+          // Get the download URL
+          const url = await getDownloadURL(storageRef)
+
+          return {
+            type: getFileType(file) as 'pdf' | 'image' | 'video' | 'other',
+            name: file.name,
+            size: formatFileSize(file.size),
+            url,
+            storageRef: `attachments/${filename}`,
+            downloads: 0,
+            preview: getFileType(file) === 'image'
+          }
+        } catch (error) {
+          console.error(`Error uploading file ${file.name}:`, error)
+          // Return attachment without URL if upload fails
+          return {
+            type: getFileType(file) as 'pdf' | 'image' | 'video' | 'other',
+            name: file.name,
+            size: formatFileSize(file.size),
+            downloads: 0,
+            preview: getFileType(file) === 'image'
+          }
+        }
+      })
+    )
 
     await createPost(postTitle, postContent, selectedTags, attachments, postAnonymously)
 
@@ -1072,16 +1105,54 @@ export function CommunityPage() {
                           </div>
                         </div>
 
-                        {/* Overflow Menu */}
-                        <div className="relative flex-shrink-0">
-                          <Button
-                            variant="ghost"
-                            size="sm"
-                            className="h-8 w-8 p-0"
-                          >
-                            <MoreHorizontal className="w-4 h-4" />
-                          </Button>
-                        </div>
+                        {/* Overflow Menu - Admin Only */}
+                        {currentUser?.isAdmin && (
+                          <div className="relative flex-shrink-0">
+                            <Button
+                              variant="ghost"
+                              size="sm"
+                              className="h-8 w-8 p-0"
+                              onClick={() => setOpenMenuPostId(openMenuPostId === post.id ? null : post.id)}
+                            >
+                              <MoreHorizontal className="w-4 h-4" />
+                            </Button>
+
+                            {/* Admin Dropdown Menu */}
+                            <AnimatePresence>
+                              {openMenuPostId === post.id && (
+                                <motion.div
+                                  initial={{ opacity: 0, scale: 0.95, y: -10 }}
+                                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                                  exit={{ opacity: 0, scale: 0.95, y: -10 }}
+                                  className="absolute right-0 mt-2 w-48 bg-card border border-border rounded-lg shadow-lg z-50 overflow-hidden"
+                                >
+                                  <button
+                                    onClick={async () => {
+                                      await togglePin(post.id)
+                                      setOpenMenuPostId(null)
+                                    }}
+                                    className="w-full px-4 py-2 text-left text-sm hover:bg-muted transition-colors flex items-center gap-2"
+                                  >
+                                    <Pin className="w-4 h-4" />
+                                    {post.pinned ? 'Unpin Post' : 'Pin Post'}
+                                  </button>
+                                  <button
+                                    onClick={async () => {
+                                      if (confirm('Are you sure you want to delete this post? This action cannot be undone.')) {
+                                        await deletePost(post.id)
+                                        setOpenMenuPostId(null)
+                                      }
+                                    }}
+                                    className="w-full px-4 py-2 text-left text-sm text-destructive hover:bg-destructive/10 transition-colors flex items-center gap-2"
+                                  >
+                                    <Trash2 className="w-4 h-4" />
+                                    Delete Post
+                                  </button>
+                                </motion.div>
+                              )}
+                            </AnimatePresence>
+                          </div>
+                        )}
                       </div>
 
                       {/* Post Title - Compact */}
@@ -1145,20 +1216,25 @@ export function CommunityPage() {
                       {isExpanded && post.attachments.length > 0 && (
                         <div className="space-y-2 mb-4">
                           {post.attachments.map((attachment, i) => (
-                            <motion.div
+                            <motion.a
                               key={i}
-                              whileHover={{ scale: 1.01 }}
-                              className="p-3 rounded-lg border border-border bg-card flex items-center gap-3 cursor-pointer transition-all hover:bg-muted/30"
+                              href={attachment.url}
+                              download={attachment.name}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              whileHover={{ scale: 1.02 }}
+                              whileTap={{ scale: 0.98 }}
+                              className="p-3 rounded-lg border-2 border-border bg-card flex items-center gap-3 cursor-pointer transition-all hover:border-primary hover:bg-primary/5 no-underline group"
                             >
                               <div className="flex-shrink-0">
                                 {attachment.type === 'video' ? (
-                                  <Play className="w-5 h-5 text-muted-foreground" />
+                                  <Play className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
                                 ) : (
                                   getFileIcon(attachment.type)
                                 )}
                               </div>
                               <div className="flex-1 min-w-0">
-                                <p className="font-medium text-sm truncate">
+                                <p className="font-medium text-sm truncate group-hover:text-primary transition-colors">
                                   {attachment.name}
                                 </p>
                                 <div className="flex items-center gap-3 text-xs text-muted-foreground">
@@ -1174,7 +1250,10 @@ export function CommunityPage() {
                                   )}
                                 </div>
                               </div>
-                            </motion.div>
+                              <div className="flex-shrink-0">
+                                <Download className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                              </div>
+                            </motion.a>
                           ))}
                         </div>
                       )}

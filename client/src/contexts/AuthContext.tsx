@@ -82,34 +82,67 @@ export function AuthProvider({ children }: AuthProviderProps) {
     }
 
     try {
+      // Support multiple super admin emails (comma-separated)
+      const superAdminEmailsStr = import.meta.env.VITE_SUPER_ADMIN_EMAIL || ''
+      const superAdminEmails = superAdminEmailsStr.split(',').map((email: string) => email.trim().toLowerCase())
+      const isCurrentUserSuperAdmin = superAdminEmails.includes(user.email?.toLowerCase() || '')
+
       const userDoc = await getDoc(doc(db, 'users', user.uid))
 
       if (userDoc.exists()) {
-        // Update last login
-        await setDoc(
-          doc(db, 'users', user.uid),
-          { lastLogin: serverTimestamp() },
-          { merge: true }
-        )
-        setUserProfile(userDoc.data() as UserProfile)
+        const existingProfile = userDoc.data() as UserProfile
+
+        // ALWAYS update admin status if email matches super admin list
+        const updates: any = {
+          lastLogin: serverTimestamp()
+        }
+
+        if (isCurrentUserSuperAdmin && !existingProfile.isAdmin) {
+          // Promote to admin
+          updates.isAdmin = true
+          updates.role = 'superadmin'
+          updates.permissions = {
+            canPin: true,
+            canDelete: true,
+            canEdit: true,
+            canPromoteUsers: true,
+            canManageAdmins: true,
+          }
+          console.log('🎉 Promoting existing user to Super Admin!')
+        } else if (!isCurrentUserSuperAdmin && existingProfile.isAdmin) {
+          // Demote from admin (email was removed from super admin list)
+          updates.isAdmin = false
+          updates.role = 'user'
+          updates.permissions = {
+            canPin: false,
+            canDelete: false,
+            canEdit: false,
+            canPromoteUsers: false,
+            canManageAdmins: false,
+          }
+        }
+
+        await setDoc(doc(db, 'users', user.uid), updates, { merge: true })
+
+        // Fetch updated profile
+        const updatedDoc = await getDoc(doc(db, 'users', user.uid))
+        setUserProfile(updatedDoc.data() as UserProfile)
       } else {
         // Create new user profile
-        const superAdminEmail = import.meta.env.VITE_SUPER_ADMIN_EMAIL
-
         const newProfile: UserProfile = {
           uid: user.uid,
           email: user.email || '',
           name: user.displayName || user.email?.split('@')[0] || 'User',
           avatar: user.photoURL || '👤',
-          role: user.email === superAdminEmail ? 'superadmin' : 'user',
+          role: isCurrentUserSuperAdmin ? 'superadmin' : 'user',
           year: 1, // Default to Year 1, user can change later
-          isAdmin: user.email === superAdminEmail,
+          isAdmin: isCurrentUserSuperAdmin,
           permissions: {
-            canPin: user.email === superAdminEmail,
-            canDelete: user.email === superAdminEmail,
-            canEdit: user.email === superAdminEmail,
-            canPromoteUsers: user.email === superAdminEmail,
-            canManageAdmins: user.email === superAdminEmail,
+            canPin: isCurrentUserSuperAdmin,
+            canDelete: isCurrentUserSuperAdmin,
+            canEdit: isCurrentUserSuperAdmin,
+            canPromoteUsers: isCurrentUserSuperAdmin,
+            canManageAdmins: isCurrentUserSuperAdmin,
           },
           createdAt: serverTimestamp(),
           lastLogin: serverTimestamp(),
@@ -123,7 +156,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
         await setDoc(doc(db, 'users', user.uid), newProfile)
         setUserProfile(newProfile)
 
-        if (user.email === superAdminEmail) {
+        if (isCurrentUserSuperAdmin) {
           console.log('🎉 Super Admin account created!')
         }
       }
