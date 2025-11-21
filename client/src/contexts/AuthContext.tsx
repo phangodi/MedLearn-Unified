@@ -201,7 +201,18 @@ export function AuthProvider({ children }: AuthProviderProps) {
     await updateProfile(user, { displayName: name })
 
     // Send email verification
-    await sendEmailVerification(user)
+    // ========== DIAGNOSTIC LOGGING - REMOVE AFTER FIXING ==========
+    console.log('🔍 [DIAGNOSTIC] About to send verification email to:', user.email)
+    try {
+      await sendEmailVerification(user)
+      console.log('✅ [DIAGNOSTIC] sendEmailVerification() completed successfully')
+    } catch (error: any) {
+      console.error('❌ [DIAGNOSTIC] sendEmailVerification() failed:', error)
+      console.error('❌ [DIAGNOSTIC] Error code:', error.code)
+      console.error('❌ [DIAGNOSTIC] Error message:', error.message)
+      throw error // Re-throw so user sees the error
+    }
+    // ========== END DIAGNOSTIC LOGGING ==========
   }
 
   // Sign in with Google
@@ -257,7 +268,19 @@ export function AuthProvider({ children }: AuthProviderProps) {
   const resendVerificationEmail = async () => {
     if (!auth) throw new Error('Firebase not initialized')
     if (!user) throw new Error('No user logged in')
-    await sendEmailVerification(user)
+
+    // ========== DIAGNOSTIC LOGGING - REMOVE AFTER FIXING ==========
+    console.log('🔍 [DIAGNOSTIC] Resending verification email to:', user.email)
+    try {
+      await sendEmailVerification(user)
+      console.log('✅ [DIAGNOSTIC] Resend completed successfully')
+    } catch (error: any) {
+      console.error('❌ [DIAGNOSTIC] Resend failed:', error)
+      console.error('❌ [DIAGNOSTIC] Error code:', error.code)
+      console.error('❌ [DIAGNOSTIC] Error message:', error.message)
+      throw error
+    }
+    // ========== END DIAGNOSTIC LOGGING ==========
   }
 
   // Update user profile in memory (for immediate UI updates)
