@@ -15,7 +15,8 @@ import {
   X,
   LogOut,
   Moon,
-  Sun
+  Sun,
+  Bell
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { Logo } from '@/components/ui/Logo'
@@ -425,7 +426,7 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
             } w-full flex items-center ${isCollapsed ? 'justify-center' : 'space-x-2.5'} px-3 py-2 rounded-lg text-left`}
             title={isCollapsed ? 'Notifications Admin' : undefined}
           >
-            <Activity className="sidebar-icon w-4.5 h-4.5" />
+            <Bell className="sidebar-icon w-4.5 h-4.5" />
             {!isCollapsed && <span className="text-sm">Notifications Admin</span>}
           </button>
         )}
