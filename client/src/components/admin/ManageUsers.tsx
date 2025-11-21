@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Loader2, Users, UserCheck, UserX, Ban, CheckCircle, Calendar, MessageSquare, Shield } from 'lucide-react'
+import { Loader2, Users, UserCheck, UserX, Ban, CheckCircle, Calendar, MessageSquare, Shield, Trash2, RefreshCw } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { db } from '@/lib/firebase'
-import { collection, getDocs, doc, updateDoc, query, orderBy, Timestamp, where } from 'firebase/firestore'
+import { collection, getDocs, doc, updateDoc, deleteDoc, query, orderBy, Timestamp, where } from 'firebase/firestore'
 
 interface UserData {
   uid: string
@@ -22,6 +22,7 @@ export function ManageUsers() {
   const [users, setUsers] = useState<UserData[]>([])
   const [loading, setLoading] = useState(true)
   const [banning, setBanning] = useState<string | null>(null)
+  const [deleting, setDeleting] = useState<string | null>(null)
   const [stats, setStats] = useState({
     total: 0,
     activeToday: 0,
@@ -101,6 +102,37 @@ export function ManageUsers() {
       alert('Failed to update user ban status')
     } finally {
       setBanning(null)
+    }
+  }
+
+  const handleDeleteUser = async (userId: string, userName: string, userEmail: string) => {
+    if (!confirm(`⚠️ Are you sure you want to DELETE this user's data?\n\nUser: ${userName} (${userEmail})\n\nThis will:\n✓ Remove their Firestore document\n✓ Remove them from this admin panel\n\n⚠️ NOTE: If this user still exists in Firebase Authentication, they can log back in and their profile will be recreated. To permanently delete a user, you must ALSO delete them from Firebase Console > Authentication.`)) return
+
+    if (!db) {
+      console.error('Firestore not initialized')
+      return
+    }
+
+    setDeleting(userId)
+    try {
+      // Delete user document from Firestore
+      await deleteDoc(doc(db, 'users', userId))
+
+      // Update local state - remove user from list
+      setUsers(prev => prev.filter(u => u.uid !== userId))
+
+      // Update stats
+      setStats(prev => ({
+        ...prev,
+        total: prev.total - 1
+      }))
+
+      alert(`✓ Successfully deleted user data for ${userName}`)
+    } catch (error) {
+      console.error('Error deleting user:', error)
+      alert('Failed to delete user data. Please try again.')
+    } finally {
+      setDeleting(null)
     }
   }
 
@@ -215,11 +247,23 @@ export function ManageUsers() {
 
       {/* Users Table */}
       <div className="bg-card border border-border rounded-lg overflow-hidden">
-        <div className="px-6 py-4 border-b border-border">
-          <h3 className="font-semibold text-lg">All Users</h3>
-          <p className="text-sm text-muted-foreground mt-1">
-            Manage user accounts and permissions
-          </p>
+        <div className="px-6 py-4 border-b border-border flex items-center justify-between">
+          <div>
+            <h3 className="font-semibold text-lg">All Users</h3>
+            <p className="text-sm text-muted-foreground mt-1">
+              Manage user accounts and permissions
+            </p>
+          </div>
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={fetchUsers}
+            disabled={loading}
+            className="gap-2"
+          >
+            <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
+            Refresh
+          </Button>
         </div>
 
         <div className="overflow-x-auto">
@@ -299,29 +343,49 @@ export function ManageUsers() {
                     )}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-right">
-                    {user.role !== 'superadmin' && (
-                      <Button
-                        variant={user.isBanned ? "outline" : "destructive"}
-                        size="sm"
-                        onClick={() => handleBanUser(user.uid, user.isBanned || false)}
-                        disabled={banning === user.uid}
-                        className="text-xs"
-                      >
-                        {banning === user.uid ? (
-                          <Loader2 className="w-3 h-3 animate-spin" />
-                        ) : user.isBanned ? (
-                          <>
-                            <CheckCircle className="w-3 h-3 mr-1" />
-                            Unban
-                          </>
-                        ) : (
-                          <>
-                            <Ban className="w-3 h-3 mr-1" />
-                            Ban
-                          </>
-                        )}
-                      </Button>
-                    )}
+                    <div className="flex items-center justify-end gap-2">
+                      {user.role !== 'superadmin' && (
+                        <>
+                          <Button
+                            variant={user.isBanned ? "outline" : "destructive"}
+                            size="sm"
+                            onClick={() => handleBanUser(user.uid, user.isBanned || false)}
+                            disabled={banning === user.uid || deleting === user.uid}
+                            className="text-xs"
+                          >
+                            {banning === user.uid ? (
+                              <Loader2 className="w-3 h-3 animate-spin" />
+                            ) : user.isBanned ? (
+                              <>
+                                <CheckCircle className="w-3 h-3 mr-1" />
+                                Unban
+                              </>
+                            ) : (
+                              <>
+                                <Ban className="w-3 h-3 mr-1" />
+                                Ban
+                              </>
+                            )}
+                          </Button>
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            onClick={() => handleDeleteUser(user.uid, user.name, user.email)}
+                            disabled={deleting === user.uid || banning === user.uid}
+                            className="text-xs text-red-600 hover:text-red-700 hover:bg-red-50 dark:text-red-400 dark:hover:text-red-300 dark:hover:bg-red-950"
+                          >
+                            {deleting === user.uid ? (
+                              <Loader2 className="w-3 h-3 animate-spin" />
+                            ) : (
+                              <>
+                                <Trash2 className="w-3 h-3 mr-1" />
+                                Delete
+                              </>
+                            )}
+                          </Button>
+                        </>
+                      )}
+                    </div>
                   </td>
                 </motion.tr>
               ))}
