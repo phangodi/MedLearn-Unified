@@ -25,6 +25,11 @@ export function ProtectedRoute({ children, requireSuperAdmin = false }: Protecte
     return <Navigate to="/login" replace />
   }
 
+  // Check email verification (OAuth providers like Google/Apple auto-verify)
+  if (!user.emailVerified) {
+    return <Navigate to="/verify-email" replace />
+  }
+
   // Check super admin requirement
   if (requireSuperAdmin && userProfile?.role !== 'superadmin') {
     return <Navigate to="/dashboard" replace />

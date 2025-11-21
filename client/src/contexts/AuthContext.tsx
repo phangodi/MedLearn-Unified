@@ -52,6 +52,7 @@ interface AuthContextType {
   signInWithApple: () => Promise<void>
   signOut: () => Promise<void>
   resetPassword: (email: string) => Promise<void>
+  resendVerificationEmail: () => Promise<void>
   updateUserProfile: (updates: Partial<UserProfile>) => void
 }
 
@@ -252,6 +253,13 @@ export function AuthProvider({ children }: AuthProviderProps) {
     await sendPasswordResetEmail(auth, email)
   }
 
+  // Resend email verification
+  const resendVerificationEmail = async () => {
+    if (!auth) throw new Error('Firebase not initialized')
+    if (!user) throw new Error('No user logged in')
+    await sendEmailVerification(user)
+  }
+
   // Update user profile in memory (for immediate UI updates)
   const updateUserProfile = (updates: Partial<UserProfile>) => {
     if (userProfile) {
@@ -269,6 +277,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
     signInWithApple,
     signOut,
     resetPassword,
+    resendVerificationEmail,
     updateUserProfile,
   }
 

@@ -5,6 +5,8 @@ import { ToastProvider } from './components/ui/Toast'
 import { ProtectedRoute } from './components/auth/ProtectedRoute'
 import { NotificationModal } from './components/notifications/NotificationModal'
 import { AuthPage } from './pages/AuthPage'
+import { VerifyEmailPage } from './pages/VerifyEmailPage'
+import { AuthActionPage } from './pages/AuthActionPage'
 import { DashboardPage } from './pages/DashboardPage'
 import { CommunityPage } from './pages/CommunityPage'
 import { ProfilePage } from './pages/ProfilePage'
@@ -31,6 +33,8 @@ function App() {
 
             <Routes>
             <Route path="/login" element={<AuthPage />} />
+            <Route path="/verify-email" element={<VerifyEmailPage />} />
+            <Route path="/__/auth/action" element={<AuthActionPage />} />
             <Route
               path="/dashboard"
               element={
