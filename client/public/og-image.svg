@@ -46,26 +46,17 @@
     <rect x="1050" y="515" width="100" height="30" rx="8" fill="white"/>
   </g>
 
-  <!-- App Icon (left side) -->
+  <!-- App Icon (left side) - Redesigned with clean stethoscope -->
   <g transform="translate(180, 200)" filter="url(#iconShadow)">
     <rect width="230" height="230" rx="50" fill="white" opacity="0.95"/>
     <rect x="10" y="10" width="210" height="210" rx="45" fill="url(#ogBgGradient)"/>
 
-    <!-- Medical Cross (subtle) -->
-    <g opacity="0.12">
-      <rect x="98" y="50" width="24" height="150" rx="6" fill="white"/>
-      <rect x="50" y="98" width="150" height="24" rx="6" fill="white"/>
-    </g>
-
-    <!-- ML Monogram -->
-    <text x="115" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="96" font-weight="700" fill="white" text-anchor="middle">ML</text>
-
-    <!-- Stethoscope -->
-    <g transform="translate(115, 65)" opacity="0.9">
-      <circle cx="0" cy="0" r="12" fill="none" stroke="white" stroke-width="4"/>
-      <path d="M 0 12 Q -12 20, -12 32 L -12 42 Q -12 48, -6 48 L 6 48 Q 12 48, 12 42 L 12 32 Q 12 20, 0 12" fill="none" stroke="white" stroke-width="4" stroke-linecap="round"/>
-      <circle cx="-12" cy="42" r="4" fill="white"/>
-      <circle cx="12" cy="42" r="4" fill="white"/>
+    <!-- Bootstrap Icons heart-pulse-fill - exact from official library, scaled up -->
+    <g transform="translate(115, 115) scale(8)">
+      <g transform="translate(-8, -8)">
+        <path d="M1.475 9C2.702 10.84 4.779 12.871 8 15c3.221-2.129 5.298-4.16 6.525-6H12a.5.5 0 0 1-.464-.314l-1.457-3.642-1.598 5.593a.5.5 0 0 1-.945.049L5.889 6.568l-1.473 2.21A.5.5 0 0 1 4 9z" fill="white"/>
+        <path d="M.88 8C-2.427 1.68 4.41-2 7.823 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C11.59-2 18.426 1.68 15.12 8h-2.783l-1.874-4.686a.5.5 0 0 0-.945.049L7.921 8.956 6.464 5.314a.5.5 0 0 0-.88-.091L3.732 8z" fill="white"/>
+      </g>
     </g>
   </g>
 
