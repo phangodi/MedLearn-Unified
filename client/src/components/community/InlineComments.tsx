@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Send, Heart, Award, Clock, Loader2, MessageSquare, ChevronDown, ChevronUp, Bookmark } from 'lucide-react'
+import { Send, Heart, Award, Clock, Loader2, MessageSquare, ChevronDown, ChevronUp, Bookmark, Trash2 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { useCommunityStore } from '@/store/communityStore'
 import { formatTimestamp } from '@/lib/dateUtils'
@@ -38,7 +38,7 @@ export function InlineComments({
   const textareaRef = useRef<HTMLTextAreaElement>(null)
   const replyRefs = useRef<Record<string, HTMLTextAreaElement | null>>({})
 
-  const { comments, currentUser, fetchComments, addComment } = useCommunityStore()
+  const { comments, currentUser, fetchComments, addComment, deleteComment } = useCommunityStore()
 
   // Initialize anonymous commenting based on user's privacy settings
   useEffect(() => {
@@ -109,6 +109,13 @@ export function InlineComments({
         setReplyAnonymous(prev => ({ ...prev, [parentCommentId]: false }))
       }
     }
+  }
+
+  // Handle comment/reply deletion (admin only)
+  const handleDeleteComment = async (commentId: string) => {
+    if (!confirm('Are you sure you want to delete this comment?')) return
+
+    await deleteComment(commentId, postId)
   }
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -402,6 +409,17 @@ export function InlineComments({
                                     {isRepliesExpanded ? 'Hide' : 'View'} {replies.length} {replies.length === 1 ? 'reply' : 'replies'}
                                   </button>
                                 )}
+                                {/* Delete button (admin/super admin only) */}
+                                {currentUser?.isAdmin && (
+                                  <button
+                                    onClick={() => handleDeleteComment(comment.id)}
+                                    className="flex items-center gap-1 text-xs text-muted-foreground hover:text-red-500 transition-colors"
+                                    title="Delete comment"
+                                  >
+                                    <Trash2 className="w-3.5 h-3.5" />
+                                    <span>Delete</span>
+                                  </button>
+                                )}
                               </div>
                             </div>
                           </div>
@@ -512,9 +530,20 @@ export function InlineComments({
                                       <p className="text-xs text-primary/70 mb-1.5">
                                         Replying to <span className="font-semibold">{comment.author.name}</span>
                                       </p>
-                                      <p className="text-sm text-foreground leading-relaxed whitespace-pre-wrap">
+                                      <p className="text-sm text-foreground mb-2 leading-relaxed whitespace-pre-wrap">
                                         {reply.content}
                                       </p>
+                                      {/* Delete button for replies (admin/super admin only) */}
+                                      {currentUser?.isAdmin && (
+                                        <button
+                                          onClick={() => handleDeleteComment(reply.id)}
+                                          className="flex items-center gap-1 text-xs text-muted-foreground hover:text-red-500 transition-colors mt-1"
+                                          title="Delete reply"
+                                        >
+                                          <Trash2 className="w-3 h-3" />
+                                          <span>Delete</span>
+                                        </button>
+                                      )}
                                     </div>
                                   </motion.div>
                                 ))}
