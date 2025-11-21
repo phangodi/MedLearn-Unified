@@ -135,7 +135,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
           name: user.displayName || user.email?.split('@')[0] || 'User',
           avatar: user.photoURL || '👤',
           role: isCurrentUserSuperAdmin ? 'superadmin' : 'user',
-          year: 1, // Default to Year 1, user can change later
+          year: 2, // Default to Year 2 (most students), user can change later
           isAdmin: isCurrentUserSuperAdmin,
           permissions: {
             canPin: isCurrentUserSuperAdmin,

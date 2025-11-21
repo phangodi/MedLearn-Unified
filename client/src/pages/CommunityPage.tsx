@@ -26,7 +26,8 @@ import {
   Loader2,
   AlertCircle,
   GraduationCap,
-  Trash2
+  Trash2,
+  Eye
 } from 'lucide-react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { useCommunityStore } from '@/store/communityStore'
@@ -1169,6 +1170,12 @@ export function CommunityPage() {
                             <span className="text-xs text-muted-foreground whitespace-nowrap">
                               {formatTimestamp(post.timestamp)}
                             </span>
+                            {/* View count */}
+                            <span className="text-muted-foreground text-xs">•</span>
+                            <div className="flex items-center gap-1 text-muted-foreground">
+                              <Eye className="w-3 h-3" />
+                              <span className="text-xs">{post.views}</span>
+                            </div>
                             {post.pinned && (
                               <>
                                 <span className="text-muted-foreground text-xs">•</span>
