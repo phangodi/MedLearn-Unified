@@ -6,10 +6,12 @@ import { Button } from '@/components/ui/Button'
 import { Bell, MessageSquare, Send, X } from 'lucide-react'
 import { ManageNotifications } from '@/components/admin/ManageNotifications'
 import { ManageTags } from '@/components/admin/ManageTags'
+import { ManageUsers } from '@/components/admin/ManageUsers'
 import type { NotificationPriority, NotificationTarget, NotificationActionType } from '@/types/notifications'
+import { Users } from 'lucide-react'
 
 export function AdminNotificationsPage() {
-  const [activeTab, setActiveTab] = useState<'announcement' | 'dashboard' | 'manage' | 'tags'>('announcement')
+  const [activeTab, setActiveTab] = useState<'announcement' | 'dashboard' | 'manage' | 'tags' | 'users'>('announcement')
 
   return (
     <div className="min-h-screen bg-background flex">
@@ -93,6 +95,23 @@ export function AdminNotificationsPage() {
                 <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary" />
               )}
             </button>
+
+            <button
+              onClick={() => setActiveTab('users')}
+              className={`px-4 py-2 font-medium transition-colors relative ${
+                activeTab === 'users'
+                  ? 'text-primary'
+                  : 'text-muted-foreground hover:text-foreground'
+              }`}
+            >
+              <div className="flex items-center gap-2">
+                <Users className="w-4 h-4" />
+                Manage Users
+              </div>
+              {activeTab === 'users' && (
+                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary" />
+              )}
+            </button>
           </div>
 
           {/* Content */}
@@ -102,8 +121,10 @@ export function AdminNotificationsPage() {
             <DashboardMessageForm />
           ) : activeTab === 'manage' ? (
             <ManageNotifications />
-          ) : (
+          ) : activeTab === 'tags' ? (
             <ManageTags />
+          ) : (
+            <ManageUsers />
           )}
         </div>
       </main>

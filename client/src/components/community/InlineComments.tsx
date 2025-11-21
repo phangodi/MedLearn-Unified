@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Send, Heart, Award, Clock, Loader2, MessageSquare, ChevronDown, ChevronUp, Bookmark, Trash2 } from 'lucide-react'
+import { Send, Heart, Award, Clock, Loader2, MessageSquare, ChevronDown, ChevronUp, Bookmark, Trash2, MoreHorizontal } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { useCommunityStore } from '@/store/communityStore'
 import { formatTimestamp } from '@/lib/dateUtils'
@@ -35,6 +35,7 @@ export function InlineComments({
   const [replyAnonymous, setReplyAnonymous] = useState<Record<string, boolean>>({}) // Anonymous state for each reply
   const [replySubmitting, setReplySubmitting] = useState<string | null>(null)
   const [expandedReplies, setExpandedReplies] = useState<Set<string>>(new Set()) // Set of comment IDs with expanded replies
+  const [openMenuCommentId, setOpenMenuCommentId] = useState<string | null>(null) // ID of comment with open menu
   const textareaRef = useRef<HTMLTextAreaElement>(null)
   const replyRefs = useRef<Record<string, HTMLTextAreaElement | null>>({})
 
@@ -347,29 +348,30 @@ export function InlineComments({
                           className="space-y-2"
                         >
                           {/* Main Comment */}
-                          <div className="flex gap-3 p-3 rounded-lg bg-card hover:bg-muted/30 transition-colors">
-                            <div className="w-9 h-9 rounded-full bg-gradient-to-br from-muted to-muted-foreground/30 flex items-center justify-center text-base shadow-sm flex-shrink-0 overflow-hidden">
-                              {comment.author.avatar.startsWith('http') ? (
-                                <img
-                                  src={comment.author.avatar}
-                                  alt={comment.author.name}
-                                  className="w-full h-full object-cover"
-                                />
-                              ) : (
-                                comment.author.avatar
-                              )}
-                            </div>
-                            <div className="flex-1 min-w-0">
-                              <div className="flex items-center gap-2 mb-1">
-                                <span className="font-semibold text-sm">{comment.author.name}</span>
-                                {comment.author.verified && (
-                                  <Award className="w-3.5 h-3.5 text-muted-foreground" />
+                          <div className="flex justify-between gap-3 p-3 rounded-lg bg-card hover:bg-muted/30 transition-colors">
+                            <div className="flex gap-3 flex-1 min-w-0">
+                              <div className="w-9 h-9 rounded-full bg-gradient-to-br from-muted to-muted-foreground/30 flex items-center justify-center text-base shadow-sm flex-shrink-0 overflow-hidden">
+                                {comment.author.avatar.startsWith('http') ? (
+                                  <img
+                                    src={comment.author.avatar}
+                                    alt={comment.author.name}
+                                    className="w-full h-full object-cover"
+                                  />
+                                ) : (
+                                  comment.author.avatar
                                 )}
-                                {comment.author.role && (
-                                  <span className="text-xs text-muted-foreground">· {comment.author.role}</span>
-                                )}
-                                <span className="text-xs text-muted-foreground">· {formatTimestamp(comment.timestamp)}</span>
                               </div>
+                              <div className="flex-1 min-w-0">
+                                <div className="flex items-center gap-2 mb-1">
+                                  <span className="font-semibold text-sm">{comment.author.name}</span>
+                                  {comment.author.verified && (
+                                    <Award className="w-3.5 h-3.5 text-muted-foreground" />
+                                  )}
+                                  {comment.author.role && (
+                                    <span className="text-xs text-muted-foreground">· {comment.author.role}</span>
+                                  )}
+                                  <span className="text-xs text-muted-foreground">· {formatTimestamp(comment.timestamp)}</span>
+                                </div>
                               <p className="text-sm text-foreground mb-2 leading-relaxed whitespace-pre-wrap">
                                 {comment.content}
                               </p>
@@ -409,19 +411,47 @@ export function InlineComments({
                                     {isRepliesExpanded ? 'Hide' : 'View'} {replies.length} {replies.length === 1 ? 'reply' : 'replies'}
                                   </button>
                                 )}
-                                {/* Delete button (admin/super admin only) */}
-                                {currentUser?.isAdmin && (
-                                  <button
-                                    onClick={() => handleDeleteComment(comment.id)}
-                                    className="flex items-center gap-1 text-xs text-muted-foreground hover:text-red-500 transition-colors"
-                                    title="Delete comment"
-                                  >
-                                    <Trash2 className="w-3.5 h-3.5" />
-                                    <span>Delete</span>
-                                  </button>
-                                )}
                               </div>
                             </div>
+                          </div>
+
+                            {/* Three-dot menu (super admin only) */}
+                            {currentUser?.role === 'superadmin' && (
+                              <div className="relative flex-shrink-0">
+                                <Button
+                                  variant="ghost"
+                                  size="sm"
+                                  className="h-8 w-8 p-0"
+                                  onClick={() => setOpenMenuCommentId(openMenuCommentId === comment.id ? null : comment.id)}
+                                >
+                                  <MoreHorizontal className="w-4 h-4" />
+                                </Button>
+
+                                {/* Dropdown Menu */}
+                                <AnimatePresence>
+                                  {openMenuCommentId === comment.id && (
+                                    <motion.div
+                                      initial={{ opacity: 0, scale: 0.95, y: -10 }}
+                                      animate={{ opacity: 1, scale: 1, y: 0 }}
+                                      exit={{ opacity: 0, scale: 0.95, y: -10 }}
+                                      transition={{ duration: 0.15 }}
+                                      className="absolute right-0 top-10 z-50 min-w-[160px] bg-card border border-border rounded-lg shadow-lg overflow-hidden"
+                                    >
+                                      <button
+                                        onClick={() => {
+                                          handleDeleteComment(comment.id)
+                                          setOpenMenuCommentId(null)
+                                        }}
+                                        className="w-full px-4 py-2 text-left text-sm text-red-600 hover:bg-red-50 dark:hover:bg-red-950/20 transition-colors flex items-center gap-2"
+                                      >
+                                        <Trash2 className="w-4 h-4" />
+                                        Delete Comment
+                                      </button>
+                                    </motion.div>
+                                  )}
+                                </AnimatePresence>
+                              </div>
+                            )}
                           </div>
 
                           {/* Inline Reply Box */}
@@ -505,46 +535,75 @@ export function InlineComments({
                                     initial={{ opacity: 0, x: -10 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: replyIndex * 0.05 }}
-                                    className="flex gap-3 p-3 rounded-lg bg-muted/20 border-l-2 border-primary/30 hover:bg-muted/40 transition-colors"
+                                    className="flex justify-between gap-3 p-3 rounded-lg bg-muted/20 border-l-2 border-primary/30 hover:bg-muted/40 transition-colors"
                                   >
-                                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-muted to-muted-foreground/30 flex items-center justify-center text-sm shadow-sm flex-shrink-0 overflow-hidden">
-                                      {reply.author.avatar.startsWith('http') ? (
-                                        <img
-                                          src={reply.author.avatar}
-                                          alt={reply.author.name}
-                                          className="w-full h-full object-cover"
-                                        />
-                                      ) : (
-                                        reply.author.avatar
-                                      )}
-                                    </div>
-                                    <div className="flex-1 min-w-0">
-                                      <div className="flex items-center gap-2 mb-1">
-                                        <span className="font-semibold text-sm">{reply.author.name}</span>
-                                        {reply.author.verified && (
-                                          <Award className="w-3 h-3 text-muted-foreground" />
+                                    <div className="flex gap-3 flex-1 min-w-0">
+                                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-muted to-muted-foreground/30 flex items-center justify-center text-sm shadow-sm flex-shrink-0 overflow-hidden">
+                                        {reply.author.avatar.startsWith('http') ? (
+                                          <img
+                                            src={reply.author.avatar}
+                                            alt={reply.author.name}
+                                            className="w-full h-full object-cover"
+                                          />
+                                        ) : (
+                                          reply.author.avatar
                                         )}
-                                        <span className="text-xs text-muted-foreground">· {reply.author.role}</span>
-                                        <span className="text-xs text-muted-foreground">· {formatTimestamp(reply.timestamp)}</span>
                                       </div>
-                                      <p className="text-xs text-primary/70 mb-1.5">
-                                        Replying to <span className="font-semibold">{comment.author.name}</span>
-                                      </p>
-                                      <p className="text-sm text-foreground mb-2 leading-relaxed whitespace-pre-wrap">
-                                        {reply.content}
-                                      </p>
-                                      {/* Delete button for replies (admin/super admin only) */}
-                                      {currentUser?.isAdmin && (
-                                        <button
-                                          onClick={() => handleDeleteComment(reply.id)}
-                                          className="flex items-center gap-1 text-xs text-muted-foreground hover:text-red-500 transition-colors mt-1"
-                                          title="Delete reply"
-                                        >
-                                          <Trash2 className="w-3 h-3" />
-                                          <span>Delete</span>
-                                        </button>
-                                      )}
+                                      <div className="flex-1 min-w-0">
+                                        <div className="flex items-center gap-2 mb-1">
+                                          <span className="font-semibold text-sm">{reply.author.name}</span>
+                                          {reply.author.verified && (
+                                            <Award className="w-3 h-3 text-muted-foreground" />
+                                          )}
+                                          <span className="text-xs text-muted-foreground">· {reply.author.role}</span>
+                                          <span className="text-xs text-muted-foreground">· {formatTimestamp(reply.timestamp)}</span>
+                                        </div>
+                                        <p className="text-xs text-primary/70 mb-1.5">
+                                          Replying to <span className="font-semibold">{comment.author.name}</span>
+                                        </p>
+                                        <p className="text-sm text-foreground leading-relaxed whitespace-pre-wrap">
+                                          {reply.content}
+                                        </p>
+                                      </div>
                                     </div>
+
+                                    {/* Three-dot menu for replies (super admin only) */}
+                                    {currentUser?.role === 'superadmin' && (
+                                      <div className="relative flex-shrink-0">
+                                        <Button
+                                          variant="ghost"
+                                          size="sm"
+                                          className="h-7 w-7 p-0"
+                                          onClick={() => setOpenMenuCommentId(openMenuCommentId === reply.id ? null : reply.id)}
+                                        >
+                                          <MoreHorizontal className="w-3.5 h-3.5" />
+                                        </Button>
+
+                                        {/* Dropdown Menu */}
+                                        <AnimatePresence>
+                                          {openMenuCommentId === reply.id && (
+                                            <motion.div
+                                              initial={{ opacity: 0, scale: 0.95, y: -10 }}
+                                              animate={{ opacity: 1, scale: 1, y: 0 }}
+                                              exit={{ opacity: 0, scale: 0.95, y: -10 }}
+                                              transition={{ duration: 0.15 }}
+                                              className="absolute right-0 top-9 z-50 min-w-[150px] bg-card border border-border rounded-lg shadow-lg overflow-hidden"
+                                            >
+                                              <button
+                                                onClick={() => {
+                                                  handleDeleteComment(reply.id)
+                                                  setOpenMenuCommentId(null)
+                                                }}
+                                                className="w-full px-4 py-2 text-left text-sm text-red-600 hover:bg-red-50 dark:hover:bg-red-950/20 transition-colors flex items-center gap-2"
+                                              >
+                                                <Trash2 className="w-3.5 h-3.5" />
+                                                Delete Reply
+                                              </button>
+                                            </motion.div>
+                                          )}
+                                        </AnimatePresence>
+                                      </div>
+                                    )}
                                   </motion.div>
                                 ))}
                               </motion.div>
