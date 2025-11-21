@@ -27,7 +27,8 @@ export function AnatomyPage() {
   }
 
   const topics = [
-    { id: 'cns', name: 'CNS Neuroanatomy', title: 'Brainstem & Cranial Nerves', description: 'Complete study guide: Brainstem structures, all 12 cranial nerves, quick reference & practice quiz', enabled: true, image: '/subjects/anatomy1.png', path: '/anatomy/cns' },
+    // HIDDEN: CNS Neuroanatomy - Can be re-enabled later by uncommenting
+    // { id: 'cns', name: 'CNS Neuroanatomy', title: 'Brainstem & Cranial Nerves', description: 'Complete study guide: Brainstem structures, all 12 cranial nerves, quick reference & practice quiz', enabled: true, image: '/subjects/anatomy1.png', path: '/anatomy/cns' },
     { id: 'peripheral', name: 'Anatomy Part 2', title: 'New Anatomy Module', description: 'Coming Soon', enabled: false, image: '/subjects/anatomy2.png', path: '#' },
   ]
 
@@ -42,12 +43,12 @@ export function AnatomyPage() {
             <div className="flex items-center gap-1.5"><ThemeToggle /><Button variant="ghost" size="sm" onClick={handleLogout}><LogOut className="w-4 h-4 mr-1.5" /><span className="hidden sm:inline text-sm">Logout</span></Button></div>
           </div>
         </header>
-        <main className="flex-1 mx-auto px-6 lg:px-10 py-8 relative z-10 max-w-7xl">
+        <main className="flex-1 w-full mx-auto px-6 lg:px-10 py-8 relative z-10 max-w-7xl">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-12 max-w-4xl mx-auto">
             <div className="flex items-center justify-center gap-3 mb-4"><User className="w-12 h-12 text-emerald-600 dark:text-emerald-400" /><h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight pb-1 bg-gradient-to-r from-foreground to-emerald-600 dark:to-emerald-400 bg-clip-text text-transparent">Anatomy</h1></div>
             <p className="text-base lg:text-lg text-muted-foreground">Select a topic to begin studying</p>
           </motion.div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto w-full">
             {topics.map((topic, idx) => (
               <motion.div key={topic.id} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: idx * 0.1 }} className={topic.enabled ? 'cursor-pointer' : 'cursor-not-allowed opacity-60'} onClick={() => topic.enabled && navigate(topic.path)}>
                 <div className="relative bg-card border-2 border-border/50 rounded-xl overflow-hidden h-[320px] hover:border-primary hover:shadow-[0_0_60px_rgba(16,185,129,0.4)] transition-all group">

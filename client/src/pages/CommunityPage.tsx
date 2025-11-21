@@ -400,15 +400,13 @@ export function CommunityPage() {
   }
 
   const handleCreatePost = async () => {
-    // Validate form
+    // Validate form - Title is mandatory, content is optional
     const errors: { title?: string; content?: string } = {}
 
     if (!postTitle.trim()) {
       errors.title = 'Title is required to post'
     }
-    if (!postContent.trim()) {
-      errors.content = 'Content is required to post'
-    }
+    // Content is optional - users can post with just title + attachments
 
     if (Object.keys(errors).length > 0) {
       setValidationErrors(errors)
@@ -1092,7 +1090,7 @@ export function CommunityPage() {
                           </Button>
                           <Button
                             onClick={handleCreatePost}
-                            disabled={!postTitle.trim() || !postContent.trim()}
+                            disabled={!postTitle.trim()}
                             className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white"
                           >
                             <Send className="w-4 h-4 mr-2" />
