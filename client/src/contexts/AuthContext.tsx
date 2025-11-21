@@ -201,10 +201,17 @@ export function AuthProvider({ children }: AuthProviderProps) {
     await updateProfile(user, { displayName: name })
 
     // Send email verification
+    // Configure action code settings to use correct domain
+    const actionCodeSettings = {
+      url: `${window.location.origin}/dashboard`,
+      handleCodeInApp: false,
+    }
+
     // ========== DIAGNOSTIC LOGGING - REMOVE AFTER FIXING ==========
     console.log('🔍 [DIAGNOSTIC] About to send verification email to:', user.email)
+    console.log('🔍 [DIAGNOSTIC] Action URL:', actionCodeSettings.url)
     try {
-      await sendEmailVerification(user)
+      await sendEmailVerification(user, actionCodeSettings)
       console.log('✅ [DIAGNOSTIC] sendEmailVerification() completed successfully')
     } catch (error: any) {
       console.error('❌ [DIAGNOSTIC] sendEmailVerification() failed:', error)
@@ -269,10 +276,17 @@ export function AuthProvider({ children }: AuthProviderProps) {
     if (!auth) throw new Error('Firebase not initialized')
     if (!user) throw new Error('No user logged in')
 
+    // Configure action code settings to use correct domain
+    const actionCodeSettings = {
+      url: `${window.location.origin}/dashboard`,
+      handleCodeInApp: false,
+    }
+
     // ========== DIAGNOSTIC LOGGING - REMOVE AFTER FIXING ==========
     console.log('🔍 [DIAGNOSTIC] Resending verification email to:', user.email)
+    console.log('🔍 [DIAGNOSTIC] Action URL:', actionCodeSettings.url)
     try {
-      await sendEmailVerification(user)
+      await sendEmailVerification(user, actionCodeSettings)
       console.log('✅ [DIAGNOSTIC] Resend completed successfully')
     } catch (error: any) {
       console.error('❌ [DIAGNOSTIC] Resend failed:', error)
