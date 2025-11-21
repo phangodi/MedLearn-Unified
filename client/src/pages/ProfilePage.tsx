@@ -20,6 +20,7 @@ import { PrivacySettings } from '@/components/settings/PrivacySettings'
 import { AvatarPicker } from '@/components/settings/AvatarPicker'
 import { DisplayNameEditor } from '@/components/settings/DisplayNameEditor'
 import { DeleteAccount } from '@/components/settings/DeleteAccount'
+import { AccountSecurity } from '@/components/settings/AccountSecurity'
 import { formatTimestamp } from '@/lib/dateUtils'
 import type { Post } from '@/types/community'
 import type { PrivacySettings as PrivacySettingsType } from '@/types/community'
@@ -535,6 +536,17 @@ export function ProfilePage() {
                     anonymousPseudonym={currentUser.anonymousPseudonym}
                     year={currentUser.year}
                     onSave={handleSavePrivacySettings}
+                  />
+                )}
+
+                {/* Account Security */}
+                {userProfile && firebaseAuth?.currentUser && (
+                  <AccountSecurity
+                    email={userProfile.email}
+                    authProvider={
+                      firebaseAuth.currentUser.providerData[0]?.providerId as 'password' | 'google.com' | 'apple.com'
+                    }
+                    userId={userProfile.uid}
                   />
                 )}
 

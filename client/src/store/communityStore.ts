@@ -96,19 +96,28 @@ export const useCommunityStore = create<CommunityState>((set, get) => ({
       const commentsRef = collection(db, 'comments')
       const q = query(
         commentsRef,
-        where('postId', '==', postId),
-        orderBy('timestamp', 'asc')
+        where('postId', '==', postId)
       )
       const snapshot = await getDocs(q)
 
-      const comments: Comment[] = snapshot.docs.map(doc => ({
-        id: doc.id,
-        ...doc.data()
-      } as Comment))
+      // Sort comments by timestamp in memory (client-side)
+      const comments: Comment[] = snapshot.docs
+        .map(doc => ({
+          id: doc.id,
+          ...doc.data()
+        } as Comment))
+        .sort((a, b) => {
+          // Sort by timestamp ascending
+          const aTime = a.timestamp?.seconds || 0
+          const bTime = b.timestamp?.seconds || 0
+          return aTime - bTime
+        })
 
+      console.log(`Fetched ${comments.length} comments for post ${postId}`)
       set({ comments })
     } catch (error) {
       console.error('Error fetching comments:', error)
+      set({ comments: [] }) // Clear comments on error
     }
   },
 

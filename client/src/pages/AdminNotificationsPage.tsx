@@ -1,13 +1,15 @@
-import { useState, FormEvent } from 'react'
-import { collection, addDoc, doc, setDoc, Timestamp } from 'firebase/firestore'
+import { useState, useEffect } from 'react'
+import { collection, addDoc, doc, setDoc, Timestamp, query, where, getDocs, deleteDoc, orderBy } from 'firebase/firestore'
 import { db } from '@/firebase/config'
 import { Sidebar } from '@/components/layout/Sidebar'
 import { Button } from '@/components/ui/Button'
 import { Bell, MessageSquare, Send, X } from 'lucide-react'
+import { ManageNotifications } from '@/components/admin/ManageNotifications'
+import { ManageTags } from '@/components/admin/ManageTags'
 import type { NotificationPriority, NotificationTarget, NotificationActionType } from '@/types/notifications'
 
 export function AdminNotificationsPage() {
-  const [activeTab, setActiveTab] = useState<'announcement' | 'dashboard'>('announcement')
+  const [activeTab, setActiveTab] = useState<'announcement' | 'dashboard' | 'manage' | 'tags'>('announcement')
 
   return (
     <div className="min-h-screen bg-background flex">
@@ -16,9 +18,9 @@ export function AdminNotificationsPage() {
         <div className="max-w-4xl mx-auto p-6">
           {/* Header */}
           <div className="mb-8">
-            <h1 className="text-3xl font-bold text-foreground mb-2">Notifications Admin</h1>
+            <h1 className="text-3xl font-bold text-foreground mb-2">Admin Panel</h1>
             <p className="text-muted-foreground">
-              Create announcements and update dashboard messages for all students
+              Manage announcements, dashboard messages, notifications, and community tags
             </p>
           </div>
 
@@ -57,10 +59,52 @@ export function AdminNotificationsPage() {
                 <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary" />
               )}
             </button>
+
+            <button
+              onClick={() => setActiveTab('manage')}
+              className={`px-4 py-2 font-medium transition-colors relative ${
+                activeTab === 'manage'
+                  ? 'text-primary'
+                  : 'text-muted-foreground hover:text-foreground'
+              }`}
+            >
+              <div className="flex items-center gap-2">
+                <Bell className="w-4 h-4" />
+                Manage Active
+              </div>
+              {activeTab === 'manage' && (
+                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary" />
+              )}
+            </button>
+
+            <button
+              onClick={() => setActiveTab('tags')}
+              className={`px-4 py-2 font-medium transition-colors relative ${
+                activeTab === 'tags'
+                  ? 'text-primary'
+                  : 'text-muted-foreground hover:text-foreground'
+              }`}
+            >
+              <div className="flex items-center gap-2">
+                <MessageSquare className="w-4 h-4" />
+                Manage Tags
+              </div>
+              {activeTab === 'tags' && (
+                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary" />
+              )}
+            </button>
           </div>
 
           {/* Content */}
-          {activeTab === 'announcement' ? <AnnouncementForm /> : <DashboardMessageForm />}
+          {activeTab === 'announcement' ? (
+            <AnnouncementForm />
+          ) : activeTab === 'dashboard' ? (
+            <DashboardMessageForm />
+          ) : activeTab === 'manage' ? (
+            <ManageNotifications />
+          ) : (
+            <ManageTags />
+          )}
         </div>
       </main>
     </div>

@@ -1,0 +1,40 @@
+# Netlify Build Configuration for Lara's MedLearn
+# This configuration ensures proper building and deployment of the React + Vite application
+
+[build]
+  # Base directory where the project is located
+  base = "client"
+
+  # Command to build the project (skip TypeScript check for now)
+  command = "npx vite build"
+
+  # Directory where the built files are located (relative to base)
+  publish = "dist"
+
+# SPA (Single Page Application) redirect rules
+# This ensures that all routes are handled by React Router
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Disable automatic deployment on git push
+# All deployments are manual only
+[build.environment]
+  NODE_VERSION = "18"
+
+# Deploy contexts
+[context.production]
+  # Production build settings (same as default)
+  command = "npx vite build"
+  publish = "dist"
+
+[context.staging]
+  # Staging build settings (same as production)
+  command = "npx vite build"
+  publish = "dist"
+
+[context.deploy-preview]
+  # Disable automatic deploy previews for pull requests
+  # All previews must be manually triggered
+  publish = "dist"

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Pattern Preview - MedLearn</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f5f5;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #1a1a1a;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 2rem;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 2rem;
+      right: 2rem;
+      background: #0066CC;
+      color: white;
+      border: none;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+      z-index: 1000;
+    }
+
+    .theme-toggle:hover {
+      background: #0052a3;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .pattern-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .pattern-preview {
+      height: 300px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .pattern-content {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .pattern-content h2 {
+      font-size: 4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .pattern-content p {
+      font-size: 0.9rem;
+      opacity: 0.6;
+    }
+
+    .pattern-info {
+      padding: 1.5rem;
+    }
+
+    .pattern-info h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: #1a1a1a;
+    }
+
+    .pattern-info .description {
+      color: #666;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .pattern-info .recommendation {
+      background: #e6f2ff;
+      padding: 0.75rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      color: #0066CC;
+      font-weight: 600;
+    }
+
+    .pattern-info .css-class {
+      margin-top: 1rem;
+      padding: 0.5rem;
+      background: #f5f5f5;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    /* Pattern styles - LIGHT MODE */
+    .bg-pattern-dots {
+      background-color: #FFFFFF;
+      background-image: radial-gradient(circle, rgba(0, 102, 204, 0.03) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+
+    .bg-pattern-grid {
+      background-color: #FFFFFF;
+      background-image:
+        linear-gradient(to right, rgba(0, 102, 204, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 102, 204, 0.02) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .bg-pattern-noise {
+      background-color: #FFFFFF;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+    }
+
+    .bg-pattern-hexagon {
+      background-color: #FFFFFF;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='52' viewBox='0 0 60 52' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l15 8.66v17.32L30 34.64 15 26V8.66L30 0zm0 52l15-8.66V26.02L30 17.36l-15 8.66v17.32L30 52z' fill='%230066CC' fill-opacity='0.02' fill-rule='evenodd'/%3E%3C/svg%3E");
+    }
+
+    .bg-pattern-gradient {
+      background-color: #FFFFFF;
+      background-image:
+        radial-gradient(ellipse at top left, rgba(0, 102, 204, 0.03) 0%, transparent 50%),
+        radial-gradient(ellipse at top right, rgba(0, 168, 150, 0.02) 0%, transparent 50%),
+        radial-gradient(ellipse at bottom, rgba(0, 102, 204, 0.02) 0%, transparent 50%);
+    }
+
+    .bg-pattern-crosshatch {
+      background-color: #FFFFFF;
+      background-image:
+        repeating-linear-gradient(45deg, transparent, transparent 15px, rgba(0, 102, 204, 0.015) 15px, rgba(0, 102, 204, 0.015) 16px),
+        repeating-linear-gradient(-45deg, transparent, transparent 15px, rgba(0, 102, 204, 0.015) 15px, rgba(0, 102, 204, 0.015) 16px);
+    }
+
+    /* DARK MODE */
+    body.dark {
+      background: #0A0E27;
+    }
+
+    body.dark .container h1 {
+      color: #e5e5e5;
+    }
+
+    body.dark .subtitle {
+      color: #a0a0a0;
+    }
+
+    body.dark .pattern-card {
+      background: #1A1F3A;
+    }
+
+    body.dark .pattern-info h3 {
+      color: #e5e5e5;
+    }
+
+    body.dark .pattern-info .description {
+      color: #a0a0a0;
+    }
+
+    body.dark .pattern-info .recommendation {
+      background: rgba(0, 102, 204, 0.2);
+      color: #66b3ff;
+    }
+
+    body.dark .pattern-info .css-class {
+      background: rgba(255, 255, 255, 0.05);
+      color: #a0a0a0;
+    }
+
+    body.dark .bg-pattern-dots {
+      background-color: #0A0E27;
+      background-image: radial-gradient(circle, rgba(0, 128, 255, 0.04) 1px, transparent 1px);
+    }
+
+    body.dark .bg-pattern-grid {
+      background-color: #0A0E27;
+      background-image:
+        linear-gradient(to right, rgba(0, 128, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 128, 255, 0.03) 1px, transparent 1px);
+    }
+
+    body.dark .bg-pattern-noise {
+      background-color: #0A0E27;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+    }
+
+    body.dark .bg-pattern-hexagon {
+      background-color: #0A0E27;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='52' viewBox='0 0 60 52' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l15 8.66v17.32L30 34.64 15 26V8.66L30 0zm0 52l15-8.66V26.02L30 17.36l-15 8.66v17.32L30 52z' fill='%230080FF' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+    }
+
+    body.dark .bg-pattern-gradient {
+      background-color: #0A0E27;
+      background-image:
+        radial-gradient(ellipse at top left, rgba(0, 128, 255, 0.04) 0%, transparent 50%),
+        radial-gradient(ellipse at top right, rgba(0, 194, 173, 0.03) 0%, transparent 50%),
+        radial-gradient(ellipse at bottom, rgba(0, 128, 255, 0.03) 0%, transparent 50%);
+    }
+
+    body.dark .bg-pattern-crosshatch {
+      background-color: #0A0E27;
+      background-image:
+        repeating-linear-gradient(45deg, transparent, transparent 15px, rgba(0, 128, 255, 0.02) 15px, rgba(0, 128, 255, 0.02) 16px),
+        repeating-linear-gradient(-45deg, transparent, transparent 15px, rgba(0, 128, 255, 0.02) 15px, rgba(0, 128, 255, 0.02) 16px);
+    }
+
+    body.dark .pattern-content h2,
+    body.dark .pattern-content p {
+      color: #e5e5e5;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #0066CC;
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 12px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .top-pick {
+      background: #FFB703;
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+
+  <div class="container">
+    <h1>Background Pattern Preview</h1>
+    <p class="subtitle">All 6 subtle background patterns for MedLearn sociology chapter pages. Toggle between light and dark modes to see how they adapt!</p>
+
+    <div class="grid">
+      <!-- Pattern 1: Dots -->
+      <div class="pattern-card">
+        <div class="pattern-preview bg-pattern-dots">
+          <div class="pattern-content">
+            <div class="badge">Option 1</div>
+            <h2>Aa</h2>
+            <p>Sample reading text</p>
+          </div>
+        </div>
+        <div class="pattern-info">
+          <h3>Soft Dot Grid</h3>
+          <p class="description">Clean, minimalist dots in a grid. Like graph paper or scientific lab notebook.</p>
+          <div class="recommendation">Best for: Professional medical/scientific feel</div>
+          <div class="css-class">bg-pattern-dots</div>
+        </div>
+      </div>
+
+      <!-- Pattern 2: Grid -->
+      <div class="pattern-card">
+        <div class="pattern-preview bg-pattern-grid">
+          <div class="pattern-content">
+            <div class="badge">Option 2</div>
+            <h2>Aa</h2>
+            <p>Sample reading text</p>
+          </div>
+        </div>
+        <div class="pattern-info">
+          <h3>Diagonal Grid Lines</h3>
+          <p class="description">Subtle horizontal and vertical grid lines. Like engineering blueprints.</p>
+          <div class="recommendation">Best for: Structured, organized aesthetic</div>
+          <div class="css-class">bg-pattern-grid</div>
+        </div>
+      </div>
+
+      <!-- Pattern 3: Noise -->
+      <div class="pattern-card">
+        <div class="pattern-preview bg-pattern-noise">
+          <div class="pattern-content">
+            <div class="badge">Option 3 ⭐</div>
+            <h2>Aa</h2>
+            <p>Sample reading text</p>
+          </div>
+        </div>
+        <div class="pattern-info">
+          <h3>Subtle Noise Texture</h3>
+          <p class="description">Paper-like organic texture using fractal noise. Like premium textbook paper.</p>
+          <div class="recommendation">Best for: Reducing digital fatigue during long reading</div>
+          <div class="css-class">bg-pattern-noise</div>
+        </div>
+      </div>
+
+      <!-- Pattern 4: Hexagon -->
+      <div class="pattern-card">
+        <div class="pattern-preview bg-pattern-hexagon">
+          <div class="pattern-content">
+            <div class="badge">Option 4</div>
+            <h2>Aa</h2>
+            <p>Sample reading text</p>
+          </div>
+        </div>
+        <div class="pattern-info">
+          <h3>Medical Hexagon</h3>
+          <p class="description">Honeycomb molecular structure pattern. Like chemistry diagrams or cells.</p>
+          <div class="recommendation">Best for: Strong medical theme and branding</div>
+          <div class="css-class">bg-pattern-hexagon</div>
+        </div>
+      </div>
+
+      <!-- Pattern 5: Gradient -->
+      <div class="pattern-card">
+        <div class="pattern-preview bg-pattern-gradient">
+          <div class="pattern-content">
+            <div class="badge top-pick">Option 5 ⭐⭐ TOP PICK</div>
+            <h2>Aa</h2>
+            <p>Sample reading text</p>
+          </div>
+        </div>
+        <div class="pattern-info">
+          <h3>Gradient Overlay</h3>
+          <p class="description">Three overlapping radial gradients (medical blue + teal). Like modern SaaS applications.</p>
+          <div class="recommendation">Best for: Premium, sophisticated feel with zero eye strain</div>
+          <div class="css-class">bg-pattern-gradient</div>
+        </div>
+      </div>
+
+      <!-- Pattern 6: Crosshatch -->
+      <div class="pattern-card">
+        <div class="pattern-preview bg-pattern-crosshatch">
+          <div class="pattern-content">
+            <div class="badge">Option 6</div>
+            <h2>Aa</h2>
+            <p>Sample reading text</p>
+          </div>
+        </div>
+        <div class="pattern-info">
+          <h3>Cross-hatch Lines</h3>
+          <p class="description">Diagonal lines crossing at 45-degree angles. Like classic textbooks.</p>
+          <div class="recommendation">Best for: Traditional academic aesthetic (most subtle)</div>
+          <div class="css-class">bg-pattern-crosshatch</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+      const btn = document.querySelector('.theme-toggle');
+      if (document.body.classList.contains('dark')) {
+        btn.textContent = 'Switch to Light Mode';
+      } else {
+        btn.textContent = 'Toggle Dark Mode';
+      }
+    }
+  </script>
+</body>
+</html>

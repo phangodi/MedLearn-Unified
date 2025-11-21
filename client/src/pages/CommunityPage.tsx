@@ -37,11 +37,12 @@ import { InlineComments } from '@/components/community/InlineComments'
 import { features } from '@/config/features'
 import { useAuth } from '@/contexts/AuthContext'
 import { generateMedicalPseudonym } from '@/lib/anonymousNames'
-import { storage } from '@/lib/firebase'
+import { storage, db } from '@/lib/firebase'
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'
+import { doc, getDoc } from 'firebase/firestore'
 
-// Available topics/tags for posts
-const availableTags = [
+// Default tags (fallback if Firestore fetch fails)
+const DEFAULT_TAGS = [
   'Physiology',
   'Histology',
   'Anatomy',
@@ -64,6 +65,9 @@ export function CommunityPage() {
   const navigate = useNavigate()
   const location = useLocation()
   const { userProfile, signOut } = useAuth()
+
+  // Fetch available tags from Firestore
+  const [availableTags, setAvailableTags] = useState<string[]>(DEFAULT_TAGS)
 
   // Community section control - check location state for initial section
   const [activeSection, setActiveSection] = useState(() => {
@@ -105,6 +109,24 @@ export function CommunityPage() {
     toggleBookmark,
     togglePin
   } = useCommunityStore()
+
+  // Fetch available tags from Firestore
+  useEffect(() => {
+    const fetchTags = async () => {
+      try {
+        if (!db) return
+        const tagsDoc = await getDoc(doc(db, 'settings', 'communityTags'))
+        if (tagsDoc.exists()) {
+          setAvailableTags(tagsDoc.data().tags || DEFAULT_TAGS)
+        }
+      } catch (error) {
+        console.error('Error fetching tags:', error)
+        setAvailableTags(DEFAULT_TAGS)
+      }
+    }
+    fetchTags()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   // Initialize anonymous posting based on user's privacy settings
   useEffect(() => {
@@ -331,45 +353,66 @@ export function CommunityPage() {
     // Clear any previous errors
     setValidationErrors({})
 
-    // Upload files to Firebase Storage and get download URLs
-    const attachments: Attachment[] = await Promise.all(
-      selectedFiles.map(async (file) => {
-        try {
-          // Create a unique filename with timestamp
-          const timestamp = Date.now()
-          const filename = `${timestamp}_${file.name}`
-          const storageRef = ref(storage, `attachments/${filename}`)
+    console.log('Creating post with:', { postTitle, postContent, selectedTags, fileCount: selectedFiles.length, postAnonymously })
 
-          // Upload the file
-          await uploadBytes(storageRef, file)
+    // If there are files, try to upload them, but don't block post creation
+    let attachments: Attachment[] = []
+    let fileUploadFailed = false
 
-          // Get the download URL
-          const url = await getDownloadURL(storageRef)
+    if (selectedFiles.length > 0) {
+      try {
+        attachments = await Promise.all(
+          selectedFiles.map(async (file) => {
+            try {
+              // Create a unique filename with timestamp
+              const timestamp = Date.now()
+              const filename = `${timestamp}_${file.name}`
+              const storageRef = ref(storage, `attachments/${filename}`)
 
-          return {
-            type: getFileType(file) as 'pdf' | 'image' | 'video' | 'other',
-            name: file.name,
-            size: formatFileSize(file.size),
-            url,
-            storageRef: `attachments/${filename}`,
-            downloads: 0,
-            preview: getFileType(file) === 'image'
-          }
-        } catch (error) {
-          console.error(`Error uploading file ${file.name}:`, error)
-          // Return attachment without URL if upload fails
-          return {
-            type: getFileType(file) as 'pdf' | 'image' | 'video' | 'other',
-            name: file.name,
-            size: formatFileSize(file.size),
-            downloads: 0,
-            preview: getFileType(file) === 'image'
-          }
-        }
-      })
-    )
+              // Upload the file
+              await uploadBytes(storageRef, file)
 
-    await createPost(postTitle, postContent, selectedTags, attachments, postAnonymously)
+              // Get the download URL
+              const url = await getDownloadURL(storageRef)
+
+              return {
+                type: getFileType(file) as 'pdf' | 'image' | 'video' | 'other',
+                name: file.name,
+                size: formatFileSize(file.size),
+                url,
+                storageRef: `attachments/${filename}`,
+                downloads: 0,
+                preview: getFileType(file) === 'image'
+              }
+            } catch (error) {
+              console.error(`Error uploading file ${file.name}:`, error)
+              fileUploadFailed = true
+              // Return null for failed uploads
+              return null
+            }
+          })
+        )
+        // Filter out null values (failed uploads)
+        attachments = attachments.filter(a => a !== null) as Attachment[]
+      } catch (error) {
+        console.error('File upload error:', error)
+        fileUploadFailed = true
+        attachments = []
+      }
+    }
+
+    try {
+      await createPost(postTitle, postContent, selectedTags, attachments, postAnonymously)
+      console.log('Post created successfully!')
+
+      if (fileUploadFailed && selectedFiles.length > 0) {
+        alert('Post created, but some files could not be uploaded due to a configuration issue. Your post is still visible to others.')
+      }
+    } catch (error) {
+      console.error('Failed to create post:', error)
+      alert('Failed to create post. Please try again.')
+      return
+    }
 
     // Reset form
     setPostTitle('')
@@ -979,7 +1022,7 @@ export function CommunityPage() {
                           </Button>
                           <Button
                             onClick={handleCreatePost}
-                            disabled={!postContent.trim()}
+                            disabled={!postTitle.trim() || !postContent.trim()}
                             className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white"
                           >
                             <Send className="w-4 h-4 mr-2" />

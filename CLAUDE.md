@@ -382,6 +382,74 @@ After first deployment, user must manually configure Firebase Console:
    - **Apple Developer Console:** Add return URLs with Netlify domains
 
 3. **Environment Variables:** All VITE_* variables from `.env.local` must be added to Netlify
+   - ⚠️ **CRITICAL:** Ensure `VITE_USE_FIREBASE_EMULATORS` is NOT set on Netlify (or set to `false`)
+   - If set to `true`, the app will try to connect to non-existent emulators instead of production Firebase
+
+### 🔥 FIRESTORE SECURITY RULES - PRE-DEPLOYMENT CHECKLIST
+
+**⚠️ MANDATORY: Always check and deploy Firestore rules BEFORE deploying to Netlify!**
+
+The Community page uses Firestore with security rules that control data access. Rules are maintained in two modes:
+- **Emulator Mode** (for local development)
+- **Production Mode** (for staging/production deployment)
+
+#### Pre-Deployment Checklist
+
+**BEFORE every deployment to Netlify, Claude MUST:**
+
+1. **Check Firestore Rules Configuration** (`/firestore.rules`):
+   - [ ] Production rules are ACTIVE (uncommented)
+   - [ ] Emulator mode rules are COMMENTED OUT
+   - [ ] Review changes if rules were modified
+
+2. **Deploy Firestore Rules to Firebase**:
+   ```bash
+   firebase use medlearn-dev
+   firebase deploy --only firestore:rules
+   ```
+
+3. **Verify Rules Deployment**:
+   - [ ] Check Firebase Console: https://console.firebase.google.com/project/medlearn-dev/firestore/rules
+   - [ ] Confirm rules show "Published" status with recent timestamp
+
+4. **Verify Netlify Environment Variables**:
+   - [ ] `VITE_USE_FIREBASE_EMULATORS` is NOT set (or is `false`)
+
+#### Why This Matters
+
+- **Without production rules**: Users cannot create posts/comments on deployed sites
+- **With emulator rules active**: Firebase blocks all authenticated operations
+- **Rules are global**: One set of rules applies to all environments (local, staging, production)
+- **Separate deployment**: Firestore rules deploy via Firebase CLI, not Netlify
+
+#### Quick Reference
+
+For detailed instructions on managing Firestore rules, see:
+- **Full Guide:** `/FIRESTORE_RULES_GUIDE.md`
+- **Firebase Project:** `medlearn-dev`
+- **Firebase Console:** https://console.firebase.google.com/project/medlearn-dev
+
+#### Common Scenarios
+
+**Scenario 1: User requests Netlify deployment**
+→ Claude must FIRST check and deploy Firestore rules, THEN proceed with Netlify deployment
+
+**Scenario 2: User is testing Community page features**
+→ Claude should remind user about Firestore rules status and offer to check/deploy if needed
+
+**Scenario 3: User reports "can't post/comment on staging"**
+→ Claude should immediately check if production Firestore rules are deployed
+
+#### Automated Reminder
+
+When user mentions ANY of these keywords:
+- "deploy to netlify"
+- "deploy to staging"
+- "push to netlify"
+- "community page not working"
+- "can't post/comment"
+
+→ Claude MUST ask: "Should I check and deploy the Firestore rules first?"
 
 ### Git Workflow Rules
 

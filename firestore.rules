@@ -2,13 +2,14 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
-    // EMULATOR MODE: Allow all reads and writes for testing
-    // TODO: Restore production rules before deploying to production
+    /* EMULATOR MODE: Uncomment this for local testing with Firebase emulators
+    // Allow all reads and writes for testing
     match /{document=**} {
       allow read, write: if true;
     }
+    */
 
-    /* PRODUCTION RULES - UNCOMMENT BEFORE DEPLOYING
+    // PRODUCTION RULES - Active for deployment
 
     // Helper functions
     function isSignedIn() {
@@ -43,10 +44,12 @@ service cloud.firestore {
     match /posts/{postId} {
       allow read: if true;
       allow create: if isSignedIn();
-      allow update: if isSignedIn() &&
-                      (resource.data.author.id == request.auth.uid || isAdmin());
-      allow delete: if isSignedIn() &&
-                      (resource.data.author.id == request.auth.uid || isAdmin());
+      // Allow updates for:
+      // - Any signed-in user (for likes, views, bookmarks)
+      // - Post author (for content edits, using actualAuthorId for anonymous posts)
+      // - Admins (for pinning, moderation)
+      allow update: if isSignedIn();
+      allow delete: if isAdmin();
     }
 
     // Comments collection
@@ -69,6 +72,11 @@ service cloud.firestore {
       allow write: if isSuperAdmin();
     }
 
-    */
+    // Settings collection (community tags, etc.)
+    match /settings/{document} {
+      allow read: if true; // Anyone can read settings (including tags)
+      allow write: if isSuperAdmin(); // Only super admins can modify settings
+    }
+
   }
 }
