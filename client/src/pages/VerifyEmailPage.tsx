@@ -126,10 +126,23 @@ export function VerifyEmailPage() {
             {user?.email}
           </p>
 
+          {/* IMPORTANT: Junk/Spam Warning */}
+          <div className="mb-6 p-4 bg-warning/10 border-2 border-warning/30 rounded-lg">
+            <div className="flex items-start gap-3">
+              <AlertCircle className="w-5 h-5 text-warning flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="text-sm font-bold text-warning mb-1">⚠️ IMPORTANT: Check Your Junk/Spam Folder!</p>
+                <p className="text-xs text-warning/90">
+                  Verification emails often end up in junk/spam folders. If you don't see the email in your inbox within 1-2 minutes, <span className="font-semibold">check your junk/spam folder</span> and mark it as "Not Junk" if found there.
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* Instructions */}
           <div className="bg-muted/30 rounded-lg p-4 mb-6 space-y-2">
             <p className="text-sm text-muted-foreground">
-              <span className="font-semibold text-foreground">1.</span> Check your inbox (and spam folder)
+              <span className="font-semibold text-foreground">1.</span> Check your inbox AND junk/spam folder
             </p>
             <p className="text-sm text-muted-foreground">
               <span className="font-semibold text-foreground">2.</span> Click the verification link in the email

@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Loader2, Users, UserCheck, UserX, Ban, CheckCircle, Calendar, MessageSquare, Shield, Trash2, RefreshCw } from 'lucide-react'
+import { Loader2, Users, UserCheck, UserX, Ban, CheckCircle, Calendar, Trash2, RefreshCw } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
-import { db } from '@/lib/firebase'
-import { collection, getDocs, doc, updateDoc, deleteDoc, query, orderBy, Timestamp, where } from 'firebase/firestore'
+import { db } from '@/firebase/config'
+import { collection, getDocs, doc, updateDoc, deleteDoc, query, orderBy, Timestamp } from 'firebase/firestore'
 
 interface UserData {
   uid: string
@@ -52,18 +52,28 @@ export function ManageUsers() {
         ...docSnap.data()
       } as UserData))
 
-      setUsers(fetchedUsers)
+      // Deduplicate users by email - keep only the most recent one per email
+      const emailMap = new Map<string, UserData>()
+      fetchedUsers.forEach(user => {
+        const existing = emailMap.get(user.email)
+        if (!existing || (user.createdAt?.seconds || 0) > (existing.createdAt?.seconds || 0)) {
+          emailMap.set(user.email, user)
+        }
+      })
+      const deduplicatedUsers = Array.from(emailMap.values())
 
-      // Calculate stats
+      setUsers(deduplicatedUsers)
+
+      // Calculate stats using deduplicated users
       const now = Date.now()
       const oneDayAgo = now - 24 * 60 * 60 * 1000
       const oneWeekAgo = now - 7 * 24 * 60 * 60 * 1000
 
       setStats({
-        total: fetchedUsers.length,
-        activeToday: fetchedUsers.filter(u => u.lastLogin?.seconds * 1000 > oneDayAgo).length,
-        newThisWeek: fetchedUsers.filter(u => u.createdAt?.seconds * 1000 > oneWeekAgo).length,
-        banned: fetchedUsers.filter(u => u.isBanned).length
+        total: deduplicatedUsers.length,
+        activeToday: deduplicatedUsers.filter(u => u.lastLogin?.seconds * 1000 > oneDayAgo).length,
+        newThisWeek: deduplicatedUsers.filter(u => u.createdAt?.seconds * 1000 > oneWeekAgo).length,
+        banned: deduplicatedUsers.filter(u => u.isBanned).length
       })
     } catch (error) {
       console.error('Error fetching users:', error)
@@ -347,11 +357,11 @@ export function ManageUsers() {
                       {user.role !== 'superadmin' && (
                         <>
                           <Button
-                            variant={user.isBanned ? "outline" : "destructive"}
+                            variant="outline"
                             size="sm"
                             onClick={() => handleBanUser(user.uid, user.isBanned || false)}
                             disabled={banning === user.uid || deleting === user.uid}
-                            className="text-xs"
+                            className={`text-xs ${!user.isBanned ? 'border-red-600 text-red-600 hover:bg-red-50 dark:border-red-400 dark:text-red-400 dark:hover:bg-red-950' : ''}`}
                           >
                             {banning === user.uid ? (
                               <Loader2 className="w-3 h-3 animate-spin" />

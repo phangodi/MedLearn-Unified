@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Firestore Users Cleanup</title>
+  <style>
+    body {
+      font-family: system-ui;
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #0A0E27;
+      color: white;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      background: #0066CC;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 10px 0;
+    }
+    button:hover { background: #0052a3; }
+    .user {
+      padding: 10px;
+      margin: 5px 0;
+      background: rgba(255,255,255,0.05);
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    .delete { color: #ff4444; }
+    .keep { color: #44ff44; }
+    #output {
+      margin-top: 20px;
+      padding: 15px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 8px;
+      white-space: pre-wrap;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧹 Firestore Users Cleanup</h1>
+  <p>This will delete orphaned user documents from Firestore that don't exist in Firebase Auth.</p>
+
+  <button onclick="analyzeUsers()">1. Analyze Firestore Users</button>
+  <button onclick="deleteOrphans()" style="background: #cc0000;">2. Delete Orphaned Documents</button>
+
+  <div id="output">Click "Analyze" to start...</div>
+
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js'
+    import { getAuth } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js'
+    import { getFirestore, collection, getDocs, doc, deleteDoc } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js'
+
+    // Your Firebase config from .env.local
+    const firebaseConfig = {
+      apiKey: prompt('Enter VITE_FIREBASE_API_KEY:'),
+      authDomain: prompt('Enter VITE_FIREBASE_AUTH_DOMAIN:'),
+      projectId: prompt('Enter VITE_FIREBASE_PROJECT_ID:'),
+      storageBucket: prompt('Enter VITE_FIREBASE_STORAGE_BUCKET:'),
+      messagingSenderId: prompt('Enter VITE_FIREBASE_MESSAGING_SENDER_ID:'),
+      appId: prompt('Enter VITE_FIREBASE_APP_ID:')
+    }
+
+    const app = initializeApp(firebaseConfig)
+    const db = getFirestore(app)
+    const auth = getAuth(app)
+
+    // VALID UIDs from your Firebase Auth Console screenshot
+    const VALID_UIDS = [
+      'KKx3dEmadmQDujvbbWWHf',
+      'raTlcJTWCZVoBm50v2E6ZDZ',
+      '07C6W6jGbtVAbxW3EaWUm2',
+      'tdEb7msBytWsruiQn2spBM3k'
+    ]
+
+    let orphanedUsers = []
+
+    window.analyzeUsers = async function() {
+      const output = document.getElementById('output')
+      output.innerHTML = '⏳ Analyzing Firestore users collection...\n\n'
+
+      try {
+        const snapshot = await getDocs(collection(db, 'users'))
+        const allUsers = snapshot.docs.map(doc => ({
+          id: doc.id,
+          data: doc.data()
+        }))
+
+        output.innerHTML += `📊 Found ${allUsers.length} total documents in Firestore\n\n`
+
+        orphanedUsers = []
+        allUsers.forEach(user => {
+          const isValid = VALID_UIDS.some(validUid => user.id.startsWith(validUid))
+          if (isValid) {
+            output.innerHTML += `<div class="user keep">✅ KEEP: ${user.data.email} (${user.id.substring(0, 20)}...)</div>`
+          } else {
+            output.innerHTML += `<div class="user delete">❌ DELETE: ${user.data.email} (${user.id.substring(0, 20)}...)</div>`
+            orphanedUsers.push(user)
+          }
+        })
+
+        output.innerHTML += `\n\n📈 Summary:\n`
+        output.innerHTML += `   Valid users: ${allUsers.length - orphanedUsers.length}\n`
+        output.innerHTML += `   Orphaned documents: ${orphanedUsers.length}\n\n`
+        output.innerHTML += `⚠️  Ready to delete ${orphanedUsers.length} orphaned documents. Click "Delete Orphaned Documents" to proceed.`
+
+      } catch (error) {
+        output.innerHTML += `\n❌ Error: ${error.message}`
+      }
+    }
+
+    window.deleteOrphans = async function() {
+      if (orphanedUsers.length === 0) {
+        alert('Run "Analyze" first!')
+        return
+      }
+
+      if (!confirm(`⚠️ This will permanently delete ${orphanedUsers.length} Firestore documents!\n\nAre you absolutely sure?`)) {
+        return
+      }
+
+      const output = document.getElementById('output')
+      output.innerHTML = '🗑️  Deleting orphaned documents...\n\n'
+
+      let deleted = 0
+      for (const user of orphanedUsers) {
+        try {
+          await deleteDoc(doc(db, 'users', user.id))
+          output.innerHTML += `✅ Deleted: ${user.data.email} (${user.id.substring(0, 20)}...)\n`
+          deleted++
+        } catch (error) {
+          output.innerHTML += `❌ Failed: ${user.data.email} - ${error.message}\n`
+        }
+      }
+
+      output.innerHTML += `\n\n🎉 Cleanup complete!\n`
+      output.innerHTML += `   Deleted: ${deleted}/${orphanedUsers.length} documents\n\n`
+      output.innerHTML += `✅ Your admin panel will now show only the 4 valid users!`
+
+      orphanedUsers = []
+    }
+  </script>
+</body>
+</html>

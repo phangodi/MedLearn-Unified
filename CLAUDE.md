@@ -281,6 +281,121 @@ Legacy apps provide different study formats:
 - **Features:** Premium coming soon design with animated background, floating icons, hero section
 - **Status:** ✅ Implemented with `showFullContent` toggle for future sections
 
+## ✅ Email Verification System (WORKING with SendGrid SMTP)
+
+### Current Status: ENABLED and WORKING
+
+Email verification is **FULLY FUNCTIONAL** using SendGrid SMTP service. Emails are successfully sent, though they may land in junk/spam folders due to sender reputation (resolved by domain ownership in future).
+
+### Implementation Details
+
+1. **VerifyEmailPage.tsx** (`client/src/pages/VerifyEmailPage.tsx`)
+   - Professional UI for unverified users
+   - Shows email address verification was sent to
+   - **Prominent junk/spam folder warning** (yellow warning box)
+   - "Resend Verification Email" button with rate limit handling
+   - Auto-polling every 3 seconds to detect verification without manual button click
+   - Status: ✅ Working
+
+2. **AuthActionPage.tsx** (`client/src/pages/AuthActionPage.tsx`)
+   - Handles verification links when users click from emails
+   - Route: `/__/auth/action`
+   - Processes Firebase action codes
+   - Shows success/error states with proper UI
+   - Auto-redirects to dashboard after successful verification
+   - Status: ✅ Working
+
+3. **ProtectedRoute.tsx** (`client/src/components/auth/ProtectedRoute.tsx`)
+   - Email verification check at lines 28-31
+   - Blocks unverified email/password users
+   - OAuth users (Google/Apple) skip verification (auto-verified by provider)
+   - Status: ✅ ENABLED and enforcing verification
+
+4. **AuthContext.tsx** (`client/src/contexts/AuthContext.tsx`)
+   - Clean email sending implementation (diagnostic logs removed)
+   - Uses Firebase `sendEmailVerification()` via SMTP
+   - Lines 204, 261: Simple, clean implementation
+   - Status: ✅ Working
+
+### SendGrid SMTP Configuration
+
+**Firebase Console SMTP Settings** (Authentication → Templates → SMTP settings):
+- **SMTP Server Host:** `smtp.sendgrid.net`
+- **SMTP Server Port:** `587`
+- **SMTP Security Mode:** `STARTTLS`
+- **SMTP Account Username:** `apikey` (literal string)
+- **SMTP Account Password:** SendGrid API Key
+- **Sender Address:** Verified sender identity email
+- **Sender Name:** `Lara's MedLearn`
+
+**SendGrid Account:**
+- **Service:** Twilio SendGrid (free tier)
+- **Free Tier:** 100 emails/day permanently free
+- **Sender Verification:** Single sender identity verified
+- **Status:** ✅ Active and working
+
+### Known Issue: Junk/Spam Folder Delivery
+
+**Current Behavior:**
+- Emails ARE successfully sent via SendGrid
+- Emails often land in junk/spam folders (not inbox)
+- This is due to sender reputation and lack of custom domain
+
+**User Warning:**
+- VerifyEmailPage displays prominent yellow warning box
+- Instructs users to check junk/spam folder
+- Includes guidance to mark email as "Not Junk"
+
+**Long-term Solution (Future):**
+- Purchase custom domain (e.g., `medlearn-szeged.com`)
+- Verify domain in SendGrid with DNS records (SPF, DKIM, DMARC)
+- This will improve sender reputation and inbox delivery
+- Cost: ~$12/year for domain
+
+### How Email Verification Works
+
+**For Email/Password Users:**
+1. User signs up with email/password
+2. Firebase sends verification email via SendGrid SMTP
+3. Email arrives (often in junk folder)
+4. User clicks verification link
+5. Redirected to `/__/auth/action` → AuthActionPage
+6. Email marked as verified
+7. User can access dashboard
+
+**For OAuth Users (Google/Apple):**
+- Emails are pre-verified by OAuth provider
+- No verification step required
+- Immediate access to dashboard
+
+### Related Files
+
+- **Pages:**
+  - `client/src/pages/VerifyEmailPage.tsx` - Verification UI with junk mail warning
+  - `client/src/pages/AuthActionPage.tsx` - Handles email verification links
+
+- **Authentication:**
+  - `client/src/contexts/AuthContext.tsx` - Email sending logic (lines 204, 261)
+  - `client/src/components/auth/ProtectedRoute.tsx` - Verification enforcement (lines 28-31)
+
+- **Routes:**
+  - `/verify-email` - Verification required screen
+  - `/__/auth/action` - Email verification link handler
+
+### Console Warnings (Safe to Ignore)
+
+**Yellow Warning:**
+- `<meta name="apple-mobile-web-app-capable" content="yes"> is deprecated`
+- Impact: None - deprecation notice only
+
+**Red Errors:**
+- `Cross-Origin-Opener-Policy policy would block the window.close call`
+- What: OAuth popup security warnings
+- Impact: None - OAuth works correctly
+- Source: Google/Apple login popups
+
+These warnings do not affect functionality or performance.
+
 ## Known Technical Debt
 
 - Zustand state management not yet configured
