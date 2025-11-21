@@ -82,6 +82,7 @@ export interface UserProfile {
   bookmarkedPosts: string[]
   createdAt: Timestamp
   isAdmin?: boolean
+  isSuperAdmin?: boolean  // Specifically for super admin checks
   privacySettings?: PrivacySettings
   anonymousPseudonym?: string  // Generated medical-themed pseudonym for anonymous posting
 }

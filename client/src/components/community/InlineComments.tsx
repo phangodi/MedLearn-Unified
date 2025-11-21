@@ -416,7 +416,7 @@ export function InlineComments({
                           </div>
 
                             {/* Three-dot menu (super admin only) */}
-                            {currentUser?.role === 'superadmin' && (
+                            {currentUser?.isSuperAdmin && (
                               <div className="relative flex-shrink-0">
                                 <Button
                                   variant="ghost"
@@ -568,7 +568,7 @@ export function InlineComments({
                                     </div>
 
                                     {/* Three-dot menu for replies (super admin only) */}
-                                    {currentUser?.role === 'superadmin' && (
+                                    {currentUser?.isSuperAdmin && (
                                       <div className="relative flex-shrink-0">
                                         <Button
                                           variant="ghost"

@@ -40,7 +40,7 @@ import { useAuth } from '@/contexts/AuthContext'
 import { generateMedicalPseudonym } from '@/lib/anonymousNames'
 import { storage, db } from '@/lib/firebase'
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'
-import { doc, getDoc } from 'firebase/firestore'
+import { doc, getDoc, updateDoc } from 'firebase/firestore'
 
 // Default tags (fallback if Firestore fetch fails)
 const DEFAULT_TAGS = [
@@ -165,6 +165,7 @@ export function CommunityPage() {
         likedPosts: [],
         bookmarkedPosts: [],
         isAdmin: userProfile.isAdmin || false,
+        isSuperAdmin: userProfile.role === 'superadmin', // Add this to check super admin status
         year: userProfile.year,
         // Ensure privacy settings and pseudonym exist with defaults
         privacySettings: userProfile.privacySettings || {
@@ -176,6 +177,41 @@ export function CommunityPage() {
       setCurrentUser(communityUser)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [userProfile])
+
+  // One-time fix: Update super admin status if needed
+  useEffect(() => {
+    const checkAndUpdateSuperAdmin = async () => {
+      if (!userProfile || !db) return
+
+      const superAdminEmails = import.meta.env.VITE_SUPER_ADMIN_EMAIL?.split(',').map((e: string) => e.trim()) || []
+      const isInSuperAdminList = superAdminEmails.includes(userProfile.email)
+
+      // If user is in super admin list but doesn't have superadmin role, update Firestore
+      if (isInSuperAdminList && userProfile.role !== 'superadmin') {
+        console.log('Updating user to super admin:', userProfile.email)
+        try {
+          await updateDoc(doc(db, 'users', userProfile.uid), {
+            role: 'superadmin',
+            isAdmin: true,
+            permissions: {
+              canPin: true,
+              canDelete: true,
+              canEdit: true,
+              canPromoteUsers: true,
+              canManageAdmins: true,
+            }
+          })
+          console.log('✅ Successfully updated to super admin')
+          // Reload the page to reflect changes
+          window.location.reload()
+        } catch (error) {
+          console.error('Error updating super admin status:', error)
+        }
+      }
+    }
+
+    checkAndUpdateSuperAdmin()
   }, [userProfile])
 
   // Fetch posts on mount
