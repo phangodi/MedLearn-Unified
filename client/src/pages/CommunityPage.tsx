@@ -284,11 +284,39 @@ export function CommunityPage() {
     setSelectedTags(selectedTags.filter(t => t !== tag))
   }
 
+  // File upload limits
+  const MAX_FILES = 5 // Maximum 5 files per post
+  const MAX_TOTAL_SIZE = 150 * 1024 * 1024 // 150 MB total per post (no per-file limit)
+
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files
     if (!files || files.length === 0) return
 
     const newFiles = Array.from(files)
+
+    // Validate file count
+    if (selectedFiles.length + newFiles.length > MAX_FILES) {
+      alert(`Maximum ${MAX_FILES} files allowed per post. Currently selected: ${selectedFiles.length}`)
+      event.target.value = ''
+      return
+    }
+
+    // Validate total size (no per-file limit - students need to share large lecture PDFs/videos)
+    const currentTotalSize = selectedFiles.reduce((sum, file) => sum + file.size, 0)
+    const newTotalSize = newFiles.reduce((sum, file) => sum + file.size, 0)
+    const totalSize = currentTotalSize + newTotalSize
+
+    if (totalSize > MAX_TOTAL_SIZE) {
+      alert(
+        `Total upload size cannot exceed ${formatFileSize(MAX_TOTAL_SIZE)}.\n\n` +
+        `Current files: ${formatFileSize(currentTotalSize)}\n` +
+        `New files: ${formatFileSize(newTotalSize)}\n` +
+        `Total: ${formatFileSize(totalSize)}`
+      )
+      event.target.value = ''
+      return
+    }
+
     setSelectedFiles(prev => [...prev, ...newFiles])
     event.target.value = ''
   }
@@ -856,37 +884,42 @@ export function CommunityPage() {
                       />
 
                       {/* File Selection Buttons */}
-                      <div className="flex gap-2 flex-wrap">
-                        <motion.button
-                          whileHover={{ scale: 1.02 }}
-                          whileTap={{ scale: 0.98 }}
-                          onClick={() => document.getElementById('image-upload')?.click()}
-                          className="px-3 py-1.5 bg-card text-muted-foreground rounded-lg border border-border flex items-center gap-2 hover:bg-muted transition-colors text-sm"
-                          type="button"
-                        >
-                          <ImageIcon className="w-4 h-4" />
-                          Image
-                        </motion.button>
-                        <motion.button
-                          whileHover={{ scale: 1.02 }}
-                          whileTap={{ scale: 0.98 }}
-                          onClick={() => document.getElementById('pdf-upload')?.click()}
-                          className="px-3 py-1.5 bg-card text-muted-foreground rounded-lg border border-border flex items-center gap-2 hover:bg-muted transition-colors text-sm"
-                          type="button"
-                        >
-                          <FileText className="w-4 h-4" />
-                          PDF
-                        </motion.button>
-                        <motion.button
-                          whileHover={{ scale: 1.02 }}
-                          whileTap={{ scale: 0.98 }}
-                          onClick={() => document.getElementById('video-upload')?.click()}
-                          className="px-3 py-1.5 bg-card text-muted-foreground rounded-lg border border-border flex items-center gap-2 hover:bg-muted transition-colors text-sm"
-                          type="button"
-                        >
-                          <Video className="w-4 h-4" />
-                          Video
-                        </motion.button>
+                      <div className="space-y-2">
+                        <div className="flex gap-2 flex-wrap">
+                          <motion.button
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                            onClick={() => document.getElementById('image-upload')?.click()}
+                            className="px-3 py-1.5 bg-card text-muted-foreground rounded-lg border border-border flex items-center gap-2 hover:bg-muted transition-colors text-sm"
+                            type="button"
+                          >
+                            <ImageIcon className="w-4 h-4" />
+                            Image
+                          </motion.button>
+                          <motion.button
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                            onClick={() => document.getElementById('pdf-upload')?.click()}
+                            className="px-3 py-1.5 bg-card text-muted-foreground rounded-lg border border-border flex items-center gap-2 hover:bg-muted transition-colors text-sm"
+                            type="button"
+                          >
+                            <FileText className="w-4 h-4" />
+                            PDF
+                          </motion.button>
+                          <motion.button
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                            onClick={() => document.getElementById('video-upload')?.click()}
+                            className="px-3 py-1.5 bg-card text-muted-foreground rounded-lg border border-border flex items-center gap-2 hover:bg-muted transition-colors text-sm"
+                            type="button"
+                          >
+                            <Video className="w-4 h-4" />
+                            Video
+                          </motion.button>
+                        </div>
+                        <p className="text-xs text-muted-foreground">
+                          Max 5 files • 150 MB total per post
+                        </p>
                       </div>
 
                       {/* Selected Files Preview */}
