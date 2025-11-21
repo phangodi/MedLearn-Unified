@@ -25,10 +25,14 @@ export function ProtectedRoute({ children, requireSuperAdmin = false }: Protecte
     return <Navigate to="/login" replace />
   }
 
+  // ========== TEMPORARILY DISABLED - ALLOW ACCESS WITHOUT EMAIL VERIFICATION ==========
   // Check email verification (OAuth providers like Google/Apple auto-verify)
-  if (!user.emailVerified) {
-    return <Navigate to="/verify-email" replace />
-  }
+  // TEMPORARILY DISABLED until Firebase email sending issue is resolved
+  // RE-ENABLE by uncommenting the lines below:
+  // if (!user.emailVerified) {
+  //   return <Navigate to="/verify-email" replace />
+  // }
+  // ========== END TEMPORARY DISABLE ==========
 
   // Check super admin requirement
   if (requireSuperAdmin && userProfile?.role !== 'superadmin') {
