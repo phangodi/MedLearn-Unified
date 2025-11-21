@@ -13,12 +13,12 @@ import {
   Settings,
   Menu,
   X,
-  Activity,
   LogOut,
   Moon,
   Sun
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { Logo } from '@/components/ui/Logo'
 import { NotificationSidebarItem } from '@/components/notifications/NotificationSidebarItem'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { useAuth } from '@/contexts/AuthContext'
@@ -388,8 +388,8 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
       <div className="px-4 h-[60px] border-b border-border/50 flex items-center justify-between">
         {!isCollapsed && (
           <div className="flex items-center space-x-2.5">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-md">
-              <Activity className="w-4 h-4 text-primary-foreground" />
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-md">
+              <Logo className="text-primary-foreground" size={16} />
             </div>
             <span className="font-bold text-base bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Lara's MedLearn
@@ -397,8 +397,8 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
           </div>
         )}
         {isCollapsed && (
-          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-md mx-auto">
-            <Activity className="w-4 h-4 text-primary-foreground" />
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-md mx-auto">
+            <Logo className="text-primary-foreground" size={16} />
           </div>
         )}
         <Button

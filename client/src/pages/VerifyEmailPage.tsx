@@ -20,6 +20,27 @@ export function VerifyEmailPage() {
     }
   }, [user, navigate])
 
+  // Auto-check verification status every 3 seconds
+  useEffect(() => {
+    if (!user) return
+
+    const intervalId = setInterval(async () => {
+      try {
+        // Reload user to get latest emailVerified status
+        await user.reload()
+
+        if (user.emailVerified) {
+          // Email verified! Redirect to dashboard
+          navigate('/dashboard', { replace: true })
+        }
+      } catch (error) {
+        console.error('Error checking verification status:', error)
+      }
+    }, 3000) // Check every 3 seconds
+
+    return () => clearInterval(intervalId)
+  }, [user, navigate])
+
   const handleResendEmail = async () => {
     if (!user) return
 
