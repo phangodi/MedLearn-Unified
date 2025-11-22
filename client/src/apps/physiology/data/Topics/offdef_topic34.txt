@@ -1,0 +1,53 @@
+// **LO-1** (Topic-34) - CRITICAL
+officialDefinitions: [
+  'Shear stress: the tangential force that makes the layers (unit surface area) glide over each other, signed with τ, unit of measurement N/m² (Pa).',
+  'Shear rate: the velocity (v), with which the layers in x distance move related to each other, signed γ=dv/dx, unit of measurement 1/s.',
+  'Viscosity: Viscosity\'s sign is η=τ/γ, unit of measurement is Pa·s (SI) or P (poise, in CGS). Conversion factor: 1 Pa·s = 0.1 P. Viscosity is inversely proportional to temperature.',
+  'Newton\'s law of viscosity states, that in simple (newtonian) fluids there is a simple proportionality between shear stress and shear rate, the proportionality coefficient is called viscosity.',
+  'Newtonian fluids: fluids with a constant viscosity, regardless of the shear rate. Linear relationship between shear stress and shear rate.',
+  'Non-Newtonian fluids: fluids with a viscosity that changes depending on the shear rate. Non-linear relationship between shear stress and shear rate. Blood is a non-Newtonian fluid.'
+],
+
+// **LO-2** (Topic-34) - CRITICAL
+officialDefinitions: [
+  'The blood plasma is a newtonian fluid, its viscosity depends on the concentration of plasma proteins (dehydration!). The blood, however is a non-Newtonian fluid (η≠τ/γ), thus viscosity changes as a function of shear, and modified by tube geometry as well.',
+  'Hematocrit: Increasing hematocrit will increase viscosity. Higher hematocrit increases blood viscosity due to the increased number of red blood cells.',
+  'Shear thinning: Increasing shear rate will reduce viscosity. Blood exhibits shear-thinning behaviour, meaning its viscosity decreases as shear rate increases.',
+  'Fåhraeus-Lindquist effect: Decreasing vessel size below 300 μm will reduce viscosity.',
+  'These unique features of the blood are largely explained by the red blood cell membrane\'s non-elastic deformability (fluidity).'
+],
+
+// **LO-3** (Topic-34)
+officialDefinitions: [
+  'Shear thinning: By increasing shear, blood viscosity is reduced because: 1. DISPERSION: during stasis, red blood cells form aggregates (money roll formation, globulin-dependent) that are dispersed by shear. 2. DEFORMATION (shape change) and ORIENTATION of red blood cells (RBCs) in shear.',
+  'Dispersion of red blood cell aggregates: At low shear rates (e.g., in venous flow or stagnant areas): RBCs form aggregates (rouleaux), increasing viscosity. At high shear rates (e.g., in arterioles or capillaries): RBC aggregates disperse, aligning with the flow, reducing viscosity.',
+  'Red blood cell adaptations - Axial Migration: At higher shear rates, RBCs migrate to the center of the vessel lumen due to laminar flow dynamics. This leaves a cell-free plasma layer near the vessel walls, which acts as a lubricant, reducing resistance and contributing to the decrease in apparent viscosity.',
+  'Red blood cell adaptations - Deformability: RBCs are highly deformable due to their flexible biconcave shape and cytoskeletal structure. At high shear rates, RBCs elongate and align with the direction of flow, reducing their resistance to movement. In very narrow capillaries (smaller than the diameter of an RBC), they squeeze and deform to pass through, minimizing the energy required for flow. In the capillaries, red blood cells flow as a single file, their fluid droplet adaptation will become the most perfect, their shape will assume the paraboloid velocity profile.'
+],
+
+// **LO-4** (Topic-34)
+officialDefinitions: [
+  'When shear rate is low, the RBCs form aggregates, these "money rolls" increase blood viscosity. The RBC aggregation depends on the blood plasma proteins, globulins increase it.',
+  'This reversible aggregation is the basis of RBC sedimentation rate (increased when plasma albumin/globulin ratio is decreased).',
+  'RBC aggregation occurs due to the adhesive forces between RBC surfaces, mediated by plasma proteins like fibrinogen and globulins. This aggregation leads to the formation of rouleaux (money-roll structures), increasing blood viscosity, particularly at low shear rates.',
+  'Globulins and fibrinogen are the primary promoters of RBC aggregation. They bridge adjacent RBCs, facilitating rouleaux formation by creating attractive forces between cell surfaces. Higher concentrations of globulins or fibrinogen lead to increased aggregation and higher structural viscosity.',
+  'Albumin has an anti-aggregatory effect by coating the RBC surface and reducing the strength of interactions between cells. High albumin levels reduce rouleaux formation and, consequently, structural viscosity. Increased albumin concentration decreases structural viscosity by limiting RBC aggregation.',
+  'Albumin-to-globulin ratio (A/G Ratio): High A/G Ratio: Albumin predominates, reducing RBC aggregation. Blood has lower structural viscosity, facilitating flow. Low A/G Ratio: Globulins and fibrinogen dominate, promoting RBC aggregation and rouleaux formation. Blood viscosity increases, particularly at low shear rates.'
+],
+
+// **LO-5** (Topic-34)
+officialDefinitions: [
+  'Axial Migration: refers to the movement of RBCs toward the center of the blood vessel lumen under laminar flow conditions. RBCs experience lateral forces due to shear gradients across the vessel. Higher shear stress near the vessel wall pushes RBCs toward the center, leaving a cell-free plasma layer near the vessel walls. The cell-free plasma layer reduces friction between RBCs and the vessel wall, lowering overall blood viscosity. Axial migration improves flow efficiency, particularly in small arterioles and capillaries.',
+  'Orientation: describes how RBCs align with the direction of blood flow under high shear conditions. In high-shear environments (e.g., arteries and arterioles), RBCs rotate and align their biconcave shape parallel to the flow direction. This alignment minimizes flow resistance and turbulence. Proper orientation reduces energy expenditure by the heart and ensures smooth, laminar flow.',
+  'Shape Changes: RBCs deform and change their shape to adapt to the varying diameters of blood vessels. RBCs are naturally flexible due to their biconcave shape and cytoskeletal structure. In narrow capillaries (smaller than an RBC\'s diameter), they deform into elongated shapes to pass through. Shape changes are facilitated by the lipid bilayer and the spectrin cytoskeleton of the RBC membrane. Deformability ensures continuous flow in capillaries and small vessels, maintaining oxygen delivery to tissues.'
+],
+
+// **LO-6** (Topic-34)
+officialDefinitions: [
+  'In microvessels (diameter < 300 μm), the apparent blood viscosity decreases as the vessel diameter decreases.',
+  'Blood viscosity starts to reduce when vascular diameter becomes less than 300 μm, at ~7-10 μm diameter it approaches plasma viscosity. This is the Fåhraeus-Lindquist effect.',
+  'The Fåhraeus-Lindquist effect: mechanisms: 1. Axial migration and 2. plasma skimming: red blood cells flow along the main axis, where velocity is higher and shear stress is lower, at the endothelium there is a cell free plasma layer where velocity is smaller. As a combined effect, the effective hematocrit decreases, decreasing viscosity. This mechanism is more important in bigger microvessels (30-300 μm).',
+  '3. In the capillaries, red blood cells flow as a single file, their fluid droplet adaptation will become the most perfect, their shape will assume the paraboloid velocity profile. Capillary blood viscosity is however, increased by more rigid white blood cells.',
+  'Mechanisms of the Fåhraeus-Lindqvist Effect: 1. Axial Migration of Red Blood Cells (RBCs): In small vessels, RBCs migrate to the center of the vessel lumen due to laminar flow. This creates a cell-free plasma layer near the vessel wall, which acts as a lubricant and reduces wall friction. 2. Reduction in Hematocrit: The Fåhræus effect causes a decrease in hematocrit in small vessels compared to large vessels. This lower concentration of RBCs further reduces viscosity in microvessels. 3. RBC Deformability: RBCs are highly flexible and can deform to pass through vessels smaller than their diameter (7–8 μm). This deformation reduces flow resistance and helps maintain low apparent viscosity. 4. Alignment and Streamlining: In small vessels, RBCs align in single-file streams, minimizing cell-to-cell interactions and collisions. This alignment reduces the internal friction within blood, further lowering viscosity.',
+  'Limits of the Fåhræus–Lindqvist Effect: In capillaries smaller than ~10 μm, viscosity may slightly increase due to the energy required for RBC deformation. The effect does not occur in very large vessels (e.g., aorta), where viscosity remains constant.'
+]

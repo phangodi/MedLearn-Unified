@@ -31,6 +31,10 @@ import topic29 from './topic29.js';
 import topic30 from './topic30.js';
 import topic31 from './topic31.js';
 import topic32 from './topic32.js';
+import topic33 from './topic33.js';
+import topic34 from './topic34.js';
+import topic35 from './topic35.js';
+import topic36 from './topic36.js';
 
 // MCQ Filter Definitions
 export const mcqFilters = [
@@ -105,7 +109,11 @@ const topicsData = [
   topic29,
   topic30,
   topic31,
-  topic32
+  topic32,
+  topic33,
+  topic34,
+  topic35,
+  topic36
 ];
 
 export default topicsData;
