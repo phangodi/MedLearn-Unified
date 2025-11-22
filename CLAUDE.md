@@ -260,6 +260,15 @@ Legacy apps provide different study formats:
 3. **Sociology App:** 5 chapters with hierarchical content and search
 4. **Anatomy CNS App:** Cranial nerves reference, brainstem anatomy
 
+## Recent Updates (November 2025)
+
+### Production Deployment (Nov 21, 2025)
+- **Anatomy Page:** CNS Neuroanatomy card hidden (can be re-enabled by uncommenting line 31 in AnatomyPage.tsx)
+- **Community Page:** Post title is mandatory, content is now optional (users can post title + files without text)
+- **Firestore Rules:** Production rules deployed with proper authentication and security
+- **Email Verification:** Working via SendGrid SMTP (emails may land in junk folder - users are warned)
+- **Status:** ✅ Live on production at https://medlearn-szeged.netlify.app
+
 ## Recent Updates (January 2025)
 
 ### Settings Dropdown Panel

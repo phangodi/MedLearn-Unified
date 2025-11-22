@@ -32,7 +32,9 @@ service cloud.firestore {
 
     function isNotBanned() {
       return isSignedIn() &&
-             get(/databases/$(database)/documents/users/$(request.auth.uid)).data.isBanned != true;
+             (!exists(/databases/$(database)/documents/users/$(request.auth.uid)) ||
+              !get(/databases/$(database)/documents/users/$(request.auth.uid)).data.keys().hasAny(['isBanned']) ||
+              get(/databases/$(database)/documents/users/$(request.auth.uid)).data.isBanned != true);
     }
 
     // Users collection
