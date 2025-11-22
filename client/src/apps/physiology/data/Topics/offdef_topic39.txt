@@ -1,0 +1,72 @@
+// **LO-1** (Topic-39)
+officialDefinitions: [
+  'Electric dipole: a pair of equal and opposite electric charges or magnetic poles of equal magnitude separated by a small distance. The dipole has both a magnitude (charge) and a direction (from the negative to the positive charge). It generates an electric field and is described by a dipole vector pointing from the negative charge to the positive charge.',
+  'Vector characteristics: Magnitude: The size or length of the vector, which indicates the strength of the quantity. Direction: The orientation in space that shows the way the vector is pointing. Point of Application: The specific location where the vector acts. Line of Action: The line along which the vector acts, which indicates its influence in a particular direction.',
+  'Dipoles and ECG waveforms: As the wave of depolarization or repolarization moves, the net dipole also moves (called the mean electrical vector). ECG electrodes detect the projection of this moving dipole vector onto the lead axis: If the wave of depolarization moves toward a positive electrode → upward (positive) deflection. If it moves away from the positive electrode → downward (negative) deflection. If it moves perpendicular to the lead → minimal or biphasic deflection.'
+],
+
+// **LO-2** (Topic-39) - CRITICAL
+officialDefinitions: [
+  'Standardized electrode placement: Clinicians use a standardized approach for electrode placement and polarities to ensure consistency in ECG recordings. The 12-lead ECG system provides a comprehensive view of the heart\'s electrical activity from different perspectives. This system is divided into limb leads and precordial (chest) leads, which together create a 3-dimensional understanding of cardiac function.',
+  'Limb Leads - Standard Bipolar Limb Leads (Leads I, II, III) [Einthoven Leads]: Lead I: Measures the electrical difference between the left arm (positive) and right arm (negative). Lead II: Measures the electrical difference between the left leg (positive) and right arm (negative). Lead III: Measures the electrical difference between the left leg (positive) and left arm (negative).',
+  'Limb electrode placement: Right Arm (RA): Typically placed just below the right clavicle. Left Arm (LA): Placed just below the left clavicle. Left Leg (LL): Placed on the lower left torso or left ankle. Right Leg (RL): Used as a ground electrode to reduce electrical noise and is placed on the lower right torso or right ankle.',
+  'Augmented Unipolar Limb Leads (aVR, aVL, aVF) [Goldberger Leads]: These leads measure the electrical activity at a single point relative to a reference formed by the average of the other two limb electrodes. aVR: Augmented vector to the right, with the positive electrode on the right arm. aVL: Augmented vector to the left, with the positive electrode on the left arm. aVF: Augmented vector to the foot, with the positive electrode on the left leg.',
+  'Precordial (Chest) Leads [Wilson Leads]: These leads provide a view of the heart\'s electrical activity in the horizontal plane. There are six precordial leads (V1 to V6), which are unipolar leads that record electrical activity from the chest in relation to a central reference point.',
+  'Precordial electrode placement: V1: Fourth intercostal space, right sternal border. V2: Fourth intercostal space, left sternal border. V3: Midway between V2 and V4. V4: Fifth intercostal space, midclavicular line. V5: Same horizontal level as V4, at the anterior axillary line. V6: Same horizontal level as V4, at the midaxillary line.',
+  'Wilson Central Terminal: The Wilson central terminal is a theoretical "negative pole" used for unipolar chest (precordial) leads (V1-V6) in electrocardiography. It acts as a reference point by combining signals from three limb electrodes (RA - Right Arm, LA - Left Arm, and LL - Left Leg) to create an "average potential" for the central point of the body.',
+  'Precordial lead polarities: All precordial leads have a positive electrode at the chest placement site, and the negative reference is the central terminal (combined input from the limb electrodes).',
+  'Lead views: Leads I, aVL, V5, V6: View the lateral wall of the left ventricle. Leads II, III, aVF: View the inferior wall of the heart. Lead aVR: Looks at the right atrium and the cavity of the heart. Leads V1 and V2: View the septal region. Leads V3 and V4: View the anterior wall of the heart.',
+  'Electrode polarities: Bipolar leads: Have distinct positive and negative electrodes. Unipolar leads: Have a positive electrode and use a combination of other electrodes as a reference (negative pole).'
+],
+
+// **LO-3** (Topic-39) - CRITICAL
+officialDefinitions: [
+  'P Wave: The P wave is the first upward deflection in an ECG tracing. Represents atrial depolarization, where the electrical impulse spreads from the sinoatrial (SA) node across the atria, leading to atrial contraction. Duration: Typically less than 100 ms.',
+  'PR Interval: The PR interval is the time from the beginning of the P wave to the start of the QRS complex. Represents the time it takes for the electrical impulse to travel from the atria through the atrioventricular (AV) node and into the ventricles. Duration: Normally between 0.12 and 0.20 seconds.',
+  'PQ Segment (PR Segment): No net electrical movement OR activity is directed perpendicular to the axis of Lead II → Flat line, Isoelectric line. The AV node takes it time with the electrical activity, slows down conduction (1 second delay) and holds the activity within it. Delay before sends down the action potentials to Bundle of His, bundle branches, to the ventricles.',
+  'QRS Complex: The QRS complex represents the rapid depolarization of the ventricles. Depolarization spreads from the AV node to the bundle of His, bundle branches, and Purkinje fibers, causing ventricular contraction. Duration: Typically 0.06 to 0.10 seconds, 80 ms.',
+  'QRS Complex components: Q Wave: The initial downward deflection. R Wave: The first upward deflection. S Wave: The subsequent downward deflection.',
+  'ST Segment: The flat, isoelectric segment between the end of the S wave and the beginning of the T wave. Represents the period when the ventricles are depolarized and are in the initial phase of repolarization. When the entire ventricular myocardium is completely depolarized, all of the charges are positive → no movement, just waiting for it to be repolarized.',
+  'T Wave: The T wave is the upward deflection following the QRS complex. Represents ventricular repolarization, where the ventricles return to their resting electrical state.',
+  'QT Interval: The time from the beginning of the QRS complex to the end of the T wave. Represents the total time for ventricular depolarization and repolarization. Duration: Varies with heart rate; typically, 320-390ms for a normal heart rate.',
+  'U Wave (optional): A small wave following the T wave; not always present. Represents late repolarization of the Purkinje fibers or papillary muscles.',
+  'J-point: The junction point between the end of the QRS complex and the beginning of the ST segment.',
+  'RR Interval: The time interval between two consecutive R waves, used to measure heart rate and rhythm regularity.'
+],
+
+// **LO-4** (Topic-39)
+officialDefinitions: [
+  'Mean electrical vector (axis): The mean electrical vector (axis) of the heart represents the average direction of electrical depolarization as it travels through the heart\'s ventricles during the cardiac cycle. This vector is crucial for understanding the electrical orientation of the heart and how it aligns within the thorax. It is depicted as an arrow pointing in the general direction of the depolarization, with its length proportional to the magnitude of the electrical activity.',
+  'Normal Range of Mean Electrical Axis: The typical mean electrical axis in a healthy adult ranges from 30° to +60°. This orientation reflects the usual leftward and downward direction of electrical conduction through the ventricles. In the frontal plane, normal: -30° - 90°. Left deviated: < -30°. Right deviated: > 90°.',
+  'Determining Mean Electrical Axis from QRS: The mean electrical axis can be determined by analyzing the QRS complex in the standard limb leads (I, II, and III) on an ECG. Determine the net deflection of the QRS complex in each limb lead by measuring the difference between the height of the positive and negative deflections. Identify the lead with the most positive net deflection, which indicates the direction in which the majority of electrical depolarization is occurring.',
+  'Quadrant method for axis determination: If Lead I is positive and Lead aVF is positive, the axis is within the normal range (0° to +90°). If Lead I is positive and Lead aVF is negative, the axis may indicate left axis deviation (e.g., -30° to -90°). If Lead I is negative and Lead aVF is positive, this may indicate right axis deviation (e.g., +90° to +180°). If both Lead I and Lead aVF are negative, this could indicate an extreme axis deviation (e.g., -90° to -180°).',
+  'Precise calculation: Exact calculation can be done using the hexaxial reference system, by plotting the net QRS deflections from two limb leads to find the precise mean electrical axis.',
+  'Clinical significance: Left Axis Deviation: May suggest left ventricular hypertrophy or conduction blocks. Right Axis Deviation: May indicate right ventricular hypertrophy or pulmonary conditions.'
+],
+
+// **LO-5** (Topic-39)
+officialDefinitions: [
+  'Cardiac Catheterization definition: Cardiac catheterization is an invasive diagnostic procedure where a thin catheter is inserted into a blood vessel and guided to the heart. This procedure is used to evaluate and treat certain heart conditions.',
+  'Purpose of cardiac catheterization: Measure pressures within the heart chambers and blood vessels. Evaluate the function of heart valves and the performance of the heart muscle. Identify blockages in the coronary arteries. Collect blood samples to measure oxygen levels. Perform angiography by injecting contrast dye to visualize blood flow in the coronary arteries and heart chambers.',
+  'Cardiac catheterization procedure: Usually performed through the femoral artery (in the groin) or radial artery (in the wrist). The patient is sedated, and local anesthesia is administered. Fluoroscopy (real-time X-ray imaging) is used to guide the catheter to the heart.',
+  'Applications of cardiac catheterization: Coronary angiography: To assess for blockages in coronary arteries. Right heart catheterization: To measure pressures in the right heart and pulmonary arteries. Interventions: Procedures such as angioplasty or stent placement can be performed during cardiac catheterization to open blocked arteries.'
+],
+
+// **LO-6** (Topic-39)
+officialDefinitions: [
+  'Echocardiography definition: Echocardiography is a non-invasive imaging method that uses ultrasound waves to create detailed images of the heart\'s structure and function.',
+  'Types of echocardiography: Transthoracic echocardiography (TTE): The most common type, performed by placing a transducer on the chest. Transesophageal echocardiography (TEE): Provides clearer images by inserting the transducer down the esophagus, close to the heart. Stress echocardiography: Performed during or after exercise or pharmacological stress to evaluate heart function under stress conditions.',
+  'Echocardiography applications: Assessing heart valve structure and function. Evaluating the size and function of the heart chambers. Detecting congenital heart defects. Measuring the ejection fraction to assess heart function. Identifying pericardial effusion (fluid around the heart).',
+  'Echocardiography advantages: Non-invasive and painless. Provides real-time images. Can be used to guide certain procedures such as pericardiocentesis.',
+  'CT (Computed Tomography) Coronary Angiography: A non-invasive imaging method that uses X-rays and computer technology to create detailed images of the coronary arteries. Purpose: Detects blockages, calcium deposits, and assesses coronary artery disease.',
+  'Cardiac MRI (Magnetic Resonance Imaging): Cardiac MRI is used for detailed images of the heart\'s structure, function, and blood flow without radiation exposure. Applications: Diagnosing cardiomyopathies (diseases of the heart muscle). Assessing damage after a heart attack. Evaluating congenital heart defects.'
+],
+
+// **Reference Values** (Topic-39) - CRITICAL
+officialDefinitions: [
+  'ECG paper speed and amplitude: Standard paper speed for ECG recording: 25mm/s (1mm=40ms). Standard amplitude: 1cm=1mV. Calibration: 25mm = 1s, 5mm = 0.2s = 200ms, 1mm = 0.04s = 40ms. Amplitude: 10mm = 1mV, 1mm = 0.1mV.',
+  'Wave and interval durations: P wave: <100 ms (<0.12 s, <0.25 mV, positive in II and aVF, biphasic in V1). PQ interval: 120-200 ms (0.12 - 0.2 s). QRS complex: 80 ms (<100 ms, <0.10 s, >0.5 mV). QT interval: 320-390 ms (Normal: <0.35 - 0.45 s, varies with heart rate).',
+  'Normal electric mean axis position: 30-60°. Normal range in frontal plane: -30° - 90°.',
+  'Heart rate: Normal: 60-100/min. Bradycardia: <60/min. Tachycardia: >100/min.',
+  'ST segment characteristics: Concordant with QRS, ~0 mV < Amplitude < ⅔QRS, Isoelectric, Near baseline (±0.1 mV).'
+]
