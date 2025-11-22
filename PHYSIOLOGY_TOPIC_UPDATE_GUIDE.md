@@ -301,6 +301,70 @@ This double-escapes backslashes first, then escapes apostrophes, creating one to
 - **NEVER ELIMINATE:** Reference values with units, official terminology, complete mechanisms, all multi-part answers, clinical significance
 - **ENHANCE USING officialDefinitions:** Add missing values, improve imprecise wording with authoritative content
 
+---
+
+### **🔴 CRITICAL OPTIMIZATION DECISION CRITERIA (MUST READ)**
+
+**⚠️ THE ONLY CRITERION FOR KEEPING/REMOVING CONTENT:**
+
+**"Does this content DIRECTLY answer the Learning Objective?"**
+
+**NOT:**
+- ❌ "Is it in officialDefinitions?"
+- ❌ "Does it reach X% reduction target?"
+- ❌ "Is it mentioned in keyPoints?"
+
+**WHY THIS MATTERS:**
+
+1. **officialDefinitions can be incomplete:**
+   - Generated from scanning lecture slides/textbooks
+   - May have missing content due to scan errors
+   - examAnswer content generation is SEPARATE from officialDefinitions
+   - **NEVER remove content just because it's "not in officialDefinitions"**
+   - **Example Error:** Removing "and T-tubules" because it wasn't in officialDefinitions, even though L-type Ca²⁺ channels ARE located in T-tubules
+
+2. **Percentage reduction is a GUIDELINE, not a TARGET:**
+   - Some LOs can be reduced 50% (very verbose, lots of fluff)
+   - Some LOs can only be reduced 10% (already concise, just minor cleanup)
+   - Some LOs might need 0% reduction (already optimal)
+   - **Content determines reduction, NOT formulas or targets**
+   - Showing "-30%" in analysis is useful context, but NOT a goal to achieve
+
+3. **Longer paragraphs deserve MORE aggressive reduction:**
+   - Very long answers are extremely hard to memorize
+   - If an answer is 300+ words, definitely look for significant reduction opportunities
+   - But ONLY remove what doesn't answer the LO
+   - Balance: concise enough to memorize, complete enough to pass exam
+
+4. **The final answer must reflect EVERYTHING needed to answer the LO:**
+   - If LO asks "Describe A, B, and C" → answer must cover A, B, AND C completely
+   - If LO asks "Define X using Y" → definition of X AND explanation using Y must be present
+   - If LO has red text asking specific question → that question must be FULLY answered
+   - Missing ANY component = incomplete answer = student fails exam
+
+---
+
+### **CORRECT ANALYSIS APPROACH:**
+
+**For each piece of content, ask:**
+
+1. ✅ **Does it answer the LO?** → KEEP (even if long, even if not in officialDefinitions)
+2. ❌ **Is it setup/transition/context not answering LO?** → REMOVE
+3. ⚠️ **Is it verbose but necessary?** → CONDENSE (keep meaning, remove fluff)
+
+**Examples:**
+
+❌ **WRONG reasoning:** "Remove 'and T-tubules' (not in officialDefinitions)"
+✅ **CORRECT reasoning:** "Keep 'and T-tubules' because L-type Ca²⁺ channels are located in both sarcolemma AND T-tubules, essential for understanding calcium influx location"
+
+❌ **WRONG reasoning:** "Must reduce by 30% to hit target"
+✅ **CORRECT reasoning:** "This LO is already concise at 120 words. Minor cleanup removes 15 words (-12%), which is sufficient. Forcing more reduction would lose essential content."
+
+❌ **WRONG reasoning:** "Remove clinical significance to save words"
+✅ **CORRECT reasoning:** "Keep clinical significance because it explains WHY the mechanism matters, which helps answer 'describe the role' in the LO"
+
+---
+
 ### Step 2A.2: Analyze Entire Topic
 
 **Process:**

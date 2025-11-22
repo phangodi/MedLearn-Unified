@@ -39,7 +39,7 @@ const Navigation = ({ topics = [] }) => {
         <span className={styles.brandingSeparator}>•</span>
         <span className={styles.brandingTagline}>Physiology Oral Exam Prep</span>
         <span className={styles.brandingSeparator}>•</span>
-        <span className={styles.brandingTagline}>Fixed Official Definitions in Topic 15
+        <span className={styles.brandingTagline}>Use Customize to access all content types
         </span>
       </div>
 
