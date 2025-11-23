@@ -44,7 +44,8 @@ const topic34 = {
           }
         ],
         raw: 'Shear stress (τ) is the tangential force making fluid layers glide over each other per unit surface area, units Newtons per square meter or Pascals. Shear rate (γ) is the velocity gradient across fluid layers, formula dv/dx, units per second. Viscosity (η) is fluid resistance to flow or deformation under shear stress, units Pascal-seconds in SI or Poise in CGS, where 1 Pascal-second equals 0.1 Poise. Newton\'s law of viscosity states that in simple fluids there is direct proportionality between shear stress and shear rate, with viscosity as the proportionality coefficient, expressed as τ equals η times γ. >>Newtonian fluids have constant viscosity regardless of shear rate, showing linear relationship between shear stress and shear rate, examples include water, air, and simple oils. Non-Newtonian fluids have viscosity that changes with shear rate, showing non-linear relationship, examples include blood which exhibits shear-thinning behavior and ketchup.<<'
-      }
+      },
+        audioUrl: '/Audio/Topic-034/LO-01.mp3'
     },
     {
       id: 'lo-2',
@@ -91,7 +92,8 @@ const topic34 = {
           }
         ],
         raw: 'Blood is a non-Newtonian fluid whose viscosity changes with shear rate and vessel geometry. >>Three main factors affect blood viscosity: hematocrit, shear thinning, and the Fåhræus-Lindqvist effect.<< First, hematocrit: increasing hematocrit increases viscosity due to more red blood cells. In polycythemia this raises vascular resistance and cardiac workload, while in anemia reduced viscosity facilitates flow. Second, shear thinning: blood viscosity decreases as shear rate increases. At low shear rates red blood cells form rouleaux aggregates increasing viscosity, at high shear rates aggregates disperse and cells align reducing viscosity. Third, Fåhræus-Lindqvist effect: vessel diameter below 300 micrometers reduces apparent viscosity as red blood cells migrate centrally creating a cell-free plasma layer near walls. These features are explained by red blood cell membrane\'s non-elastic deformability.'
-      }
+      },
+        audioUrl: '/Audio/Topic-034/LO-02.mp3'
     },
     {
       id: 'lo-3',
@@ -125,7 +127,8 @@ const topic34 = {
           }
         ],
         raw: 'Shear thinning is blood\'s property where viscosity decreases with increasing shear rate through two mechanisms. First, dispersion of red blood cell aggregates: at low shear rates red blood cells aggregate into rouleaux resembling stacks of coins mediated by plasma proteins like fibrinogen, increasing viscosity. As shear rate increases, plasma flow forces disrupt rouleaux, individual cells disperse reducing friction and viscosity. Second, red blood cell adaptations: at higher shear rates cells migrate to vessel center leaving a cell-free plasma layer near walls acting as lubricant. Red blood cells are highly deformable with flexible biconcave shape, at high shear rates they elongate and align with flow direction reducing resistance. In narrow capillaries cells squeeze through and flow in single file with perfect fluid droplet adaptation assuming paraboloid velocity profile.'
-      }
+      },
+        audioUrl: '/Audio/Topic-034/LO-03.mp3'
     },
     {
       id: 'lo-4',

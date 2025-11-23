@@ -31,7 +31,26 @@ const topic45 = {
         'Orthostasis consequences: Venous volume increases significantly - up to 500-800 mL of blood can accumulate in the lower extremities within seconds of standing. Blood pressure is reduced above the heart, and pressure is elevated below the heart. Arteries do not dilate much, and pressure gradient does not change, but veins considerably dilate, when hydrostatic pressure is elevated. For instance, when standing up venous volume increases by 500 ml, decreasing venous flow to the heart (venous return). In an upright position, the gradually increasing hydrostatic pressure will increase the volume of the venous system. This effect will reduce venous return to the heart. The effect is ameliorated if the venous compliance is simultaneously reduced.'
       ],
 
-      examAnswer: 'Veins are thin-walled blood vessels with less smooth muscle and elastic tissue compared to arteries of similar size, with larger lumen relative to wall thickness allowing storage of large blood volumes. Veins contain valves that prevent backflow and ensure unidirectional flow toward the heart. Veins are highly compliant or distensible; venous distensibility is approximately 8 times that of arteries, and venous compliance is approximately 24 times that of arteries because compliance equals distensibility multiplied by volume. Veins contain more than 60 percent of total blood volume, acting as a blood reservoir. Venous pressure is typically low at 2 to 6 millimeters mercury in central veins. During orthostasis, gravity increases venous hydrostatic pressure by approximately 0.77 millimeters mercury per centimeter vertical distance below the right atrium. In upright posture, leg vein pressures reach 90 to 100 millimeters mercury compared to approximately 10 millimeters mercury supine. Because veins are highly compliant, they readily expand in response to small pressure increases. Venous volume increases significantly, with 500 to 800 milliliters pooling in lower extremities within seconds of standing.'
+      examAnswer: {
+        formatted: [
+          {
+            type: 'list',
+            intro: 'Venous characteristics compared to arteries of similar size:',
+            items: [
+              'Veins are thin-walled blood vessels with less smooth muscle and elastic tissue, with larger lumen relative to wall thickness allowing storage of large blood volumes',
+              'Veins contain valves that prevent backflow and ensure unidirectional flow toward the heart',
+              'Veins are highly compliant or distensible; venous distensibility is approximately 8 times that of arteries, and venous compliance is approximately 24 times that of arteries because compliance equals distensibility multiplied by volume',
+              'Veins contain more than 60 percent of total blood volume, acting as a blood reservoir',
+              'Venous pressure is typically low at 2 to 6 millimeters mercury in central veins'
+            ]
+          },
+          {
+            type: 'paragraph',
+            content: 'During orthostasis, gravity increases venous hydrostatic pressure by approximately 0.77 millimeters mercury per centimeter vertical distance below the right atrium. In upright posture, leg vein pressures reach 90 to 100 millimeters mercury compared to approximately 10 millimeters mercury supine. Because veins are highly compliant, they readily expand in response to small pressure increases. Venous volume increases significantly, with 500 to 800 milliliters pooling in lower extremities within seconds of standing.'
+          }
+        ],
+        raw: 'Veins are thin-walled blood vessels with less smooth muscle and elastic tissue compared to arteries of similar size, with larger lumen relative to wall thickness allowing storage of large blood volumes. Veins contain valves that prevent backflow and ensure unidirectional flow toward the heart. Veins are highly compliant or distensible; venous distensibility is approximately 8 times that of arteries, and venous compliance is approximately 24 times that of arteries because compliance equals distensibility multiplied by volume. Veins contain more than 60 percent of total blood volume, acting as a blood reservoir. Venous pressure is typically low at 2 to 6 millimeters mercury in central veins. During orthostasis, gravity increases venous hydrostatic pressure by approximately 0.77 millimeters mercury per centimeter vertical distance below the right atrium. In upright posture, leg vein pressures reach 90 to 100 millimeters mercury compared to approximately 10 millimeters mercury supine. Because veins are highly compliant, they readily expand in response to small pressure increases. Venous volume increases significantly, with 500 to 800 milliliters pooling in lower extremities within seconds of standing.'
+      }
     },
     {
       id: 'lo-2',
@@ -57,7 +76,27 @@ const topic45 = {
         'Venous stasis and increased pressure: The pooling of blood increases venous pressure, leading to venous distension and further valve incompetence. Over time, this can cause symptoms like swelling, varicose veins, and even venous ulcers. EDEMA is frequent.'
       ],
 
-      examAnswer: '>>Factors promoting venous return include vis a tergo, vis a fronte, dynamic muscle pump, venoconstriction, and respiratory pump.<< Vis a tergo or force from behind is the residual pressure in the venous system generated by left ventricular contraction during systole, providing baseline driving force for venous return but insufficient alone due to low venous pressure gradient of approximately 2 to 6 millimeters mercury. Vis a fronte or force from the front is the suction effect during diastole when ventricular relaxation creates negative pressure in the atria pulling blood from veins into the heart, enhanced by ventricular recoil and atrial expansion. The dynamic muscle pump involves rhythmic skeletal muscle contractions, particularly in lower limbs, compressing veins and propelling blood toward the heart. Venous valves ensure one-way flow preventing backflow. Venoconstriction is smooth muscle contraction in vein walls reducing diameter and increasing venous pressure, mediated by sympathetic norepinephrine stimulating alpha-1 adrenergic receptors, reducing venous compliance and mobilizing blood from the venous reservoir containing approximately 60 percent of total blood volume. The respiratory pump creates pressure gradients during breathing; during inspiration, diaphragm contraction increases abdominal pressure while decreasing thoracic pressure, pushing blood from abdominal veins into thoracic veins and heart. When venous valves become insufficient, they fail to close properly allowing backflow during muscle relaxation. This disrupts unidirectional flow, negating muscle contraction effort. Blood pooling increases venous pressure causing further distension, varicose veins, and edema.'
+      examAnswer: {
+        formatted: [
+          {
+            type: 'list',
+            intro: 'Factors promoting venous return:',
+            critical: true,
+            items: [
+              'Vis a tergo or force from behind is the residual pressure in the venous system generated by left ventricular contraction during systole, providing baseline driving force for venous return but insufficient alone due to low venous pressure gradient of approximately 2 to 6 millimeters mercury',
+              'Vis a fronte or force from the front is the suction effect during diastole when ventricular relaxation creates negative pressure in the atria pulling blood from veins into the heart, enhanced by ventricular recoil and atrial expansion',
+              'The dynamic muscle pump involves rhythmic skeletal muscle contractions, particularly in lower limbs, compressing veins and propelling blood toward the heart. Venous valves ensure one-way flow preventing backflow',
+              'Venoconstriction is smooth muscle contraction in vein walls reducing diameter and increasing venous pressure, mediated by sympathetic norepinephrine stimulating alpha-1 adrenergic receptors, reducing venous compliance and mobilizing blood from the venous reservoir containing approximately 60 percent of total blood volume',
+              'The respiratory pump creates pressure gradients during breathing; during inspiration, diaphragm contraction increases abdominal pressure while decreasing thoracic pressure, pushing blood from abdominal veins into thoracic veins and heart'
+            ]
+          },
+          {
+            type: 'paragraph',
+            content: 'When venous valves become insufficient, they fail to close properly allowing backflow during muscle relaxation. This disrupts unidirectional flow, negating muscle contraction effort. Blood pooling increases venous pressure causing further distension, varicose veins, and edema.'
+          }
+        ],
+        raw: '>>Factors promoting venous return include vis a tergo, vis a fronte, dynamic muscle pump, venoconstriction, and respiratory pump.<< Vis a tergo or force from behind is the residual pressure in the venous system generated by left ventricular contraction during systole, providing baseline driving force for venous return but insufficient alone due to low venous pressure gradient of approximately 2 to 6 millimeters mercury. Vis a fronte or force from the front is the suction effect during diastole when ventricular relaxation creates negative pressure in the atria pulling blood from veins into the heart, enhanced by ventricular recoil and atrial expansion. The dynamic muscle pump involves rhythmic skeletal muscle contractions, particularly in lower limbs, compressing veins and propelling blood toward the heart. Venous valves ensure one-way flow preventing backflow. Venoconstriction is smooth muscle contraction in vein walls reducing diameter and increasing venous pressure, mediated by sympathetic norepinephrine stimulating alpha-1 adrenergic receptors, reducing venous compliance and mobilizing blood from the venous reservoir containing approximately 60 percent of total blood volume. The respiratory pump creates pressure gradients during breathing; during inspiration, diaphragm contraction increases abdominal pressure while decreasing thoracic pressure, pushing blood from abdominal veins into thoracic veins and heart. When venous valves become insufficient, they fail to close properly allowing backflow during muscle relaxation. This disrupts unidirectional flow, negating muscle contraction effort. Blood pooling increases venous pressure causing further distension, varicose veins, and edema.'
+      }
     },
     {
       id: 'lo-3',
@@ -80,7 +119,26 @@ const topic45 = {
         'Factors influencing sympathetic control: Increased Sympathetic Activity occurs during: Exercise - To enhance cardiac output by mobilizing venous blood. Stress or Fight-or-Flight Response - To increase circulating blood volume for critical organs. Hypovolemia (e.g., hemorrhage) - To compensate for reduced blood volume and maintain cardiac output. Decreased Sympathetic Activity leads to venodilation, increasing venous compliance and allowing blood pooling in the veins (e.g., during rest or postprandial states).'
       ],
 
-      examAnswer: '>>Veins are innervated by sympathetic adrenergic fibers that release norepinephrine, which acts on alpha-1 adrenergic receptors on venous smooth muscle to elicit vasoconstriction.<< Norepinephrine binds to alpha-1 adrenergic receptors activating the Gq protein pathway, which activates phospholipase C leading to increased intracellular calcium, resulting in smooth muscle contraction and vasoconstriction. Venoconstriction reduces venous diameter and decreases venous compliance, mobilizing blood stored in the venous reservoir which contains approximately 60 percent of total blood volume, and increasing venous return to the heart. This enhances cardiac preload and cardiac output. Venomotor tone is defined as the degree of tension or contractility in the smooth muscle of venous walls, regulated primarily by sympathetic activity. Venomotor tone determines the compliance or stretchability of the veins and their ability to store or mobilize blood. Higher venomotor tone mobilizes blood toward the heart increasing venous return. Venomotor tone maintains adequate circulating blood volume and arterial pressure, especially during hemorrhage or dehydration, and enhances cardiac output during exercise.'
+      examAnswer: {
+        formatted: [
+          {
+            type: 'paragraph',
+            content: 'Veins are innervated by sympathetic adrenergic fibers that release norepinephrine, which acts on alpha-1 adrenergic receptors on venous smooth muscle to elicit vasoconstriction.',
+            critical: true
+          },
+          {
+            type: 'paragraph',
+            content: 'Norepinephrine binds to alpha-1 adrenergic receptors activating the Gq protein pathway, which activates phospholipase C leading to increased intracellular calcium, resulting in smooth muscle contraction and vasoconstriction. Venoconstriction reduces venous diameter and decreases venous compliance, mobilizing blood stored in the venous reservoir which contains approximately 60 percent of total blood volume, and increasing venous return to the heart. This enhances cardiac preload and cardiac output.',
+            critical: true
+          },
+          {
+            type: 'paragraph',
+            content: 'Venomotor tone is defined as the degree of tension or contractility in the smooth muscle of venous walls, regulated primarily by sympathetic activity. Venomotor tone determines the compliance or stretchability of the veins and their ability to store or mobilize blood. Higher venomotor tone mobilizes blood toward the heart increasing venous return. Venomotor tone maintains adequate circulating blood volume and arterial pressure, especially during hemorrhage or dehydration, and enhances cardiac output during exercise.',
+            critical: true
+          }
+        ],
+        raw: '>>Veins are innervated by sympathetic adrenergic fibers that release norepinephrine, which acts on alpha-1 adrenergic receptors on venous smooth muscle to elicit vasoconstriction.<< Norepinephrine binds to alpha-1 adrenergic receptors activating the Gq protein pathway, which activates phospholipase C leading to increased intracellular calcium, resulting in smooth muscle contraction and vasoconstriction. Venoconstriction reduces venous diameter and decreases venous compliance, mobilizing blood stored in the venous reservoir which contains approximately 60 percent of total blood volume, and increasing venous return to the heart. This enhances cardiac preload and cardiac output. Venomotor tone is defined as the degree of tension or contractility in the smooth muscle of venous walls, regulated primarily by sympathetic activity. Venomotor tone determines the compliance or stretchability of the veins and their ability to store or mobilize blood. Higher venomotor tone mobilizes blood toward the heart increasing venous return. Venomotor tone maintains adequate circulating blood volume and arterial pressure, especially during hemorrhage or dehydration, and enhances cardiac output during exercise.'
+      }
     }
   ]
 };

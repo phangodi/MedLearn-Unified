@@ -34,7 +34,31 @@ const topic51 = {
         'Sympathetic vasoconstrictor innervation of vascular smooth muscle: ATP (P2X1 ionotropic receptor), noradrenaline (α-1 metabotropic receptor) and NPY cotransmission.'
       ],
 
-      examAnswer: 'Skeletal muscle circulation is regulated by both systemic neural and local control mechanisms whose relative importance shifts between rest and exercise. At rest, systemic neural control predominates through sympathetic nervous system tonic vasoconstrictor tone via norepinephrine acting on alpha-one adrenergic receptors, maintaining vascular resistance and systemic blood pressure while limiting skeletal muscle blood flow to approximately 20 to 25 percent of cardiac output. During exercise, local control mechanisms become predominant through metabolic vasodilation where active muscles release metabolites including adenosine, potassium, hydrogen ions, lactate, and carbon dioxide that cause precapillary arteriolar dilation. This phenomenon called functional sympatholysis allows local metabolites to override sympathetic vasoconstriction, ensuring adequate perfusion to exercising muscles despite global sympathetic activation, increasing skeletal muscle blood flow to 80 to 90 percent of cardiac output during intense exercise. Additional local mechanisms include myogenic response where arterioles respond to pressure changes, and flow-mediated vasodilation where shear stress triggers endothelial nitric oxide release.'
+      examAnswer: {
+        formatted: [
+          {
+            type: 'paragraph',
+            content: 'Skeletal muscle circulation is regulated by both systemic neural and local control mechanisms whose relative importance shifts between rest and exercise.',
+            critical: true
+          },
+          {
+            type: 'paragraph',
+            content: 'At rest, systemic neural control predominates through sympathetic nervous system tonic vasoconstrictor tone via norepinephrine acting on alpha-one adrenergic receptors, maintaining vascular resistance and systemic blood pressure while limiting skeletal muscle blood flow to 20 to 25 percent of cardiac output.',
+            critical: true
+          },
+          {
+            type: 'paragraph',
+            content: 'During exercise, local control mechanisms become predominant through metabolic vasodilation where active muscles release metabolites including adenosine, potassium, hydrogen ions, lactate, and carbon dioxide causing precapillary arteriolar dilation. Functional sympatholysis allows local metabolites to override sympathetic vasoconstriction, ensuring adequate perfusion to exercising muscles despite global sympathetic activation, increasing skeletal muscle blood flow to 80 to 90 percent of cardiac output during intense exercise.',
+            critical: true
+          },
+          {
+            type: 'paragraph',
+            content: 'Additional local mechanisms include myogenic response and flow-mediated vasodilation where shear stress triggers endothelial nitric oxide release.',
+            critical: true
+          }
+        ],
+        raw: '>>Skeletal muscle circulation is regulated by both systemic neural and local control mechanisms whose relative importance shifts between rest and exercise. At rest, systemic neural control predominates through sympathetic nervous system tonic vasoconstrictor tone via norepinephrine acting on alpha-one adrenergic receptors, maintaining vascular resistance and systemic blood pressure while limiting skeletal muscle blood flow to 20 to 25 percent of cardiac output. During exercise, local control mechanisms become predominant through metabolic vasodilation where active muscles release metabolites including adenosine, potassium, hydrogen ions, lactate, and carbon dioxide causing precapillary arteriolar dilation. Functional sympatholysis allows local metabolites to override sympathetic vasoconstriction, ensuring adequate perfusion to exercising muscles despite global sympathetic activation, increasing skeletal muscle blood flow to 80 to 90 percent of cardiac output during intense exercise. Additional local mechanisms include myogenic response and flow-mediated vasodilation where shear stress triggers endothelial nitric oxide release.<<'
+      }
     },
     {
       id: 'lo-2',
@@ -64,7 +88,22 @@ const topic51 = {
         'Skeletal muscle blood flow during exercise: Skeletal muscles receive up to 80-90% of cardiac output (~20-30 L/min) during maximal exercise, driven by: Metabolic vasodilation. Functional sympatholysis. Redistribution of blood flow: Reduced blood flow to non-essential organs (e.g., splanchnic circulation). Maintained flow to vital organs (e.g., brain, heart).'
       ],
 
-      examAnswer: 'Exercise produces profound cardiovascular consequences affecting multiple parameters. Total peripheral resistance decreases during exercise due to widespread vasodilation in active skeletal muscles driven by local metabolites including adenosine, carbon dioxide, hydrogen ions, and potassium through functional sympatholysis, while vasoconstriction in non-essential tissues helps maintain systemic resistance. Cardiac output at rest is approximately 5 to 6 liters per minute but increases dramatically during exercise to 20 to 25 liters per minute in untrained individuals or 35 to 40 liters per minute in highly trained athletes through combined increases in heart rate driven by parasympathetic withdrawal and sympathetic activation with maximal heart rate approximately 220 minus age, and stroke volume enhanced by venous return via muscle and respiratory pumps plus increased myocardial contractility. Arteriovenous oxygen difference at rest is approximately 5 milliliters oxygen per deciliter blood but increases significantly to 15 to 17 milliliters oxygen per deciliter blood during exercise due to increased capillary recruitment, mitochondrial activity, and enhanced oxygen unloading from hemoglobin via the Bohr effect from decreased pH and increased local carbon dioxide and temperature. Arterial pressure shows systolic pressure increasing proportionally with exercise intensity reaching 180 to 200 millimeters mercury, while diastolic pressure remains unchanged or slightly decreases due to reduced peripheral resistance, resulting in slight increase in mean arterial pressure. Regarding skeletal muscle contribution, at rest skeletal muscles receive 20 to 25 percent of cardiac output approximately 1 to 1.5 liters per minute, but during maximal exercise this increases to 80 to 90 percent of cardiac output approximately 20 to 30 liters per minute.'
+      examAnswer: {
+        formatted: [
+          {
+            type: 'list',
+            intro: 'Exercise produces profound cardiovascular consequences affecting multiple parameters:',
+            items: [
+              'Total peripheral resistance decreases during exercise due to widespread vasodilation in active skeletal muscles via local metabolites and functional sympatholysis, while vasoconstriction in non-essential tissues helps maintain systemic resistance',
+              'Cardiac output at rest is approximately 5 to 6 liters per minute but increases dramatically during exercise to 20 to 25 liters per minute in untrained individuals or 35 to 40 liters per minute in highly trained athletes; this increase occurs through combined increases in heart rate driven by parasympathetic withdrawal and sympathetic activation with maximal heart rate approximately 220 minus age, and stroke volume enhanced by increased venous return and myocardial contractility',
+              'Arteriovenous oxygen difference at rest is approximately 5 milliliters oxygen per deciliter blood but increases significantly to 15 to 17 milliliters oxygen per deciliter blood during exercise due to increased capillary recruitment, mitochondrial activity, and enhanced oxygen unloading from hemoglobin via the Bohr effect from decreased pH and increased carbon dioxide and temperature',
+              'Arterial pressure shows systolic pressure increasing proportionally with exercise intensity reaching 180 to 200 millimeters mercury, while diastolic pressure remains unchanged or slightly decreases, resulting in slight increase in mean arterial pressure',
+              'At rest skeletal muscles receive 20 to 25 percent of cardiac output approximately 1 to 1.5 liters per minute, but during maximal exercise this increases to 80 to 90 percent of cardiac output approximately 20 to 30 liters per minute'
+            ]
+          }
+        ],
+        raw: 'Exercise produces profound cardiovascular consequences affecting multiple parameters. Total peripheral resistance decreases during exercise due to widespread vasodilation in active skeletal muscles via local metabolites and functional sympatholysis, while vasoconstriction in non-essential tissues helps maintain systemic resistance. Cardiac output at rest is approximately 5 to 6 liters per minute but increases dramatically during exercise to 20 to 25 liters per minute in untrained individuals or 35 to 40 liters per minute in highly trained athletes. This increase occurs through combined increases in heart rate driven by parasympathetic withdrawal and sympathetic activation with maximal heart rate approximately 220 minus age, and stroke volume enhanced by increased venous return and myocardial contractility. Arteriovenous oxygen difference at rest is approximately 5 milliliters oxygen per deciliter blood but increases significantly to 15 to 17 milliliters oxygen per deciliter blood during exercise due to increased capillary recruitment, mitochondrial activity, and enhanced oxygen unloading from hemoglobin via the Bohr effect from decreased pH and increased carbon dioxide and temperature. Arterial pressure shows systolic pressure increasing proportionally with exercise intensity reaching 180 to 200 millimeters mercury, while diastolic pressure remains unchanged or slightly decreases, resulting in slight increase in mean arterial pressure. At rest skeletal muscles receive 20 to 25 percent of cardiac output approximately 1 to 1.5 liters per minute, but during maximal exercise this increases to 80 to 90 percent of cardiac output approximately 20 to 30 liters per minute.'
+      }
     },
     {
       id: 'lo-3',
@@ -86,7 +125,26 @@ const topic51 = {
         'Cutaneous circulation during sustained exercise: Dynamic Blood Flow Changes. Initially, cutaneous blood flow decreases due to sympathetic vasoconstriction. As exercise continues, cutaneous blood flow increases for thermoregulation: Heat produced by working muscles is dissipated through the skin. Sweat production requires increased blood flow to the skin to transfer heat to the environment. Balance: Blood flow to the skin is tightly regulated to balance thermoregulation with maintaining perfusion of vital organs and muscles.'
       ],
 
-      examAnswer: 'During sustained exercise such as distance running, cardiac output undergoes significant redistribution to prioritize active muscles while maintaining vital organ perfusion. Skeletal muscle receives 80 to 90 percent of cardiac output during sustained exercise compared to approximately 20 percent at rest, with blood flow reaching 20 to 30 liters per minute driven by local metabolic vasodilation from adenosine, potassium, carbon dioxide, lactate, and hydrogen ions, plus hypoxia, working through functional sympatholysis. Cerebral circulation maintains or slightly increases blood flow at approximately 750 milliliters per minute or 13 to 15 percent of cardiac output through autoregulation ensuring constant perfusion across wide blood pressure ranges, with increased arterial carbon dioxide levels during exercise enhancing cerebral vasodilation. Coronary circulation increases blood flow proportionally to increased myocardial oxygen demand, with flow increasing 3 to 4 times during exercise via local metabolic vasodilation particularly adenosine release, combined with sympathetic stimulation increasing heart rate and contractility necessitating increased coronary perfusion. Splanchnic circulation shows decreased blood flow falling from approximately 25 percent of cardiac output at rest to 3 to 5 percent during sustained exercise through sympathetic-mediated vasoconstriction of splanchnic arteries, with redistribution prioritizing active muscles over digestive functions, potentially causing gastrointestinal discomfort in prolonged exercise. Cutaneous circulation displays dynamic changes initially decreasing due to sympathetic vasoconstriction, but later increasing for thermoregulation as heat produced by working muscles requires dissipation through skin along with sweat production, with blood flow tightly regulated to balance thermoregulation with maintaining perfusion of vital organs and muscles.'
+      examAnswer: {
+        formatted: [
+          {
+            type: 'paragraph',
+            content: 'During sustained exercise such as distance running, cardiac output undergoes significant redistribution to prioritize active muscles while maintaining vital organ perfusion.'
+          },
+          {
+            type: 'list',
+            intro: 'Redistribution to five vascular beds:',
+            items: [
+              'Skeletal muscle receives 80 to 90 percent of cardiac output during sustained exercise compared to approximately 20 percent at rest, with blood flow reaching 20 to 30 liters per minute driven by local metabolic vasodilation and functional sympatholysis',
+              'Cerebral circulation maintains or slightly increases blood flow at approximately 750 milliliters per minute or 13 to 15 percent of cardiac output through autoregulation ensuring constant perfusion across wide blood pressure ranges, with increased arterial carbon dioxide levels during exercise enhancing cerebral vasodilation',
+              'Coronary circulation increases blood flow proportionally to increased myocardial oxygen demand, with flow increasing 3 to 4 times during exercise via local metabolic vasodilation particularly adenosine release, combined with sympathetic stimulation increasing heart rate and contractility necessitating increased coronary perfusion',
+              'Splanchnic circulation shows decreased blood flow falling from approximately 25 percent of cardiac output at rest to 3 to 5 percent during sustained exercise through sympathetic-mediated vasoconstriction, potentially causing gastrointestinal discomfort in prolonged exercise',
+              'Cutaneous circulation displays dynamic changes initially decreasing due to sympathetic vasoconstriction, but later increasing for thermoregulation as heat produced by working muscles requires dissipation through skin, with blood flow tightly regulated to balance thermoregulation with maintaining perfusion of vital organs and muscles'
+            ]
+          }
+        ],
+        raw: 'During sustained exercise such as distance running, cardiac output undergoes significant redistribution to prioritize active muscles while maintaining vital organ perfusion. Skeletal muscle receives 80 to 90 percent of cardiac output during sustained exercise compared to approximately 20 percent at rest, with blood flow reaching 20 to 30 liters per minute driven by local metabolic vasodilation and functional sympatholysis. Cerebral circulation maintains or slightly increases blood flow at approximately 750 milliliters per minute or 13 to 15 percent of cardiac output through autoregulation ensuring constant perfusion across wide blood pressure ranges, with increased arterial carbon dioxide levels during exercise enhancing cerebral vasodilation. Coronary circulation increases blood flow proportionally to increased myocardial oxygen demand, with flow increasing 3 to 4 times during exercise via local metabolic vasodilation particularly adenosine release, combined with sympathetic stimulation increasing heart rate and contractility necessitating increased coronary perfusion. Splanchnic circulation shows decreased blood flow falling from approximately 25 percent of cardiac output at rest to 3 to 5 percent during sustained exercise through sympathetic-mediated vasoconstriction, potentially causing gastrointestinal discomfort in prolonged exercise. Cutaneous circulation displays dynamic changes initially decreasing due to sympathetic vasoconstriction, but later increasing for thermoregulation as heat produced by working muscles requires dissipation through skin, with blood flow tightly regulated to balance thermoregulation with maintaining perfusion of vital organs and muscles.'
+      }
     },
     {
       id: 'lo-4',
@@ -113,7 +171,37 @@ const topic51 = {
         'Muscle pump - maintains perfusion during exercise: In rhythmic exercise, the muscle pump ensures that venous blood is effectively returned, maintaining perfusion pressure and nutrient delivery to the muscles.'
       ],
 
-      examAnswer: 'Phasic and sustained muscle contractions have contrasting effects on blood vessels and central venous pressure. Phasic or intermittent muscle contractions occurring during rhythmic activities like walking or running cause pulsatile extravascular compression where blood vessels are compressed during contraction forcing blood out of veins toward the heart, while veins refill from upstream during relaxation, promoting effective venous return without prolonged blood flow occlusion and enhancing central venous pressure transiently during contraction and relaxation phases, increasing preload on the heart facilitating higher stroke volume and cardiac output. In contrast, sustained or isometric muscle contractions such as holding a heavy object or static exercise lead to prolonged extravascular compression continuously compressing veins and small arteries, reducing blood flow to muscle tissue and causing transient reduction in venous return, impeding venous return and causing reduction in central venous pressure over time as blood flow becomes restricted, potentially leading to reduced preload and cardiac output if sustained for prolonged periods with potential tissue ischemia. The muscle pump is the rhythmic contraction of skeletal muscles aiding propulsion of venous blood toward the heart, critical for maintaining circulation particularly during physical activity. The muscle pump is important because it promotes venous return by actively pumping blood through the venous system back to the heart counteracting effects of gravity in upright positions and preventing blood pooling in lower extremities maintaining cardiac preload, prevents venous stasis reducing risk of conditions like deep vein thrombosis, enhances cardiac output as increased venous return via muscle pump raises central venous pressure and preload increasing stroke volume and cardiac output through the Frank-Starling mechanism, and maintains perfusion during exercise by ensuring venous blood is effectively returned maintaining perfusion pressure and nutrient delivery to muscles.'
+      examAnswer: {
+        formatted: [
+          {
+            type: 'paragraph',
+            content: 'Phasic and sustained muscle contractions have contrasting effects on blood vessels and central venous pressure.'
+          },
+          {
+            type: 'paragraph',
+            content: 'Phasic or intermittent muscle contractions during rhythmic activities like walking or running cause pulsatile extravascular compression where blood vessels are compressed during contraction forcing blood toward the heart, while veins refill during relaxation, promoting effective venous return and enhancing central venous pressure transiently, increasing preload and facilitating higher stroke volume and cardiac output.'
+          },
+          {
+            type: 'paragraph',
+            content: 'In contrast, sustained or isometric muscle contractions such as holding a heavy object lead to prolonged extravascular compression continuously compressing veins and small arteries, reducing blood flow and venous return, causing reduction in central venous pressure over time with potentially reduced preload and cardiac output if sustained for prolonged periods and potential tissue ischemia.'
+          },
+          {
+            type: 'paragraph',
+            content: 'The muscle pump is the rhythmic contraction of skeletal muscles aiding propulsion of venous blood toward the heart, critical for maintaining circulation during physical activity.'
+          },
+          {
+            type: 'list',
+            intro: 'The muscle pump is important because:',
+            items: [
+              'It promotes venous return by pumping blood back to the heart counteracting gravity and preventing blood pooling in lower extremities',
+              'It prevents venous stasis reducing risk of deep vein thrombosis',
+              'It enhances cardiac output as increased venous return raises central venous pressure and preload increasing stroke volume and cardiac output through the Frank-Starling mechanism',
+              'It maintains perfusion during exercise ensuring effective venous return'
+            ]
+          }
+        ],
+        raw: 'Phasic and sustained muscle contractions have contrasting effects on blood vessels and central venous pressure. Phasic or intermittent muscle contractions during rhythmic activities like walking or running cause pulsatile extravascular compression where blood vessels are compressed during contraction forcing blood toward the heart, while veins refill during relaxation, promoting effective venous return and enhancing central venous pressure transiently, increasing preload and facilitating higher stroke volume and cardiac output. In contrast, sustained or isometric muscle contractions such as holding a heavy object lead to prolonged extravascular compression continuously compressing veins and small arteries, reducing blood flow and venous return, causing reduction in central venous pressure over time with potentially reduced preload and cardiac output if sustained for prolonged periods and potential tissue ischemia. The muscle pump is the rhythmic contraction of skeletal muscles aiding propulsion of venous blood toward the heart, critical for maintaining circulation during physical activity. The muscle pump is important because it promotes venous return by pumping blood back to the heart counteracting gravity and preventing blood pooling in lower extremities, prevents venous stasis reducing risk of deep vein thrombosis, enhances cardiac output as increased venous return raises central venous pressure and preload increasing stroke volume and cardiac output through the Frank-Starling mechanism, and maintains perfusion during exercise ensuring effective venous return.'
+      }
     },
     {
       id: 'lo-5',
@@ -146,7 +234,24 @@ const topic51 = {
         'Phase IV - Compensatory responses - Baroreceptor reflex: High arterial pressure is detected. This activates vagal (parasympathetic) stimulation and reduces sympathetic outflow. Heart rate slows, and vascular resistance decreases, restoring arterial pressure to baseline levels.'
       ],
 
-      examAnswer: 'The Valsalva maneuver is forced expiration against a closed glottis increasing intrathoracic pressure to approximately 40 millimeters mercury or more, leading to significant cardiovascular changes through four distinct phases. During Phase I the initial increase in intrathoracic pressure, forced expiration increases intrathoracic pressure compressing the thoracic aorta and intrathoracic vessels causing a transient rise in arterial pressure due to increased systemic vascular resistance, though this rise is short-lived because it is mechanical and not due to increased cardiac output which remains unchanged initially, while baroreceptors in the carotid sinus and aortic arch detect the transient pressure rise triggering reflex vagal activation causing transient bradycardia. During Phase II the sustained strain phase, sustained high intrathoracic pressure compresses intrathoracic veins reducing venous return and preload to the heart, with reduced preload leading to drop in stroke volume and cardiac output via the Frank-Starling mechanism, causing arterial pressure to fall despite compensatory increases in systemic vascular resistance, with decreased arterial pressure detected by baroreceptors triggering increased sympathetic outflow causing peripheral vasoconstriction increasing systemic vascular resistance and increased heart rate or tachycardia plus increased contractility to maintain blood pressure and perfusion to vital organs. During Phase III the release phase, the glottis opens and intrathoracic pressure normalizes rapidly with thoracic aorta and veins no longer compressed, arterial pressure transiently drops as external compression on aorta is released and venous blood flow into thoracic cavity is not yet fully restored, while cardiac output begins to recover as venous return improves with brief sympathetic activation and possible reflex tachycardia. During Phase IV the recovery or overshoot phase, venous return is fully restored increasing preload and stroke volume with cardiac output increasing as the heart responds to improved preload via Frank-Starling mechanism, arterial pressure rises above baseline temporarily due to increased stroke volume and persistent vasoconstriction from Phase II sympathetic activation, with pressure overshoot corrected by baroreceptor-detected high arterial pressure activating vagal parasympathetic stimulation and reducing sympathetic outflow causing heart rate to slow and vascular resistance to decrease restoring arterial pressure to baseline levels.'
+      examAnswer: {
+        formatted: [
+          {
+            type: 'paragraph',
+            content: 'The Valsalva maneuver is forced expiration against a closed glottis increasing intrathoracic pressure to approximately 40 millimeters mercury or more, leading to cardiovascular changes through four distinct phases.'
+          },
+          {
+            type: 'steps',
+            items: [
+              'During Phase I, increased intrathoracic pressure compresses the thoracic aorta and vessels causing a transient rise in arterial pressure due to increased systemic vascular resistance; cardiac output remains unchanged initially; baroreceptors detect the pressure rise triggering reflex vagal activation causing transient bradycardia',
+              'During Phase II, sustained high intrathoracic pressure compresses intrathoracic veins reducing venous return and preload, with reduced preload leading to decreased stroke volume and cardiac output via the Frank-Starling mechanism; arterial pressure falls despite compensatory increases in systemic vascular resistance; decreased arterial pressure triggers baroreceptor reflex with increased sympathetic outflow causing peripheral vasoconstriction, tachycardia, and increased contractility to maintain blood pressure',
+              'During Phase III, the glottis opens and intrathoracic pressure normalizes rapidly; arterial pressure transiently drops as aortic compression is released and venous flow is not yet fully restored; cardiac output begins to recover as venous return improves',
+              'During Phase IV, venous return is fully restored increasing preload and stroke volume, with cardiac output increasing via the Frank-Starling mechanism; arterial pressure rises above baseline temporarily due to increased stroke volume and persistent vasoconstriction from Phase II; the pressure overshoot is corrected by baroreceptor-mediated vagal stimulation and reduced sympathetic outflow causing heart rate slowing and decreased vascular resistance restoring arterial pressure to baseline'
+            ]
+          }
+        ],
+        raw: 'The Valsalva maneuver is forced expiration against a closed glottis increasing intrathoracic pressure to approximately 40 millimeters mercury or more, leading to cardiovascular changes through four distinct phases. During Phase I, increased intrathoracic pressure compresses the thoracic aorta and vessels causing a transient rise in arterial pressure due to increased systemic vascular resistance. Cardiac output remains unchanged initially. Baroreceptors detect the pressure rise triggering reflex vagal activation causing transient bradycardia. During Phase II, sustained high intrathoracic pressure compresses intrathoracic veins reducing venous return and preload, with reduced preload leading to decreased stroke volume and cardiac output via the Frank-Starling mechanism. Arterial pressure falls despite compensatory increases in systemic vascular resistance. Decreased arterial pressure triggers baroreceptor reflex with increased sympathetic outflow causing peripheral vasoconstriction, tachycardia, and increased contractility to maintain blood pressure. During Phase III, the glottis opens and intrathoracic pressure normalizes rapidly. Arterial pressure transiently drops as aortic compression is released and venous flow is not yet fully restored. Cardiac output begins to recover as venous return improves. During Phase IV, venous return is fully restored increasing preload and stroke volume, with cardiac output increasing via the Frank-Starling mechanism. Arterial pressure rises above baseline temporarily due to increased stroke volume and persistent vasoconstriction from Phase II. The pressure overshoot is corrected by baroreceptor-mediated vagal stimulation and reduced sympathetic outflow causing heart rate slowing and decreased vascular resistance restoring arterial pressure to baseline.'
+      }
     }
   ]
 };

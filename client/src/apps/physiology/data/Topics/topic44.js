@@ -33,7 +33,28 @@ const topic44 = {
         'Regulation of flow during rest and activity: During periods of physical activity, the lymphatic pump becomes highly active, increasing lymph flow by 10- to 30-fold. During rest, lymph flow is slower and depends more on intrinsic smooth muscle contractions.'
       ],
 
-      examAnswer: 'The lymphatic system returns excess interstitial fluid, proteins, and macromolecules to blood circulation, preventing edema. Terminal lymphatic capillaries have specialized structural characteristics allowing reabsorption of large compounds including proteins. Overlapping endothelial cells form flap-like valves; when interstitial fluid pressure rises, these valves open inward allowing fluid and proteins to enter, then close when internal pressure increases preventing backflow. Anchoring filaments connect endothelial cells to surrounding connective tissue; when the interstitial space swells, these filaments stretch pulling cells apart, increasing openings for entry of fluid, proteins, and particles. Unlike systemic capillaries which have continuous basement membrane, lymphatic capillaries lack continuous basement membrane, allowing passage of high molecular weight substances. The flap-valve structure facilitates large molecule entry and prevents escape. Smooth muscle in larger collecting lymphatic vessels enables effective lymph pumping. The smooth muscle contracts rhythmically in response to stretch, with each segment between valves functioning as an automatic pump. When a segment fills, vessel stretch triggers contraction propelling lymph forward through the next valve. In large vessels like the thoracic duct, smooth muscle generates pressures of 50 to 100 millimeters mercury. Smooth muscle works with external forces including skeletal muscle contractions, arterial pulsations, and tissue compression, increasing lymph flow 10 to 30 fold during activity.'
+      examAnswer: {
+        formatted: [
+          {
+            type: 'paragraph',
+            content: 'The lymphatic system returns excess interstitial fluid, proteins, and macromolecules to blood circulation, preventing edema. Terminal lymphatic capillaries have specialized structural characteristics allowing reabsorption of large compounds including proteins.'
+          },
+          {
+            type: 'list',
+            intro: 'Structural characteristics of terminal lymphatics enabling large compound reabsorption:',
+            items: [
+              'Overlapping endothelial cells form flap-like valves; when interstitial fluid pressure rises, these valves open inward allowing fluid and proteins to enter, then close when internal pressure increases preventing backflow',
+              'Anchoring filaments connect endothelial cells to surrounding connective tissue; when the interstitial space swells, these filaments stretch pulling cells apart, increasing openings for entry of fluid, proteins, and particles',
+              'Lack of continuous basement membrane, unlike systemic capillaries which have complete basement membrane, allowing passage of high molecular weight substances. The flap-valve structure facilitates large molecule entry and prevents escape'
+            ]
+          },
+          {
+            type: 'paragraph',
+            content: 'Smooth muscle in larger collecting lymphatic vessels enables effective lymph pumping. The smooth muscle contracts rhythmically in response to stretch, with each segment between valves functioning as an automatic pump. When a segment fills, vessel stretch triggers contraction propelling lymph forward through the next valve. In large vessels like the thoracic duct, smooth muscle generates pressures of 50 to 100 millimeters mercury. Smooth muscle works with external forces including skeletal muscle contractions, arterial pulsations, and tissue compression, increasing lymph flow 10 to 30 fold during activity.'
+          }
+        ],
+        raw: 'The lymphatic system returns excess interstitial fluid, proteins, and macromolecules to blood circulation, preventing edema. Terminal lymphatic capillaries have specialized structural characteristics allowing reabsorption of large compounds including proteins. Overlapping endothelial cells form flap-like valves; when interstitial fluid pressure rises, these valves open inward allowing fluid and proteins to enter, then close when internal pressure increases preventing backflow. Anchoring filaments connect endothelial cells to surrounding connective tissue; when the interstitial space swells, these filaments stretch pulling cells apart, increasing openings for entry of fluid, proteins, and particles. Unlike systemic capillaries which have continuous basement membrane, lymphatic capillaries lack continuous basement membrane, allowing passage of high molecular weight substances. The flap-valve structure facilitates large molecule entry and prevents escape. Smooth muscle in larger collecting lymphatic vessels enables effective lymph pumping. The smooth muscle contracts rhythmically in response to stretch, with each segment between valves functioning as an automatic pump. When a segment fills, vessel stretch triggers contraction propelling lymph forward through the next valve. In large vessels like the thoracic duct, smooth muscle generates pressures of 50 to 100 millimeters mercury. Smooth muscle works with external forces including skeletal muscle contractions, arterial pulsations, and tissue compression, increasing lymph flow 10 to 30 fold during activity.'
+      }
     },
     {
       id: 'lo-2',
@@ -55,7 +76,22 @@ const topic44 = {
         'Lymphocyte recirculation ("patrolling"): The lymphatic system supports immune surveillance by facilitating the movement of lymphocytes between blood, lymphatic tissue, and peripheral tissues. Lymph nodes located along lymphatic vessels act as filtration and activation sites. Lymph carries antigens, pathogens, and other immune-related particles from tissues to the lymph nodes. Lymphocytes (T cells and B cells) recognize antigens and initiate immune responses. Lymphocytes recirculate through lymphatic vessels, entering the bloodstream via the thoracic duct or right lymphatic duct, allowing them to "patrol" different tissues. It is the continuous movement of lymphocytes (T and B cells) between the blood, lymphatic system, and lymphoid organs (lymph nodes, spleen, mucosa-associated lymphoid tissue). Enables rapid detection and response to infections or foreign particles. Helps maintain immune system readiness and adaptive immunity.'
       ],
 
-      examAnswer: '>>The critical functions of the lymphatic system are clearance of proteins from the interstitium, reabsorption of filtered fluid, fat absorption, and lymphocyte recirculation. Clearance of proteins from the interstitium: the lymphatic system removes proteins that leak from blood capillaries. Proteins are too large to re-enter the venous system directly and are transported via lymphatic vessels back to venous circulation through the thoracic duct. This prevents protein accumulation which would increase interstitial colloid osmotic pressure causing edema, and maintains the oncotic pressure gradient essential for fluid balance. Reabsorption of filtered fluid: the lymphatic system reabsorbs approximately 10 percent of capillary-filtered fluid not reabsorbed by venous capillaries, amounting to about 2 to 3 liters per day. This prevents tissue swelling and ensures balance between filtration and reabsorption. Fat absorption: specialized lymphatic vessels called lacteals in small intestine villi absorb chylomicrons containing triglycerides, cholesterol, and fat-soluble vitamins from digested food. Fats are transported through lymphatic system and delivered to bloodstream via thoracic duct. Lymphocyte recirculation: the lymphatic system facilitates movement of T and B cells between blood, lymphatic tissue, and peripheral tissues. Lymph nodes filter antigens and pathogens where lymphocytes recognize antigens and initiate immune responses, enabling rapid detection and response to infections.<<'
+      examAnswer: {
+        formatted: [
+          {
+            type: 'list',
+            intro: 'Critical functions of the lymphatic system:',
+            critical: true,
+            items: [
+              'Clearance of proteins from the interstitium: the lymphatic system removes proteins that leak from blood capillaries. Proteins are too large to re-enter the venous system directly and are transported via lymphatic vessels back to venous circulation through the thoracic duct. This prevents protein accumulation which would increase interstitial colloid osmotic pressure causing edema, and maintains the oncotic pressure gradient essential for fluid balance',
+              'Reabsorption of filtered fluid: the lymphatic system reabsorbs approximately 10 percent of capillary-filtered fluid not reabsorbed by venous capillaries, amounting to about 2 to 3 liters per day. This prevents tissue swelling and ensures balance between filtration and reabsorption',
+              'Fat absorption: specialized lymphatic vessels called lacteals in small intestine villi absorb chylomicrons containing triglycerides, cholesterol, and fat-soluble vitamins from digested food. Fats are transported through lymphatic system and delivered to bloodstream via thoracic duct',
+              'Lymphocyte recirculation: the lymphatic system facilitates movement of T and B cells between blood, lymphatic tissue, and peripheral tissues. Lymph nodes filter antigens and pathogens where lymphocytes recognize antigens and initiate immune responses, enabling rapid detection and response to infections'
+            ]
+          }
+        ],
+        raw: '>>The critical functions of the lymphatic system are clearance of proteins from the interstitium, reabsorption of filtered fluid, fat absorption, and lymphocyte recirculation. Clearance of proteins from the interstitium: the lymphatic system removes proteins that leak from blood capillaries. Proteins are too large to re-enter the venous system directly and are transported via lymphatic vessels back to venous circulation through the thoracic duct. This prevents protein accumulation which would increase interstitial colloid osmotic pressure causing edema, and maintains the oncotic pressure gradient essential for fluid balance. Reabsorption of filtered fluid: the lymphatic system reabsorbs approximately 10 percent of capillary-filtered fluid not reabsorbed by venous capillaries, amounting to about 2 to 3 liters per day. This prevents tissue swelling and ensures balance between filtration and reabsorption. Fat absorption: specialized lymphatic vessels called lacteals in small intestine villi absorb chylomicrons containing triglycerides, cholesterol, and fat-soluble vitamins from digested food. Fats are transported through lymphatic system and delivered to bloodstream via thoracic duct. Lymphocyte recirculation: the lymphatic system facilitates movement of T and B cells between blood, lymphatic tissue, and peripheral tissues. Lymph nodes filter antigens and pathogens where lymphocytes recognize antigens and initiate immune responses, enabling rapid detection and response to infections.<<'
+      }
     },
     {
       id: 'lo-3',
@@ -80,7 +116,36 @@ const topic44 = {
         'Why edema does not normally develop - Negative interstitial pressure: The slightly negative pressure in normal tissues helps "suction" excess fluid into lymphatic capillaries and facilitates its return to circulation.'
       ],
 
-      examAnswer: 'The relationship between interstitial pressure and lymph flow has three phases. At low interstitial pressure below negative 6 millimeters mercury, lymph flow is minimal. This is the normal resting state where interstitial pressure is slightly below atmospheric pressure and the pressure gradient driving fluid into lymphatic capillaries is small. With moderate increases from negative 6 to 0 millimeters mercury, lymph flow increases dramatically up to 20-fold. Increased interstitial pressure stretches anchoring filaments attached to lymphatic capillaries, pulling endothelial cells apart and opening flap-like valves, allowing more fluid, proteins, and particles to enter. The increased lymph volume stretches collecting vessel walls triggering smooth muscle contractions that pump lymph forward, preventing fluid accumulation during exercise or mild inflammation. When interstitial pressure exceeds 0 millimeters mercury, lymph flow reaches a maximum plateau. While higher pressure enhances fluid entry, excessive pressure compresses larger lymphatic vessels impeding movement. This balance limits lymph flow, and the lymphatic system can no longer compensate leading to potential edema. Edema does not normally develop because of four mechanisms. Increased lymphatic flow responds to elevated pressure preventing buildup, handling up to 10 to 30 times resting flow during exercise. Removal of proteins from interstitial space prevents increased interstitial oncotic pressure which would draw more fluid. Tissue compliance allows the interstitial space to accommodate small fluid increases without significant pressure changes, limiting excessive filtration. Negative interstitial pressure helps suction excess fluid into lymphatic capillaries facilitating return to circulation.'
+      examAnswer: {
+        formatted: [
+          {
+            type: 'paragraph',
+            content: 'The relationship between interstitial pressure and lymph flow has three phases.'
+          },
+          {
+            type: 'list',
+            items: [
+              'At low interstitial pressure below negative 6 millimeters mercury, lymph flow is minimal. This is the normal resting state where interstitial pressure is slightly below atmospheric pressure and the pressure gradient driving fluid into lymphatic capillaries is small',
+              'With moderate increases from negative 6 to 0 millimeters mercury, lymph flow increases dramatically up to 20-fold. Increased interstitial pressure stretches anchoring filaments attached to lymphatic capillaries, pulling endothelial cells apart and opening flap-like valves, allowing more fluid, proteins, and particles to enter. The increased lymph volume stretches collecting vessel walls triggering smooth muscle contractions that pump lymph forward, preventing fluid accumulation during exercise or mild inflammation',
+              'When interstitial pressure exceeds 0 millimeters mercury, lymph flow reaches a maximum plateau. While higher pressure enhances fluid entry, excessive pressure compresses larger lymphatic vessels impeding movement. This balance limits lymph flow, and the lymphatic system can no longer compensate leading to potential edema'
+            ]
+          },
+          {
+            type: 'paragraph',
+            content: 'Edema does not normally develop because of four mechanisms.'
+          },
+          {
+            type: 'list',
+            items: [
+              'Increased lymphatic flow responds to elevated pressure preventing buildup, handling up to 10 to 30 times resting flow during exercise',
+              'Removal of proteins from interstitial space prevents increased interstitial oncotic pressure which would draw more fluid',
+              'Tissue compliance allows the interstitial space to accommodate small fluid increases without significant pressure changes, limiting excessive filtration',
+              'Negative interstitial pressure helps suction excess fluid into lymphatic capillaries facilitating return to circulation'
+            ]
+          }
+        ],
+        raw: 'The relationship between interstitial pressure and lymph flow has three phases. At low interstitial pressure below negative 6 millimeters mercury, lymph flow is minimal. This is the normal resting state where interstitial pressure is slightly below atmospheric pressure and the pressure gradient driving fluid into lymphatic capillaries is small. With moderate increases from negative 6 to 0 millimeters mercury, lymph flow increases dramatically up to 20-fold. Increased interstitial pressure stretches anchoring filaments attached to lymphatic capillaries, pulling endothelial cells apart and opening flap-like valves, allowing more fluid, proteins, and particles to enter. The increased lymph volume stretches collecting vessel walls triggering smooth muscle contractions that pump lymph forward, preventing fluid accumulation during exercise or mild inflammation. When interstitial pressure exceeds 0 millimeters mercury, lymph flow reaches a maximum plateau. While higher pressure enhances fluid entry, excessive pressure compresses larger lymphatic vessels impeding movement. This balance limits lymph flow, and the lymphatic system can no longer compensate leading to potential edema. Edema does not normally develop because of four mechanisms. Increased lymphatic flow responds to elevated pressure preventing buildup, handling up to 10 to 30 times resting flow during exercise. Removal of proteins from interstitial space prevents increased interstitial oncotic pressure which would draw more fluid. Tissue compliance allows the interstitial space to accommodate small fluid increases without significant pressure changes, limiting excessive filtration. Negative interstitial pressure helps suction excess fluid into lymphatic capillaries facilitating return to circulation.'
+      }
     },
     {
       id: 'lo-4',
@@ -104,7 +169,22 @@ const topic44 = {
         'Lymph flow: 3-4 L/day. With average K value, the net filtration pressure produces approximately 2 ml/min filtrate that is less than 0.1% of the approximately 3000 ml/min plasma flow. This would mean 3-4 liters fluid in a day. This fluid is returned to the circulation with the lymph flow.'
       ],
 
-      examAnswer: '>>Edema develops through four main mechanisms. Venous obstruction increases capillary hydrostatic pressure distal to the obstruction, for example in deep vein thrombosis, pushing more fluid into interstitium. Lymphatics cannot compensate for excessive filtration, causing localized edema often unilateral in limbs. Lymphatic obstruction blocks drainage of interstitial fluid and proteins from tumor compression, filariasis, or post-surgical lymph node removal. Protein accumulation in interstitium draws in more water due to increased interstitial oncotic pressure, producing non-pitting, chronic, localized edema. Increased capillary permeability occurs when inflammatory mediators like histamine and bradykinin or endothelial injury cause leaky capillaries. Plasma proteins leak into interstitium decreasing intravascular oncotic pressure, and fluid follows proteins causing interstitial accumulation. Seen in inflammation, sepsis, burns, or trauma as localized or generalized edema. Malnutrition, particularly kwashiorkor, causes severe hypoproteinemia especially decreased serum albumin. Decreased plasma oncotic pressure causes fluid to shift into interstitial space, presenting as generalized pitting edema including ascites.<<'
+      examAnswer: {
+        formatted: [
+          {
+            type: 'list',
+            intro: 'Edema develops through four main mechanisms:',
+            critical: true,
+            items: [
+              'Venous obstruction increases capillary hydrostatic pressure distal to the obstruction, for example in deep vein thrombosis, pushing more fluid into interstitium. Lymphatics cannot compensate for excessive filtration, causing localized edema often unilateral in limbs',
+              'Lymphatic obstruction blocks drainage of interstitial fluid and proteins from tumor compression, filariasis, or post-surgical lymph node removal. Protein accumulation in interstitium draws in more water due to increased interstitial oncotic pressure, producing non-pitting, chronic, localized edema',
+              'Increased capillary permeability occurs when inflammatory mediators like histamine and bradykinin or endothelial injury cause leaky capillaries. Plasma proteins leak into interstitium decreasing intravascular oncotic pressure, and fluid follows proteins causing interstitial accumulation. Seen in inflammation, sepsis, burns, or trauma as localized or generalized edema',
+              'Malnutrition, particularly kwashiorkor, causes severe hypoproteinemia especially decreased serum albumin. Decreased plasma oncotic pressure causes fluid to shift into interstitial space, presenting as generalized pitting edema including ascites'
+            ]
+          }
+        ],
+        raw: '>>Edema develops through four main mechanisms. Venous obstruction increases capillary hydrostatic pressure distal to the obstruction, for example in deep vein thrombosis, pushing more fluid into interstitium. Lymphatics cannot compensate for excessive filtration, causing localized edema often unilateral in limbs. Lymphatic obstruction blocks drainage of interstitial fluid and proteins from tumor compression, filariasis, or post-surgical lymph node removal. Protein accumulation in interstitium draws in more water due to increased interstitial oncotic pressure, producing non-pitting, chronic, localized edema. Increased capillary permeability occurs when inflammatory mediators like histamine and bradykinin or endothelial injury cause leaky capillaries. Plasma proteins leak into interstitium decreasing intravascular oncotic pressure, and fluid follows proteins causing interstitial accumulation. Seen in inflammation, sepsis, burns, or trauma as localized or generalized edema. Malnutrition, particularly kwashiorkor, causes severe hypoproteinemia especially decreased serum albumin. Decreased plasma oncotic pressure causes fluid to shift into interstitial space, presenting as generalized pitting edema including ascites.<<'
+      }
     }
   ],
   referenceValues: [

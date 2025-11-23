@@ -23,7 +23,23 @@ const topic41 = {
         'Interstitial pressure: usually does not play a role in the transmural pressure of systemic arteries (except in contracting muscles). Interstitial pressure is more important in the low-pressure system (venous circulation).'
       ],
 
-      examAnswer: 'Transmural pressure is the pressure difference across the blood vessel wall, calculated as Ptm equals Pinside minus Poutside, where Pinside is the intraluminal blood pressure and Poutside is the extravascular tissue pressure. Transmural pressure determines the distending force acting on vessel walls. When transmural pressure is positive, intraluminal pressure exceeds extravascular pressure, the vessel distends and maintains blood flow. When transmural pressure is negative, extravascular pressure exceeds intraluminal pressure, and the vessel can collapse, reducing or halting blood flow. Interstitial pressure typically plays minimal role in systemic arteries except during muscle contraction, but is more important in low-pressure venous circulation. Veins are highly compliant and sensitive to transmural pressure changes, which greatly affect venous return and capacitance.'
+      examAnswer: {
+        formatted: [
+          {
+            type: 'paragraph',
+            content: 'Transmural pressure is the pressure difference across the blood vessel wall, calculated as Ptm equals Pinside minus Poutside, where Pinside is the intraluminal blood pressure and Poutside is the extravascular tissue pressure.'
+          },
+          {
+            type: 'paragraph',
+            content: 'Transmural pressure determines the distending force acting on vessel walls. When transmural pressure is positive, intraluminal pressure exceeds extravascular pressure, the vessel distends and maintains blood flow. When transmural pressure is negative, extravascular pressure exceeds intraluminal pressure, and the vessel can collapse, reducing or halting blood flow.'
+          },
+          {
+            type: 'paragraph',
+            content: 'Interstitial pressure typically plays minimal role in systemic arteries except during muscle contraction, but is more important in low-pressure venous circulation. Veins are highly compliant and sensitive to transmural pressure changes, which greatly affect venous return and capacitance.'
+          }
+        ],
+        raw: 'Transmural pressure is the pressure difference across the blood vessel wall, calculated as Ptm equals Pinside minus Poutside, where Pinside is the intraluminal blood pressure and Poutside is the extravascular tissue pressure. Transmural pressure determines the distending force acting on vessel walls. When transmural pressure is positive, intraluminal pressure exceeds extravascular pressure, the vessel distends and maintains blood flow. When transmural pressure is negative, extravascular pressure exceeds intraluminal pressure, and the vessel can collapse, reducing or halting blood flow. Interstitial pressure typically plays minimal role in systemic arteries except during muscle contraction, but is more important in low-pressure venous circulation. Veins are highly compliant and sensitive to transmural pressure changes, which greatly affect venous return and capacitance.'
+      }
     },
     {
       id: 'lo-2',
@@ -43,7 +59,20 @@ const topic41 = {
         'Relationship between compliance and distensibility: Compliance is equal to distensibility multiplied by the initial volume. C = D · V0.'
       ],
 
-      examAnswer: '>>Vascular compliance is the ability of a blood vessel to expand and increase its volume in response to an increase in pressure. The formula for determining compliance is C equals delta V divided by delta P, where C is compliance in milliliters per millimeter mercury or milliliters per kilopascal, delta V is the change in volume in milliliters, and delta P is the change in pressure in millimeters mercury or kilopascals.<< Vessels with high compliance, such as veins, can hold large volumes of blood with only small increases in pressure, acting as capacitance vessels storing most blood volume at low pressures. Vessels with low compliance, such as arteries, resist expansion, with small volume increases causing significant pressure increases. Venous compliance is approximately 24 times that of corresponding arteries.'
+      examAnswer: {
+        formatted: [
+          {
+            type: 'paragraph',
+            content: 'Vascular compliance is the ability of a blood vessel to expand and increase its volume in response to an increase in pressure. The formula for determining compliance is C equals delta V divided by delta P, where C is compliance in milliliters per millimeter mercury or milliliters per kilopascal, delta V is the change in volume in milliliters, and delta P is the change in pressure in millimeters mercury or kilopascals.',
+            critical: true
+          },
+          {
+            type: 'paragraph',
+            content: 'Vessels with high compliance, such as veins, can hold large volumes of blood with only small increases in pressure, acting as capacitance vessels storing most blood volume at low pressures. Vessels with low compliance, such as arteries, resist expansion, with small volume increases causing significant pressure increases. Venous compliance is approximately 24 times that of corresponding arteries.'
+          }
+        ],
+        raw: '>>Vascular compliance is the ability of a blood vessel to expand and increase its volume in response to an increase in pressure. The formula for determining compliance is C equals delta V divided by delta P, where C is compliance in milliliters per millimeter mercury or milliliters per kilopascal, delta V is the change in volume in milliliters, and delta P is the change in pressure in millimeters mercury or kilopascals.<< Vessels with high compliance, such as veins, can hold large volumes of blood with only small increases in pressure, acting as capacitance vessels storing most blood volume at low pressures. Vessels with low compliance, such as arteries, resist expansion, with small volume increases causing significant pressure increases. Venous compliance is approximately 24 times that of corresponding arteries.'
+      }
     },
     {
       id: 'lo-3',
@@ -63,7 +92,26 @@ const topic41 = {
         'Distensibility (Elastic Properties): refers to the intrinsic elasticity of the vessel wall, which determines how easily it can stretch in response to pressure. Arteries have lower distensibility due to thicker walls with more elastic fibers and smooth muscle, making them less compliant. Veins are more distensible because they have thinner walls with fewer elastic fibers, allowing greater expansion.'
       ],
 
-      examAnswer: 'The two main factors that determine vascular compliance are starting volume and distensibility. Starting volume, also called baseline volume, is the initial volume of blood in the vessel. At low baseline volumes, vessels are more compliant because there is more room for expansion, while at high baseline volumes, vessels approach their elastic limit, reducing compliance. Distensibility refers to the intrinsic elasticity of the vessel wall, which determines how easily it can stretch in response to pressure. The relationship is expressed as compliance equals distensibility multiplied by initial volume. Arteries have lower distensibility due to thicker walls with more elastic fibers and smooth muscle. Veins are more distensible with thinner walls and fewer elastic fibers. Venous distensibility is approximately 8 times that of the arterial system, and venous compliance is approximately 24 times that of corresponding arteries.'
+      examAnswer: {
+        formatted: [
+          {
+            type: 'paragraph',
+            content: 'The two main factors that determine vascular compliance are starting volume and distensibility.'
+          },
+          {
+            type: 'list',
+            items: [
+              'Starting volume, also called baseline volume, is the initial volume of blood in the vessel. At low baseline volumes, vessels are more compliant because there is more room for expansion, while at high baseline volumes, vessels approach their elastic limit, reducing compliance',
+              'Distensibility refers to the intrinsic elasticity of the vessel wall, which determines how easily it can stretch in response to pressure'
+            ]
+          },
+          {
+            type: 'paragraph',
+            content: 'The relationship is expressed as compliance equals distensibility multiplied by initial volume. Arteries have lower distensibility due to thicker walls with more elastic fibers and smooth muscle. Veins are more distensible with thinner walls and fewer elastic fibers. Venous distensibility is approximately 8 times that of the arterial system, and venous compliance is approximately 24 times that of corresponding arteries.'
+          }
+        ],
+        raw: 'The two main factors that determine vascular compliance are starting volume and distensibility. Starting volume, also called baseline volume, is the initial volume of blood in the vessel. At low baseline volumes, vessels are more compliant because there is more room for expansion, while at high baseline volumes, vessels approach their elastic limit, reducing compliance. Distensibility refers to the intrinsic elasticity of the vessel wall, which determines how easily it can stretch in response to pressure. The relationship is expressed as compliance equals distensibility multiplied by initial volume. Arteries have lower distensibility due to thicker walls with more elastic fibers and smooth muscle. Veins are more distensible with thinner walls and fewer elastic fibers. Venous distensibility is approximately 8 times that of the arterial system, and venous compliance is approximately 24 times that of corresponding arteries.'
+      }
     },
     {
       id: 'lo-4',
@@ -86,7 +134,25 @@ const topic41 = {
         'Comparison: The distensibility of the venous system is ~ 8 times that of the arterial system. For a given increase in pressure, veins can accommodate 8 times more blood than arteries of similar size. The compliance of the venous system is 24 times that of the corresponding arteries. It\'s distensibility is 8 times higher, and it\'s volume is 3 times larger (8 × 3 = 24).'
       ],
 
-      examAnswer: 'Arteries have low compliance with thick elastic walls and smooth muscle making them stiff and resistant to expansion. Compliance is inversely related to pressure. Arterioles have the lowest compliance in the vascular system due to their role in resistance regulation; small pressure changes cause negligible volume changes. Capillaries are essentially non-compliant because their thin walls are designed for exchange rather than storage or expansion. Veins have high compliance and are called capacitance vessels, with thin walls allowing significant expansion at low pressures. Veins can store 60 to 70 percent of total blood volume. The compliance of the venous system is approximately 24 times that of corresponding arteries because veins contain the unstressed volume. With aging, arterial walls become stiffer and less compliant, leading to increased arterial pressure.'
+      examAnswer: {
+        formatted: [
+          {
+            type: 'list',
+            intro: 'Different vascular segments based on compliance:',
+            items: [
+              'Arteries have low compliance with thick elastic walls and smooth muscle making them stiff and resistant to expansion. Compliance is inversely related to pressure',
+              'Arterioles have the lowest compliance in the vascular system due to their role in resistance regulation; small pressure changes cause negligible volume changes',
+              'Capillaries are essentially non-compliant because their thin walls are designed for exchange rather than storage or expansion',
+              'Veins have high compliance and are called capacitance vessels, with thin walls allowing significant expansion at low pressures. Veins can store 60 to 70 percent of total blood volume. The compliance of the venous system is approximately 24 times that of corresponding arteries because veins contain the unstressed volume'
+            ]
+          },
+          {
+            type: 'paragraph',
+            content: 'With aging, arterial walls become stiffer and less compliant, leading to increased arterial pressure.'
+          }
+        ],
+        raw: 'Arteries have low compliance with thick elastic walls and smooth muscle making them stiff and resistant to expansion. Compliance is inversely related to pressure. Arterioles have the lowest compliance in the vascular system due to their role in resistance regulation; small pressure changes cause negligible volume changes. Capillaries are essentially non-compliant because their thin walls are designed for exchange rather than storage or expansion. Veins have high compliance and are called capacitance vessels, with thin walls allowing significant expansion at low pressures. Veins can store 60 to 70 percent of total blood volume. The compliance of the venous system is approximately 24 times that of corresponding arteries because veins contain the unstressed volume. With aging, arterial walls become stiffer and less compliant, leading to increased arterial pressure.'
+      }
     },
     {
       id: 'lo-5',
@@ -107,7 +173,23 @@ const topic41 = {
         'In the arteries: the critical closing pressure is higher than the average circulatory filling pressure after death (~7 mmHg); therefore, the arteries collapse and, during autopsy, become filled with air.'
       ],
 
-      examAnswer: 'Critical closing pressure is the lowest perfusion pressure at which a given vessel remains open and blood flow is maintained. When blood pressure drops below this threshold, the vessel collapses. Critical closing pressure is a positive value determined by vascular smooth muscle tone and extravascular pressure. Vascular smooth muscle exerts compressive force on the vessel lumen; when intravascular pressure falls below this tension, the vessel collapses. Surrounding tissue pressure contributes to vessel closure when internal pressure is insufficient. Sympathetic activation increases vascular smooth muscle contraction, raising critical closing pressure. In arteries, critical closing pressure is higher than the average circulatory filling pressure after death, approximately 7 millimeters mercury, therefore arteries collapse and become filled with air during autopsy.'
+      examAnswer: {
+        formatted: [
+          {
+            type: 'paragraph',
+            content: 'Critical closing pressure is the lowest perfusion pressure at which a given vessel remains open and blood flow is maintained. When blood pressure drops below this threshold, the vessel collapses.'
+          },
+          {
+            type: 'paragraph',
+            content: 'Critical closing pressure is a positive value determined by vascular smooth muscle tone and extravascular pressure. Vascular smooth muscle exerts compressive force on the vessel lumen; when intravascular pressure falls below this tension, the vessel collapses. Surrounding tissue pressure contributes to vessel closure when internal pressure is insufficient.'
+          },
+          {
+            type: 'paragraph',
+            content: 'Sympathetic activation increases vascular smooth muscle contraction, raising critical closing pressure. In arteries, critical closing pressure is higher than the average circulatory filling pressure after death, approximately 7 millimeters mercury, therefore arteries collapse and become filled with air during autopsy.'
+          }
+        ],
+        raw: 'Critical closing pressure is the lowest perfusion pressure at which a given vessel remains open and blood flow is maintained. When blood pressure drops below this threshold, the vessel collapses. Critical closing pressure is a positive value determined by vascular smooth muscle tone and extravascular pressure. Vascular smooth muscle exerts compressive force on the vessel lumen; when intravascular pressure falls below this tension, the vessel collapses. Surrounding tissue pressure contributes to vessel closure when internal pressure is insufficient. Sympathetic activation increases vascular smooth muscle contraction, raising critical closing pressure. In arteries, critical closing pressure is higher than the average circulatory filling pressure after death, approximately 7 millimeters mercury, therefore arteries collapse and become filled with air during autopsy.'
+      }
     },
     {
       id: 'lo-6',
@@ -130,7 +212,29 @@ const topic41 = {
         'Therefore, vessel rupture due to high wall stress is most likely in the aorta, and wall weakening can initiate a vicious cycle of aneurysm formation.'
       ],
 
-      examAnswer: 'The relationship among wall tension, transmural pressure, vessel radius, and wall thickness is described by Laplace\'s law: T equals Pt times r divided by h, where T is wall tension, Pt is transmural pressure, r is vessel radius, and h is wall thickness. Wall tension is the tangential force per unit length acting on the vessel wall. Wall tension is directly proportional to transmural pressure and vessel radius, and inversely proportional to wall thickness. Based on this law, veins have low risk due to low pressure despite large radius. Capillaries have low risk due to low pressure and small radius. Arterioles and muscular arteries have low risk despite high pressure due to small radius and thick walls. The aorta and elastic arteries have high risk due to high pressure, large radius, and relatively thin walls. Therefore, vessel rupture is most likely in the aorta, and wall weakening can initiate a vicious cycle of aneurysm formation.'
+      examAnswer: {
+        formatted: [
+          {
+            type: 'paragraph',
+            content: 'The relationship among wall tension, transmural pressure, vessel radius, and wall thickness is described by Laplace\'s law: T equals Pt times r divided by h, where T is wall tension, Pt is transmural pressure, r is vessel radius, and h is wall thickness. Wall tension is the tangential force per unit length acting on the vessel wall. Wall tension is directly proportional to transmural pressure and vessel radius, and inversely proportional to wall thickness.'
+          },
+          {
+            type: 'list',
+            intro: 'Based on this law, risk assessment by vessel type:',
+            items: [
+              'Veins have low risk due to low pressure despite large radius',
+              'Capillaries have low risk due to low pressure and small radius',
+              'Arterioles and muscular arteries have low risk despite high pressure due to small radius and thick walls',
+              'The aorta and elastic arteries have high risk due to high pressure, large radius, and relatively thin walls'
+            ]
+          },
+          {
+            type: 'paragraph',
+            content: 'Therefore, vessel rupture is most likely in the aorta, and wall weakening can initiate a vicious cycle of aneurysm formation.'
+          }
+        ],
+        raw: 'The relationship among wall tension, transmural pressure, vessel radius, and wall thickness is described by Laplace\'s law: T equals Pt times r divided by h, where T is wall tension, Pt is transmural pressure, r is vessel radius, and h is wall thickness. Wall tension is the tangential force per unit length acting on the vessel wall. Wall tension is directly proportional to transmural pressure and vessel radius, and inversely proportional to wall thickness. Based on this law, veins have low risk due to low pressure despite large radius. Capillaries have low risk due to low pressure and small radius. Arterioles and muscular arteries have low risk despite high pressure due to small radius and thick walls. The aorta and elastic arteries have high risk due to high pressure, large radius, and relatively thin walls. Therefore, vessel rupture is most likely in the aorta, and wall weakening can initiate a vicious cycle of aneurysm formation.'
+      }
     },
     {
       id: 'lo-7',
@@ -154,7 +258,27 @@ const topic41 = {
         'Total resistance is higher than any individual resistance in series. Total resistance is lower than any individual resistance in parallel.'
       ],
 
-      examAnswer: 'Hydraulic resistance is the opposition to blood flow through a vessel, expressed as R equals delta P divided by Q, where delta P is pressure difference and Q is flow rate. Units are millimeters mercury times minute per liter or dyne times second per cubic centimeter. By Poiseuille\'s law, resistance equals 8 times viscosity times length divided by pi times radius to the fourth power. Hydraulic conductance is the reciprocal of resistance, G equals one divided by R. Units are liters per minute per millimeter mercury. When resistances are added in series, total resistance is the sum: Rtotal equals R₁ plus R₂ plus R₃, increasing total resistance and reducing flow. Example: sequential vascular segments. When resistances are added in parallel, one divided by Rtotal equals one divided by R₁ plus one divided by R₂, decreasing total resistance and increasing flow. Example: capillary beds.'
+      examAnswer: {
+        formatted: [
+          {
+            type: 'paragraph',
+            content: 'Hydraulic resistance is the opposition to blood flow through a vessel, expressed as R equals delta P divided by Q, where delta P is pressure difference and Q is flow rate. Units are millimeters mercury times minute per liter or dyne times second per cubic centimeter. By Poiseuille\'s law, resistance equals 8 times viscosity times length divided by pi times radius to the fourth power.'
+          },
+          {
+            type: 'paragraph',
+            content: 'Hydraulic conductance is the reciprocal of resistance, G equals one divided by R. Units are liters per minute per millimeter mercury.'
+          },
+          {
+            type: 'paragraph',
+            content: 'When resistances are added in series, total resistance is the sum: Rtotal equals R₁ plus R₂ plus R₃, increasing total resistance and reducing flow. Example: sequential vascular segments.'
+          },
+          {
+            type: 'paragraph',
+            content: 'When resistances are added in parallel, one divided by Rtotal equals one divided by R₁ plus one divided by R₂, decreasing total resistance and increasing flow. Example: capillary beds.'
+          }
+        ],
+        raw: 'Hydraulic resistance is the opposition to blood flow through a vessel, expressed as R equals delta P divided by Q, where delta P is pressure difference and Q is flow rate. Units are millimeters mercury times minute per liter or dyne times second per cubic centimeter. By Poiseuille\'s law, resistance equals 8 times viscosity times length divided by pi times radius to the fourth power. Hydraulic conductance is the reciprocal of resistance, G equals one divided by R. Units are liters per minute per millimeter mercury. When resistances are added in series, total resistance is the sum: Rtotal equals R₁ plus R₂ plus R₃, increasing total resistance and reducing flow. Example: sequential vascular segments. When resistances are added in parallel, one divided by Rtotal equals one divided by R₁ plus one divided by R₂, decreasing total resistance and increasing flow. Example: capillary beds.'
+      }
     },
     {
       id: 'lo-8',
@@ -182,7 +306,23 @@ const topic41 = {
         'Reference values: perfusion pressure (pressure gradient) in the systemic / pulmonary circulation: 92/6 mmHg. Total peripheral resistance (at rest): 16.5 mmHg × min/l. Pulmonary vascular resistance: 1.5 mmHg × min/l.'
       ],
 
-      examAnswer: '>>Arteries contribute minimally to peripheral vascular resistance due to large diameters. Blood pressure is highest in arteries, ranging from 120 millimeters mercury systolic to 80 millimeters mercury diastolic in the aorta. Cross-sectional area is small, with the aorta at 4 square centimeters. Flow velocity is highest at 22.5 centimeters per second in the aorta. Arteries contain 10 to 15 percent of total blood volume. Arterioles are the primary site of vascular resistance, accounting for 50 to 70 percent of total peripheral vascular resistance. The largest pressure drop occurs in arterioles, from 80 millimeters mercury to 30 millimeters mercury, a drop of 60 millimeters mercury. Cross-sectional area is greater than arteries. Flow velocity decreases, and blood volume is very small. Capillaries contribute moderate resistance, but parallel arrangement reduces overall resistance. Pressure ranges from 30 millimeters mercury at the arterial end to 10 millimeters mercury at the venous end. Cross-sectional area is largest at 3000 square centimeters, approximately 600 to 800 times larger than the aorta. Flow velocity is lowest at 0.03 centimeters per second. Capillaries contain approximately 5 percent of total blood volume. Venules have low resistance. Pressure is approximately 10 millimeters mercury. Cross-sectional area decreases compared to capillaries, and flow velocity increases. Veins contribute minimal resistance. Pressure is lowest, near 0 millimeters mercury or slightly negative near the heart. Cross-sectional area is small relative to capillaries. Flow velocity is moderate and increases toward the heart. Veins contain 60 to 70 percent of total blood volume due to high compliance.<<'
+      examAnswer: {
+        formatted: [
+          {
+            type: 'list',
+            intro: 'Vascular segment contributions to peripheral vascular resistance and hemodynamic characteristics:',
+            critical: true,
+            items: [
+              'Arteries contribute minimally to peripheral vascular resistance due to large diameters. Blood pressure is highest in arteries, ranging from 120 millimeters mercury systolic to 80 millimeters mercury diastolic in the aorta. Cross-sectional area is small, with the aorta at 4 square centimeters. Flow velocity is highest at 22.5 centimeters per second in the aorta. Arteries contain 10 to 15 percent of total blood volume',
+              'Arterioles are the primary site of vascular resistance, accounting for 50 to 70 percent of total peripheral vascular resistance. The largest pressure drop occurs in arterioles, from 80 millimeters mercury to 30 millimeters mercury, a drop of 60 millimeters mercury. Cross-sectional area is greater than arteries. Flow velocity decreases, and blood volume is very small',
+              'Capillaries contribute moderate resistance, but parallel arrangement reduces overall resistance. Pressure ranges from 30 millimeters mercury at the arterial end to 10 millimeters mercury at the venous end. Cross-sectional area is largest at 3000 square centimeters, approximately 600 to 800 times larger than the aorta. Flow velocity is lowest at 0.03 centimeters per second. Capillaries contain approximately 5 percent of total blood volume',
+              'Venules have low resistance. Pressure is approximately 10 millimeters mercury. Cross-sectional area decreases compared to capillaries, and flow velocity increases',
+              'Veins contribute minimal resistance. Pressure is lowest, near 0 millimeters mercury or slightly negative near the heart. Cross-sectional area is small relative to capillaries. Flow velocity is moderate and increases toward the heart. Veins contain 60 to 70 percent of total blood volume due to high compliance'
+            ]
+          }
+        ],
+        raw: '>>Arteries contribute minimally to peripheral vascular resistance due to large diameters. Blood pressure is highest in arteries, ranging from 120 millimeters mercury systolic to 80 millimeters mercury diastolic in the aorta. Cross-sectional area is small, with the aorta at 4 square centimeters. Flow velocity is highest at 22.5 centimeters per second in the aorta. Arteries contain 10 to 15 percent of total blood volume. Arterioles are the primary site of vascular resistance, accounting for 50 to 70 percent of total peripheral vascular resistance. The largest pressure drop occurs in arterioles, from 80 millimeters mercury to 30 millimeters mercury, a drop of 60 millimeters mercury. Cross-sectional area is greater than arteries. Flow velocity decreases, and blood volume is very small. Capillaries contribute moderate resistance, but parallel arrangement reduces overall resistance. Pressure ranges from 30 millimeters mercury at the arterial end to 10 millimeters mercury at the venous end. Cross-sectional area is largest at 3000 square centimeters, approximately 600 to 800 times larger than the aorta. Flow velocity is lowest at 0.03 centimeters per second. Capillaries contain approximately 5 percent of total blood volume. Venules have low resistance. Pressure is approximately 10 millimeters mercury. Cross-sectional area decreases compared to capillaries, and flow velocity increases. Veins contribute minimal resistance. Pressure is lowest, near 0 millimeters mercury or slightly negative near the heart. Cross-sectional area is small relative to capillaries. Flow velocity is moderate and increases toward the heart. Veins contain 60 to 70 percent of total blood volume due to high compliance.<<'
+      }
     }
   ],
   referenceValues: [
