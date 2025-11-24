@@ -336,16 +336,16 @@ const RelationshipsFormat = ({ data }) => {
     {/* Relationship Matrix */}
     {(data.examEssentialStructures?.grouped || safe(data.layers).length > 0) && (
       <div className="bg-white border-2 border-gray-300 rounded-lg p-6 shadow-lg">
-        <h2 className="text-2xl font-bold mb-4">RELATIONSHIP MATRIX</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">RELATIONSHIP MATRIX</h2>
         <div className="overflow-x-auto">
           <table className="w-full border-collapse text-sm">
             <thead>
               <tr className="bg-gray-200">
-                <th className="border border-gray-400 p-3 text-left">Structure</th>
-                <th className="border border-gray-400 p-3 text-left">Location</th>
-                <th className="border border-gray-400 p-3 text-left">Appearance</th>
+                <th className="border border-gray-400 p-3 text-left font-bold text-gray-900">Structure</th>
+                <th className="border border-gray-400 p-3 text-left font-bold text-gray-900">Location</th>
+                <th className="border border-gray-400 p-3 text-left font-bold text-gray-900">Appearance</th>
                 {safe(data.layers).length > 0 && data.layers[0]?.cnsEquivalent && (
-                  <th className="border border-gray-400 p-3 text-left">CNS Equivalent</th>
+                  <th className="border border-gray-400 p-3 text-left font-bold text-gray-900">CNS Equivalent</th>
                 )}
               </tr>
             </thead>
@@ -404,7 +404,7 @@ const RelationshipsFormat = ({ data }) => {
      data.examEssentialStructures.layers?.includes('endoneurium') && 
      data.examEssentialStructures?.additional?.some(item => item.toLowerCase().includes('adipocyte')) && (
       <div className="bg-white border-2 border-gray-300 rounded-lg p-6 shadow-lg">
-        <h2 className="text-2xl font-bold mb-4">SIZE COMPARISON (Critical for ID!)</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">SIZE COMPARISON (Critical for ID!)</h2>
         <div className="space-y-4">
           {/* Structures from grouped (axon, myelin) */}
           {safe(data.examEssentialStructures?.grouped).length > 0 && safe(data.examEssentialStructures.grouped[0]?.children).slice(0, 2).map((child, idx) => (
@@ -416,8 +416,8 @@ const RelationshipsFormat = ({ data }) => {
                   <div className="w-8 h-8 rounded-full border-4 border-blue-500 bg-white"></div>
                 )}
               </div>
-              <div className="text-sm capitalize">
-                <span className="font-bold">{typeof child === 'string' ? child : child?.name || String(child)}:</span> {idx === 0 ? 'Tiny pink dot' : 'Tiny white circular halo'}
+              <div className="text-sm text-gray-800 capitalize">
+                <span className="font-bold text-gray-900">{typeof child === 'string' ? child : child?.name || String(child)}:</span> {idx === 0 ? 'Tiny pink dot' : 'Tiny white circular halo'}
               </div>
             </div>
           ))}
@@ -428,8 +428,8 @@ const RelationshipsFormat = ({ data }) => {
               <div className="flex-shrink-0">
                 <div className="w-16 h-16 rounded-full border-4 border-yellow-500 bg-yellow-50"></div>
               </div>
-              <div className="text-sm capitalize">
-                <span className="font-bold">{item}:</span> HUGE (up to many times bigger)
+              <div className="text-sm text-gray-800 capitalize">
+                <span className="font-bold text-gray-900">{item}:</span> HUGE (up to many times bigger)
               </div>
             </div>
           ))}
