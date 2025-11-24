@@ -8,10 +8,24 @@ export function HistologyMTO2Page() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
 
-  // Auto-collapse sidebar on legacy app pages (desktop only)
+  // Force light mode for this legacy app, restore user's preference on unmount
   useEffect(() => {
+    const root = window.document.documentElement
+    const originalTheme = root.classList.contains('dark') ? 'dark' : 'light'
+
+    // Force light mode for this page
+    root.classList.remove('dark', 'light')
+    root.classList.add('light')
+
+    // Auto-collapse sidebar on legacy app pages (desktop only)
     setSidebarCollapsed(true)
     localStorage.setItem('sidebarCollapsed', 'true')
+
+    // Restore original theme when leaving this page
+    return () => {
+      root.classList.remove('dark', 'light')
+      root.classList.add(originalTheme)
+    }
   }, [])
 
   return (
