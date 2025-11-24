@@ -45,7 +45,8 @@ const topic33 = {
           }
         ],
         raw: '>>Flow is the volume of fluid passing through a cross-section per unit time, designated as Q with units of liters per minute or cubic meters per second. It describes rate of delivery and equals cardiac output in the cardiovascular system, approximately 5 liters per minute at rest. Velocity is the speed at which fluid particles move through a cross-sectional area, designated as v with units of meters per second or centimeters per second.<< Flow, velocity, and cross-sectional area relate by Q equals v times A, so velocity is inversely proportional to cross-sectional area. In the aorta, high velocity of 20 to 30 centimeters per second occurs due to small cross-sectional area of approximately 5.3 square centimeters. In capillaries, very low velocity of 0.02 to 0.1 centimeters per second occurs because massive combined cross-sectional area of approximately 3500 square centimeters allows adequate time for gas exchange.'
-      }
+      },
+        audioUrl: '/Audio/Topic-033/LO-01.mp3'
     },
     {
       id: 'lo-2',
@@ -96,7 +97,8 @@ const topic33 = {
           }
         ],
         raw: 'Bernoulli\'s law describes conservation of total energy in flowing blood consisting of three components. Pressure energy is potential energy stored due to blood pressure, measured in pascals or millimeters mercury, driving blood flow and overcoming vascular resistance. Kinetic energy is energy due to blood motion, calculated as one-half times mass times velocity squared, with faster-moving blood in narrow vessels having higher kinetic energy. Gravitational potential energy is energy due to blood position in gravitational field, calculated as mass times gravity times height. The Bernoulli equation states P plus one-half rho v squared plus rho g h equals constant, where rho is blood density approximately 1060 kilograms per cubic meter, v is velocity, g is gravity approximately 9.8 meters per second squared, h is height. When velocity increases in narrowed vessels, pressure energy decreases to maintain constant total energy. Clinical applications include stenotic valves producing murmurs and gravitational effects on venous return.'
-      }
+      },
+        audioUrl: '/Audio/Topic-033/LO-02.mp3'
     },
     {
       id: 'lo-3',
@@ -143,7 +145,8 @@ const topic33 = {
           }
         ],
         raw: '>>Ohm\'s law describes the relationship between pressure gradient, flow, and resistance in the cardiovascular system using the equation Q equals delta P divided by R, where Q is flow in liters per minute or milliliters per minute, delta P is pressure gradient in millimeters mercury, and R is resistance in millimeters mercury times minutes per liter. Pressure gradient is the driving force for blood flow, calculated as arterial minus venous pressure. Resistance is opposition to flow, determined primarily by vessel radius to the fourth power, plus blood viscosity and vessel length. This equation rearranges three ways: Q equals delta P divided by R to calculate flow, delta P equals Q times R to calculate pressure gradient, and R equals delta P divided by Q to calculate resistance.<< For example, if cardiac output is 5 liters per minute and total peripheral resistance is 16.5 millimeters mercury times minutes per liter, systemic pressure gradient is 82.5 millimeters mercury.'
-      }
+      },
+        audioUrl: '/Audio/Topic-033/LO-03.mp3'
     },
     {
       id: 'lo-4',
@@ -189,7 +192,8 @@ const topic33 = {
           }
         ],
         raw: '>>Systemic and pulmonary circulations are serially connected systems where blood flows from right ventricle through pulmonary circulation to left atrium, then pumped by left ventricle through systemic circulation back to right atrium. Cardiac output must be equal in both circuits, typically 5 to 6 liters per minute at rest. Using Ohm\'s law, systemic circulation is described by cardiac output equals aortic pressure minus right atrial pressure divided by total peripheral resistance. Systemic circulation delivers oxygenated blood to body tissues under high pressure with high resistance of approximately 16.5 millimeters mercury times minutes per liter and pressure gradient of approximately 92 millimeters mercury. Pulmonary circulation is described by cardiac output equals pulmonary artery pressure minus left atrial pressure divided by pulmonary vascular resistance. Pulmonary circulation transports deoxygenated blood to lungs under low pressure with low resistance of approximately 1.5 millimeters mercury times minutes per liter and pressure gradient of approximately 10 millimeters mercury.<<'
-      }
+      },
+        audioUrl: '/Audio/Topic-033/LO-04.mp3'
     },
     {
       id: 'lo-5',
@@ -230,7 +234,8 @@ const topic33 = {
           }
         ],
         raw: 'Resistance is opposition to blood flow through a vessel with units of millimeters mercury times minutes per liter or peripheral resistance units. Conductance is ease of blood flow through a vessel, defined as reciprocal of resistance where conductance equals one divided by resistance, with units of liters per minute per millimeter mercury. When resistances are added in series, they connect end-to-end with blood flowing sequentially, and total resistance equals sum of individual resistances, increasing total resistance and decreasing flow. Physiological example is blood flow through arteries to arterioles to capillaries within an organ. When resistances are added in parallel, blood flow splits into multiple pathways, total resistance calculated as one over total resistance equals sum of one over each resistance, decreasing total resistance and increasing flow. Physiological example is organ circulations such as brain, kidneys, and gastrointestinal tract arranged in parallel.'
-      }
+      },
+        audioUrl: '/Audio/Topic-033/LO-05.mp3'
     },
     {
       id: 'lo-6',
@@ -283,7 +288,8 @@ const topic33 = {
           }
         ],
         raw: '>>Hagen-Poiseuille\'s law determines hydraulic resistance using formula R equals 8 eta L divided by pi r to the fourth power, where eta is fluid viscosity, L is vessel length, r is vessel radius, and pi is approximately 3.14159. Four factors determine resistance: viscosity is directly proportional to resistance, length is directly proportional to resistance, radius is inversely proportional to resistance to the fourth power and most important, and doubling radius decreases resistance by factor of 16.<< However, the circulatory system shows significant deviations. First, blood is non-Newtonian fluid whose viscosity changes with shear rate, with low shear rates causing red cell aggregation and increased viscosity, while high shear rates cause cell alignment and decreased viscosity. Second, blood flow is pulsatile due to rhythmic heart contractions, not steady flow. Third, blood vessels are elastic and expand or contract with pressure, not rigid tubes. Fourth, vessel geometry is highly branched with varying diameters causing flow pattern changes and localized turbulence, not straight cylinders. Fifth, turbulent flow can occur in larger vessels at high velocities, increasing resistance beyond laminar flow predictions.'
-      }
+      },
+        audioUrl: '/Audio/Topic-033/LO-06.mp3'
     },
     {
       id: 'lo-7',
@@ -341,7 +347,8 @@ const topic33 = {
           }
         ],
         raw: 'Laminar flow is smooth, orderly, layered blood flow where layers move parallel without mixing, creating parabolic velocity profile with highest velocity at center, occurring quietly and energy-efficiently in small vessels. Turbulent flow is chaotic, disordered fluid motion with mixing between layers creating eddies and vortices, causing increased energy loss and audible sounds. Six factors shift laminar to turbulent flow: increased flow velocity, large vessel diameter, decreased blood viscosity as in anemia, irregular vessel geometry from plaques or stenosis, high pressure gradients across stenotic valves, and vessel branching and curvature. Reynolds number is dimensionless parameter predicting flow transition, calculated as diameter times velocity times density divided by viscosity, with values less than 2000 indicating laminar flow and greater than 3000 indicating turbulent flow. Turbulent flow produces vibrations creating audible sounds detected with stethoscope. Murmurs result from turbulent flow across stenotic or regurgitant heart valves. Bruits result from turbulent flow in arteries due to narrowing or atherosclerotic plaques.'
-      }
+      },
+        audioUrl: '/Audio/Topic-033/LO-07.mp3'
     }
   ]
 };

@@ -277,6 +277,38 @@ This double-escapes backslashes first, then escapes apostrophes, creating one to
 
 **Reference:** See topic31.js lines 21-28 or topic33.js lines 21-29 for completed examples
 
+### Step 2.4: Fix Double Quote Escaping (ADDITIONAL POST-PROCESSING CHECK)
+
+**Issue:** Source `.txt` files may contain `\"` which becomes `\\"` after Python processing
+- **Browser displays:** Literal `\"stores\"` with visible backslashes instead of `"stores"`
+- **This is rare but can happen** - always check after running Python script
+
+**Why This Happens:**
+JavaScript strings use SINGLE quotes (`'`), so double quotes inside don't need escaping:
+- ✅ Correct: `'text with "quoted words" inside'`
+- ❌ Wrong: `'text with \\"quoted words\\" inside'` (displays `\"quoted words\"`)
+
+**Detection (After Python Script):**
+Search processed topic files for escaped double quotes:
+```bash
+grep -n '\\"' topic*.js
+```
+
+**Manual Fix (If Found):**
+Use Edit tool to remove unnecessary escaping:
+```javascript
+// Find and replace all instances:
+Old: \\"
+New: "
+```
+
+**Example from Topics 41-51:**
+- topic45.js line 77 had `\\"stores\\"`
+- Fixed to `"stores"`
+- Only 1 instance found across all 11 topics
+
+**Note:** This is separate from apostrophe escaping (Step 2.3). Apostrophes (`'`) MUST be escaped, but double quotes (`"`) do NOT need escaping in single-quoted strings.
+
 ---
 
 ## Phase 2A: Optimizing Exam Answers ✅ COMPLETED (Topic 33)

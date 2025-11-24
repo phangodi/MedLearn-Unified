@@ -1,0 +1,88 @@
+═══════════════════════════════════════════════════════
+🎙️  AUDIO GENERATION SCRIPT - READY TO USE
+═══════════════════════════════════════════════════════
+
+✅ Everything is installed and configured!
+✅ Dependencies installed (38 packages)
+✅ Isolated environment (no conflicts with website)
+
+═══════════════════════════════════════════════════════
+📋 NEXT STEPS - ADD API KEYS
+═══════════════════════════════════════════════════════
+
+1. Provide your API keys to Claude
+2. Claude will add them to scripts/.env
+3. Test with: node generate-audio.js --topic 41 --lo 1
+
+═══════════════════════════════════════════════════════
+🔑 API KEYS NEEDED
+═══════════════════════════════════════════════════════
+
+ANTHROPIC_API_KEY=sk-ant-xxxxxxxxxxxxxxxxxxxxx
+ELEVENLABS_API_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxx
+
+Paste them in this chat and Claude will configure everything!
+
+═══════════════════════════════════════════════════════
+📚 QUICK REFERENCE COMMANDS
+═══════════════════════════════════════════════════════
+
+# Test with single LO (ALWAYS DO THIS FIRST)
+node generate-audio.js --topic 41 --lo 1
+
+# Process entire topic
+node generate-audio.js --topic 41
+
+# Process specific LOs
+node generate-audio.js --topic 41 --lo 1,2,3
+
+# Regenerate existing files
+node generate-audio.js --topic 41 --force
+
+═══════════════════════════════════════════════════════
+✨ WHAT THE SCRIPT DOES
+═══════════════════════════════════════════════════════
+
+1. Extracts raw exam answer text from topic files
+2. Preprocesses with Claude Sonnet 4.5 for natural pronunciation
+   - "Ptm" → "P transmural"
+   - "Pinside" → "P inside"
+   - "millimeters mercury" → "millimeters of mercury"
+3. Shows you BEFORE/AFTER for approval
+4. Generates audio via ElevenLabs
+5. Saves to: /client/public/audio/physiology/Topic-041/LO-01.mp3
+6. Updates topic.js with audioUrl property
+
+═══════════════════════════════════════════════════════
+📁 FILES CREATED
+═══════════════════════════════════════════════════════
+
+/scripts/
+  ├── generate-audio.js      (Main script - 556 lines)
+  ├── package.json           (Dependencies config)
+  ├── .env.example           (Template for API keys)
+  ├── SETUP.md              (Detailed setup guide)
+  ├── QUICK_START.txt       (This file)
+  └── README.md             (Updated with new info)
+
+═══════════════════════════════════════════════════════
+🔒 ENVIRONMENT ISOLATION
+═══════════════════════════════════════════════════════
+
+✅ Scripts use: /scripts/.env
+✅ Website uses: /client/.env.local
+✅ ZERO CONFLICTS - completely separate!
+
+═══════════════════════════════════════════════════════
+💰 COST ESTIMATES
+═══════════════════════════════════════════════════════
+
+Per topic (avg 8 LOs):
+  - Claude API: ~$0.01
+  - ElevenLabs: ~3-4K characters
+
+All topics 41-51 (11 topics):
+  - Claude API: ~$0.15 total
+  - ElevenLabs: ~40K characters (20% of your monthly 200K)
+
+═══════════════════════════════════════════════════════

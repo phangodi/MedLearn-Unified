@@ -44,7 +44,8 @@ const topic34 = {
           }
         ],
         raw: 'Shear stress (τ) is the tangential force making fluid layers glide over each other per unit surface area, units Newtons per square meter or Pascals. Shear rate (γ) is the velocity gradient across fluid layers, formula dv/dx, units per second. Viscosity (η) is fluid resistance to flow or deformation under shear stress, units Pascal-seconds in SI or Poise in CGS, where 1 Pascal-second equals 0.1 Poise. Newton\'s law of viscosity states that in simple fluids there is direct proportionality between shear stress and shear rate, with viscosity as the proportionality coefficient, expressed as τ equals η times γ. >>Newtonian fluids have constant viscosity regardless of shear rate, showing linear relationship between shear stress and shear rate, examples include water, air, and simple oils. Non-Newtonian fluids have viscosity that changes with shear rate, showing non-linear relationship, examples include blood which exhibits shear-thinning behavior and ketchup.<<'
-      }
+      },
+        audioUrl: '/Audio/Topic-034/LO-01.mp3'
     },
     {
       id: 'lo-2',
@@ -91,7 +92,8 @@ const topic34 = {
           }
         ],
         raw: 'Blood is a non-Newtonian fluid whose viscosity changes with shear rate and vessel geometry. >>Three main factors affect blood viscosity: hematocrit, shear thinning, and the Fåhræus-Lindqvist effect.<< First, hematocrit: increasing hematocrit increases viscosity due to more red blood cells. In polycythemia this raises vascular resistance and cardiac workload, while in anemia reduced viscosity facilitates flow. Second, shear thinning: blood viscosity decreases as shear rate increases. At low shear rates red blood cells form rouleaux aggregates increasing viscosity, at high shear rates aggregates disperse and cells align reducing viscosity. Third, Fåhræus-Lindqvist effect: vessel diameter below 300 micrometers reduces apparent viscosity as red blood cells migrate centrally creating a cell-free plasma layer near walls. These features are explained by red blood cell membrane\'s non-elastic deformability.'
-      }
+      },
+        audioUrl: '/Audio/Topic-034/LO-02.mp3'
     },
     {
       id: 'lo-3',
@@ -125,7 +127,8 @@ const topic34 = {
           }
         ],
         raw: 'Shear thinning is blood\'s property where viscosity decreases with increasing shear rate through two mechanisms. First, dispersion of red blood cell aggregates: at low shear rates red blood cells aggregate into rouleaux resembling stacks of coins mediated by plasma proteins like fibrinogen, increasing viscosity. As shear rate increases, plasma flow forces disrupt rouleaux, individual cells disperse reducing friction and viscosity. Second, red blood cell adaptations: at higher shear rates cells migrate to vessel center leaving a cell-free plasma layer near walls acting as lubricant. Red blood cells are highly deformable with flexible biconcave shape, at high shear rates they elongate and align with flow direction reducing resistance. In narrow capillaries cells squeeze through and flow in single file with perfect fluid droplet adaptation assuming paraboloid velocity profile.'
-      }
+      },
+        audioUrl: '/Audio/Topic-034/LO-03.mp3'
     },
     {
       id: 'lo-4',
@@ -169,7 +172,8 @@ const topic34 = {
           }
         ],
         raw: 'Structural viscosity is blood viscosity due to red blood cell aggregation into rouleaux or money roll formations, influenced by plasma protein ratio. Globulins and fibrinogen promote aggregation by bridging adjacent red blood cells creating attractive forces, higher concentrations increase aggregation and structural viscosity. Albumin has anti-aggregatory effect by coating red blood cell surfaces reducing interaction strength, higher albumin levels reduce rouleaux formation and viscosity. The albumin-to-globulin ratio significantly influences aggregation: high A/G ratio means albumin predominates reducing aggregation and viscosity, low A/G ratio means globulins dominate promoting rouleaux formation and increasing viscosity particularly at low shear rates. This reversible aggregation is the basis of red blood cell sedimentation rate, increased when plasma albumin-globulin ratio is decreased.'
-      }
+      },
+        audioUrl: '/Audio/Topic-034/LO-04.mp3'
     },
     {
       id: 'lo-5',
@@ -203,7 +207,8 @@ const topic34 = {
           }
         ],
         raw: 'Red blood cells adapt dynamically to flow conditions through three mechanisms. First, axial migration: red blood cells move toward vessel center under laminar flow as higher shear stress near walls pushes them centrally, creating a cell-free plasma layer near walls that reduces friction and viscosity, improving flow efficiency in arterioles and capillaries. Second, orientation: in high-shear environments like arteries red blood cells rotate and align their biconcave shape parallel to flow direction minimizing resistance and turbulence, reducing cardiac energy expenditure and ensuring smooth laminar flow. Third, shape changes: red blood cells are highly deformable due to biconcave shape and spectrin cytoskeleton. In narrow capillaries smaller than their diameter they deform into elongated shapes to pass through, ensuring continuous oxygen delivery. Reduced deformability in sickle cell disease or spherocytosis impairs microcirculation.'
-      }
+      },
+        audioUrl: '/Audio/Topic-034/LO-05.mp3'
     },
     {
       id: 'lo-6',
@@ -247,7 +252,8 @@ const topic34 = {
           }
         ],
         raw: 'In microvessels below 300 micrometers diameter, apparent blood viscosity decreases as vessel diameter decreases. This is the Fåhræus-Lindqvist effect, the reduction of apparent viscosity in vessels between 10 and 300 micrometers, discovered by Robert Fåhræus and Johan Lindqvist in 1931. Three mechanisms explain this: First, axial migration and plasma skimming: red blood cells migrate to vessel center where velocity is higher and shear stress is lower, creating a cell-free plasma layer near walls where velocity is smaller, reducing effective hematocrit and viscosity. This is more important in bigger microvessels 30 to 300 micrometers. Second, reduced hematocrit: the Fåhræus effect causes decreased hematocrit in small vessels, further reducing viscosity. Third, red blood cell deformability: cells deform to pass through vessels smaller than their 7 to 8 micrometer diameter, and align in single-file streams minimizing interactions. In capillaries they assume perfect paraboloid velocity profile. Viscosity approaches plasma viscosity at 7 to 10 micrometers. This effect minimizes resistance ensuring efficient oxygen delivery, impairment in sickle cell anemia causes increased viscosity.'
-      }
+      },
+        audioUrl: '/Audio/Topic-034/LO-06.mp3'
     }
   ]
 };

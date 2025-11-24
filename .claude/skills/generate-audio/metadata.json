@@ -1,0 +1,7 @@
+{
+  "name": "generate-audio",
+  "description": "Generate audio files for physiology learning objectives using Claude API + ElevenLabs. Preprocesses medical text for natural TTS pronunciation and saves audio to project. Use when user wants to 'generate audio for topic X' or 'process audio for topic X LO Y'.",
+  "version": "1.0.0",
+  "author": "MedLearn",
+  "tags": ["audio", "tts", "physiology", "elevenlabs", "medical-education"]
+}

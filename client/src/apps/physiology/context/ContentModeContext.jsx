@@ -3,13 +3,13 @@ import React, { createContext, useState, useContext, useEffect } from 'react';
 const ContentModeContext = createContext();
 
 export const ContentModeProvider = ({ children }) => {
-  // Get initial mode from localStorage or default to 'keyPoints'
+  // Get initial mode from localStorage or default to 'hideDetails'
   // Modes: 'keyPoints', 'definitions', 'hideDetails'
   const [contentMode, setContentMode] = useState(() => {
     const savedMode = localStorage.getItem('contentMode');
     // Clean up old setting
     localStorage.removeItem('showSupplementaryContent');
-    return savedMode || 'keyPoints';
+    return savedMode || 'hideDetails';
   });
 
   // Get initial formatted answers preference from localStorage or default to true

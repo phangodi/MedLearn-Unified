@@ -49,7 +49,8 @@ const topic40 = {
           }
         ],
         raw: 'External work of the heart has two components. Pressure-volume work is energy to generate pressure moving blood from ventricles into arteries, proportional to ventricular pressure and stroke volume, constituting approximately 99 percent of external work. Kinetic work is energy to impart velocity to ejected blood, proportional to blood velocity and mass, representing approximately 1 percent but significant in high cardiac output or valve disorders like aortic stenosis. Mechanical efficiency is the ratio of external work to total energy expenditure. In healthy hearts, efficiency is 20 to 25 percent; remaining 75 to 80 percent dissipates as heat for myocardial contraction and cellular processes. Factors reducing efficiency include increased afterload in hypertension, excessive heart rates reducing diastolic filling, valvular disorders increasing kinetic work, and heart failure with ineffective contractions.'
-      }
+      },
+        audioUrl: '/Audio/Topic-040/LO-01.mp3'
     },
     {
       id: 'lo-2',
@@ -91,7 +92,8 @@ const topic40 = {
           { type: 'paragraph', content: 'At rest, the heart accounts for 4 to 5 percent of total oxygen consumption despite comprising 0.5 percent of body mass, consuming approximately 8 to 10 milliliters oxygen per minute. Oxygen extraction is already high at 70 to 80 percent, so increased demand is met by increasing coronary blood flow.' }
         ],
         raw: 'Cardiac muscle has high continuous energy demand for contractile function and ion gradients. The heart is highly aerobic with mitochondria occupying approximately 30 percent of cell volume, allowing efficient oxidative phosphorylation. Cardiac muscle is metabolically flexible using multiple substrates. Fatty acids provide 60 to 80 percent of energy as primary source under resting and fasting conditions via β-oxidation. Glucose supplies 10 to 30 percent, utilized more during increased workload or hypoxia, entering via GLUT1 and insulin-regulated GLUT4 transporters. Lactate contributes 10 to 20 percent, produced by skeletal muscles and converted to pyruvate. Ketone body usage increases during fasting, diabetes, or heart failure. At rest, the heart accounts for 4 to 5 percent of total oxygen consumption despite comprising 0.5 percent of body mass, consuming approximately 8 to 10 milliliters oxygen per minute. Oxygen extraction is already high at 70 to 80 percent, so increased demand is met by increasing coronary blood flow.'
-      }
+      },
+        audioUrl: '/Audio/Topic-040/LO-02.mp3'
     },
     {
       id: 'lo-3',
@@ -128,7 +130,8 @@ const topic40 = {
           }
         ],
         raw: '>>Coronary blood flow to ventricular myocardium is phasic, varying throughout the cardiac cycle because myocardium compresses coronary vessels during systole and relaxes during diastole. During isovolumetric contraction in early systole, intraventricular pressure rises sharply compressing coronary vessels; left ventricular flow is significantly reduced or ceases entirely especially in subendocardium while right ventricular flow is less affected due to lower pressures. During ventricular ejection in late systole, left ventricular coronary flow remains suppressed due to persistent vessel compression while right ventricular flow is relatively preserved due to lower wall tension. During isovolumetric relaxation in early diastole, aortic valve closes allowing blood into coronary arteries; left ventricular flow increases dramatically accounting for majority of left ventricular perfusion while right ventricular flow increases moderately. During ventricular filling in mid to late diastole, ventricular pressure remains low; left ventricular flow continues steady but decreases compared to early diastole while right ventricular flow is steady and less phasic.<<'
-      }
+      },
+        audioUrl: '/Audio/Topic-040/LO-03.mp3'
     },
     {
       id: 'lo-4',
@@ -153,7 +156,8 @@ const topic40 = {
           { type: 'paragraph', content: 'Contrasting subendocardium and subepicardium: Subendocardium is the innermost layer subjected to highest intramural pressure during systole lying beneath entire thickness of contracting wall; high intramural pressure almost completely occludes subendocardial vessels reducing flow to nearly zero during systole making it highly dependent on diastolic perfusion and particularly susceptible to ischemia under conditions reducing diastolic filling time like tachycardia or lower perfusion pressure like hypotension. Subepicardium is the outermost layer subjected to lower intramural pressure; although systolic compression affects vessels it is much less pronounced with some blood flow continuing during systole; dependency on diastolic perfusion is less critical and subepicardium is less prone to ischemia experiencing more consistent flow throughout the cycle.', critical: true }
         ],
         raw: '>>Contrasting right and left ventricles: Right ventricle has low systolic pressure approximately 15 to 25 millimeters mercury so coronary arteries are not significantly compressed during contraction; blood flow occurs relatively evenly during both systole and diastole with continuous coronary flow and only minor dependence on diastolic relaxation. Left ventricle has much higher systolic pressure approximately 120 millimeters mercury leading to significant coronary vessel compression especially in subendocardium; compression reduces or halts blood flow during systole therefore flow occurs predominantly during diastole when ventricular muscle relaxes with coronary flow highest during early diastole, making left ventricular flow highly diastolic-dependent. Contrasting subendocardium and subepicardium: Subendocardium is the innermost layer subjected to highest intramural pressure during systole lying beneath entire thickness of contracting wall; high intramural pressure almost completely occludes subendocardial vessels reducing flow to nearly zero during systole making it highly dependent on diastolic perfusion and particularly susceptible to ischemia under conditions reducing diastolic filling time like tachycardia or lower perfusion pressure like hypotension. Subepicardium is the outermost layer subjected to lower intramural pressure; although systolic compression affects vessels it is much less pronounced with some blood flow continuing during systole; dependency on diastolic perfusion is less critical and subepicardium is less prone to ischemia experiencing more consistent flow throughout the cycle.<<'
-      }
+      },
+        audioUrl: '/Audio/Topic-040/LO-04.mp3'
     },
     {
       id: 'lo-5',
@@ -192,7 +196,8 @@ const topic40 = {
           }
         ],
         raw: '>>Coronary circulation reference values: oxygen extraction is 65 to 75 percent under resting conditions compared to skeletal muscles 20 to 25 percent and brain 30 to 35 percent. Arteriovenous oxygen difference is approximately 114 milliliters per liter, more than double the body average of 50 milliliters per liter. These values are unique because: myocardium relies almost entirely on oxidative metabolism with oxygen extraction already near maximum at rest so cannot significantly increase extraction during stress unlike other organs; heart is continuously active with high constant metabolic demand and disproportionately high oxygen consumption compared to mass; increased oxygen demand must be met by increasing coronary blood flow not extraction since extraction is already near maximal; heart is highly sensitive to ischemia with little reserve capacity for increasing extraction making it vulnerable to conditions like atherosclerosis or tachycardia.<<'
-      }
+      },
+        audioUrl: '/Audio/Topic-040/LO-05.mp3'
     },
     {
       id: 'lo-6',
@@ -237,7 +242,8 @@ const topic40 = {
           }
         ],
         raw: 'Coronary blood flow is coupled to myocardial workload through metabolic autoregulation. As workload increases, oxygen consumption rises but heart extracts oxygen near maximally at rest approximately 70 to 80 percent, so increased demand must be met by increasing coronary blood flow. Increased myocardial oxygen demand raises heart rate, contractility, and wall stress leading to higher oxygen consumption; resulting hypoxia stimulates production of vasodilatory metabolites causing vasodilation. Humoral mechanisms causing coronary vasodilation include: Adenosine released during hypoxia or ATP breakdown binds to A2 receptors activating adenylyl cyclase increasing cAMP causing smooth muscle relaxation. Nitric oxide produced by endothelial cells in response to shear stress activates guanylyl cyclase increasing cGMP causing relaxation. Prostacyclin synthesized by endothelial cells increases cAMP causing relaxation and inhibits platelet aggregation. Bradykinin released during inflammation or shear stress stimulates endothelial cells to produce nitric oxide and prostaglandins. Carbon dioxide and hydrogen ions produced during metabolism directly relax vascular smooth muscle.'
-      }
+      },
+        audioUrl: '/Audio/Topic-040/LO-06.mp3'
     },
     {
       id: 'lo-7',
@@ -285,7 +291,8 @@ const topic40 = {
           { type: 'paragraph', content: 'Overall during exercise, indirect metabolic effects override alpha-mediated vasoconstriction allowing coronary blood flow to increase 4 to 5 fold with substantially decreased vascular resistance.', critical: true }
         ],
         raw: '>>Sympathetic stimulation alters cardiac activity through beta-adrenergic receptors. Positive chronotropy increases heart rate via beta-1 receptors in SA node increasing cAMP enhancing funny currents and L-type calcium channels. Positive inotropy increases contractility via beta-1 receptors in myocytes increasing cAMP activating PKA increasing calcium influx and release. Positive lusitropy increases relaxation via PKA phosphorylating phospholamban accelerating calcium reuptake. Positive dromotropy increases AV conduction velocity via PKA phosphorylating ion channels. Sympathetic stimulation alters coronary vascular resistance through direct and indirect effects. Direct effects: alpha-1 receptor activation causes vasoconstriction via norepinephrine binding increasing intracellular calcium primarily in epicardial arteries; beta-2 receptor activation causes vasodilation via increased cAMP and PKA. Indirect effects: increased myocardial oxygen demand from increased heart rate, contractility, and wall tension triggers metabolic vasodilation through adenosine release, nitric oxide from shear stress, and accumulated carbon dioxide, hydrogen ions, and lactate relaxing smooth muscle. Overall during exercise, indirect metabolic effects override alpha-mediated vasoconstriction allowing coronary blood flow to increase 4 to 5 fold with substantially decreased vascular resistance.<<'
-      }
+      },
+        audioUrl: '/Audio/Topic-040/LO-07.mp3'
     },
     {
       id: 'lo-8',
@@ -326,7 +333,8 @@ const topic40 = {
           { type: 'paragraph', content: 'The importance of indirect effects is demonstrated by their dominance: metabolic vasodilation overrides alpha-1 vasoconstriction ensuring coronary flow increases 4 to 5 fold as needed. This is necessary because myocardium already extracts 65 to 75 percent of oxygen at rest, so increased demand can only be met by increasing blood flow.' }
         ],
         raw: 'During exercise, sympathetic nervous system affects coronary blood flow through direct and indirect effects. Direct effects include alpha-1 receptor vasoconstriction primarily in epicardial arteries and beta-2 receptor vasodilation. Indirect effects are more critical: increased myocardial oxygen demand from increased heart rate, contractility, and wall tension triggers metabolic vasodilation through adenosine, nitric oxide, and accumulated metabolites. The importance of indirect effects is demonstrated by their dominance: metabolic vasodilation overrides alpha-1 vasoconstriction ensuring coronary flow increases 4 to 5 fold as needed. This is necessary because myocardium already extracts 65 to 75 percent of oxygen at rest, so increased demand can only be met by increasing blood flow.'
-      }
+      },
+        audioUrl: '/Audio/Topic-040/LO-08.mp3'
     }
   ],
   referenceValues: [

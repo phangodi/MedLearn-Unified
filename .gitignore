@@ -11,3 +11,6 @@ PHYSIOLOGY_INTEGRATION_FINAL*.md
 
 # Local Netlify folder
 .netlify
+
+# Audio files (generated, not tracked)
+client/public/Audio/

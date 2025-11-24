@@ -60,7 +60,8 @@ const topic36 = {
           }
         ],
         raw: '>>During the cardiac cycle, left atrial pressure remains relatively stable at six to eight millimeters mercury with three small pressure waves: the a-wave from atrial contraction, the c-wave from mitral valve bulging during isovolumetric contraction, and the v-wave from atrial filling during ventricular systole. Left ventricular pressure starts at six to eight millimeters mercury during diastole, rises rapidly during isovolumetric contraction, reaches a peak of one hundred twenty millimeters mercury during ejection, then falls during isovolumetric relaxation back to six to eight millimeters mercury. Aortic pressure fluctuates between diastolic pressure of approximately eighty millimeters mercury and systolic pressure of one hundred twenty millimeters mercury during ventricular ejection, then gradually decreases during diastole. Left ventricular volume begins at end-diastolic volume of one hundred ten to one hundred sixty milliliters, decreases to end-systolic volume of forty to eighty milliliters during ejection as stroke volume of seventy to eighty milliliters is ejected, then refills during diastole. The mitral valve opens when ventricular pressure falls below atrial pressure and closes when ventricular pressure exceeds atrial pressure at the start of systole. The aortic valve opens when ventricular pressure exceeds aortic pressure and closes when ventricular pressure falls below aortic pressure at the end of systole.<<'
-      }
+      },
+        audioUrl: '/Audio/Topic-036/LO-01.mp3'
     },
     {
       id: 'lo-2',
@@ -97,7 +98,8 @@ const topic36 = {
           }
         ],
         raw: 'The cardiac cycle consists of seven phases. Systole lasting two hundred seventy milliseconds includes three phases: isovolumetric contraction where ventricles contract with all valves closed causing rapid pressure rise without volume change, maximal rapid ejection when the aortic valve opens and blood is expelled as ventricular pressure exceeds aortic pressure, and decreased ejection where ejection continues but slows as ventricular repolarization begins. Diastole lasting five hundred thirty milliseconds includes four phases: isovolumetric relaxation when all valves are closed and ventricular pressure falls rapidly without volume change, rapid filling when the mitral valve opens and seventy to eighty percent of ventricular filling occurs passively due to the pressure gradient between atrium and ventricle, slow filling or diastasis where passive filling continues at a reduced rate as pressures begin to equalize, and atrial contraction where active atrial systole provides the final twenty to thirty percent of ventricular filling. These phases form a characteristic counterclockwise pattern with isovolumetric phases appearing as vertical lines and filling and ejection phases appearing as curved segments.'
-      }
+      },
+        audioUrl: '/Audio/Topic-036/LO-02.mp3'
     },
     {
       id: 'lo-3',
@@ -146,7 +148,8 @@ const topic36 = {
           }
         ],
         raw: '>>Stroke volume is the amount of blood ejected by the left ventricle during each heartbeat, calculated as end-diastolic volume minus end-systolic volume. Reference values are seventy to eighty milliliters at rest and up to one hundred twenty-five milliliters during maximal work. Cardiac output is the total volume of blood pumped by the heart per minute, calculated as the product of stroke volume and heart rate. Reference values are five point five liters per minute at rest and up to twenty-four liters per minute during maximal work. Cardiac index is cardiac output normalized to body surface area, calculated by dividing cardiac output by body surface area. The typical reference value is three point two liters per minute per square meter. Ejection fraction is the percentage of blood pumped out of the left ventricle with each beat, calculated by dividing stroke volume by end-diastolic volume. Normal ejection fraction ranges from fifty to seventy percent.<<'
-      }
+      },
+        audioUrl: '/Audio/Topic-036/LO-03.mp3'
     },
     {
       id: 'lo-4',
@@ -195,7 +198,8 @@ const topic36 = {
           }
         ],
         raw: '>>Factors contributing to cardiac sound formation include valve closure causing vibrations within the heart, tension of the chordae tendineae during valve closure, elastic properties and rapid recoil of the valves, deceleration of blood flow and subsequent vibrations, and transmission through the myocardium and surrounding cardiac structures. The first heart sound occurs at the onset of ventricular systole. It is caused by closure of the atrioventricular valves including the mitral and tricuspid valves. The sound is due to vibrations generated when these valves close and the sudden tensing of the chordae tendineae and ventricular myocardium. S1 is best heard at the apex of the heart in the fifth intercostal space at the midclavicular line and is described as a low-pitched "lub" sound. The second heart sound occurs at the onset of ventricular diastole. It is generated by closure of the semilunar valves including the aortic and pulmonary valves. This sound is associated with the sudden halt of blood flow and the recoil of the blood columns in the aorta and pulmonary artery. S2 is best heard at the base of the heart at the second intercostal space, with the aortic component louder at the right sternal border and the pulmonary component heard best at the left sternal border. S2 is higher-pitched and shorter than S1 and is described as a "dub" sound.<<'
-      }
+      },
+        audioUrl: '/Audio/Topic-036/LO-04.mp3'
     },
     {
       id: 'lo-5',
@@ -227,7 +231,8 @@ const topic36 = {
           }
         ],
         raw: 'During the push phase in systole, the ventricles contract, pushing blood out into the arteries with the left ventricle ejecting into the aorta and the right ventricle into the pulmonary artery. During the pull phase in diastole, as the ventricles relax, the heart\'s structure including the atria creates a negative pressure that pulls blood from the veins into the atria. This push-pull characteristic ensures that while blood is being expelled from the ventricles during contraction, blood is simultaneously being drawn into the atria, maintaining a continuous flow of blood without interruption. The valve-plane mechanism refers to the dynamic movement of the atrioventricular valve plane during the cardiac cycle. During systole, as the ventricles contract, the valve plane moves downward toward the apex of the heart, creating a negative pressure in the atria and enhancing venous return by drawing blood from the veins into the atria. During diastole, when the ventricles relax, the valve plane moves upward, increasing atrial pressure which propels blood into the ventricles.'
-      }
+      },
+        audioUrl: '/Audio/Topic-036/LO-05.mp3'
     },
     {
       id: 'lo-6',
@@ -276,7 +281,8 @@ const topic36 = {
           }
         ],
         raw: 'Right atrial pressure changes during the cardiac cycle form the jugular pulse. The right atrial pressure normally ranges from zero to two millimeters mercury with oscillations. The a-wave occurs during atrial systole when the right atrium contracts to push blood into the right ventricle, leading to an increase in right atrial pressure at the end of ventricular diastole. Following the a-wave, the x-descent represents atrial relaxation. The c-wave is observed during early ventricular systole, specifically during isovolumetric contraction, when the right ventricle contracts and the tricuspid valve bulges slightly back into the right atrium, causing a temporary small rise in atrial pressure. The x-descent continues as the atrium relaxes and the tricuspid valve moves downward due to ventricular contraction, causing a drop in right atrial pressure. The v-wave is formed as the right atrium fills with blood from the superior and inferior vena cavae during late ventricular systole while the tricuspid valve remains closed, causing a gradual increase in right atrial pressure. The y-descent occurs when the tricuspid valve opens at the beginning of ventricular diastole, allowing blood to flow from the right atrium into the right ventricle, leading to a rapid decrease in right atrial pressure. These pressure changes are transmitted through the venous system and can be observed as the jugular venous pulse, which is physiologically only visible during increased venous pressure such as during weight lifting or the Valsalva maneuver.'
-      }
+      },
+        audioUrl: '/Audio/Topic-036/LO-06.mp3'
     }
   ],
   referenceValues: [

@@ -47,7 +47,8 @@ const topic37 = {
           }
         ],
         raw: 'The length-tension relationship in cardiac cells shows that active tension increases with sarcomere length up to an optimum of approximately 2.2 micrometers due to optimal actin-myosin overlap, then declines with overstretching. At the ventricular level, sarcomere length correlates with end-diastolic volume on the horizontal axis of the pressure-volume loop. Passive tension from elastic components like titin correlates with the diastolic pressure curve shown in blue, reflecting pressure during filling. Active tension from cross-bridge cycling correlates with the systolic pressure curve shown in green, which peaks at optimal ventricular volume then declines with overstretching due to reduced filament overlap. Velocity of shortening correlates with rate of ejection and is reflected by dP over dt max, the maximum rate of pressure rise during isovolumic contraction when both valves are closed.'
-      }
+      },
+        audioUrl: '/Audio/Topic-037/LO-01.mp3'
     },
     {
       id: 'lo-2',
@@ -85,7 +86,8 @@ const topic37 = {
           { type: 'paragraph', content: 'End-diastolic ventricular pressure is most reliable because it directly measures pressure within the ventricles themselves, providing the closest approximation of actual myocardial fiber tension, unlike atrial pressure and CVP which are influenced by atrial compliance, respiratory changes, and venous return fluctuations.' }
         ],
         raw: '>>Preload is the maximal tension of the ventricular wall before systole, representing the initial stretching of cardiac muscle fibers at end of diastole just before contraction.<< End-diastolic ventricular pressure can estimate preload because it directly reflects the pressure within ventricles when filled at end of diastole, correlating with ventricular wall stretch. Atrial pressure can estimate preload because it reflects the filling pressure that propels blood into ventricles during diastole. Central venous pressure can estimate preload because it reflects venous return to the right atrium, indicating volume available to fill the ventricles. End-diastolic ventricular pressure is most reliable because it directly measures pressure within the ventricles themselves, providing the closest approximation of actual myocardial fiber tension, unlike atrial pressure and CVP which are influenced by atrial compliance, respiratory changes, and venous return fluctuations.'
-      }
+      },
+        audioUrl: '/Audio/Topic-037/LO-02.mp3'
     },
     {
       id: 'lo-3',
@@ -111,7 +113,8 @@ const topic37 = {
           { type: 'paragraph', content: 'Systolic arterial pressure can estimate afterload because it reflects the aortic pressure the left ventricle must overcome to eject blood. During systole, the ventricle must generate pressure exceeding systolic arterial pressure to open the aortic valve and initiate blood flow. Higher systolic arterial pressures indicate greater resistance, thereby increasing afterload. While arterial compliance and vascular resistance also influence afterload, systolic arterial pressure provides a convenient clinical measure.' }
         ],
         raw: '>>Afterload is the maximal tension of the ventricular wall during systole, representing the resistance the heart must overcome to eject blood during contraction.<< Systolic arterial pressure can estimate afterload because it reflects the aortic pressure the left ventricle must overcome to eject blood. During systole, the ventricle must generate pressure exceeding systolic arterial pressure to open the aortic valve and initiate blood flow. Higher systolic arterial pressures indicate greater resistance, thereby increasing afterload. While arterial compliance and vascular resistance also influence afterload, systolic arterial pressure provides a convenient clinical measure.'
-      }
+      },
+        audioUrl: '/Audio/Topic-037/LO-03.mp3'
     },
     {
       id: 'lo-4',
@@ -143,7 +146,8 @@ const topic37 = {
           { type: 'paragraph', content: 'The Frank-Starling law states that the force of contraction of cardiac muscle is directly proportional to the initial length of muscle fibers at end of diastole.', critical: true }
         ],
         raw: 'The Starling heart-lung preparation is an experimental setup isolating the denervated heart and lungs of an animal while maintaining blood flow through an artificial circulation loop, allowing precise control of blood volume and resistance without neural or hormonal input. This demonstrates how a denervated or transplanted heart adapts to changes in preload and afterload through intrinsic mechanisms. For preload adaptation, increasing venous return increases end-diastolic volume, stretching ventricular muscle fibers. According to the Frank-Starling law, this increased stretch leads to stronger contraction and increased stroke volume due to better actin-myosin filament overlap. For afterload adaptation, adding resistance to the outflow tract requires the heart to increase contractile force to maintain stroke volume, although this response is less pronounced than preload adaptation. >>The Frank-Starling law states that the force of contraction of cardiac muscle is directly proportional to the initial length of muscle fibers at end of diastole.<<'
-      }
+      },
+        audioUrl: '/Audio/Topic-037/LO-04.mp3'
     },
     {
       id: 'lo-5',
@@ -174,7 +178,8 @@ const topic37 = {
           { type: 'paragraph', content: 'This intrinsic mechanism ensures beat-by-beat correction of small differences without requiring neural or hormonal control.' }
         ],
         raw: 'The Frank-Starling law maintains equal cardiac output between left and right ventricles by automatically adjusting stroke volume in response to preload changes, preventing blood accumulation in pulmonary or systemic circulation. Since the ventricles are connected in series, any imbalance would cause congestion or edema. If the right ventricle pumps more blood into the pulmonary circulation than the left ventricle ejects, the increased return to the left atrium increases left ventricular end-diastolic volume and preload. According to the Frank-Starling law, this increased preload leads to stronger left ventricular contraction, increasing its stroke volume to match the right ventricle. This intrinsic mechanism ensures beat-by-beat correction of small differences without requiring neural or hormonal control.'
-      }
+      },
+        audioUrl: '/Audio/Topic-037/LO-05.mp3'
     }
   ]
 };

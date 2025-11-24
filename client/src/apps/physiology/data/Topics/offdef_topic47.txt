@@ -1,0 +1,71 @@
+// **LO-1** (Topic-47)
+officialDefinitions: [
+  'Fick Principle: calculates cardiac output by relating oxygen consumption to the difference in oxygen content between arterial and venous blood. Components: Oxygen Consumption (VO₂) measured using indirect calorimetry or a spirometer. Arterial Oxygen Content (CaO₂) calculated from arterial blood sampling. Venous Oxygen Content (CvO₂) determined from mixed venous blood sampling, usually via a pulmonary artery catheter.',
+  'Dye Dilution Method: uses the dilution of a known quantity of dye (e.g., indocyanine green) injected into the bloodstream to estimate cardiac output. Principle: the concentration of dye over time, as it mixes with blood, is inversely proportional to cardiac output. Procedure: inject a known quantity of dye into a central vein, measure dye concentration at a downstream site (typically in a peripheral artery) using a photodetector, plot a dye dilution curve (concentration vs. time), calculate CO based on the area under the curve and the injection dose.',
+  'Thermodilution Method: calculates CO by analyzing the temperature changes of blood after injecting a cold fluid into the circulation. Principle: the temperature change over time at a downstream site is inversely proportional to cardiac output. Procedure: inject a cold saline or dextrose solution into the right atrium via a pulmonary artery catheter, measure the resulting temperature changes in blood at the pulmonary artery, generate a thermodilution curve (temperature vs. time), calculate CO based on the area under the curve. A specialized algorithm calculates CO using the temperature difference and injection volume.'
+],
+
+// **LO-2** (Topic-47)
+officialDefinitions: [
+  'Cardiac function curves (ventricular function curves or Starling curves): graphically represent the relationship between cardiac output (CO) and right atrial pressure (RAP), which serves as an indicator of ventricular preload. These curves are essential for understanding how the heart adapts to varying volumes of venous return and how changes in myocardial contractility influence cardiac performance.',
+  'Generation of Cardiac Function Curves: construct a cardiac function curve by measuring the cardiac output at different levels of right atrial pressure. RAP reflects the pressure within the right atrium and is indicative of the preload, or the initial stretching of cardiac myocytes prior to contraction. CO is the volume of blood the heart pumps per minute, calculated as the product of stroke volume and heart rate. By plotting CO on the y-axis against RAP on the x-axis, the resulting curve illustrates how changes in preload affect cardiac output. Typically, the curve ascends steeply at lower RAPs and plateaus at higher pressures, indicating the limits of ventricular filling and stroke volume.',
+  'Myocardial contractility: the intrinsic ability of cardiac muscle fibers to contract independently of preload and afterload. Alterations in contractility shift the cardiac function curve.',
+  'Increased Contractility (Positive Inotropy): enhancements in contractility, due to factors like sympathetic stimulation or inotropic drugs, shift the curve upward and to the left. This shift signifies that for any given RAP, the cardiac output is higher, reflecting more forceful contractions and increased stroke volume.',
+  'Decreased Contractility (Negative Inotropy): reductions in contractility, as seen in conditions like heart failure, shift the curve downward and to the right. This indicates that for any given RAP, the cardiac output is lower, due to weaker contractions and reduced stroke volume.'
+],
+
+// **LO-3** (Topic-47)
+officialDefinitions: [
+  'Mean vascular filling pressure (MVFP): the pressure that would exist in the vascular system if the heart stopped pumping and the blood were evenly distributed throughout the vascular system. It reflects the static filling pressure of the vasculature and is determined by the blood volume and the compliance of the vascular system. Normal Value: 7 mmHg.',
+  'Blood Volume determinants: Increased blood volume increases MVFP (e.g., after a blood transfusion or fluid overload). Decreased blood volume reduces MVFP (e.g., hemorrhage or dehydration).',
+  'Vascular Compliance determinants: Arterial compliance has small contribution due to low compliance and minimal blood volume in arteries. Venous compliance has large contribution as veins are highly compliant and contain the majority of blood volume (~70-80%). Venoconstriction (due to sympathetic activation) reduces venous compliance and raises MVFP. Venodilation increases venous compliance and lowers MVFP.',
+  'Body Position effects: standing increases hydrostatic pressure in lower limbs, reducing central venous return and MVFP temporarily. Lying down restores venous return and MVFP.',
+  'Sympathetic Nervous System effects: sympathetic activation reduces venous compliance by venoconstriction, raising MVFP. Inhibition of sympathetic activity increases venous compliance, lowering MVFP.',
+  'Role of MVFP in Circulation: MVFP represents the "driving force" for venous return when there is a pressure difference between the veins and the right atrium (central venous pressure, CVP).'
+],
+
+// **LO-4** (Topic-47)
+officialDefinitions: [
+  'Venous return: the volume of blood flowing back to the heart (right atrium) per unit of time from the systemic circulation. It is essential to maintain cardiac output because the heart can only pump what it receives.',
+  'Pressure Gradient determinant: venous return is driven by the difference between the mean vascular filling pressure (MVFP) and the central venous pressure (CVP). MVFP represents the upstream driving pressure. CVP represents the downstream opposing pressure.',
+  'Resistance to Venous Return (RVR): the resistance that opposes blood flow back to the heart. RVR is influenced by the diameter, tone, and compliance of the venous vessels as well as the overall resistance of the veins, small veins, and large venules.',
+  'Theoretical factors determining RVR: Venous Tone (Compliance) - venoconstriction reduces compliance, decreasing RVR and increasing venous return; venodilation increases compliance, raising RVR and reducing venous return. Blood Viscosity - higher viscosity increases resistance. Venous Length - longer vessels result in greater resistance. Vascular Obstructions - thrombosis or compression can increase resistance.',
+  'Practical factors determining RVR: Large venules and veins contain most of the resistance in small veins and venules. Sympathetic nervous system - increased sympathetic activity causes venoconstriction, decreasing RVR and enhancing venous return. Blood volume - higher blood volume increases MVFP, which helps overcome resistance. Posture and gravity - standing increases venous pooling in the lower limbs, which increases RVR and reduces venous return temporarily. Muscle pump and respiratory pump - the skeletal muscle pump and respiratory movements decrease RVR by assisting venous blood flow.',
+  'Venoconstriction intervention: increased sympathetic tone or drugs (e.g., alpha-agonists) cause decreased compliance, reduced RVR, and increased venous return.',
+  'Venodilation intervention: decreased sympathetic tone or vasodilators (e.g., nitrates) cause increased compliance, increased RVR, and decreased venous return.',
+  'Volume expansion intervention: fluid administration (e.g., saline or blood products) increases MVFP, which helps overcome resistance, resulting in increased venous return.',
+  'Dehydration or hemorrhage intervention: decreases blood volume, lowers MVFP, resulting in decreased venous return.',
+  'External compression intervention: abdominal compression or external devices like compression stockings reduce venous pooling, decrease RVR, and increase venous return.',
+  'Obstructions intervention: thrombosis or tumors increase RVR and decrease venous return.'
+],
+
+// **LO-5** (Topic-47)
+officialDefinitions: [
+  'Vascular function curve: describes how venous return (blood flow back to the heart) changes in response to central venous pressure. As CVP increases, the pressure gradient driving venous return (the difference between mean systemic filling pressure and CVP) decreases, causing a reduction in venous return. Venous return decreases as CVP rises because a higher CVP reduces the driving pressure for blood flow from the veins to the heart. At very low CVPs, venous return is maximized, but the heart may struggle to pump the increased return effectively.',
+  'Effect of blood volume on vascular function curve: increased blood volume increases MVFP, shifting the curve rightward (higher venous return at all CVP levels). Decreased blood volume (hemorrhage) decreases MVFP, shifting the curve leftward (lower venous return at all CVP levels).',
+  'Effect of venous compliance on vascular function curve: decreased venous compliance (venoconstriction) increases MVFP and shifts the curve rightward. Increased venous compliance (venodilation) decreases MVFP and shifts the curve leftward.',
+  'Effect of total peripheral resistance on vascular function curve: increased TPR increases the slope (makes curve steeper), decreasing venous return for any given CVP. Decreased TPR decreases the slope (makes curve flatter), increasing venous return for any given CVP.'
+],
+
+// **LO-6** (Topic-47)
+officialDefinitions: [
+  'Intersection point: the intersection point of the cardiac function curve and the vascular function curve represents the equilibrium where venous return equals cardiac output. At this point, cardiac output is determined by the heart\'s pumping capacity (from the cardiac function curve), and venous return is determined by the vascular system\'s ability to return blood to the heart (from the vascular function curve).',
+  'Balance of Venous Return and Cardiac Output: the heart can only pump the blood it receives. Thus, in steady-state conditions, venous return must equal cardiac output.',
+  'Equilibrium of Central Venous Pressure: the CVP at the intersection is the pressure at which the heart receives and pumps blood at the same rate as the venous return. Any deviation from this point would disrupt equilibrium. If CO > Venous Return, CVP would decrease, reducing cardiac output until equilibrium is restored. If Venous Return > CO, CVP would increase, enhancing preload until equilibrium is restored.',
+  'Dynamic Adjustments: any changes in factors like contractility, blood volume, or venous tone shift one or both curves, creating a new intersection point (new steady-state conditions).'
+],
+
+// **LO-7** (Topic-47)
+officialDefinitions: [
+  'Hemorrhage immediate effects: loss of blood volume decreases mean systemic filling pressure, shifting the vascular function curve leftward, leading to reduced venous return and cardiac output, with a potential decrease in RAP. Compensatory mechanisms: activation of the sympathetic nervous system causes venoconstriction and increased heart rate, which can partially restore CO and RAP toward normal levels.',
+  'Heart failure effects: decreased myocardial contractility shifts the cardiac function curve downward, resulting in reduced CO and increased RAP due to blood backing up into the venous system. Compensatory mechanisms: neurohormonal activation (e.g., increased sympathetic activity, renin-angiotensin-aldosterone system) may increase blood volume and venous tone, shifting the vascular function curve rightward to support CO, but often at the expense of elevated RAP.',
+  'Sympathetic activation effects: enhances contractility and heart rate, shifting the cardiac function curve upward, increasing CO, and decreasing RAP. Concurrent venoconstriction shifts the vascular function curve rightward, supporting increased venous return.',
+  'Parasympathetic activation effects: reduces heart rate and contractility, shifting the cardiac function curve downward, decreasing CO, and potentially increasing RAP.',
+  'Exercise effects: increased metabolic demand elevates sympathetic activity, enhancing contractility and heart rate (upward shift of the cardiac function curve) and causing venoconstriction (rightward shift of the vascular function curve), resulting in increased CO with minimal changes in RAP. Compensatory mechanisms: vasodilation in active muscles decreases systemic vascular resistance, facilitating increased blood flow and venous return, further supporting elevated CO.'
+],
+
+// **Reference Values** (Topic-47)
+officialDefinitions: [
+  'Mean vascular filling pressure: 7 mmHg',
+  'Central venous pressure: 0-2 mmHg'
+]
