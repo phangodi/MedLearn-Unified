@@ -39,7 +39,8 @@ const topic39 = {
           { type: 'paragraph', content: 'In the heart, local potentials at the depolarization wavefront combine to form a resultant vector that continuously changes in direction and amplitude. ECG electrodes detect the projection of this moving dipole vector onto the lead axis: depolarization moving toward a positive electrode produces upward deflection, moving away produces downward deflection, and moving perpendicular produces minimal or biphasic deflection.' }
         ],
         raw: 'An electric dipole is a pair of equal and opposite electric charges separated by a small distance, generating an electric field with a dipole vector pointing from negative to positive charge. A vector has four characteristics: magnitude indicating strength, direction showing orientation in space, point of application where it acts, and line of action indicating influence direction. In the heart, local potentials at the depolarization wavefront combine to form a resultant vector that continuously changes in direction and amplitude. ECG electrodes detect the projection of this moving dipole vector onto the lead axis: depolarization moving toward a positive electrode produces upward deflection, moving away produces downward deflection, and moving perpendicular produces minimal or biphasic deflection.'
-      }
+      },
+        audioUrl: '/Audio/Topic-039/LO-01.mp3'
     },
     {
       id: 'lo-2',
@@ -117,7 +118,8 @@ const topic39 = {
           }
         ],
         raw: '>>Standard ECG conventions: paper speed 25 millimeters per second where 1 millimeter equals 40 milliseconds; amplitude 10 millimeters equals 1 millivolt. The 12-lead system includes six limb leads and six chest leads. Limb leads consist of three bipolar Einthoven leads: Lead one from negative right arm to positive left arm, Lead two from negative right arm to positive left leg, Lead three from negative left arm to positive left leg. Three augmented unipolar Goldberger leads: aVR from negative combined left arm and left leg to positive right arm, aVL from negative combined right arm and left leg to positive left arm, aVF from negative combined right arm and left arm to positive left leg. Six unipolar Wilson chest leads V1 through V6 use positive electrodes on chest with Wilson Central Terminal negative reference combining right arm, left arm, and left leg. Chest placements: V1 fourth intercostal space right parasternal, V2 fourth intercostal space left parasternal, V3 between V2 and V4, V4 fifth intercostal space left midclavicular line, V5 fifth intercostal space left anterior axillary line, V6 fifth intercostal space left mid-axillary line. Leads one, aVL, V5, V6 view lateral left ventricle; Leads two, three, aVF view inferior wall; aVR views right atrium; V1-V2 view septum; V3-V4 view anterior wall.<<'
-      }
+      },
+        audioUrl: '/Audio/Topic-039/LO-02.mp3'
     },
     {
       id: 'lo-3',
@@ -162,7 +164,8 @@ const topic39 = {
           }
         ],
         raw: '>>Lead two ECG components: P wave is the first upward deflection representing atrial depolarization from the sinoatrial node, duration less than 100 milliseconds. PR interval from beginning of P wave to start of QRS represents conduction time from atria through AV node to ventricles, duration 120 to 200 milliseconds. QRS complex represents rapid ventricular depolarization, duration 80 milliseconds or less than 100 milliseconds total, with Q wave as initial downward deflection, R wave as first upward deflection, S wave as subsequent downward deflection. ST segment is the flat isoelectric segment from end of S wave to beginning of T wave, representing period when ventricles are completely depolarized. T wave is upward deflection representing ventricular repolarization. QT interval from beginning of QRS to end of T wave represents total ventricular depolarization and repolarization time, duration 320 to 390 milliseconds.<<'
-      }
+      },
+        audioUrl: '/Audio/Topic-039/LO-03.mp3'
     },
     {
       id: 'lo-4',
@@ -200,7 +203,8 @@ const topic39 = {
           { type: 'paragraph', content: 'Clinical significance: left axis deviation may suggest left ventricular hypertrophy or conduction blocks; right axis deviation may indicate right ventricular hypertrophy or pulmonary conditions.' }
         ],
         raw: 'The mean electrical axis represents the average direction of ventricular depolarization during the cardiac cycle, depicted as an arrow with length proportional to magnitude. Normal range is 30 to plus 60 degrees, or more broadly negative 30 to plus 90 degrees, reflecting leftward and downward ventricular conduction. To determine the axis, analyze net QRS deflection in limb leads by measuring positive minus negative deflections. Using the quadrant method: if Lead one positive and aVF positive, axis is normal 0 to plus 90 degrees; if Lead one positive and aVF negative, left axis deviation negative 30 to negative 90 degrees; if Lead one negative and aVF positive, right axis deviation plus 90 to plus 180 degrees. Clinical significance: left axis deviation may suggest left ventricular hypertrophy or conduction blocks; right axis deviation may indicate right ventricular hypertrophy or pulmonary conditions.'
-      }
+      },
+        audioUrl: '/Audio/Topic-039/LO-04.mp3'
     },
     {
       id: 'lo-5',
@@ -238,7 +242,8 @@ const topic39 = {
           { type: 'paragraph', content: 'Right heart catheterization measures right heart and pulmonary artery pressures. Interventional procedures such as angioplasty or stent placement can be performed to open blocked arteries.' }
         ],
         raw: 'Cardiac catheterization is an invasive procedure where a thin catheter is inserted into a blood vessel and guided to the heart to evaluate and treat cardiac conditions. Usually performed through femoral artery in the groin or radial artery in the wrist with patient sedated under local anesthesia. Fluoroscopy provides real-time X-ray guidance. Purposes include measuring pressures within heart chambers and blood vessels, evaluating heart valve function and myocardial performance, identifying coronary artery blockages, and collecting blood samples for oxygen measurement. Coronary angiography involves injecting contrast dye to visualize coronary arteries and chambers. Right heart catheterization measures right heart and pulmonary artery pressures. Interventional procedures such as angioplasty or stent placement can be performed to open blocked arteries.'
-      }
+      },
+        audioUrl: '/Audio/Topic-039/LO-05.mp3'
     },
     {
       id: 'lo-6',
@@ -301,7 +306,8 @@ const topic39 = {
           { type: 'paragraph', content: 'Computed tomography coronary angiography uses X-rays and computer technology for detailed coronary artery images to detect blockages and calcium deposits. Cardiac magnetic resonance imaging provides detailed images of heart structure, function, and blood flow without radiation, used for diagnosing cardiomyopathies, assessing post-heart attack damage, and evaluating congenital defects.' }
         ],
         raw: 'Echocardiography is non-invasive imaging using ultrasound to create detailed images of heart structure and function. Types include transthoracic echocardiography with transducer on chest, transesophageal echocardiography with transducer in esophagus providing clearer images, and stress echocardiography performed during or after exercise to evaluate heart under stress. Applications include assessing valve structure and function, evaluating chamber size and function, detecting congenital defects, measuring ejection fraction, and identifying pericardial effusion. Advantages: non-invasive, painless, provides real-time images, and can guide procedures like pericardiocentesis. Computed tomography coronary angiography uses X-rays and computer technology for detailed coronary artery images to detect blockages and calcium deposits. Cardiac magnetic resonance imaging provides detailed images of heart structure, function, and blood flow without radiation, used for diagnosing cardiomyopathies, assessing post-heart attack damage, and evaluating congenital defects.'
-      }
+      },
+        audioUrl: '/Audio/Topic-039/LO-06.mp3'
     }
   ],
   referenceValues: [

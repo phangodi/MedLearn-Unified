@@ -38,7 +38,8 @@ const topic48 = {
           }
         ],
         raw: 'Resting tone is the sum of basal tone and neurogenic tone. Basal tone is the spontaneous contractile activity of smooth muscle independent of nerve or hormonal influences, an intrinsic property of smooth muscle that sets baseline vascular resistance. Neurogenic tone is the level of vascular smooth muscle contraction caused by autonomic nervous system input, primarily sympathetic nervous system activity, where norepinephrine released from sympathetic nerves binds to alpha-adrenergic receptors causing vasoconstriction, allowing dynamic regulation of blood flow according to the body\'s demands. Myogenic tone is the vascular smooth muscle\'s response to changes in transmural pressure across the vessel wall. Stretch of the vessel wall activates stretch-sensitive ion channels in smooth muscle cells, causing depolarization and calcium influx leading to vasoconstriction, known as the Bayliss effect, which helps stabilize blood flow despite changes in blood pressure through autoregulation.'
-      }
+      },
+        audioUrl: '/Audio/Topic-048/LO-01.mp3'
     },
     {
       id: 'lo-2',
@@ -81,7 +82,8 @@ const topic48 = {
           }
         ],
         raw: '>>Sympathetic vasomotor tone originates from the vasomotor center in the medulla oblongata, which integrates inputs from higher brain centers, baroreceptors, and chemoreceptors. Signals travel via preganglionic sympathetic neurons in the thoracolumbar spinal cord that synapse with postganglionic neurons in the paravertebral sympathetic chain ganglia or prevertebral ganglia. The primary neurotransmitter is norepinephrine released from postganglionic sympathetic nerve terminals, with epinephrine from the adrenal medulla contributing in some vessels. Norepinephrine binds to alpha-1 adrenergic receptors on vascular smooth muscle cells of arterioles and veins, activating the Gq protein pathway leading to increased intracellular calcium via the phospholipase C pathway, resulting in smooth muscle contraction and vasoconstriction.<< The physiological significance is maintaining baseline systemic vascular resistance and blood pressure and allowing redistribution of blood flow during stress, exercise, or hemorrhage. Sympathetic vasomotor tone is significant in skin circulation for thermoregulation, in skeletal muscle circulation maintaining vascular resistance at rest although local metabolic factors override it during exercise, and in splanchnic circulation acting as a blood reservoir allowing redistribution during stress or hemorrhage. Sympathetic tone is negligible in coronary circulation where local metabolic factors such as oxygen demand and adenosine predominate, in brain circulation where metabolic needs including carbon dioxide and pH regulate flow, and in kidney circulation where autoregulation maintains glomerular filtration rate with sympathetic tone significant only during severe stress or hemorrhage.'
-      }
+      },
+        audioUrl: '/Audio/Topic-048/LO-02.mp3'
     },
     {
       id: 'lo-3',
@@ -129,7 +131,8 @@ const topic48 = {
           }
         ],
         raw: '>>The baroreceptor reflex circuit has four elements. First, baroreceptors are spray-type mechanoreceptor nerve endings in the walls of the carotid sinus at the bifurcation of the common carotid artery and the aortic arch that detect arterial pressure changes. Carotid sinus baroreceptors respond to 50 to 180 millimeters mercury with maximal sensitivity at 100 millimeters mercury, while aortic arch baroreceptors are activated approximately 30 millimeters mercury higher. Signals from the carotid sinus travel via the glossopharyngeal nerve, cranial nerve nine, and from the aortic arch via the vagus nerve, cranial nerve ten, both to the nucleus tractus solitarius in the medulla. Second, the nucleus tractus solitarius receives baroreceptor input and sends inhibitory signals to the rostral ventrolateral medulla decreasing sympathetic outflow, and sends excitatory signals to the dorsal motor nucleus of the vagus and nucleus ambiguus enhancing parasympathetic activity. Third, sympathetic efferents are inhibited when arterial pressure is high, reducing stimulation of arterioles, veins, and heart, while parasympathetic efferents are activated via the vagus nerve, decreasing heart rate through negative chronotropy and reducing cardiac output. Fourth, target organ effects include in the heart, increased parasympathetic activity decreasing heart rate and decreased sympathetic activity reducing contractility or negative inotropy, in arterioles, decreased sympathetic tone causing vasodilation and lowering total peripheral resistance, and in veins, decreased sympathetic tone causing venodilation and reducing venous return and cardiac preload.<<'
-      }
+      },
+        audioUrl: '/Audio/Topic-048/LO-03.mp3'
     },
     {
       id: 'lo-4',
@@ -165,7 +168,8 @@ const topic48 = {
           }
         ],
         raw: 'The high-pressure baroreceptor reflex is crucial for short-term regulation of arterial blood pressure, acting as a rapid negative feedback mechanism that stabilizes blood pressure in response to sudden changes such as posture shifts, blood loss, or stress. Its primary significance is maintaining constant perfusion of vital organs, especially the brain and heart, by adjusting heart rate, cardiac output, and vascular tone within seconds. Without this reflex, even minor fluctuations in pressure could lead to syncope, cerebral hypoperfusion, or excessive cardiac afterload. The reflex provides prompt defense against blood pressure oscillations but does not correct chronic alterations in blood pressure as baroreceptors adapt to sustained pressure changes.'
-      }
+      },
+        audioUrl: '/Audio/Topic-048/LO-04.mp3'
     },
     {
       id: 'lo-5',
@@ -205,7 +209,8 @@ const topic48 = {
           }
         ],
         raw: 'When standing up, gravity causes blood to pool in the lower extremities with approximately 500 milliliters increase in venous blood volume. This decreases venous return to the heart, reducing stroke volume and cardiac output by the Frank-Starling mechanism, transiently lowering arterial blood pressure especially in the upper body including the brain. If uncorrected, reduced cerebral perfusion can cause dizziness or fainting known as orthostatic hypotension. Decreased arterial pressure reduces baroreceptor stretch and firing rate. Decreased baroreceptor firing activates the sympathetic nervous system, increasing heart rate through positive chronotropy and contractility through positive inotropy to increase cardiac output. Arteriolar vasoconstriction increases total peripheral resistance maintaining arterial pressure, and venoconstriction reduces venous pooling and increases venous return. Parasympathetic activity is simultaneously reduced. When lying down, the horizontal position eliminates gravitational pooling and venous return increases, resulting in a transient rise in cardiac output and blood pressure. Increased baroreceptor firing suppresses the sympathetic nervous system and activates the parasympathetic nervous system, decreasing heart rate and cardiac output, causing arteriolar vasodilation to reduce total peripheral resistance, and reducing venous return. This homeostatic regulation maintains relatively constant mean arterial pressure despite postural changes.'
-      }
+      },
+        audioUrl: '/Audio/Topic-048/LO-05.mp3'
     },
     {
       id: 'lo-6',
@@ -255,7 +260,8 @@ const topic48 = {
           }
         ],
         raw: 'Peripheral chemoreceptors located in the carotid bodies at the bifurcation of the carotid arteries and aortic bodies near the aortic arch detect hypoxia, hypercapnia, and acidosis, sending signals via the glossopharyngeal nerve, cranial nerve nine, and vagus nerve, cranial nerve ten, to the nucleus tractus solitarius. Central chemoreceptors in the medulla oblongata are primarily sensitive to hypercapnia and cerebrospinal fluid acidosis. Hypoxia-induced cardiovascular effects include tachycardia via sympathetic activation, peripheral vasoconstriction except in brain and heart, and hyperventilation. Hypercapnia-induced effects include increased sympathetic activity with vasoconstriction in non-vital areas, modest tachycardia, and hyperventilation to eliminate carbon dioxide. The major function of chemoreceptor reflexes is stimulating breathing; only very severe hypotension below 60 to 80 millimeters mercury elicits significant vasoconstriction. The CNS ischemic pressor response or Cushing reflex is activated by severe cerebral ischemia from elevated intracranial pressure compressing cerebral vessels. When cerebral perfusion pressure, which equals mean arterial pressure minus intracranial pressure, becomes critically low, severe ischemia and hypercapnia activate the sympathetic nervous system. Cardiovascular effects include systemic vasoconstriction raising mean arterial pressure, paradoxical bradycardia via baroreceptor activation, and respiratory irregularities. The reflex progresses through compensation, progressive intracranial pressure rise, and failure leading to brainstem herniation.'
-      }
+      },
+        audioUrl: '/Audio/Topic-048/LO-06.mp3'
     }
   ],
   referenceValues: [

@@ -48,7 +48,8 @@ const topic38 = {
           { type: 'paragraph', content: 'Pacemaker cells differ fundamentally: Phase zero uses L-type calcium channels producing gradual upstroke to zero to positive 10 millivolts; they lack phase one and plateau; phase four is unstable, starting at negative 60 millivolts with spontaneous depolarization via funny current from HCN channels and T-type calcium channels, enabling automaticity.', critical: true }
         ],
         raw: '>>Ventricular muscle action potentials have five phases. Phase zero rapid depolarization occurs when fast voltage-gated sodium channels open, causing steep sodium influx to positive 20 millivolts. Phase one shows brief potassium efflux through transient outward channels creating a notch. Phase two plateau results from balanced inward L-type calcium current and outward delayed rectifier potassium currents, maintaining near-zero millivolts for 200 to 300 milliseconds. Phase three repolarization occurs as potassium channels dominate and calcium channels close, returning to negative 90 millivolts. Phase four is stable at negative 90 millivolts via inward rectifier potassium channels and sodium-potassium ATPase. Pacemaker cells differ fundamentally: Phase zero uses L-type calcium channels producing gradual upstroke to zero to positive 10 millivolts; they lack phase one and plateau; phase four is unstable, starting at negative 60 millivolts with spontaneous depolarization via funny current from HCN channels and T-type calcium channels, enabling automaticity.<<'
-      }
+      },
+        audioUrl: '/Audio/Topic-038/LO-01.mp3'
     },
     {
       id: 'lo-2',
@@ -92,7 +93,8 @@ const topic38 = {
           }
         ],
         raw: '>>Working myocardium phase zero uses fast voltage-gated sodium channels creating steep upstroke, while nodal tissue lacks these and uses L-type calcium channels (Cav1.2) producing gradual depolarization. Phase one uses transient outward potassium channels (Kv4.3) in working myocardium only; nodal tissue lacks these channels. Phase two in working myocardium balances L-type calcium channels (Cav1.2) with delayed rectifier potassium channels (Kv7.1 for I_Ks, Kv11.1 for I_Kr); nodal tissue has minimal plateau due to different channel balance. Phase three uses voltage-gated potassium channels in both tissues. Phase four differs critically: working myocardium has high inward rectifier potassium channel (Kir2.1) density maintaining stable negative 90 millivolts, while nodal tissue has low Kir2.1 expression but expresses HCN channels carrying funny current and T-type calcium channels (Cav3.1, Cav3.2), creating unstable pacemaker potential and automaticity.<<'
-      }
+      },
+        audioUrl: '/Audio/Topic-038/LO-02.mp3'
     },
     {
       id: 'lo-3',
@@ -131,7 +133,8 @@ const topic38 = {
           }
         ],
         raw: 'The long action potential duration of 200 to 300 milliseconds results from sustained L-type calcium channel opening during the plateau phase, balanced by slowly activating delayed rectifier potassium channels. This contrasts with skeletal muscle where action potentials last only 1 to 2 milliseconds. The long refractory period occurs because sodium channels remain inactivated throughout the plateau and most of repolarization, unable to reopen until adequate repolarization. The advantages are critical for cardiac function: prevents tetany by ensuring action potentials remain separated, allowing complete relaxation between beats; provides adequate time for ventricular filling as chambers relax and atrioventricular valves open; protects against arrhythmias by blocking rapid repetitive stimulation; ensures sustained calcium influx triggering complete calcium-induced calcium release for powerful ventricular contraction and effective blood ejection.'
-      }
+      },
+        audioUrl: '/Audio/Topic-038/LO-03.mp3'
     },
     {
       id: 'lo-4',
@@ -164,7 +167,8 @@ const topic38 = {
           { type: 'paragraph', content: 'Rhythmicity is determined by pacemaker potential slope: steeper slope produces faster heart rate, shallower slope produces slower rate; SA node intrinsically generates approximately 100 action potentials per minute.', critical: true }
         ],
         raw: '>>Pacemaker automaticity is spontaneous rhythmic action potential generation without external stimulation, resulting from unstable phase four. After repolarization to approximately negative 60 millivolts, the funny current (I_f) through hyperpolarization-activated HCN channels opens, allowing sodium influx with small calcium contribution, causing gradual depolarization. Simultaneously, very low inward rectifier potassium channel (I_K1) expression prevents membrane stabilization, allowing pacemaker depolarization to proceed. As the membrane reaches approximately negative 55 millivolts, T-type calcium channels activate, providing additional calcium influx. At threshold around negative 40 millivolts, L-type calcium channels open, causing phase zero upstroke via calcium influx. After minimal plateau, voltage-gated potassium channels repolarize the membrane to negative 60 millivolts, reactivating funny current and repeating the cycle. Rhythmicity is determined by pacemaker potential slope: steeper slope produces faster heart rate, shallower slope produces slower rate; SA node intrinsically generates approximately 100 action potentials per minute.<<'
-      }
+      },
+        audioUrl: '/Audio/Topic-038/LO-04.mp3'
     },
     {
       id: 'lo-5',
@@ -205,7 +209,8 @@ const topic38 = {
           }
         ],
         raw: '>>Normal cardiac activation begins in the SA node located in the upper right atrium near the superior vena cava, acting as primary pacemaker generating approximately 100 action potentials per minute. The impulse spreads across both atria via Bachmann bundle to the left atrium and internodal tracts to the AV node, causing atrial depolarization and contraction. The AV node, located at the atrial-ventricular junction near the interatrial septum, is the only normal electrical pathway between atria and ventricles due to the insulating annulus fibrosus. The AV node introduces crucial delay of approximately 0.1 seconds, allowing complete ventricular filling before contraction. After this delay, the impulse enters the Bundle of His in the interventricular septum, then rapidly conducts to right and left bundle branches running along the septum. Finally, the impulse reaches Purkinje fibers in the subendocardial layer with very rapid conduction velocity of 2 to 4 meters per second, ensuring nearly simultaneous ventricular depolarization from endocardium to epicardium for coordinated contraction.<<'
-      }
+      },
+        audioUrl: '/Audio/Topic-038/LO-05.mp3'
     },
     {
       id: 'lo-6',
@@ -242,7 +247,8 @@ const topic38 = {
           }
         ],
         raw: '>>The AV node-His bundle is the only normal electrical pathway between atria and ventricles because the annulus fibrosus, the fibrous skeleton of the heart, forms an electrically insulating ring separating atrial and ventricular myocardium. Only the AV node and Bundle of His penetrate this barrier, making them the obligatory pathway for normal atrioventricular conduction. Slow AV node conduction at 0.02 to 0.05 meters per second results from small diameter cells, fewer gap junctions, and reliance on slow L-type calcium channels rather than fast sodium channels. This creates approximately 0.1 second delay with critical functional significance: allows atria to complete contraction and fill ventricles completely before ventricular systole, optimizing end-diastolic volume; acts as rate-limiting filter preventing excessively rapid atrial rates from conducting to ventricles, protecting against dangerous ventricular rates; ensures synchronized coordinated transition between atrial and ventricular contraction.<<'
-      }
+      },
+        audioUrl: '/Audio/Topic-038/LO-06.mp3'
     },
     {
       id: 'lo-7',
@@ -289,7 +295,8 @@ const topic38 = {
           { type: 'paragraph', content: 'In the AV node, sympathetic stimulation via protein kinase A phosphorylates L-type calcium channels increasing calcium influx and conduction velocity. Parasympathetic stimulation increases potassium efflux causing hyperpolarization, reducing calcium channel opening and slowing conduction.', critical: true }
         ],
         raw: '>>Sympathetic stimulation via norepinephrine binding beta-1 adrenergic receptors produces positive chronotropy increasing heart rate, positive dromotropy increasing AV conduction velocity, and positive inotropy increasing contractility. Parasympathetic stimulation via acetylcholine from vagus nerve binding muscarinic M2 receptors produces negative chronotropy decreasing heart rate and negative dromotropy decreasing AV conduction velocity. Positive chronotropy is increased heart rate; sympathetic stimulation can increase SA node firing from intrinsic 100 to 200 action potentials per minute. Negative chronotropy is decreased heart rate; parasympathetic vagal tone normally suppresses SA node from 100 to resting 60 to 70 action potentials per minute. Positive dromotropy is increased AV conduction velocity and shortened delay. Negative dromotropy is decreased AV conduction velocity and prolonged delay. In the SA node, sympathetic effects involve beta-1 receptor activation increasing cyclic AMP, enhancing funny current activity creating steeper pacemaker slope, and increasing T-type and L-type calcium channel activity. Parasympathetic M2 activation increases potassium channel activity causing hyperpolarization and flatter slope, decreases cyclic AMP inhibiting funny current, and inhibits calcium channels. In the AV node, sympathetic stimulation via protein kinase A phosphorylates L-type calcium channels increasing calcium influx and conduction velocity. Parasympathetic stimulation increases potassium efflux causing hyperpolarization, reducing calcium channel opening and slowing conduction.<<'
-      }
+      },
+        audioUrl: '/Audio/Topic-038/LO-07.mp3'
     },
     {
       id: 'lo-8',
@@ -332,7 +339,8 @@ const topic38 = {
           }
         ],
         raw: '>>Hyperkalemia, elevated extracellular potassium above normal 3.4 to 5.2 millimolar, profoundly affects cardiac excitability. Increased extracellular potassium reduces the potassium gradient, making the resting membrane potential less negative according to the Nernst equation, moving from negative 90 toward negative 80 or negative 75 millivolts. Initially, this paradoxically increases excitability as the membrane is closer to threshold. However, sustained partial depolarization causes voltage-gated sodium channels to enter inactivated state and remain unavailable. This produces multiple consequences: decreased action potential amplitude and upstroke velocity due to fewer available sodium channels reducing sodium influx during phase zero; shortened action potential duration as enhanced potassium efflux accelerates repolarization; prolonged refractory period as sodium channels require more negative potentials to recover from inactivation; slowed conduction velocity through myocardium due to reduced sodium channel availability; increased arrhythmia risk including ventricular tachycardia, fibrillation, or asystole. Electrocardiographically, hyperkalemia produces peaked tall T waves, widened QRS complexes, and prolonged PR intervals.<<'
-      }
+      },
+        audioUrl: '/Audio/Topic-038/LO-08.mp3'
     }
   ],
   referenceValues: [

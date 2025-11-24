@@ -44,7 +44,8 @@ const topic42 = {
           }
         ],
         raw: 'The invasive method uses a catheter inserted into an artery, commonly the radial or femoral artery, connected to fluid-filled tubing and an external pressure transducer. The transducer converts mechanical pressure into an electrical signal displayed as a continuous waveform, providing real-time measurements of systolic, diastolic, and mean arterial pressure. This method is used in critical care settings for unstable patients requiring moment-to-moment monitoring. Advantages include high accuracy, continuous monitoring, and ability to sample arterial blood gases. Disadvantages include risks of infection, bleeding, arterial damage, and need for trained personnel. The non-invasive method, sphygmomanometry, uses a cuff inflated above systolic pressure to occlude the brachial artery. As the cuff deflates, Korotkoff sounds are detected using either a stethoscope in the auscultatory method or a digital sensor in the oscillometric method. Systolic pressure is recorded when the first Korotkoff sound is heard, and diastolic pressure when sounds disappear. This method is simple, widely available with no significant patient risk, but less accurate than invasive methods, especially in arrhythmias or very low pressures.'
-      }
+      },
+        audioUrl: '/Audio/Topic-042/LO-01.mp3'
     },
     {
       id: 'lo-2',
@@ -98,7 +99,8 @@ const topic42 = {
           }
         ],
         raw: 'The blood pressure curve of the aorta shows the anacrotic limb representing the upstroke during ventricular ejection as pressure rises to the systolic peak, followed by the dicrotic notch produced when the aortic valve closes causing brief retrograde flow that briefly decreases aortic pressure below the systolic value, then the dicrotic limb representing the downstroke during diastole as pressure decreases to end diastole. Arterial systolic pressure is the maximum pressure when the left ventricle contracts and ejects blood into the aorta during systole, with reference value of 120 millimeters mercury. Arterial diastolic pressure is the minimum pressure when the heart relaxes and fills during diastole, maintained by elastic recoil of large arteries and peripheral resistance, with reference value of 80 millimeters mercury. Mean arterial pressure is the average pressure during a cardiac cycle representing the effective pressure driving blood to tissues, calculated as diastolic pressure plus one third of pulse pressure, with reference value of 93 millimeters mercury. Pulse pressure is the difference between systolic and diastolic pressures reflecting heart force and arterial compliance, calculated as systolic minus diastolic pressure, with reference value of 40 millimeters mercury. Mean arterial pressure is closer to diastolic pressure because the heart spends more time in diastole.'
-      }
+      },
+        audioUrl: '/Audio/Topic-042/LO-02.mp3'
     },
     {
       id: 'lo-3',
@@ -144,7 +146,8 @@ const topic42 = {
           }
         ],
         raw: '>>The Windkessel function describes how the aorta and large elastic arteries convert pulsatile blood flow from the heart into smoother, more continuous flow. During systole when the heart contracts, the left ventricle ejects blood into the aorta with high pressure. The aorta, being an elastic artery, stretches to accommodate this blood volume, and the elastic wall stores some of the ejected blood\'s energy as elastic potential energy. During diastole when the heart relaxes, the aortic valve closes to prevent backflow into the ventricle. The aortic wall recoils due to its elasticity, releasing the stored energy, and this recoil propels blood forward into the systemic circulation, ensuring blood flow even when the heart is not actively pumping. The Windkessel effect smooths the pulsatile cardiac output into continuous flow in smaller arteries and capillaries, and prevents extreme blood pressure fluctuations, protecting delicate microcirculatory systems.<<'
-      }
+      },
+        audioUrl: '/Audio/Topic-042/LO-03.mp3'
     },
     {
       id: 'lo-4',
@@ -182,7 +185,8 @@ const topic42 = {
           }
         ],
         raw: 'Increased stroke volume causes systolic pressure to increase because more blood is ejected into the aorta, diastolic pressure to remain unchanged or slightly increase, mean arterial pressure to increase, and pulse pressure to increase because systolic rises more than diastolic. Decreased stroke volume produces opposite effects: decreased systolic, decreased pulse pressure, decreased MAP, and unchanged or slightly decreased diastolic. Decreased arterial compliance, as occurs with aging and arteriosclerosis, causes systolic pressure to increase because stiffer arteries cannot absorb the pressure rise, diastolic pressure to decrease due to less elastic recoil during diastole, mean arterial pressure to show slight increase or remain unchanged, and pulse pressure to markedly increase. Increased compliance produces opposite effects: decreased systolic, increased diastolic, decreased pulse pressure, and unchanged MAP. Increased total peripheral resistance from vasoconstriction causes systolic pressure to increase, diastolic pressure to markedly increase because there is less runoff from arteries during diastole, mean arterial pressure to increase, and pulse pressure to decrease. Decreased total peripheral resistance from vasodilation causes systolic pressure to decrease or remain unchanged, diastolic pressure to decrease, mean arterial pressure to decrease, and pulse pressure to increase because systolic is relatively preserved while diastolic falls.'
-      }
+      },
+        audioUrl: '/Audio/Topic-042/LO-04.mp3'
     },
     {
       id: 'lo-5',
@@ -224,7 +228,8 @@ const topic42 = {
           }
         ],
         raw: 'The pressure pulse is a wave of pressure generated by ventricular systole, not the movement of blood itself, propagating along arterial walls at pulse wave velocity. Pulse wave velocity is three to five meters per second in the aorta and fifteen to thirty meters per second in small arteries, faster in stiffer arteries and slower in compliant arteries. As the pressure pulse moves from aorta to peripheral arteries, the waveform undergoes characteristic changes. Systolic pressure increases due to wave reflection from peripheral sites adding to the forward wave and reduced compliance where stiffer peripheral arteries expand less for a given blood volume. Diastolic pressure remains similar or slightly lower, leading to widened pulse pressure peripherally. The waveform becomes sharper and more peaked in peripheral arteries, while in the aorta it is smoother and more rounded due to compliance. The dicrotic notch disappears, a diastolic peak appears, and the systolic peak occurs slightly later peripherally. In contrast, the flow pulse represents actual blood movement. The pressure pulse travels at three to thirty meters per second while flow pulse moves at twenty to thirty centimeters per second in the aorta decreasing peripherally. The pressure pulse increases toward the periphery while the flow pulse decreases.'
-      }
+      },
+        audioUrl: '/Audio/Topic-042/LO-05.mp3'
     },
     {
       id: 'lo-6',
@@ -269,7 +274,8 @@ const topic42 = {
           }
         ],
         raw: '>>The arterial pulse qualities assessed with palpation include rate, rhythm, amplitude, contour, pulse suppression, and symmetry. Rate is the number of pulses per minute, with normal values of sixty to one hundred beats per minute. Tachycardia or pulsus frequens is greater than one hundred beats per minute, while bradycardia or pulsus rarus is less than sixty beats per minute. Rhythm is the regularity of the pulse. Regular or regularis has equal intervals between beats, while irregular or irregularis has unequal intervals. Irregularly irregular rhythm is characteristic of atrial fibrillation. Amplitude or pulse wave amplitude refers to the strength of the pulse determined by stroke volume and vascular tone. A bounding or altus pulse is strong and forceful, while a weak or parvus pulse is faint indicating hypovolemia or heart failure. Contour or steepness of pulse wave indicates how quickly the pulse rises and falls. Normal contour has smooth rounded shape with quick upstroke and gradual downstroke. Rapid rise or celer pulse is characteristic of hyperdynamic circulation, while slow rise or tardus pulse indicates aortic stenosis. Pulse suppression or hardness refers to difficulty compressing the artery. Hard or durus pulse is difficult to suppress, while soft or mollis pulse is easy to suppress. In hypovolemia shock, the pulse is parvus, frequent, and mollis. Symmetry compares pulses on both sides, with asymmetry indicating arterial obstruction.<<'
-      }
+      },
+        audioUrl: '/Audio/Topic-042/LO-06.mp3'
     }
   ],
   referenceValues: [

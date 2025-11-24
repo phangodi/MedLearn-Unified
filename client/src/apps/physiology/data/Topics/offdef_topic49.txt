@@ -1,0 +1,72 @@
+// **LO-1** (Topic-49)
+officialDefinitions: [
+  'Time Scale - Baroreceptor Reflex: Operates on a short-term basis. Adjusts arterial pressure moment-to-moment by modulating heart rate, cardiac output, and vascular resistance. Rapid response to changes in posture, blood loss, or stress.',
+  'Time Scale - Renal Regulation: Acts on a long-term basis. Regulates extracellular fluid (ECF) volume and blood volume over hours to days. Controls arterial pressure through changes in blood volume and systemic vascular resistance via mechanisms like the renin-angiotensin-aldosterone system (RAAS).',
+  'Mechanism - Baroreceptor Reflex: Mediated by high-pressure baroreceptors located in the carotid sinus and aortic arch. Feedback loop: Increased blood pressure → Increased baroreceptor firing → Decreased sympathetic and increased parasympathetic output. Decreased blood pressure → Decreased baroreceptor firing → Increased sympathetic output (vasoconstriction, increased heart rate and contractility). Effects: Rapid changes in cardiac output and peripheral resistance.',
+  'Mechanism - Renal Regulation: Mediated by the kidneys through: Pressure diuresis and natriuresis (Direct response to increased arterial pressure, leading to enhanced excretion of water and sodium). Activation of RAAS in response to low blood pressure (Renin release → Angiotensin II → Vasoconstriction and increased aldosterone). Aldosterone promotes sodium and water retention, increasing blood volume. Regulation of antidiuretic hormone (ADH) and thirst (ADH increases water reabsorption in the kidneys. Thirst ensures fluid intake to restore blood volume).',
+  'Focus - Baroreceptor Reflex: Primary focus is arterial pressure (short-term stability). Adjustments target changes in heart rate, contractility, and vascular tone. Does not directly affect total blood volume or extracellular volume.',
+  'Focus - Renal Regulation: Primary focus is blood volume and extracellular fluid (ECF) volume. Blood volume directly influences cardiac output via the Frank-Starling mechanism. ECF regulation ensures long-term arterial pressure stability by balancing sodium and water levels.',
+  'Limitations - Baroreceptor Reflex: Baroreceptors reset to sustained changes in blood pressure within 1–2 days, reducing their efficacy in chronic regulation. Rapid but transient adjustments to maintain arterial pressure during changes in posture, acute hemorrhage or hypovolemia, and acute stress or exercise.',
+  'Long-term Control: Long-term control is achieved through volume regulation. Correction power (gain) increases from 1 (baroreceptor) to 5 (intermediate mechanisms) to 10 (renal-hormonal control) over time periods from 1-30 seconds to 1-16 days.',
+  'Interdependence - Baroreceptor Reflex Depends on Blood Volume: Adequate blood volume is necessary for the baroreceptor reflex to effectively regulate arterial pressure. Severe hypovolemia (e.g., hemorrhage) can overwhelm the baroreceptor reflex, requiring renal mechanisms to restore volume.',
+  'Interdependence - Renal Regulation Requires Stable Arterial Pressure: Stable arterial pressure ensures effective renal perfusion. Persistent hypotension can impair renal function, disrupting long-term regulation of blood volume and pressure.',
+  'Integrated Control: CNS control is fast and adaptable (baroreceptor reflex, CNS ischemic response, chemoreceptor reflex: 1-30 seconds to 1-30 minutes). Renal and hormonal control is slow and powerful (kidney pressure-volume control, vasopressin fluid control, angiotensin-aldosterone Na-fluid control: 1-16 hours to 1-16 days).'
+],
+
+// **LO-2** (Topic-49)
+officialDefinitions: [
+  'Pressure Diuresis Definition: a physiological mechanism by which the kidneys regulate arterial blood pressure through changes in urine output. It refers to the increase in urine formation (diuresis) that occurs in response to an elevation in arterial pressure.',
+  'Mechanism - Increase in Renal Perfusion Pressure: When arterial blood pressure rises, the renal perfusion pressure also increases. This results in greater filtration of plasma in the glomeruli (increased glomerular filtration rate, or GFR).',
+  'Mechanism - Reduction in Tubular Reabsorption: Increased pressure reduces sodium and water reabsorption in the renal tubules, particularly in the proximal tubule. Higher pressure in the peritubular capillaries leads to reduced capillary oncotic pressure and increased interstitial hydrostatic pressure, impairing the reabsorption process.',
+  'Mechanism - Enhanced Sodium Excretion (Pressure Natriuresis): Sodium excretion increases proportionally with arterial pressure, a phenomenon known as pressure natriuresis. Sodium retention is minimized, which prevents expansion of extracellular fluid (ECF) volume.',
+  'Mechanism - Water Excretion Follows Sodium: Water follows sodium due to osmotic gradients, leading to increased urine output.',
+  'Mechanism - Restoration of Blood Pressure: By excreting excess sodium and water, pressure diuresis reduces plasma and extracellular fluid volume, decreasing blood volume. Lower blood volume reduces cardiac output and arterial pressure, restoring homeostasis.',
+  'Significance in Blood Pressure Regulation: Pressure diuresis plays a critical role in long-term blood pressure regulation by maintaining the balance between sodium intake and excretion. Any sustained increase in arterial pressure is counteracted by increased urine production to restore normal pressure.',
+  'Interaction with RAAS: In conditions of high arterial pressure, the activity of the RAAS decreases, which reduces aldosterone levels and further promotes sodium excretion. Conversely, in low arterial pressure, RAAS activity increases, enhancing sodium and water reabsorption to retain volume.',
+  'Factors Influencing Pressure Diuresis - Renal Artery Pressure: Directly proportional to diuresis; higher pressure increases urine formation.',
+  'Factors Influencing Pressure Diuresis - Hormonal Regulation: Aldosterone increases sodium reabsorption, opposing pressure diuresis. Antidiuretic Hormone (ADH) promotes water reabsorption, reducing diuresis.',
+  'Factors Influencing Pressure Diuresis - Autonomic Nervous System: Sympathetic activation decreases diuresis by promoting sodium reabsorption and reducing renal blood flow.',
+  'Urine Output Regulation: Urine output increases drastically with increasing MABP (pressure diuresis). Increased urine output will lead to decreased blood pressure. Pressure diuresis is modified by hormonal regulation of renal function to adapt to change in salt and fluid intake (osmo- and volume-regulation).'
+],
+
+// **LO-3** (Topic-49)
+officialDefinitions: [
+  'Cardiopulmonary Receptors Definition: low-pressure mechanoreceptors located primarily in the walls of the atria and pulmonary vasculature. They sense changes in blood volume and are involved in regulating extracellular fluid and arterial blood pressure via reflex mechanisms.',
+  'Response to Acute Increase - Receptor Response: Stimulus: Increased blood pressure → Increased venous return → Increased stretch of atria and pulmonary vessels. Activation: Volume receptors are activated due to stretch.',
+  'Response to Acute Increase - Afferent Nerve Activity: Signals are transmitted via vagus nerve (cranial nerve X) to the nucleus tractus solitarius (NTS) in the medulla oblongata. Afferent signals relay information about the increased stretch and blood volume.',
+  'Response to Acute Increase - CNS Integration (Medullary): NTS processes the afferent input and modulates autonomic outflow. Inhibits sympathetic activity and stimulates parasympathetic activity.',
+  'Response to Acute Increase - CNS Integration (Hypothalamic): Inhibition of the paraventricular nucleus (PVN) reduces the release of vasopressin (antidiuretic hormone, ADH). Reduces thirst sensation to prevent further volume expansion.',
+  'Response to Acute Increase - Effects on Kidney: Reduced ADH secretion (Decreased water reabsorption in the collecting ducts. Increased urine output (diuresis) and decreased blood volume). Increased atrial natriuretic peptide (ANP) (ANP is released from the atrial walls due to stretch. Promotes sodium and water excretion (natriuresis and diuresis)). Decreased Renin-Angiotensin-Aldosterone System (RAAS) activity (Reduced renin secretion → Decreased angiotensin II and aldosterone levels. Decreases sodium and water retention).',
+  'Response to Acute Increase - Effects on Heart: Reduced heart rate (negative chronotropy): Increased vagal tone slows heart rate to reduce cardiac output.',
+  'Response to Acute Increase - Effects on Vasculature: Vasodilation: Reduced sympathetic outflow decreases vascular resistance, lowering arterial pressure.',
+  'Response to Acute Decrease - Receptor Response: Stimulus: Decreased blood pressure → Decreased venous return → Reduced atrial stretch. Deactivation: Volume receptors are less stimulated.',
+  'Response to Acute Decrease - Afferent Nerve Activity: Decreased afferent activity via the vagus nerve to the NTS.',
+  'Response to Acute Decrease - CNS Integration (Medullary): Decreased NTS activity reduces inhibition of the rostral ventrolateral medulla (RVLM). Increased sympathetic outflow and reduced parasympathetic activity.',
+  'Response to Acute Decrease - CNS Integration (Hypothalamic): Increased activation of the PVN leads to increased secretion of ADH. Stimulates thirst to promote water intake and restore blood volume.',
+  'Response to Acute Decrease - Effects on Kidney: Increased ADH secretion (Promotes water reabsorption in the collecting ducts, reducing urine output and increasing blood volume). Increased RAAS activity (Increased renin secretion → Elevated angiotensin II and aldosterone levels. Enhances sodium and water retention).',
+  'Response to Acute Decrease - Effects on Heart: Increased heart rate (positive chronotropy) and contractility (positive inotropy): Elevated sympathetic tone increases cardiac output to restore blood pressure.',
+  'Response to Acute Decrease - Effects on Vasculature: Vasoconstriction: Sympathetic activation increases vascular resistance, helping to raise arterial pressure.',
+  'Low Pressure Baroreceptor Function: Weak depressor reflexes can be evoked from all low pressure baroreceptor areas. Right atrial stretching may elicit increased heart rate in some species (Bainbridge reflex). Stimulation results in inhibition of vasopressin secretion contributing to blood volume regulation.'
+],
+
+// **LO-4** (Topic-49)
+officialDefinitions: [
+  'Angiotensin II - Direct Vascular Effects: Angiotensin II is a potent vasoconstrictor that increases total peripheral resistance (TPR). Acts directly on vascular smooth muscle to increase arterial blood pressure.',
+  'Angiotensin II - Receptor: AT1 receptor (Angiotensin II Type 1 receptor, a G-protein-coupled receptor).',
+  'Angiotensin II - Signal Transduction: Activation of AT1 → Gq protein activation → Phospholipase C (PLC) activation → Increased IP3 and DAG → Calcium release from intracellular stores → Smooth muscle contraction.',
+  'Angiotensin II - Indirect Renal Effects (Sodium and Water Retention): Stimulates aldosterone release from the adrenal cortex (via AT1 receptor), which enhances sodium reabsorption in the distal nephron (collecting ducts). Increases proximal tubule sodium reabsorption directly. Leads to water retention, increasing blood volume and pressure.',
+  'Angiotensin II - Indirect Renal Effects (Renal Vasoconstriction): Constricts efferent arterioles in the kidney, maintaining glomerular filtration rate (GFR) despite reduced renal perfusion.',
+  'Vasopressin - Direct Vascular Effects: Vasopressin acts on vascular smooth muscle to increase TPR and arterial pressure, especially under hypovolemic conditions.',
+  'Vasopressin - Direct Vascular Receptor: V1 receptor (Gq-coupled receptor) on vascular smooth muscle.',
+  'Vasopressin - Direct Vascular Signal Transduction: Activation of V1 → Gq protein activation → PLC activation → Increased IP3 and DAG → Calcium release → Smooth muscle contraction.',
+  'Vasopressin - Indirect Renal Effects: Vasopressin acts on the renal collecting ducts to increase water reabsorption, increasing blood volume and pressure.',
+  'Vasopressin - Indirect Renal Receptor: V2 receptor (Gs-coupled receptor) in the renal collecting ducts.',
+  'Vasopressin - Indirect Renal Signal Transduction: Activation of V2 → Gs protein activation → Increased cAMP → Activation of PKA → Insertion of aquaporin-2 channels in the apical membrane of collecting duct cells → Increased water reabsorption.',
+  'Atrial Natriuretic Peptide (ANP) - Direct Vascular Effects: ANP induces vasodilation, reducing TPR and arterial pressure.',
+  'ANP - Direct Vascular Receptor: NPR-A (Natriuretic Peptide Receptor A), a guanylyl cyclase-linked receptor.',
+  'ANP - Direct Vascular Signal Transduction: Activation of NPR-A → Increased cGMP → Activation of Protein Kinase G (PKG) → Relaxation of vascular smooth muscle.',
+  'ANP - Indirect Renal Effects (Natriuresis and Diuresis): Inhibits sodium reabsorption in the renal collecting ducts. Increases GFR by dilating afferent arterioles and constricting efferent arterioles. Reduces renin release, inhibiting the RAAS system. Promotes sodium and water excretion, reducing blood volume and pressure.',
+  'ANP - Indirect Renal Receptor: NPR-A in renal tissue.',
+  'ANP - Indirect Renal Signal Transduction: Same as vascular effects: Increased cGMP → PKG activation → Inhibition of sodium reabsorption.',
+  'Direct Vasoactive Effects Summary: Under pathological conditions (shock) and/or at high supraphysiological concentrations, these hormones can directly affect TPR: ANH causes vasodilation (NPR1 receptor, also GC-A, cGMP ↑ coupling), MABP↓. Angiotensin-2 causes vasoconstriction (AT1 receptor, IP3/DAG/Ca2+ ↑ coupling), MABP↑. Vasopressin causes vasoconstriction (V1 receptor, IP3/DAG/Ca2+ ↑ coupling), MABP↑.'
+]

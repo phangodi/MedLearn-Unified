@@ -58,7 +58,8 @@ const topic35 = {
           }
         ],
         raw: 'Cardiac and skeletal muscle differ in three aspects. First, fiber size: cardiac muscle fibers are 10 to 20 micrometers diameter and 100 to 150 micrometers long with one central nucleus and branched structure, while skeletal muscle fibers are 40 to 100 micrometers diameter and up to 20 centimeters long with multiple peripheral nuclei and unbranched structure. Second, electrical connections: cardiac cells connect via intercalated discs containing gap junctions and desmosomes, skeletal fibers are electrically isolated with no connections. Third, both have striated appearance with parallel sarcomeres containing actin and myosin, cardiac sarcomeres approximately 2 micrometers long. >>Gap junctions create a functional syncytium through ion permeability and electrical resistance properties. Connexon channels provide 2 nanometer spaces allowing high ion permeability for rapid sodium, calcium, and potassium movement between cells. This creates low electrical resistance pathways for current flow. The low resistance enables action potentials to spread quickly across myocardium with all connected cells depolarizing almost simultaneously, making entire atrial and ventricular masses contract as unified functional syncytia.<<'
-      }
+      },
+        audioUrl: '/Audio/Topic-035/LO-01.mp3'
     },
     {
       id: 'lo-2',
@@ -110,7 +111,8 @@ const topic35 = {
           }
         ],
         raw: '>>Cardiac muscle action potential lasts 200 to 300 milliseconds due to plateau phase from L-type calcium channels, while skeletal muscle action potential lasts only 1 to 2 milliseconds with rapid depolarization and repolarization without plateau. Cardiac refractory period is 200 to 300 milliseconds nearly matching action potential duration, skeletal refractory period is 1 to 2 milliseconds. In the temporal relationship graph, cardiac muscle shows action potential overlapping almost completely with mechanical contraction, with refractory period extending through entire contraction phase. Skeletal muscle shows brief action potential at the beginning ending before mechanical contraction completes, with refractory period ending before relaxation allowing restimulation. Cardiac muscle cannot sustain tetanic contraction because the prolonged refractory period overlapping with contraction prevents another action potential until the current contraction and relaxation cycle completes. This is essential for heart function as the heart must contract then relax to fill with blood before next contraction. If cardiac muscle could tetanize, the heart would remain contracted preventing blood flow causing life-threatening consequences. Skeletal muscle\'s short refractory period allows rapid restimulation enabling summation and tetanus.<<'
-      }
+      },
+        audioUrl: '/Audio/Topic-035/LO-02.mp3'
     },
     {
       id: 'lo-3',
@@ -182,7 +184,8 @@ const topic35 = {
           }
         ],
         raw: '>>Excitation-contraction coupling steps: Action potential initiated in sarcolemma spreads rapidly across cell. Depolarization opens L-type voltage-gated calcium channels in sarcolemma and T-tubules allowing extracellular calcium entry during plateau phase. This calcium influx stimulates ryanodine receptors on sarcoplasmic reticulum membrane causing calcium-induced calcium release from SR into cytoplasm. Combined calcium from both sources significantly increases intracellular concentration. Calcium binds troponin C on actin filaments causing conformational change shifting tropomyosin to re-block binding sites halting cross-bridge cycling producing relaxation. Intracellular calcium sources are dual: small trigger amount from extracellular space through L-type channels, and large amplification from SR stores via calcium-induced calcium release, with extracellular calcium triggering the SR release. Calcium\'s special role in force modulation: calcium amount released directly determines active cross-bridge number. Higher calcium concentration means more troponin C binding exposing more binding sites increasing contractile force. Sympathetic stimulation enhances calcium influx and SR release for positive inotropy. For relaxation modulation, SERCA activity is regulated by phospholamban which normally inhibits SERCA. Phospholamban phosphorylation during sympathetic stimulation enhances SERCA activity for faster calcium reuptake and accelerated relaxation producing positive lusitropy.<<'
-      }
+      },
+        audioUrl: '/Audio/Topic-035/LO-03.mp3'
     },
     {
       id: 'lo-4',
@@ -230,7 +233,8 @@ const topic35 = {
           }
         ],
         raw: '>>Increasing muscle fiber length produces positive inotropy via Frank-Starling mechanism. Increased end-diastolic volume stretches cardiac fibers so sarcomeres reach optimal length of approximately 2.2 micrometers where actin-myosin overlap is ideal, allowing more cross-bridges to form during contraction enhancing force. Stretching also increases troponin C sensitivity to calcium, producing stronger contraction at same calcium concentration. Stretch may improve sarcoplasmic reticulum function enhancing calcium uptake and release.<< Partial Na-K-ATPase inhibition by cardiac glycosides like digoxin causes positive inotropy. This pump normally extrudes three sodium ions and imports two potassium ions maintaining gradients. Inhibition increases intracellular sodium, which reduces sodium-calcium exchanger activity that normally extrudes calcium for sodium. Reduced exchanger activity causes calcium accumulation with more stored in SR. Subsequent depolarizations release more SR calcium enhancing troponin C binding and contraction force. Increasing extracellular calcium increases positive inotropy because calcium influx through L-type channels triggers SR calcium release via calcium-induced calcium release. Higher extracellular calcium increases entry during depolarization triggering more SR release, providing more calcium for troponin C binding forming more cross-bridges producing greater contractile force. This is homeometric calcium-dependent mechanism.'
-      }
+      },
+        audioUrl: '/Audio/Topic-035/LO-04.mp3'
     },
     {
       id: 'lo-5',
@@ -272,7 +276,8 @@ const topic35 = {
           }
         ],
         raw: 'Positive lusitropic effect is increased cardiac muscle relaxation rate essential for proper diastolic filling and cardiac output. Beta-1 adrenergic receptor stimulation by catecholamines like epinephrine or norepinephrine activates adenylyl cyclase converting ATP to cyclic AMP. Increased cAMP activates protein kinase A which phosphorylates phospholamban, a regulatory protein normally inhibiting SERCA pump. Phosphorylation reduces phospholamban\'s inhibitory effect allowing SERCA to pump calcium into sarcoplasmic reticulum more efficiently. Enhanced SERCA activity causes faster calcium reuptake from cytoplasm, more rapidly decreasing calcium concentration and accelerating muscle relaxation. Rapid calcium reuptake optimizes diastolic duration enabling the heart to fill with blood more effectively between contractions, maintaining higher heart rates and cardiac output.'
-      }
+      },
+        audioUrl: '/Audio/Topic-035/LO-05.mp3'
     }
   ]
 };

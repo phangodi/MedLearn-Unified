@@ -45,7 +45,8 @@ const topic47 = {
           }
         ],
         raw: 'Cardiac output measurement uses three main principles. >>The Fick principle calculates cardiac output by relating oxygen consumption to the arteriovenous oxygen content difference, using the formula cardiac output equals VO₂ divided by arterial oxygen content minus venous oxygen content. Oxygen consumption is measured by spirometry, arterial oxygen content from arterial blood sampling, and venous oxygen content from mixed venous blood sampling via pulmonary artery catheter.<< Dye dilution injects known dye quantity such as indocyanine green into a central vein, measuring concentration downstream with a photodetector. Cardiac output is calculated from dose divided by area under the concentration-time curve, inversely proportional to dye concentration. Thermodilution injects cold saline into the right atrium via pulmonary artery catheter, measuring temperature changes in the pulmonary artery. A specialized algorithm calculates cardiac output from temperature difference and injection volume, with temperature change inversely proportional to cardiac output.'
-      }
+      },
+        audioUrl: '/Audio/Topic-047/LO-01.mp3'
     },
     {
       id: 'lo-2',
@@ -88,7 +89,8 @@ const topic47 = {
           }
         ],
         raw: 'Cardiac function curves, also known as Starling curves, graphically represent the relationship between cardiac output and right atrial pressure which indicates ventricular preload. To construct the curve, measure cardiac output at different levels of right atrial pressure. Cardiac output is stroke volume times heart rate. Plotting cardiac output on the y-axis against right atrial pressure on the x-axis shows how preload affects cardiac output. The curve ascends steeply at lower right atrial pressures and plateaus at higher pressures, indicating limits of ventricular filling and stroke volume based on the Frank-Starling mechanism. Myocardial contractility significantly alters the curve. Increased contractility from sympathetic stimulation or inotropic drugs shifts the curve upward and leftward, producing higher cardiac output at any given right atrial pressure through more forceful contractions and increased stroke volume. Decreased contractility from heart failure shifts the curve downward and rightward, producing lower cardiac output at any given right atrial pressure due to weaker contractions and reduced stroke volume.'
-      }
+      },
+        audioUrl: '/Audio/Topic-047/LO-02.mp3'
     },
     {
       id: 'lo-3',
@@ -133,7 +135,8 @@ const topic47 = {
           }
         ],
         raw: 'Mean vascular filling pressure is the pressure that would exist if the heart stopped pumping and blood were evenly distributed throughout the vasculature, determined by blood volume and vascular compliance. The normal value is 7 millimeters mercury. Blood volume is a major determinant: increased volume from transfusion or fluid overload raises mean vascular filling pressure, while decreased volume from hemorrhage or dehydration lowers it. Vascular compliance, particularly venous compliance, plays a crucial role because veins contain 70 to 80 percent of blood volume. Venoconstriction from sympathetic activation reduces venous compliance raising mean vascular filling pressure, whereas venodilation increases compliance lowering it. Body position affects it: standing increases hydrostatic pressure in lower limbs temporarily reducing central venous return and mean vascular filling pressure, while lying down restores both. Mean vascular filling pressure represents the driving force for venous return, with venous return proportional to the gradient between mean vascular filling pressure and central venous pressure.'
-      }
+      },
+        audioUrl: '/Audio/Topic-047/LO-03.mp3'
     },
     {
       id: 'lo-4',
@@ -207,7 +210,8 @@ const topic47 = {
           }
         ],
         raw: 'Venous return is blood flow returning to the right atrium per unit time, essential for maintaining cardiac output. Venous return is driven by the pressure gradient between mean vascular filling pressure upstream and central venous pressure downstream, expressed as venous return equals mean vascular filling pressure minus central venous pressure divided by resistance to venous return. Resistance to venous return opposes blood flow back to the heart and is influenced by venous vessel diameter, tone, and compliance. Theoretical factors determining resistance include venous tone where venoconstriction reduces compliance decreasing resistance while venodilation increases compliance raising resistance; blood viscosity where higher viscosity increases resistance; venous length where longer vessels increase resistance; and vascular obstructions such as thrombosis. In practice, the most important factors are that small veins and venules contain most resistance; increased sympathetic activity causes venoconstriction decreasing resistance and enhancing venous return; higher blood volume increases mean vascular filling pressure helping overcome resistance; standing increases venous pooling in lower limbs increasing resistance and reducing venous return; and skeletal muscle pump and respiratory movements decrease resistance assisting venous blood flow. Interventions altering resistance include venoconstriction from sympathetic tone or alpha-agonists decreasing resistance and increasing venous return; venodilation from decreased sympathetic tone or nitrates increasing resistance and decreasing venous return; volume expansion from fluid administration increasing mean vascular filling pressure and venous return; hemorrhage or dehydration decreasing blood volume and venous return; external compression from stockings or abdominal pressure decreasing resistance and increasing venous return; and obstructions from thrombosis increasing resistance and decreasing venous return.'
-      }
+      },
+        audioUrl: '/Audio/Topic-047/LO-04.mp3'
     },
     {
       id: 'lo-5',
@@ -263,7 +267,8 @@ const topic47 = {
           }
         ],
         raw: '>>To construct a vascular function curve, plot venous return on the y-axis against central venous pressure on the x-axis. The curve has a negative slope because as central venous pressure increases, the pressure gradient between mean vascular filling pressure and central venous pressure decreases, reducing venous return. The x-intercept where the curve crosses the x-axis represents mean vascular filling pressure at which venous return is zero. Changes in total peripheral resistance, blood volume, and venous compliance influence this curve in specific ways. Increased blood volume from transfusion or fluid overload shifts the curve rightward by raising mean vascular filling pressure, increasing venous return at any given central venous pressure. Decreased blood volume from hemorrhage shifts the curve leftward by lowering mean vascular filling pressure, reducing venous return. Decreased venous compliance through venoconstriction from sympathetic activation shifts the curve rightward by mobilizing blood from the venous reservoir, increasing mean vascular filling pressure. Increased total peripheral resistance flattens the curve by increasing resistance to venous return, making venous return less sensitive to central venous pressure changes.<<'
-      }
+      },
+        audioUrl: '/Audio/Topic-047/LO-05.mp3'
     },
     {
       id: 'lo-6',
@@ -305,7 +310,8 @@ const topic47 = {
           }
         ],
         raw: 'The intersection point of the cardiac function curve and vascular function curve represents equilibrium where cardiac output equals venous return. The cardiac function curve shows how cardiac output increases with central venous pressure through the Frank-Starling mechanism as increased preload enhances stroke volume. The vascular function curve shows how venous return decreases as central venous pressure rises because higher central venous pressure reduces the pressure gradient driving venous return. At the intersection, venous return equals cardiac output because the heart can only pump the blood it receives, establishing steady-state conditions. The central venous pressure at this point is where the heart receives and pumps blood at the same rate as venous return. Self-correction maintains equilibrium: if cardiac output exceeds venous return, central venous pressure decreases reducing cardiac output until equilibrium restores; if venous return exceeds cardiac output, central venous pressure increases enhancing preload until equilibrium restores. Changes in contractility, blood volume, or venous tone shift curves creating new intersection points representing new steady-state conditions.'
-      }
+      },
+        audioUrl: '/Audio/Topic-047/LO-06.mp3'
     },
     {
       id: 'lo-7',
@@ -344,7 +350,8 @@ const topic47 = {
           }
         ],
         raw: 'During hemorrhage, blood volume loss decreases mean systemic filling pressure shifting the vascular function curve leftward, reducing venous return, cardiac output, and right atrial pressure. Compensatory sympathetic activation causes venoconstriction and increased heart rate, partially restoring cardiac output and right atrial pressure toward normal. In heart failure, decreased contractility shifts the cardiac function curve downward, reducing cardiac output while increasing right atrial pressure as blood backs up into the venous system. Compensatory neurohormonal activation including sympathetic activity and renin-angiotensin-aldosterone system increases blood volume and venous tone, shifting the vascular function curve rightward to support cardiac output but at the expense of elevated right atrial pressure. With sympathetic stimulation, enhanced contractility and heart rate shift the cardiac function curve upward while concurrent venoconstriction shifts the vascular function curve rightward, increasing cardiac output with minimal right atrial pressure changes. During exercise, increased metabolic demand elevates sympathetic activity enhancing contractility and heart rate shifting the cardiac function curve upward, while causing venoconstriction shifting the vascular function curve rightward. This increases cardiac output with minimal right atrial pressure changes. Compensatory vasodilation in active muscles decreases systemic vascular resistance, facilitating increased blood flow and venous return, further supporting elevated cardiac output while maintaining efficient oxygen delivery to working tissues.'
-      }
+      },
+        audioUrl: '/Audio/Topic-047/LO-07.mp3'
     }
   ],
   referenceValues: [

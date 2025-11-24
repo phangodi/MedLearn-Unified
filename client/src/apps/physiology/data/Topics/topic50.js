@@ -42,7 +42,8 @@ const topic50 = {
           }
         ],
         raw: 'Pulmonary circulation operates under low pressure and resistance compared to systemic circulation. Mean pulmonary arterial pressure is approximately 14 millimeters mercury compared to systemic mean arterial pressure of 93 millimeters mercury. Pulmonary vascular resistance is about 1.5 millimeters mercury times minutes per liter, one-tenth of systemic vascular resistance at 16.5 millimeters mercury times minutes per liter. The pressure gradient in pulmonary circulation is 6 millimeters mercury compared to 92 millimeters mercury in systemic circulation despite equal cardiac output. Pulmonary vessels are thin-walled and highly compliant, handling increased cardiac output during exercise without significant pressure increases. Systemic vessels are thick-walled and muscular, maintaining high pressures for organ perfusion. The response to hypoxia is opposite: pulmonary circulation exhibits vasoconstriction in hypoxic regions to optimize ventilation-perfusion matching by redirecting blood to better-ventilated areas, whereas systemic circulation shows vasodilation to enhance oxygen delivery to hypoxic tissues.'
-      }
+      },
+        audioUrl: '/Audio/Topic-050/LO-01.mp3'
     },
     {
       id: 'lo-2',
@@ -87,7 +88,8 @@ const topic50 = {
           }
         ],
         raw: '>>In a standing human subject, pulmonary blood flow is unevenly distributed due to gravity, with blood flow highest at the lung base and lowest at the apex. The lung is divided into three West zones based on the relationship between pulmonary arterial pressure, pulmonary venous pressure, and alveolar pressure.<< Zone I is located at the apex where alveolar pressure exceeds arterial pressure which exceeds venous pressure. The high alveolar pressure compresses pulmonary capillaries preventing blood flow, resulting in minimal or absent perfusion. Zone II is located in the mid-lung region where arterial pressure exceeds alveolar pressure which exceeds venous pressure. Blood flow is determined by the difference between arterial and alveolar pressures, resulting in moderate blood flow. Zone III is located at the base where both arterial and venous pressures exceed alveolar pressure. Blood flow is determined by the difference between arterial and venous pressures, pulmonary capillaries are fully perfused, and this zone exhibits maximum blood flow. Gravity causes higher hydrostatic pressure in lower lung regions resulting in greater blood flow at the base.'
-      }
+      },
+        audioUrl: '/Audio/Topic-050/LO-02.mp3'
     },
     {
       id: 'lo-3',
@@ -129,7 +131,8 @@ const topic50 = {
           }
         ],
         raw: 'Pulmonary vascular resistance is inversely related to increases in cardiac output and pulmonary arterial pressure. When cardiac output or pulmonary arterial pressure increases, pulmonary vascular resistance decreases via two main mechanisms: capillary recruitment and vascular distension. Capillary recruitment occurs because at rest many pulmonary capillaries are collapsed or minimally perfused. When cardiac output or pulmonary arterial pressure increases, these capillaries open up allowing blood to flow through previously unperfused regions. Recruitment primarily occurs in the mid and upper lung regions where perfusion is normally limited due to gravitational effects. This increases the total cross-sectional area of the pulmonary vascular bed, significantly reducing resistance. Vascular distension occurs because pulmonary capillaries are highly compliant and can expand in response to increased pressure. Distension reduces resistance in already perfused capillaries and is particularly important in maintaining low resistance at higher blood flows. During exercise, cardiac output can increase four to six fold yet pulmonary arterial pressure rises minimally due to recruitment and distension.'
-      }
+      },
+        audioUrl: '/Audio/Topic-050/LO-03.mp3'
     },
     {
       id: 'lo-4',
@@ -175,7 +178,8 @@ const topic50 = {
           }
         ],
         raw: 'Pulmonary vascular resistance changes dynamically with lung volume due to differential behavior of two main types of pulmonary vessels: alveolar vessels and extraalveolar vessels. Alveolar vessels are small capillaries embedded within alveolar walls, while extraalveolar vessels are larger arteries and veins outside the alveoli influenced by surrounding lung parenchyma. The relationship between lung volume and pulmonary vascular resistance follows a U-shaped curve where resistance is high at very low lung volumes, reaches minimum at functional residual capacity, and increases again at very high lung volumes. At low lung volumes, alveolar vessels experience less compression so capillaries are more open with decreased resistance, but the lung parenchyma provides little radial traction causing extraalveolar vessels to collapse increasing their resistance. At high lung volumes, alveolar expansion compresses alveolar capillaries increasing resistance, while increased lung expansion stretches the parenchyma exerting radial traction that dilates extraalveolar vessels decreasing their resistance. Pulmonary vascular resistance is lowest at functional residual capacity because the opposing effects on alveolar and extraalveolar vessels balance out producing minimal overall resistance.'
-      }
+      },
+        audioUrl: '/Audio/Topic-050/LO-04.mp3'
     },
     {
       id: 'lo-5',
@@ -230,7 +234,8 @@ const topic50 = {
           }
         ],
         raw: '>>Pulmonary hypoxic vasoconstriction, or the Euler-Liljestrand reflex, is a physiological mechanism in which pulmonary arterioles constrict in response to decreased alveolar oxygen partial pressure. This local intrinsic response redirects blood flow from poorly ventilated hypoxic regions to better-ventilated regions, improving ventilation-perfusion matching and gas exchange efficiency.<< The trigger is hypoxia, specifically when alveolar oxygen partial pressure falls below 70 millimeters mercury, which initiates vasoconstriction in surrounding pulmonary arterioles. The molecular mechanism involves hypoxia inhibiting oxygen-sensitive potassium channels in pulmonary arterial smooth muscle cells, reduced potassium efflux leads to membrane depolarization, depolarization opens voltage-gated calcium channels allowing calcium influx, and increased intracellular calcium activates contractile proteins causing vasoconstriction. The role in regulating blood flow distribution centers on ventilation-perfusion matching. The primary function is redirecting blood flow to well-ventilated alveoli, optimizing gas exchange. When specific lung regions are poorly ventilated, such as in pneumonia or airway obstruction, hypoxic pulmonary vasoconstriction limits perfusion to these regions preserving overall gas exchange. Under pathological conditions with generalized hypoxia, such as chronic obstructive pulmonary disease, high-altitude hypoxia, or severe asthma, widespread hypoxic pulmonary vasoconstriction leads to pulmonary hypertension. At high altitudes, excessive hypoxic pulmonary vasoconstriction increases pulmonary artery pressure potentially causing fluid leakage into alveoli resulting in high-altitude pulmonary edema.'
-      }
+      },
+        audioUrl: '/Audio/Topic-050/LO-05.mp3'
     },
     {
       id: 'lo-6',
@@ -267,7 +272,8 @@ const topic50 = {
           }
         ],
         raw: 'Nitric oxide is a potent endogenous vasodilator that primarily affects vascular smooth muscle cells. Inhaled nitric oxide diffuses across the alveolar-capillary membrane acting on pulmonary vascular smooth muscle cells near well-ventilated alveoli. Nitric oxide activates soluble guanylate cyclase in smooth muscle cells, increasing intracellular cyclic GMP. Elevated cyclic GMP causes smooth muscle relaxation leading to vasodilation. Because nitric oxide is rapidly inactivated by hemoglobin in blood, its effects are limited to the pulmonary circulation minimizing systemic vasodilation. The effect on hypoxic vasoconstriction is that inhaled nitric oxide selectively dilates pulmonary vessels in ventilated regions, counteracting hypoxic pulmonary vasoconstriction. Inhaled nitric oxide enhances blood flow to well-ventilated alveoli optimizing oxygenation, which improves ventilation-perfusion matching, reduces intrapulmonary shunting, and improves arterial oxygenation. The effect on pulmonary vascular resistance is that inhaled nitric oxide decreases resistance in well-ventilated regions by relaxing pulmonary arterioles, which can alleviate pulmonary hypertension. The selective action preserves hypoxic pulmonary vasoconstriction in non-ventilated regions because nitric oxide cannot diffuse to poorly ventilated alveoli, helping preserve beneficial effects in directing blood away from hypoxic regions.'
-      }
+      },
+        audioUrl: '/Audio/Topic-050/LO-06.mp3'
     },
     {
       id: 'lo-7',
@@ -318,7 +324,8 @@ const topic50 = {
           }
         ],
         raw: 'The bronchial circulation is part of the systemic circulation that supplies oxygenated blood to airways and supporting structures of the lungs. Bronchial arteries originate from the descending thoracic aorta, and occasionally from intercostal or subclavian arteries. The distribution supplies conducting airways down to terminal bronchioles and provides blood to the visceral pleura, large pulmonary vessels, and hilar lymph nodes. Blood from bronchial veins drains into two systems: bronchial veins empty into the azygos and hemiazygos systems eventually reaching the superior vena cava, while some bronchial venous blood shunts into pulmonary veins contributing to the normal physiological shunt. Compared to pulmonary circulation, bronchial circulation has low flow receiving only about 1 percent of cardiac output, but operates under high pressure as part of systemic circulation. Bronchial and pulmonary circulations are interconnected via anastomoses ensuring perfusion even if one circulation is compromised. Functions include providing nutritional supply of oxygen and nutrients to conducting airways and supporting tissues, thermoregulation by warming inspired air, humidification of air passing through airways, contributing to immune defense by delivering immune cells and mediators to airways, and serving as collateral circulation during pulmonary artery obstruction preventing ischemia.'
-      }
+      },
+        audioUrl: '/Audio/Topic-050/LO-07.mp3'
     }
   ],
   referenceValues: [

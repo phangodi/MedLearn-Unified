@@ -172,7 +172,8 @@ const topic34 = {
           }
         ],
         raw: 'Structural viscosity is blood viscosity due to red blood cell aggregation into rouleaux or money roll formations, influenced by plasma protein ratio. Globulins and fibrinogen promote aggregation by bridging adjacent red blood cells creating attractive forces, higher concentrations increase aggregation and structural viscosity. Albumin has anti-aggregatory effect by coating red blood cell surfaces reducing interaction strength, higher albumin levels reduce rouleaux formation and viscosity. The albumin-to-globulin ratio significantly influences aggregation: high A/G ratio means albumin predominates reducing aggregation and viscosity, low A/G ratio means globulins dominate promoting rouleaux formation and increasing viscosity particularly at low shear rates. This reversible aggregation is the basis of red blood cell sedimentation rate, increased when plasma albumin-globulin ratio is decreased.'
-      }
+      },
+        audioUrl: '/Audio/Topic-034/LO-04.mp3'
     },
     {
       id: 'lo-5',
@@ -206,7 +207,8 @@ const topic34 = {
           }
         ],
         raw: 'Red blood cells adapt dynamically to flow conditions through three mechanisms. First, axial migration: red blood cells move toward vessel center under laminar flow as higher shear stress near walls pushes them centrally, creating a cell-free plasma layer near walls that reduces friction and viscosity, improving flow efficiency in arterioles and capillaries. Second, orientation: in high-shear environments like arteries red blood cells rotate and align their biconcave shape parallel to flow direction minimizing resistance and turbulence, reducing cardiac energy expenditure and ensuring smooth laminar flow. Third, shape changes: red blood cells are highly deformable due to biconcave shape and spectrin cytoskeleton. In narrow capillaries smaller than their diameter they deform into elongated shapes to pass through, ensuring continuous oxygen delivery. Reduced deformability in sickle cell disease or spherocytosis impairs microcirculation.'
-      }
+      },
+        audioUrl: '/Audio/Topic-034/LO-05.mp3'
     },
     {
       id: 'lo-6',
@@ -250,7 +252,8 @@ const topic34 = {
           }
         ],
         raw: 'In microvessels below 300 micrometers diameter, apparent blood viscosity decreases as vessel diameter decreases. This is the Fåhræus-Lindqvist effect, the reduction of apparent viscosity in vessels between 10 and 300 micrometers, discovered by Robert Fåhræus and Johan Lindqvist in 1931. Three mechanisms explain this: First, axial migration and plasma skimming: red blood cells migrate to vessel center where velocity is higher and shear stress is lower, creating a cell-free plasma layer near walls where velocity is smaller, reducing effective hematocrit and viscosity. This is more important in bigger microvessels 30 to 300 micrometers. Second, reduced hematocrit: the Fåhræus effect causes decreased hematocrit in small vessels, further reducing viscosity. Third, red blood cell deformability: cells deform to pass through vessels smaller than their 7 to 8 micrometer diameter, and align in single-file streams minimizing interactions. In capillaries they assume perfect paraboloid velocity profile. Viscosity approaches plasma viscosity at 7 to 10 micrometers. This effect minimizes resistance ensuring efficient oxygen delivery, impairment in sickle cell anemia causes increased viscosity.'
-      }
+      },
+        audioUrl: '/Audio/Topic-034/LO-06.mp3'
     }
   ]
 };

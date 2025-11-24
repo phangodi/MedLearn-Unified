@@ -56,7 +56,8 @@ const topic46 = {
           }
         ],
         raw: '>>Autoregulation is the intrinsic ability of an organ or tissue to maintain constant blood flow despite changes in perfusion pressure, typically within a mean arterial pressure range of 60 to 160 millimeters mercury, ensuring stable oxygen and nutrient delivery under varying systemic pressures.<< Short-term autoregulatory responses occur within seconds to minutes. The myogenic response involves vascular smooth muscle contracting when intraluminal pressure increases through stretch-activated ion channels causing calcium influx and contraction, maintaining constant flow by increasing resistance when pressure rises. Metabolic regulation occurs when decreased blood flow causes accumulation of vasodilator metabolites including adenosine, carbon dioxide, hydrogen ions, potassium ions, and low oxygen, causing vasodilation to restore flow matching local tissue demand, especially important in brain, heart, and skeletal muscle. Shear stress-induced vasodilation occurs when increased flow causes nitric oxide release. Long-term autoregulatory responses occur over days to weeks involving angiogenesis which is formation of new capillaries in response to chronic low perfusion, and vascular remodeling where existing vessels undergo structural changes like increased diameter. These are mediated by growth factors including vascular endothelial growth factor and fibroblast growth factors.'
-      }
+      },
+        audioUrl: '/Audio/Topic-046/LO-01.mp3'
     },
     {
       id: 'lo-2',
@@ -103,7 +104,8 @@ const topic46 = {
           }
         ],
         raw: 'Myogenic tone is the vascular smooth muscle intrinsic response to stretch, a key component of autoregulation operating independently of nerves or hormones. When intravascular pressure increases, arteriolar walls are stretched triggering stretch-activated ion channels allowing calcium influx. This activates myosin light chain kinase causing smooth muscle contraction and vasoconstriction, stabilizing blood flow by increasing resistance when pressure rises. When pressure falls, less stretch causes relaxation and vasodilation maintaining flow. This mechanism stabilizes local tissue perfusion and is especially important in organs requiring constant flow such as brain, kidney, and heart. The Bayliss effect is the specific term for this myogenic response where arterioles constrict in response to increased pressure or stretch and dilate when pressure or stretch decreases through stretch-sensitive mechanosensitive ion channels in smooth muscle cells, preventing overperfusion when blood pressure rises and maintaining flow during hypotensive states.'
-      }
+      },
+        audioUrl: '/Audio/Topic-046/LO-02.mp3'
     },
     {
       id: 'lo-3',
@@ -175,7 +177,8 @@ const topic46 = {
           }
         ],
         raw: 'Vascular endothelium releases vasoactive mediators regulating vascular tone. Vasodilators include nitric oxide, prostacyclin, endothelium-derived hyperpolarizing factor, bradykinin, and adenosine. Vasoconstrictors include endothelin-1, thromboxane A2, angiotensin II, and reactive oxygen species. >>Nitric oxide is synthesized by the enzyme endothelial nitric oxide synthase from the substrate L-arginine. The reaction requires cofactors including calcium, calmodulin, and tetrahydrobiopterin. Stimuli for nitric oxide synthesis include shear stress which is the mechanical force of blood flow, and chemical mediators like acetylcholine, bradykinin, and histamine. Nitric oxide diffuses from endothelial cells to vascular smooth muscle cells where it activates soluble guanylyl cyclase. This increases intracellular levels of cyclic GMP which activates protein kinase G. Protein kinase G decreases intracellular calcium levels promoting smooth muscle relaxation. The effects of nitric oxide include vasodilation reducing vascular resistance and blood pressure, inhibition of platelet aggregation, and anti-inflammatory effects reducing leukocyte adhesion.<<'
-      }
+      },
+        audioUrl: '/Audio/Topic-046/LO-03.mp3'
     },
     {
       id: 'lo-4',
@@ -231,7 +234,8 @@ const topic46 = {
           }
         ],
         raw: 'Metabolic regulation of blood flow theory posits that local blood flow adjusts to tissue metabolic needs through accumulation of metabolic by-products acting as vasodilators. Active hyperemia is increased blood flow during heightened metabolic activity such as exercise. Increased metabolism produces metabolic by-products including carbon dioxide, hydrogen ions, lactate, adenosine, prostaglandins, and potassium ions which act as vasodilators causing arteriolar dilation. Vasodilation increases local blood flow delivering oxygen and nutrients while removing waste, ensuring oxygen delivery matches increased metabolic demand. Reactive hyperemia is transient blood flow increase following ischemia. Ischemia causes metabolite accumulation including carbon dioxide, hydrogen ions, and adenosine. Once obstruction resolves, accumulated metabolites stimulate arteriolar vasodilation and blood flow temporarily exceeds baseline to restore oxygen balance and clear metabolites. Low partial pressure of oxygen or hypoxia stimulates release of vasodilators including adenosine and nitric oxide, increasing blood flow to restore oxygen delivery. Elevated partial pressure of carbon dioxide or hypercapnia causes vasodilation mediated by lowering pH, increasing blood flow to remove carbon dioxide, especially important in cerebral circulation. Acidosis from increased hydrogen ion production during anaerobic metabolism or carbon dioxide accumulation causes hydrogen ions to directly relax vascular smooth muscle and enhance other vasodilators, increasing blood flow to buffer and clear excess acid. Adenosine is released when ATP breaks down in hypoxic tissues, binding A2 receptors activating adenylate cyclase increasing cyclic AMP promoting smooth muscle relaxation, significant in coronary blood flow regulation. Prostaglandin E2 is synthesized from arachidonic acid by cyclooxygenase enzymes during tissue stress, acting on EP receptors increasing cyclic AMP causing vasodilation. Potassium ions accumulate extracellularly during increased activity from repetitive action potentials, hyperpolarizing vascular smooth muscle by activating inward-rectifier potassium channels decreasing calcium influx causing relaxation and vasodilation.'
-      }
+      },
+        audioUrl: '/Audio/Topic-046/LO-04.mp3'
     },
     {
       id: 'lo-5',
@@ -288,7 +292,8 @@ const topic46 = {
           }
         ],
         raw: 'Angiogenesis is formation of new blood vessels from pre-existing vessels such as post-capillary venules, crucial for tissue growth, repair, and adaptation to metabolic needs. The primary stimulus is hypoxia which activates hypoxia-inducible factor-1, a transcription factor promoting expression of vascular endothelial growth factor, the most potent stimulator of angiogenesis. The process begins with activation where hypoxia or increased metabolic demand triggers vascular endothelial growth factor release from fibroblasts, macrophages, and endothelial cells. Vascular endothelial growth factor binds receptor VEGFR-2 on endothelial cells activating PI3K-Akt and MAPK pathways. Activated endothelial cells secrete matrix metalloproteinases which degrade the basement membrane and extracellular matrix allowing endothelial migration. Endothelial migration and proliferation occur through tip cells which are specialized migratory cells extending filopodia toward the vascular endothelial growth factor gradient guiding new vessel growth, while stalk cells which are proliferative cells follow forming the vessel body. Sprouting cells from neighboring vessels fuse in anastomosis forming continuous vascular loops. Vessel maturation involves recruitment of pericytes and smooth muscle cells to stabilize vessels mediated by angiopoietin-1 and platelet-derived growth factor, endothelial cells reorganizing to form a central lumen for blood flow, and basement membrane re-deposition strengthening the vessel wall. Angiogenesis provides long-term match of blood flow to metabolic need through tissue growth ensuring vessels proliferate with expanding areas, adaptation to increased demand where exercise training increases capillary density enhancing oxygen delivery and wound healing restores blood supply facilitating repair, and response to chronic hypoxia where angiogenesis increases vascular density improving oxygen delivery.'
-      }
+      },
+        audioUrl: '/Audio/Topic-046/LO-05.mp3'
     },
     {
       id: 'lo-6',
@@ -346,7 +351,8 @@ const topic46 = {
           }
         ],
         raw: 'Inflammatory hyperemia is localized increased blood flow during inflammation mediated by vasoactive substances causing vasodilation and increased vascular permeability. Histamine is released by mast cells in response to injury, allergens, or immune activation, binding H1 receptors causing vasodilation by promoting nitric oxide release and increasing vascular permeability by contracting endothelial cells creating gaps, resulting in redness and swelling. Bradykinin is generated from kininogen by kallikrein during injury, binding B2 receptors stimulating nitric oxide and prostacyclin production and activating sensory nerves enhancing neuropeptide release, acting as a potent vasodilator increasing blood flow and permeability. Prostanoids including prostaglandin E2 and prostacyclin are derived from arachidonic acid by cyclooxygenase enzymes, acting on EP and IP receptors increasing cyclic AMP causing smooth muscle relaxation, amplifying bradykinin and histamine effects and maintaining vasodilation. Neuropeptides including Substance P and calcitonin gene-related peptide are released from polymodal nociceptors during tissue injury. Substance P acts on NK1 receptors increasing vascular permeability and stimulating mast cells to release histamine while calcitonin gene-related peptide acts on CGRP receptors directly inducing vasodilation, contributing to neurogenic inflammation. >>The triple response of the skin involves three phases. The red line or local erythema appears immediately at the stimulus site from direct capillary vasodilation due to histamine release and axon reflex activation. The flare or diffuse redness spreads beyond the injury site mediated by the axon reflex where activated nociceptive nerve endings release neuropeptides including Substance P and calcitonin gene-related peptide causing widespread vasodilation. The wheal or localized swelling forms within minutes from increased vascular permeability due to histamine allowing plasma and proteins to leak into interstitial space. The axon reflex is a local neurogenic response not involving the central nervous system where polymodal nociceptor stimulation causes impulses to travel antidromically backward along adjacent branches of the same sensory neuron, releasing neuropeptides that cause vasodilation producing the flare and plasma extravasation producing the wheal.<<'
-      }
+      },
+        audioUrl: '/Audio/Topic-046/LO-06.mp3'
     }
   ]
 };

@@ -49,7 +49,8 @@ const topic49 = {
           }
         ],
         raw: 'The baroreceptor reflex and renal regulation differ fundamentally in time scale and mechanism. The baroreceptor reflex operates short-term, adjusting arterial pressure moment-to-moment by modulating heart rate, cardiac output, and vascular resistance through high-pressure baroreceptors in the carotid sinus and aortic arch. It provides rapid responses to postural changes, blood loss, or stress, but baroreceptors reset to sustained pressure changes within one to two days, reducing efficacy in chronic regulation. In contrast, renal regulation acts long-term over hours to days, controlling arterial pressure by regulating extracellular fluid volume and blood volume through pressure diuresis and natriuresis, activation of the renin-angiotensin-aldosterone system, and regulation of antidiuretic hormone and thirst. The baroreceptor reflex focuses on arterial pressure itself through changes in heart rate, contractility, and vascular tone without directly affecting blood volume. Renal regulation focuses on blood volume and extracellular fluid volume, which directly influence cardiac output via the Frank-Starling mechanism, ensuring long-term arterial pressure stability by balancing sodium and water levels. These systems are interdependent: adequate blood volume is necessary for effective baroreceptor reflex function, while stable arterial pressure ensures effective renal perfusion for long-term regulation.'
-      }
+      },
+        audioUrl: '/Audio/Topic-049/LO-01.mp3'
     },
     {
       id: 'lo-2',
@@ -102,7 +103,8 @@ const topic49 = {
           }
         ],
         raw: 'Pressure diuresis is a physiological mechanism by which the kidneys regulate arterial blood pressure through increased urine output in response to elevated arterial pressure. When arterial blood pressure rises, renal perfusion pressure increases, resulting in greater filtration of plasma in the glomeruli with increased glomerular filtration rate. Additionally, increased pressure reduces sodium and water reabsorption in the renal tubules, particularly in the proximal tubule. Higher pressure in the peritubular capillaries leads to reduced capillary oncotic pressure and increased interstitial hydrostatic pressure, impairing reabsorption. Sodium excretion increases proportionally with arterial pressure, known as pressure natriuresis, and water follows sodium due to osmotic gradients, leading to increased urine output. By excreting excess sodium and water, pressure diuresis reduces plasma and extracellular fluid volume, decreasing blood volume, which reduces cardiac output and arterial pressure, restoring homeostasis. In high arterial pressure, renin-angiotensin-aldosterone system activity decreases, reducing aldosterone and promoting sodium excretion; conversely, in low pressure, renin-angiotensin-aldosterone system activity increases, enhancing sodium and water retention.'
-      }
+      },
+        audioUrl: '/Audio/Topic-049/LO-02.mp3'
     },
     {
       id: 'lo-3',
@@ -166,7 +168,8 @@ const topic49 = {
           }
         ],
         raw: 'Cardiopulmonary receptors are low-pressure mechanoreceptors located primarily in the walls of the atria and pulmonary vasculature that sense changes in blood volume. After an acute increase in arterial blood pressure, increased venous return stretches atria and pulmonary vessels, activating volume receptors. Afferent signals are transmitted via the vagus nerve, cranial nerve ten, to the nucleus tractus solitarius in the medulla oblongata. The nucleus tractus solitarius inhibits sympathetic activity and stimulates parasympathetic activity. In the hypothalamus, inhibition of the paraventricular nucleus reduces vasopressin or antidiuretic hormone release and reduces thirst to prevent further volume expansion. Kidney effects include reduced antidiuretic hormone decreasing water reabsorption in collecting ducts with increased urine output and decreased blood volume; increased atrial natriuretic peptide released from atrial walls due to stretch promoting sodium and water excretion; and decreased renin-angiotensin-aldosterone system activity reducing renin secretion, angiotensin two, and aldosterone levels, decreasing sodium and water retention. After an acute decrease in arterial blood pressure, decreased venous return and reduced atrial stretch deactivate volume receptors with decreased vagal afferent activity. Decreased nucleus tractus solitarius activity reduces inhibition of the rostral ventrolateral medulla, increasing sympathetic outflow and reducing parasympathetic activity. Increased activation of the paraventricular nucleus elevates antidiuretic hormone secretion and stimulates thirst to promote water intake. Kidney effects include increased antidiuretic hormone promoting water reabsorption in collecting ducts, reducing urine output and increasing blood volume; and increased renin-angiotensin-aldosterone system activity with increased renin secretion elevating angiotensin two and aldosterone, enhancing sodium and water retention.'
-      }
+      },
+        audioUrl: '/Audio/Topic-049/LO-03.mp3'
     },
     {
       id: 'lo-4',
@@ -221,7 +224,8 @@ const topic49 = {
           }
         ],
         raw: '>>Angiotensin two has direct vascular effects through potent vasoconstriction increasing total peripheral resistance via the AT1 receptor, an angiotensin two type one G-protein-coupled receptor. Signal transduction involves AT1 activation leading to Gq protein activation, phospholipase C activation, increased IP3 and DAG, calcium release from intracellular stores, and smooth muscle contraction. Indirect renal effects include stimulating aldosterone release from the adrenal cortex via AT1 receptor, which enhances sodium reabsorption in the distal nephron collecting ducts, increasing proximal tubule sodium reabsorption directly, and constricting efferent arterioles maintaining glomerular filtration rate, all leading to water retention and increasing blood volume and pressure. Vasopressin has direct vascular effects through vasoconstriction increasing total peripheral resistance and arterial pressure, especially under hypovolemic conditions, via the V1 receptor, a Gq-coupled receptor on vascular smooth muscle. Signal transduction involves V1 activation leading to Gq protein activation, phospholipase C activation, increased IP3 and DAG, calcium release, and smooth muscle contraction. Indirect renal effects include water reabsorption in renal collecting ducts via the V2 receptor, a Gs-coupled receptor in collecting ducts. V2 signal transduction involves Gs protein activation, increased cAMP, protein kinase A activation, insertion of aquaporin-2 channels in the apical membrane of collecting duct cells, and increased water reabsorption, increasing blood volume and pressure. Atrial natriuretic hormone has direct vascular effects inducing vasodilation, reducing total peripheral resistance and arterial pressure via NPR-A, natriuretic peptide receptor A, a guanylyl cyclase-linked receptor. Signal transduction involves NPR-A activation leading to increased cGMP, protein kinase G activation, and vascular smooth muscle relaxation. Indirect renal effects include inhibiting sodium reabsorption in renal collecting ducts, increasing glomerular filtration rate by dilating afferent arterioles and constricting efferent arterioles, reducing renin release inhibiting the renin-angiotensin-aldosterone system, and promoting sodium and water excretion, reducing blood volume and pressure, all via NPR-A using the same cGMP and protein kinase G pathway.<<'
-      }
+      },
+        audioUrl: '/Audio/Topic-049/LO-04.mp3'
     }
   ]
 };

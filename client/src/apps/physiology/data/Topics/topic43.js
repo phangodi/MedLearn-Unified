@@ -43,7 +43,8 @@ const topic43 = {
           }
         ],
         raw: 'Arterioles are small vessels with diameters of 30 to 100 micrometers containing smooth muscle, acting as the main regulators of systemic vascular resistance and blood flow distribution. Metarterioles are short vessels of 10 to 20 micrometers diameter linking arterioles to capillaries, containing intermittent smooth muscle cells and serving as bypass channels. Precapillary sphincters are rings of smooth muscle at capillary entrances, acting as gates regulating blood flow into individual capillaries based on local metabolic needs such as oxygen, carbon dioxide, pH, and metabolic byproducts. Capillaries are the smallest vessels with diameters of 5 to 10 micrometers, consisting of a single endothelial cell layer and basement membrane, serving as the primary site for exchange of gases, nutrients, and waste. Venules are small vessels of 10 to 200 micrometers diameter collecting blood from capillaries, acting as sites for leukocyte migration during inflammation.'
-      }
+      },
+        audioUrl: '/Audio/Topic-043/LO-01.mp3'
     },
     {
       id: 'lo-2',
@@ -80,7 +81,8 @@ const topic43 = {
           }
         ],
         raw: '>>The four main types of true capillaries are continuous, fenestrated, discontinuous, and barrier endothelium. Continuous capillaries have endothelial cells forming a continuous unbroken lining with tight junctions and complete basement membrane with few intercellular clefts; found in skeletal muscles, myocardium, skin, and lungs, they allow selective exchange of small molecules while preventing passage of large molecules. Fenestrated capillaries have endothelial cells containing fenestrations or small pores that may or may not be covered by a diaphragm with intact basement membrane; found in kidneys, endocrine glands, and intestinal mucosa, they allow exchange of larger molecules like peptides and small proteins. Discontinuous capillaries, also called sinusoids, have discontinuous endothelial lining with large gaps between cells and incomplete or absent basement membrane with wide lumen; found in liver, spleen, bone marrow, and lymph nodes, they allow passage of large molecules like plasma proteins and even cells including red and white blood cells. Barrier endothelium is a subtype of continuous capillaries with extremely tight junctions and specialized transport mechanisms; found in blood-brain barrier, blood-retinal barrier, and blood-testis barrier, they utilize specialized transport proteins for nutrients while restricting passage of most substances.<<'
-      }
+      },
+        audioUrl: '/Audio/Topic-043/LO-02.mp3'
     },
     {
       id: 'lo-3',
@@ -115,7 +117,8 @@ const topic43 = {
           }
         ],
         raw: 'Diffusion across the capillary wall follows Fick\'s law: J equals negative D times A times delta C divided by delta x, where the negative sign indicates diffusion down the concentration gradient. D is the diffusion coefficient depending on molecular size and membrane permeability; smaller lipophilic molecules like oxygen and carbon dioxide diffuse faster. A is the surface area available for diffusion, large in capillaries at approximately 300 square meters, while reduced capillary density decreases diffusion. Delta C is the concentration gradient driving diffusion; oxygen diffuses from oxygen-rich blood to tissues while carbon dioxide diffuses oppositely. Delta x is wall thickness, approximately 1 micrometer in capillaries facilitating rapid diffusion, while wall thickening impairs efficiency. Respiratory gases use the transcellular path, water-soluble solutes use the paracellular pathway between cells, and the reflection coefficient for small molecules is effectively sigma equals 0 meaning freely permeable.'
-      }
+      },
+        audioUrl: '/Audio/Topic-043/LO-03.mp3'
     },
     {
       id: 'lo-4',
@@ -153,7 +156,8 @@ const topic43 = {
           }
         ],
         raw: 'The reflection coefficient sigma measures how much a substance is prevented from crossing the capillary wall, ranging from 0 to 1. Small molecule solutes such as oxygen, carbon dioxide, glucose, and ions have reflection coefficients close to 0. Lipid-soluble molecules like oxygen and carbon dioxide easily diffuse through the endothelial membrane, while water-soluble molecules like glucose and ions with sigma 0 to 0.1 diffuse through intercellular clefts or fenestrations, showing high permeability. In contrast, plasma proteins such as albumin, globulins, and fibrinogen have reflection coefficients close to 1, meaning they are almost completely restricted by continuous capillary walls. The capillary wall is effectively impermeable for plasma proteins with sigma equals 1, creating a large concentration gradient between plasma at 60 to 80 grams per liter and interstitial fluid at 15 to 20 grams per liter. Proteins require vesicular transport or transcytosis to cross, though in discontinuous capillaries sigma is lower allowing protein passage through large gaps.'
-      }
+      },
+        audioUrl: '/Audio/Topic-043/LO-04.mp3'
     },
     {
       id: 'lo-5',
@@ -197,7 +201,8 @@ const topic43 = {
           }
         ],
         raw: 'Hydrostatic pressure is the force exerted by fluid against capillary walls, driving fluid out of capillaries into interstitial space in filtration. Systemic capillary hydrostatic pressure averages 17.3 millimeters mercury, higher at the arterial end at approximately 35 millimeters mercury and lower at the venous end at approximately 10 millimeters mercury. Interstitial hydrostatic pressure is negative 3 millimeters mercury, slightly negative due to lymphatic drainage. Oncotic pressure, also called colloidosmotic pressure, is osmotic pressure exerted by plasma proteins especially albumin, pulling fluid into capillaries from interstitial space in reabsorption. Plasma oncotic pressure is 28 millimeters mercury, primarily due to albumin, opposing hydrostatic pressure and maintaining intravascular volume. Interstitial oncotic pressure is 8 millimeters mercury, low due to few proteins in interstitial space. Pulmonary capillary hydrostatic pressure is 10 to 11 millimeters mercury, lower than systemic to prevent pulmonary edema.'
-      }
+      },
+        audioUrl: '/Audio/Topic-043/LO-05.mp3'
     },
     {
       id: 'lo-6',
@@ -252,7 +257,8 @@ const topic43 = {
           }
         ],
         raw: '>>The Starling equation defines fluid movement across the capillary wall: Jv equals Kf times open bracket Pc minus Pi close bracket minus sigma times open bracket pi c minus pi i close bracket. Jv is net fluid movement in milliliters per minute; positive indicates filtration, negative indicates reabsorption. Kf is the filtration coefficient proportional to capillary wall permeability and surface area; higher Kf increases both filtration and reabsorption rates. Increased Kf in inflammation or sepsis leads to excessive fluid leakage and edema. Pc is capillary hydrostatic pressure driving fluid out of capillaries, higher at the arterial end at approximately 35 millimeters mercury and lower at the venous end at approximately 10 millimeters mercury. Increased Pc in heart failure or venous congestion promotes filtration causing edema. Pi is interstitial hydrostatic pressure opposing filtration, normally negative at approximately negative 3 millimeters mercury due to lymphatic drainage. Pi c is capillary oncotic pressure exerted by plasma proteins pulling fluid into capillaries; reduced pi c in hypoalbuminemia decreases reabsorption causing edema. Pi i is interstitial oncotic pressure promoting filtration, normally low at approximately 8 millimeters mercury; increased pi i in inflammation enhances filtration. Sigma is the reflection coefficient describing capillary selectivity for proteins, ranging from 0 to 1; sigma equals 1 means proteins fully retained maximizing oncotic pressure, while reduced sigma in inflammation allows protein leakage increasing filtration. Net filtration produces approximately 2 milliliters per minute, about 3 to 4 liters per day returned via lymph flow.<<'
-      }
+      },
+        audioUrl: '/Audio/Topic-043/LO-06.mp3'
     },
     {
       id: 'lo-7',
@@ -298,7 +304,8 @@ const topic43 = {
           }
         ],
         raw: 'Fluid does not usually accumulate in the lung interstitium due to several protective mechanisms. Low pulmonary capillary hydrostatic pressure of 10 to 11 millimeters mercury, significantly lower than systemic capillaries at 17 to 35 millimeters mercury, minimizes the force driving fluid out and reduces filtration risk. Interstitial hydrostatic pressure is slightly negative at approximately negative 3 millimeters mercury, facilitating fluid return to capillaries and lymphatics. Pulmonary capillary oncotic pressure is relatively high at approximately 25 millimeters mercury, creating strong pull opposing hydrostatic pressure and retaining fluid in capillaries. Pulmonary capillaries have low permeability restricting fluid leakage, limiting fluid movement even when pressures fluctuate. Extensive lymphatic networks continuously remove excess fluid and proteins from the interstitium. These factors work together: low hydrostatic pressure reduces filtration, negative interstitial pressure and high oncotic pressure promote reabsorption, and low permeability with efficient lymphatic drainage prevent accumulation, maintaining a dry alveolar environment critical for gas exchange.'
-      }
+      },
+        audioUrl: '/Audio/Topic-043/LO-07.mp3'
     }
   ],
   referenceValues: [
