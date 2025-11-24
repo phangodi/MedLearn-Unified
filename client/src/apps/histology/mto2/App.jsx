@@ -72,52 +72,12 @@ const App = () => {
               </div>
               <h1 className="text-6xl md:text-7xl font-black text-gray-900 mb-6" >
                 Lara's Histology
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 pb-4 overflow-visible">Study App</span>
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 pb-4 overflow-visible">MTO2</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed pb-2">
-                Analyze your histology slides with AI-powered study formats tailored to your learning style
+              <p className="text-lg text-gray-600 mt-2 mb-8">
+                Includes skin structures, glands, nervous tissue, eye, and ear histology
               </p>
-              <div className="flex flex-wrap gap-4 justify-center">
-                <button
-                  onClick={() => handleSlideChange(1)}
-                  className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105"
-                >
-                  Start Learning
-                </button>
-                <button
-                  onClick={() => document.getElementById('slides').scrollIntoView({ behavior: 'smooth' })}
-                  className="px-8 py-4 bg-white text-gray-800 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105"
-                >
-                  Browse Slides
-                </button>
-              </div>
             </div>
-          </div>
-        </div>
-
-        {/* Features Section */}
-        <div className="max-w-7xl mx-auto px-4 py-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-black text-gray-900 mb-4">Why Choose This Platform?</h2>
-            <p className="text-lg text-gray-600">Multiple formats optimized for medical exam success</p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Feature Cards */}
-            {[
-              { icon: '🎯', title: 'Exam Focused', desc: 'Content aligned with medical school essentials', color: 'from-blue-500 to-blue-600' },
-              { icon: '⚡', title: 'Quick Cards', desc: 'Rapid review flashcards for efficient study', color: 'from-purple-500 to-purple-600' },
-              { icon: '🧠', title: 'Deep Learning', desc: 'Hierarchical format for comprehensive understanding', color: 'from-pink-500 to-pink-600' },
-              { icon: '🔗', title: 'Relationships', desc: 'Connect concepts with visual relationship maps', color: 'from-indigo-500 to-indigo-600' }
-            ].map((feature, idx) => (
-              <div key={idx} className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2">
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center text-3xl mb-4`}>
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-gray-600 leading-relaxed pb-1">{feature.desc}</p>
-              </div>
-            ))}
           </div>
         </div>
 

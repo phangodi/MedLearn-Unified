@@ -369,12 +369,12 @@ const RelationshipsFormat = ({ data }) => {
                 }
                 
                 return (
-                  <tr key={`matrix-grouped-${idx}`} className="bg-blue-50">
-                    <td className="border border-gray-400 p-3 font-bold">{group.parent}</td>
-                    <td className="border border-gray-400 p-3">{group.where || 'Inside fascicles creating characteristic pattern'}</td>
-                    <td className="border border-gray-400 p-3">{appearance || 'Myelinated nerve fibers in organized bundles'}</td>
+                  <tr key={`matrix-grouped-${idx}`} className="bg-blue-100">
+                    <td className="border border-gray-400 p-3 font-bold text-gray-900">{group.parent}</td>
+                    <td className="border border-gray-400 p-3 text-gray-800">{group.where || 'Inside fascicles creating characteristic pattern'}</td>
+                    <td className="border border-gray-400 p-3 text-gray-800">{appearance || 'Myelinated nerve fibers in organized bundles'}</td>
                     {safe(data.layers).length > 0 && data.layers[0]?.cnsEquivalent && (
-                      <td className="border border-gray-400 p-3">N/A (PNS structure)</td>
+                      <td className="border border-gray-400 p-3 text-gray-800">N/A (PNS structure)</td>
                     )}
                   </tr>
                 );
@@ -383,12 +383,12 @@ const RelationshipsFormat = ({ data }) => {
               {/* Layers - AFTER bundle - Use PURPLE to match SUPPORTING LAYERS section */}
               {safe(data.layers).map((layer, idx) => {
                 return (
-                  <tr key={`matrix-layer-${idx}`} className="bg-purple-50">
-                    <td className="border border-gray-400 p-3 font-bold">{layer.name}</td>
-                    <td className="border border-gray-400 p-3">{layer.level}</td>
-                    <td className="border border-gray-400 p-3">{layer.appearance}</td>
+                  <tr key={`matrix-layer-${idx}`} className="bg-purple-100">
+                    <td className="border border-gray-400 p-3 font-bold text-gray-900">{layer.name}</td>
+                    <td className="border border-gray-400 p-3 text-gray-800">{layer.level}</td>
+                    <td className="border border-gray-400 p-3 text-gray-800">{layer.appearance}</td>
                     {data.layers[0].cnsEquivalent && (
-                      <td className="border border-gray-400 p-3">{layer.cnsEquivalent || 'N/A'}</td>
+                      <td className="border border-gray-400 p-3 text-gray-800">{layer.cnsEquivalent || 'N/A'}</td>
                     )}
                   </tr>
                 );
