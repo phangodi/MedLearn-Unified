@@ -60,13 +60,13 @@ const subjects = [
   {
     name: 'Histology',
     icon: Microscope,
-    description: 'Nervous System • Slides 15, 70-89 (22 Slides)',
-    subtitle: '22 Slides',
+    description: 'MTO1: Nervous System • MTO2: Integuments',
+    subtitle: '30 Slides',
     enabled: true,
     image: '/subjects/histology.png',
     color: 'bg-purple-50 dark:bg-purple-950/30',
     iconColor: 'text-purple-600 dark:text-purple-400',
-    path: '/histology/mto1',
+    path: '/histology',
   },
   {
     name: 'Sociology',
