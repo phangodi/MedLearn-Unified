@@ -1,13 +1,27 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2025-11-25T00:00:00.000Z",
-  "totalQuestions": 0,
-  "testIds": [],
-  "topicCoverage": {},
+  "lastUpdated": "2025-11-25T17:50:00.000Z",
+  "totalQuestions": 20,
+  "testIds": ["0313014645"],
+  "topicCoverage": {
+    "26": 1,
+    "33": 2,
+    "34": 1,
+    "39": 1,
+    "40": 1,
+    "41": 2,
+    "42": 1,
+    "43": 2,
+    "44": 2,
+    "45": 4,
+    "46": 3,
+    "47": 1,
+    "48": 3
+  },
   "mcqCoverage": {
     "mcq-1": 0,
-    "mcq-2": 0,
-    "mcq-3": 0,
+    "mcq-2": 1,
+    "mcq-3": 19,
     "mcq-4": 0,
     "mcq-5": 0,
     "mcq-6": 0
