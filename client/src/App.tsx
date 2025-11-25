@@ -83,7 +83,7 @@ function App() {
             <Route path="/histology/mto2" element={<ProtectedRoute><HistologyMTO2Page /></ProtectedRoute>} />
             <Route path="/physiology" element={<ProtectedRoute><PhysiologyPage /></ProtectedRoute>} />
             <Route path="/physiology/topics/*" element={<ProtectedRoute><PhysiologyTopicsPage /></ProtectedRoute>} />
-            <Route path="/physiology/mto" element={<ProtectedRoute><PhysiologyMTOPage /></ProtectedRoute>} />
+            <Route path="/physiology/mto/*" element={<ProtectedRoute><PhysiologyMTOPage /></ProtectedRoute>} />
             <Route path="/sociology" element={<ProtectedRoute><SociologyPage /></ProtectedRoute>} />
             <Route path="/sociology/exam1/*" element={<ProtectedRoute><SociologyExam1Page /></ProtectedRoute>} />
             <Route path="/sociology/exam2" element={<ProtectedRoute><SociologyExam2Page /></ProtectedRoute>} />
