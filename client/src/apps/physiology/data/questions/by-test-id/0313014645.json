@@ -1,0 +1,368 @@
+{
+  "testId": "0313014645",
+  "examName": "Physiology Exam 2024",
+  "questions": [
+    {
+      "id": "q-0313014645-1",
+      "testId": "0313014645",
+      "questionNumber": 1,
+      "text": "Which of the following organs in the resting subject receives the greatest blood flow per gram of tissue?",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "kidney"},
+        {"letter": "b", "text": "brain"},
+        {"letter": "c", "text": "heart"},
+        {"letter": "d", "text": "gastrocnemius muscle"},
+        {"letter": "e", "text": "liver"}
+      ],
+      "correctAnswers": ["a"],
+      "topics": [45],
+      "mcqs": ["mcq-3"],
+      "metadata": {"importedAt": "2025-11-25T17:50:00.000Z", "matchedBy": "ai-verified", "matchConfidence": 0.9}
+    },
+    {
+      "id": "q-0313014645-2",
+      "testId": "0313014645",
+      "questionNumber": 2,
+      "text": "Where are the cell bodies of the arterial baroreceptors located?",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "in the superior cervical ganglion"},
+        {"letter": "b", "text": "in the adventitia of the carotid artery and the aorta"},
+        {"letter": "c", "text": "in the nucleus tractus solitarius"},
+        {"letter": "d", "text": "in the sensory ganglia of the glossopharyngeal/vagal nerves"},
+        {"letter": "e", "text": "in the nerve of the glossopharyngeal/vagal nerves"}
+      ],
+      "correctAnswers": ["d"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {"importedAt": "2025-11-25T17:50:00.000Z", "matchedBy": "ai-verified", "matchConfidence": 0.85}
+    },
+    {
+      "id": "q-0313014645-3",
+      "testId": "0313014645",
+      "questionNumber": 3,
+      "text": "The law of Laplace states that (assuming T-tension, P-pressure, r-radius, h-wall thickness)",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "T=P x h/r"},
+        {"letter": "b", "text": "T=P x r/h"},
+        {"letter": "c", "text": "T=h/P x r"},
+        {"letter": "d", "text": "P=T x r/h"},
+        {"letter": "e", "text": "P=h/T x r"}
+      ],
+      "correctAnswers": ["b"],
+      "topics": [33],
+      "mcqs": ["mcq-3"],
+      "metadata": {"importedAt": "2025-11-25T17:50:00.000Z", "matchedBy": "ai-verified", "matchConfidence": 0.9}
+    },
+    {
+      "id": "q-0313014645-4",
+      "testId": "0313014645",
+      "questionNumber": 4,
+      "text": "How does the circulatory regulation try to compensate the effects of blood loss (hemorrhage)?",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "the total peripheral resistance will increase"},
+        {"letter": "b", "text": "plasma ANH levels are elevated"},
+        {"letter": "c", "text": "sympathetic vasoconstrictor tone increases in the capacitance vessels (veins)"},
+        {"letter": "d", "text": "central venous pressure will be increased"},
+        {"letter": "e", "text": "cardiac output increases"}
+      ],
+      "correctAnswers": ["a", "c"],
+      "topics": [43, 44],
+      "mcqs": ["mcq-3"],
+      "metadata": {"importedAt": "2025-11-25T17:50:00.000Z", "matchedBy": "ai-verified", "matchConfidence": 0.85}
+    },
+    {
+      "id": "q-0313014645-5",
+      "testId": "0313014645",
+      "questionNumber": 5,
+      "text": "The volume of the interstitial fluid DOES NOT increase in response to",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "decreased concentration of plasma proteins"},
+        {"letter": "b", "text": "obstruction of lymphatic vessels"},
+        {"letter": "c", "text": "decreased interstitial colloid osmotic pressure"},
+        {"letter": "d", "text": "increased microvascular permeability"},
+        {"letter": "e", "text": "increased blood pressure in the veins"}
+      ],
+      "correctAnswers": ["c"],
+      "topics": [39, 42],
+      "mcqs": ["mcq-3"],
+      "metadata": {"importedAt": "2025-11-25T17:50:00.000Z", "matchedBy": "ai-verified", "matchConfidence": 0.8}
+    },
+    {
+      "id": "q-0313014645-6",
+      "testId": "0313014645",
+      "questionNumber": 6,
+      "text": "Mediators released from NERVE ENDINGS during neurogenic inflammation contributing to the development of the flare of the triple response:",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "angiotensin and vasopressin"},
+        {"letter": "b", "text": "acetyl-choline and vasoactive intestinal polypeptide (VIP)"},
+        {"letter": "c", "text": "a prostacyclin (PGI2) and nitrogen oxide (NO)"},
+        {"letter": "d", "text": "substance P (SP) and calcitonin gene-related peptide (CGRP)"},
+        {"letter": "e", "text": "noradrenaline and neuropeptide Y (NPY)"}
+      ],
+      "correctAnswers": ["d"],
+      "topics": [41],
+      "mcqs": ["mcq-3"],
+      "metadata": {"importedAt": "2025-11-25T17:50:00.000Z", "matchedBy": "ai-verified", "matchConfidence": 0.75}
+    },
+    {
+      "id": "q-0313014645-7",
+      "testId": "0313014645",
+      "questionNumber": 7,
+      "text": "The plasma glucose concentration when glucose first appears in the urine (renal threshold) is",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "above 20-22 mmol/L"},
+        {"letter": "b", "text": "between 10 and 12 mmol/L"},
+        {"letter": "c", "text": "between 4 and 6 micromol/L"},
+        {"letter": "d", "text": "between 6 and 8 mmol/L"},
+        {"letter": "e", "text": "between 15 and 20 mmol/L"}
+      ],
+      "correctAnswers": ["b"],
+      "topics": [46],
+      "mcqs": ["mcq-3"],
+      "metadata": {"importedAt": "2025-11-25T17:50:00.000Z", "matchedBy": "ai-verified", "matchConfidence": 0.9}
+    },
+    {
+      "id": "q-0313014645-8",
+      "testId": "0313014645",
+      "questionNumber": 8,
+      "text": "The decreased compliance of the elastic arteries results in",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "a decreased systolic pressure"},
+        {"letter": "b", "text": "a decreased diastolic pressure"},
+        {"letter": "c", "text": "an increased mean pressure"},
+        {"letter": "d", "text": "an increased pulse pressure"}
+      ],
+      "correctAnswers": ["b", "d"],
+      "topics": [34],
+      "mcqs": ["mcq-3"],
+      "metadata": {"importedAt": "2025-11-25T17:50:00.000Z", "matchedBy": "ai-verified", "matchConfidence": 0.9}
+    },
+    {
+      "id": "q-0313014645-9",
+      "testId": "0313014645",
+      "questionNumber": 9,
+      "text": "Venous return is enhanced by",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "arteriolar vasoconstriction"},
+        {"letter": "b", "text": "inspiration"},
+        {"letter": "c", "text": "increased contractility of the heart"},
+        {"letter": "d", "text": "relaxation of the veins"},
+        {"letter": "e", "text": "lack of skeletal muscle activity"}
+      ],
+      "correctAnswers": ["b", "c"],
+      "topics": [40],
+      "mcqs": ["mcq-3"],
+      "metadata": {"importedAt": "2025-11-25T17:50:00.000Z", "matchedBy": "ai-verified", "matchConfidence": 0.85}
+    },
+    {
+      "id": "q-0313014645-10",
+      "testId": "0313014645",
+      "questionNumber": 10,
+      "text": "The renal recirculation of urea",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "involves urea reabsorption by the intercalated cells"},
+        {"letter": "b", "text": "is a mechanism contributing to the creation the osmotic gradient in the medulla"},
+        {"letter": "c", "text": "promotes the excretion of dilute urine"},
+        {"letter": "d", "text": "is inhibited by vasopressin"},
+        {"letter": "e", "text": "is stimulated by vasopressin"},
+        {"letter": "f", "text": "requires UT-1 transporters in the thin segment of the loop of Henle"}
+      ],
+      "correctAnswers": ["b", "e"],
+      "topics": [48],
+      "mcqs": ["mcq-3"],
+      "metadata": {"importedAt": "2025-11-25T17:50:00.000Z", "matchedBy": "ai-verified", "matchConfidence": 0.9}
+    },
+    {
+      "id": "q-0313014645-11",
+      "testId": "0313014645",
+      "questionNumber": 11,
+      "text": "Which statement is FALSE concerning the pulmonary circulation?",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "mean pressure in pulmonary arteries is about 15-20% of that in the aorta"},
+        {"letter": "b", "text": "blood flow is chiefly determined by sympathethic vasoconstrictor tone"},
+        {"letter": "c", "text": "arteries carry desaturated venous blood from the systemic circulation"},
+        {"letter": "d", "text": "the ratio of flow in the pulmonary artery to flow in the aorta is approximately 1"},
+        {"letter": "e", "text": "hypoxia triggers vasoconstriction in pulmonary arterioles"}
+      ],
+      "correctAnswers": ["b"],
+      "topics": [26],
+      "mcqs": ["mcq-2"],
+      "metadata": {"importedAt": "2025-11-25T17:50:00.000Z", "matchedBy": "ai-verified", "matchConfidence": 0.9}
+    },
+    {
+      "id": "q-0313014645-12",
+      "testId": "0313014645",
+      "questionNumber": 12,
+      "text": "A substance with free filtration, passive tubular reabsorption and without tubular secretion has a clearance",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "the same as glucose"},
+        {"letter": "b", "text": "higher than inulin"},
+        {"letter": "c", "text": "the same as inulin"},
+        {"letter": "d", "text": "lower than glucose"},
+        {"letter": "e", "text": "the same as PAH"},
+        {"letter": "f", "text": "higher than PAH"},
+        {"letter": "g", "text": "lower than inulin"}
+      ],
+      "correctAnswers": ["d", "g"],
+      "topics": [45, 47],
+      "mcqs": ["mcq-3"],
+      "metadata": {"importedAt": "2025-11-25T17:50:00.000Z", "matchedBy": "ai-verified", "matchConfidence": 0.85}
+    },
+    {
+      "id": "q-0313014645-13",
+      "testId": "0313014645",
+      "questionNumber": 13,
+      "text": "It is characteristic of the intraglomerular capillaries that",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "they are fenestrated capillaries"},
+        {"letter": "b", "text": "their oncotic pressure is unusually low compared to the average capillary value"},
+        {"letter": "c", "text": "their intracapillary hydrostatic pressure is unusually high compared to the average capillary value"},
+        {"letter": "d", "text": "they are highly permeable to proteins"},
+        {"letter": "e", "text": "they are discontinuous capillaries"}
+      ],
+      "correctAnswers": ["a", "c"],
+      "topics": [45],
+      "mcqs": ["mcq-3"],
+      "metadata": {"importedAt": "2025-11-25T17:50:00.000Z", "matchedBy": "ai-verified", "matchConfidence": 0.9}
+    },
+    {
+      "id": "q-0313014645-14",
+      "testId": "0313014645",
+      "questionNumber": 14,
+      "text": "True statements on renal blood flow:",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "the renal vascular resistance is smaller than the total peripheral resistance"},
+        {"letter": "b", "text": "the sympathetic vasoconstrictor tone is minimal in the renal vessels"},
+        {"letter": "c", "text": "it is about 20-25 % of the cardiac output at rest"},
+        {"letter": "d", "text": "it increases proportionally with increased cardiac output"},
+        {"letter": "e", "text": "functional hyperemia is characteristic of the renal circulation"}
+      ],
+      "correctAnswers": ["a", "c"],
+      "topics": [45],
+      "mcqs": ["mcq-3"],
+      "metadata": {"importedAt": "2025-11-25T17:50:00.000Z", "matchedBy": "ai-verified", "matchConfidence": 0.9}
+    },
+    {
+      "id": "q-0313014645-15",
+      "testId": "0313014645",
+      "questionNumber": 15,
+      "text": "Increase in the shear rate will reduce blood viscosity due to",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "dispersion of red blood cell aggregates also known as \"moneyroll formations\""},
+        {"letter": "b", "text": "red blood cells assume a streamlined elongated shape"},
+        {"letter": "c", "text": "both mechanisms contribute to the effect"},
+        {"letter": "d", "text": "none of them contribute, since blood viscosity is independent of shear rate"}
+      ],
+      "correctAnswers": ["c"],
+      "topics": [33],
+      "mcqs": ["mcq-3"],
+      "metadata": {"importedAt": "2025-11-25T17:50:00.000Z", "matchedBy": "ai-verified", "matchConfidence": 0.85}
+    },
+    {
+      "id": "q-0313014645-16",
+      "testId": "0313014645",
+      "questionNumber": 16,
+      "text": "The most effective long-term blood pressure regulating mechanism is the",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "arterial chemoreceptor reflex"},
+        {"letter": "b", "text": "carotis sinus reflex"},
+        {"letter": "c", "text": "vascular autoregulation"},
+        {"letter": "d", "text": "stress-relaxation"},
+        {"letter": "e", "text": "renal volume regulation"}
+      ],
+      "correctAnswers": ["e"],
+      "topics": [44],
+      "mcqs": ["mcq-3"],
+      "metadata": {"importedAt": "2025-11-25T17:50:00.000Z", "matchedBy": "ai-verified", "matchConfidence": 0.95}
+    },
+    {
+      "id": "q-0313014645-17",
+      "testId": "0313014645",
+      "questionNumber": 17,
+      "text": "Which of the following statements is true concerning human urinary bladder function?",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "emptying of the bladder during urination can be supported by the simultaneous contractions of abdominal muscles"},
+        {"letter": "b", "text": "in the presence of vasopressin, water is reabsorbed through the urothelium of the bladder"},
+        {"letter": "c", "text": "activation of the parasympathetic nerves of the bladder contributes to the receptive relaxation of the smooth muscle during bladder filling"},
+        {"letter": "d", "text": "the urine storage function is promoted by the Bayliss effect of the bladder smooth muscle"},
+        {"letter": "e", "text": "in healthy subjects, there is always some urine retention after urination"}
+      ],
+      "correctAnswers": ["a"],
+      "topics": [48],
+      "mcqs": ["mcq-3"],
+      "metadata": {"importedAt": "2025-11-25T17:50:00.000Z", "matchedBy": "ai-verified", "matchConfidence": 0.8}
+    },
+    {
+      "id": "q-0313014645-18",
+      "testId": "0313014645",
+      "questionNumber": 18,
+      "text": "What is active hyperemia?",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "It refers to the elevated cardiac output in people with an active lifestyle in comparison to inactive people."},
+        {"letter": "b", "text": "It is the opposite of autoregulation, in these tissues blood flow is linearly changing with arterial blood pressure changes."},
+        {"letter": "c", "text": "It means increased blood flow after ischemia of the tissue."},
+        {"letter": "d", "text": "It means increased blood flow during metabolic activation of the tissue."},
+        {"letter": "e", "text": "It means that the maintenance of local blood flow is dependent on an active contribution of the tissue."}
+      ],
+      "correctAnswers": ["d"],
+      "topics": [41],
+      "mcqs": ["mcq-3"],
+      "metadata": {"importedAt": "2025-11-25T17:50:00.000Z", "matchedBy": "ai-verified", "matchConfidence": 0.9}
+    },
+    {
+      "id": "q-0313014645-19",
+      "testId": "0313014645",
+      "questionNumber": 19,
+      "text": "What is the most important mechanism of Cl- reabsorption in the proximal tubule?",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "anion exchange (Cl- - HCO3- antiport)"},
+        {"letter": "b", "text": "H+-Cl- antiporter (primary active pump)"},
+        {"letter": "c", "text": "paracellular reabsorption driven by the voltage gradient after the primary reabsorption of Na+"},
+        {"letter": "d", "text": "cotransport with H+ ions"},
+        {"letter": "e", "text": "Na-K-2Cl cotransport"}
+      ],
+      "correctAnswers": ["c"],
+      "topics": [46],
+      "mcqs": ["mcq-3"],
+      "metadata": {"importedAt": "2025-11-25T17:50:00.000Z", "matchedBy": "ai-verified", "matchConfidence": 0.9}
+    },
+    {
+      "id": "q-0313014645-20",
+      "testId": "0313014645",
+      "questionNumber": 20,
+      "text": "The Na-K-2Cl cotransporter in the kidney",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "resides in the luminal membrane of the proximal convoluted tubulus"},
+        {"letter": "b", "text": "is a transporter directly using ATP (ATPase)"},
+        {"letter": "c", "text": "is inhibited by thiazides"},
+        {"letter": "d", "text": "is a secondary active transport for the K+ and the Cl-"},
+        {"letter": "e", "text": "mediates aldosterone-stimulated Na+-reabsorption"},
+        {"letter": "f", "text": "resides in the luminal membrane of the thick segment of the loop of Henle"}
+      ],
+      "correctAnswers": ["d", "f"],
+      "topics": [46, 48],
+      "mcqs": ["mcq-3"],
+      "metadata": {"importedAt": "2025-11-25T17:50:00.000Z", "matchedBy": "ai-verified", "matchConfidence": 0.9}
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-11-25T00:00:00.000Z",
+  "totalQuestions": 0,
+  "testIds": [],
+  "topicCoverage": {},
+  "mcqCoverage": {
+    "mcq-1": 0,
+    "mcq-2": 0,
+    "mcq-3": 0,
+    "mcq-4": 0,
+    "mcq-5": 0,
+    "mcq-6": 0
+  }
+}
