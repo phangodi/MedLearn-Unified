@@ -158,7 +158,7 @@ export function DeckDetail() {
       case State.Learning:
         return <span className="px-2 py-1 rounded-full text-xs font-medium bg-orange-500/10 text-orange-500 border border-orange-500/20">Learning</span>
       case State.Review:
-        return <span className="px-2 py-1 rounded-full text-xs font-medium bg-green-500/10 text-green-500 border border-green-500/20">Review</span>
+        return <span className="px-2 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20">Review</span>
       case State.Relearning:
         return <span className="px-2 py-1 rounded-full text-xs font-medium bg-yellow-500/10 text-yellow-500 border border-yellow-500/20">Relearning</span>
       default:
@@ -377,14 +377,13 @@ export function DeckDetail() {
           animate={{ opacity: 1, x: 0 }}
           className="mb-6"
         >
-          <Button
-            variant="outline"
-            size="sm"
+          <button
             onClick={() => navigate('/flashcards')}
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium bg-muted text-muted-foreground hover:bg-muted/80 hover:text-foreground transition-all duration-200"
           >
-            <ArrowLeft className="w-4 h-4 mr-2" />
+            <ArrowLeft className="w-4 h-4" />
             Back to Decks
-          </Button>
+          </button>
         </motion.div>
 
         {/* Header */}
@@ -412,7 +411,7 @@ export function DeckDetail() {
             </div>
 
             {/* Action buttons */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-3">
               {!currentDeck.isPreloaded && (
                 <>
                   <Button
@@ -436,20 +435,21 @@ export function DeckDetail() {
                   </Button>
                 </>
               )}
-              {currentDeck.isPreloaded && (
-                <span className="text-xs text-muted-foreground px-3 py-1.5 rounded-md bg-primary/10 border border-primary/20">
-                  Pre-loaded (Read-only)
-                </span>
-              )}
-              <Button
-                variant="default"
-                size="sm"
-                onClick={handleStartStudy}
-                disabled={!currentDeckDue.total && !(currentDeck?.isPreloaded && cards.length > 0)}
-              >
-                <Play className="w-4 h-4 mr-2" />
-                Study Now {currentDeck?.isPreloaded && cards.length > 0 ? `(${cards.length})` : currentDeckDue.total > 0 ? `(${currentDeckDue.total})` : ''}
-              </Button>
+              <div className="flex items-center gap-3">
+                {currentDeck.isPreloaded && (
+                  <span className="text-xs text-muted-foreground/70 px-2 py-1 rounded border border-border/50 bg-muted/30">
+                    Read-only
+                  </span>
+                )}
+                <Button
+                  onClick={handleStartStudy}
+                  disabled={!currentDeckDue.total && !(currentDeck?.isPreloaded && cards.length > 0)}
+                  className="px-6 py-2.5 rounded-lg bg-[#0066CC] text-white font-medium hover:bg-[#0055AA] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                >
+                  <Play className="w-4 h-4 mr-2" />
+                  Study Now {currentDeck?.isPreloaded && cards.length > 0 ? `(${cards.length})` : currentDeckDue.total > 0 ? `(${currentDeckDue.total})` : ''}
+                </Button>
+              </div>
             </div>
           </div>
 

@@ -30,6 +30,25 @@ export { Rating, State } from 'ts-fsrs'
 export type { Card as FSRSCard, ReviewLog } from 'ts-fsrs'
 
 /**
+ * Converts a date value to a Date object, handling both Date and Firestore Timestamp
+ *
+ * Firestore returns Timestamp objects when reading from the database, but our code
+ * expects Date objects. This helper safely converts both types.
+ *
+ * @param date - Date, Firestore Timestamp, or any value with a toDate() method
+ * @returns JavaScript Date object
+ */
+function toDate(date: any): Date {
+  if (date instanceof Date) {
+    return date
+  }
+  if (typeof date?.toDate === 'function') {
+    return date.toDate()
+  }
+  return new Date(date)
+}
+
+/**
  * Scheduling information for all four rating buttons
  * Used to display intervals like "1m", "10m", "1d", "4d" on rating buttons
  */
@@ -229,7 +248,8 @@ export function formatInterval(days: number): string {
     // Sub-day intervals: show in minutes or hours
     const minutes = Math.round(days * 24 * 60)
     if (minutes < 60) {
-      return `${minutes}m`
+      // Ensure minimum of 1 minute display
+      return `${Math.max(1, minutes)}m`
     }
     const hours = Math.round(days * 24)
     return `${hours}h`
@@ -274,8 +294,9 @@ export function getDueCards(cards: FlashCard[], now?: Date): FlashCard[] {
     if (card.suspended || card.buried) {
       return false
     }
-    // Check if card is due
-    return card.fsrs.due <= timestamp
+    // Check if card is due (handle both Date and Firestore Timestamp)
+    const dueDate = toDate(card.fsrs.due)
+    return dueDate <= timestamp
   })
 }
 
@@ -290,7 +311,10 @@ export function getDueCards(cards: FlashCard[], now?: Date): FlashCard[] {
  */
 export function sortCardsByDue(cards: FlashCard[]): FlashCard[] {
   return [...cards].sort((a, b) => {
-    return a.fsrs.due.getTime() - b.fsrs.due.getTime()
+    // Handle both Date and Firestore Timestamp
+    const aDue = toDate(a.fsrs.due)
+    const bDue = toDate(b.fsrs.due)
+    return aDue.getTime() - bDue.getTime()
   })
 }
 
@@ -388,13 +412,14 @@ export function getLearningCards(cards: FlashCard[]): FlashCard[] {
  */
 export function getReviewCards(cards: FlashCard[], now?: Date): FlashCard[] {
   const timestamp = now || new Date()
-  return cards.filter(
-    (card) =>
-      !card.suspended &&
-      !card.buried &&
-      card.fsrs.state === State.Review &&
-      card.fsrs.due <= timestamp
-  )
+  return cards.filter((card) => {
+    if (card.suspended || card.buried || card.fsrs.state !== State.Review) {
+      return false
+    }
+    // Handle both Date and Firestore Timestamp
+    const dueDate = toDate(card.fsrs.due)
+    return dueDate <= timestamp
+  })
 }
 
 /**
@@ -406,7 +431,9 @@ export function getReviewCards(cards: FlashCard[], now?: Date): FlashCard[] {
  */
 export function isCardDue(card: FlashCard, now?: Date): boolean {
   const timestamp = now || new Date()
-  return !card.suspended && !card.buried && card.fsrs.due <= timestamp
+  // Handle both Date and Firestore Timestamp
+  const dueDate = toDate(card.fsrs.due)
+  return !card.suspended && !card.buried && dueDate <= timestamp
 }
 
 /**
@@ -418,6 +445,8 @@ export function isCardDue(card: FlashCard, now?: Date): boolean {
  */
 export function getDaysUntilDue(card: FlashCard, now?: Date): number {
   const timestamp = now || new Date()
-  const diffMs = card.fsrs.due.getTime() - timestamp.getTime()
+  // Handle both Date and Firestore Timestamp
+  const dueDate = toDate(card.fsrs.due)
+  const diffMs = dueDate.getTime() - timestamp.getTime()
   return diffMs / (1000 * 60 * 60 * 24)
 }

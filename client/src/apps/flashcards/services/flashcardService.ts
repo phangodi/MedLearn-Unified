@@ -821,3 +821,109 @@ export async function updateDeckStats(deckId: string): Promise<void> {
     throw new Error(`Failed to update deck stats: ${error instanceof Error ? error.message : 'Unknown error'}`)
   }
 }
+
+// =============================================================================
+// DECK COPYING
+// =============================================================================
+
+/**
+ * Copies a deck (including all its cards) to a user's personal collection
+ * Used to create editable copies of preloaded decks
+ * @param sourceDeckId - ID of the deck to copy (can be preloaded or user deck)
+ * @param userId - ID of the user who will own the copy
+ * @returns The ID of the newly created deck
+ */
+export async function copyDeckToUser(
+  sourceDeckId: string,
+  userId: string
+): Promise<string> {
+  const firestore = ensureDb()
+
+  try {
+    // Get source deck (handles both preloaded and user decks)
+    const sourceDeck = await getDeck(sourceDeckId)
+    if (!sourceDeck) {
+      throw new Error('Source deck not found')
+    }
+
+    // Get all cards from source deck
+    const sourceCards = await getDeckCards(sourceDeckId)
+
+    // Create new deck with "My - " prefix and user ownership
+    const newDeckName = sourceDeck.isPreloaded
+      ? `My - ${sourceDeck.name}`
+      : `Copy of ${sourceDeck.name}`
+
+    const newDeckData = removeUndefinedFields({
+      userId,
+      name: newDeckName,
+      description: sourceDeck.description,
+      color: sourceDeck.color,
+      icon: sourceDeck.icon,
+      cardCount: 0, // Will be updated as we add cards
+      newCount: 0,
+      learningCount: 0,
+      reviewCount: 0,
+      settings: sourceDeck.settings,
+      createdAt: serverTimestamp() as Timestamp,
+      updatedAt: serverTimestamp() as Timestamp,
+      isPreloaded: false, // User copies are not preloaded
+      sourceSubject: sourceDeck.sourceSubject,
+      sourceTopic: sourceDeck.sourceTopic,
+    })
+
+    // Create the new deck
+    const newDeckRef = doc(collection(firestore, 'flashcards/decks/items'))
+    const newDeckId = newDeckRef.id
+    await setDoc(newDeckRef, newDeckData)
+
+    // Copy all cards using a batch operation for efficiency
+    const batch = writeBatch(firestore)
+    let batchCount = 0
+    const MAX_BATCH_SIZE = 500 // Firestore limit
+
+    for (const sourceCard of sourceCards) {
+      // Create new card with reset FSRS state
+      const newCardRef = doc(collection(firestore, 'flashcards/cards/items'))
+      const resetFSRS = createEmptyCard() // Fresh FSRS state
+
+      const newCardData = removeUndefinedFields({
+        deckId: newDeckId,
+        userId,
+        front: sourceCard.front,
+        back: sourceCard.back,
+        tags: sourceCard.tags,
+        fsrs: resetFSRS, // Reset FSRS state - user hasn't studied these yet
+        createdAt: serverTimestamp() as Timestamp,
+        updatedAt: serverTimestamp() as Timestamp,
+        note: sourceCard.note,
+        sourceTopicId: sourceCard.sourceTopicId,
+        suspended: false, // Reset suspension status
+        buried: false, // Reset buried status
+      })
+
+      batch.set(newCardRef, newCardData)
+      batchCount++
+
+      // Commit batch if we hit the limit
+      if (batchCount >= MAX_BATCH_SIZE) {
+        await batch.commit()
+        batchCount = 0
+      }
+    }
+
+    // Commit remaining cards
+    if (batchCount > 0) {
+      await batch.commit()
+    }
+
+    // Update deck statistics
+    await updateDeckStats(newDeckId)
+
+    console.log(`Successfully copied deck ${sourceDeckId} to ${newDeckId}`)
+    return newDeckId
+  } catch (error) {
+    console.error('Error copying deck:', error)
+    throw new Error(`Failed to copy deck: ${error instanceof Error ? error.message : 'Unknown error'}`)
+  }
+}

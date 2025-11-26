@@ -145,6 +145,31 @@ Dark/light theme is managed by `useTheme()` hook:
 - Uses CSS variables defined in `src/index.css`
 - All new components must support both themes
 
+### Tailwind v4 Dark Mode Configuration
+
+**CRITICAL:** Tailwind CSS v4 uses `prefers-color-scheme` media query by default, NOT the `.dark` class. This means class-based dark mode (toggling with JavaScript) will NOT work without explicit configuration.
+
+**The Problem:**
+- By default, Tailwind v4 applies dark mode styles only when the system preference is set to dark
+- The `useTheme()` hook toggles the `.dark` class on the `<html>` element
+- Without configuration, the `.dark` class has no effect
+
+**The Solution:**
+Add this line to `client/src/index.css` (line 4, after `@import "tailwindcss"`):
+
+```css
+@custom-variant dark (&:where(.dark, .dark *));
+```
+
+**What this does:**
+- Defines a custom `dark` variant that targets elements with the `.dark` class or its descendants
+- Enables class-based dark mode throughout the application
+- Allows JavaScript-controlled theme switching via `useTheme()` hook
+
+**Status:** ✅ Already configured in `client/src/index.css` at line 4
+
+**Important:** This configuration is MANDATORY for the theme toggle to work. If removed, users will only see dark mode when their system preference is set to dark, and the theme toggle button will have no effect.
+
 ### Design System
 
 **Medical-themed color palette:**

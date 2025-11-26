@@ -20,7 +20,7 @@ interface CardEditorProps {
 type EditingSide = 'front' | 'back'
 
 export function CardEditor({ deckId, cardId, onClose, onSave }: CardEditorProps) {
-  const { cards, createCard, updateCard, deleteCard } = useFlashcards()
+  const { cards, createCard, updateCard, deleteCard, userId } = useFlashcards()
   const isEditMode = !!cardId
   const existingCard = isEditMode ? cards.find(c => c.id === cardId) : undefined
 
@@ -98,6 +98,7 @@ export function CardEditor({ deckId, cardId, onClose, onSave }: CardEditorProps)
         // Create new card
         await createCard({
           deckId,
+          userId: userId!,
           front: { text: frontContent },
           back: { text: backContent },
           tags
@@ -181,7 +182,7 @@ export function CardEditor({ deckId, cardId, onClose, onSave }: CardEditorProps)
   const setCurrentContent = editingSide === 'front' ? setFrontContent : setBackContent
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 overflow-y-auto">
       {/* Dark overlay backdrop */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -196,7 +197,7 @@ export function CardEditor({ deckId, cardId, onClose, onSave }: CardEditorProps)
         initial={{ scale: 0.95, opacity: 0, y: 20 }}
         animate={{ scale: 1, opacity: 1, y: 0 }}
         exit={{ scale: 0.95, opacity: 0, y: 20 }}
-        className="relative z-10 w-full max-w-7xl bg-card rounded-xl shadow-2xl max-h-[90vh] overflow-y-auto"
+        className="relative z-10 w-full max-w-7xl max-h-[90vh] bg-card rounded-xl shadow-2xl overflow-hidden flex flex-col my-auto"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
@@ -246,7 +247,7 @@ export function CardEditor({ deckId, cardId, onClose, onSave }: CardEditorProps)
         </AnimatePresence>
 
         {/* Main content */}
-        <div className="p-6">
+        <div className="p-6 overflow-y-auto flex-1">
           {/* Front/Back tabs */}
           <div className="flex gap-2 mb-6">
             <button
@@ -432,7 +433,7 @@ Insert images: ![description](url)`}
                     <span>{tag}</span>
                     <button
                       onClick={() => handleRemoveTag(tag)}
-                      className="hover:bg-primary/20 rounded-full p-0.5 transition-colors"
+                      className="hover:bg-muted rounded-full p-0.5 transition-colors"
                     >
                       <X className="w-3 h-3" />
                     </button>
@@ -513,8 +514,8 @@ Insert images: ![description](url)`}
                 disabled={isSaving}
                 className="
                   flex items-center gap-2 px-6 py-2 rounded-lg
-                  bg-secondary text-secondary-foreground font-medium
-                  hover:shadow-md transition-all duration-200
+                  border border-border bg-background text-foreground font-medium
+                  hover:bg-muted transition-all duration-200
                   disabled:opacity-50 disabled:cursor-not-allowed
                 "
               >

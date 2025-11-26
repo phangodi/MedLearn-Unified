@@ -29,6 +29,7 @@ import {
   endSession as endSessionService,
   recordReview,
   updateDeckStats,
+  copyDeckToUser as copyDeckToUserService,
 } from '@/apps/flashcards/services/flashcardService'
 import {
   createFSRSScheduler,
@@ -114,6 +115,14 @@ interface FlashcardState {
    * @param deckId - ID of the deck to delete
    */
   deleteDeck: (deckId: string) => Promise<void>
+
+  /**
+   * Copies a deck (including all cards) to a user's personal collection
+   * @param deckId - ID of the deck to copy
+   * @param userId - ID of the user who will own the copy
+   * @returns The ID of the newly created deck
+   */
+  copyDeck: (deckId: string, userId: string) => Promise<string>
 
   /**
    * Sets the current deck
@@ -375,6 +384,26 @@ export const useFlashcardStore = create<FlashcardState>((set, get) => ({
     } catch (error) {
       console.error('Error deleting deck:', error)
       throw error
+    }
+  },
+
+  copyDeck: async (deckId: string, userId: string) => {
+    try {
+      console.log('Copying deck:', deckId, 'for user:', userId)
+      const newDeckId = await copyDeckToUserService(deckId, userId)
+      console.log('Deck copied with new ID:', newDeckId)
+
+      // Reload decks to include the new copy
+      await get().loadDecks(userId)
+      return newDeckId
+    } catch (error) {
+      console.error('Error in copyDeck store action:', error)
+
+      // Re-throw with enhanced error context
+      if (error instanceof Error) {
+        throw new Error(error.message)
+      }
+      throw new Error('Failed to copy deck: Unknown error')
     }
   },
 

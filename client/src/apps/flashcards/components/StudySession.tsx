@@ -42,13 +42,39 @@ export function StudySession() {
     }
 
     const initSession = async () => {
-      if (!flashcards.currentDeck || flashcards.currentDeck.id !== deckId) {
-        await flashcards.loadDeck(deckId)
-        await flashcards.loadCards(deckId)
-      }
+      try {
+        // Step 1: Load deck first
+        if (!flashcards.currentDeck || flashcards.currentDeck.id !== deckId) {
+          await flashcards.loadDeck(deckId)
+        }
 
-      if (!session.isActive) {
-        await session.startSession(deckId)
+        // Step 2: Load cards and wait for them to be available
+        if (!flashcards.currentDeck || flashcards.currentDeck.id !== deckId) {
+          console.error('Failed to load deck')
+          navigate('/flashcards')
+          return
+        }
+
+        await flashcards.loadCards(deckId)
+
+        // Step 3: Verify cards are loaded before starting session
+        // Wait a brief moment for the store to update
+        await new Promise(resolve => setTimeout(resolve, 100))
+
+        // Check if we have cards loaded
+        if (!flashcards.cards || flashcards.cards.length === 0) {
+          console.error('No cards available after loading')
+          navigate('/flashcards')
+          return
+        }
+
+        // Step 4: Start session only after deck and cards are ready
+        if (!session.isActive) {
+          await session.startSession(deckId)
+        }
+      } catch (error) {
+        console.error('Failed to initialize study session:', error)
+        navigate('/flashcards')
       }
     }
 
@@ -121,8 +147,8 @@ export function StudySession() {
           className="max-w-2xl w-full bg-card border-2 border-border rounded-2xl p-8"
         >
           <div className="text-center mb-8">
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-green-500/10 mb-4">
-              <CheckCircle className="w-10 h-10 text-green-500" />
+            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 mb-4">
+              <CheckCircle className="w-10 h-10 text-primary" />
             </div>
             <h1 className="text-3xl font-bold mb-2">Session Complete!</h1>
             <p className="text-muted-foreground">Great work on your review session</p>
@@ -161,7 +187,7 @@ export function StudySession() {
                 <div className="text-xs text-muted-foreground">Hard</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-green-500 mb-1">{stats.ratings.good}</div>
+                <div className="text-2xl font-bold text-primary mb-1">{stats.ratings.good}</div>
                 <div className="text-xs text-muted-foreground">Good</div>
               </div>
               <div className="text-center">
@@ -229,7 +255,7 @@ export function StudySession() {
       {/* Progress Bar */}
       <div className="h-1 bg-muted">
         <motion.div
-          className="h-full bg-gradient-to-r from-primary to-green-500"
+          className="h-full bg-gradient-to-r from-primary to-primary/80"
           initial={{ width: 0 }}
           animate={{ width: `${session.progress.percentage}%` }}
           transition={{ duration: 0.3 }}
@@ -323,13 +349,14 @@ export function StudySession() {
       </AnimatePresence>
 
       {/* Card Display Area */}
-      <main className="flex-1 flex items-center justify-center p-4 sm:p-6 lg:p-8">
-        <div className="w-full max-w-3xl">
-          {/* 3D Card Container */}
+      <main className="flex-1 flex flex-col items-center justify-start p-4 sm:p-6 lg:p-8 overflow-auto">
+        <div className="w-full max-w-6xl flex flex-col gap-6">
+          {/* 3D Card Container - uses calc to fill available space */}
           <div
             className="relative w-full"
             style={{
               perspective: '1000px',
+              height: 'calc(100vh - 280px)',
               minHeight: '400px',
             }}
           >
@@ -378,70 +405,71 @@ export function StudySession() {
             </motion.div>
           </div>
 
-          {/* Show Answer Button */}
-          {!session.showAnswer && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="mt-6 text-center"
-            >
-              <Button
-                onClick={handleShowAnswer}
-                size="lg"
-                className="px-12"
-              >
-                Show Answer
-              </Button>
-              <p className="text-sm text-muted-foreground mt-2">or press Space</p>
-            </motion.div>
-          )}
-
-          {/* Rating Buttons */}
-          <AnimatePresence>
-            {session.showAnswer && schedulingInfo && (
+          {/* Show Answer Button / Rating Buttons - Fixed at bottom */}
+          <div className="flex-shrink-0">
+            {!session.showAnswer && (
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 20 }}
-                className="mt-6"
+                className="text-center"
               >
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                  <RatingButton
-                    rating={Rating.Again}
-                    label="Again"
-                    interval={schedulingInfo.again.intervalText}
-                    color="red"
-                    shortcut="1"
-                    onClick={() => handleRating(Rating.Again)}
-                  />
-                  <RatingButton
-                    rating={Rating.Hard}
-                    label="Hard"
-                    interval={schedulingInfo.hard.intervalText}
-                    color="orange"
-                    shortcut="2"
-                    onClick={() => handleRating(Rating.Hard)}
-                  />
-                  <RatingButton
-                    rating={Rating.Good}
-                    label="Good"
-                    interval={schedulingInfo.good.intervalText}
-                    color="green"
-                    shortcut="3"
-                    onClick={() => handleRating(Rating.Good)}
-                  />
-                  <RatingButton
-                    rating={Rating.Easy}
-                    label="Easy"
-                    interval={schedulingInfo.easy.intervalText}
-                    color="blue"
-                    shortcut="4"
-                    onClick={() => handleRating(Rating.Easy)}
-                  />
-                </div>
+                <Button
+                  onClick={handleShowAnswer}
+                  size="lg"
+                  className="px-12"
+                >
+                  Show Answer
+                </Button>
+                <p className="text-sm text-muted-foreground mt-2">or press Space</p>
               </motion.div>
             )}
-          </AnimatePresence>
+
+            {/* Rating Buttons */}
+            <AnimatePresence>
+              {session.showAnswer && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 20 }}
+                >
+                  <div className="flex gap-2 justify-center">
+                    <RatingButton
+                      rating={Rating.Again}
+                      label="Again"
+                      interval="1m"
+                      color="red"
+                      shortcut="1"
+                      onClick={() => handleRating(Rating.Again)}
+                    />
+                    <RatingButton
+                      rating={Rating.Hard}
+                      label="Hard"
+                      interval="6m"
+                      color="orange"
+                      shortcut="2"
+                      onClick={() => handleRating(Rating.Hard)}
+                    />
+                    <RatingButton
+                      rating={Rating.Good}
+                      label="Good"
+                      interval="10m"
+                      color="green"
+                      shortcut="3"
+                      onClick={() => handleRating(Rating.Good)}
+                    />
+                    <RatingButton
+                      rating={Rating.Easy}
+                      label="Easy"
+                      interval="5d"
+                      color="blue"
+                      shortcut="4"
+                      onClick={() => handleRating(Rating.Easy)}
+                    />
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         </div>
       </main>
 
@@ -489,12 +517,12 @@ interface CardSideProps {
 
 function CardSide({ content, label, onImageClick }: CardSideProps) {
   return (
-    <div className="bg-card border-2 border-border rounded-2xl p-6 sm:p-8 shadow-lg min-h-[400px] flex flex-col">
-      <div className="text-xs font-semibold text-primary mb-4 uppercase tracking-wide">
+    <div className="bg-card border-2 border-border rounded-2xl p-6 sm:p-8 shadow-lg h-full flex flex-col">
+      <div className="text-xs font-semibold text-primary mb-4 uppercase tracking-wide flex-shrink-0">
         {label}
       </div>
 
-      <div className="flex-1 overflow-y-auto">
+      <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-muted-foreground/20 scrollbar-track-transparent">
         {/* Markdown Content */}
         <div className="prose prose-sm sm:prose dark:prose-invert max-w-none">
           <ReactMarkdown
@@ -551,20 +579,14 @@ function RatingButton({ label, interval, color, shortcut, onClick }: RatingButto
     <button
       onClick={onClick}
       className={`
-        relative p-4 rounded-xl border-2 transition-all duration-200
-        hover:scale-105 active:scale-95
+        relative px-4 py-2 rounded-lg border-2 transition-all duration-200
+        hover:scale-105 active:scale-95 flex items-center gap-2
         ${colorClasses[color]}
       `}
     >
-      <div className="text-center">
-        <div className="font-bold text-sm sm:text-base mb-1">{label}</div>
-        <div className="text-xs opacity-75 mb-2">{interval}</div>
-        <div className="text-xs opacity-50">
-          <kbd className="px-1.5 py-0.5 rounded bg-background/50 border border-current">
-            {shortcut}
-          </kbd>
-        </div>
-      </div>
+      <span className="font-medium text-sm">{label}</span>
+      <span className="text-xs opacity-70">&lt;{interval}</span>
+      <span className="text-[10px] opacity-40 ml-1">({shortcut})</span>
     </button>
   )
 }

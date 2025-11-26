@@ -16,6 +16,7 @@ import {
   Check,
   AlertCircle,
   Sparkles,
+  Copy,
 } from 'lucide-react'
 import { useFlashcards } from '../hooks'
 import { useAuth } from '@/contexts/AuthContext'
@@ -60,6 +61,7 @@ export function DeckBrowser() {
     totalDue,
     createDeck,
     deleteDeck,
+    copyDeck,
   } = useFlashcards()
 
   // UI state
@@ -192,6 +194,23 @@ export function DeckBrowser() {
     } catch (error) {
       console.error('Error deleting deck:', error)
       alert('Failed to delete deck. Please try again.')
+    }
+  }
+
+  // Handle copy deck
+  const handleCopyDeck = async (deckId: string) => {
+    if (!user?.uid) {
+      alert('You must be logged in to copy a deck.')
+      return
+    }
+
+    try {
+      await copyDeck(deckId, user.uid)
+      setShowOptionsMenu(null)
+      alert('Deck copied to your collection!')
+    } catch (error) {
+      console.error('Error copying deck:', error)
+      alert('Failed to copy deck. Please try again.')
     }
   }
 
@@ -351,6 +370,7 @@ export function DeckBrowser() {
                   onStudy={() => navigate(`/flashcards/study/${deck.id}`)}
                   onEdit={() => navigate(`/flashcards/deck/${deck.id}`)}
                   onDelete={() => handleDeleteDeck(deck.id)}
+                  onCopy={() => handleCopyDeck(deck.id)}
                   onClick={() => navigate(`/flashcards/deck/${deck.id}`)}
                   formatLastStudied={formatLastStudied}
                   showOptionsMenu={showOptionsMenu}
@@ -387,6 +407,7 @@ export function DeckBrowser() {
                   onStudy={() => navigate(`/flashcards/study/${deck.id}`)}
                   onEdit={() => navigate(`/flashcards/deck/${deck.id}`)}
                   onDelete={() => handleDeleteDeck(deck.id)}
+                  onCopy={() => handleCopyDeck(deck.id)}
                   onClick={() => navigate(`/flashcards/deck/${deck.id}`)}
                   formatLastStudied={formatLastStudied}
                   showOptionsMenu={showOptionsMenu}
@@ -445,6 +466,7 @@ interface DeckCardProps {
   onStudy: () => void
   onEdit: () => void
   onDelete: () => void
+  onCopy: () => void
   onClick: () => void
   formatLastStudied: (deck: Deck) => string
   showOptionsMenu: string | null
@@ -458,6 +480,7 @@ function DeckCard({
   onStudy,
   onEdit,
   onDelete,
+  onCopy,
   onClick,
   formatLastStudied,
   showOptionsMenu,
@@ -514,9 +537,21 @@ function DeckCard({
                   animate={{ opacity: 1, scale: 1, y: 0 }}
                   exit={{ opacity: 0, scale: 0.95, y: -10 }}
                   transition={{ duration: 0.15 }}
-                  className="absolute right-0 top-full mt-1 w-40 bg-popover border border-border rounded-lg shadow-lg z-50 overflow-hidden"
+                  className="absolute right-0 top-full mt-1 w-48 bg-popover border border-border rounded-lg shadow-lg z-50 overflow-hidden"
                   onClick={(e) => e.stopPropagation()}
                 >
+                  {isPreloaded && (
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        onCopy()
+                      }}
+                      className="w-full flex items-center gap-2 px-3 py-2 text-sm hover:bg-muted transition-colors text-left"
+                    >
+                      <Copy className="w-4 h-4" />
+                      Copy to My Decks
+                    </button>
+                  )}
                   <button
                     onClick={(e) => {
                       e.stopPropagation()
@@ -526,7 +561,7 @@ function DeckCard({
                     className="w-full flex items-center gap-2 px-3 py-2 text-sm hover:bg-muted transition-colors text-left"
                   >
                     <Edit className="w-4 h-4" />
-                    Edit
+                    {isPreloaded ? 'View Cards' : 'Edit'}
                   </button>
                   {!isPreloaded && (
                     <button
@@ -581,18 +616,16 @@ function DeckCard({
         </div>
 
         {/* Study Button */}
-        <Button
+        <button
           onClick={(e) => {
             e.stopPropagation()
             onStudy()
           }}
-          variant={hasDue ? 'default' : 'outline'}
-          className="w-full gap-2"
-          size="sm"
+          className="w-full flex items-center justify-center gap-2 h-9 px-3 rounded-md text-sm font-medium bg-[#0066CC] text-white hover:bg-[#0055AA] transition-colors"
         >
           <Play className="w-4 h-4" />
           Study {hasDue && `(${dueCount})`}
-        </Button>
+        </button>
 
         {/* Preloaded Badge */}
         {isPreloaded && (
