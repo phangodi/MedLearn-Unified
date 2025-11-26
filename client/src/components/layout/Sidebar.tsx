@@ -16,7 +16,8 @@ import {
   LogOut,
   Moon,
   Sun,
-  Bell
+  Bell,
+  Layers
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { Logo } from '@/components/ui/Logo'
@@ -142,6 +143,7 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
 
   const tools = [
     { name: 'AI Exam Prep', icon: Sparkles, path: '/ai-prep' },
+    { name: 'Flashcards', icon: Layers, path: '/flashcards' },
     { name: 'Community', icon: Users, path: '/community' },
   ]
 

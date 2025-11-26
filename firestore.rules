@@ -85,5 +85,59 @@ service cloud.firestore {
       allow write: if isSuperAdmin(); // Only super admins can modify settings
     }
 
+    // ========================================
+    // FLASHCARDS COLLECTIONS
+    // ========================================
+
+    // Flashcard Decks
+    match /flashcards/decks/items/{deckId} {
+      // Anyone signed in can read preloaded decks
+      // Users can only read their own decks
+      allow read: if isSignedIn() && (
+        resource.data.isPreloaded == true ||
+        resource.data.userId == request.auth.uid
+      );
+
+      // Users can create decks for themselves
+      allow create: if isSignedIn() &&
+        request.resource.data.userId == request.auth.uid;
+
+      // Users can update/delete their own decks
+      allow update, delete: if isSignedIn() &&
+        resource.data.userId == request.auth.uid;
+    }
+
+    // Flashcard Cards
+    match /flashcards/cards/items/{cardId} {
+      // Users can read cards from their decks or preloaded decks
+      allow read: if isSignedIn();
+
+      // Users can create cards with their userId
+      allow create: if isSignedIn() &&
+        request.resource.data.userId == request.auth.uid;
+
+      // Users can update/delete their own cards
+      allow update, delete: if isSignedIn() &&
+        resource.data.userId == request.auth.uid;
+    }
+
+    // Flashcard Reviews (user's review history)
+    match /flashcards/reviews/items/{reviewId} {
+      // Users can only access their own reviews
+      allow read, write: if isSignedIn() &&
+        request.resource.data.userId == request.auth.uid;
+    }
+
+    // Flashcard Sessions (study sessions)
+    match /flashcards/sessions/items/{sessionId} {
+      // Users can only access their own sessions
+      allow read: if isSignedIn() &&
+        resource.data.userId == request.auth.uid;
+      allow create: if isSignedIn() &&
+        request.resource.data.userId == request.auth.uid;
+      allow update: if isSignedIn() &&
+        resource.data.userId == request.auth.uid;
+    }
+
   }
 }
