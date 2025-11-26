@@ -218,18 +218,27 @@ export function QuestionCard({
             </p>
           )}
 
-          {/* Explanation */}
-          {question.explanation ? (
-            <div className="bg-card rounded-lg p-4 border border-border">
-              <h4 className="font-semibold text-foreground mb-2">Explanation</h4>
-              <p className="text-sm text-muted-foreground">{question.explanation}</p>
-            </div>
-          ) : (
-            <div className="bg-card rounded-lg p-4 border border-border">
-              <p className="text-sm text-muted-foreground italic">
-                Explanation not yet available for this question.
-              </p>
-            </div>
+          {/* ============================================================
+              EXPLANATION SECTION - TEMPORARILY HIDDEN
+              To re-enable: Change SHOW_EXPLANATION_SECTION to true
+              ============================================================ */}
+          {/* SHOW_EXPLANATION_SECTION = false - Set to true when explanations are ready */}
+          {false && (
+            <>
+              {/* Explanation */}
+              {question.explanation ? (
+                <div className="bg-card rounded-lg p-4 border border-border">
+                  <h4 className="font-semibold text-foreground mb-2">Explanation</h4>
+                  <p className="text-sm text-muted-foreground">{question.explanation}</p>
+                </div>
+              ) : (
+                <div className="bg-card rounded-lg p-4 border border-border">
+                  <p className="text-sm text-muted-foreground italic">
+                    Explanation not yet available for this question.
+                  </p>
+                </div>
+              )}
+            </>
           )}
         </motion.div>
       )}

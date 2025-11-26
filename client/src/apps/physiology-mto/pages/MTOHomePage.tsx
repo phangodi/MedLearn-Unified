@@ -140,8 +140,8 @@ export function MTOHomePage() {
                             <span className="text-sm text-muted-foreground ml-2">
                               ({selectedInGroup}/{topics.length} topics)
                             </span>
-                            <span className="text-sm text-primary ml-2">
-                              • {mcqQuestionCount} Qs
+                            <span className="text-sm text-muted-foreground ml-2">
+                              • {mcqQuestionCount} {mcqQuestionCount === 1 ? 'question' : 'questions'} available
                             </span>
                           </div>
                         </div>

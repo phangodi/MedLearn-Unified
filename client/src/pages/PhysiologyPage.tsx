@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/Button'
 import { LogOut, Activity, BookOpen, ClipboardCheck } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import { useAuth } from '@/contexts/AuthContext'
+import topicsData from '@/apps/physiology/data/Topics'
 
 export function PhysiologyPage() {
   const navigate = useNavigate()
@@ -30,7 +31,7 @@ export function PhysiologyPage() {
     {
       id: 'topics',
       name: 'Topics',
-      title: 'All 51 Topics',
+      title: `${topicsData.length} Topics Ready`,
       description: 'Learning objectives, exam answers, and audio explanations',
       enabled: true,
       image: '/subjects/physio_topics.png',
