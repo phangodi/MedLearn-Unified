@@ -15,6 +15,19 @@ import { getUserReviews, getDeckCards } from '@/apps/flashcards/services/flashca
 import { getDueCards } from '@/apps/flashcards/services/fsrsService'
 import { Rating } from 'ts-fsrs'
 
+/**
+ * Helper to convert Firestore Timestamps to JavaScript Dates
+ */
+function toDate(date: any): Date {
+  if (date instanceof Date) {
+    return date
+  }
+  if (typeof date?.toDate === 'function') {
+    return date.toDate()
+  }
+  return new Date(date)
+}
+
 export interface DeckStats {
   // Cards due
   dueToday: number
@@ -112,17 +125,17 @@ export function useDeckStats(deck: Deck | null, userId: string | null): DeckStat
         !c.suspended &&
         !c.buried &&
         (c.fsrs.state === 1 || c.fsrs.state === 3) && // State.Learning or State.Relearning
-        c.fsrs.due <= now
+        toDate(c.fsrs.due) <= now
     ).length
     const reviewCardsAvailable = cards.filter(
-      (c) => !c.suspended && !c.buried && c.fsrs.state === 2 && c.fsrs.due <= now // State.Review
+      (c) => !c.suspended && !c.buried && c.fsrs.state === 2 && toDate(c.fsrs.due) <= now // State.Review
     ).length
 
     // Cards due in next 7 days
     const oneWeekFromNow = new Date(now)
     oneWeekFromNow.setDate(oneWeekFromNow.getDate() + 7)
     const dueThisWeek = cards.filter(
-      (c) => !c.suspended && !c.buried && c.fsrs.due <= oneWeekFromNow
+      (c) => !c.suspended && !c.buried && toDate(c.fsrs.due) <= oneWeekFromNow
     ).length
 
     // =============================================================================
@@ -330,7 +343,7 @@ function generateForecast(
     date.setHours(23, 59, 59, 999) // End of day
 
     // Count cards due by this date
-    const dueCards = cards.filter((c) => !c.suspended && !c.buried && c.fsrs.due <= date)
+    const dueCards = cards.filter((c) => !c.suspended && !c.buried && toDate(c.fsrs.due) <= date)
 
     const newCount = dueCards.filter((c) => c.fsrs.state === 0).length // State.New
     const reviewCount = dueCards.filter(

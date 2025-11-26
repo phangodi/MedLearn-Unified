@@ -43,6 +43,120 @@ import {
   isPreloadedDeck,
 } from '@/apps/flashcards/data/preloaded'
 
+// =============================================================================
+// LOCAL STORAGE HELPERS FOR PRELOADED DECK PROGRESS
+// =============================================================================
+
+const PRELOADED_PROGRESS_KEY = 'medlearn_preloaded_progress'
+
+interface PreloadedCardProgress {
+  fsrs: {
+    due: string // ISO date string
+    stability: number
+    difficulty: number
+    elapsed_days: number
+    scheduled_days: number
+    reps: number
+    lapses: number
+    state: number
+    last_review?: string // ISO date string
+  }
+  suspended: boolean
+  buried?: boolean
+}
+
+interface PreloadedDeckProgress {
+  [cardId: string]: PreloadedCardProgress
+}
+
+interface AllPreloadedProgress {
+  [deckId: string]: PreloadedDeckProgress
+}
+
+/**
+ * Save progress for a preloaded deck card to localStorage
+ */
+function savePreloadedCardProgress(
+  deckId: string,
+  cardId: string,
+  fsrs: FlashCard['fsrs'],
+  suspended: boolean = false,
+  buried: boolean = false
+): void {
+  try {
+    const stored = localStorage.getItem(PRELOADED_PROGRESS_KEY)
+    const allProgress: AllPreloadedProgress = stored ? JSON.parse(stored) : {}
+
+    if (!allProgress[deckId]) {
+      allProgress[deckId] = {}
+    }
+
+    // Convert dates to ISO strings for storage
+    allProgress[deckId][cardId] = {
+      fsrs: {
+        due: fsrs.due instanceof Date ? fsrs.due.toISOString() : String(fsrs.due),
+        stability: fsrs.stability,
+        difficulty: fsrs.difficulty,
+        elapsed_days: fsrs.elapsed_days,
+        scheduled_days: fsrs.scheduled_days,
+        reps: fsrs.reps,
+        lapses: fsrs.lapses,
+        state: fsrs.state,
+        last_review: fsrs.last_review
+          ? (fsrs.last_review instanceof Date ? fsrs.last_review.toISOString() : String(fsrs.last_review))
+          : undefined,
+      },
+      suspended,
+      buried,
+    }
+
+    localStorage.setItem(PRELOADED_PROGRESS_KEY, JSON.stringify(allProgress))
+  } catch (error) {
+    console.error('Error saving preloaded card progress:', error)
+  }
+}
+
+/**
+ * Get progress for all cards in a preloaded deck from localStorage
+ */
+function getPreloadedDeckProgress(deckId: string): PreloadedDeckProgress | null {
+  try {
+    const stored = localStorage.getItem(PRELOADED_PROGRESS_KEY)
+    if (!stored) return null
+
+    const allProgress: AllPreloadedProgress = JSON.parse(stored)
+    return allProgress[deckId] || null
+  } catch (error) {
+    console.error('Error loading preloaded deck progress:', error)
+    return null
+  }
+}
+
+/**
+ * Convert stored progress back to FSRS card state
+ */
+function restoreCardProgress(stored: PreloadedCardProgress): {
+  fsrs: FlashCard['fsrs']
+  suspended: boolean
+  buried: boolean
+} {
+  return {
+    fsrs: {
+      due: new Date(stored.fsrs.due),
+      stability: stored.fsrs.stability,
+      difficulty: stored.fsrs.difficulty,
+      elapsed_days: stored.fsrs.elapsed_days,
+      scheduled_days: stored.fsrs.scheduled_days,
+      reps: stored.fsrs.reps,
+      lapses: stored.fsrs.lapses,
+      state: stored.fsrs.state,
+      last_review: stored.fsrs.last_review ? new Date(stored.fsrs.last_review) : undefined,
+    },
+    suspended: stored.suspended,
+    buried: stored.buried || false,
+  }
+}
+
 interface FlashcardState {
   // =============================================================================
   // STATE - Decks
@@ -421,8 +535,33 @@ export const useFlashcardStore = create<FlashcardState>((set, get) => ({
       // Check if it's a preloaded deck first
       if (isPreloadedDeck(deckId)) {
         const preloadedCardsData = getPreloadedCards(deckId)
+        // Get saved progress from localStorage
+        const savedProgress = getPreloadedDeckProgress(deckId)
+
         // Convert preloaded cards to FlashCard format with FSRS state
         const cards: FlashCard[] = preloadedCardsData.map((cardData) => {
+          // Check if we have saved progress for this card
+          const cardProgress = savedProgress?.[cardData.id]
+
+          if (cardProgress) {
+            // Restore saved progress
+            const restored = restoreCardProgress(cardProgress)
+            return {
+              id: cardData.id,
+              deckId: deckId,
+              userId: '', // Preloaded cards don't have a user
+              front: cardData.front,
+              back: cardData.back,
+              tags: cardData.tags || [],
+              fsrs: restored.fsrs,
+              suspended: restored.suspended,
+              buried: restored.buried,
+              createdAt: { seconds: Date.now() / 1000, nanoseconds: 0 } as any,
+              updatedAt: { seconds: Date.now() / 1000, nanoseconds: 0 } as any,
+            }
+          }
+
+          // No saved progress - create fresh card state
           const newCardFSRS = createNewCard()
           return {
             id: cardData.id,
@@ -549,9 +688,15 @@ export const useFlashcardStore = create<FlashcardState>((set, get) => ({
           throw new Error('No cards loaded. Please load the deck first.')
         }
         // All preloaded cards are considered "due" since they're new
-        dueCards = cards.filter(card =>
-          card.fsrs.due.getTime() <= Date.now() || card.fsrs.state === State.New
-        )
+        // Use toDate helper to handle Firestore Timestamps and Date objects
+        dueCards = cards.filter(card => {
+          const dueDate = card.fsrs.due instanceof Date
+            ? card.fsrs.due
+            : typeof (card.fsrs.due as any)?.toDate === 'function'
+              ? (card.fsrs.due as any).toDate()
+              : new Date(card.fsrs.due as any)
+          return dueDate.getTime() <= Date.now() || card.fsrs.state === State.New
+        })
       } else {
         // Get due cards from Firestore
         dueCards = await getDueCardsService(deckId, userId)
@@ -679,8 +824,40 @@ export const useFlashcardStore = create<FlashcardState>((set, get) => ({
       // Schedule the card with FSRS
       const { card: updatedFSRS, log } = scheduleCard(currentCard.fsrs, rating, scheduler)
 
-      // For non-preloaded decks, save to Firestore
-      if (!isPreloadedDeck(session.deckId)) {
+      // Create the updated card with new FSRS state
+      const updatedCard: FlashCard = {
+        ...currentCard,
+        fsrs: {
+          due: updatedFSRS.due,
+          stability: updatedFSRS.stability,
+          difficulty: updatedFSRS.difficulty,
+          elapsed_days: updatedFSRS.elapsed_days,
+          scheduled_days: updatedFSRS.scheduled_days,
+          reps: updatedFSRS.reps,
+          lapses: updatedFSRS.lapses,
+          state: updatedFSRS.state,
+          last_review: updatedFSRS.last_review,
+        },
+      }
+
+      // Update local cards array with new FSRS state
+      const { cards } = get()
+      const updatedCards = cards.map((c) =>
+        c.id === currentCard.id ? updatedCard : c
+      )
+      set({ cards: updatedCards })
+
+      // For preloaded decks, save progress to localStorage
+      if (isPreloadedDeck(session.deckId)) {
+        savePreloadedCardProgress(
+          session.deckId,
+          currentCard.id,
+          updatedCard.fsrs,
+          updatedCard.suspended,
+          updatedCard.buried
+        )
+      } else {
+        // For non-preloaded decks, save to Firestore
         // Update card in Firestore
         await updateCardFSRS(currentCard.id, updatedFSRS)
 

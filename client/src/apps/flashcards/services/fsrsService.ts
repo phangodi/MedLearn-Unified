@@ -156,8 +156,15 @@ export function scheduleCard(
   const fsrs = scheduler || createFSRSScheduler()
   const timestamp = now || new Date()
 
+  // Convert Firestore Timestamps to JavaScript Dates for ts-fsrs compatibility
+  const normalizedCard: Card = {
+    ...card,
+    due: toDate(card.due),
+    last_review: card.last_review ? toDate(card.last_review) : undefined,
+  }
+
   // Get scheduling info for all ratings
-  const scheduling = fsrs.repeat(card, timestamp)
+  const scheduling = fsrs.repeat(normalizedCard, timestamp)
 
   // Extract the result for the chosen rating based on Rating enum value
   let result
@@ -203,7 +210,14 @@ export function getSchedulingInfo(
   const fsrs = scheduler || createFSRSScheduler()
   const timestamp = now || new Date()
 
-  const scheduling = fsrs.repeat(card, timestamp)
+  // Convert Firestore Timestamps to JavaScript Dates for ts-fsrs compatibility
+  const normalizedCard: Card = {
+    ...card,
+    due: toDate(card.due),
+    last_review: card.last_review ? toDate(card.last_review) : undefined,
+  }
+
+  const scheduling = fsrs.repeat(normalizedCard, timestamp)
 
   return {
     again: {

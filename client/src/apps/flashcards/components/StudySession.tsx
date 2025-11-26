@@ -21,6 +21,7 @@ import 'katex/dist/katex.min.css'
 import { ArrowLeft, Pause, Play, RotateCcw, Clock, CheckCircle } from 'lucide-react'
 import { useStudySession } from '../hooks/useStudySession'
 import { useFlashcards } from '../hooks/useFlashcards'
+import { useFlashcardStore } from '@/store/flashcardStore'
 import { Button } from '@/components/ui/Button'
 import { Rating } from '../types/flashcard'
 import { getSchedulingInfo } from '../services/fsrsService'
@@ -44,31 +45,32 @@ export function StudySession() {
     const initSession = async () => {
       try {
         // Step 1: Load deck first
-        if (!flashcards.currentDeck || flashcards.currentDeck.id !== deckId) {
+        // Use getState() to check current state (not stale closure values)
+        const currentState = useFlashcardStore.getState()
+        if (!currentState.currentDeck || currentState.currentDeck.id !== deckId) {
           await flashcards.loadDeck(deckId)
         }
 
-        // Step 2: Load cards and wait for them to be available
-        if (!flashcards.currentDeck || flashcards.currentDeck.id !== deckId) {
+        // Step 2: Check deck loaded successfully using fresh state
+        const stateAfterDeckLoad = useFlashcardStore.getState()
+        if (!stateAfterDeckLoad.currentDeck || stateAfterDeckLoad.currentDeck.id !== deckId) {
           console.error('Failed to load deck')
           navigate('/flashcards')
           return
         }
 
+        // Step 3: Load cards
         await flashcards.loadCards(deckId)
 
-        // Step 3: Verify cards are loaded before starting session
-        // Wait a brief moment for the store to update
-        await new Promise(resolve => setTimeout(resolve, 100))
-
-        // Check if we have cards loaded
-        if (!flashcards.cards || flashcards.cards.length === 0) {
+        // Step 4: Verify cards are loaded using fresh state
+        const stateAfterCardsLoad = useFlashcardStore.getState()
+        if (!stateAfterCardsLoad.cards || stateAfterCardsLoad.cards.length === 0) {
           console.error('No cards available after loading')
           navigate('/flashcards')
           return
         }
 
-        // Step 4: Start session only after deck and cards are ready
+        // Step 5: Start session only after deck and cards are ready
         if (!session.isActive) {
           await session.startSession(deckId)
         }

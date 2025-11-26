@@ -14,6 +14,19 @@ import { useFlashcardStore } from '@/store/flashcardStore'
 import { getDueCards, countCardsByState } from '@/apps/flashcards/services/fsrsService'
 
 /**
+ * Helper to convert Firestore Timestamps to JavaScript Dates
+ */
+function toDate(date: any): Date {
+  if (date instanceof Date) {
+    return date
+  }
+  if (typeof date?.toDate === 'function') {
+    return date.toDate()
+  }
+  return new Date(date)
+}
+
+/**
  * Main flashcard hook with auto-loading and computed values
  */
 export function useFlashcards() {
@@ -113,7 +126,7 @@ export function useFlashcards() {
 
     // Apply due date filter
     if (store.filters.dueBefore) {
-      filtered = filtered.filter((card) => card.fsrs.due <= store.filters.dueBefore!)
+      filtered = filtered.filter((card) => toDate(card.fsrs.due) <= store.filters.dueBefore!)
     }
 
     return filtered

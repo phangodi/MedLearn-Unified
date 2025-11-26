@@ -35,6 +35,20 @@ import 'katex/dist/katex.min.css'
 type SortOption = 'due' | 'created' | 'alphabetical'
 type FilterOption = 'all' | 'due' | 'new' | 'suspended'
 
+/**
+ * Helper to convert Firestore Timestamps to JavaScript Dates
+ * Firestore returns Timestamps that have toDate() method, not getTime()
+ */
+function toDate(date: any): Date {
+  if (date instanceof Date) {
+    return date
+  }
+  if (typeof date?.toDate === 'function') {
+    return date.toDate()
+  }
+  return new Date(date)
+}
+
 export function DeckDetail() {
   const { deckId } = useParams()
   const navigate = useNavigate()
@@ -119,7 +133,7 @@ export function DeckDetail() {
     // Apply filter
     switch (filterOption) {
       case 'due':
-        filtered = filtered.filter(card => card.fsrs.due.getTime() <= Date.now())
+        filtered = filtered.filter(card => toDate(card.fsrs.due).getTime() <= Date.now())
         break
       case 'new':
         filtered = filtered.filter(card => card.fsrs.state === State.New)
@@ -133,7 +147,7 @@ export function DeckDetail() {
     filtered.sort((a, b) => {
       switch (sortOption) {
         case 'due':
-          return a.fsrs.due.getTime() - b.fsrs.due.getTime()
+          return toDate(a.fsrs.due).getTime() - toDate(b.fsrs.due).getTime()
         case 'created':
           return b.createdAt.seconds - a.createdAt.seconds
         case 'alphabetical':
@@ -169,7 +183,7 @@ export function DeckDetail() {
   // Due date display
   const getDueDisplay = (card: FlashCard) => {
     const now = Date.now()
-    const due = card.fsrs.due.getTime()
+    const due = toDate(card.fsrs.due).getTime()
     const diffMs = due - now
     const diffDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24))
 
