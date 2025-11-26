@@ -22,7 +22,7 @@ export function MTOHomePage() {
     error
   } = useTest();
 
-  const [expandedMcqs, setExpandedMcqs] = useState<string[]>(['mcq-3']);
+  const [expandedMcqs, setExpandedMcqs] = useState<string[]>([]);
   const [availableTests, setAvailableTests] = useState<string[]>([]);
   const topicsGrouped = getTopicsGroupedByMcq();
 
@@ -120,7 +120,7 @@ export function MTOHomePage() {
                   const selectedInGroup = topics.filter(t =>
                     config.selectedTopics.includes(t.number)
                   ).length;
-                  // allSelected can be used for future "Select All" checkbox state
+                  const mcqQuestionCount = getMcqQuestionCount(mcq.id);
 
                   return (
                     <div key={mcq.id} className="border border-border rounded-lg overflow-hidden">
@@ -139,6 +139,9 @@ export function MTOHomePage() {
                             <span className="font-medium text-foreground">{mcq.name}</span>
                             <span className="text-sm text-muted-foreground ml-2">
                               ({selectedInGroup}/{topics.length} topics)
+                            </span>
+                            <span className="text-sm text-primary ml-2">
+                              • {mcqQuestionCount} Qs
                             </span>
                           </div>
                         </div>

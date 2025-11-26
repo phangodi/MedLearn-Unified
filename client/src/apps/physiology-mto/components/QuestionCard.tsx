@@ -48,8 +48,10 @@ export function QuestionCard({
     const wasSelected = submittedAnswers?.includes(letter);
     const isCorrectAnswer = question.correctAnswers.includes(letter);
 
-    if (isCorrectAnswer) return 'correct';
-    if (wasSelected && !isCorrectAnswer) return 'incorrect';
+    // Highlight user's selections, but show checkmarks on all correct answers
+    if (wasSelected && isCorrectAnswer) return 'correct';       // Selected + correct = green highlight + checkmark
+    if (wasSelected && !isCorrectAnswer) return 'incorrect';    // Selected + wrong = red highlight + X
+    if (!wasSelected && isCorrectAnswer) return 'missed';       // Not selected but correct = checkmark only, no highlight
     return 'default';
   };
 
@@ -67,7 +69,7 @@ export function QuestionCard({
               {isMultipleChoice ? (
                 <span className="flex items-center gap-1">
                   <AlertCircle className="w-4 h-4" />
-                  Select {question.correctAnswerCount} correct answers
+                  Select all correct answers
                 </span>
               ) : (
                 'Select one answer'
@@ -96,44 +98,54 @@ export function QuestionCard({
                 ${state === 'selected' && 'border-primary bg-primary/10'}
                 ${state === 'correct' && 'border-green-500 bg-green-500/10'}
                 ${state === 'incorrect' && 'border-red-500 bg-red-500/10'}
+                ${state === 'missed' && 'border-border bg-card'}
                 ${isAnswered ? 'cursor-default' : 'cursor-pointer'}
               `}
             >
-              {/* Option Letter */}
+              {/* Option Letter - Always visible */}
               <span
                 className={`
                   flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center
                   text-sm font-semibold uppercase
                   ${state === 'default' && 'bg-muted text-muted-foreground'}
                   ${state === 'selected' && 'bg-primary text-primary-foreground'}
-                  ${state === 'correct' && 'bg-green-500 text-white'}
-                  ${state === 'incorrect' && 'bg-red-500 text-white'}
+                  ${state === 'correct' && 'bg-green-500 text-white dark:bg-green-500/20 dark:text-green-300'}
+                  ${state === 'incorrect' && 'bg-red-500 text-white dark:bg-red-500/20 dark:text-red-300'}
+                  ${state === 'missed' && 'bg-muted text-muted-foreground'}
                 `}
               >
-                {state === 'correct' ? (
-                  <Check className="w-4 h-4" />
-                ) : state === 'incorrect' ? (
-                  <X className="w-4 h-4" />
-                ) : (
-                  option.letter
-                )}
+                {option.letter}
               </span>
 
               {/* Option Text */}
               <span
                 className={`
                   flex-1 text-sm
-                  ${state === 'correct' && 'text-green-700 dark:text-green-300 font-medium'}
-                  ${state === 'incorrect' && 'text-red-700 dark:text-red-300'}
-                  ${(state === 'default' || state === 'selected') && 'text-foreground'}
+                  ${state === 'correct' && 'text-foreground dark:text-green-300 font-medium'}
+                  ${state === 'incorrect' && 'text-foreground dark:text-red-300'}
+                  ${state === 'missed' && 'text-foreground'}
+                  ${state === 'default' && 'text-foreground'}
+                  ${state === 'selected' && 'text-foreground'}
                 `}
               >
                 {option.text}
               </span>
 
-              {/* Checkmark for multi-select */}
+              {/* Checkmark for multi-select (before submit) */}
               {isMultipleChoice && state === 'selected' && (
                 <Check className="w-5 h-5 text-primary flex-shrink-0" />
+              )}
+
+              {/* Result icon on the right (after submit) */}
+              {(state === 'correct' || state === 'missed') && (
+                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center">
+                  <Check className="w-4 h-4 text-white" />
+                </span>
+              )}
+              {state === 'incorrect' && (
+                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-red-500 flex items-center justify-center">
+                  <X className="w-4 h-4 text-white" />
+                </span>
               )}
             </motion.button>
           );
@@ -180,7 +192,7 @@ export function QuestionCard({
                 <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
                   <Check className="w-5 h-5 text-white" />
                 </div>
-                <span className="font-semibold text-green-700 dark:text-green-300">
+                <span className="font-semibold text-foreground dark:text-green-300">
                   Correct!
                 </span>
               </>
@@ -189,7 +201,7 @@ export function QuestionCard({
                 <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
                   <X className="w-5 h-5 text-white" />
                 </div>
-                <span className="font-semibold text-red-700 dark:text-red-300">
+                <span className="font-semibold text-foreground dark:text-red-300">
                   Incorrect
                 </span>
               </>
@@ -200,7 +212,7 @@ export function QuestionCard({
           {!isCorrect && (
             <p className="text-sm text-muted-foreground mb-3">
               Correct answer{question.correctAnswers.length > 1 ? 's' : ''}:{' '}
-              <span className="font-semibold text-green-600 dark:text-green-400">
+              <span className="font-semibold text-foreground dark:text-green-400">
                 {question.correctAnswers.join(', ').toUpperCase()}
               </span>
             </p>

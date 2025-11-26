@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Enable class-based dark mode for Tailwind v4 */
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* Theme configuration for Tailwind v4 */
 @theme {
   --color-border: hsl(var(--border));
