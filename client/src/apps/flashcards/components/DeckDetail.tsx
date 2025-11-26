@@ -180,30 +180,57 @@ export function DeckDetail() {
     }
   }
 
-  // Due date display
+  // Due date display with more specific timing
   const getDueDisplay = (card: FlashCard) => {
-    const now = Date.now()
-    const due = toDate(card.fsrs.due).getTime()
-    const diffMs = due - now
-    const diffDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24))
+    const now = new Date()
+    const dueDate = toDate(card.fsrs.due)
+    const diffMs = dueDate.getTime() - now.getTime()
+    const diffHours = Math.floor(diffMs / (1000 * 60 * 60))
+    const diffMins = Math.floor(diffMs / (1000 * 60))
 
     if (card.fsrs.state === State.New) {
       return 'Not studied'
     }
 
     if (diffMs < 0) {
-      return <span className="text-destructive font-medium">Overdue</span>
+      // Overdue - show how long
+      const overdueHours = Math.abs(diffHours)
+      if (overdueHours < 1) {
+        return <span className="text-destructive font-medium">Overdue ({Math.abs(diffMins)}m)</span>
+      } else if (overdueHours < 24) {
+        return <span className="text-destructive font-medium">Overdue ({overdueHours}h)</span>
+      } else {
+        const overdueDays = Math.ceil(overdueHours / 24)
+        return <span className="text-destructive font-medium">Overdue ({overdueDays}d)</span>
+      }
     }
 
-    if (diffDays === 0) {
-      return <span className="text-primary font-medium">Today</span>
+    // Due in the future
+    if (diffMins < 60) {
+      return <span className="text-primary font-medium">In {diffMins}m</span>
     }
 
-    if (diffDays === 1) {
+    if (diffHours < 24) {
+      return <span className="text-primary font-medium">In {diffHours}h</span>
+    }
+
+    // Check if it's tomorrow (next calendar day)
+    const tomorrow = new Date(now)
+    tomorrow.setDate(tomorrow.getDate() + 1)
+    tomorrow.setHours(23, 59, 59, 999)
+
+    if (dueDate <= tomorrow) {
       return 'Tomorrow'
     }
 
-    return `In ${diffDays} days`
+    // More than tomorrow - show days
+    const diffDays = Math.ceil(diffHours / 24)
+    if (diffDays < 7) {
+      return `In ${diffDays} days`
+    }
+
+    // More than a week - show date
+    return dueDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
   }
 
   // Truncate text
@@ -662,10 +689,10 @@ export function DeckDetail() {
                     className="w-4 h-4 rounded border-border"
                   />
                 </div>
-                <div className="col-span-4">Front</div>
+                <div className="col-span-3">Front</div>
                 <div className="col-span-3">Back</div>
                 <div className="col-span-2">Due</div>
-                <div className="col-span-1">State</div>
+                <div className="col-span-2">State</div>
                 <div className="col-span-1 text-right">Actions</div>
               </div>
 
@@ -688,7 +715,7 @@ export function DeckDetail() {
                         />
                       </div>
                       <div
-                        className="col-span-4 cursor-pointer"
+                        className="col-span-3 cursor-pointer"
                         onClick={() => setExpandedCardId(expandedCardId === card.id ? null : card.id)}
                       >
                         <div className="flex items-start gap-2">
@@ -710,7 +737,7 @@ export function DeckDetail() {
                       <div className="col-span-2">
                         <p className="text-sm">{getDueDisplay(card)}</p>
                       </div>
-                      <div className="col-span-1">
+                      <div className="col-span-2">
                         {getStateBadge(card)}
                       </div>
                       <div className="col-span-1 flex items-center justify-end gap-2">

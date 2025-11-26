@@ -497,13 +497,30 @@ export async function getDueCards(
     )
     const cardsSnapshot = await getDocs(cardsQuery)
 
-    // Filter cards where fsrs.due <= now
+    // Filter cards that are available for study:
+    // 1. New cards (never studied, always available)
+    // 2. Learning/Relearning cards (in active learning phase)
+    // 3. Review cards where due date has passed
     const dueCards = cardsSnapshot.docs
       .map((doc) => docToData<FlashCard>(doc.data(), doc.id))
       .filter((card) => {
+        // New cards are always available for study
+        if (card.fsrs.state === 0) { // State.New = 0
+          return true
+        }
+
+        // Learning and Relearning cards are in active study phase
+        // Include them even if their due date is slightly in the future
+        if (card.fsrs.state === 1 || card.fsrs.state === 3) { // State.Learning = 1, State.Relearning = 3
+          return true
+        }
+
+        // Review cards: only include if due date has passed
         const dueDate = card.fsrs.due instanceof Date
           ? card.fsrs.due
-          : (card.fsrs.due as any).toDate()
+          : typeof (card.fsrs.due as any)?.toDate === 'function'
+            ? (card.fsrs.due as any).toDate()
+            : new Date(card.fsrs.due as any)
         return dueDate <= now
       })
 
@@ -777,6 +794,7 @@ export async function getUserSessions(
 /**
  * Recalculates and updates deck statistics
  * Counts cards by state: new, learning, review
+ * Also computes dueCount (cards ready to study now)
  * @param deckId - ID of the deck to update stats for
  */
 export async function updateDeckStats(deckId: string): Promise<void> {
@@ -785,24 +803,42 @@ export async function updateDeckStats(deckId: string): Promise<void> {
   try {
     // Get all cards in the deck
     const cards = await getDeckCards(deckId)
+    const now = new Date()
 
-    // Calculate counts
+    // Calculate counts (excluding suspended/buried cards)
     const cardCount = cards.length
     let newCount = 0
     let learningCount = 0
     let reviewCount = 0
+    let dueCount = 0
 
     cards.forEach((card) => {
+      // Skip suspended and buried cards for active counts
+      if (card.suspended || card.buried) {
+        return
+      }
+
       switch (card.fsrs.state) {
         case State.New:
           newCount++
+          dueCount++ // New cards are always available
           break
         case State.Learning:
         case State.Relearning:
           learningCount++
+          dueCount++ // Learning cards are in active study
           break
         case State.Review:
           reviewCount++
+          // Review cards: only count as due if due date has passed
+          const dueDate = card.fsrs.due instanceof Date
+            ? card.fsrs.due
+            : typeof (card.fsrs.due as any)?.toDate === 'function'
+              ? (card.fsrs.due as any).toDate()
+              : new Date(card.fsrs.due as any)
+          if (dueDate <= now) {
+            dueCount++
+          }
           break
       }
     })
@@ -814,6 +850,7 @@ export async function updateDeckStats(deckId: string): Promise<void> {
       newCount,
       learningCount,
       reviewCount,
+      dueCount,
       updatedAt: serverTimestamp(),
     })
   } catch (error) {

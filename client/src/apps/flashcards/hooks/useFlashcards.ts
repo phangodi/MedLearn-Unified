@@ -45,7 +45,9 @@ export function useFlashcards() {
     if (!user?.uid) return 0
 
     return store.decks.reduce((total, deck) => {
-      return total + deck.reviewCount + deck.learningCount
+      // Use dueCount if available (computed accurately), fallback to old method
+      const deckDue = deck.dueCount ?? (deck.reviewCount + deck.learningCount)
+      return total + deckDue
     }, 0)
   }, [store.decks, user?.uid])
 

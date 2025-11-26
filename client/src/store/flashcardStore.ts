@@ -433,6 +433,12 @@ export const useFlashcardStore = create<FlashcardState>((set, get) => ({
       const deck = await getDeckService(deckId)
       if (deck) {
         set({ currentDeck: deck, decksLoading: false })
+
+        // Refresh deck stats in the background to ensure dueCount is accurate
+        // This is non-blocking and updates Firestore for future DeckBrowser displays
+        updateDeckStats(deckId).catch((err) => {
+          console.warn('Failed to refresh deck stats:', err)
+        })
       } else {
         set({ decksError: 'Deck not found', decksLoading: false })
       }
@@ -627,10 +633,29 @@ export const useFlashcardStore = create<FlashcardState>((set, get) => ({
 
   updateCard: async (cardId: string, data: Partial<FlashCard>) => {
     try {
-      await updateCardService(cardId, data)
+      const { cards, currentDeck } = get()
+      const card = cards.find((c) => c.id === cardId)
+
+      // Check if this is a preloaded deck card
+      const deckId = card?.deckId || currentDeck?.id
+      const isPreloaded = deckId ? isPreloadedDeck(deckId) : false
+
+      if (isPreloaded && card && deckId) {
+        // For preloaded decks, save to localStorage instead of Firestore
+        const updatedCard = { ...card, ...data }
+        savePreloadedCardProgress(
+          deckId,
+          cardId,
+          updatedCard.fsrs,
+          updatedCard.suspended ?? false,
+          updatedCard.buried ?? false
+        )
+      } else {
+        // For user decks, save to Firestore
+        await updateCardService(cardId, data)
+      }
 
       // Update local state
-      const { cards } = get()
       const updatedCards = cards.map((c) => (c.id === cardId ? { ...c, ...data } : c))
       set({ cards: updatedCards })
     } catch (error) {

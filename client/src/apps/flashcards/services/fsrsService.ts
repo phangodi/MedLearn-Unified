@@ -308,7 +308,18 @@ export function getDueCards(cards: FlashCard[], now?: Date): FlashCard[] {
     if (card.suspended || card.buried) {
       return false
     }
-    // Check if card is due (handle both Date and Firestore Timestamp)
+
+    // New cards are always available for study
+    if (card.fsrs.state === State.New) {
+      return true
+    }
+
+    // Learning and Relearning cards are in active study phase
+    if (card.fsrs.state === State.Learning || card.fsrs.state === State.Relearning) {
+      return true
+    }
+
+    // Review cards: only include if due date has passed
     const dueDate = toDate(card.fsrs.due)
     return dueDate <= timestamp
   })

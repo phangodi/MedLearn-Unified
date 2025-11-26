@@ -17,13 +17,18 @@ import {
   AlertCircle,
   Sparkles,
   Copy,
+  Brain,
+  Microscope,
+  Activity,
+  Heart,
+  Zap,
 } from 'lucide-react'
 import { useFlashcards } from '../hooks'
 import { useAuth } from '@/contexts/AuthContext'
 import { Button } from '@/components/ui/Button'
 import { cn } from '@/lib/utils'
 import type { Deck } from '../types/flashcard'
-import { preloadedDecks as importedPreloadedDecks } from '../data/preloaded'
+import { getPreloadedDecksWithStats } from '../data/preloaded'
 
 type SortOption = 'name' | 'dueCount' | 'lastStudied' | 'created'
 
@@ -78,9 +83,9 @@ export function DeckBrowser() {
   const [isCreating, setIsCreating] = useState(false)
   const [createError, setCreateError] = useState('')
 
-  // Merge user decks with preloaded decks
+  // Merge user decks with preloaded decks (with computed stats)
   const allDecks = useMemo(() => {
-    return [...decks, ...importedPreloadedDecks]
+    return [...decks, ...getPreloadedDecksWithStats()]
   }, [decks])
 
   // Filter and sort decks
@@ -103,7 +108,10 @@ export function DeckBrowser() {
         case 'name':
           return a.name.localeCompare(b.name)
         case 'dueCount':
-          return (b.reviewCount + b.learningCount) - (a.reviewCount + a.learningCount)
+          // Use dueCount if available, fallback to old method
+          const aDue = a.dueCount ?? (a.reviewCount + a.learningCount)
+          const bDue = b.dueCount ?? (b.reviewCount + b.learningCount)
+          return bDue - aDue
         case 'lastStudied':
           if (!a.lastStudiedAt && !b.lastStudiedAt) return 0
           if (!a.lastStudiedAt) return 1
@@ -487,7 +495,8 @@ function DeckCard({
   setShowOptionsMenu,
   isPreloaded = false,
 }: DeckCardProps) {
-  const dueCount = deck.reviewCount + deck.learningCount
+  // Use dueCount if available (computed accurately), fallback to old method for backwards compatibility
+  const dueCount = deck.dueCount ?? (deck.reviewCount + deck.learningCount)
   const hasDue = dueCount > 0
 
   return (
@@ -514,7 +523,12 @@ function DeckCard({
             {deck.icon === 'BookOpen' && <BookOpen className="w-6 h-6" />}
             {deck.icon === 'Layers' && <Layers className="w-6 h-6" />}
             {deck.icon === 'Sparkles' && <Sparkles className="w-6 h-6" />}
-            {!['BookOpen', 'Layers', 'Sparkles'].includes(deck.icon) && deck.name.charAt(0).toUpperCase()}
+            {deck.icon === 'Brain' && <Brain className="w-6 h-6" />}
+            {deck.icon === 'Microscope' && <Microscope className="w-6 h-6" />}
+            {deck.icon === 'Activity' && <Activity className="w-6 h-6" />}
+            {deck.icon === 'Heart' && <Heart className="w-6 h-6" />}
+            {deck.icon === 'Zap' && <Zap className="w-6 h-6" />}
+            {!['BookOpen', 'Layers', 'Sparkles', 'Brain', 'Microscope', 'Activity', 'Heart', 'Zap'].includes(deck.icon) && deck.name.charAt(0).toUpperCase()}
           </div>
 
           {/* Options Menu */}
@@ -621,10 +635,15 @@ function DeckCard({
             e.stopPropagation()
             onStudy()
           }}
-          className="w-full flex items-center justify-center gap-2 h-9 px-3 rounded-md text-sm font-medium bg-[#0066CC] text-white hover:bg-[#0055AA] transition-colors"
+          disabled={!hasDue && deck.cardCount > 0}
+          className={`w-full flex items-center justify-center gap-2 h-9 px-3 rounded-md text-sm font-medium transition-colors ${
+            hasDue || deck.cardCount === 0
+              ? 'bg-[#0066CC] text-white hover:bg-[#0055AA]'
+              : 'bg-muted text-muted-foreground cursor-not-allowed'
+          }`}
         >
           <Play className="w-4 h-4" />
-          Study {hasDue && `(${dueCount})`}
+          {hasDue ? `Study (${dueCount})` : deck.cardCount === 0 ? 'Add Cards' : 'All Caught Up'}
         </button>
 
         {/* Preloaded Badge */}
@@ -782,9 +801,11 @@ function CreateDeckModal({
                     {icon === 'BookOpen' && <BookOpen className="w-5 h-5" />}
                     {icon === 'Layers' && <Layers className="w-5 h-5" />}
                     {icon === 'Sparkles' && <Sparkles className="w-5 h-5" />}
-                    {!['BookOpen', 'Layers', 'Sparkles'].includes(icon) && (
-                      <span className="text-sm font-medium">{icon}</span>
-                    )}
+                    {icon === 'Brain' && <Brain className="w-5 h-5" />}
+                    {icon === 'Microscope' && <Microscope className="w-5 h-5" />}
+                    {icon === 'Activity' && <Activity className="w-5 h-5" />}
+                    {icon === 'Heart' && <Heart className="w-5 h-5" />}
+                    {icon === 'Zap' && <Zap className="w-5 h-5" />}
                   </button>
                 ))}
               </div>

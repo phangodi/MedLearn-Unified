@@ -133,6 +133,8 @@ export interface Deck {
   learningCount: number
   /** Number of cards due for review */
   reviewCount: number
+  /** Number of cards ready to study now (accounts for due dates and suspended status) */
+  dueCount?: number
 
   /** Deck-specific settings */
   settings: DeckSettings
