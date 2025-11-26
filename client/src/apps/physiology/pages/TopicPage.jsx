@@ -265,12 +265,12 @@ const TopicPage = ({ topics }) => {
 
       <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
         {prevTopic ? (
-          <Link to={`/physiology/topic/${prevTopic.id}`} style={{ textDecoration: 'none', color: '#000000' }}>
+          <Link to={`/physiology/topics/topic/${prevTopic.id}`} style={{ textDecoration: 'none', color: '#000000' }}>
             ← Previous Topic (Topic {prevTopic.number})
           </Link>
         ) : <div></div>}
         {nextTopic ? (
-          <Link to={`/physiology/topic/${nextTopic.id}`} style={{ textDecoration: 'none', color: '#000000' }}>
+          <Link to={`/physiology/topics/topic/${nextTopic.id}`} style={{ textDecoration: 'none', color: '#000000' }}>
             Next Topic (Topic {nextTopic.number}) →
           </Link>
         ) : <div></div>}

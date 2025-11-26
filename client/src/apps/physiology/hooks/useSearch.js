@@ -21,7 +21,7 @@ export const useSearch = (topics = []) => {
       t.number.toString().includes(searchTerm)
     );
     if (foundTopic) {
-      navigate(`/physiology/topic/${foundTopic.id}`);
+      navigate(`/physiology/topics/topic/${foundTopic.id}`);
       setSearchTerm('');
     }
   };

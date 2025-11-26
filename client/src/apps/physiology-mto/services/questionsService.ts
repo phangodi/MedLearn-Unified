@@ -1,8 +1,61 @@
 /**
  * Questions Service - Data access layer for MCQ questions
+ *
+ * Duplicate Handling:
+ * - Questions are stored per test ID (same question can exist in different tests)
+ * - For topic-based queries, questions are deduplicated by content hash
+ * - This ensures users don't see the same question twice when filtering by topic
  */
 
 import type { Question, QuestionIndex, TestConfig, TestQuestions } from '../../physiology/data/questions/types';
+import indexData from '../../physiology/data/questions/index.json';
+
+// Import question files
+import test0313014645 from '../../physiology/data/questions/by-test-id/0313014645.json';
+import test0313014645B from '../../physiology/data/questions/by-test-id/0313014645-B.json';
+import test4525102917 from '../../physiology/data/questions/by-test-id/4525102917.json';
+import test1526033148 from '../../physiology/data/questions/by-test-id/1526033148.json';
+import test3221027349 from '../../physiology/data/questions/by-test-id/3221027349.json';
+import test5090109547 from '../../physiology/data/questions/by-test-id/5090109547.json';
+import test5156012322 from '../../physiology/data/questions/by-test-id/5156012322.json';
+import test625411501B from '../../physiology/data/questions/by-test-id/625411501B.json';
+import test2734027349 from '../../physiology/data/questions/by-test-id/2734027349.json';
+import test3543048990 from '../../physiology/data/questions/by-test-id/3543048990.json';
+import test4447200607 from '../../physiology/data/questions/by-test-id/4447200607.json';
+import test4855200607 from '../../physiology/data/questions/by-test-id/4855200607.json';
+
+// Generate a simple content hash for deduplication
+// This hash is based on the question text and options (case-insensitive, trimmed)
+export function generateContentHash(question: Question): string {
+  const normalizedText = question.text.toLowerCase().trim();
+  const normalizedOptions = question.options
+    .map(o => `${o.letter}:${o.text.toLowerCase().trim()}`)
+    .sort()
+    .join('|');
+
+  // Simple hash function (djb2)
+  const str = `${normalizedText}||${normalizedOptions}`;
+  let hash = 5381;
+  for (let i = 0; i < str.length; i++) {
+    hash = ((hash << 5) + hash) + str.charCodeAt(i);
+    hash = hash & hash; // Convert to 32-bit integer
+  }
+  return Math.abs(hash).toString(36);
+}
+
+// Deduplicate questions by content hash (keeps first occurrence)
+export function deduplicateQuestions(questions: Question[]): Question[] {
+  const seen = new Map<string, Question>();
+
+  for (const question of questions) {
+    const hash = question.contentHash || generateContentHash(question);
+    if (!seen.has(hash)) {
+      seen.set(hash, question);
+    }
+  }
+
+  return Array.from(seen.values());
+}
 
 // MCQ Filter Definitions (imported from physiology app structure)
 export const mcqFilters = [
@@ -98,21 +151,52 @@ export const topicTitles: { [key: number]: string } = {
   49: 'Regulation of extracellular fluid osmolarity',
   50: 'Regulation of extracellular fluid volume',
   51: 'Acid-base balance and its regulation',
+  52: 'Glomerular filtration',
+  53: 'Renal blood flow and GFR regulation',
+  54: 'Renal tubular transport mechanisms',
+  55: 'Tubular reabsorption and secretion, renal clearance',
+  56: 'Renal transport of organic solutes',
+  57: 'NaCl and water transport, medullary osmotic gradient',
+  58: 'Urinary tract physiology, micturition',
 };
+
+// Map test IDs to their data
+const testDataMap: Record<string, TestQuestions> = {
+  '0313014645': test0313014645 as TestQuestions,
+  '0313014645-B': test0313014645B as TestQuestions,
+  '4525102917': test4525102917 as TestQuestions,
+  '1526033148': test1526033148 as TestQuestions,
+  '3221027349': test3221027349 as TestQuestions,
+  '5090109547': test5090109547 as TestQuestions,
+  '5156012322': test5156012322 as TestQuestions,
+  '625411501B': test625411501B as TestQuestions,
+  '2734027349': test2734027349 as TestQuestions,
+  '3543048990': test3543048990 as TestQuestions,
+  '4447200607': test4447200607 as TestQuestions,
+  '4855200607': test4855200607 as TestQuestions,
+};
+
+// Cache for loaded questions
+let cachedQuestions: Question[] | null = null;
 
 // Get all questions from JSON files
 export async function getAllQuestions(): Promise<Question[]> {
-  try {
-    const indexModule = await import('../../physiology/data/questions/index.json');
-    const index = indexModule.default as QuestionIndex;
+  if (cachedQuestions) {
+    return cachedQuestions;
+  }
 
+  try {
     const allQuestions: Question[] = [];
 
-    for (const testId of index.testIds) {
-      const testQuestions = await getQuestionsByTestId(testId);
-      allQuestions.push(...testQuestions);
+    for (const testId in testDataMap) {
+      const testData = testDataMap[testId];
+      if (testData?.questions) {
+        allQuestions.push(...testData.questions);
+      }
     }
 
+    console.log(`Loaded ${allQuestions.length} questions from ${Object.keys(testDataMap).length} test files`);
+    cachedQuestions = allQuestions;
     return allQuestions;
   } catch (error) {
     console.error('Error loading questions:', error);
@@ -123,9 +207,12 @@ export async function getAllQuestions(): Promise<Question[]> {
 // Get questions by test ID
 export async function getQuestionsByTestId(testId: string): Promise<Question[]> {
   try {
-    const module = await import(`../../physiology/data/questions/by-test-id/${testId}.json`);
-    const data = module.default as TestQuestions;
-    return data.questions;
+    const testData = testDataMap[testId];
+    if (!testData) {
+      console.error(`No questions found for test ${testId}`);
+      return [];
+    }
+    return testData.questions || [];
   } catch (error) {
     console.error(`Error loading questions for test ${testId}:`, error);
     return [];
@@ -164,15 +251,20 @@ export async function getQuestionsForTest(config: TestConfig): Promise<Question[
   switch (config.filterMode) {
     case 'topic':
       questions = await getQuestionsByTopics(config.selectedTopics);
+      // Deduplicate for topic-based queries (same question may appear in multiple tests)
+      questions = deduplicateQuestions(questions);
       break;
     case 'mcq':
       if (config.selectedMcq) {
         questions = await getQuestionsByMcq(config.selectedMcq);
+        // Deduplicate for MCQ-based queries
+        questions = deduplicateQuestions(questions);
       }
       break;
     case 'test':
       if (config.selectedTestId) {
         questions = await getQuestionsByTestId(config.selectedTestId);
+        // No deduplication for test-based queries (show all questions from that test)
       }
       break;
   }
@@ -190,20 +282,7 @@ export async function getQuestionsForTest(config: TestConfig): Promise<Question[
 
 // Get the question index
 export async function getQuestionIndex(): Promise<QuestionIndex> {
-  try {
-    const module = await import('../../physiology/data/questions/index.json');
-    return module.default as QuestionIndex;
-  } catch (error) {
-    console.error('Error loading question index:', error);
-    return {
-      version: '1.0.0',
-      lastUpdated: new Date().toISOString(),
-      totalQuestions: 0,
-      testIds: [],
-      topicCoverage: {},
-      mcqCoverage: {}
-    };
-  }
+  return indexData as QuestionIndex;
 }
 
 // Get available test IDs
@@ -222,12 +301,24 @@ export function getTopicsGroupedByMcq(): { mcq: typeof mcqFilters[0]; topics: { 
   return mcqFilters.map(mcq => ({
     mcq,
     topics: mcq.topics
-      .filter(t => t <= 51) // Only implemented topics
+      .filter(t => topicTitles[t] !== undefined) // Only topics with defined titles
       .map(t => ({
         number: t,
         title: getTopicTitle(t)
       }))
   }));
+}
+
+// Get question count for a specific MCQ exam
+export function getMcqQuestionCount(mcqId: string): number {
+  const coverage = (indexData as QuestionIndex).mcqCoverage;
+  return coverage?.[mcqId] || 0;
+}
+
+// Get question count for a specific topic
+export function getTopicQuestionCount(topicNumber: number): number {
+  const coverage = (indexData as QuestionIndex).topicCoverage;
+  return coverage?.[topicNumber.toString()] || 0;
 }
 
 // Helper: Shuffle array

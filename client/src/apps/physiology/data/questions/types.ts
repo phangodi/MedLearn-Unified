@@ -8,9 +8,10 @@ export interface QuestionOption {
 }
 
 export interface QuestionMetadata {
-  importedAt: string;       // ISO timestamp
-  matchedBy: 'ai-verified' | 'manual' | 'pending';
+  importedAt?: string;      // ISO timestamp (optional)
+  matchedBy: string;        // How topic was matched (e.g., 'learning-objectives', 'ai-verified', 'manual')
   matchConfidence: number;  // 0-1 confidence score
+  matchReason?: string;     // Explanation of why topic was assigned
 }
 
 export interface Question {
@@ -23,6 +24,7 @@ export interface Question {
   correctAnswers: string[];      // ["a"] or ["a", "c"] for multiple
   topics: number[];              // Matched topic numbers [33, 45]
   mcqs: string[];                // Derived MCQ exams ["mcq-3"]
+  contentHash?: string;          // Hash for deduplication across tests
   explanation?: string;          // Generated explanation (added later)
   metadata: QuestionMetadata;
 }

@@ -1,0 +1,1889 @@
+{
+  "testId": "2734027349",
+  "examName": "Physiology MTO Exam - Pages 27-34",
+  "importedAt": "2025-11-25T22:55:02.861Z",
+  "questions": [
+    {
+      "id": "q-2734027349-1",
+      "testId": "2734027349",
+      "questionNumber": 1,
+      "text": "The effect of ADH is",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "increase the water permeability of the proximal tubules"
+        },
+        {
+          "letter": "b",
+          "text": "increase the permeability of the peritubular capillaries"
+        },
+        {
+          "letter": "c",
+          "text": "increase the capillary permeability in the glomerulus"
+        },
+        {
+          "letter": "d",
+          "text": "regulate the filtration slits"
+        },
+        {
+          "letter": "e",
+          "text": "increase the water permeability of the collecting tubules"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "topics": [
+        57
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 57: 'Identify the tubular segment where water permeability is under hormonal control' - ADH increases water permeability in collecting duct"
+      }
+    },
+    {
+      "id": "q-2734027349-2",
+      "testId": "2734027349",
+      "questionNumber": 2,
+      "text": "The autonomic innervation of the urinary bladder involves:",
+      "correctAnswerCount": 3,
+      "options": [
+        {
+          "letter": "a",
+          "text": "the activation of nicotinic acetyl-choline receptors by parasympathetic activity"
+        },
+        {
+          "letter": "b",
+          "text": "the activation of beta-2 receptors by sympathetic activity"
+        },
+        {
+          "letter": "c",
+          "text": "sympathetic nerves exert presynaptic inhibition on parasympathetic terminals"
+        },
+        {
+          "letter": "d",
+          "text": "the activation of alfa-1 receptors by sympathetic activity"
+        },
+        {
+          "letter": "e",
+          "text": "the activation of muscarinic acetyl-choline receptors by parasympathetic activity"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c",
+        "e"
+      ],
+      "topics": [
+        58
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 58: 'Explain the visceral sensory, autonomic (sympathetic and parasympathetic) and somatic motor innervation of the urinary bladder and the urethral sphincters'"
+      }
+    },
+    {
+      "id": "q-2734027349-3",
+      "testId": "2734027349",
+      "questionNumber": 3,
+      "text": "Given the following data for inulin and substance \"X\" which of the following would explain the renal handling of substance \"X\": Inulin concentration in the urine 200 mg/100 ml, Inulin concentration in the plasma 2 mg/100 ml, Concentration in the urine for \"X\" substance 15 mg/100 ml, Concentration in the plasma for \"X\" substance 1.5 mg/100 ml",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "\"X\" is freely filtered and additionally secreted"
+        },
+        {
+          "letter": "b",
+          "text": "\"X\" is freely filtered but partially reabsorbed"
+        },
+        {
+          "letter": "c",
+          "text": "\"X\" is freely filtered but neither secreted nor reabsorbed"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "topics": [
+        55
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 55: 'How much is the clearance of a freely filtrated X substance if 1. it is fully reabsorbed, 2. only partly reabsorbed, 3. there is a net tubular secretion'"
+      }
+    },
+    {
+      "id": "q-2734027349-4",
+      "testId": "2734027349",
+      "questionNumber": 4,
+      "text": "Na+ can be transported across the luminal membrane of renal tubular cells by",
+      "correctAnswerCount": 3,
+      "options": [
+        {
+          "letter": "a",
+          "text": "diffusion through Na+ channels"
+        },
+        {
+          "letter": "b",
+          "text": "co-transport with organic solutes"
+        },
+        {
+          "letter": "c",
+          "text": "counter transport for H+"
+        },
+        {
+          "letter": "d",
+          "text": "the Na-K ATPase"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "b",
+        "c"
+      ],
+      "topics": [
+        57
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 57: 'Describe the luminal mechanisms of Na+-reabsorption in the proximal tubulus (Na+-solute, Na+-H+-antiporter, paracellular mechanisms)'"
+      }
+    },
+    {
+      "id": "q-2734027349-5",
+      "testId": "2734027349",
+      "questionNumber": 5,
+      "text": "A healthy individual on a diet high in potassium exhibits increased potassium excretion. The major cause of this increased renal secretion of potassium is",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "decreased reabsorption of potassium by the tubule and collecting duct"
+        },
+        {
+          "letter": "b",
+          "text": "increased secretion of potassium by the distal tubule and collecting duct"
+        },
+        {
+          "letter": "c",
+          "text": "decreased aldosterone secretion"
+        },
+        {
+          "letter": "d",
+          "text": "increased GFR"
+        },
+        {
+          "letter": "e",
+          "text": "decreased reabsorption of potassium by the proximal tubule"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "topics": [
+        80
+      ],
+      "mcqs": [
+        "mcq-5"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 80: 'Describe the factors that regulate K+ secretion in the collecting duct (i.e., aldosterone, plasma K+)'"
+      }
+    },
+    {
+      "id": "q-2734027349-6",
+      "testId": "2734027349",
+      "questionNumber": 6,
+      "text": "It is characteristic of the intraglomerular capillaries that",
+      "correctAnswerCount": 2,
+      "options": [
+        {
+          "letter": "a",
+          "text": "their oncotic pressure is unusually low"
+        },
+        {
+          "letter": "b",
+          "text": "they are discontinuous capillaries"
+        },
+        {
+          "letter": "c",
+          "text": "their intracapillary pressure is unusually high"
+        },
+        {
+          "letter": "d",
+          "text": "they are fenestrated capillaries"
+        },
+        {
+          "letter": "e",
+          "text": "they are highly permeable to proteins"
+        }
+      ],
+      "correctAnswers": [
+        "c",
+        "d"
+      ],
+      "topics": [
+        52
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 52: 'Describe the three layers comprising the glomerular filtration barrier' - glomerular capillaries are fenestrated with high hydrostatic pressure"
+      }
+    },
+    {
+      "id": "q-2734027349-7",
+      "testId": "2734027349",
+      "questionNumber": 7,
+      "text": "Find the substance that is passively reabsorbed from the proximal tubule",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "urea"
+        },
+        {
+          "letter": "b",
+          "text": "sodium"
+        },
+        {
+          "letter": "c",
+          "text": "amino acids"
+        },
+        {
+          "letter": "d",
+          "text": "glucose"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "topics": [
+        56
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 56: 'Describe the urea reabsorption in the proximal tubuli' - urea is passively reabsorbed"
+      }
+    },
+    {
+      "id": "q-2734027349-8",
+      "testId": "2734027349",
+      "questionNumber": 8,
+      "text": "Which of the following statements is true concerning human urinary bladder function?",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "in the presence of vasopressin, water is reabsorbed through the urothelium of the bladder"
+        },
+        {
+          "letter": "b",
+          "text": "emptying of bladder during urination is supported by the simultaneous contraction of the detrusor muscle"
+        },
+        {
+          "letter": "c",
+          "text": "the urine storage function is promoted by the Bayliss effect of the bladder smooth muscle"
+        },
+        {
+          "letter": "d",
+          "text": "in healthy adults, there is always some urine retention after urination"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "topics": [
+        58
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 58: 'Describe the reflex arc of the micturition reflex' - detrusor muscle contracts during urination"
+      }
+    },
+    {
+      "id": "q-2734027349-9",
+      "testId": "2734027349",
+      "questionNumber": 9,
+      "text": "What is the clearance of substance X, if X is freely filtrated, and 75% of the filtrated amount is reabsorbed in the tubular system? (GFR= 120 ml/min)",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "60 ml/min"
+        },
+        {
+          "letter": "b",
+          "text": "240 ml/min"
+        },
+        {
+          "letter": "c",
+          "text": "120 ml/min"
+        },
+        {
+          "letter": "d",
+          "text": "30 ml/min"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "topics": [
+        55
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 55: 'How much is the clearance of a freely filtrated X substance if only partly reabsorbed: 0<Cl<GFR' - 25% of 120 = 30 ml/min"
+      }
+    },
+    {
+      "id": "q-2734027349-10",
+      "testId": "2734027349",
+      "questionNumber": 10,
+      "text": "Which cells in the kidney express H+-K+-pump?",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "intercalated cells in the collecting duct"
+        },
+        {
+          "letter": "b",
+          "text": "epithelial cells of the proximal tubule"
+        },
+        {
+          "letter": "c",
+          "text": "principals cells in the collecting duct"
+        },
+        {
+          "letter": "d",
+          "text": "epithelial cells of the distal tubule"
+        },
+        {
+          "letter": "e",
+          "text": "epithelial cells of the thick segment of the loop of Henle"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "topics": [
+        82
+      ],
+      "mcqs": [
+        "mcq-5"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 82: 'Identify the major sites of HCO3- reabsorption along the nephron, emphasizing the importance of H+ secretory mechanisms' - intercalated cells have H+-K+-ATPase"
+      }
+    },
+    {
+      "id": "q-2734027349-11",
+      "testId": "2734027349",
+      "questionNumber": 11,
+      "text": "These parts of the kidney are situated in the cortex:",
+      "correctAnswerCount": 2,
+      "options": [
+        {
+          "letter": "a",
+          "text": "glomeruli of juxtamedullary nephrons"
+        },
+        {
+          "letter": "b",
+          "text": "loop of Henle"
+        },
+        {
+          "letter": "c",
+          "text": "vasa recta"
+        },
+        {
+          "letter": "d",
+          "text": "the beginning of the collecting tubules"
+        },
+        {
+          "letter": "e",
+          "text": "cortical nephrons"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "d"
+      ],
+      "topics": [
+        54
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 54: 'Identify each structure as being located in the renal cortex or renal medulla. Based on the glomerulus location distinguish between cortical and juxtamedullary nephrons'"
+      }
+    },
+    {
+      "id": "q-2734027349-12",
+      "testId": "2734027349",
+      "questionNumber": 12,
+      "text": "Considering an average mixed diet, the caloric equivalence of oxygen is",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "17.2 kJ/L"
+        },
+        {
+          "letter": "b",
+          "text": "26.5 kJ/L"
+        },
+        {
+          "letter": "c",
+          "text": "40 kJ/L"
+        },
+        {
+          "letter": "d",
+          "text": "40 kcal/L"
+        },
+        {
+          "letter": "e",
+          "text": "20.2 kJ/L"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "topics": [
+        69
+      ],
+      "mcqs": [
+        "mcq-4"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 69: 'caloric equivalent values for oxygen: mixed food: 20.2 kJ/L O2'"
+      }
+    },
+    {
+      "id": "q-2734027349-13",
+      "testId": "2734027349",
+      "questionNumber": 13,
+      "text": "The effective filtration pressure in the glomeruli is calculated as follows:",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "colloid osmotic P + capsular P - glomerular P"
+        },
+        {
+          "letter": "b",
+          "text": "glomerular P - capsular P - colloid osmotic P"
+        },
+        {
+          "letter": "c",
+          "text": "colloid osmotic P - glomerular P - capsular P"
+        },
+        {
+          "letter": "d",
+          "text": "colloid osmotic P + glomerular P - capsular P"
+        },
+        {
+          "letter": "e",
+          "text": "capsular P + glomerular P - colloid osmotic P"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "topics": [
+        52
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 52: 'calculate the net filtration force (the effective filtration pressure) at the glomerular capillaries'"
+      }
+    },
+    {
+      "id": "q-2734027349-14",
+      "testId": "2734027349",
+      "questionNumber": 14,
+      "text": "Secretion of aldosteron:",
+      "correctAnswerCount": 3,
+      "options": [
+        {
+          "letter": "a",
+          "text": "enhanced by an increase of Na+ concentration of the blood"
+        },
+        {
+          "letter": "b",
+          "text": "enhanced by an increase of K+ concentration of the blood"
+        },
+        {
+          "letter": "c",
+          "text": "enhanced by angiotensin I"
+        },
+        {
+          "letter": "d",
+          "text": "enhanced by angiotensin II"
+        },
+        {
+          "letter": "e",
+          "text": "enhanced by a decrease of K+ concentration of the blood"
+        },
+        {
+          "letter": "f",
+          "text": "enhanced by a decrease of Na+ concentration of the blood"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "d",
+        "f"
+      ],
+      "topics": [
+        79
+      ],
+      "mcqs": [
+        "mcq-5"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 79: 'Identify the major mineralocorticoid hormone, describe its production' and 'List the physiological stimuli regulating aldosterone secretion'"
+      }
+    },
+    {
+      "id": "q-2734027349-15",
+      "testId": "2734027349",
+      "questionNumber": 15,
+      "text": "Which of the following transports are hormone-regulated?",
+      "correctAnswerCount": 3,
+      "options": [
+        {
+          "letter": "a",
+          "text": "Na+ reabsorption in the thick ascending segment - vasopressin"
+        },
+        {
+          "letter": "b",
+          "text": "K+ secretion in the collecting duct - aldosterone"
+        },
+        {
+          "letter": "c",
+          "text": "Na+ reabsorption in the proximal tubule - aldosterone"
+        },
+        {
+          "letter": "d",
+          "text": "Na+ reabsorption in the collecting duct - ANH"
+        },
+        {
+          "letter": "e",
+          "text": "Ca2+ reabsorption in the distal tubule - PTH"
+        },
+        {
+          "letter": "f",
+          "text": "K+ reabsorption in the distal tubule - aldosterone"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "d",
+        "e"
+      ],
+      "topics": [
+        57,
+        81
+      ],
+      "mcqs": [
+        "mcq-3",
+        "mcq-5"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 57: 'Which transport is under hormonal control?' and Topic 81: 'Identify the tubular transport mechanisms that are hormonally regulated' for Ca2+/PTH"
+      }
+    },
+    {
+      "id": "q-2734027349-16",
+      "testId": "2734027349",
+      "questionNumber": 16,
+      "text": "Find the correct order of relative clearances for glucose, PAH, urea, and inulin!",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "CPAH < Curea < Cinulin < Cglucose"
+        },
+        {
+          "letter": "b",
+          "text": "Cglucose< CPAH < Curea < Cinulin"
+        },
+        {
+          "letter": "c",
+          "text": "Cglucose < Curea < Cinulin < CPAH"
+        },
+        {
+          "letter": "d",
+          "text": "Curea < Cinulin < Cglucose < CPAH"
+        },
+        {
+          "letter": "e",
+          "text": "Cglucose < Cinulin < Curea < CPAH"
+        },
+        {
+          "letter": "f",
+          "text": "Cinulin < Cglucose < CPAH < Curea"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "topics": [
+        55
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 55: 'Give the reference values of the clearance for inulin, creatinine, PAH, and glucose' - glucose=0, urea<inulin (partial reabsorption), PAH highest (secretion)"
+      }
+    },
+    {
+      "id": "q-2734027349-17",
+      "testId": "2734027349",
+      "questionNumber": 17,
+      "text": "The physiological stimulus which increases respiration by acting on the central chemosensitive area is",
+      "correctAnswerCount": 2,
+      "options": [
+        {
+          "letter": "a",
+          "text": "increase in arterial pH"
+        },
+        {
+          "letter": "b",
+          "text": "reduced venous pO2"
+        },
+        {
+          "letter": "c",
+          "text": "reduced in arterial pH"
+        },
+        {
+          "letter": "d",
+          "text": "increase in arterial pCO2"
+        },
+        {
+          "letter": "e",
+          "text": "increase in brain interstitial fluid pH"
+        },
+        {
+          "letter": "f",
+          "text": "reduction of O2"
+        }
+      ],
+      "correctAnswers": [
+        "c",
+        "d"
+      ],
+      "topics": [
+        31
+      ],
+      "mcqs": [
+        "mcq-2"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 31: 'Describe the function of central chemoreceptors' - central chemoreceptors respond to increased pCO2 and decreased pH"
+      }
+    },
+    {
+      "id": "q-2734027349-18",
+      "testId": "2734027349",
+      "questionNumber": 18,
+      "text": "It is characteristic of protein transport in the nephron that",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "proteins are secreted in the tubules"
+        },
+        {
+          "letter": "b",
+          "text": "protein transport is linked to sodium reabsorption"
+        },
+        {
+          "letter": "c",
+          "text": "proteins are filtered with perfect ease in the glomeruli"
+        },
+        {
+          "letter": "d",
+          "text": "proteins are taken up from the tubular fluid and are digested by the epithelial cells"
+        },
+        {
+          "letter": "e",
+          "text": "proteins are not filtered at all in the glomeruli"
+        },
+        {
+          "letter": "f",
+          "text": "the reabsorbed proteins are transferred into the interstitial fluid"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "topics": [
+        56
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 56: 'Describe the fate of the filtered peptides and proteins in the proximal tubuli' - proteins are endocytosed and digested"
+      }
+    },
+    {
+      "id": "q-2734027349-19",
+      "testId": "2734027349",
+      "questionNumber": 19,
+      "text": "Metabolic rate may be defined as",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "the amount of energy stored per unit of time"
+        },
+        {
+          "letter": "b",
+          "text": "external work plus energy storage"
+        },
+        {
+          "letter": "c",
+          "text": "energy output plus heat liberated"
+        },
+        {
+          "letter": "d",
+          "text": "energy storage plus heat liberated"
+        },
+        {
+          "letter": "e",
+          "text": "none of the above"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "topics": [
+        69
+      ],
+      "mcqs": [
+        "mcq-4"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 69: 'Define the basal metabolic rate (BMR)' - metabolic rate is total energy expenditure per unit time"
+      }
+    },
+    {
+      "id": "q-2734027349-20",
+      "testId": "2734027349",
+      "questionNumber": 20,
+      "text": "The method to determine basal metabolic rate by measuring oxygen consumption is called:",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "indirect calorimetry"
+        },
+        {
+          "letter": "b",
+          "text": "whole-body plethysmograph"
+        },
+        {
+          "letter": "c",
+          "text": "spirometry"
+        },
+        {
+          "letter": "d",
+          "text": "oxymetry"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "topics": [
+        69
+      ],
+      "mcqs": [
+        "mcq-4"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 69: 'Explain the strategies for the measurement of the energy production of the body (direct- and indirect calorimetry)'"
+      }
+    },
+    {
+      "id": "q-2734027349-21",
+      "testId": "2734027349",
+      "questionNumber": 21,
+      "text": "During urination:",
+      "correctAnswerCount": 2,
+      "options": [
+        {
+          "letter": "a",
+          "text": "the inner urethral sphincter voluntarily relaxes"
+        },
+        {
+          "letter": "b",
+          "text": "sympathetic tone decreases on the inner urethral sphincter"
+        },
+        {
+          "letter": "c",
+          "text": "the outer uretral sphincter voluntarily relaxes"
+        },
+        {
+          "letter": "d",
+          "text": "parasympathetic tone decreases on the outer urethral sphincter"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c"
+      ],
+      "topics": [
+        58
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 58: 'Describe the reflex arc of the micturition reflex' - sympathetic tone decreases, external sphincter voluntarily relaxes"
+      }
+    },
+    {
+      "id": "q-2734027349-22",
+      "testId": "2734027349",
+      "questionNumber": 22,
+      "text": "Which of the following structures are located, at least in part, in the renal medulla",
+      "correctAnswerCount": 3,
+      "options": [
+        {
+          "letter": "a",
+          "text": "thin segment of the loop of Henle"
+        },
+        {
+          "letter": "b",
+          "text": "Bowman's capsule"
+        },
+        {
+          "letter": "c",
+          "text": "glomeruli"
+        },
+        {
+          "letter": "d",
+          "text": "proximal tubule, pars convoluta"
+        },
+        {
+          "letter": "e",
+          "text": "collecting duct"
+        },
+        {
+          "letter": "f",
+          "text": "juxtamedullary glomeruli"
+        },
+        {
+          "letter": "g",
+          "text": "juxtaglomerular apparatus"
+        },
+        {
+          "letter": "h",
+          "text": "descending limb of the loop of Henle"
+        },
+        {
+          "letter": "i",
+          "text": "distal tubule, pars convoluta"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "e",
+        "h"
+      ],
+      "topics": [
+        54
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 54: 'Identify each structure as being located in the renal cortex or renal medulla'"
+      }
+    },
+    {
+      "id": "q-2734027349-23",
+      "testId": "2734027349",
+      "questionNumber": 23,
+      "text": "Use the data below to calculate the renal blood flow: Arterial plasma PAH conc.= 0.04 mg/ml; Venous plasma PAH conc.= 0.004 mg/ml; Arterial plasma inulin conc.= 0.4 mg/ml; Urine PAH conc.= 10 mg/ml; Urine inulin conc.= 20 mg/ml; Urine flow rate = 2 ml/min; Hematocrit= 45%",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "100 ml/min"
+        },
+        {
+          "letter": "b",
+          "text": "430 ml/min"
+        },
+        {
+          "letter": "c",
+          "text": "556 ml/min"
+        },
+        {
+          "letter": "d",
+          "text": "1010 ml/min"
+        },
+        {
+          "letter": "e",
+          "text": "1235 ml/min"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "topics": [
+        53
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 53: 'Define renal blood flow (RBF), give its normal value' - RBF = RPF/(1-Hct)"
+      }
+    },
+    {
+      "id": "q-2734027349-24",
+      "testId": "2734027349",
+      "questionNumber": 24,
+      "text": "Which of the following substances has the highest clearance",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "glucose"
+        },
+        {
+          "letter": "b",
+          "text": "PAH"
+        },
+        {
+          "letter": "c",
+          "text": "inulin"
+        },
+        {
+          "letter": "d",
+          "text": "potassium"
+        },
+        {
+          "letter": "e",
+          "text": "mannitol"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "topics": [
+        55
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 55: 'Give the reference values of the clearance for inulin, creatinine, PAH, and glucose' - PAH clearance = RPF (highest)"
+      }
+    },
+    {
+      "id": "q-2734027349-25",
+      "testId": "2734027349",
+      "questionNumber": 25,
+      "text": "The correct definition of GFR is as follows",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "the fraction of the blood flow that becomes filtrate each min"
+        },
+        {
+          "letter": "b",
+          "text": "the quantity of blood filtered through the glomerular capillaries each minute in all nephrons of both kidneys"
+        },
+        {
+          "letter": "c",
+          "text": "the quantity of blood filtered in a nephron in a minute"
+        },
+        {
+          "letter": "d",
+          "text": "the quantity of glomerular filtrate formed each minute in all nephrons of both kidneys"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "topics": [
+        52
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 52: 'Define glomerular filtration rate (GFR)' - volume of filtrate formed per minute in all nephrons"
+      }
+    },
+    {
+      "id": "q-2734027349-26",
+      "testId": "2734027349",
+      "questionNumber": 26,
+      "text": "The renal effects of ANP:",
+      "correctAnswerCount": 3,
+      "options": [
+        {
+          "letter": "a",
+          "text": "increases the GFR"
+        },
+        {
+          "letter": "b",
+          "text": "decreases the effect of mineralocorticoids in the collecting tubules"
+        },
+        {
+          "letter": "c",
+          "text": "increases the Na+ reabsorption"
+        },
+        {
+          "letter": "d",
+          "text": "increases the amount of Na in the urine"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "b",
+        "d"
+      ],
+      "topics": [
+        79
+      ],
+      "mcqs": [
+        "mcq-5"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 79: 'Describe the regulation of ANP secretion, and the renal as well as the extrarenal effects of ANP'"
+      }
+    },
+    {
+      "id": "q-2734027349-27",
+      "testId": "2734027349",
+      "questionNumber": 27,
+      "text": "In the loop of Henle",
+      "correctAnswerCount": 3,
+      "options": [
+        {
+          "letter": "a",
+          "text": "water is reabsorbed from the descending limb"
+        },
+        {
+          "letter": "b",
+          "text": "little or no water is reabsorbed from the ascending limb"
+        },
+        {
+          "letter": "c",
+          "text": "active solute reabsorption occurs in the ascending limb"
+        },
+        {
+          "letter": "d",
+          "text": "active solute reabsorption occurs in the descending limb mainly"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "b",
+        "c"
+      ],
+      "topics": [
+        57
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 57: 'Explain the countercurrent multiplier mechanism of the loop of Henle: what is the role of the countercurrent design and the different transport mechanisms in the descending and the ascending limbs'"
+      }
+    },
+    {
+      "id": "q-2734027349-28",
+      "testId": "2734027349",
+      "questionNumber": 28,
+      "text": "Which statement is true concerning the renal excretion of glucose?",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "the renal clearance of glucose is approximately 20-30 ml/min under physiological circumstances"
+        },
+        {
+          "letter": "b",
+          "text": "at normal fasting blood glucose levels the renal glucose transport is fully saturated"
+        },
+        {
+          "letter": "c",
+          "text": "tubular glucose reabsorption is independent of the Na-K pump inhibition, since the transport mechanism of glucose is facilitated diffusion"
+        },
+        {
+          "letter": "d",
+          "text": "the hormonal regulation of renal glucose excretion is taking place in the principal cells of the collecting duct"
+        },
+        {
+          "letter": "e",
+          "text": "The renal threshold of glucose is the plasma glucose concentration, where the glucose transport is saturated and reaches the Tmax value"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "topics": [
+        56
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 56: 'Define the renal threshold of glucose and tubular maximum (Tmax) glucose'"
+      }
+    },
+    {
+      "id": "q-2734027349-29",
+      "testId": "2734027349",
+      "questionNumber": 29,
+      "text": "In the left ventricle, the blood flow in the subendocardium:",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "is much larger during the diastole than during the systole"
+        },
+        {
+          "letter": "b",
+          "text": "the subendocardium is avascular, has no blood flow, this tissue is supplied by the blood within the heart chambers"
+        },
+        {
+          "letter": "c",
+          "text": "is much larger during the systole than during the diastole"
+        },
+        {
+          "letter": "d",
+          "text": "blood flow is equal in the subendocardium during the cardiac cycle"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "topics": [
+        40
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 40: 'Describe the phasic flow of blood to the ventricular myocardium through an entire cardiac cycle. Contrast this cyclic variation in the subendocardium and the subepicardium of the left ventricle'"
+      }
+    },
+    {
+      "id": "q-2734027349-30",
+      "testId": "2734027349",
+      "questionNumber": 30,
+      "text": "Which of the following organs in the resting subject receives the greatest blood flow per gram of tissue?",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "brain"
+        },
+        {
+          "letter": "b",
+          "text": "liver"
+        },
+        {
+          "letter": "c",
+          "text": "gastrocnemius muscle"
+        },
+        {
+          "letter": "d",
+          "text": "heart"
+        },
+        {
+          "letter": "e",
+          "text": "kidney"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "topics": [
+        53
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 53: 'normalized renal blood flow 420 ml/min/100g (cardiac muscle 84, skeletal muscle 2.7, brain 54 ml/min/100 g)' - kidney has highest flow per gram"
+      }
+    },
+    {
+      "id": "q-2734027349-31",
+      "testId": "2734027349",
+      "questionNumber": 31,
+      "text": "Which segment of the tubular system is characterized by the highest osmotic concentration in the human kidney?",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "ascending thick segment of the loop of Henle"
+        },
+        {
+          "letter": "b",
+          "text": "proximal convoluted tubule"
+        },
+        {
+          "letter": "c",
+          "text": "the total length of the distal convoluted tubule"
+        },
+        {
+          "letter": "d",
+          "text": "the beginning of the distal convoluted tubule"
+        },
+        {
+          "letter": "e",
+          "text": "end of the collecting tubule"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "topics": [
+        57
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 57: 'maximal osmotic concentration in the inner medulla (long-loop nephron): 1200 mosmol/l' - end of collecting duct in inner medulla"
+      }
+    },
+    {
+      "id": "q-2734027349-32",
+      "testId": "2734027349",
+      "questionNumber": 32,
+      "text": "If the plasma concentration of substance X is 2 mg/100ml, the urine concentration of X is 12 mg/ml, the urine flow rate is 1 ml/min, and if the glomerular filtration rate is 125 ml/min, then substance X could be:",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "creatinine"
+        },
+        {
+          "letter": "b",
+          "text": "para-aminohippuric acid"
+        },
+        {
+          "letter": "c",
+          "text": "inulin"
+        },
+        {
+          "letter": "d",
+          "text": "sodium"
+        },
+        {
+          "letter": "e",
+          "text": "glucose"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "topics": [
+        55
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 55: Clearance = (12 mg/ml × 1 ml/min) / (0.02 mg/ml) = 600 ml/min > GFR, indicating secretion like PAH"
+      }
+    },
+    {
+      "id": "q-2734027349-33",
+      "testId": "2734027349",
+      "questionNumber": 33,
+      "text": "The clearance of PAH can be used for direct estimation of",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "diuresis"
+        },
+        {
+          "letter": "b",
+          "text": "intratubular pressure"
+        },
+        {
+          "letter": "c",
+          "text": "RBF"
+        },
+        {
+          "letter": "d",
+          "text": "GFR"
+        },
+        {
+          "letter": "e",
+          "text": "effective RPF"
+        },
+        {
+          "letter": "f",
+          "text": "tubular reabsorption capacity"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "topics": [
+        55
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 55: 'PAH-clearance=RPF' - PAH clearance estimates effective renal plasma flow"
+      }
+    },
+    {
+      "id": "q-2734027349-34",
+      "testId": "2734027349",
+      "questionNumber": 34,
+      "text": "Which filtration layer has the lowest permeability in the glomerulus?",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "basal membrane"
+        },
+        {
+          "letter": "b",
+          "text": "external cells of the Bowman capsule"
+        },
+        {
+          "letter": "c",
+          "text": "endothelial cells"
+        },
+        {
+          "letter": "d",
+          "text": "podocytes"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "topics": [
+        52
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 52: 'Describe the three layers comprising the glomerular filtration barrier' - basement membrane is the main size/charge barrier"
+      }
+    },
+    {
+      "id": "q-2734027349-35",
+      "testId": "2734027349",
+      "questionNumber": 35,
+      "text": "What percentage of plasma glucose entering the glomerular capillaries is filtered into the glomeruli?",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "glucose is not filtered"
+        },
+        {
+          "letter": "b",
+          "text": "10 %"
+        },
+        {
+          "letter": "c",
+          "text": "50 %"
+        },
+        {
+          "letter": "d",
+          "text": "20 %"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "topics": [
+        52
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 52: Filtration fraction is ~20%, so 20% of plasma glucose is filtered"
+      }
+    },
+    {
+      "id": "q-2734027349-36",
+      "testId": "2734027349",
+      "questionNumber": 36,
+      "text": "Which transport is modulated by ANH in the kidney? ANH inhibits",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "Amiloride-sensitive Na channels in the collecting duct"
+        },
+        {
+          "letter": "b",
+          "text": "Na-H exchange in the proximal tubule"
+        },
+        {
+          "letter": "c",
+          "text": "vasopressin-stimulated water reabsorption in the collecting duct"
+        },
+        {
+          "letter": "d",
+          "text": "Na-K-2Cl cotransporter in the thick segment"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "topics": [
+        79
+      ],
+      "mcqs": [
+        "mcq-5"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 79: 'Describe the renal effects of ANP' - ANP inhibits ADH-stimulated water reabsorption"
+      }
+    },
+    {
+      "id": "q-2734027349-37",
+      "testId": "2734027349",
+      "questionNumber": 37,
+      "text": "A patient is treated with a drug that causes the formation of a large volume of urine with an osmolarity of 100 mOsm/l. The actions of this drug include:",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "inhibition of ADH secretion"
+        },
+        {
+          "letter": "b",
+          "text": "inhibition of the tubular V2 receptors"
+        },
+        {
+          "letter": "c",
+          "text": "inhibition of Na-K-2Cl cotransport by the thick segment of the ascending limb of the loop of Henle"
+        },
+        {
+          "letter": "d",
+          "text": "inhibition of renin secretion"
+        },
+        {
+          "letter": "e",
+          "text": "increased water permeability of the distal tubule and collecting duct"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "topics": [
+        57
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 57: 'Identify the targets of the following diuretics: loop diuretics (furosemide)' - inhibits Na-K-2Cl, disrupts medullary gradient causing dilute urine"
+      }
+    },
+    {
+      "id": "q-2734027349-38",
+      "testId": "2734027349",
+      "questionNumber": 38,
+      "text": "Stimuli resulting in increased renin secretion:",
+      "correctAnswerCount": 3,
+      "options": [
+        {
+          "letter": "a",
+          "text": "excess salt intake"
+        },
+        {
+          "letter": "b",
+          "text": "parasympathetic stimulation"
+        },
+        {
+          "letter": "c",
+          "text": "decreased renal perfusion"
+        },
+        {
+          "letter": "d",
+          "text": "decreased arterial blood pressure"
+        },
+        {
+          "letter": "e",
+          "text": "stimulation of renal beta1 adrenerge receptors"
+        }
+      ],
+      "correctAnswers": [
+        "c",
+        "d",
+        "e"
+      ],
+      "topics": [
+        79
+      ],
+      "mcqs": [
+        "mcq-5"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 79: 'Explain the regulation of renin secretion' - decreased perfusion, decreased BP, and beta1 stimulation increase renin"
+      }
+    },
+    {
+      "id": "q-2734027349-39",
+      "testId": "2734027349",
+      "questionNumber": 39,
+      "text": "A major mechanism of Na+-reabsorption in the proximal tubulus is as follows",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "exchange for K+ (Na+ - K+ - 2Cl-)"
+        },
+        {
+          "letter": "b",
+          "text": "exchange for K+"
+        },
+        {
+          "letter": "c",
+          "text": "exchange for H+ resulting in net Na+ and HCO3- absorption"
+        },
+        {
+          "letter": "d",
+          "text": "exchange for Ca2+"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "topics": [
+        57
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 57: 'Describe the luminal mechanisms of Na+-reabsorption in the proximal tubulus (Na+-H+-antiporter)'"
+      }
+    },
+    {
+      "id": "q-2734027349-40",
+      "testId": "2734027349",
+      "questionNumber": 40,
+      "text": "Find the substance that is passively reabsorbed from the proximal tubule",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "albumin"
+        },
+        {
+          "letter": "b",
+          "text": "glucose"
+        },
+        {
+          "letter": "c",
+          "text": "amino acids"
+        },
+        {
+          "letter": "d",
+          "text": "urea"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "topics": [
+        56
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 56: 'Describe the urea reabsorption in the proximal tubuli' - urea is passively reabsorbed"
+      }
+    },
+    {
+      "id": "q-2734027349-41",
+      "testId": "2734027349",
+      "questionNumber": 41,
+      "text": "At which plasma glucose concentration does the glucose appear in the urine?",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "22-25 mmol/L"
+        },
+        {
+          "letter": "b",
+          "text": "11-13 mmol/L"
+        },
+        {
+          "letter": "c",
+          "text": "3-6 mmol/L"
+        },
+        {
+          "letter": "d",
+          "text": "there is never glucose in the urine"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "topics": [
+        56
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 56: 'renal threshold of glucose: 10 mM' - glucose appears in urine around 10-11 mmol/L"
+      }
+    },
+    {
+      "id": "q-2734027349-42",
+      "testId": "2734027349",
+      "questionNumber": 42,
+      "text": "Which of the following values means partially compensated metabolic acidosis? (Normal pCO2= 40 mmHg; Normal [HCO3-]= 24 mM) pCO2(mmHg) [HCO3-](mM) pH",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "60 / 57 / 7.60"
+        },
+        {
+          "letter": "b",
+          "text": "66 / 28 / 7.25"
+        },
+        {
+          "letter": "c",
+          "text": "60 / 37 / 7.4"
+        },
+        {
+          "letter": "d",
+          "text": "35 / 15 / 7.25"
+        },
+        {
+          "letter": "e",
+          "text": "29 / 22 / 7.51"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "topics": [
+        82
+      ],
+      "mcqs": [
+        "mcq-5"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 82: 'Describe the respiratory and renal regulation of the CO2/HCO3- buffer system' - low HCO3- (metabolic acidosis) with low pCO2 (respiratory compensation) but pH still low (partial)"
+      }
+    },
+    {
+      "id": "q-2734027349-43",
+      "testId": "2734027349",
+      "questionNumber": 43,
+      "text": "Which cells in the kidney express vacuolar H+-pump?",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "epithelial cells of the proximal tubule"
+        },
+        {
+          "letter": "b",
+          "text": "principals cells in the collecting duct"
+        },
+        {
+          "letter": "c",
+          "text": "intercalated cells in the collecting duct"
+        },
+        {
+          "letter": "d",
+          "text": "epithelial cells of the distal tubule"
+        },
+        {
+          "letter": "e",
+          "text": "epithelial cells of the thick segment of the loop of Henle"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "topics": [
+        82
+      ],
+      "mcqs": [
+        "mcq-5"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T22:55:02.862Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 82: 'Identify the major sites of HCO3- reabsorption along the nephron, emphasizing the importance of H+ secretory mechanisms' - intercalated cells have H+-ATPase"
+      }
+    }
+  ]
+}

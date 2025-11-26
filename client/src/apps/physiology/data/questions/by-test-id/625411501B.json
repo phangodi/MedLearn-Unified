@@ -1,0 +1,74 @@
+{
+  "testId": "625411501B",
+  "examName": "Physiology Exam - Test 625411501B",
+  "importedAt": "2025-11-25T22:10:00Z",
+  "questions": [
+    {
+      "id": "q-625411501B-18",
+      "testId": "625411501B",
+      "questionNumber": 18,
+      "text": "What is characteristic of the thick segment of the loop of Henle?",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "the Na reabsorption is stimulated by aldosterone"},
+        {"letter": "b", "text": "this is where the largest fraction of filtered Na is reabsorbed"},
+        {"letter": "c", "text": "the tubular fluid becomes hypoosmotic"},
+        {"letter": "d", "text": "large amount of water flows into the interstitium"}
+      ],
+      "correctAnswers": ["c"],
+      "topics": [57],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 57: 'Describe the changes of osmolarity in the tubular fluid...from the loop of Henle' - thick ascending limb is impermeable to water, so NaCl reabsorption makes fluid hypoosmotic"
+      }
+    },
+    {
+      "id": "q-625411501B-24",
+      "testId": "625411501B",
+      "questionNumber": 24,
+      "text": "The effects of atrial natriuretic peptide include",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "increased elimination of bradykinin"},
+        {"letter": "b", "text": "vasodilation"},
+        {"letter": "c", "text": "increased sensitivity of beta-adrenergic receptors"},
+        {"letter": "d", "text": "stimulation of renin secretion"},
+        {"letter": "e", "text": "inhibition of ADH secretion"}
+      ],
+      "correctAnswers": ["b", "e"],
+      "topics": [49],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 49: 'Describe the effects of...atrial natriuretic hormone on arterial blood pressure: direct vascular and indirect renal mechanisms'"
+      }
+    },
+    {
+      "id": "q-625411501B-25",
+      "testId": "625411501B",
+      "questionNumber": 25,
+      "text": "The parasympathetic preganglionic neuronal cell bodies controlling the detrusor muscle of the bladder are located in the",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "lumbar spinal cord"},
+        {"letter": "b", "text": "sacral spinal cord"},
+        {"letter": "c", "text": "medulla oblongata"},
+        {"letter": "d", "text": "hypothalamus"}
+      ],
+      "correctAnswers": ["b"],
+      "topics": [58],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 58: 'Explain the visceral sensory, autonomic (sympathetic and parasympathetic) and somatic motor innervation of the urinary bladder' - parasympathetic from sacral segments S2-S4"
+      }
+    }
+  ]
+}

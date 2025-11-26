@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronRight, Check, Play, BookOpen, FileText, ClipboardList } from 'lucide-react';
 import { useTest } from '../context/TestContext';
-import { mcqFilters, getTopicsGroupedByMcq } from '../services/questionsService';
+import { mcqFilters, getTopicsGroupedByMcq, getAvailableTestIds, getMcqQuestionCount, getTopicQuestionCount } from '../services/questionsService';
 import type { FilterMode } from '../../physiology/data/questions/types';
 
 export function MTOHomePage() {
@@ -22,8 +22,14 @@ export function MTOHomePage() {
     error
   } = useTest();
 
-  const [expandedMcqs, setExpandedMcqs] = useState<string[]>(['mcq-1']);
+  const [expandedMcqs, setExpandedMcqs] = useState<string[]>(['mcq-3']);
+  const [availableTests, setAvailableTests] = useState<string[]>([]);
   const topicsGrouped = getTopicsGroupedByMcq();
+
+  // Load available test IDs on mount
+  useEffect(() => {
+    getAvailableTestIds().then(setAvailableTests);
+  }, []);
 
   const toggleMcqExpanded = (mcqId: string) => {
     setExpandedMcqs(prev =>
@@ -114,7 +120,7 @@ export function MTOHomePage() {
                   const selectedInGroup = topics.filter(t =>
                     config.selectedTopics.includes(t.number)
                   ).length;
-                  const allSelected = selectedInGroup === topics.length;
+                  // allSelected can be used for future "Select All" checkbox state
 
                   return (
                     <div key={mcq.id} className="border border-border rounded-lg overflow-hidden">
@@ -165,9 +171,11 @@ export function MTOHomePage() {
                             <div className="p-3 grid grid-cols-1 sm:grid-cols-2 gap-2">
                               {topics.map((topic) => {
                                 const isSelected = config.selectedTopics.includes(topic.number);
+                                const questionCount = getTopicQuestionCount(topic.number);
                                 return (
                                   <label
                                     key={topic.number}
+                                    onClick={() => toggleTopic(topic.number)}
                                     className={`
                                       flex items-center gap-3 p-2 rounded-lg cursor-pointer
                                       transition-colors
@@ -179,20 +187,24 @@ export function MTOHomePage() {
                                   >
                                     <div
                                       className={`
-                                        w-5 h-5 rounded flex items-center justify-center
+                                        w-5 h-5 rounded flex items-center justify-center flex-shrink-0
                                         transition-colors
                                         ${isSelected
                                           ? 'bg-primary text-primary-foreground'
                                           : 'border-2 border-muted-foreground/30'
                                         }
                                       `}
-                                      onClick={() => toggleTopic(topic.number)}
                                     >
                                       {isSelected && <Check className="w-3 h-3" />}
                                     </div>
-                                    <span className="text-sm text-foreground">
+                                    <span className="text-sm text-foreground flex-1">
                                       <span className="font-medium">{topic.number}.</span>{' '}
                                       {topic.title}
+                                      {questionCount > 0 && (
+                                        <span className="text-xs text-muted-foreground ml-1">
+                                          ({questionCount} Qs)
+                                        </span>
+                                      )}
                                     </span>
                                   </label>
                                 );
@@ -218,21 +230,21 @@ export function MTOHomePage() {
               <h3 className="font-semibold text-foreground mb-4">Select MCQ Exam</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {mcqFilters.map((mcq) => {
-                  const implementedTopics = mcq.topics.filter(t => t <= 51).length;
+                  const questionCount = getMcqQuestionCount(mcq.id);
                   const isSelected = config.selectedMcq === mcq.id;
 
                   return (
                     <button
                       key={mcq.id}
                       onClick={() => setSelectedMcq(mcq.id)}
-                      disabled={implementedTopics === 0}
+                      disabled={questionCount === 0}
                       className={`
                         p-4 rounded-lg border-2 text-left transition-all
                         ${isSelected
                           ? 'border-primary bg-primary/10'
                           : 'border-border hover:border-primary/50'
                         }
-                        ${implementedTopics === 0 ? 'opacity-50 cursor-not-allowed' : ''}
+                        ${questionCount === 0 ? 'opacity-50 cursor-not-allowed' : ''}
                       `}
                     >
                       <div className="flex items-center justify-between mb-2">
@@ -245,8 +257,8 @@ export function MTOHomePage() {
                       </div>
                       <p className="text-sm text-muted-foreground mb-1">{mcq.description}</p>
                       <p className="text-xs text-muted-foreground">
-                        {implementedTopics} topics available
-                        {implementedTopics === 0 && ' (coming soon)'}
+                        {questionCount} questions available
+                        {questionCount === 0 && ' (coming soon)'}
                       </p>
                     </button>
                   );
@@ -262,14 +274,51 @@ export function MTOHomePage() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 20 }}
             >
-              <h3 className="font-semibold text-foreground mb-4">Select Test ID</h3>
-              <div className="bg-muted/30 rounded-lg p-6 text-center">
-                <FileText className="w-12 h-12 text-muted-foreground mx-auto mb-3" />
-                <p className="text-muted-foreground mb-2">No tests imported yet</p>
-                <p className="text-sm text-muted-foreground">
-                  Use the import skill to add exam questions
-                </p>
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="font-semibold text-foreground">Select Test ID</h3>
+                <span className="text-sm text-muted-foreground">
+                  {availableTests.length} tests available
+                </span>
               </div>
+              {availableTests.length === 0 ? (
+                <div className="bg-muted/30 rounded-lg p-6 text-center">
+                  <FileText className="w-12 h-12 text-muted-foreground mx-auto mb-3" />
+                  <p className="text-muted-foreground mb-2">Loading tests...</p>
+                </div>
+              ) : (
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-[400px] overflow-y-auto pr-1">
+                  {availableTests.map((testId) => {
+                    const isSelected = config.selectedTestId === testId;
+                    return (
+                      <button
+                        key={testId}
+                        onClick={() => setSelectedTestId(testId)}
+                        className={`
+                          p-4 rounded-lg border-2 text-left transition-all
+                          ${isSelected
+                            ? 'border-primary bg-primary/10'
+                            : 'border-border hover:border-primary/50'
+                          }
+                        `}
+                      >
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="font-mono font-semibold text-foreground text-sm">
+                            {testId}
+                          </span>
+                          {isSelected && (
+                            <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center">
+                              <Check className="w-3 h-3 text-primary-foreground" />
+                            </div>
+                          )}
+                        </div>
+                        <p className="text-sm text-muted-foreground">
+                          Click to select this test
+                        </p>
+                      </button>
+                    );
+                  })}
+                </div>
+              )}
             </motion.div>
           )}
         </AnimatePresence>

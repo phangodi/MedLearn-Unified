@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Sidebar } from '@/components/layout/Sidebar'
 import { BorderFrame } from '@/components/layout/BorderFrame'
-import { Particles } from '@/components/ui/Particles'
 import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import { Button } from '@/components/ui/Button'
 import { LogOut, ArrowLeft, ClipboardCheck } from 'lucide-react'
@@ -28,7 +27,6 @@ export function PhysiologyMTOPage() {
 
   return (
     <div className="min-h-screen bg-background flex">
-      <Particles quantity={60} ease={50} />
       <Sidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} isCollapsed={sidebarCollapsed} setIsCollapsed={setSidebarCollapsed} />
       <div className="flex-1 flex flex-col relative z-10">
         <BorderFrame sidebarCollapsed={sidebarCollapsed} />

@@ -1,0 +1,757 @@
+{
+  "testId": "4447200607",
+  "examName": "Physiology MTO3 Pages 44-47 (2006-2007)",
+  "importedAt": "2025-11-25T23:57:00Z",
+  "questions": [
+    {
+      "id": "q-4447200607-1",
+      "testId": "4447200607",
+      "questionNumber": 8,
+      "text": "The slowest action potential velocity is measured in:",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "SA node"},
+        {"letter": "b", "text": "in the bundle of His"},
+        {"letter": "c", "text": "in the ventricles"},
+        {"letter": "d", "text": "in the atria, but not in others"},
+        {"letter": "e", "text": "it is everywhere the same - always"}
+      ],
+      "correctAnswers": ["a"],
+      "topics": [38],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T23:57:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 38: 'Beginning in the SA node, diagram the normal sequence of cardiac activation...explain the functional significance of the slow conduction through the AV node'. SA node has slowest conduction velocity."
+      }
+    },
+    {
+      "id": "q-4447200607-2",
+      "testId": "4447200607",
+      "questionNumber": 9,
+      "text": "Increases in arterial pulse pressure may be caused by:",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "decreases in stroke volume"},
+        {"letter": "b", "text": "decreases in arterial blood volume"},
+        {"letter": "c", "text": "increases in heart rate"},
+        {"letter": "d", "text": "decreases in arterial compliance"}
+      ],
+      "correctAnswers": ["d"],
+      "topics": [42],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T23:57:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 42: 'Describe the effects of changes in a) stroke volume, b) arterial compliance...on arterial systolic, diastolic, mean, and pulse pressure values'"
+      }
+    },
+    {
+      "id": "q-4447200607-3",
+      "testId": "4447200607",
+      "questionNumber": 10,
+      "text": "The major Starling-force for reabsorption:",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "interstitial colloid osmotic pressure"},
+        {"letter": "b", "text": "intracapillary hydrostatic pressure"},
+        {"letter": "c", "text": "plasma colloid osmotic pressure"},
+        {"letter": "d", "text": "intracapillary hydrostatic pressure"}
+      ],
+      "correctAnswers": ["c"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T23:57:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 43: 'Define oncotic (colloidosmotic) and hydrostatic pressures...Define the Starling equation and discuss how each component influences fluid movement across the capillary wall'"
+      }
+    },
+    {
+      "id": "q-4447200607-4",
+      "testId": "4447200607",
+      "questionNumber": 11,
+      "text": "Which one of the following 10 cm long structures has the highest compliance?",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "an arteriosclerotic femoral artery"},
+        {"letter": "b", "text": "a healthy femoral vein"},
+        {"letter": "c", "text": "a healthy femoral artery"},
+        {"letter": "d", "text": "an abdominal aorta"}
+      ],
+      "correctAnswers": ["b"],
+      "topics": [41],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T23:57:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 41: 'Explain the concept of vascular compliance...Characterize the different vascular segments based on their compliance'. Veins have highest compliance."
+      }
+    },
+    {
+      "id": "q-4447200607-5",
+      "testId": "4447200607",
+      "questionNumber": 12,
+      "text": "Depressor reflex can be elicited by",
+      "correctAnswerCount": 4,
+      "options": [
+        {"letter": "a", "text": "stretching the left ventricle"},
+        {"letter": "b", "text": "stretching the pulmonary artery"},
+        {"letter": "c", "text": "increasing the intracranial pressure"},
+        {"letter": "d", "text": "arterial hypoxia"},
+        {"letter": "e", "text": "stretching the carotis sinus"},
+        {"letter": "f", "text": "stimulating chemosensitive vagal afferents in the lungs and the heart"}
+      ],
+      "correctAnswers": ["a", "b", "e", "f"],
+      "topics": [48],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T23:57:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 48: 'Characterize the reflex circuit elements of the high pressure baroreceptor reflex: activity of the baroreceptors of the carotid sinus and the aortic arch'"
+      }
+    },
+    {
+      "id": "q-4447200607-6",
+      "testId": "4447200607",
+      "questionNumber": 13,
+      "text": "The values of which of the following parameters are smaller in the pulmonary circulation than in the systemic circulation",
+      "correctAnswerCount": 3,
+      "options": [
+        {"letter": "a", "text": "cardiac output"},
+        {"letter": "b", "text": "mean arterial pressure"},
+        {"letter": "c", "text": "the pressure gradient between the arterial and the venous parts"},
+        {"letter": "d", "text": "venous pressure"},
+        {"letter": "e", "text": "total resistance"}
+      ],
+      "correctAnswers": ["b", "c", "e"],
+      "topics": [50],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T23:57:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 50: 'Compare the pulmonary circulation with the systemic circulation: blood pressure values, vascular resistance'"
+      }
+    },
+    {
+      "id": "q-4447200607-7",
+      "testId": "4447200607",
+      "questionNumber": 14,
+      "text": "The MOST important blood reservoir in man is:",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "spleen"},
+        {"letter": "b", "text": "skin"},
+        {"letter": "c", "text": "skeletal muscles"},
+        {"letter": "d", "text": "liver"},
+        {"letter": "e", "text": "bone marrow"}
+      ],
+      "correctAnswers": ["b"],
+      "topics": [45],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T23:57:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 45: 'Describe the sympathetic innervation of the veins eliciting vasoconstriction. Define venomotor tone'. Skin venous plexus serves as major blood reservoir."
+      }
+    },
+    {
+      "id": "q-4447200607-8",
+      "testId": "4447200607",
+      "questionNumber": 15,
+      "text": "Vasopressin in the circulation",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "elevates intracellular Ca concentration in the vascular smooth muscle"},
+        {"letter": "b", "text": "stimulates cAMP via V1 receptors"},
+        {"letter": "c", "text": "elicits vasoconstriction via V1 receptors"},
+        {"letter": "d", "text": "decreases the total peripheral resistance"}
+      ],
+      "correctAnswers": ["a", "c"],
+      "topics": [49],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T23:57:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 49: 'Describe the effects of angiotensin II, vasopressin, and atrial natriuretic hormone on arterial blood pressure: direct vascular and indirect renal mechanisms'"
+      }
+    },
+    {
+      "id": "q-4447200607-9",
+      "testId": "4447200607",
+      "questionNumber": 16,
+      "text": "Which of the following is the most important factor regulating skin blood flow",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "parasympathetic innervation"},
+        {"letter": "b", "text": "basal myogenic activity"},
+        {"letter": "c", "text": "local tissue metabolism"},
+        {"letter": "d", "text": "sympathetic vasomotor tone"},
+        {"letter": "e", "text": "autoregulation"}
+      ],
+      "correctAnswers": ["d"],
+      "topics": [48],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T23:57:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 48: 'Give examples to organ circulations where the sympathetic vasomotor tone is significant (skin, skeletal muscle splanchnic circulation)'"
+      }
+    },
+    {
+      "id": "q-4447200607-10",
+      "testId": "4447200607",
+      "questionNumber": 17,
+      "text": "Left coronary artery blood flow",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "does not depend on arterial blood pressure"},
+        {"letter": "b", "text": "is greatest during diastole"},
+        {"letter": "c", "text": "accounts for about 10% of the cardiac output"},
+        {"letter": "d", "text": "is regulated mainly by myocardial O2 consumption"}
+      ],
+      "correctAnswers": ["b", "d"],
+      "topics": [40],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T23:57:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 40: 'Describe the phasic flow of blood to the ventricular myocardium through an entire cardiac cycle' and 'Explain the mechanism whereby coronary blood flow is coupled to myocardial workload'"
+      }
+    },
+    {
+      "id": "q-4447200607-11",
+      "testId": "4447200607",
+      "questionNumber": 18,
+      "text": "Determine the cardiac output! Oxygen consumption: 2000mL/min, arterial oxygen concentration: 20mL/100mL, venous oxygen concentration: 10 mL/100mL",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "20 L/min"},
+        {"letter": "b", "text": "25 L/min"},
+        {"letter": "c", "text": "10 L/min"},
+        {"letter": "d", "text": "5 L/min"}
+      ],
+      "correctAnswers": ["a"],
+      "topics": [47],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T23:57:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 47: 'Understand the principles underlying cardiac output measurements using the Fick principle'. CO = VO2/(CaO2-CvO2) = 2000/(200-100) = 20 L/min"
+      }
+    },
+    {
+      "id": "q-4447200607-12",
+      "testId": "4447200607",
+      "questionNumber": 20,
+      "text": "With regard to the microcirculation",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "precapillary sphincters are between the arterioles and capillaries"},
+        {"letter": "b", "text": "during periods of rest, not all the capillaries are open"},
+        {"letter": "c", "text": "dilation of arterioles decreases the pressure in the capillaries"},
+        {"letter": "d", "text": "increased sympathetic activity tends to constrict the capillaries"}
+      ],
+      "correctAnswers": ["a", "b"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T23:57:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 43: 'Describe the vascular elements of the microcirculation (arterioles, metarterioles, precapillary sphincters, capillaries, venules)'"
+      }
+    },
+    {
+      "id": "q-4447200607-13",
+      "testId": "4447200607",
+      "questionNumber": 21,
+      "text": "Which of the following second messenger systems is implicated in the mediation of vasoconstriction?",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "activation of cGMP"},
+        {"letter": "b", "text": "stimulation of cAMP"},
+        {"letter": "c", "text": "stimulation of cGMP"},
+        {"letter": "d", "text": "stimulation of IP3"}
+      ],
+      "correctAnswers": ["d"],
+      "topics": [7, 24],
+      "mcqs": ["mcq-1", "mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T23:57:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 7: 'Define the term second messengers...cAMP, cGMP, calcium, IP3/DAG'; Topic 24: 'Describe the intracellular pathways that control contraction and relaxation in smooth muscle'. IP3 mediates Ca2+ release for vasoconstriction."
+      }
+    },
+    {
+      "id": "q-4447200607-14",
+      "testId": "4447200607",
+      "questionNumber": 22,
+      "text": "Arterioles are characterized by:",
+      "correctAnswerCount": 3,
+      "options": [
+        {"letter": "a", "text": "the highest velocity of blood flow"},
+        {"letter": "b", "text": "the greatest resistance to flow in the systemic circulation"},
+        {"letter": "c", "text": "the greatest pressure drop"},
+        {"letter": "d", "text": "the lowest fraction of blood volume"},
+        {"letter": "e", "text": "the greatest compliance"}
+      ],
+      "correctAnswers": ["b", "c", "d"],
+      "topics": [41],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T23:57:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 41: 'Characterize the contribution of arteries, arterioles, capillaries, venules, and veins to peripheral vascular resistance. Contrast blood pressure, cross sectional area, flow velocity, and blood volume in these vascular segments'"
+      }
+    },
+    {
+      "id": "q-4447200607-15",
+      "testId": "4447200607",
+      "questionNumber": 24,
+      "text": "3 major vasodilator substances can be released from parasympathetic nerve endings. These are:",
+      "correctAnswerCount": 3,
+      "options": [
+        {"letter": "a", "text": "neuropeptide Y (NPY)"},
+        {"letter": "b", "text": "prostacyclin (PGI2)"},
+        {"letter": "c", "text": "vasoactive intestinal polypeptide (VIP)"},
+        {"letter": "d", "text": "acetyl-choline"},
+        {"letter": "e", "text": "nitric oxide (NO)"},
+        {"letter": "f", "text": "adrenaline"}
+      ],
+      "correctAnswers": ["c", "d", "e"],
+      "topics": [19],
+      "mcqs": ["mcq-1"],
+      "metadata": {
+        "importedAt": "2025-11-25T23:57:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 19: 'Describe the biosynthesis, synaptic release, and elimination of acetyl-choline...Give further neurotransmitters released by parasympathetic nerves, and give examples of parasympathetic effects mediated by such neurotransmitters'"
+      }
+    },
+    {
+      "id": "q-4447200607-16",
+      "testId": "4447200607",
+      "questionNumber": 108,
+      "text": "Cardiac work is composed of the followings:",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "volume work + pressure work"},
+        {"letter": "b", "text": "pressure work + acceleration work + volume work"},
+        {"letter": "c", "text": "acceleration work + volume work"},
+        {"letter": "d", "text": "pressure work + acceleration work"}
+      ],
+      "correctAnswers": ["b"],
+      "topics": [40],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T23:57:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 40: 'Describe the components of the external work of the heart (pressure-volume work and kinetic work)'"
+      }
+    },
+    {
+      "id": "q-4447200607-17",
+      "testId": "4447200607",
+      "questionNumber": 109,
+      "text": "Which of the following changes is the MOST effective in enhancing flow?",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "doubling the pressure gradient"},
+        {"letter": "b", "text": "doubling the radius of the tubing"},
+        {"letter": "c", "text": "reducing the viscosity to one half of the original"},
+        {"letter": "d", "text": "reducing the radius of the tubing to one half of the original"},
+        {"letter": "e", "text": "doubling the length of the tubing"},
+        {"letter": "f", "text": "reducing the length of the tubing to one half of the original"},
+        {"letter": "g", "text": "doubling the viscosity"}
+      ],
+      "correctAnswers": ["b"],
+      "topics": [33],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T23:57:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 33: 'Explain the factors determining hydraulic resistance using the Hagen Poiseuille's law'. Flow is proportional to r^4, so doubling radius increases flow 16-fold."
+      }
+    },
+    {
+      "id": "q-4447200607-18",
+      "testId": "4447200607",
+      "questionNumber": 110,
+      "text": "Blood flow tends to be turbulent when",
+      "correctAnswerCount": 4,
+      "options": [
+        {"letter": "a", "text": "white blood cell count increases (leukemia)"},
+        {"letter": "b", "text": "the caliber of the vessel increases"},
+        {"letter": "c", "text": "hematocrit decreases"},
+        {"letter": "d", "text": "flow velocity is low"},
+        {"letter": "e", "text": "the vessel is bent in a sharp angle"},
+        {"letter": "f", "text": "viscosity is low"}
+      ],
+      "correctAnswers": ["b", "c", "e", "f"],
+      "topics": [33],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T23:57:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 33: 'Explain the terms laminar and turbulent flow. List the factors that shift laminar flow to turbulent flow. Reynolds number'"
+      }
+    },
+    {
+      "id": "q-4447200607-19",
+      "testId": "4447200607",
+      "questionNumber": 111,
+      "text": "The venous pulse:",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "is necessary for proper cardiac filling"},
+        {"letter": "b", "text": "is diminished in cardiac failure"},
+        {"letter": "c", "text": "is a damped arterial pulse"},
+        {"letter": "d", "text": "is a result of pressure changes in the heart propagated to neighboring veins"}
+      ],
+      "correctAnswers": ["d"],
+      "topics": [36],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T23:57:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 36: 'Explain the pressure changes in the right atrium during the cardiac cycle and how these changes contribute to the jugular pulse'"
+      }
+    },
+    {
+      "id": "q-4447200607-20",
+      "testId": "4447200607",
+      "questionNumber": 112,
+      "text": "The pressure pulse in the systemic arteries",
+      "correctAnswerCount": 3,
+      "options": [
+        {"letter": "a", "text": "propagates at about 5 m/sec"},
+        {"letter": "b", "text": "is produced by the ejection of blood into the aorta"},
+        {"letter": "c", "text": "is palpable at the wrist shortly after ventricular ejection"},
+        {"letter": "d", "text": "has the same velocity as arterial blood flow"}
+      ],
+      "correctAnswers": ["a", "b", "c"],
+      "topics": [42],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T23:57:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 42: 'Describe the propagation of the pressure pulse, the changes in the shape of the pressure waveform from the aorta to the peripheral arteries. Contrast the pressure pulse with the flow pulse'"
+      }
+    },
+    {
+      "id": "q-4447200607-21",
+      "testId": "4447200607",
+      "questionNumber": 113,
+      "text": "The basal tone of the vessels",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "is the same as the neurogen tone"},
+        {"letter": "b", "text": "the cerebral vessels do not have it"},
+        {"letter": "c", "text": "can be observed after the denervation of the vessels"},
+        {"letter": "d", "text": "is identical in the different organs"}
+      ],
+      "correctAnswers": ["c"],
+      "topics": [48],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T23:57:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 48: 'Define the resting, neurogenic, basal and myogenic tone of resistance vessels'. Basal tone persists after denervation."
+      }
+    },
+    {
+      "id": "q-4447200607-22",
+      "testId": "4447200607",
+      "questionNumber": 114,
+      "text": "Vasodilator substances produced by the endothelium:",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "endothelin (ET)"},
+        {"letter": "b", "text": "angiotensin II (AT2)"},
+        {"letter": "c", "text": "nitric oxide (NO)"},
+        {"letter": "d", "text": "prostacyclin (PGI2)"}
+      ],
+      "correctAnswers": ["c", "d"],
+      "topics": [46],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T23:57:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 46: 'Enlist the vasoactive mediators released from vascular endothelium. Describe the biosynthesis of nitric oxide and its actions on the vascular smooth muscle'"
+      }
+    },
+    {
+      "id": "q-4447200607-23",
+      "testId": "4447200607",
+      "questionNumber": 115,
+      "text": "Which of the following substances are classified as vasodilators?",
+      "correctAnswerCount": 4,
+      "options": [
+        {"letter": "a", "text": "bradykinin"},
+        {"letter": "b", "text": "angiotensin II"},
+        {"letter": "c", "text": "nitric oxide"},
+        {"letter": "d", "text": "beta2-adrenergic agonists"},
+        {"letter": "e", "text": "endothelin"},
+        {"letter": "f", "text": "vasopressin"},
+        {"letter": "g", "text": "atrial natriuretic peptide"},
+        {"letter": "h", "text": "noradrenaline"}
+      ],
+      "correctAnswers": ["a", "c", "d", "g"],
+      "topics": [46],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T23:57:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 46: 'Describe how histamine released from mast cells, bradykinin, prostanoids, and neuropeptides...contribute to the inflammatory hyperemia'"
+      }
+    },
+    {
+      "id": "q-4447200607-24",
+      "testId": "4447200607",
+      "questionNumber": 116,
+      "text": "Capillary reabsorption",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "is enhanced by high colloidosmotic pressure of the blood"},
+        {"letter": "b", "text": "is enhanced by high capillary hydrostatic pressure"},
+        {"letter": "c", "text": "is decreased by high interstitial hydrostatic pressure"},
+        {"letter": "d", "text": "can not be observed in case of the pulmonary capillaries"}
+      ],
+      "correctAnswers": ["a"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T23:57:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 43: 'Define the Starling equation and discuss how each component influences fluid movement across the capillary wall'. High plasma oncotic pressure favors reabsorption."
+      }
+    },
+    {
+      "id": "q-4447200607-25",
+      "testId": "4447200607",
+      "questionNumber": 117,
+      "text": "Which of the following statements regarding lymphatic circulation are correct?",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "there are no lymphatic vessels in the brain tissue"},
+        {"letter": "b", "text": "the lymphatic system is involved in the regulation of the interstitial fluid volume"},
+        {"letter": "c", "text": "there are no lymphatic vessels in the lung"},
+        {"letter": "d", "text": "increased mean systemic filling pressure promotes lymph flow"},
+        {"letter": "e", "text": "the pressure in the thoracic duct is smaller than that in the right atrium"}
+      ],
+      "correctAnswers": ["a", "b"],
+      "topics": [44],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T23:57:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 44: 'Identify critical functions of the lymphatic system: clearance of proteins from the interstitium, reabsorption of filtered fluid'"
+      }
+    },
+    {
+      "id": "q-4447200607-26",
+      "testId": "4447200607",
+      "questionNumber": 118,
+      "text": "The most effective factor enhancing venous return is",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "skeletal muscle pump"},
+        {"letter": "b", "text": "inspiration"},
+        {"letter": "c", "text": "negative hydrostatic pressure in the veins above the heart"},
+        {"letter": "d", "text": "positive intraabdominal pressure"}
+      ],
+      "correctAnswers": ["a"],
+      "topics": [45],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T23:57:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 45: 'Describe the factors promoting venous return (heart pumping: vis a tergo and vis a fronte, dynamic muscle pump, venoconstriction, respiratory pump)'"
+      }
+    },
+    {
+      "id": "q-4447200607-27",
+      "testId": "4447200607",
+      "questionNumber": 119,
+      "text": "During increased metabolic activity of a brain area, the regional cerebral blood flow:",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "will fall because the local blood pressure will become inadequate to maintain it"},
+        {"letter": "b", "text": "will decrease because flow is inversely related to the local vascular resistance"},
+        {"letter": "c", "text": "will increase because local vascular resistance will decrease"},
+        {"letter": "d", "text": "will remain unchanged because blood pressure is unchanged"}
+      ],
+      "correctAnswers": ["c"],
+      "topics": [46],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T23:57:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 46: 'Describe how the theory of metabolic regulation of blood flow accounts for active hyperemia'. Increased metabolism causes local vasodilation."
+      }
+    },
+    {
+      "id": "q-4447200607-28",
+      "testId": "4447200607",
+      "questionNumber": 120,
+      "text": "Vascular autoregulation",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "is particularly marked in the cerebral vessels"},
+        {"letter": "b", "text": "requires rich sympathetic innervation"},
+        {"letter": "c", "text": "is insignificant in the skin vessels"},
+        {"letter": "d", "text": "manifests itself as vasodilation in response to increases in the intravascular pressure"},
+        {"letter": "e", "text": "is characteristic of veins"}
+      ],
+      "correctAnswers": ["a", "c"],
+      "topics": [46],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T23:57:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 46: 'Define the autoregulation of blood flow. Distinguish between short-term and long-term autoregulatory responses'. Cerebral vessels have strong autoregulation; skin vessels do not."
+      }
+    },
+    {
+      "id": "q-4447200607-29",
+      "testId": "4447200607",
+      "questionNumber": 121,
+      "text": "Which of the following circulatory system will respond to the stimulation of its adrenergic sympathetic neurons with the maximal increase (i.e. in terms of percent of control) in its blood flow?",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "cerebral circulation"},
+        {"letter": "b", "text": "coronary circulation"},
+        {"letter": "c", "text": "pulmonary circulation"},
+        {"letter": "d", "text": "skeletal muscle circulation"},
+        {"letter": "e", "text": "cutaneous circulation"}
+      ],
+      "correctAnswers": ["d"],
+      "topics": [51],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T23:57:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 51: 'Explain the relative importance of systemic neural and local control mechanisms in the skeletal muscle circulation'. Skeletal muscle has beta2-adrenergic vasodilation."
+      }
+    },
+    {
+      "id": "q-4447200607-30",
+      "testId": "4447200607",
+      "questionNumber": 122,
+      "text": "What changes would you expect in the pulmonary system after infusion of large fluid volume in the Pulmonary Vascular Resistance and in the Pulmonary Arterial Pressure",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "a small decrease | a large increase"},
+        {"letter": "b", "text": "a large decrease | a small increase"},
+        {"letter": "c", "text": "a large decrease | a small decrease"},
+        {"letter": "d", "text": "a large increase | a large increase"},
+        {"letter": "e", "text": "a small increase | a large increase"}
+      ],
+      "correctAnswers": ["b"],
+      "topics": [50],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T23:57:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 50: 'Describe how the pulmonary vascular resistance changes with the change in cardiac output and pulmonary arterial blood pressure. Explain the changes with the mechanisms of vascular distension and capillary recruitment'"
+      }
+    },
+    {
+      "id": "q-4447200607-31",
+      "testId": "4447200607",
+      "questionNumber": 123,
+      "text": "The pulmonary circulation differs from the systemic circulation in that in the pulmonary circulation:",
+      "correctAnswerCount": 3,
+      "options": [
+        {"letter": "a", "text": "the arterial system is more distensible"},
+        {"letter": "b", "text": "the capillaries have a higher transmural pressure"},
+        {"letter": "c", "text": "the arteries serve as more important blood reservoir"},
+        {"letter": "d", "text": "the veins are not an important reservoir of blood for the heart"},
+        {"letter": "e", "text": "obstruction of blood flow is much more likely to cause a retrograde ventricular failure"},
+        {"letter": "f", "text": "adrenergic sympathetic neurons are less important in controlling arteriolar and precapillary resistances"}
+      ],
+      "correctAnswers": ["a", "e", "f"],
+      "topics": [50],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T23:57:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 50: 'Compare the pulmonary circulation with the systemic circulation: blood pressure values, vascular resistance, response to hypoxia'"
+      }
+    },
+    {
+      "id": "q-4447200607-32",
+      "testId": "4447200607",
+      "questionNumber": 124,
+      "text": "Mechanisms involved in the regulation of blood volume are",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "baroreceptors in the arterial system (glomus bodies)"},
+        {"letter": "b", "text": "baroreceptors in the atria"},
+        {"letter": "c", "text": "vasopressin secretion"},
+        {"letter": "d", "text": "axon-reflex"}
+      ],
+      "correctAnswers": ["b", "c"],
+      "topics": [49],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T23:57:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 49: 'Describe the effects of angiotensin II, vasopressin, and atrial natriuretic hormone on arterial blood pressure: direct vascular and indirect renal mechanisms'"
+      }
+    },
+    {
+      "id": "q-4447200607-33",
+      "testId": "4447200607",
+      "questionNumber": 125,
+      "text": "Concerning the baroreceptor reflex:",
+      "correctAnswerCount": 3,
+      "options": [
+        {"letter": "a", "text": "it is a depressor reflex"},
+        {"letter": "b", "text": "the increase of heart frequency is a part of it"},
+        {"letter": "c", "text": "dilation of resistance and resistance vessels is involved in it"},
+        {"letter": "d", "text": "the blood pressure is decreased during its activation"}
+      ],
+      "correctAnswers": ["b", "c", "d"],
+      "topics": [48],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T23:57:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 48: 'Characterize the reflex circuit elements of the high pressure baroreceptor reflex: the effects on the target organs (heart, arterioles, veins)'"
+      }
+    }
+  ]
+}

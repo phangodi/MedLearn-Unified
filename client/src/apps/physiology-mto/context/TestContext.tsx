@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useCallback, ReactNode } from 'react';
+import { createContext, useContext, useState, useCallback, type ReactNode } from 'react';
 import type { Question, TestConfig, TestSession, TestResult, FilterMode } from '../../physiology/data/questions/types';
 import { getQuestionsForTest, checkAnswer, getTopicTitle } from '../services/questionsService';
 
@@ -61,14 +61,14 @@ export function TestProvider({ children }: { children: ReactNode }) {
     }));
   }, []);
 
-  const selectAllTopicsInMcq = useCallback((mcqId: string, topics: number[]) => {
+  const selectAllTopicsInMcq = useCallback((_mcqId: string, topics: number[]) => {
     setConfig(prev => ({
       ...prev,
       selectedTopics: [...new Set([...prev.selectedTopics, ...topics])]
     }));
   }, []);
 
-  const clearTopicsInMcq = useCallback((mcqId: string, topics: number[]) => {
+  const clearTopicsInMcq = useCallback((_mcqId: string, topics: number[]) => {
     setConfig(prev => ({
       ...prev,
       selectedTopics: prev.selectedTopics.filter(t => !topics.includes(t))

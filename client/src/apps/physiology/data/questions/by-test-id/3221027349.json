@@ -1,0 +1,300 @@
+{
+  "testId": "3221027349",
+  "examName": "Physiology Exam - Test 3221027349",
+  "importedAt": "2025-11-25T22:10:00Z",
+  "questions": [
+    {
+      "id": "q-3221027349-1",
+      "testId": "3221027349",
+      "questionNumber": 1,
+      "text": "In the left ventricle, the blood flow in the subendocardium:",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "is much larger during the diastole than during the systole"},
+        {"letter": "b", "text": "is much larger during the systole than during the diastole, this tissue is supplied by the blood within the heart chambers"},
+        {"letter": "c", "text": "is much larger during the systole than during the diastole"},
+        {"letter": "d", "text": "blood flow is equal in the subendocardium during the cardiac cycle"}
+      ],
+      "correctAnswers": ["a"],
+      "topics": [40],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 40: 'Contrast this cyclic variation in myocardial flow...in the subendocardium and the subepicardium of the left ventricle'"
+      }
+    },
+    {
+      "id": "q-3221027349-2",
+      "testId": "3221027349",
+      "questionNumber": 2,
+      "text": "Which of the following organs in the resting subject receives the greatest blood flow per gram of tissue?",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "brain"},
+        {"letter": "b", "text": "liver"},
+        {"letter": "c", "text": "gastrocnemius muscle"},
+        {"letter": "d", "text": "heart"},
+        {"letter": "e", "text": "kidney"}
+      ],
+      "correctAnswers": ["e"],
+      "topics": [53],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 53 reference values: 'normalized renal blood flow 420 ml/min/100g (cardiac muscle 84, skeletal muscle 2.7, brain 54 ml/min/100 g)'"
+      }
+    },
+    {
+      "id": "q-3221027349-3",
+      "testId": "3221027349",
+      "questionNumber": 3,
+      "text": "Which segment of the tubular system is characterized by the highest osmotic concentration in the concentrating kidney?",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "ascending thick segment of the loop of Henle"},
+        {"letter": "b", "text": "proximal convoluted tubule"},
+        {"letter": "c", "text": "the total length of the distal convoluted tubule"},
+        {"letter": "d", "text": "the beginning of the distal convoluted tubule"},
+        {"letter": "e", "text": "end of the collecting tubule"}
+      ],
+      "correctAnswers": ["e"],
+      "topics": [57],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 57 reference values: 'maximal osmotic concentration in the inner medulla (long-loop nephron): 1200 mosmol/l' - end of collecting tubule in inner medulla"
+      }
+    },
+    {
+      "id": "q-3221027349-4",
+      "testId": "3221027349",
+      "questionNumber": 4,
+      "text": "If the plasma concentration of X is 2 mg/100ml, the urine concentration of X is 12 mg/ml, the urine flow rate is 1 ml/min, and the glomerular filtration rate is 125 ml/min, then substance X crosses the glomerular membrane.",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "alanine"},
+        {"letter": "b", "text": "para-aminohippuric acid"},
+        {"letter": "c", "text": "inulin"},
+        {"letter": "d", "text": "sodium"},
+        {"letter": "e", "text": "glucose"}
+      ],
+      "correctAnswers": ["b"],
+      "topics": [55],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 55: Clearance = (12 mg/ml × 1 ml/min) / (0.02 mg/ml) = 600 ml/min, which equals RPF - indicates PAH with tubular secretion"
+      }
+    },
+    {
+      "id": "q-3221027349-5",
+      "testId": "3221027349",
+      "questionNumber": 5,
+      "text": "The clearance of PAH can be used for direct estimation of",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "diuresis"},
+        {"letter": "b", "text": "intratubular pressure"},
+        {"letter": "c", "text": "RBF"},
+        {"letter": "d", "text": "GFR"},
+        {"letter": "e", "text": "effective RPF"},
+        {"letter": "f", "text": "tubular reabsorption capacity"}
+      ],
+      "correctAnswers": ["e"],
+      "topics": [55],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 55 reference values: 'PAH-clearance=RPF'"
+      }
+    },
+    {
+      "id": "q-3221027349-6",
+      "testId": "3221027349",
+      "questionNumber": 6,
+      "text": "Which filtration layer has the lowest permeability in the glomerulus?",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "basal membrane"},
+        {"letter": "b", "text": "external cells of the Bowman capsule"},
+        {"letter": "c", "text": "endothelial cells"},
+        {"letter": "d", "text": "podocytes"}
+      ],
+      "correctAnswers": ["a"],
+      "topics": [52],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 52: 'Describe the three layers comprising the glomerular filtration barrier' - basement membrane is the main barrier"
+      }
+    },
+    {
+      "id": "q-3221027349-7",
+      "testId": "3221027349",
+      "questionNumber": 7,
+      "text": "What percentage of plasma glucose entering the glomerular capillary is filtered in the glomeruli?",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "glucose is not filtered"},
+        {"letter": "b", "text": "100 %"},
+        {"letter": "c", "text": "50 %"},
+        {"letter": "d", "text": "20 %"}
+      ],
+      "correctAnswers": ["d"],
+      "topics": [52],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 0.9,
+        "matchReason": "Topic 52: Filtration fraction is ~20%, so 20% of plasma glucose is filtered (glucose is freely filtered but only 20% of plasma passes through)"
+      }
+    },
+    {
+      "id": "q-3221027349-8",
+      "testId": "3221027349",
+      "questionNumber": 8,
+      "text": "Which transport is modulated by ANH in the kidney? ANH inhibits",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "amiloride-sensitive Na channels in the collecting duct"},
+        {"letter": "b", "text": "Na-K exchange in the proximal tubule"},
+        {"letter": "c", "text": "vasopressin-stimulated water reabsorption in the collecting duct"},
+        {"letter": "d", "text": "Na-K-2Cl cotransporter in the thick segment"}
+      ],
+      "correctAnswers": ["d"],
+      "topics": [49, 57],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 0.9,
+        "matchReason": "Topic 49: ANH effects on renal mechanisms; Topic 57: Na-K-2Cl cotransporter in thick ascending limb"
+      }
+    },
+    {
+      "id": "q-3221027349-9",
+      "testId": "3221027349",
+      "questionNumber": 9,
+      "text": "A patient is treated with a diuretic for the formation of a large volume of urine with an osmolarity of 100 mOsm/l. The actions of this drug include:",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "inhibition of ADH secretion"},
+        {"letter": "b", "text": "inhibition of the tubular V2 receptors"},
+        {"letter": "c", "text": "decreased active Cl- reabsorption by the thick segment of the ascending limb of the loop of Henle"},
+        {"letter": "d", "text": "inhibition of renin secretion"},
+        {"letter": "e", "text": "increased water permeability of the distal tubule and collecting duct"}
+      ],
+      "correctAnswers": ["b", "c"],
+      "topics": [57],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 57: 'Identify the targets of the following diuretics: loop diuretics (furosemide)' - inhibits Na-K-2Cl in thick ascending limb; V2 receptor antagonists block ADH action"
+      }
+    },
+    {
+      "id": "q-3221027349-11",
+      "testId": "3221027349",
+      "questionNumber": 11,
+      "text": "A major mechanism of Na+-reabsorption in the proximal tubulus is as follows",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "cotransport with Cl- and K+ (Na+ - K+ - 2Cl-)"},
+        {"letter": "b", "text": "exchange for K+"},
+        {"letter": "c", "text": "exchange for H+ resulting in net Na+ and HCO3- absorption"},
+        {"letter": "d", "text": "exchange for Ca2+"}
+      ],
+      "correctAnswers": ["c"],
+      "topics": [57],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 57: 'Describe the luminal mechanisms of Na+-reabsorption in the proximal tubulus (Na+-solute, Na+-H+-antiporter, paracellular mechanisms)'"
+      }
+    },
+    {
+      "id": "q-3221027349-12",
+      "testId": "3221027349",
+      "questionNumber": 12,
+      "text": "Find the substance that is passively reabsorbed from the proximal tubule",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "albumin"},
+        {"letter": "b", "text": "glucose"},
+        {"letter": "c", "text": "amino acids"},
+        {"letter": "d", "text": "urea"}
+      ],
+      "correctAnswers": ["d"],
+      "topics": [56],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 56: 'Describe the urea reabsorption in the proximal tubuli' - urea is passively reabsorbed following water"
+      }
+    },
+    {
+      "id": "q-3221027349-13",
+      "testId": "3221027349",
+      "questionNumber": 13,
+      "text": "At which plasma glucose concentration does the glucose appear in the urine?",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "22-25 mmol/L"},
+        {"letter": "b", "text": "11-13 mmol/L"},
+        {"letter": "c", "text": "5-6 mmol/L"},
+        {"letter": "d", "text": "there is never glucose in the urine"}
+      ],
+      "correctAnswers": ["b"],
+      "topics": [56],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 56: 'Define the renal threshold of glucose' with reference value: 'renal threshold of glucose: 10 mM' - glucose appears ~10-12 mmol/L"
+      }
+    },
+    {
+      "id": "q-3221027349-15",
+      "testId": "3221027349",
+      "questionNumber": 15,
+      "text": "Which cells in the kidney express vacuolar H+-pump?",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "epithelial cells of the proximal tubule"},
+        {"letter": "b", "text": "principals cells in the collecting duct"},
+        {"letter": "c", "text": "intercalated cells in the collecting duct"},
+        {"letter": "d", "text": "epithelial cells of the distal tubule"},
+        {"letter": "e", "text": "epithelial cells of the thick segment of the loop of Henle"}
+      ],
+      "correctAnswers": ["c"],
+      "topics": [57],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 57: Intercalated cells in collecting duct express H+-ATPase (vacuolar H+-pump) for acid secretion"
+      }
+    }
+  ]
+}

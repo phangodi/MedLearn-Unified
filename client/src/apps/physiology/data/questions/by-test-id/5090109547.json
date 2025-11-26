@@ -1,0 +1,236 @@
+{
+  "testId": "5090109547",
+  "examName": "Physiology Exam - Test 5090109547",
+  "importedAt": "2025-11-25T22:10:00Z",
+  "questions": [
+    {
+      "id": "q-5090109547-3",
+      "testId": "5090109547",
+      "questionNumber": 3,
+      "text": "Which of the following transports are hormone-regulated?",
+      "correctAnswerCount": 3,
+      "options": [
+        {"letter": "a", "text": "Na+ reabsorption in the proximal tubule - aldosterone"},
+        {"letter": "b", "text": "K+ reabsorption in the distal tubule - aldosterone"},
+        {"letter": "c", "text": "K+ secretion in the collecting duct - aldosterone"},
+        {"letter": "d", "text": "K+ reabsorption in the thick ascending segment - vasopressin"},
+        {"letter": "e", "text": "Na+ reabsorption in the collecting duct - aldosterone"},
+        {"letter": "f", "text": "Ca2+-reabsorption in the distal tubule - PTH"}
+      ],
+      "correctAnswers": ["c", "e", "f"],
+      "topics": [57],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 57: 'Which transport is under hormonal control?' - aldosterone regulates Na+ channels and K+ secretion in collecting duct; PTH regulates Ca2+ in distal tubule"
+      }
+    },
+    {
+      "id": "q-5090109547-5",
+      "testId": "5090109547",
+      "questionNumber": 5,
+      "text": "Diabetes insipidus:",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "daily urine production may exceed 14-15 liters"},
+        {"letter": "b", "text": "also known as diabetes mellitus"},
+        {"letter": "c", "text": "usually caused by elevated blood AVP (ADH) levels"},
+        {"letter": "d", "text": "may cause hyperhydration (water intoxication)"},
+        {"letter": "e", "text": "usually presents with glycosuria"}
+      ],
+      "correctAnswers": ["a"],
+      "topics": [57],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 57: 'Identify the tubular segment where water permeability is under hormonal control' - lack of ADH causes massive water loss in diabetes insipidus"
+      }
+    },
+    {
+      "id": "q-5090109547-8",
+      "testId": "5090109547",
+      "questionNumber": 8,
+      "text": "What is the source of ammonium ions secreted by the renal tubuli?",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "amine groups of glutamine"},
+        {"letter": "b", "text": "side chain amine groups of basic amino acids (arginine, lysine)"},
+        {"letter": "c", "text": "amino groups from urea reabsorbed in the tubuli"},
+        {"letter": "d", "text": "ammonium ions circulating in the blood plasma"}
+      ],
+      "correctAnswers": ["a"],
+      "topics": [57],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 57: Renal ammonium production from glutamine metabolism in proximal tubule cells"
+      }
+    },
+    {
+      "id": "q-5090109547-13",
+      "testId": "5090109547",
+      "questionNumber": 13,
+      "text": "Which statement is true concerning Ca reabsorption in the kidney?",
+      "correctAnswerCount": 3,
+      "options": [
+        {"letter": "a", "text": "Parathyroid hormone enhances Ca reabsorption in the distal tubule"},
+        {"letter": "b", "text": "There is an active Ca reabsorption in the proximal tubule"},
+        {"letter": "c", "text": "Parathyroid hormone enhances Ca reabsorption in the collecting ducts"},
+        {"letter": "d", "text": "Parathyroid hormone enhances Ca reabsorption in the Loop of Henle"},
+        {"letter": "e", "text": "Parathyroid hormone enhances Ca reabsorption in the proximal tubule"},
+        {"letter": "f", "text": "There is an active Ca reabsorption in the distal tubule"}
+      ],
+      "correctAnswers": ["a", "b", "f"],
+      "topics": [57],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 57: PTH enhances Ca2+ reabsorption in distal tubule; active Ca2+ transport occurs in both proximal and distal tubules"
+      }
+    },
+    {
+      "id": "q-5090109547-14",
+      "testId": "5090109547",
+      "questionNumber": 14,
+      "text": "A substance which is freely filtered, secreted and not reabsorbed in the tubular system has a clearance:",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "lower than urea"},
+        {"letter": "b", "text": "higher than inulin"},
+        {"letter": "c", "text": "the same as inulin"},
+        {"letter": "d", "text": "the same as urea"},
+        {"letter": "e", "text": "higher than urea"},
+        {"letter": "f", "text": "lower than inulin"}
+      ],
+      "correctAnswers": ["b", "e"],
+      "topics": [55],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 55: 'How much is the clearance of a freely filtrated X substance if...there is a net tubular secretion' - clearance > GFR (inulin) and > urea clearance"
+      }
+    },
+    {
+      "id": "q-5090109547-18",
+      "testId": "5090109547",
+      "questionNumber": 18,
+      "text": "The parasympathetic preganglionic neuronal cell bodies controlling the detrusor muscle of the bladder are located in the",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "hypothalamus"},
+        {"letter": "b", "text": "medulla oblongata"},
+        {"letter": "c", "text": "lumbar spinal cord"},
+        {"letter": "d", "text": "sacral spinal cord"}
+      ],
+      "correctAnswers": ["d"],
+      "topics": [58],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 58: 'Explain the visceral sensory, autonomic (sympathetic and parasympathetic) and somatic motor innervation of the urinary bladder' - parasympathetic from sacral segments S2-S4"
+      }
+    },
+    {
+      "id": "q-5090109547-20",
+      "testId": "5090109547",
+      "questionNumber": 20,
+      "text": "Which tubular segment is the action site of furosemide type diuretics inhibiting the Na+K+2Cl- transporter?",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "collecting duct"},
+        {"letter": "b", "text": "proximal convoluted tubule"},
+        {"letter": "c", "text": "thick ascending segment of the loop of Henle"},
+        {"letter": "d", "text": "distal convoluted tubule"}
+      ],
+      "correctAnswers": ["c"],
+      "topics": [57],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 57: 'Identify the targets of the following diuretics...loop diuretics (furosemide)' - acts on Na+-K+-2Cl- symporter in thick ascending limb"
+      }
+    },
+    {
+      "id": "q-5090109547-21",
+      "testId": "5090109547",
+      "questionNumber": 21,
+      "text": "During moderate exercise, diastolic arterial pressure may not change significantly from that during rest, although cardiac output increases. This is the result of the",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "decreased total peripheral resistance"},
+        {"letter": "b", "text": "decreased arteriolar flow during diastole"},
+        {"letter": "c", "text": "increased stroke volume"},
+        {"letter": "d", "text": "increased heart rate"}
+      ],
+      "correctAnswers": ["a"],
+      "topics": [51],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 51: 'Describe the cardiovascular consequences of exercise on peripheral resistance, cardiac output, A-V oxygen difference, and arterial pressure'"
+      }
+    },
+    {
+      "id": "q-5090109547-22",
+      "testId": "5090109547",
+      "questionNumber": 22,
+      "text": "The atrial natriuretic peptide",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "inhibits renin secretion"},
+        {"letter": "b", "text": "stimulates aldosterone secretion"},
+        {"letter": "c", "text": "is released in response to hypervolemia"},
+        {"letter": "d", "text": "elicits an increase in the total peripheral resistance"},
+        {"letter": "e", "text": "causes vasoconstriction in the renal artery"},
+        {"letter": "f", "text": "is released in response to hypovolemia"}
+      ],
+      "correctAnswers": ["a", "c"],
+      "topics": [49],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 49: 'Describe the effects of...atrial natriuretic hormone on arterial blood pressure: direct vascular and indirect renal mechanisms'"
+      }
+    },
+    {
+      "id": "q-5090109547-23",
+      "testId": "5090109547",
+      "questionNumber": 23,
+      "text": "For the different muscle types the following statements are TRUE:",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "According to the size principle of motorneurons motor units are recruited from the weakest to the strongest"},
+        {"letter": "b", "text": "Slow twitch (type I fibers): are built to produce peak force in a prolonged activity"},
+        {"letter": "c", "text": "During low intensity activity, the muscle force is generated mainly by type II fibers"},
+        {"letter": "d", "text": "Most human skeletal muscles contain both type I and type II fibers"}
+      ],
+      "correctAnswers": ["a", "d"],
+      "topics": [23],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 23: 'Compare the three types of skeletal muscle in a table (fast-anaerobic, fast-oxidative, slow-oxidative)' and motor unit recruitment"
+      }
+    }
+  ]
+}

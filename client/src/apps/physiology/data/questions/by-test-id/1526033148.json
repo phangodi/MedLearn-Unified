@@ -1,0 +1,1131 @@
+{
+  "testId": "1526033148",
+  "examName": "MTO3 Renal Physiology",
+  "importedAt": "2025-11-25T22:20:00Z",
+  "questions": [
+    {
+      "id": "q-1526033148-1",
+      "testId": "1526033148",
+      "questionNumber": 1,
+      "text": "The kidney has a role in the regulation of (M)",
+      "correctAnswerCount": 5,
+      "options": [
+        {"letter": "a", "text": "fluid balance"},
+        {"letter": "b", "text": "blood pressure"},
+        {"letter": "c", "text": "red cell production"},
+        {"letter": "d", "text": "electrolyte balance"},
+        {"letter": "e", "text": "pH"}
+      ],
+      "correctAnswers": ["a", "b", "c", "d", "e"],
+      "topics": [52],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 52: General kidney functions overview including GFR regulation"
+      }
+    },
+    {
+      "id": "q-1526033148-2",
+      "testId": "1526033148",
+      "questionNumber": 2,
+      "text": "The peritubular capillaries of the convoluted segment of the proximal tubule receives blood from (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "afferent arteriole"},
+        {"letter": "b", "text": "efferent arteriole"},
+        {"letter": "c", "text": "vasa recta"},
+        {"letter": "d", "text": "small venules"},
+        {"letter": "e", "text": "glomerular tuft"}
+      ],
+      "correctAnswers": ["b"],
+      "topics": [53],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 53: 'Describe in sequence the blood vessels...including peritubular capillaries'"
+      }
+    },
+    {
+      "id": "q-1526033148-3",
+      "testId": "1526033148",
+      "questionNumber": 3,
+      "text": "Which of the following statements is correct? (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "the renal fraction of blood flow amounts to approximately one fifth of the cardiac output"},
+        {"letter": "b", "text": "each nephron is supplied by two arterioles, one for the glomerulus, and one for the tubular system"},
+        {"letter": "c", "text": "the pressure in the glomerular capillary bed is lower than the pressure in the peritubular capillary bed"},
+        {"letter": "d", "text": "in the glomeruli, unwanted substances are removed"}
+      ],
+      "correctAnswers": ["a"],
+      "topics": [53],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 53: 'RBF is 20-23% of resting cardiac output'"
+      }
+    },
+    {
+      "id": "q-1526033148-4",
+      "testId": "1526033148",
+      "questionNumber": 4,
+      "text": "The hydrostatic pressure in the efferent arteriole in the kidney is best described as being (S)",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "less than that in the afferent arteriole"},
+        {"letter": "b", "text": "higher than the glomerular capillary pressure"},
+        {"letter": "c", "text": "less than the peritubular capillary pressure"},
+        {"letter": "d", "text": "equal to the glomerular capillary pressure"},
+        {"letter": "e", "text": "higher than the oncotic pressure in the glomerular capillary"}
+      ],
+      "correctAnswers": ["a", "c"],
+      "topics": [52],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 52: Pressure relationships in glomerular capillaries and filtration forces"
+      }
+    },
+    {
+      "id": "q-1526033148-5",
+      "testId": "1526033148",
+      "questionNumber": 5,
+      "text": "It is characteristic of protein transport in the nephron that (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "proteins are filtered with perfect ease in the glomeruli"},
+        {"letter": "b", "text": "proteins are not filtered at all in the glomeruli"},
+        {"letter": "c", "text": "proteins are secreted in the tubules"},
+        {"letter": "d", "text": "proteins are taken up from the tubular fluid and are digested by the epithelial cells"},
+        {"letter": "e", "text": "the reabsorbed proteins are transferred into the interstitial fluid"},
+        {"letter": "f", "text": "protein transport is linked to sodium reabsorption"},
+        {"letter": "g", "text": "none of the above is correct"}
+      ],
+      "correctAnswers": ["d"],
+      "topics": [56],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 56: 'Describe the fate of the filtered peptides and proteins in the proximal tubuli'"
+      }
+    },
+    {
+      "id": "q-1526033148-6",
+      "testId": "1526033148",
+      "questionNumber": 6,
+      "text": "The correct definition of GFR is as follows (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "the fraction of blood flow that becomes filtrate each minute"},
+        {"letter": "b", "text": "the quantity of blood filtered through the glomerular capillaries each minute in all nephrons of both kidneys"},
+        {"letter": "c", "text": "the quantity of blood filtered in a nephron in a minute"},
+        {"letter": "d", "text": "the quantity of glomerular filtrate formed each minute in all nephrons of both kidneys"}
+      ],
+      "correctAnswers": ["d"],
+      "topics": [52],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 52: 'Define glomerular filtration rate (GFR)'"
+      }
+    },
+    {
+      "id": "q-1526033148-7",
+      "testId": "1526033148",
+      "questionNumber": 7,
+      "text": "The correct definition of filtration fraction is as follows (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "the quantity of glomerular filtrate formed each minute"},
+        {"letter": "b", "text": "the fraction of the renal plasma flow that becomes glomerular filtrate"},
+        {"letter": "c", "text": "the fraction of glomeruli that contributes to the formation of filtrate"},
+        {"letter": "d", "text": "the fraction of the renal plasma flow that becomes urine"},
+        {"letter": "e", "text": "the fraction of cardiac output that perfuses the kidneys"},
+        {"letter": "f", "text": "the fraction of cardiac output that becomes glomerular filtrate"}
+      ],
+      "correctAnswers": ["b"],
+      "topics": [52],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 52: 'Define...filtration fraction (FF)'"
+      }
+    },
+    {
+      "id": "q-1526033148-8",
+      "testId": "1526033148",
+      "questionNumber": 8,
+      "text": "The effective filtration pressure in the glomeruli is calculated as follows: (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "capsular pressure + glomerular pressure – colloid osmotic pressure"},
+        {"letter": "b", "text": "colloid osmotic pressure + capsular pressure – glomerular pressure"},
+        {"letter": "c", "text": "glomerular pressure – capsular pressure – colloid osmotic pressure"},
+        {"letter": "d", "text": "colloid osmotic pressure + glomerular pressure – capsular pressure"},
+        {"letter": "e", "text": "colloid osmotic pressure – glomerular pressure – capsular pressure"}
+      ],
+      "correctAnswers": ["c"],
+      "topics": [52],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 52: 'calculate the net filtration force (the effective filtration pressure)'"
+      }
+    },
+    {
+      "id": "q-1526033148-9",
+      "testId": "1526033148",
+      "questionNumber": 9,
+      "text": "The clearance is defined as (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "the quantity of a substance that passes into the urine each minute"},
+        {"letter": "b", "text": "the quantity of the plasma that has been cleared from a particular substance"},
+        {"letter": "c", "text": "the quantity of the plasma filtered each minute"},
+        {"letter": "d", "text": "the quantity of a particular substance filtered each minute"},
+        {"letter": "e", "text": "the ratio of the renal excretion of a substance in the urine to its concentration in the plasma"}
+      ],
+      "correctAnswers": ["b", "e"],
+      "topics": [55],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 55: 'Explain the clearance principle'"
+      }
+    },
+    {
+      "id": "q-1526033148-10",
+      "testId": "1526033148",
+      "questionNumber": 10,
+      "text": "The kidney functions normally and the clearance of a substance is zero. This finding may indicate (M)",
+      "correctAnswerCount": 4,
+      "options": [
+        {"letter": "a", "text": "the substance might be secreted in the tubular system"},
+        {"letter": "b", "text": "the substance might not be filtered in the glomeruli"},
+        {"letter": "c", "text": "the substance might be completely reabsorbed in the tubular system"},
+        {"letter": "d", "text": "the substance is neither secreted or reabsorbed in the tubular system though it is filtered in the glomeruli"},
+        {"letter": "e", "text": "the concentration of the substance is zero in the renal vein"},
+        {"letter": "f", "text": "the concentration of the substance is the same in the renal vein and the renal artery"},
+        {"letter": "g", "text": "this substance does not pass into the urine"}
+      ],
+      "correctAnswers": ["b", "c", "f", "g"],
+      "topics": [55],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 55: Clearance interpretation for substances not filtered or completely reabsorbed"
+      }
+    },
+    {
+      "id": "q-1526033148-11",
+      "testId": "1526033148",
+      "questionNumber": 11,
+      "text": "It is characteristic of inulin excretion that (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "inulin passes the glomerular membrane with perfect ease"},
+        {"letter": "b", "text": "inulin is actively secreted in the proximal tubules"},
+        {"letter": "c", "text": "inulin is actively secreted in the distal tubules"},
+        {"letter": "d", "text": "inulin concentration in the glomerular filtrate is the same as in the plasma"},
+        {"letter": "e", "text": "depending on the osmotic pressure in the interstitial fluid, inulin may re-diffuse from the tubules"}
+      ],
+      "correctAnswers": ["a", "d"],
+      "topics": [55],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 55: 'Use...inulin/creatinine, PAH to determine GFR' - inulin freely filtered, not secreted/reabsorbed"
+      }
+    },
+    {
+      "id": "q-1526033148-12",
+      "testId": "1526033148",
+      "questionNumber": 12,
+      "text": "An inulin clearance of 120 ml/min indicates (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "an impaired glomerular filtration"},
+        {"letter": "b", "text": "normal GFR"},
+        {"letter": "c", "text": "120 ml plasma volume is cleared of inulin each minute"},
+        {"letter": "d", "text": "120 ml urine volume is formed each minute"},
+        {"letter": "e", "text": "the renal plasma flow is 120 ml/min"},
+        {"letter": "f", "text": "secretion of inulin in the tubular system"}
+      ],
+      "correctAnswers": ["b", "c"],
+      "topics": [55],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 55: 'inulin clearance=GFR'; reference value GFR: 120-125 ml/min"
+      }
+    },
+    {
+      "id": "q-1526033148-13",
+      "testId": "1526033148",
+      "questionNumber": 13,
+      "text": "An inulin clearance of 80 ml/min is interpreted as follows (M)",
+      "correctAnswerCount": 3,
+      "options": [
+        {"letter": "a", "text": "inulin is reabsorbed from the tubular system"},
+        {"letter": "b", "text": "inulin is secreted in the tubular system"},
+        {"letter": "c", "text": "80 ml plasma volume is cleared from inulin each minute"},
+        {"letter": "d", "text": "the volume of glomerular filtrate is 80 ml each minute"},
+        {"letter": "e", "text": "GFR is decreased"},
+        {"letter": "f", "text": "the function of the tubular system is impaired"}
+      ],
+      "correctAnswers": ["c", "d", "e"],
+      "topics": [55],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 55: Decreased inulin clearance = decreased GFR"
+      }
+    },
+    {
+      "id": "q-1526033148-14",
+      "testId": "1526033148",
+      "questionNumber": 14,
+      "text": "A decrease in the urine to plasma (U/P) ratio of inulin concentration with a constant GFR indicates an increase in (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "free-water clearance"},
+        {"letter": "b", "text": "inulin clearance"},
+        {"letter": "c", "text": "urine flow"},
+        {"letter": "d", "text": "plasma inulin concentration"}
+      ],
+      "correctAnswers": ["a", "c"],
+      "topics": [55],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 55: Clearance calculations and free-water clearance concept"
+      }
+    },
+    {
+      "id": "q-1526033148-15",
+      "testId": "1526033148",
+      "questionNumber": 15,
+      "text": "Given the following data for inulin and substance X which of the following would explain the renal handling of substance X? Inulin concentration in the urine 200 mg/100ml, Inulin concentration in the plasma 2 mg/100ml, Concentration in the urine for substance X 200 mg/100ml, Concentration in the plasma for substance X 1 mg/100ml (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "substance X is freely filtered but neither secreted nor reabsorbed"},
+        {"letter": "b", "text": "substance X is not freely filtered but reabsorbed"},
+        {"letter": "c", "text": "substance X is not freely filtered but secreted"},
+        {"letter": "d", "text": "substance X is freely filtered but partially reabsorbed"},
+        {"letter": "e", "text": "substance X is freely filtered and additionally secreted"}
+      ],
+      "correctAnswers": ["e"],
+      "topics": [55],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 55: 'How much is the clearance...if there is a net tubular secretion'"
+      }
+    },
+    {
+      "id": "q-1526033148-16",
+      "testId": "1526033148",
+      "questionNumber": 16,
+      "text": "The creatinin clearance is 140 ml/min. This finding is interpreted as follows (M)",
+      "correctAnswerCount": 4,
+      "options": [
+        {"letter": "a", "text": "the GFR is normal"},
+        {"letter": "b", "text": "creatinin is not excreted"},
+        {"letter": "c", "text": "there is a slight tubular secretion of creatinin"},
+        {"letter": "d", "text": "140 ml plasma volume has been freed of creatinin each minute"},
+        {"letter": "e", "text": "the glomerular filtrate formed each minute is slightly less than 140 ml"},
+        {"letter": "f", "text": "140 ml creatinin are excreted in the urine each minute"},
+        {"letter": "g", "text": "140 ml urine are formed each minute"},
+        {"letter": "h", "text": "renal plasma flow is 140 ml/min, it is greatly reduced"}
+      ],
+      "correctAnswers": ["a", "c", "d", "e"],
+      "topics": [55],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 55: 'endogenous creatinine clearance: 90-150 ml/min'; slight tubular secretion"
+      }
+    },
+    {
+      "id": "q-1526033148-17",
+      "testId": "1526033148",
+      "questionNumber": 17,
+      "text": "PAH decreases renal excretion of penicillin because (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "PAH inhibits penicillin reabsorption"},
+        {"letter": "b", "text": "There is competitive inhibition between PAH and penicillin secretion"},
+        {"letter": "c", "text": "PAH decreases the renal concentration mechanisms"},
+        {"letter": "d", "text": "PAH inhibits the glomerular filtration of penicillin"},
+        {"letter": "e", "text": "PAH increases the penicillin permeability in the distal tubules"}
+      ],
+      "correctAnswers": ["b"],
+      "topics": [55],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 55: PAH secretion; Topic 56: 'active tubular secretion of organic anions'"
+      }
+    },
+    {
+      "id": "q-1526033148-18",
+      "testId": "1526033148",
+      "questionNumber": 18,
+      "text": "The tubular maximum for glucose (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "corresponds to a plasma glucose concentration of about 10 mmol/liter"},
+        {"letter": "b", "text": "characterizes the tubular glucose transport capacity"},
+        {"letter": "c", "text": "is the threshold concentration for excretion of glucose in the urine"},
+        {"letter": "d", "text": "is the maximum concentration of glucose in the glomerular filtrate which is completely reabsorbed"},
+        {"letter": "e", "text": "is the tubular load of glucose above which the glucose concentration in the urine varies linearly with the glucose concentration in the plasma"}
+      ],
+      "correctAnswers": ["b", "e"],
+      "topics": [56],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 56: 'Define the renal threshold of glucose and tubular maximum (Tmax) glucose'"
+      }
+    },
+    {
+      "id": "q-1526033148-19",
+      "testId": "1526033148",
+      "questionNumber": 19,
+      "text": "It is characteristic of glucose excretion that (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "glucose is not filtered in the glomeruli"},
+        {"letter": "b", "text": "glucose is secreted in the proximal tubules"},
+        {"letter": "c", "text": "glucose transport has a tubular maximum"},
+        {"letter": "d", "text": "the glucose tubular maximum is the tubular glucose concentration threshold where glucose is excreted in the urine"},
+        {"letter": "e", "text": "the concentration of glucose in the glomerular filtrate is the same as the concentration of glucose in the plasma"},
+        {"letter": "f", "text": "the clearance of glucose is higher than the clearance of sodium"}
+      ],
+      "correctAnswers": ["c", "e"],
+      "topics": [56],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 56: Glucose transport has Tmax, freely filtered"
+      }
+    },
+    {
+      "id": "q-1526033148-20",
+      "testId": "1526033148",
+      "questionNumber": 20,
+      "text": "It is characteristic of glucose excretion that (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "glucose is filtered with perfect ease in the glomeruli"},
+        {"letter": "b", "text": "glucose is secreted in the proximal tubules"},
+        {"letter": "c", "text": "glucose is secreted in the distal tubules"},
+        {"letter": "d", "text": "the clearance for glucose is zero"},
+        {"letter": "e", "text": "the clearance for glucose is 120 ml/min"},
+        {"letter": "f", "text": "glucose transport is linked to protein reabsorption"}
+      ],
+      "correctAnswers": ["a", "d"],
+      "topics": [56],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 56: Glucose fully reabsorbed = clearance 0; Topic 55: 'fully reabsorbed (glucose type)'"
+      }
+    },
+    {
+      "id": "q-1526033148-21",
+      "testId": "1526033148",
+      "questionNumber": 21,
+      "text": "Find the correct order of relative clearances for glucose, PAH, urea, and inulin (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "Cglucose < CPAH < Curea < Cinulin"},
+        {"letter": "b", "text": "CPAH < Curea < Cinulin < Cglucose"},
+        {"letter": "c", "text": "Cglucose < Cinulin < Curea < CPAH"},
+        {"letter": "d", "text": "Cglucose < Curea < Cinulin < CPAH"},
+        {"letter": "e", "text": "Cinulin < Cglucose < CPAH < Curea"}
+      ],
+      "correctAnswers": ["d"],
+      "topics": [55],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 55: Clearance relationships - glucose<urea<inulin<PAH"
+      }
+    },
+    {
+      "id": "q-1526033148-22",
+      "testId": "1526033148",
+      "questionNumber": 22,
+      "text": "A substance which is not filtered in the glomeruli has a clearance (M)",
+      "correctAnswerCount": 3,
+      "options": [
+        {"letter": "a", "text": "the same as inulin"},
+        {"letter": "b", "text": "higher than inulin"},
+        {"letter": "c", "text": "lower than inulin"},
+        {"letter": "d", "text": "the same as glucose"},
+        {"letter": "e", "text": "lower than glucose"},
+        {"letter": "f", "text": "higher than glucose"},
+        {"letter": "g", "text": "the same as urea"},
+        {"letter": "h", "text": "lower than urea"},
+        {"letter": "i", "text": "higher than urea"}
+      ],
+      "correctAnswers": ["c", "d", "h"],
+      "topics": [55],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 55: If not filtered, clearance = 0 (same as glucose, lower than inulin/urea)"
+      }
+    },
+    {
+      "id": "q-1526033148-23",
+      "testId": "1526033148",
+      "questionNumber": 23,
+      "text": "A substance with passive reabsorption and without secretion in the tubular system has a clearance (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "lower than inulin"},
+        {"letter": "b", "text": "the same as inulin"},
+        {"letter": "c", "text": "higher than inulin"},
+        {"letter": "d", "text": "the same as PAH"},
+        {"letter": "e", "text": "higher than PAH"},
+        {"letter": "f", "text": "the same as glucose"},
+        {"letter": "g", "text": "higher than glucose"}
+      ],
+      "correctAnswers": ["a", "g"],
+      "topics": [55],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 55: 'only partly reabsorbed' = 0<Cl<GFR"
+      }
+    },
+    {
+      "id": "q-1526033148-24",
+      "testId": "1526033148",
+      "questionNumber": 24,
+      "text": "The RPF (M)",
+      "correctAnswerCount": 3,
+      "options": [
+        {"letter": "a", "text": "can be calculated by means of the equation of RPF = C/E, where C is the clearance and E is the extraction for any substance that is filtered in the glomeruli and is excreted in the urine"},
+        {"letter": "b", "text": "can be estimated by calculating the clearance of PAH"},
+        {"letter": "c", "text": "can be estimated by calculating the clearance of inulin"},
+        {"letter": "d", "text": "can be estimated by calculating the clearance of creatinin"},
+        {"letter": "e", "text": "increases in response to sympathetic activation"},
+        {"letter": "f", "text": "can be calculated as the product of the inulin clearance and the filtration fraction"}
+      ],
+      "correctAnswers": ["a", "b", "f"],
+      "topics": [55],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 55: 'PAH-clearance=RPF'; clearance equation for RPF"
+      }
+    },
+    {
+      "id": "q-1526033148-25",
+      "testId": "1526033148",
+      "questionNumber": 25,
+      "text": "The extraction ratio (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "is the ratio of GFR and RPF"},
+        {"letter": "b", "text": "is higher for PAH than for inulin"},
+        {"letter": "c", "text": "is the ratio of the arteriovenous concentration difference and the arterial concentration of a substance"},
+        {"letter": "d", "text": "is the ratio of the urine concentration and the arterial concentration of a substance"},
+        {"letter": "e", "text": "shows the percentage quantity of a substance filtered in the glomeruli"}
+      ],
+      "correctAnswers": ["b", "c"],
+      "topics": [55],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 55: Extraction ratio concept for PAH vs inulin"
+      }
+    },
+    {
+      "id": "q-1526033148-26",
+      "testId": "1526033148",
+      "questionNumber": 26,
+      "text": "If the plasma concentration of substance X is 2 mg/100ml, the urine concentration of substance X is 12 mg/ml, the urine flow rate is 1 ml/min, and the glomerular filtration rate is 125 ml/min, then substance X could be (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "glucose"},
+        {"letter": "b", "text": "alanine"},
+        {"letter": "c", "text": "inulin"},
+        {"letter": "d", "text": "para-aminohippuric acid"},
+        {"letter": "e", "text": "sodium"}
+      ],
+      "correctAnswers": ["d"],
+      "topics": [55],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 55: PAH type transport = clearance > GFR"
+      }
+    },
+    {
+      "id": "q-1526033148-27",
+      "testId": "1526033148",
+      "questionNumber": 27,
+      "text": "Use the data to calculate the rate of excretion of substance X in the urine. Substance X is freely filtered across the glomerular membrane. GFR = 125 ml/min, Plasma concentration of X = 2 mg/ml, Tubular reabsorption of X = 30 mg/min, Tubular secretion of X = 60 mg/min (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "160 mg/min"},
+        {"letter": "b", "text": "220 mg/min"},
+        {"letter": "c", "text": "250 mg/min"},
+        {"letter": "d", "text": "280 mg/min"},
+        {"letter": "e", "text": "340 mg/min"}
+      ],
+      "correctAnswers": ["d"],
+      "topics": [55],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 55: 'Calculate the filtered load, the excretion rate'"
+      }
+    },
+    {
+      "id": "q-1526033148-28",
+      "testId": "1526033148",
+      "questionNumber": 28,
+      "text": "The renal function of a 70kg man is tested. Plasma PAH conc. 0.2 pg/ml, Urine PAH conc. 56 pg/ml, Plasma inulin conc. 0.1 mg/ml, Urine inulin conc. 6.0 mg/ml, Plasma creatinine conc. 0.8 mg/100ml, Urine creatinine conc. 80.0 mg/100ml, Hematocrit 40%. Assuming urine flow is 1.5 ml/min, the effective GFR for this man is (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "greater than inulin clearance"},
+        {"letter": "b", "text": "greater than PAH clearance"},
+        {"letter": "c", "text": "equal to the volume of blood from which inulin is completely cleared"},
+        {"letter": "d", "text": "60 ml/min"},
+        {"letter": "e", "text": "90 ml/min"}
+      ],
+      "correctAnswers": ["e"],
+      "topics": [55],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 55: Inulin clearance = GFR calculation"
+      }
+    },
+    {
+      "id": "q-1526033148-29",
+      "testId": "1526033148",
+      "questionNumber": 29,
+      "text": "The renal function of a 70kg man is tested. Plasma PAH conc. 0.2 pg/ml, Urine PAH conc. 56 pg/ml, Plasma inulin conc. 0.1 mg/ml, Urine inulin conc. 6.0 mg/ml, Plasma creatinine conc. 0.8 mg/100ml, Urine creatinine conc. 80.0 mg/100ml, Hematocrit 40%. Assuming urine flow is 1.5 ml/min, the effective RPF for this man is (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "higher than the true RPF"},
+        {"letter": "b", "text": "higher than the effective RBF"},
+        {"letter": "c", "text": "420 ml/min"},
+        {"letter": "d", "text": "520 ml/min"},
+        {"letter": "e", "text": "700 ml/min"}
+      ],
+      "correctAnswers": ["c"],
+      "topics": [55],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 55: PAH clearance = RPF calculation"
+      }
+    },
+    {
+      "id": "q-1526033148-30",
+      "testId": "1526033148",
+      "questionNumber": 30,
+      "text": "The renal function of a 70kg man is tested. Plasma PAH conc. 0.2 pg/ml, Urine PAH conc. 56 pg/ml, Plasma inulin conc. 0.1 mg/ml, Urine inulin conc. 6.0 mg/ml, Plasma creatinine conc. 0.8 mg/100ml, Urine creatinine conc. 80.0 mg/100ml, Hematocrit 40%. Assuming urine flow is 1.5 ml/min, the 24-hour endogenous creatinin excretion for this man is (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "21.6 mg/kg body weight"},
+        {"letter": "b", "text": "15.12 mg/kg body weight"},
+        {"letter": "c", "text": "17.28 mg/kg body weight"},
+        {"letter": "d", "text": "24.7 mg/kg body weight"},
+        {"letter": "e", "text": "the same as the 24-hour inulin secretion"}
+      ],
+      "correctAnswers": ["d"],
+      "topics": [55],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 55: Creatinine clearance calculations"
+      }
+    },
+    {
+      "id": "q-1526033148-31",
+      "testId": "1526033148",
+      "questionNumber": 31,
+      "text": "Use the data below to calculate the GFR. Arterial plasma PAH conc. 0.04 mg/ml, Venous plasma PAH conc. 0.004 mg/ml, Arterial plasma inulin conc. 0.4 mg/ml, Urine PAH conc. 10.0 mg/ml, Urine inulin conc. 20.0 mg/ml, Urine flow rate 2.0 ml/min, Hematocrit 45% (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "100 ml/min"},
+        {"letter": "b", "text": "250 ml/min"},
+        {"letter": "c", "text": "556 ml/min"},
+        {"letter": "d", "text": "1000 ml/min"},
+        {"letter": "e", "text": "1235 ml/min"}
+      ],
+      "correctAnswers": ["a"],
+      "topics": [55],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 55: Inulin clearance = GFR"
+      }
+    },
+    {
+      "id": "q-1526033148-32",
+      "testId": "1526033148",
+      "questionNumber": 32,
+      "text": "Use the data below to calculate the RBF. Arterial plasma PAH conc. 0.04 mg/ml, Venous plasma PAH conc. 0.004 mg/ml, Arterial plasma inulin conc. 0.4 mg/ml, Urine PAH conc. 10.0 mg/ml, Urine inulin conc. 20.0 mg/ml, Urine flow rate 2.0 ml/min, Hematocrit 45% (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "100 ml/min"},
+        {"letter": "b", "text": "250 ml/min"},
+        {"letter": "c", "text": "556 ml/min"},
+        {"letter": "d", "text": "1000 ml/min"},
+        {"letter": "e", "text": "1235 ml/min"}
+      ],
+      "correctAnswers": ["e"],
+      "topics": [53],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 53: 'Define renal blood flow (RBF)' - RBF = RPF/(1-Hct)"
+      }
+    },
+    {
+      "id": "q-1526033148-33",
+      "testId": "1526033148",
+      "questionNumber": 33,
+      "text": "Use the data below to calculate the GFR. Urine flow rate 1.5 ml/min, Plasma inulin conc. 1.0 mg/ml, Urine inulin conc. 80 mg/ml, Plasma PAH conc. 0.05 mg/ml, Urine PAH conc. 18.33 mg/ml, Plasma glucose conc. 0.8 mg/ml, Urine glucose conc. 0.0 mg/ml, Hematocrit 42% (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "120 ml/min"},
+        {"letter": "b", "text": "550 ml/min"},
+        {"letter": "c", "text": "948 ml/min"},
+        {"letter": "d", "text": "1200 ml/min"}
+      ],
+      "correctAnswers": ["a"],
+      "topics": [55],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 55: Inulin clearance = GFR"
+      }
+    },
+    {
+      "id": "q-1526033148-34",
+      "testId": "1526033148",
+      "questionNumber": 34,
+      "text": "Use the data below to calculate the RBF. Urine flow rate 2.0 ml/min, Plasma inulin conc. 1.0 mg/ml, Urine inulin conc. 60 mg/ml, Plasma PAH conc. 0.1 mg/ml, Urine PAH conc. 27.5 mg/ml, Plasma glucose conc. 1.5 mg/ml, Urine glucose conc. 5.0 mg/ml, Hematocrit 42% (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "120 ml/min"},
+        {"letter": "b", "text": "550 ml/min"},
+        {"letter": "c", "text": "948 ml/min"},
+        {"letter": "d", "text": "1200 ml/min"}
+      ],
+      "correctAnswers": ["c"],
+      "topics": [53],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 53: RBF calculation from RPF and hematocrit"
+      }
+    },
+    {
+      "id": "q-1526033148-35",
+      "testId": "1526033148",
+      "questionNumber": 35,
+      "text": "Which of the following structures are located, at least in part, in the renal medulla (M)",
+      "correctAnswerCount": 3,
+      "options": [
+        {"letter": "a", "text": "cortical glomeruli"},
+        {"letter": "b", "text": "thin segment of the loop of Henle"},
+        {"letter": "c", "text": "Bowman's capsule"},
+        {"letter": "d", "text": "proximal tubule, pars convoluta"},
+        {"letter": "e", "text": "distal tubule, pars convoluta"},
+        {"letter": "f", "text": "descending limb of the loop of Henle"},
+        {"letter": "g", "text": "collecting duct"},
+        {"letter": "h", "text": "juxtamedullary glomeruli"},
+        {"letter": "i", "text": "juxtaglomerular apparatus"}
+      ],
+      "correctAnswers": ["b", "f", "g"],
+      "topics": [54],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 54: 'Identify each structure as being located in the renal cortex or renal medulla'"
+      }
+    },
+    {
+      "id": "q-1526033148-36",
+      "testId": "1526033148",
+      "questionNumber": 36,
+      "text": "Which of the following statements are correct? (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "the basal channels multiply the luminar surface of the tubular epithelial cells"},
+        {"letter": "b", "text": "the brush border multiplies the luminar surface of the tubular epithelial cells"},
+        {"letter": "c", "text": "sodium is actively transported from the tubular lumen into the epithelial cells"},
+        {"letter": "d", "text": "the interior of the tubular epithelial cells has a negative voltage which promotes sodium resortion from the lumen"}
+      ],
+      "correctAnswers": ["b", "d"],
+      "topics": [54],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 54: 'Make a schematic drawing of the renal epithelium labeling...the apical membrane'"
+      }
+    },
+    {
+      "id": "q-1526033148-37",
+      "testId": "1526033148",
+      "questionNumber": 37,
+      "text": "The absorptive capabilities of the different tubular segments vary as follows (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "about 65% of all reabsorption that occurs in the tubular system takes part in the loop of Henle"},
+        {"letter": "b", "text": "sodium is transported downhill along the concentration gradient from the proximal tubules into the interstitial fluid"},
+        {"letter": "c", "text": "the thick segment of the loop of Henle shows a marked transport of sodium but it is almost impermeable to urea"},
+        {"letter": "d", "text": "the active sodium transport in the distal tubules and collecting duct epithelium requires ADH"}
+      ],
+      "correctAnswers": ["c"],
+      "topics": [57],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 57: 'in the thick ascending limb of the loop of Henle (Na+-K+-2Cl--symporter)'"
+      }
+    },
+    {
+      "id": "q-1526033148-38",
+      "testId": "1526033148",
+      "questionNumber": 38,
+      "text": "Which of the following mechanisms is involved in the tubular Na+ reabsorption? (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "active discharge of Na+ from the epithelial cells into the interstitial space"},
+        {"letter": "b", "text": "transport of Na+ against a concentration gradient from the tubular lumen into the epithelial cells"},
+        {"letter": "c", "text": "a negative charge of the intratubular fluid"},
+        {"letter": "d", "text": "carrier proteins for Na+ in the basal membrane of the epithelial cells"},
+        {"letter": "e", "text": "a concentration gradient for Na+ from the glomerular filtrate towards the interstitial fluid"},
+        {"letter": "f", "text": "intratubular hydrostatic pressure is higher than the interstitial hydrostatic pressure"}
+      ],
+      "correctAnswers": ["a"],
+      "topics": [57],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 57: 'Identify the main driving force of Na+-reabsorption (the basolateral Na+-K+-pump)'"
+      }
+    },
+    {
+      "id": "q-1526033148-39",
+      "testId": "1526033148",
+      "questionNumber": 39,
+      "text": "In Na-dependent secondary active transport, metabolic energy is directly used to transport (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "glucose across the brush border membrane"},
+        {"letter": "b", "text": "glucose across the basolateral membrane"},
+        {"letter": "c", "text": "Na+ across the brush border membrane"},
+        {"letter": "d", "text": "Na+ across the basolateral membrane"},
+        {"letter": "e", "text": "none of the above is correct"}
+      ],
+      "correctAnswers": ["d"],
+      "topics": [57],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 57: Basolateral Na+-K+-pump drives secondary active transport"
+      }
+    },
+    {
+      "id": "q-1526033148-40",
+      "testId": "1526033148",
+      "questionNumber": 40,
+      "text": "Which of the following statements is NOT correct? In the kidney (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "the discharge of Na+ from the tubular epithelial cells into the interstitial space is the active component of the tubular Na+ transport"},
+        {"letter": "b", "text": "there is a concentration gradient for Na+ from the lumen of the tubule into the epithelial cell"},
+        {"letter": "c", "text": "Na+ uptake from the tubular lumen into the epithelial cell occurs against an electrochemical gradient"},
+        {"letter": "d", "text": "Na+ transport from the lumen into the epithelial cell uses carrier proteins"}
+      ],
+      "correctAnswers": ["c"],
+      "topics": [57],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 57: Na+ uptake from lumen is DOWN electrochemical gradient, not against"
+      }
+    },
+    {
+      "id": "q-1526033148-41",
+      "testId": "1526033148",
+      "questionNumber": 41,
+      "text": "The kidney \"handles\" K+ by (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "filtration only"},
+        {"letter": "b", "text": "filtration and reabsorption only"},
+        {"letter": "c", "text": "filtration and secretion only"},
+        {"letter": "d", "text": "filtration, secretion, and reabsorption"},
+        {"letter": "e", "text": "none of the above is correct"}
+      ],
+      "correctAnswers": ["d"],
+      "topics": [57],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 57: K+ handling in nephron segments"
+      }
+    },
+    {
+      "id": "q-1526033148-42",
+      "testId": "1526033148",
+      "questionNumber": 42,
+      "text": "Which of the following statements are correct? (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "glucose is filtered without restrictions in the glomeruli"},
+        {"letter": "b", "text": "the blood perfusing the glomeruli is completely free of inulin"},
+        {"letter": "c", "text": "glucose is secreted in the proximal tubules"},
+        {"letter": "d", "text": "amino acids are reabsorbed by an active mechanism coupled to sodium transport"},
+        {"letter": "e", "text": "the thick segment is the major site for passive urea reabsorption"},
+        {"letter": "f", "text": "secretion of water requires ADH"}
+      ],
+      "correctAnswers": ["a", "d"],
+      "topics": [56],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 56: 'glucose-type reabsorption (monosaccharides, amino acids)'"
+      }
+    },
+    {
+      "id": "q-1526033148-43",
+      "testId": "1526033148",
+      "questionNumber": 43,
+      "text": "ADH is a peptide hormone (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "produced in the hypothalamus"},
+        {"letter": "b", "text": "produced in the posterior pituitary"},
+        {"letter": "c", "text": "produced in the anterior pituitary"},
+        {"letter": "d", "text": "produced in the adrenal cortex"},
+        {"letter": "e", "text": "produced in the neurohypophysis"},
+        {"letter": "f", "text": "produced in the juxtaglomerular apparatus"}
+      ],
+      "correctAnswers": ["a", "e"],
+      "topics": [57],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 57: 'Identify the tubular segment where water permeability is under hormonal control' - ADH context"
+      }
+    },
+    {
+      "id": "q-1526033148-44",
+      "testId": "1526033148",
+      "questionNumber": 44,
+      "text": "ADH exerts its action on the kidney by increasing (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "free-water clearance"},
+        {"letter": "b", "text": "renal medullary blood flow"},
+        {"letter": "c", "text": "free-water reabsorption"},
+        {"letter": "d", "text": "proximal tubular reabsorption of sodium"},
+        {"letter": "e", "text": "proximal tubular reabsorption of water"}
+      ],
+      "correctAnswers": ["c"],
+      "topics": [57],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 57: ADH controls water permeability in collecting duct"
+      }
+    },
+    {
+      "id": "q-1526033148-45",
+      "testId": "1526033148",
+      "questionNumber": 45,
+      "text": "ANP (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "is released in response to hypervolemia"},
+        {"letter": "b", "text": "is released in response to hypovolemia"},
+        {"letter": "c", "text": "elicits an increase in the total peripheral resistance"},
+        {"letter": "d", "text": "stimulates aldosterone secretion"},
+        {"letter": "e", "text": "causes vasoconstriction in the renal artery"},
+        {"letter": "f", "text": "inhibits renin secretion"}
+      ],
+      "correctAnswers": ["a", "f"],
+      "topics": [49],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 49: 'Describe the effects of...atrial natriuretic hormone on arterial blood pressure'"
+      }
+    },
+    {
+      "id": "q-1526033148-46",
+      "testId": "1526033148",
+      "questionNumber": 46,
+      "text": "Which of the following statements are correct? (M)",
+      "correctAnswerCount": 4,
+      "options": [
+        {"letter": "a", "text": "angiotensin has vasoconstrictor activity"},
+        {"letter": "b", "text": "angiotensin is produced by the liver"},
+        {"letter": "c", "text": "renin is released in the response to decreased renal blood flow"},
+        {"letter": "d", "text": "renin is released in the response to increased sodium concentration in the blood"},
+        {"letter": "e", "text": "the release of angiotensin II from angiotensin I is catalyzed by converting enzymes"}
+      ],
+      "correctAnswers": ["a", "b", "c", "e"],
+      "topics": [49],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 49: 'Describe the effects of angiotensin II...on arterial blood pressure'"
+      }
+    },
+    {
+      "id": "q-1526033148-47",
+      "testId": "1526033148",
+      "questionNumber": 47,
+      "text": "Aldosterone deficiency (Addison's disease) is characterized by (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "increased hematocrit"},
+        {"letter": "b", "text": "increased blood pressure"},
+        {"letter": "c", "text": "acidosis"},
+        {"letter": "d", "text": "hypokalemia"},
+        {"letter": "e", "text": "hyperglycemia"},
+        {"letter": "f", "text": "none of the above is correct"}
+      ],
+      "correctAnswers": ["c"],
+      "topics": [57],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 57: Aldosterone controls Na+ channel in collecting duct; loss causes acidosis"
+      }
+    },
+    {
+      "id": "q-1526033148-48",
+      "testId": "1526033148",
+      "questionNumber": 48,
+      "text": "The effects of atrial natriuretic peptide include (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "vasodilatation"},
+        {"letter": "b", "text": "increased sensitivity of beta-adrenergic receptors"},
+        {"letter": "c", "text": "inhibition of ADH secretion"},
+        {"letter": "d", "text": "stimulation of renin secretion"},
+        {"letter": "e", "text": "increased elimination of bradykinin"}
+      ],
+      "correctAnswers": ["a", "c"],
+      "topics": [49],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:20:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 49: ANP effects - vasodilation, inhibits ADH"
+      }
+    }
+  ]
+}

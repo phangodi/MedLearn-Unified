@@ -1,0 +1,556 @@
+{
+  "testId": "5156012322",
+  "examName": "Physiology Exam - Test 5156012322",
+  "importedAt": "2025-11-25T22:10:00Z",
+  "questions": [
+    {
+      "id": "q-5156012322-1",
+      "testId": "5156012322",
+      "questionNumber": 1,
+      "text": "The physiological importance of the juxtamedullary (long-loop) nephrons is as follows",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "they are shorter than the cortical nephrons in the kidney: they do not participate in the production of urine"},
+        {"letter": "b", "text": "they produce more concentrated glomerular filtrate than the rest of the nephrons"},
+        {"letter": "c", "text": "they are the major source of renin"},
+        {"letter": "d", "text": "they determine the capacity of the kidney to concentrate the urine"}
+      ],
+      "correctAnswers": ["d"],
+      "topics": [57],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 57: 'Explain the countercurrent multiplier mechanism of the loop of Henle...Contrast the mechanism of NaCl reabsorption in the thick ascending limb with the thin ascending limb of the long-loop juxtamedullary nephrons'"
+      }
+    },
+    {
+      "id": "q-5156012322-2",
+      "testId": "5156012322",
+      "questionNumber": 2,
+      "text": "The reflex of micturition can never be evoked if the following region is damaged",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "midbrain"},
+        {"letter": "b", "text": "thoracic spinal cord"},
+        {"letter": "c", "text": "pons"},
+        {"letter": "d", "text": "sacral spinal cord"},
+        {"letter": "e", "text": "lumbal spinal cord"},
+        {"letter": "f", "text": "cortex"},
+        {"letter": "g", "text": "hypothalamus"}
+      ],
+      "correctAnswers": ["d"],
+      "topics": [58],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 58: 'Describe the reflex arc of the micturition reflex' - sacral spinal cord contains the parasympathetic preganglionic neurons essential for micturition"
+      }
+    },
+    {
+      "id": "q-5156012322-3",
+      "testId": "5156012322",
+      "questionNumber": 3,
+      "text": "To set the correct order of relative clearances for glucose, PAH, urea, and inulin",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "Cglucose < Cinulin < Curea < Cglucose < CPAH"},
+        {"letter": "b", "text": "CPAH < Curea < Cinulin < Cglucose"},
+        {"letter": "c", "text": "Cglucose< CPAH < Curea < Cinulin"},
+        {"letter": "d", "text": "Cinulin < Cglucose < CPAH < Curea"},
+        {"letter": "e", "text": "Cglucose < Cinulin < Curea < CPAH"},
+        {"letter": "f", "text": "Curea < Cinulin < Cglucose < CPAH"}
+      ],
+      "correctAnswers": ["e"],
+      "topics": [55],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 55: 'Give the reference values of the clearance for inulin, creatinine, PAH, and glucose' - glucose fully reabsorbed (Cl=0), inulin=GFR, urea partly reabsorbed, PAH=RPF"
+      }
+    },
+    {
+      "id": "q-5156012322-4",
+      "testId": "5156012322",
+      "questionNumber": 4,
+      "text": "If a concentration of substance X, if X is freely filtered, and 75% of the filtrated amount is reabsorbed in the tubular system? (GFR= 120 ml/min)",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "30 ml/min"},
+        {"letter": "b", "text": "160 ml/min"},
+        {"letter": "c", "text": "120 ml/min"},
+        {"letter": "d", "text": "240 ml/min"}
+      ],
+      "correctAnswers": ["a"],
+      "topics": [55],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 55: 'How much is the clearance of a freely filtrated X substance if...only partly reabsorbed' - Clearance = GFR × (1 - reabsorption fraction) = 120 × 0.25 = 30 ml/min"
+      }
+    },
+    {
+      "id": "q-5156012322-5",
+      "testId": "5156012322",
+      "questionNumber": 5,
+      "text": "The glomerular filtration",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "rate is directly proportional to systemic arterial pressure"},
+        {"letter": "b", "text": "has the same composition as lymph"},
+        {"letter": "c", "text": "has the same composition as plasma in the efferent arterioles"},
+        {"letter": "d", "text": "rate increases when the RPF decreases"},
+        {"letter": "e", "text": "rate (GFR) increases when the NaCl concentration of the distal tubules decreases"}
+      ],
+      "correctAnswers": ["b", "e"],
+      "topics": [52, 53],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 0.95,
+        "matchReason": "Topic 52: glomerular filtration barrier composition; Topic 53: 'describe the role of the tubuloglomerular feedback' - decreased NaCl at macula densa increases GFR"
+      }
+    },
+    {
+      "id": "q-5156012322-6",
+      "testId": "5156012322",
+      "questionNumber": 6,
+      "text": "Osmotic diuresis is often observed in",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "diabetes mellitus"},
+        {"letter": "b", "text": "after drinking excessive amounts of water"},
+        {"letter": "c", "text": "diabetes insipidus"},
+        {"letter": "d", "text": "in the case of urinary incontinence"}
+      ],
+      "correctAnswers": ["a"],
+      "topics": [56],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 56: 'Describe the osmotic diuresis induced by glucosuria associated with diabetes mellitus'"
+      }
+    },
+    {
+      "id": "q-5156012322-7",
+      "testId": "5156012322",
+      "questionNumber": 7,
+      "text": "The atrial natriuretic peptide",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "is released in response to hypovolemia"},
+        {"letter": "b", "text": "stimulates aldosterone secretion"},
+        {"letter": "c", "text": "is released in response to hypervolemia"},
+        {"letter": "d", "text": "causes vasoconstriction in the renal artery"},
+        {"letter": "e", "text": "inhibits renin secretion"},
+        {"letter": "f", "text": "elicits an increase in the total peripheral resistance"}
+      ],
+      "correctAnswers": ["c", "e"],
+      "topics": [49],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 49: 'Describe the effects of...atrial natriuretic hormone on arterial blood pressure: direct vascular and indirect renal mechanisms'"
+      }
+    },
+    {
+      "id": "q-5156012322-8",
+      "testId": "5156012322",
+      "questionNumber": 8,
+      "text": "Where is the largest fraction of filtered K+ reabsorbed in the kidney?",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "in the thick segment of the loop of Henle"},
+        {"letter": "b", "text": "in the collecting duct"},
+        {"letter": "c", "text": "in the proximal tubule"},
+        {"letter": "d", "text": "in the distal tubule"}
+      ],
+      "correctAnswers": ["c"],
+      "topics": [57],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 57: 'Describe the luminal mechanisms of Na+-reabsorption in the proximal tubulus' - majority of K+ reabsorption occurs in proximal tubule"
+      }
+    },
+    {
+      "id": "q-5156012322-9",
+      "testId": "5156012322",
+      "questionNumber": 9,
+      "text": "Which tubular segment is the action site of the thiazide type diuretics?",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "distal tubule"},
+        {"letter": "b", "text": "proximal tubule"},
+        {"letter": "c", "text": "thick segment of the loop of Henle"},
+        {"letter": "d", "text": "collecting duct"}
+      ],
+      "correctAnswers": ["a"],
+      "topics": [57],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 57: 'Identify the targets of the following diuretics...thiazides' - thiazides act on Na+-Cl- symporter in distal convoluted tubule"
+      }
+    },
+    {
+      "id": "q-5156012322-10",
+      "testId": "5156012322",
+      "questionNumber": 10,
+      "text": "The transport of urea in the kidney is such that",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "cc. 10 % of excreted urea is secreted in the collecting duct"},
+        {"letter": "b", "text": "cc. 10 % of the filtered urea is reabsorbed in the thick segment of the loop of Henle"},
+        {"letter": "c", "text": "cc. 50 % of the filtered urea is reabsorbed in the proximal tubule"},
+        {"letter": "d", "text": "cc. 10 % of the filtered urea is reabsorbed in the thin segment of the loop of Henle"}
+      ],
+      "correctAnswers": ["c"],
+      "topics": [56],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 56: 'Describe the urea reabsorption in the proximal tubuli, and the urea recirculation in the distal nephron segments'"
+      }
+    },
+    {
+      "id": "q-5156012322-11",
+      "testId": "5156012322",
+      "questionNumber": 11,
+      "text": "Vasoconstrictor fibres:",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "discharge action potentials only during hypotension"},
+        {"letter": "b", "text": "may show a fivefold increase from resting discharge level during maximal activation"},
+        {"letter": "c", "text": "are located in the vagus nerve"},
+        {"letter": "d", "text": "innervate only arterioles and larger arteries"}
+      ],
+      "correctAnswers": ["b"],
+      "topics": [48],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 48: 'Describe the sympathetic vasomotor tone: its origin, the neurotransmitter and receptor responsible for the effect'"
+      }
+    },
+    {
+      "id": "q-5156012322-12",
+      "testId": "5156012322",
+      "questionNumber": 12,
+      "text": "Which signal transduction pathway is most important for the activation of endothelial NO synthase?",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "adenylyl cyclase - cAMP - protein kinase A"},
+        {"letter": "b", "text": "phospholipase C - inositol-triphosphate - IP3 receptor - Ca2+"},
+        {"letter": "c", "text": "phospholipase C - DAG - protein kinase C"},
+        {"letter": "d", "text": "adenylyl cyclase - cAMP - protein kinase A"}
+      ],
+      "correctAnswers": ["b"],
+      "topics": [46],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 46: 'Describe the biosynthesis of nitric oxide and its actions on the vascular smooth muscle' - eNOS is Ca2+-dependent"
+      }
+    },
+    {
+      "id": "q-5156012322-13",
+      "testId": "5156012322",
+      "questionNumber": 13,
+      "text": "Which of the following substances produce vasodilation?",
+      "correctAnswerCount": 4,
+      "options": [
+        {"letter": "a", "text": "histamine"},
+        {"letter": "b", "text": "endothelin"},
+        {"letter": "c", "text": "angiotensin"},
+        {"letter": "d", "text": "potassium ion"},
+        {"letter": "e", "text": "thromboxane"},
+        {"letter": "f", "text": "nitric oxide"},
+        {"letter": "g", "text": "noradrenaline"}
+      ],
+      "correctAnswers": ["a", "c", "d", "f"],
+      "topics": [46],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 0.9,
+        "matchReason": "Topic 46: 'Enlist the vasoactive mediators released from vascular endothelium' and 'Identify the role of...K+-ions in the control of local blood flow'"
+      }
+    },
+    {
+      "id": "q-5156012322-14",
+      "testId": "5156012322",
+      "questionNumber": 14,
+      "text": "The Guyton diagram describes:",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "the interaction of the mechanisms determining cardiac output"},
+        {"letter": "b", "text": "the pressure-volume relationship of blood vessels"},
+        {"letter": "c", "text": "neuronal architecture of circulatory reflexes"},
+        {"letter": "d", "text": "the major mechanisms regulating blood pressure"}
+      ],
+      "correctAnswers": ["a"],
+      "topics": [47],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 47: 'Construct a vascular function curve...Explain why the intersection point of the cardiac function and vascular function curves represents the steady-state cardiac output'"
+      }
+    },
+    {
+      "id": "q-5156012322-15",
+      "testId": "5156012322",
+      "questionNumber": 15,
+      "text": "Stimulation of the arterial chemoreceptors by hypoxia",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "causes vasodilation in the systemic arterioles"},
+        {"letter": "b", "text": "elicits systemic vasoconstriction"},
+        {"letter": "c", "text": "elicits an increase in peripheral resistance"},
+        {"letter": "d", "text": "decreases respiratory minute ventilation"},
+        {"letter": "e", "text": "elicits apnea"}
+      ],
+      "correctAnswers": ["b", "c"],
+      "topics": [48],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 48: 'describe the circulatory reflexes evoked by hypoxia and/or hypercapnia'"
+      }
+    },
+    {
+      "id": "q-5156012322-16",
+      "testId": "5156012322",
+      "questionNumber": 16,
+      "text": "Factors increasing the central venous pressure include",
+      "correctAnswerCount": 3,
+      "options": [
+        {"letter": "a", "text": "increased peripheral resistance"},
+        {"letter": "b", "text": "decreased blood volume"},
+        {"letter": "c", "text": "decreased pumping activity of the heart"},
+        {"letter": "d", "text": "hypervolemia"},
+        {"letter": "e", "text": "expiration"},
+        {"letter": "f", "text": "parasympathetic stimulation"}
+      ],
+      "correctAnswers": ["a", "c", "d"],
+      "topics": [47],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 47: 'Predict how changes in total peripheral resistance, blood volume, and venous compliance influence this curve'"
+      }
+    },
+    {
+      "id": "q-5156012322-17",
+      "testId": "5156012322",
+      "questionNumber": 17,
+      "text": "As a function of vessel size, the resistance to fluid flow in a vessel is",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "inversely proportional to the square of the radius"},
+        {"letter": "b", "text": "directly proportional to the radius"},
+        {"letter": "c", "text": "inversely proportional to the fourth power of the radius"},
+        {"letter": "d", "text": "inversely proportional to the cube of the radius"},
+        {"letter": "e", "text": "directly proportional to the square of the radius"}
+      ],
+      "correctAnswers": ["c"],
+      "topics": [33],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 33: 'Explain the factors determining hydraulic resistance using the Hagen Poiseuille's law' - R ∝ 1/r⁴"
+      }
+    },
+    {
+      "id": "q-5156012322-18",
+      "testId": "5156012322",
+      "questionNumber": 18,
+      "text": "The law of Laplace states that (assuming T:tension, P:pressure, r:radius, h:wall thickness)",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "T=P x h r"},
+        {"letter": "b", "text": "P=T x r x h"},
+        {"letter": "c", "text": "P=h/T x r"},
+        {"letter": "d", "text": "P=T x r/h"},
+        {"letter": "e", "text": "T=P x r/h"}
+      ],
+      "correctAnswers": ["e"],
+      "topics": [41],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 41: 'Describe the relationship among wall tension, transmural pressure, vessel radius and wall thickness using the equation of Laplace's law'"
+      }
+    },
+    {
+      "id": "q-5156012322-19",
+      "testId": "5156012322",
+      "questionNumber": 19,
+      "text": "The muscle cells of the left ventricle receive blood supply via the coronary arteries predominantly",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "during isometric contraction"},
+        {"letter": "b", "text": "during diastole"},
+        {"letter": "c", "text": "continuously during both systole and diastole"},
+        {"letter": "d", "text": "during rapid ejection"}
+      ],
+      "correctAnswers": ["b"],
+      "topics": [40],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 40: 'Describe the phasic flow of blood to the ventricular myocardium through an entire cardiac cycle'"
+      }
+    },
+    {
+      "id": "q-5156012322-20",
+      "testId": "5156012322",
+      "questionNumber": 20,
+      "text": "Local hypoxia elicits vasoconstriction in the resistance vessels of",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "the skeletal muscle circulation"},
+        {"letter": "b", "text": "the coronary circulation"},
+        {"letter": "c", "text": "the cerebral circulation"},
+        {"letter": "d", "text": "the pulmonary circulation"}
+      ],
+      "correctAnswers": ["d"],
+      "topics": [50],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 50: 'Describe the pulmonary hypoxic vasoconstriction, and its role in the regulation of blood flow distribution in the lungs (Euler-Liljestrand reflex)'"
+      }
+    },
+    {
+      "id": "q-5156012322-21",
+      "testId": "5156012322",
+      "questionNumber": 21,
+      "text": "The total lymph flow in adult humans is approximately:",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "1-2 ml/sec"},
+        {"letter": "b", "text": "1-2 ml/min"},
+        {"letter": "c", "text": "1-2 ml/hour"},
+        {"letter": "d", "text": "1-2 microliter/min"},
+        {"letter": "e", "text": "1-2 microliter/hour"},
+        {"letter": "f", "text": "1-2 microliter/sec"}
+      ],
+      "correctAnswers": ["b"],
+      "topics": [44],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 44 reference values: 'lymph flow: 3-4 l/day' = approximately 2 ml/min"
+      }
+    },
+    {
+      "id": "q-5156012322-22",
+      "testId": "5156012322",
+      "questionNumber": 22,
+      "text": "The most probable cause of malnutrition-related tissue edema is:",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "blood plasma albumin level is doubled."},
+        {"letter": "b", "text": "interstitial oncotic pressure is increased."},
+        {"letter": "c", "text": "blood plasma hydrostatic pressure is increased."},
+        {"letter": "d", "text": "the permeability of capillaries is increased."},
+        {"letter": "e", "text": "blood plasma colloid osmotic pressure is decreased."},
+        {"letter": "f", "text": "interstitial hydrostatic pressure is decreased."}
+      ],
+      "correctAnswers": ["e"],
+      "topics": [44],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 44: 'Explain how edema develops in response to...malnutrition' - decreased plasma proteins reduce oncotic pressure"
+      }
+    },
+    {
+      "id": "q-5156012322-23",
+      "testId": "5156012322",
+      "questionNumber": 23,
+      "text": "With regard to the microcirculation",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "dilation of arterioles decreases the pressure in the capillaries"},
+        {"letter": "b", "text": "precapillary sphincters regulate capillary blood flow"},
+        {"letter": "c", "text": "increased sympathetic activity tends to constrict the capillaries"},
+        {"letter": "d", "text": "during periods of rest, not all the capillaries are open"}
+      ],
+      "correctAnswers": ["b", "d"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 43: 'Describe the vascular elements of the microcirculation (arterioles, metarterioles, precapillary sphincters, capillaries, venules)'"
+      }
+    },
+    {
+      "id": "q-5156012322-24",
+      "testId": "5156012322",
+      "questionNumber": 24,
+      "text": "Increased peripheral resistance",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "may result from an increased sympathetic activity"},
+        {"letter": "b", "text": "results in a larger increase in the systolic pressure than in the diastolic"},
+        {"letter": "c", "text": "results in an increase of the pulse pressure"},
+        {"letter": "d", "text": "promotes venous return"},
+        {"letter": "e", "text": "does not influence the pulse pressure significantly"}
+      ],
+      "correctAnswers": ["a", "e"],
+      "topics": [42, 48],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T22:10:00Z",
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 42: 'Describe the effects of changes in...total peripheral resistance, on arterial systolic, diastolic, mean, and pulse pressure values'; Topic 48: sympathetic vasomotor tone"
+      }
+    }
+  ]
+}

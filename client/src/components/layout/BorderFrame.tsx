@@ -4,10 +4,14 @@ interface BorderFrameProps {
 }
 
 export function BorderFrame({ sidebarCollapsed = false, fullWidth = false }: BorderFrameProps) {
+  // Calculate sidebar offset for desktop only (lg breakpoint = 1024px)
+  // On mobile, sidebar is hidden so we want full width (left: 0)
+  const desktopOffset = fullWidth ? '0' : (sidebarCollapsed ? '80px' : '288px')
+
   return (
     <div
-      className="fixed inset-0 pointer-events-none overflow-hidden z-0 transition-all duration-300"
-      style={{ left: fullWidth ? '0' : (sidebarCollapsed ? '80px' : '288px') }}
+      className="fixed inset-0 pointer-events-none overflow-hidden z-0 transition-all duration-300 left-0 lg:left-[var(--sidebar-offset)]"
+      style={{ '--sidebar-offset': desktopOffset } as React.CSSProperties}
     >
       {/* Full page diagonal lines pattern - fixed, doesn't scroll */}
       <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">

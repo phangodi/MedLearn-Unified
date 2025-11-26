@@ -1,0 +1,746 @@
+{
+  "version": "1.0.0",
+  "description": "Topic index for MCQ question matching. Keywords are used to identify which topic a question belongs to.",
+  "mcqMapping": {
+    "mcq-1": [1, 2, 3, 4, 5, 6, 7, 17, 18, 19, 20, 21, 22, 23, 24],
+    "mcq-2": [8, 9, 10, 11, 12, 13, 14, 15, 16, 25, 26, 27, 28, 29, 30, 31, 32],
+    "mcq-3": [33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58],
+    "mcq-4": [59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76],
+    "mcq-5": [77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94],
+    "mcq-6": [95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122]
+  },
+  "topics": [
+    {
+      "topic": 1,
+      "title": "Principles of control theory",
+      "mcq": 1,
+      "keywords": ["homeostasis", "homeostatic", "milieu interieur", "internal environment", "negative feedback", "positive feedback", "feed-forward", "reflex arc", "reflex arch", "servo-control", "gain", "set point", "effector", "receptor", "afferent", "efferent", "behavioral control", "humoral control", "neuronal control", "paracrine", "autocrine", "endocrine"]
+    },
+    {
+      "topic": 2,
+      "title": "Passive transport mechanisms of the cell membrane",
+      "mcq": 1,
+      "keywords": ["passive transport", "diffusion", "Fick's law", "facilitated diffusion", "aquaporin", "osmosis", "osmolarity", "osmolality", "tonicity", "osmotic pressure", "reflection coefficient", "uniporter", "symporter", "antiporter", "carrier", "fluid mosaic", "plasma membrane", "phospholipid", "transport maximum", "saturation"]
+    },
+    {
+      "topic": 3,
+      "title": "Active transport mechanisms of the cell membrane",
+      "mcq": 1,
+      "keywords": ["active transport", "primary active", "secondary active", "ATP", "Na-K-ATPase", "sodium pump", "vesicular transport", "endocytosis", "exocytosis", "transcytosis", "ABC transporter", "cotransport", "exchange", "antiporter"]
+    },
+    {
+      "topic": 4,
+      "title": "The resting membrane potential",
+      "mcq": 1,
+      "keywords": ["resting membrane potential", "Nernst equation", "Goldman-Hodgkin-Katz", "GHK equation", "equilibrium potential", "membrane potential", "steady state", "Na-K-ATPase", "ion concentration", "potassium", "sodium", "chloride", "calcium"]
+    },
+    {
+      "topic": 5,
+      "title": "The electric properties of neuronal membranes",
+      "mcq": 1,
+      "keywords": ["action potential", "electrotonic", "local potential", "graded potential", "voltage-gated", "ion channel", "selectivity", "gating", "activation", "inactivation", "threshold", "all or none", "refractory period", "absolute refractory", "relative refractory", "depolarization", "repolarization", "overshoot", "afterhyperpolarization", "rheobase", "chronaxia", "voltage clamp"]
+    },
+    {
+      "topic": 6,
+      "title": "The axonal propagation of the action potential. Axon classification",
+      "mcq": 1,
+      "keywords": ["axon", "myelinated", "unmyelinated", "saltatory conduction", "Erlanger-Gasser", "A-alpha", "A-beta", "A-gamma", "A-delta", "B fiber", "C fiber", "propagation velocity", "space constant", "time constant", "membrane capacity", "compound action potential", "peripheral nerve"]
+    },
+    {
+      "topic": 7,
+      "title": "Receptors, signal transduction mechanisms",
+      "mcq": 1,
+      "keywords": ["receptor", "ligand", "agonist", "antagonist", "ionotropic", "metabotropic", "G-protein", "GPCR", "second messenger", "cAMP", "cGMP", "IP3", "DAG", "calcium", "tyrosine kinase", "enzyme-linked receptor", "nuclear receptor", "cytosolic receptor", "phosphorylation", "signal transduction", "up-regulation", "down-regulation", "sensitization", "desensitization"]
+    },
+    {
+      "topic": 8,
+      "title": "Fluid compartments of the body. The blood plasma",
+      "mcq": 2,
+      "keywords": ["fluid compartment", "extracellular fluid", "intracellular fluid", "plasma", "blood plasma", "hematocrit", "plasma protein", "albumin", "globulin", "electrophoresis", "lipoprotein", "indicator dilution", "blood volume", "plasma volume"]
+    },
+    {
+      "topic": 9,
+      "title": "The general features of red blood cells",
+      "mcq": 2,
+      "keywords": ["red blood cell", "erythrocyte", "MCH", "MCHC", "MCV", "anemia", "osmotic resistance", "sedimentation", "ESR", "Price-Jones curve", "hemoglobin"]
+    },
+    {
+      "topic": 10,
+      "title": "Erythropoiesis",
+      "mcq": 2,
+      "keywords": ["erythropoiesis", "erythropoietin", "EPO", "reticulocyte", "iron metabolism", "transferrin", "ferritin", "hepcidin", "ferroportin", "vitamin B12", "folic acid", "bone marrow"]
+    },
+    {
+      "topic": 11,
+      "title": "Hemoglobin degradation, bilirubin metabolism",
+      "mcq": 2,
+      "keywords": ["hemoglobin degradation", "bilirubin", "direct bilirubin", "indirect bilirubin", "conjugated", "unconjugated", "urobilinogen", "UBG", "icterus", "jaundice", "enterohepatic", "bile"]
+    },
+    {
+      "topic": 12,
+      "title": "The physiology of white blood cell",
+      "mcq": 2,
+      "keywords": ["white blood cell", "leukocyte", "differential count", "neutrophil", "lymphocyte", "monocyte", "eosinophil", "basophil", "phagocytosis", "immunoglobulin", "antibody", "antigen", "complement", "macrophage"]
+    },
+    {
+      "topic": 13,
+      "title": "The ABO and Rh blood groups",
+      "mcq": 2,
+      "keywords": ["ABO blood group", "Rh blood group", "Landsteiner", "agglutination", "blood group determination", "blood type", "antigen", "antibody", "transfusion", "compatibility", "Rh sensitization", "erythroblastosis fetalis", "hemolysis"]
+    },
+    {
+      "topic": 14,
+      "title": "Primary hemostasis",
+      "mcq": 2,
+      "keywords": ["primary hemostasis", "thrombocyte", "platelet", "adhesion", "aggregation", "activation", "von Willebrand", "glycoprotein", "thrombopoiesis", "bleeding time", "white thrombus", "red thrombus"]
+    },
+    {
+      "topic": 15,
+      "title": "Secondary hemostasis: blood clotting (coagulation)",
+      "mcq": 2,
+      "keywords": ["secondary hemostasis", "coagulation", "clotting", "coagulation factor", "extrinsic pathway", "intrinsic pathway", "common pathway", "fibrin", "vitamin K", "prothrombin", "thrombin", "INR", "coagulation time", "prothrombin time", "tissue factor", "contact phase"]
+    },
+    {
+      "topic": 16,
+      "title": "Fibrinolysis. Inhibition of clotting in vitro and in vivo",
+      "mcq": 2,
+      "keywords": ["fibrinolysis", "plasmin", "plasminogen", "anticoagulant", "heparin", "antithrombin", "protein C", "protein S", "thrombomodulin", "EDTA", "citrate", "vitamin K antagonist", "warfarin", "aspirin", "cyclooxygenase inhibitor"]
+    },
+    {
+      "topic": 17,
+      "title": "Neurotransmission",
+      "mcq": 1,
+      "keywords": ["neurotransmission", "synapse", "synaptic", "chemical synapse", "electric synapse", "gap junction", "EPSP", "IPSP", "end plate potential", "EPP", "receptor potential", "postsynaptic potential", "neurotransmitter", "acetylcholine", "glutamate", "GABA", "glycine", "dopamine", "noradrenaline", "adrenaline", "histamine", "serotonin", "nitric oxide", "NO", "ionotropic", "metabotropic", "temporal summation", "spatial summation", "synaptic delay"]
+    },
+    {
+      "topic": 18,
+      "title": "The peripheral nervous system: primary sensory neurons",
+      "mcq": 1,
+      "keywords": ["primary sensory neuron", "sensory neuron", "dorsal root ganglion", "receptor sensitivity", "receptor specificity", "modality", "receptive field", "exteroceptor", "interoceptor", "proprioceptor", "mechanoreceptor", "thermoreceptor", "nociceptor", "slow-adapting", "fast-adapting", "Lloyd-Hunt", "secondary sensory cell"]
+    },
+    {
+      "topic": 19,
+      "title": "The parasympathetic division of the autonomic nervous system",
+      "mcq": 1,
+      "keywords": ["parasympathetic", "vagus", "craniosacral", "preganglionic", "ganglion cell", "acetylcholine", "cholinergic", "muscarinic", "nicotinic", "autonomic ground plexus", "axon varicosity", "autonomic tone", "B fiber", "C fiber"]
+    },
+    {
+      "topic": 20,
+      "title": "The sympathetic division of the autonomic nervous system. The adrenal medulla",
+      "mcq": 1,
+      "keywords": ["sympathetic", "thoracolumbar", "adrenal medulla", "noradrenaline", "norepinephrine", "adrenaline", "epinephrine", "catecholamine", "adrenergic", "alpha receptor", "beta receptor", "chromaffin cell", "sympathetic cholinergic", "NANC"]
+    },
+    {
+      "topic": 21,
+      "title": "The peripheral nervous system: motor neurons, neuromuscular junction",
+      "mcq": 1,
+      "keywords": ["motor neuron", "neuromuscular junction", "motor unit", "end plate", "acetylcholine", "curare", "succinylcholine", "botulinum toxin", "A-alpha fiber", "A-gamma fiber", "motor recruitment", "ventral horn"]
+    },
+    {
+      "topic": 22,
+      "title": "Skeletal muscle: structure, electromechanical coupling, the biochemistry of contraction",
+      "mcq": 1,
+      "keywords": ["skeletal muscle", "electromechanical coupling", "excitation-contraction coupling", "sarcomere", "myofibril", "actin", "myosin", "sliding filament", "troponin", "tropomyosin", "T-tubule", "sarcoplasmic reticulum", "calcium", "ATP", "rigor mortis", "cross-bridge", "relaxation"]
+    },
+    {
+      "topic": 23,
+      "title": "Skeletal muscle: the mechanics and energetics of muscle contraction",
+      "mcq": 1,
+      "keywords": ["muscle mechanics", "isometric", "isotonic", "auxotonic", "preload", "afterload", "length-tension", "muscle twitch", "tetanus", "summation", "muscle fatigue", "fast-twitch", "slow-twitch", "oxidative", "anaerobic", "muscle power"]
+    },
+    {
+      "topic": 24,
+      "title": "Smooth muscle physiology",
+      "mcq": 1,
+      "keywords": ["smooth muscle", "single-unit", "multi-unit", "visceral smooth muscle", "electromechanical coupling", "pharmacomechanical coupling", "calcium", "calmodulin", "myosin light chain kinase", "stress relaxation"]
+    },
+    {
+      "topic": 25,
+      "title": "Respiratory mechanics 1: Static mechanics of the lung and the chest",
+      "mcq": 2,
+      "keywords": ["respiratory mechanics", "spirometry", "spirogram", "lung volume", "lung capacity", "tidal volume", "vital capacity", "residual volume", "FRC", "functional residual capacity", "TLC", "total lung capacity", "compliance", "transpulmonary pressure", "surfactant", "surface tension", "atelectasis", "pneumothorax", "pleural pressure"]
+    },
+    {
+      "topic": 26,
+      "title": "Respiratory mechanics 2: Ventilation",
+      "mcq": 2,
+      "keywords": ["ventilation", "airway resistance", "dead space", "anatomic dead space", "physiologic dead space", "alveolar ventilation", "minute ventilation", "respiratory rate", "forced expiration", "FEV1", "FVC", "Tiffeneau index", "peak expiratory flow", "PEF"]
+    },
+    {
+      "topic": 27,
+      "title": "Pulmonary gas exchange",
+      "mcq": 2,
+      "keywords": ["gas exchange", "partial pressure", "pO2", "pCO2", "diffusion", "ventilation-perfusion", "V/Q", "hypoventilation", "hyperventilation", "alveolar gas", "arterial blood gas"]
+    },
+    {
+      "topic": 28,
+      "title": "Oxygen transport in blood",
+      "mcq": 2,
+      "keywords": ["oxygen transport", "hemoglobin", "oxyhemoglobin", "dissociation curve", "P50", "Bohr effect", "2,3-DPG", "Hufner number", "oxygen saturation", "hypoxia", "cyanosis", "methemoglobin", "carboxyhemoglobin", "carbon monoxide"]
+    },
+    {
+      "topic": 29,
+      "title": "Carbon-dioxide transport in blood",
+      "mcq": 2,
+      "keywords": ["carbon dioxide transport", "CO2", "bicarbonate", "chloride shift", "Hamburger shift", "carbonic anhydrase", "Haldane effect", "carbamino"]
+    },
+    {
+      "topic": 30,
+      "title": "The rhythmogenesis of breathing, ventilatory reflexes elicited from the lung",
+      "mcq": 2,
+      "keywords": ["breathing", "respiratory center", "rhythmogenesis", "DRG", "VRG", "pre-Botzinger", "Hering-Breuer reflex", "pulmonary stretch receptor", "irritant receptor", "J-receptor", "Kussmaul", "Cheyne-Stokes", "apneusia", "gasping", "eupnea", "hyperpnea", "dyspnea"]
+    },
+    {
+      "topic": 31,
+      "title": "The chemical control of ventilation",
+      "mcq": 2,
+      "keywords": ["chemoreceptor", "peripheral chemoreceptor", "central chemoreceptor", "carotid body", "aortic body", "respiratory drive", "CO2 narcosis", "altitude", "acclimatization"]
+    },
+    {
+      "topic": 32,
+      "title": "Biology of the airways. Metabolic and endocrine functions of the lung",
+      "mcq": 2,
+      "keywords": ["mucociliary clearance", "bronchomotor tone", "bronchoconstriction", "bronchodilation", "alveolar macrophage", "Clara cell", "ACE", "angiotensin converting enzyme", "histamine", "leukotriene"]
+    },
+    {
+      "topic": 33,
+      "title": "Hemodynamics: basic biophysical principles",
+      "mcq": 3,
+      "keywords": ["hemodynamics", "blood flow", "flow velocity", "Ohm's law", "resistance", "conductance", "Hagen-Poiseuille", "Bernoulli", "laminar flow", "turbulent flow", "Reynolds number", "pressure gradient", "systemic circulation", "pulmonary circulation"]
+    },
+    {
+      "topic": 34,
+      "title": "Hemorheology",
+      "mcq": 3,
+      "keywords": ["hemorheology", "blood viscosity", "shear stress", "shear rate", "Newtonian", "non-Newtonian", "shear thinning", "Fahraeus-Lindqvist", "hematocrit", "red blood cell aggregation"]
+    },
+    {
+      "topic": 35,
+      "title": "Cardiac muscle: structural and functional characterization, regulation of contractile force",
+      "mcq": 3,
+      "keywords": ["cardiac muscle", "gap junction", "functional syncytium", "refractory period", "excitation-contraction coupling", "calcium", "inotropy", "positive inotropic", "heterometric", "Frank-Starling", "lusitropy"]
+    },
+    {
+      "topic": 36,
+      "title": "Cardiac cycle. The jugular pulse",
+      "mcq": 3,
+      "keywords": ["cardiac cycle", "systole", "diastole", "stroke volume", "cardiac output", "cardiac index", "ejection fraction", "heart sounds", "first heart sound", "second heart sound", "jugular pulse", "valve"]
+    },
+    {
+      "topic": 37,
+      "title": "Preload and afterload, the Frank-Starling law of the heart",
+      "mcq": 3,
+      "keywords": ["preload", "afterload", "Frank-Starling", "Starling law", "ventricular function", "end-diastolic volume", "end-diastolic pressure", "cardiac function curve", "length-tension"]
+    },
+    {
+      "topic": 38,
+      "title": "Cardiac muscle: cellular electrophysiology",
+      "mcq": 3,
+      "keywords": ["cardiac action potential", "pacemaker", "pacemaker potential", "SA node", "AV node", "His bundle", "Purkinje fiber", "automaticity", "chronotropy", "dromotropy", "hyperkalaemia", "conduction system", "phase 0", "phase 4", "funny current"]
+    },
+    {
+      "topic": 39,
+      "title": "Electrocardiography, other methods for the assessment of cardiac function",
+      "mcq": 3,
+      "keywords": ["ECG", "electrocardiogram", "EKG", "lead", "P wave", "QRS complex", "T wave", "PR interval", "QT interval", "electrical axis", "mean electrical vector", "echocardiography", "cardiac catheterization"]
+    },
+    {
+      "topic": 40,
+      "title": "Cardiac work and metabolism. The coronary circulation",
+      "mcq": 3,
+      "keywords": ["coronary circulation", "coronary blood flow", "myocardial oxygen", "cardiac metabolism", "arteriovenous oxygen difference", "coronary vasodilation", "coronary reserve"]
+    },
+    {
+      "topic": 41,
+      "title": "Hemodynamics: the functional categorization of blood vessels",
+      "mcq": 3,
+      "keywords": ["blood vessel", "artery", "arteriole", "capillary", "venule", "vein", "vascular compliance", "Laplace law", "wall tension", "transmural pressure", "peripheral resistance", "critical closing pressure"]
+    },
+    {
+      "topic": 42,
+      "title": "The function of the aorta and the arteries",
+      "mcq": 3,
+      "keywords": ["aorta", "artery", "arterial blood pressure", "systolic pressure", "diastolic pressure", "mean arterial pressure", "pulse pressure", "Windkessel", "pressure pulse", "sphygmomanometry", "arterial pulse"]
+    },
+    {
+      "topic": 43,
+      "title": "The microcirculation: capillary solute exchange and fluid dynamics",
+      "mcq": 3,
+      "keywords": ["microcirculation", "capillary", "continuous capillary", "fenestrated capillary", "discontinuous capillary", "Starling forces", "Starling equation", "oncotic pressure", "colloid osmotic pressure", "hydrostatic pressure", "filtration", "reabsorption"]
+    },
+    {
+      "topic": 44,
+      "title": "The microcirculation: lymphatic circulation and edema formation",
+      "mcq": 3,
+      "keywords": ["lymphatic", "lymph", "edema", "lymphatic capillary", "lymph node", "protein clearance", "interstitial pressure", "lymph flow"]
+    },
+    {
+      "topic": 45,
+      "title": "The characteristics of the venous circulation",
+      "mcq": 3,
+      "keywords": ["venous circulation", "vein", "venous return", "muscle pump", "respiratory pump", "venomotor tone", "venoconstriction", "orthostasis", "venous valve"]
+    },
+    {
+      "topic": 46,
+      "title": "The regulation of local blood flow",
+      "mcq": 3,
+      "keywords": ["local blood flow", "autoregulation", "myogenic tone", "Bayliss effect", "nitric oxide", "NO", "endothelium", "metabolic regulation", "active hyperemia", "reactive hyperemia", "angiogenesis", "triple response", "axon reflex"]
+    },
+    {
+      "topic": 47,
+      "title": "Factors determining cardiac output, the Guyton diagram",
+      "mcq": 3,
+      "keywords": ["cardiac output", "Fick principle", "Guyton diagram", "cardiac function curve", "vascular function curve", "venous return", "mean vascular filling pressure", "central venous pressure"]
+    },
+    {
+      "topic": 48,
+      "title": "Short-term control mechanisms of arterial blood pressure",
+      "mcq": 3,
+      "keywords": ["blood pressure control", "baroreceptor", "baroreceptor reflex", "carotid sinus", "aortic arch", "sympathetic vasomotor tone", "Cushing reflex", "CNS ischemic response"]
+    },
+    {
+      "topic": 49,
+      "title": "Long-term control of arterial blood pressure",
+      "mcq": 3,
+      "keywords": ["blood pressure regulation", "pressure diuresis", "angiotensin II", "vasopressin", "ADH", "atrial natriuretic peptide", "ANP", "cardiopulmonary receptor", "volume receptor"]
+    },
+    {
+      "topic": 50,
+      "title": "Pulmonary circulation",
+      "mcq": 3,
+      "keywords": ["pulmonary circulation", "pulmonary artery", "pulmonary vein", "pulmonary blood flow", "zone 1", "zone 2", "zone 3", "hypoxic vasoconstriction", "Euler-Liljestrand", "bronchial circulation"]
+    },
+    {
+      "topic": 51,
+      "title": "Skeletal muscle blood flow, the cardiovascular adaptation to work and exercise",
+      "mcq": 3,
+      "keywords": ["skeletal muscle blood flow", "exercise", "cardiovascular adaptation", "Valsalva maneuver", "redistribution", "muscle pump"]
+    },
+    {
+      "topic": 52,
+      "title": "Glomerular filtration: the factors determining the volume and composition of filtrate",
+      "mcq": 3,
+      "keywords": ["glomerular filtration", "GFR", "glomerulus", "Bowman's capsule", "filtration barrier", "podocyte", "basement membrane", "filtration fraction", "renal plasma flow", "RPF", "net filtration pressure", "filtration coefficient"]
+    },
+    {
+      "topic": 53,
+      "title": "Renal blood flow. The regulation of GFR and RBF",
+      "mcq": 3,
+      "keywords": ["renal blood flow", "RBF", "afferent arteriole", "efferent arteriole", "tubuloglomerular feedback", "autoregulation", "peritubular capillary", "vasa recta", "macula densa"]
+    },
+    {
+      "topic": 54,
+      "title": "The general features of epithelial transport mechanisms in the renal tubuli",
+      "mcq": 3,
+      "keywords": ["tubular transport", "renal epithelium", "transcellular", "paracellular", "tight junction", "apical membrane", "basolateral membrane", "cortical nephron", "juxtamedullary nephron", "proximal tubule", "loop of Henle", "distal tubule", "collecting duct"]
+    },
+    {
+      "topic": 55,
+      "title": "Tubular reabsorption and secretion. Renal clearance",
+      "mcq": 3,
+      "keywords": ["tubular reabsorption", "tubular secretion", "renal clearance", "inulin clearance", "creatinine clearance", "PAH clearance", "filtered load", "excretion rate"]
+    },
+    {
+      "topic": 56,
+      "title": "Renal tubular transport of organic solutes: glucose, amino acids, ketone bodies, proteins, uric acid, urea, UBG",
+      "mcq": 3,
+      "keywords": ["glucose reabsorption", "renal threshold", "tubular maximum", "Tmax", "glucosuria", "proteinuria", "urea", "uric acid", "amino acid transport", "organic anion", "osmotic diuresis"]
+    },
+    {
+      "topic": 57,
+      "title": "Renal tubular transport of NaCl and water, production of the medullary osmotic gradient",
+      "mcq": 3,
+      "keywords": ["sodium reabsorption", "NaCl transport", "countercurrent multiplier", "countercurrent exchanger", "medullary osmotic gradient", "loop diuretic", "thiazide", "aldosterone", "ENaC", "NKCC2", "NCC", "Na-K-ATPase", "dilution", "concentration"]
+    },
+    {
+      "topic": 58,
+      "title": "The physiology of the urinary tract. Micturition",
+      "mcq": 3,
+      "keywords": ["micturition", "urinary bladder", "urethral sphincter", "detrusor", "micturition reflex", "continence", "incontinence", "cystometrogram", "uroflowmetry"]
+    },
+    {
+      "topic": 59,
+      "title": "Principles of the regulation of the gastrointestinal tract",
+      "mcq": 4,
+      "keywords": ["gastrointestinal", "GI tract", "enteric nervous system", "myenteric plexus", "submucosal plexus", "gastrin", "secretin", "CCK", "cholecystokinin", "GIP", "GLP", "motilin", "local reflex", "long reflex"]
+    },
+    {
+      "topic": 60,
+      "title": "Special functional features of the gastrointestinal smooth muscle",
+      "mcq": 4,
+      "keywords": ["GI smooth muscle", "slow wave", "interstitial cells of Cajal", "ICC", "migrating motor complex", "MMC", "peristalsis", "Bayliss-Starling law"]
+    },
+    {
+      "topic": 61,
+      "title": "The splanchnic circulation",
+      "mcq": 4,
+      "keywords": ["splanchnic circulation", "hepatic portal", "hepatic artery", "sinusoid", "hepatic microcirculation", "ascites"]
+    },
+    {
+      "topic": 62,
+      "title": "Functions of the upper GI tract: chewing, salivation, swallowing",
+      "mcq": 4,
+      "keywords": ["salivation", "saliva", "salivary gland", "swallowing", "deglutition", "esophagus", "peristalsis", "LES", "UES", "dysphagia", "achalasia"]
+    },
+    {
+      "topic": 63,
+      "title": "Motor functions of the stomach. Vomiting (emesis)",
+      "mcq": 4,
+      "keywords": ["gastric motility", "stomach", "gastric emptying", "receptive relaxation", "vomiting", "emesis", "MMC"]
+    },
+    {
+      "topic": 64,
+      "title": "The mechanism and regulation of gastric juice secretion",
+      "mcq": 4,
+      "keywords": ["gastric juice", "gastric secretion", "HCl", "hydrochloric acid", "parietal cell", "chief cell", "pepsinogen", "pepsin", "intrinsic factor", "gastrin", "histamine", "somatostatin"]
+    },
+    {
+      "topic": 65,
+      "title": "The exocrine pancreas: secretion and regulation",
+      "mcq": 4,
+      "keywords": ["exocrine pancreas", "pancreatic juice", "pancreatic enzyme", "amylase", "lipase", "trypsin", "chymotrypsin", "enteropeptidase", "enterokinase", "secretin", "CCK", "bicarbonate"]
+    },
+    {
+      "topic": 66,
+      "title": "The bile: secretion, storage, mobilization, regulation",
+      "mcq": 4,
+      "keywords": ["bile", "bile salt", "bile acid", "gallbladder", "sphincter of Oddi", "enterohepatic circulation", "bilirubin", "cholesterol", "phospholipid"]
+    },
+    {
+      "topic": 67,
+      "title": "The small intestine: digestion and absorption",
+      "mcq": 4,
+      "keywords": ["small intestine", "digestion", "absorption", "brush border", "enterocyte", "carbohydrate digestion", "protein digestion", "fat digestion", "lipid absorption", "chylomicron", "steatorrhea", "iron absorption", "calcium absorption"]
+    },
+    {
+      "topic": 68,
+      "title": "The functions of the colon. Defecation",
+      "mcq": 4,
+      "keywords": ["colon", "large intestine", "defecation", "haustration", "mass peristalsis", "water reabsorption", "microbiota", "fecal incontinence"]
+    },
+    {
+      "topic": 69,
+      "title": "Nutrition: energy metabolism, the role of macronutrients in energy intake",
+      "mcq": 4,
+      "keywords": ["nutrition", "energy metabolism", "macronutrient", "calorie", "calorimetry", "respiratory quotient", "RQ", "basal metabolic rate", "BMR", "diet-induced thermogenesis", "DIT", "protein", "carbohydrate", "lipid", "essential amino acid"]
+    },
+    {
+      "topic": 70,
+      "title": "Nutrition: water, minerals, vitamins, dietary fibers",
+      "mcq": 4,
+      "keywords": ["vitamin", "water soluble vitamin", "fat soluble vitamin", "thiamin", "niacin", "B12", "vitamin C", "vitamin A", "vitamin D", "vitamin K", "trace element", "mineral", "dietary fiber"]
+    },
+    {
+      "topic": 71,
+      "title": "Principles of endocrine control systems",
+      "mcq": 4,
+      "keywords": ["endocrine", "hormone", "hormone classification", "peptide hormone", "steroid hormone", "amine hormone", "hormone receptor", "membrane receptor", "intracellular receptor", "hormone binding protein", "pulsatile secretion"]
+    },
+    {
+      "topic": 72,
+      "title": "Characterization of the hypothalamo-hypophyseal (neuroendocrine) system",
+      "mcq": 4,
+      "keywords": ["hypothalamus", "pituitary", "hypophysis", "anterior pituitary", "posterior pituitary", "releasing hormone", "inhibiting hormone", "neurosecretion", "negative feedback"]
+    },
+    {
+      "topic": 73,
+      "title": "Thyroid hormones: biosynthesis, regulation, effects",
+      "mcq": 4,
+      "keywords": ["thyroid", "thyroid hormone", "T3", "T4", "thyroxine", "triiodothyronine", "TSH", "TRH", "iodine", "thyroglobulin", "deiodinase", "metabolism", "hyperthyroidism", "hypothyroidism", "goiter"]
+    },
+    {
+      "topic": 74,
+      "title": "Hormone synthesis in the adrenal cortex. The glucocorticoids: biosynthesis, regulation, effects",
+      "mcq": 4,
+      "keywords": ["adrenal cortex", "glucocorticoid", "cortisol", "ACTH", "CRH", "HPA axis", "zona fasciculata", "zona glomerulosa", "zona reticularis", "Cushing", "Addison"]
+    },
+    {
+      "topic": 75,
+      "title": "The endocrine pancreas",
+      "mcq": 4,
+      "keywords": ["endocrine pancreas", "islet of Langerhans", "insulin", "glucagon", "beta cell", "alpha cell", "blood glucose", "incretin", "diabetes mellitus"]
+    },
+    {
+      "topic": 76,
+      "title": "The integrated endocrine control of metabolism. Stress and general adaptation syndrome",
+      "mcq": 4,
+      "keywords": ["metabolic control", "energy balance", "fuel storage", "fasting", "exercise", "stress", "general adaptation syndrome", "GAS", "leptin", "ghrelin", "appetite"]
+    },
+    {
+      "topic": 77,
+      "title": "Nutrition: The internal control of food intake",
+      "mcq": 5,
+      "keywords": ["food intake", "appetite", "hunger", "satiety", "hypothalamus", "orexigenic", "anorexigenic", "NPY", "MSH", "leptin", "ghrelin", "BMI", "obesity", "thirst", "salt appetite"]
+    },
+    {
+      "topic": 78,
+      "title": "The concentration and dilution of urine. Osmoregulation",
+      "mcq": 5,
+      "keywords": ["osmoregulation", "urine concentration", "urine dilution", "vasopressin", "ADH", "antidiuretic hormone", "aquaporin", "V2 receptor", "diabetes insipidus", "osmolar clearance", "free water clearance"]
+    },
+    {
+      "topic": 79,
+      "title": "Volume regulation (the regulation of Na+ metabolism and extracellular fluid volume)",
+      "mcq": 5,
+      "keywords": ["volume regulation", "sodium", "renin", "angiotensin", "aldosterone", "RAAS", "mineralocorticoid", "ANP", "atrial natriuretic peptide", "hypovolemia", "hypervolemia"]
+    },
+    {
+      "topic": 80,
+      "title": "The regulation of K+ metabolism",
+      "mcq": 5,
+      "keywords": ["potassium", "K+", "potassium secretion", "potassium reabsorption", "aldosterone", "collecting duct", "hypokalemia", "hyperkalemia"]
+    },
+    {
+      "topic": 81,
+      "title": "The regulation of Ca2+ and phosphate metabolism",
+      "mcq": 5,
+      "keywords": ["calcium", "phosphate", "PTH", "parathyroid hormone", "calcitonin", "vitamin D", "calcitriol", "1,25-dihydroxycholecalciferol", "calcium sensing receptor", "tetany", "Chvostek", "Trousseau"]
+    },
+    {
+      "topic": 82,
+      "title": "Acid-Base Balance",
+      "mcq": 5,
+      "keywords": ["acid-base", "pH", "buffer", "bicarbonate", "Henderson-Hasselbalch", "respiratory acidosis", "respiratory alkalosis", "metabolic acidosis", "metabolic alkalosis", "anion gap", "titratable acid", "ammonium", "base excess"]
+    },
+    {
+      "topic": 83,
+      "title": "Thermoregulation, cutaneous blood flow",
+      "mcq": 5,
+      "keywords": ["thermoregulation", "body temperature", "heat production", "heat loss", "sweating", "sweat gland", "cutaneous blood flow", "shivering", "brown adipose tissue", "fever", "hyperthermia", "hypothermia", "thermoneutral zone"]
+    },
+    {
+      "topic": 84,
+      "title": "Sports physiology",
+      "mcq": 5,
+      "keywords": ["sports physiology", "exercise physiology", "VO2 max", "lactate threshold", "muscle fiber type", "training", "cardiac output", "endurance"]
+    },
+    {
+      "topic": 85,
+      "title": "The development and physiology of the male reproductive system",
+      "mcq": 5,
+      "keywords": ["male reproductive", "testis", "testosterone", "spermatogenesis", "Sertoli cell", "Leydig cell", "FSH", "LH", "GnRH", "androgen", "dihydrotestosterone"]
+    },
+    {
+      "topic": 86,
+      "title": "The physiology of the female reproductive system, the menstrual cycle",
+      "mcq": 5,
+      "keywords": ["female reproductive", "ovary", "oogenesis", "follicle", "ovulation", "corpus luteum", "estrogen", "progesterone", "menstrual cycle", "FSH", "LH", "endometrium"]
+    },
+    {
+      "topic": 87,
+      "title": "The physiology of the sexual act, fertilization, and implantation",
+      "mcq": 5,
+      "keywords": ["erection", "ejaculation", "emission", "fertilization", "capacitation", "acrosome reaction", "implantation", "blastocyst"]
+    },
+    {
+      "topic": 88,
+      "title": "The neuroendocrine control of pregnancy, parturition and lactation",
+      "mcq": 5,
+      "keywords": ["pregnancy", "hCG", "placenta", "fetoplacental unit", "parturition", "labor", "oxytocin", "lactation", "prolactin", "milk ejection", "Ferguson reflex"]
+    },
+    {
+      "topic": 89,
+      "title": "The fetal circulation, the cardiorespiratory adaptation of the neonate",
+      "mcq": 5,
+      "keywords": ["fetal circulation", "ductus arteriosus", "ductus venosus", "foramen ovale", "umbilical", "neonatal", "neonatal jaundice"]
+    },
+    {
+      "topic": 90,
+      "title": "Physiology of growth and puberty",
+      "mcq": 5,
+      "keywords": ["growth", "growth hormone", "IGF-1", "somatomedin", "puberty", "adrenarche", "thelarche", "menarche", "pubarche", "acromegaly", "gigantism", "dwarfism"]
+    },
+    {
+      "topic": 91,
+      "title": "The control of cerebral blood flow, the cerebrospinal fluid, barrier systems of the brain",
+      "mcq": 5,
+      "keywords": ["cerebral blood flow", "blood brain barrier", "BBB", "cerebrospinal fluid", "CSF", "choroid plexus", "astrocyte", "circumventricular organ"]
+    },
+    {
+      "topic": 92,
+      "title": "The somatosensory nervous system: receptors",
+      "mcq": 5,
+      "keywords": ["somatosensory receptor", "mechanoreceptor", "Pacinian corpuscle", "Meissner corpuscle", "Merkel cell", "Ruffini ending", "dermatome", "receptive field", "adapting receptor"]
+    },
+    {
+      "topic": 93,
+      "title": "The somatosensory nervous system: the dorsal column ascending pathways",
+      "mcq": 5,
+      "keywords": ["dorsal column", "medial lemniscus", "two-point discrimination", "fine touch", "proprioception", "lateral inhibition"]
+    },
+    {
+      "topic": 94,
+      "title": "The somatosensory nervous system: the anterolateral (spinothalamic) ascending pathways",
+      "mcq": 5,
+      "keywords": ["spinothalamic", "anterolateral", "pain pathway", "temperature pathway", "coarse touch"]
+    },
+    {
+      "topic": 95,
+      "title": "The somatosensory nervous system: nociception and pain",
+      "mcq": 6,
+      "keywords": ["nociception", "pain", "nociceptor", "hyperalgesia", "allodynia", "referred pain", "Head zone", "visceral pain", "endogenous analgesia", "PAG", "gate control"]
+    },
+    {
+      "topic": 96,
+      "title": "The visual system: protection of the eye, image formation, refraction errors",
+      "mcq": 6,
+      "keywords": ["eye", "refraction", "accommodation", "myopia", "hyperopia", "presbyopia", "astigmatism", "visual acuity", "aqueous humor", "intraocular pressure", "glaucoma", "diopter", "lens"]
+    },
+    {
+      "topic": 97,
+      "title": "The visual system: the function of the photoreceptors, retinal signal processing",
+      "mcq": 6,
+      "keywords": ["photoreceptor", "rod", "cone", "retina", "phototransduction", "dark adaptation", "light adaptation", "scotopic", "photopic", "Purkinje shift", "bipolar cell", "ganglion cell"]
+    },
+    {
+      "topic": 98,
+      "title": "The visual system: the visual field and the visual pathways",
+      "mcq": 6,
+      "keywords": ["visual field", "visual pathway", "optic nerve", "optic chiasm", "optic tract", "LGN", "lateral geniculate nucleus", "visual cortex", "hemianopia", "pupillary reflex", "perimetry", "blind spot"]
+    },
+    {
+      "topic": 99,
+      "title": "The visual system: the control of eye movements",
+      "mcq": 6,
+      "keywords": ["eye movement", "saccade", "pursuit", "vergence", "nystagmus", "optokinetic", "extraocular muscle", "frontal eye field", "superior colliculus"]
+    },
+    {
+      "topic": 100,
+      "title": "The visual system: cerebrocortical mechanisms",
+      "mcq": 6,
+      "keywords": ["visual cortex", "V1", "primary visual cortex", "orientation selectivity", "ocular dominance", "dorsal stream", "ventral stream", "retinotopic"]
+    },
+    {
+      "topic": 101,
+      "title": "The visual system: binocular vision, color vision",
+      "mcq": 6,
+      "keywords": ["binocular vision", "stereopsis", "color vision", "color blindness", "protanopia", "deuteranopia", "tritanopia", "Ishihara", "horopter"]
+    },
+    {
+      "topic": 102,
+      "title": "Hearing: the function of the outer and the middle ear. Hearing tests",
+      "mcq": 6,
+      "keywords": ["hearing", "outer ear", "middle ear", "tympanic membrane", "ossicles", "impedance matching", "Weber test", "Rinne test", "audiometry", "conductive hearing loss", "decibel", "dB"]
+    },
+    {
+      "topic": 103,
+      "title": "Hearing: the function of the inner ear, auditory pathways",
+      "mcq": 6,
+      "keywords": ["inner ear", "cochlea", "basilar membrane", "organ of Corti", "hair cell", "tonotopy", "auditory pathway", "auditory evoked potential"]
+    },
+    {
+      "topic": 104,
+      "title": "The physiology of olfaction",
+      "mcq": 6,
+      "keywords": ["olfaction", "smell", "olfactory receptor", "olfactory bulb", "olfactory transduction", "anosmia"]
+    },
+    {
+      "topic": 105,
+      "title": "The physiology of taste sensation",
+      "mcq": 6,
+      "keywords": ["taste", "gustation", "taste receptor", "taste bud", "sweet", "sour", "salty", "bitter", "umami", "cranial nerve", "facial nerve", "glossopharyngeal", "vagus"]
+    },
+    {
+      "topic": 106,
+      "title": "The motor reflex. The structure and function of muscle proprioceptors",
+      "mcq": 6,
+      "keywords": ["motor reflex", "reflex arc", "proprioception", "proprioceptor", "muscle spindle", "Golgi tendon organ", "intrafusal fiber", "extrafusal fiber", "gamma motoneuron", "alpha motoneuron", "Ia afferent", "Ib afferent"]
+    },
+    {
+      "topic": 107,
+      "title": "The myotatic and the inverse myotatic spinal reflex",
+      "mcq": 6,
+      "keywords": ["myotatic reflex", "stretch reflex", "knee jerk", "patellar reflex", "inverse myotatic", "reciprocal innervation", "Achilles reflex", "biceps reflex", "triceps reflex"]
+    },
+    {
+      "topic": 108,
+      "title": "The gamma fusimotor servomechanism (gamma-loop)",
+      "mcq": 6,
+      "keywords": ["gamma loop", "fusimotor", "gamma motoneuron", "muscle tone", "alpha-gamma coactivation"]
+    },
+    {
+      "topic": 109,
+      "title": "Exteroceptive spinal reflexes",
+      "mcq": 6,
+      "keywords": ["exteroceptive reflex", "flexor reflex", "withdrawal reflex", "crossed extensor", "plantar reflex", "abdominal reflex"]
+    },
+    {
+      "topic": 110,
+      "title": "The spinal integration of rhythmic locomotive movements. The spinal interneurons",
+      "mcq": 6,
+      "keywords": ["locomotion", "central pattern generator", "CPG", "spinal interneuron", "Renshaw cell", "rhythmic movement", "GABA", "glycine"]
+    },
+    {
+      "topic": 111,
+      "title": "The consequences of spinal cord hemisection and transection",
+      "mcq": 6,
+      "keywords": ["spinal cord injury", "spinal shock", "paraplegia", "tetraplegia", "hemiplegia", "paresis", "Brown-Sequard", "upper motor neuron", "lower motor neuron"]
+    },
+    {
+      "topic": 112,
+      "title": "The control of muscle tone",
+      "mcq": 6,
+      "keywords": ["muscle tone", "spasticity", "rigidity", "hypotonia", "decerebrate", "decorticate", "red nucleus", "vestibular nucleus", "reticular formation"]
+    },
+    {
+      "topic": 113,
+      "title": "The control of body posture. The vestibular system",
+      "mcq": 6,
+      "keywords": ["vestibular", "posture", "balance", "semicircular canal", "otolith", "utricle", "saccule", "vestibular nerve", "nystagmus", "caloric test", "vestibuloocular reflex"]
+    },
+    {
+      "topic": 114,
+      "title": "The cerebrocortical control of movements",
+      "mcq": 6,
+      "keywords": ["motor cortex", "primary motor cortex", "premotor cortex", "supplementary motor area", "corticospinal tract", "pyramidal tract", "Babinski sign", "apraxia"]
+    },
+    {
+      "topic": 115,
+      "title": "The cerebellum",
+      "mcq": 6,
+      "keywords": ["cerebellum", "Purkinje cell", "climbing fiber", "mossy fiber", "cerebellar ataxia", "dysmetria", "dysdiadochokinesis", "cerebellar nuclei", "vestibulocerebellum", "spinocerebellum", "cerebrocerebellum"]
+    },
+    {
+      "topic": 116,
+      "title": "The basal ganglia",
+      "mcq": 6,
+      "keywords": ["basal ganglia", "striatum", "caudate", "putamen", "globus pallidus", "substantia nigra", "subthalamic nucleus", "Parkinson", "parkinsonism", "chorea", "ballism", "direct pathway", "indirect pathway"]
+    },
+    {
+      "topic": 117,
+      "title": "The integration of autonomic functions in the CNS. Functions of the hypothalamus",
+      "mcq": 6,
+      "keywords": ["hypothalamus", "autonomic integration", "visceral function", "autonomic reflex"]
+    },
+    {
+      "topic": 118,
+      "title": "The functions of the limbic system. Emotions",
+      "mcq": 6,
+      "keywords": ["limbic system", "amygdala", "hippocampus", "emotion", "reward system", "motivation"]
+    },
+    {
+      "topic": 119,
+      "title": "Electroencephalogram (EEG) and the physiology of sleep-wake cycles",
+      "mcq": 6,
+      "keywords": ["EEG", "electroencephalogram", "sleep", "REM sleep", "NREM sleep", "alpha wave", "beta wave", "delta wave", "theta wave", "sleep cycle", "polysomnography"]
+    },
+    {
+      "topic": 120,
+      "title": "The circadian rhythm and the pineal gland",
+      "mcq": 6,
+      "keywords": ["circadian rhythm", "pineal gland", "melatonin", "suprachiasmatic nucleus", "SCN", "zeitgeber", "biological clock"]
+    },
+    {
+      "topic": 121,
+      "title": "Cognitive functions, neuronal correlates of language",
+      "mcq": 6,
+      "keywords": ["cognition", "language", "Wernicke", "Broca", "aphasia", "agnosia", "dominant hemisphere", "Wada test"]
+    },
+    {
+      "topic": 122,
+      "title": "Neuronal plasticity, learning and memory",
+      "mcq": 6,
+      "keywords": ["learning", "memory", "long-term potentiation", "LTP", "LTD", "habituation", "sensitization", "conditioning", "declarative memory", "procedural memory", "working memory"]
+    }
+  ]
+}

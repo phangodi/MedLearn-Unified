@@ -65,12 +65,12 @@ const Navigation = ({ topics = [] }) => {
             {topicId && (
               <>
                 {prevTopic && (
-                  <Link to={`/physiology/topic/${prevTopic.id}`} className={styles.navLink}>
+                  <Link to={`/physiology/topics/topic/${prevTopic.id}`} className={styles.navLink}>
                     ← Prev
                   </Link>
                 )}
                 {nextTopic && (
-                  <Link to={`/physiology/topic/${nextTopic.id}`} className={styles.navLink}>
+                  <Link to={`/physiology/topics/topic/${nextTopic.id}`} className={styles.navLink}>
                     Next →
                   </Link>
                 )}
@@ -89,7 +89,7 @@ const Navigation = ({ topics = [] }) => {
           )}
 
           {/* Home Button */}
-          <Link to="/physiology" className={styles.navLink}>
+          <Link to="/physiology/topics" className={styles.navLink}>
             Home
           </Link>
 
@@ -122,12 +122,12 @@ const Navigation = ({ topics = [] }) => {
           {topicId && (
             <>
               {prevTopic && (
-                <Link to={`/physiology/topic/${prevTopic.id}`} className={styles.navLink}>
+                <Link to={`/physiology/topics/topic/${prevTopic.id}`} className={styles.navLink}>
                   ← Prev
                 </Link>
               )}
               {nextTopic && (
-                <Link to={`/physiology/topic/${nextTopic.id}`} className={styles.navLink}>
+                <Link to={`/physiology/topics/topic/${nextTopic.id}`} className={styles.navLink}>
                   Next →
                 </Link>
               )}
@@ -192,7 +192,7 @@ const Navigation = ({ topics = [] }) => {
         {/* Mobile Menu Dropdown */}
         {mobileMenuOpen && (
           <div className={styles.mobileMenuDropdown}>
-            <Link to="/physiology" className={styles.mobileMenuItem} onClick={() => setMobileMenuOpen(false)}>
+            <Link to="/physiology/topics" className={styles.mobileMenuItem} onClick={() => setMobileMenuOpen(false)}>
               🏠 Home
             </Link>
 

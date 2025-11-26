@@ -33,7 +33,7 @@ export function PhysiologyPage() {
       title: 'All 51 Topics',
       description: 'Learning objectives, exam answers, and audio explanations',
       enabled: true,
-      image: '/subjects/physiology.png',
+      image: '/subjects/physio_topics.png',
       path: '/physiology/topics',
       icon: BookOpen
     },
@@ -43,7 +43,7 @@ export function PhysiologyPage() {
       title: 'Exam Questions',
       description: 'Practice with real MCQ exam questions',
       enabled: true,
-      image: '/subjects/physiology.png',
+      image: '/subjects/physio_mto.png',
       path: '/physiology/mto',
       icon: ClipboardCheck
     },

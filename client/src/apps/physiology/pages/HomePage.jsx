@@ -125,7 +125,7 @@ const HomePage = ({ topics }) => {
         {currentTopics.map((topic) => (
           <Link
             key={topic.id}
-            to={`/physiology/topic/${topic.id}`}
+            to={`/physiology/topics/topic/${topic.id}`}
             className={styles.topicCard}
           >
             <div className={styles.topicCardTitle}>

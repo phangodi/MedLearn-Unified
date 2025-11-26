@@ -1,0 +1,1008 @@
+{
+  "testId": "0313014645-B",
+  "examName": "Physiology Exam 2024 - Test 2",
+  "importedAt": "2025-11-25T21:36:00Z",
+  "questions": [
+    {
+      "id": "q-0313014645-B-1",
+      "testId": "0313014645-B",
+      "questionNumber": 1,
+      "text": "Which of the following substances are classified as vasoconstrictors",
+      "correctAnswerCount": 2,
+      "options": [
+        {
+          "letter": "a",
+          "text": "beta-2-adrenergic agonists"
+        },
+        {
+          "letter": "b",
+          "text": "angiotensin II"
+        },
+        {
+          "letter": "c",
+          "text": "endothelin"
+        },
+        {
+          "letter": "d",
+          "text": "nitric oxide"
+        },
+        {
+          "letter": "e",
+          "text": "prostacycline"
+        },
+        {
+          "letter": "f",
+          "text": "kallidin (lysl-bradykinin)"
+        },
+        {
+          "letter": "g",
+          "text": "PGE2"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c"
+      ],
+      "topics": [
+        46
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 46: 'Enlist the vasoactive mediators released from vascular endothelium' - angiotensin II and endothelin are vasoconstrictors"
+      }
+    },
+    {
+      "id": "q-0313014645-B-2",
+      "testId": "0313014645-B",
+      "questionNumber": 2,
+      "text": "Increase of cAMP level in the vascular smooth muscle cells",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "causes contraction"
+        },
+        {
+          "letter": "b",
+          "text": "activates the Na+/K+ pump"
+        },
+        {
+          "letter": "c",
+          "text": "causes relaxation"
+        },
+        {
+          "letter": "d",
+          "text": "activates nitric oxide synthase (NOS)"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "topics": [
+        46
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 46: Vascular smooth muscle regulation - cAMP causes relaxation via PKA pathway"
+      }
+    },
+    {
+      "id": "q-0313014645-B-3",
+      "testId": "0313014645-B",
+      "questionNumber": 3,
+      "text": "Sympathetic cholinergic fibers innervate the arterioles of",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "cerebral vessels"
+        },
+        {
+          "letter": "b",
+          "text": "coronaries"
+        },
+        {
+          "letter": "c",
+          "text": "salivary glands"
+        },
+        {
+          "letter": "d",
+          "text": "external genitalia"
+        },
+        {
+          "letter": "e",
+          "text": "arterioles in skeletal muscles"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "topics": [
+        51
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 51: 'Explain the relative importance of systemic neural and local control mechanisms in the skeletal muscle circulation'"
+      }
+    },
+    {
+      "id": "q-0313014645-B-4",
+      "testId": "0313014645-B",
+      "questionNumber": 4,
+      "text": "Which of the following vascular resistances is the smallest",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "resistance of the intestinal vascular bed"
+        },
+        {
+          "letter": "b",
+          "text": "total peripheral resistance"
+        },
+        {
+          "letter": "c",
+          "text": "resistance of the renal vascular bed"
+        },
+        {
+          "letter": "d",
+          "text": "resistance of the intracerebral vascular bed"
+        },
+        {
+          "letter": "e",
+          "text": "resistance of the skin vessels"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "topics": [
+        33
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 33: 'Define resistance and conductance. Understand the effects of adding resistance in parallel on total resistance' - parallel resistances reduce total"
+      }
+    },
+    {
+      "id": "q-0313014645-B-5",
+      "testId": "0313014645-B",
+      "questionNumber": 5,
+      "text": "In which segment of the tubular system is the paracellular permeability the highest?",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "proximal convoluted tubule"
+        },
+        {
+          "letter": "b",
+          "text": "collecting duct (in the presence of ADH)"
+        },
+        {
+          "letter": "c",
+          "text": "thick segment of the loop of Henle"
+        },
+        {
+          "letter": "d",
+          "text": "descending thin segment of the loop of Henle"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "topics": [
+        54
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 54: 'Explain the role of the tight junction in leaky and tight epithelia. Give examples of renal tubular segments with leaky and with tight epithelia'"
+      }
+    },
+    {
+      "id": "q-0313014645-B-6",
+      "testId": "0313014645-B",
+      "questionNumber": 6,
+      "text": "In which segment of the tubular system is the fluid hyperosmotic?",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "Bowman capsule"
+        },
+        {
+          "letter": "b",
+          "text": "end of thick segment of the loop of Henle"
+        },
+        {
+          "letter": "c",
+          "text": "distal tubule"
+        },
+        {
+          "letter": "d",
+          "text": "thin segment of the loop of Henle (tip of the loop)"
+        },
+        {
+          "letter": "e",
+          "text": "proximal tubule"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "topics": [
+        57
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 57: 'Describe the changes of osmolarity in the tubular fluid' - tip of loop reaches 1200 mosmol/l"
+      }
+    },
+    {
+      "id": "q-0313014645-B-7",
+      "testId": "0313014645-B",
+      "questionNumber": 7,
+      "text": "During the filling phase of the urinary bladder:",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "sympathetic tone dominates in the bladder wall."
+        },
+        {
+          "letter": "b",
+          "text": "the bladder volume and intravesical pressure increase in direct proportion."
+        },
+        {
+          "letter": "c",
+          "text": "the inner urethral sphincter relaxes."
+        },
+        {
+          "letter": "d",
+          "text": "the outer urethral sphincter relaxes."
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "topics": [
+        58
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 58: 'Explain the autonomic (sympathetic and parasympathetic) innervation of the urinary bladder'"
+      }
+    },
+    {
+      "id": "q-0313014645-B-8",
+      "testId": "0313014645-B",
+      "questionNumber": 8,
+      "text": "The chemoreceptors responsible for the central nervous system ischemic response are located in",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "the right atrium"
+        },
+        {
+          "letter": "b",
+          "text": "the adrenal medulla"
+        },
+        {
+          "letter": "c",
+          "text": "the ventral medulla"
+        },
+        {
+          "letter": "d",
+          "text": "the carotis sinus"
+        },
+        {
+          "letter": "e",
+          "text": "the carotid bodies"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "topics": [
+        48
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 48: 'characterize the CNS ischemic pressor response (Cushing reflex)'"
+      }
+    },
+    {
+      "id": "q-0313014645-B-9",
+      "testId": "0313014645-B",
+      "questionNumber": 9,
+      "text": "What is the most important mechanism of Cl- reabsorption in the proximal tubule?",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "anion exchange (Cl- - HCO3- antiport)"
+        },
+        {
+          "letter": "b",
+          "text": "Na-K-2Cl cotransport"
+        },
+        {
+          "letter": "c",
+          "text": "cotransport with H+ ions"
+        },
+        {
+          "letter": "d",
+          "text": "paracellular reabsorption driven by the voltage gradient after the primary reabsorption of Na+"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "topics": [
+        57
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 57: 'Describe the luminal mechanisms of Na+-reabsorption in the proximal tubulus (paracellular mechanisms)'"
+      }
+    },
+    {
+      "id": "q-0313014645-B-10",
+      "testId": "0313014645-B",
+      "questionNumber": 10,
+      "text": "The arterial diastolic pressure",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "decreases when the elasticity of the aorta increases"
+        },
+        {
+          "letter": "b",
+          "text": "decreases when the peripheral resistance increases"
+        },
+        {
+          "letter": "c",
+          "text": "decreases when the stroke volume increases"
+        },
+        {
+          "letter": "d",
+          "text": "decreases whenever the systolic pressure increases"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "topics": [
+        42
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 42: 'Describe the effects of changes in arterial compliance on arterial systolic, diastolic, mean, and pulse pressure values'"
+      }
+    },
+    {
+      "id": "q-0313014645-B-11",
+      "testId": "0313014645-B",
+      "questionNumber": 11,
+      "text": "Which of the following statements are TRUE concerning the activity of the carotid sinus baroreceptors?",
+      "correctAnswerCount": 2,
+      "options": [
+        {
+          "letter": "a",
+          "text": "its increase stimulates the bulbar pressor area"
+        },
+        {
+          "letter": "b",
+          "text": "its increase produces reflex vasodilatation"
+        },
+        {
+          "letter": "c",
+          "text": "it is influenced by changes in body posture"
+        },
+        {
+          "letter": "d",
+          "text": "its increase results in reflex tachycardia"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c"
+      ],
+      "topics": [
+        48
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 48: 'Explain the function of the baroreceptor reflex during postural changes (lying down, standing up)'"
+      }
+    },
+    {
+      "id": "q-0313014645-B-12",
+      "testId": "0313014645-B",
+      "questionNumber": 12,
+      "text": "Which of the following transport is important for establishing the osmotic gradient in the renal medulla?",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "reabsorption of Na+ in the proximal tubule"
+        },
+        {
+          "letter": "b",
+          "text": "Na-K-2Cl cotransport in the thick segment of the loop of Henle"
+        },
+        {
+          "letter": "c",
+          "text": "Na+-reabsorption in the cortical collecting duct"
+        },
+        {
+          "letter": "d",
+          "text": "vasopressin-stimulated reabsorption of water in the collecting duct"
+        },
+        {
+          "letter": "e",
+          "text": "aldosterone-stimulated reabsorption of Na+ in the collecting duct"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "topics": [
+        57
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 57: 'Explain the countercurrent multiplier mechanism of the loop of Henle' - Na-K-2Cl in thick ascending limb"
+      }
+    },
+    {
+      "id": "q-0313014645-B-13",
+      "testId": "0313014645-B",
+      "questionNumber": 13,
+      "text": "Capillaries with continuous endothelium are present except in:",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "the spleen"
+        },
+        {
+          "letter": "b",
+          "text": "the lungs"
+        },
+        {
+          "letter": "c",
+          "text": "the skin"
+        },
+        {
+          "letter": "d",
+          "text": "the heart"
+        },
+        {
+          "letter": "e",
+          "text": "the skeletal muscle"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "topics": [
+        43
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 43: 'Describe the main types of true capillaries: continuous, fenestrated, discontinuous' - spleen has discontinuous"
+      }
+    },
+    {
+      "id": "q-0313014645-B-14",
+      "testId": "0313014645-B",
+      "questionNumber": 14,
+      "text": "The clearance of PAH can be used for direct estimation of",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "effective RPF"
+        },
+        {
+          "letter": "b",
+          "text": "tubular reabsorption capacity"
+        },
+        {
+          "letter": "c",
+          "text": "GFR"
+        },
+        {
+          "letter": "d",
+          "text": "diuresis"
+        },
+        {
+          "letter": "e",
+          "text": "RBF"
+        },
+        {
+          "letter": "f",
+          "text": "intratubular pressure"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "topics": [
+        55
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 55: 'Use the clearance equation and appropriate compounds (PAH) to determine renal plasma flow'"
+      }
+    },
+    {
+      "id": "q-0313014645-B-15",
+      "testId": "0313014645-B",
+      "questionNumber": 15,
+      "text": "What is the clearance of substance X, if X is freely filtrated, there is no reabsorption and in addition to the filtrated amount, the same amount is secreted by the tubular system? (GFR= 120 ml/min)",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "120 ml/min"
+        },
+        {
+          "letter": "b",
+          "text": "60 ml/min"
+        },
+        {
+          "letter": "c",
+          "text": "240 ml/min"
+        },
+        {
+          "letter": "d",
+          "text": "30 ml/min"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "topics": [
+        55
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 55: Clearance calculation - filtered + secreted = 2x GFR = 240 ml/min"
+      }
+    },
+    {
+      "id": "q-0313014645-B-16",
+      "testId": "0313014645-B",
+      "questionNumber": 16,
+      "text": "Which of the following organs shows the most significant blood flow autoregulation?",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "liver"
+        },
+        {
+          "letter": "b",
+          "text": "spleen"
+        },
+        {
+          "letter": "c",
+          "text": "thyroid gland"
+        },
+        {
+          "letter": "d",
+          "text": "small intestine"
+        },
+        {
+          "letter": "e",
+          "text": "lungs"
+        },
+        {
+          "letter": "f",
+          "text": "kidney"
+        }
+      ],
+      "correctAnswers": [
+        "f"
+      ],
+      "topics": [
+        53
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 53: 'Describe the autoregulation range of RBF/RPF/GFR' - kidney has prominent autoregulation"
+      }
+    },
+    {
+      "id": "q-0313014645-B-17",
+      "testId": "0313014645-B",
+      "questionNumber": 17,
+      "text": "The macula densa",
+      "correctAnswerCount": 2,
+      "options": [
+        {
+          "letter": "a",
+          "text": "is the site of renin production"
+        },
+        {
+          "letter": "b",
+          "text": "is a receptor detecting NaCl concentration in the tubular fluid"
+        },
+        {
+          "letter": "c",
+          "text": "when stimulated, elicits constriction of the afferent arteriole"
+        },
+        {
+          "letter": "d",
+          "text": "is a baroreceptor detecting pressure in the afferent arteriole"
+        },
+        {
+          "letter": "e",
+          "text": "when stimulated by an increase in tubular Na+ concentration, elicits the release of renin"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "e"
+      ],
+      "topics": [
+        53
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 53: 'describe the role of the tubuloglomerular feedback' - macula densa senses NaCl"
+      }
+    },
+    {
+      "id": "q-0313014645-B-18",
+      "testId": "0313014645-B",
+      "questionNumber": 18,
+      "text": "The autonomic nervous system can reduce total peripheral resistance by:",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "increasing the sympathetic vasomotor tone"
+        },
+        {
+          "letter": "b",
+          "text": "decreasing the parasympathetic vasomotor tone"
+        },
+        {
+          "letter": "c",
+          "text": "decreasing the sympathetic vasomotor tone"
+        },
+        {
+          "letter": "d",
+          "text": "increasing the parasympathetic vasomotor tone"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "topics": [
+        48
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 48: 'Describe the sympathetic vasomotor tone' - decreasing it causes vasodilation"
+      }
+    },
+    {
+      "id": "q-0313014645-B-19",
+      "testId": "0313014645-B",
+      "questionNumber": 19,
+      "text": "Which hormone stimulates reabsorption of urea in the collecting duct?",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "atrial natriuretic hormone (ANH)"
+        },
+        {
+          "letter": "b",
+          "text": "parathormone (PTH)"
+        },
+        {
+          "letter": "c",
+          "text": "arginine-vasopressin (ADH)"
+        },
+        {
+          "letter": "d",
+          "text": "aldosterone"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "topics": [
+        56
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 56: 'Describe the urea reabsorption in the proximal tubuli, and the urea recirculation' - ADH stimulates UT transporters"
+      }
+    },
+    {
+      "id": "q-0313014645-B-20",
+      "testId": "0313014645-B",
+      "questionNumber": 20,
+      "text": "If the endothelial NO-synthase activity is INHIBITED in an arteriole, the followings can be observed:",
+      "correctAnswerCount": 2,
+      "options": [
+        {
+          "letter": "a",
+          "text": "the vasodilator effect of acethyl-choline weakens, or it reverses to vasoconstriction"
+        },
+        {
+          "letter": "b",
+          "text": "the vasoconstrictor effect of bradykinin weakens, or it reverses to vasodilatation"
+        },
+        {
+          "letter": "c",
+          "text": "the vasoconstrictor effect of noradrenaline weakens, or it reverses to vasodilation"
+        },
+        {
+          "letter": "d",
+          "text": "the vasodilator effect of histamine weakens, or it reverses to vasoconstriction"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "d"
+      ],
+      "topics": [
+        46
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 46: 'Describe the biosynthesis of nitric oxide and its actions on the vascular smooth muscle' - ACh and histamine act via eNOS"
+      }
+    },
+    {
+      "id": "q-0313014645-B-21",
+      "testId": "0313014645-B",
+      "questionNumber": 21,
+      "text": "The major Starling-force for reabsorption:",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "interstitial hydrostatic pressure"
+        },
+        {
+          "letter": "b",
+          "text": "interstitial colloid osmotic pressure"
+        },
+        {
+          "letter": "c",
+          "text": "intracapillary hydrostatic pressure"
+        },
+        {
+          "letter": "d",
+          "text": "plasma colloid osmotic pressure"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "topics": [
+        43
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 43: 'Define the Starling equation' - plasma oncotic pressure drives reabsorption"
+      }
+    },
+    {
+      "id": "q-0313014645-B-22",
+      "testId": "0313014645-B",
+      "questionNumber": 22,
+      "text": "The portion of the circulatory system with the largest total cross-sectional area is the:",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "arterioles"
+        },
+        {
+          "letter": "b",
+          "text": "large arteries"
+        },
+        {
+          "letter": "c",
+          "text": "small veins"
+        },
+        {
+          "letter": "d",
+          "text": "capillaries"
+        },
+        {
+          "letter": "e",
+          "text": "large veins"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "topics": [
+        41
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 41: 'Contrast blood pressure, cross sectional area, flow velocity' - capillaries have total cross sectional area of 3000 cm²"
+      }
+    },
+    {
+      "id": "q-0313014645-B-23",
+      "testId": "0313014645-B",
+      "questionNumber": 23,
+      "text": "At which plasma glucose concentration does the glucose appear in the urine (renal threshold)?",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "5-6 mmol/L"
+        },
+        {
+          "letter": "b",
+          "text": "11-13 mmol/L"
+        },
+        {
+          "letter": "c",
+          "text": "5-6 mmol/L"
+        },
+        {
+          "letter": "d",
+          "text": "there is never glucose in the urine"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "topics": [
+        56
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 56: 'renal threshold of glucose: 10 mM' (~11-13 mmol/L range)"
+      }
+    },
+    {
+      "id": "q-0313014645-B-24",
+      "testId": "0313014645-B",
+      "questionNumber": 24,
+      "text": "Angiotensin convertase enzyme cleaves",
+      "correctAnswerCount": 2,
+      "options": [
+        {
+          "letter": "a",
+          "text": "and activates angiotensin I"
+        },
+        {
+          "letter": "b",
+          "text": "and inactivates angiotensin I"
+        },
+        {
+          "letter": "c",
+          "text": "and activates bradykinin"
+        },
+        {
+          "letter": "d",
+          "text": "and inactivates bradykinin"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "d"
+      ],
+      "topics": [
+        49
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "matchedBy": "learning-objectives",
+        "matchConfidence": 1,
+        "matchReason": "Topic 49: ACE converts angiotensin I to II (activation) and degrades bradykinin (inactivation)"
+      }
+    }
+  ]
+}
