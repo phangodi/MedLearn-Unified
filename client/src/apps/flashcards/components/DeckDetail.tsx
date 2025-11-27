@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, useSearchParams } from 'react-router-dom'
 import {
   ArrowLeft,
   Plus,
@@ -20,12 +20,14 @@ import {
   Clock,
   BookOpen,
   Filter,
-  PlayCircle
+  PlayCircle,
+  RotateCcw
 } from 'lucide-react'
 import { useFlashcards } from '../hooks'
 import { CardEditor } from './CardEditor'
 import { Button } from '@/components/ui/Button'
 import { State, type FlashCard } from '../types/flashcard'
+import { createNewCard } from '../services/fsrsService'
 import { stripHtmlForPreview } from '../services/ankiImportService'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
@@ -53,6 +55,7 @@ function toDate(date: any): Date {
 export function DeckDetail() {
   const { deckId } = useParams()
   const navigate = useNavigate()
+  const [searchParams, setSearchParams] = useSearchParams()
   const {
     currentDeck,
     cards,
@@ -116,6 +119,17 @@ export function DeckDetail() {
       })
     }
   }, [currentDeck])
+
+  // Handle ?addCard=true query parameter to auto-open card editor
+  useEffect(() => {
+    if (searchParams.get('addCard') === 'true' && currentDeck && !currentDeck.isPreloaded) {
+      setEditingCardId(undefined)
+      setShowCardEditor(true)
+      // Clean up URL
+      searchParams.delete('addCard')
+      setSearchParams(searchParams, { replace: true })
+    }
+  }, [currentDeck, searchParams, setSearchParams])
 
   // Filtered and sorted cards
   const filteredAndSortedCards = useMemo(() => {
@@ -333,6 +347,58 @@ export function DeckDetail() {
       setSelectedCards(new Set())
     } catch (error) {
       console.error('Failed to bulk suspend:', error)
+    } finally {
+      setIsDeleting(false)
+    }
+  }
+
+  // Study Now - makes cards due immediately but keeps learning history
+  const handleBulkStudyNow = async () => {
+    if (selectedCards.size === 0 || !currentDeck) return
+    setIsDeleting(true)
+    try {
+      await Promise.all(
+        Array.from(selectedCards).map(cardId => {
+          const card = cards.find(c => c.id === cardId)
+          if (card) {
+            return updateCard(cardId, {
+              fsrs: {
+                ...card.fsrs,
+                due: new Date()
+              }
+            })
+          }
+          return Promise.resolve()
+        })
+      )
+      setSelectedCards(new Set())
+      setShowBulkActions(false)
+    } catch (error) {
+      console.error('Failed to set cards as due now:', error)
+    } finally {
+      setIsDeleting(false)
+    }
+  }
+
+  // Reset Card - completely resets to New state
+  const handleBulkResetCard = async () => {
+    if (selectedCards.size === 0 || !currentDeck) return
+    setIsDeleting(true)
+    try {
+      await Promise.all(
+        Array.from(selectedCards).map(cardId => {
+          const card = cards.find(c => c.id === cardId)
+          if (card) {
+            const newFsrs = createNewCard()
+            return updateCard(cardId, { fsrs: newFsrs })
+          }
+          return Promise.resolve()
+        })
+      )
+      setSelectedCards(new Set())
+      setShowBulkActions(false)
+    } catch (error) {
+      console.error('Failed to reset cards:', error)
     } finally {
       setIsDeleting(false)
     }
@@ -625,7 +691,7 @@ export function DeckDetail() {
                 exit={{ height: 0, opacity: 0 }}
                 className="overflow-hidden"
               >
-                <div className="bg-card border border-border rounded-lg p-4 flex items-center gap-3">
+                <div className="bg-card border border-border rounded-lg p-4 flex items-center gap-3 flex-wrap">
                   <Button
                     variant="outline"
                     size="sm"
@@ -634,6 +700,24 @@ export function DeckDetail() {
                   >
                     <Pause className="w-4 h-4 mr-2" />
                     Toggle Suspend
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={handleBulkStudyNow}
+                    disabled={isDeleting}
+                  >
+                    <Clock className="w-4 h-4 mr-2" />
+                    Study Now
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={handleBulkResetCard}
+                    disabled={isDeleting}
+                  >
+                    <RotateCcw className="w-4 h-4 mr-2" />
+                    Reset Card
                   </Button>
                   <Button
                     variant="outline"

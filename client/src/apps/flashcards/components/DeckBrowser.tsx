@@ -393,6 +393,7 @@ export function DeckBrowser() {
                   onDelete={() => handleDeleteDeck(deck.id)}
                   onCopy={() => handleCopyDeck(deck.id)}
                   onClick={() => navigate(`/flashcards/deck/${deck.id}`)}
+                  onAddCards={() => navigate(`/flashcards/deck/${deck.id}?addCard=true`)}
                   formatLastStudied={formatLastStudied}
                   showOptionsMenu={showOptionsMenu}
                   setShowOptionsMenu={setShowOptionsMenu}
@@ -430,6 +431,7 @@ export function DeckBrowser() {
                   onDelete={() => handleDeleteDeck(deck.id)}
                   onCopy={() => handleCopyDeck(deck.id)}
                   onClick={() => navigate(`/flashcards/deck/${deck.id}`)}
+                  onAddCards={() => navigate(`/flashcards/deck/${deck.id}?addCard=true`)}
                   formatLastStudied={formatLastStudied}
                   showOptionsMenu={showOptionsMenu}
                   setShowOptionsMenu={setShowOptionsMenu}
@@ -501,6 +503,7 @@ interface DeckCardProps {
   onDelete: () => void
   onCopy: () => void
   onClick: () => void
+  onAddCards: () => void
   formatLastStudied: (deck: Deck) => string
   showOptionsMenu: string | null
   setShowOptionsMenu: (id: string | null) => void
@@ -515,6 +518,7 @@ function DeckCard({
   onDelete,
   onCopy,
   onClick,
+  onAddCards,
   formatLastStudied,
   showOptionsMenu,
   setShowOptionsMenu,
@@ -658,7 +662,11 @@ function DeckCard({
         <button
           onClick={(e) => {
             e.stopPropagation()
-            onStudy()
+            if (deck.cardCount === 0) {
+              onAddCards()
+            } else {
+              onStudy()
+            }
           }}
           disabled={!hasDue && deck.cardCount > 0}
           className={`w-full flex items-center justify-center gap-2 h-9 px-3 rounded-md text-sm font-medium transition-colors ${
@@ -667,13 +675,13 @@ function DeckCard({
               : 'bg-muted text-muted-foreground cursor-not-allowed'
           }`}
         >
-          <Play className="w-4 h-4" />
-          {hasDue ? `Study (${dueCount})` : deck.cardCount === 0 ? 'Add Cards' : 'All Caught Up'}
+          {deck.cardCount === 0 ? <Plus className="w-4 h-4" /> : <Play className="w-4 h-4" />}
+          {hasDue ? `Study (${dueCount})` : deck.cardCount === 0 ? 'Add First Card' : 'All Caught Up'}
         </button>
 
         {/* Preloaded Badge */}
         {isPreloaded && (
-          <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+          <div className="absolute bottom-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
             <span className="text-xs font-semibold px-2 py-1 rounded-md bg-primary/10 text-primary border border-primary/20">
               Pre-loaded
             </span>
