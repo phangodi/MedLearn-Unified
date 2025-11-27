@@ -3,6 +3,15 @@ import { useDropzone } from 'react-dropzone'
 import { Upload, Loader2, Image as ImageIcon } from 'lucide-react'
 import { uploadCardImage, validateImage } from '../services/storageService'
 
+type ImageSize = 'small' | 'medium' | 'large' | 'full'
+
+const IMAGE_SIZES: { value: ImageSize; label: string; width: number | null }[] = [
+  { value: 'small', label: 'Small', width: 200 },
+  { value: 'medium', label: 'Medium', width: 400 },
+  { value: 'large', label: 'Large', width: 600 },
+  { value: 'full', label: 'Full Width', width: null },
+]
+
 interface ImageUploaderProps {
   cardId: string // Temporary card ID for organizing uploaded images
   onUploadComplete: (url: string, markdown: string) => void
@@ -13,6 +22,7 @@ export function ImageUploader({ cardId, onUploadComplete, onError }: ImageUpload
   const [uploading, setUploading] = useState(false)
   const [progress, setProgress] = useState(0)
   const [preview, setPreview] = useState<string | null>(null)
+  const [selectedSize, setSelectedSize] = useState<ImageSize>('medium')
 
   const onDrop = useCallback(async (acceptedFiles: File[]) => {
     if (acceptedFiles.length === 0) return
@@ -39,9 +49,18 @@ export function ImageUploader({ cardId, onUploadComplete, onError }: ImageUpload
         setProgress(uploadProgress)
       })
 
-      // Generate markdown
+      // Generate markdown or HTML based on size selection
       const imageName = file.name.replace(/\.[^/.]+$/, '') // Remove extension
-      const markdown = `![${imageName}](${cardImage.url})`
+      const sizeConfig = IMAGE_SIZES.find(s => s.value === selectedSize)
+
+      let markdown: string
+      if (sizeConfig?.width) {
+        // Use HTML img tag with width for sized images
+        markdown = `<img src="${cardImage.url}" alt="${imageName}" width="${sizeConfig.width}" />`
+      } else {
+        // Full width - use standard markdown
+        markdown = `![${imageName}](${cardImage.url})`
+      }
 
       setProgress(100)
       onUploadComplete(cardImage.url, markdown)
@@ -59,7 +78,7 @@ export function ImageUploader({ cardId, onUploadComplete, onError }: ImageUpload
       setProgress(0)
       setUploading(false)
     }
-  }, [cardId, onUploadComplete, onError])
+  }, [cardId, onUploadComplete, onError, selectedSize])
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
@@ -82,6 +101,30 @@ export function ImageUploader({ cardId, onUploadComplete, onError }: ImageUpload
 
   return (
     <div className="space-y-3">
+      {/* Size selector */}
+      <div className="flex items-center gap-2 flex-wrap">
+        <span className="text-xs text-muted-foreground font-medium">Image size:</span>
+        <div className="flex gap-1">
+          {IMAGE_SIZES.map((size) => (
+            <button
+              key={size.value}
+              onClick={() => setSelectedSize(size.value)}
+              className={`
+                px-2.5 py-1 text-xs rounded-md transition-all duration-200
+                ${selectedSize === size.value
+                  ? 'bg-primary text-primary-foreground'
+                  : 'bg-muted text-muted-foreground hover:bg-muted/80'
+                }
+              `}
+              type="button"
+            >
+              {size.label}
+              {size.width && <span className="opacity-60 ml-1">({size.width}px)</span>}
+            </button>
+          ))}
+        </div>
+      </div>
+
       {/* Dropzone */}
       <div
         {...getRootProps()}
@@ -159,7 +202,7 @@ export function ImageUploader({ cardId, onUploadComplete, onError }: ImageUpload
                     Drag & drop an image, or click to select
                   </p>
                   <p className="text-xs text-muted-foreground">
-                    JPEG, PNG, GIF, WebP (max 10MB)
+                    JPEG, PNG, GIF, WebP (max 10MB) - auto-resized for web
                   </p>
                 </>
               )}
@@ -171,12 +214,12 @@ export function ImageUploader({ cardId, onUploadComplete, onError }: ImageUpload
       {/* Tips */}
       <div className="text-xs text-muted-foreground space-y-1">
         <p className="flex items-center gap-1.5">
-          <span className="w-1 h-1 rounded-full bg-muted-foreground/50" />
-          Images are automatically compressed for optimal performance
+          <span className="w-1.5 h-1.5 rounded-full bg-primary/60" />
+          <span className="text-foreground/80 font-medium">Select size above to control how large the image appears</span>
         </p>
         <p className="flex items-center gap-1.5">
           <span className="w-1 h-1 rounded-full bg-muted-foreground/50" />
-          Uploaded images are inserted as markdown: ![alt](url)
+          Images are automatically compressed for optimal performance
         </p>
       </div>
     </div>

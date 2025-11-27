@@ -16,6 +16,20 @@ service firebase.storage {
       allow delete: if request.auth != null;
     }
 
+    // Flashcard images
+    match /flashcards/images/{cardId}/{fileName} {
+      // Anyone can read flashcard images
+      allow read: if true;
+
+      // Authenticated users can upload flashcard images
+      // Max file size: 10MB (images are compressed client-side to ~1MB)
+      allow write: if request.auth != null &&
+                     request.resource.size < 10 * 1024 * 1024;
+
+      // Authenticated users can delete flashcard images
+      allow delete: if request.auth != null;
+    }
+
     // User uploads (posts, attachments)
     match /uploads/{userId}/{fileName} {
       // Anyone can read uploaded files

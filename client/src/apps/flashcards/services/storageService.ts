@@ -17,12 +17,12 @@ export function validateImage(file: File): { valid: boolean; error?: string } {
     };
   }
 
-  // Check file size (max 5MB)
-  const maxSize = 5 * 1024 * 1024; // 5MB in bytes
+  // Check file size (max 10MB - will be compressed before upload)
+  const maxSize = 10 * 1024 * 1024; // 10MB in bytes
   if (file.size > maxSize) {
     return {
       valid: false,
-      error: 'File too large. Maximum size: 5MB'
+      error: 'File too large. Maximum size: 10MB'
     };
   }
 
@@ -148,14 +148,26 @@ export async function uploadCardImage(
   cardId: string,
   onProgress?: (progress: number) => void
 ): Promise<CardImage> {
+  // Check Firebase Storage initialization first
+  if (!storage) {
+    console.error('Firebase Storage is not initialized. Check your environment variables.');
+    throw new Error('Image upload unavailable. Please check Firebase configuration.');
+  }
+
   // Validate image
   const validation = validateImage(file);
   if (!validation.valid) {
     throw new Error(validation.error);
   }
 
-  // Compress image before upload
-  const compressedFile = await compressImage(file);
+  // Compress image before upload (resizes to max 1200px width)
+  let compressedFile: File;
+  try {
+    compressedFile = await compressImage(file);
+  } catch (compressionError) {
+    console.error('Image compression failed:', compressionError);
+    throw new Error('Failed to process image. Please try a different image.');
+  }
 
   // Generate unique ID for the image
   const uniqueId = `${Date.now()}_${Math.random().toString(36).substring(2, 9)}`;
@@ -163,10 +175,7 @@ export async function uploadCardImage(
   const storagePath = `flashcards/images/${cardId}/${uniqueId}_${filename}`;
 
   // Create storage reference
-  const storageRef = storage ? ref(storage, storagePath) : null;
-  if (!storageRef) {
-    throw new Error('Firebase Storage is not initialized');
-  }
+  const storageRef = ref(storage, storagePath);
 
   // Upload with progress tracking
   return new Promise((resolve, reject) => {
@@ -210,6 +219,11 @@ export async function uploadCardImage(
  * @param imageUrl - The full URL of the image to delete
  */
 export async function deleteCardImage(imageUrl: string): Promise<void> {
+  if (!storage) {
+    console.error('Firebase Storage is not initialized');
+    throw new Error('Cannot delete image: Storage not configured');
+  }
+
   try {
     // Extract storage path from URL
     // Firebase Storage URLs format: https://firebasestorage.googleapis.com/v0/b/{bucket}/o/{path}?alt=media&token={token}
@@ -224,10 +238,7 @@ export async function deleteCardImage(imageUrl: string): Promise<void> {
     const storagePath = decodeURIComponent(match[1]);
 
     // Create reference and delete
-    const imageRef = storage ? ref(storage, storagePath) : null;
-    if (!imageRef) {
-      throw new Error('Firebase Storage is not initialized');
-    }
+    const imageRef = ref(storage, storagePath);
     await deleteObject(imageRef);
   } catch (error) {
     console.error('Delete image error:', error);

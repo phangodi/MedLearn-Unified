@@ -221,6 +221,27 @@ export function RichTextEditor({
           value={value}
           onChange={(e) => onChange(e.target.value)}
           onKeyDown={handleKeyDown}
+          onDragEnter={(e) => {
+            e.preventDefault()
+            e.stopPropagation()
+            // Show image uploader immediately when user drags files over editor
+            if (e.dataTransfer.types.includes('Files') && onImageClick) {
+              onImageClick()
+            }
+          }}
+          onDragOver={(e) => {
+            e.preventDefault()
+            e.stopPropagation()
+          }}
+          onDragLeave={(e) => {
+            e.preventDefault()
+            e.stopPropagation()
+          }}
+          onDrop={(e) => {
+            e.preventDefault()
+            e.stopPropagation()
+            // Upload window is already open from dragEnter
+          }}
           placeholder={placeholder}
           className="
             w-full min-h-[200px] p-4 rounded-lg border border-border

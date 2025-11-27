@@ -233,12 +233,20 @@ export function DeckDetail() {
     return dueDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
   }
 
-  // Truncate text
+  // Truncate text and strip markdown formatting
   const truncateText = (text: string, maxLength: number) => {
-    // Remove markdown formatting for display
-    const plainText = text.replace(/[#*_~`[\]()]/g, '').trim()
-    if (plainText.length <= maxLength) return plainText
-    return plainText.slice(0, maxLength) + '...'
+    // First, remove image markdown ![alt](url) and replace with [Image]
+    let cleanText = text.replace(/!\[([^\]]*)\]\([^)]+\)/g, '[Image]')
+    // Remove HTML img tags
+    cleanText = cleanText.replace(/<img[^>]*>/gi, '[Image]')
+    // Remove other markdown formatting
+    cleanText = cleanText.replace(/[#*_~`[\]()]/g, '').trim()
+    // Collapse multiple spaces
+    cleanText = cleanText.replace(/\s+/g, ' ')
+    // If only "[Image]" after cleanup, show it
+    if (cleanText === 'Image') return '[Image]'
+    if (cleanText.length <= maxLength) return cleanText
+    return cleanText.slice(0, maxLength) + '...'
   }
 
   // Handle card actions

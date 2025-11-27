@@ -8,6 +8,7 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
+import rehypeRaw from 'rehype-raw'
 import 'katex/dist/katex.min.css'
 
 interface CardEditorProps {
@@ -182,7 +183,11 @@ export function CardEditor({ deckId, cardId, onClose, onSave }: CardEditorProps)
   const setCurrentContent = editingSide === 'front' ? setFrontContent : setBackContent
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 overflow-y-auto">
+    <div
+      className="fixed inset-0 z-[100] flex items-center justify-center p-4 overflow-y-auto"
+      onDragOver={(e) => e.preventDefault()}
+      onDrop={(e) => e.preventDefault()}
+    >
       {/* Dark overlay backdrop */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -345,13 +350,22 @@ Insert images: ![description](url)`}
                   <div className="prose prose-sm dark:prose-invert max-w-none">
                     <ReactMarkdown
                       remarkPlugins={[remarkGfm, remarkMath]}
-                      rehypePlugins={[rehypeKatex]}
+                      rehypePlugins={[rehypeKatex, rehypeRaw]}
                       components={{
                         img: ({ node, ...props }) => (
                           <img
                             {...props}
                             className="rounded-lg max-w-full h-auto"
                             loading="lazy"
+                            onError={(e) => {
+                              // Show placeholder on error
+                              const target = e.target as HTMLImageElement
+                              target.style.display = 'none'
+                              const placeholder = document.createElement('div')
+                              placeholder.className = 'flex items-center justify-center p-4 bg-muted rounded-lg text-muted-foreground text-sm'
+                              placeholder.textContent = `Image failed to load: ${props.alt || 'Unknown'}`
+                              target.parentNode?.insertBefore(placeholder, target)
+                            }}
                           />
                         ),
                         code: ({ node, className, ...props }) => {

@@ -17,6 +17,7 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
+import rehypeRaw from 'rehype-raw'
 import 'katex/dist/katex.min.css'
 import { ArrowLeft, Pause, Play, RotateCcw, Clock, CheckCircle } from 'lucide-react'
 import { useStudySession } from '../hooks/useStudySession'
@@ -291,7 +292,7 @@ export function StudySession() {
   const currentCard = session.currentCard
 
   return (
-    <div className="min-h-screen bg-background flex flex-col">
+    <div className="h-screen bg-background flex flex-col overflow-hidden">
       {/* Progress Bar */}
       <div className="h-1 bg-muted">
         <motion.div
@@ -567,7 +568,7 @@ function CardSide({ content, label, onImageClick }: CardSideProps) {
         <div className="prose prose-sm sm:prose dark:prose-invert max-w-none">
           <ReactMarkdown
             remarkPlugins={[remarkGfm, remarkMath]}
-            rehypePlugins={[rehypeKatex]}
+            rehypePlugins={[rehypeKatex, rehypeRaw]}
           >
             {content.text}
           </ReactMarkdown>
