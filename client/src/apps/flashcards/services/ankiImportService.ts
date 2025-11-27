@@ -211,6 +211,8 @@ async function parseMediaMapping(zip: JSZip, formatVersion: FormatVersion): Prom
     return await buildMediaMappingFromZip(zip)
   }
 
+  let mapping: Record<string, string> = {}
+
   try {
     const rawData = new Uint8Array(await mediaFile.async('arraybuffer'))
     console.log(`[Anki Import] Media file size: ${rawData.length} bytes, first 4 bytes: ${rawData[0]?.toString(16)} ${rawData[1]?.toString(16)} ${rawData[2]?.toString(16)} ${rawData[3]?.toString(16)}`)
@@ -223,30 +225,32 @@ async function parseMediaMapping(zip: JSZip, formatVersion: FormatVersion): Prom
         rawData[3] === 0xFD) {
       console.log('[Anki Import] Media mapping is zstd compressed, decompressing...')
       const decompressedMedia = decompress(rawData)
-      const mapping = parseDecompressedMediaMapping(decompressedMedia)
+      mapping = parseDecompressedMediaMapping(decompressedMedia)
       console.log(`[Anki Import] Parsed ${Object.keys(mapping).length} media entries from protobuf`)
-      return mapping
+    } else {
+      // Try as JSON (legacy format)
+      const content = new TextDecoder().decode(rawData)
+      if (content.startsWith('{')) {
+        mapping = JSON.parse(content)
+        console.log(`[Anki Import] Parsed ${Object.keys(mapping).length} media entries from JSON`)
+      } else {
+        // If it starts with other data, might be uncompressed protobuf
+        console.log('[Anki Import] Trying to parse as uncompressed protobuf...')
+        mapping = parseDecompressedMediaMapping(rawData)
+        console.log(`[Anki Import] Parsed ${Object.keys(mapping).length} media entries from uncompressed protobuf`)
+      }
     }
-
-    // Try as JSON (legacy format)
-    const content = new TextDecoder().decode(rawData)
-    if (content.startsWith('{')) {
-      const mapping = JSON.parse(content)
-      console.log(`[Anki Import] Parsed ${Object.keys(mapping).length} media entries from JSON`)
-      return mapping
-    }
-
-    // If it starts with other data, might be uncompressed protobuf
-    console.log('[Anki Import] Trying to parse as uncompressed protobuf...')
-    const mapping = parseDecompressedMediaMapping(rawData)
-    console.log(`[Anki Import] Parsed ${Object.keys(mapping).length} media entries from uncompressed protobuf`)
-    return mapping
   } catch (error) {
     console.warn('[Anki Import] Failed to parse media mapping:', error)
-    // Fallback: try to build mapping from numbered files in ZIP
-    console.log('[Anki Import] Falling back to building mapping from ZIP files...')
-    return await buildMediaMappingFromZip(zip)
   }
+
+  // If parsing returned empty mapping, fall back to scanning ZIP files directly
+  if (Object.keys(mapping).length === 0) {
+    console.log('[Anki Import] Media mapping is empty, falling back to building mapping from ZIP files...')
+    mapping = await buildMediaMappingFromZip(zip)
+  }
+
+  return mapping
 }
 
 /**
@@ -325,25 +329,58 @@ function isMediaFilename(str: string): boolean {
 
 /**
  * Build media mapping by inspecting ZIP contents
+ * Handles both numbered files (0, 1, 2...) and files with original names
  */
 async function buildMediaMappingFromZip(zip: JSZip): Promise<Record<string, string>> {
   const mapping: Record<string, string> = {}
+  const validMediaExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'mp3', 'mp4', 'wav', 'ogg', 'm4a', 'webm']
 
-  // Look for numbered files (0, 1, 2, etc.) and try to determine their types
-  for (let i = 0; i < 1000; i++) {
+  // Method 1: Look for numbered files (0, 1, 2, etc.)
+  // Store as "0" -> "0", "1" -> "1" etc. - just track that the file exists
+  // We don't know the original filename, so we'll use the numbered key for both
+  let consecutiveNotFound = 0
+  for (let i = 0; i < 10000; i++) {
     const file = zip.file(i.toString())
-    if (!file) break
-
-    try {
-      // Read first bytes to detect file type
-      const header = new Uint8Array(await file.async('arraybuffer').then(b => b.slice(0, 12)))
-      const ext = detectFileExtension(header)
-      mapping[i.toString()] = `media_${i}${ext}`
-    } catch {
-      mapping[i.toString()] = `media_${i}.bin`
+    if (!file) {
+      consecutiveNotFound++
+      // Allow gaps in numbering, but stop after 100 consecutive missing files
+      if (consecutiveNotFound > 100) break
+      continue
     }
+    consecutiveNotFound = 0
+
+    // Just track that this numbered file exists - don't invent fake names
+    // The actual filename mapping should come from the Anki media JSON file
+    // If we're in this fallback, we'll match by index during upload
+    mapping[i.toString()] = i.toString()
   }
 
+  console.log(`[Anki Import] Found ${Object.keys(mapping).length} numbered media files`)
+
+  // Method 2: Scan ALL files in ZIP for media files with original names
+  // This handles Anki exports where media files are stored with original filenames
+  zip.forEach((relativePath) => {
+    // Skip known non-media files
+    if (relativePath === 'media' ||
+        relativePath.endsWith('.anki2') ||
+        relativePath.endsWith('.anki21') ||
+        relativePath.endsWith('.anki21b')) {
+      return
+    }
+
+    // Skip numbered files (already processed above)
+    if (/^\d+$/.test(relativePath)) return
+
+    // Check if it looks like a media file by extension
+    const ext = relativePath.split('.').pop()?.toLowerCase()
+    if (ext && validMediaExtensions.includes(ext)) {
+      // Map the file to itself (original filename -> original filename)
+      mapping[relativePath] = relativePath
+      console.log(`[Anki Import] Found media file with original name: "${relativePath}"`)
+    }
+  })
+
+  console.log(`[Anki Import] Total media mapping entries: ${Object.keys(mapping).length}`)
   return mapping
 }
 
@@ -447,7 +484,16 @@ async function extractMediaFiles(
       // Determine MIME type from extension or magic bytes
       const mimeType = getMimeType(originalName, blobData)
       const blob = new Blob([blobData], { type: mimeType })
+
+      // Store by original name (for when media mapping works correctly)
       media.set(originalName, blob)
+
+      // ALSO store by numbered key for fallback lookup
+      // This handles the case where media JSON parsing failed and we don't know original names
+      if (numberedName !== originalName) {
+        media.set(numberedName, blob)
+      }
+
       console.log(`[Anki Import] Extracted "${numberedName}" -> "${originalName}" (${blobData.length} bytes, ${mimeType})`)
     } catch (error) {
       console.warn(`[Anki Import] Failed to extract media ${numberedName}:`, error)
@@ -534,14 +580,22 @@ function getDeckName(db: Database): string {
     const decksTableResult = db.exec("SELECT name FROM sqlite_master WHERE type='table' AND name='decks'")
     if (decksTableResult.length > 0 && decksTableResult[0].values.length > 0) {
       // New schema - decks are in a separate table
-      const decksResult = db.exec('SELECT id, name FROM decks WHERE name != "Default" ORDER BY id DESC LIMIT 1')
+      // NOTE: Avoid WHERE clause with string comparison - it triggers 'unicase' collation
+      // that sql.js doesn't support. Fetch all decks and filter in JavaScript instead.
+      const decksResult = db.exec('SELECT id, name FROM decks ORDER BY id ASC')
       if (decksResult.length > 0 && decksResult[0].values.length > 0) {
-        let deckName = decksResult[0].values[0][1] as string
-        // Handle hierarchical deck names (separated by \x1F)
-        if (deckName.includes('\x1F')) {
-          deckName = deckName.split('\x1F').pop() || deckName
+        // Find first non-Default deck in JavaScript
+        for (const row of decksResult[0].values) {
+          let deckName = row[1] as string
+          if (deckName && deckName !== 'Default') {
+            // Handle hierarchical deck names (separated by \x1F)
+            if (deckName.includes('\x1F')) {
+              deckName = deckName.split('\x1F').pop() || deckName
+            }
+            console.log(`[Anki Import] Found deck name: "${deckName}"`)
+            return deckName
+          }
         }
-        return deckName
       }
     }
   } catch (error) {
@@ -883,8 +937,26 @@ export async function uploadMediaAndCreateCards(
     onProgress?.('Uploading media...', 0, `0/${totalMedia}`)
   }
 
-  for (const filename of neededMedia) {
-    const blob = parsedDeck.media.get(filename)
+  // Convert neededMedia to array to get stable indices for fallback lookup
+  const neededMediaArray = [...neededMedia]
+
+  for (const filename of neededMediaArray) {
+    let blob = parsedDeck.media.get(filename)
+
+    // Fallback: If not found by filename, try to match by numbered index
+    // This handles the case where Anki media JSON parsing failed
+    // and we stored media by numbered keys ("0", "1", "2"...)
+    if (!blob) {
+      const refIndex = neededMediaArray.indexOf(filename)
+      if (refIndex >= 0) {
+        // Try to find the numbered file at this index
+        blob = parsedDeck.media.get(refIndex.toString())
+        if (blob) {
+          console.log(`[Anki Import] Matched "${filename}" to numbered file ${refIndex}`)
+        }
+      }
+    }
+
     if (!blob) {
       console.warn(`[Anki Import] Media file not found in extracted media: "${filename}"`)
       skippedCount++
