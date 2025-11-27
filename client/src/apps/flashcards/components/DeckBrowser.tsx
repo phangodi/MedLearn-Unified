@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import {
@@ -69,7 +69,15 @@ export function DeckBrowser() {
     createDeck,
     deleteDeck,
     copyDeck,
+    loadDecks,
   } = useFlashcards()
+
+  // Refresh decks on mount to ensure fresh stats after study sessions
+  useEffect(() => {
+    if (user?.uid) {
+      loadDecks(user.uid)
+    }
+  }, [user?.uid, loadDecks])
 
   // UI state
   const [searchQuery, setSearchQuery] = useState('')
@@ -227,7 +235,14 @@ export function DeckBrowser() {
 
   // Format last studied date
   const formatLastStudied = (deck: Deck) => {
-    if (!deck.lastStudiedAt) return 'Never studied'
+    // Check if any cards have been studied (better indicator than just lastStudiedAt)
+    const hasBeenStudied = deck.learningCount > 0 ||
+                          deck.reviewCount > 0 ||
+                          deck.lastStudiedAt !== null
+
+    if (!hasBeenStudied) return 'Never studied'
+
+    if (!deck.lastStudiedAt) return 'Previously studied'
 
     const date = new Date(deck.lastStudiedAt.seconds * 1000)
     const now = new Date()
@@ -524,8 +539,8 @@ function DeckCard({
   setShowOptionsMenu,
   isPreloaded = false,
 }: DeckCardProps) {
-  // Use dueCount if available (computed accurately), fallback to old method for backwards compatibility
-  const dueCount = deck.dueCount ?? (deck.reviewCount + deck.learningCount)
+  // Use dueCount if available (computed accurately), fallback includes new + learning + review
+  const dueCount = deck.dueCount ?? (deck.newCount + deck.learningCount + deck.reviewCount)
   const hasDue = dueCount > 0
 
   return (
@@ -635,7 +650,7 @@ function DeckCard({
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-3 gap-2 mb-4">
+        <div className="grid grid-cols-4 gap-2 mb-4">
           <div className="text-center">
             <div className="text-lg font-bold">{deck.cardCount}</div>
             <div className="text-xs text-muted-foreground">Total</div>
@@ -649,6 +664,10 @@ function DeckCard({
           <div className="text-center">
             <div className="text-lg font-bold text-primary">{deck.newCount}</div>
             <div className="text-xs text-muted-foreground">New</div>
+          </div>
+          <div className="text-center">
+            <div className="text-lg font-bold text-orange-500">{deck.learningCount}</div>
+            <div className="text-xs text-muted-foreground">Learning</div>
           </div>
         </div>
 

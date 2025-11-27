@@ -33,6 +33,7 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
+import rehypeRaw from 'rehype-raw'
 import 'katex/dist/katex.min.css'
 
 type SortOption = 'due' | 'created' | 'alphabetical'
@@ -569,11 +570,11 @@ export function DeckDetail() {
                 )}
                 <Button
                   onClick={handleStartStudy}
-                  disabled={!currentDeckDue.total && !(currentDeck?.isPreloaded && cards.length > 0)}
+                  disabled={!currentDeckDue.total}
                   className="px-6 py-2.5 rounded-lg bg-[#0066CC] text-white font-medium hover:bg-[#0055AA] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                 >
                   <Play className="w-4 h-4 mr-2" />
-                  Study Now {currentDeck?.isPreloaded && cards.length > 0 ? `(${cards.length})` : currentDeckDue.total > 0 ? `(${currentDeckDue.total})` : ''}
+                  Study Now {currentDeckDue.total > 0 ? `(${currentDeckDue.total})` : ''}
                 </Button>
               </div>
             </div>
@@ -891,7 +892,7 @@ export function DeckDetail() {
                               <div className="prose prose-sm dark:prose-invert max-w-none bg-background border border-border rounded-lg p-4">
                                 <ReactMarkdown
                                   remarkPlugins={[remarkGfm, remarkMath]}
-                                  rehypePlugins={[rehypeKatex]}
+                                  rehypePlugins={[rehypeRaw, rehypeKatex]}
                                 >
                                   {card.front.text}
                                 </ReactMarkdown>
@@ -907,7 +908,7 @@ export function DeckDetail() {
                               <div className="prose prose-sm dark:prose-invert max-w-none bg-background border border-border rounded-lg p-4">
                                 <ReactMarkdown
                                   remarkPlugins={[remarkGfm, remarkMath]}
-                                  rehypePlugins={[rehypeKatex]}
+                                  rehypePlugins={[rehypeRaw, rehypeKatex]}
                                 >
                                   {card.back.text}
                                 </ReactMarkdown>

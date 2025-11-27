@@ -800,15 +800,20 @@ export const useFlashcardStore = create<FlashcardState>((set, get) => ({
         })
 
         // Update deck's lastStudiedAt
-        const deck = await getDeckService(session.deckId)
-        if (deck) {
-          await updateDeckService(session.deckId, {
-            lastStudiedAt: { seconds: Date.now() / 1000, nanoseconds: 0 } as any,
-          })
-        }
+        await updateDeckService(session.deckId, {
+          lastStudiedAt: { seconds: Date.now() / 1000, nanoseconds: 0 } as any,
+        })
 
-        // Reload deck stats
+        // Reload deck stats in Firestore
         await updateDeckStats(session.deckId)
+
+        // Refresh the deck in local state to ensure DeckBrowser shows accurate stats
+        const updatedDeck = await getDeckService(session.deckId)
+        if (updatedDeck) {
+          set((state) => ({
+            decks: state.decks.map((d) => d.id === session.deckId ? updatedDeck : d),
+          }))
+        }
       }
 
       // Reset session state
