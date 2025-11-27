@@ -26,6 +26,7 @@ import { useFlashcards } from '../hooks'
 import { CardEditor } from './CardEditor'
 import { Button } from '@/components/ui/Button'
 import { State, type FlashCard } from '../types/flashcard'
+import { stripHtmlForPreview } from '../services/ankiImportService'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
@@ -233,18 +234,28 @@ export function DeckDetail() {
     return dueDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
   }
 
-  // Truncate text and strip markdown formatting
+  // Truncate text and strip HTML/markdown formatting for preview display
   const truncateText = (text: string, maxLength: number) => {
-    // First, remove image markdown ![alt](url) and replace with [Image]
-    let cleanText = text.replace(/!\[([^\]]*)\]\([^)]+\)/g, '[Image]')
-    // Remove HTML img tags
-    cleanText = cleanText.replace(/<img[^>]*>/gi, '[Image]')
-    // Remove other markdown formatting
+    // Check if content is primarily an image
+    const hasImage = /<img[^>]*>/i.test(text) || /!\[[^\]]*\]\([^)]+\)/.test(text)
+
+    // Use stripHtmlForPreview to properly convert HTML to plain text
+    let cleanText = stripHtmlForPreview(text)
+
+    // Remove markdown image syntax
+    cleanText = cleanText.replace(/!\[[^\]]*\]\([^)]+\)/g, '').trim()
+
+    // Remove other markdown formatting characters
     cleanText = cleanText.replace(/[#*_~`[\]()]/g, '').trim()
+
     // Collapse multiple spaces
-    cleanText = cleanText.replace(/\s+/g, ' ')
-    // If only "[Image]" after cleanup, show it
-    if (cleanText === 'Image') return '[Image]'
+    cleanText = cleanText.replace(/\s+/g, ' ').trim()
+
+    // If content was primarily an image and text is empty/short, indicate it
+    if (hasImage && cleanText.length < 10) {
+      return cleanText ? `[Image] ${cleanText}` : '[Image]'
+    }
+
     if (cleanText.length <= maxLength) return cleanText
     return cleanText.slice(0, maxLength) + '...'
   }

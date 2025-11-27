@@ -22,6 +22,7 @@ import {
   Activity,
   Heart,
   Zap,
+  Upload,
 } from 'lucide-react'
 import { useFlashcards } from '../hooks'
 import { useAuth } from '@/contexts/AuthContext'
@@ -29,6 +30,7 @@ import { Button } from '@/components/ui/Button'
 import { cn } from '@/lib/utils'
 import type { Deck } from '../types/flashcard'
 import { getPreloadedDecksWithStats } from '../data/preloaded'
+import { ImportModal } from './ImportModal'
 
 type SortOption = 'name' | 'dueCount' | 'lastStudied' | 'created'
 
@@ -73,6 +75,7 @@ export function DeckBrowser() {
   const [searchQuery, setSearchQuery] = useState('')
   const [sortBy, setSortBy] = useState<SortOption>('lastStudied')
   const [showCreateModal, setShowCreateModal] = useState(false)
+  const [showImportModal, setShowImportModal] = useState(false)
   const [showOptionsMenu, setShowOptionsMenu] = useState<string | null>(null)
 
   // Create deck form state
@@ -297,14 +300,24 @@ export function DeckBrowser() {
             <ChevronDown className="absolute right-2 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
           </div>
 
-          {/* Create Deck Button */}
-          <Button
-            onClick={() => setShowCreateModal(true)}
-            className="gap-2"
-          >
-            <Plus className="w-4 h-4" />
-            Create Deck
-          </Button>
+          {/* Import and Create Deck Buttons */}
+          <div className="flex gap-2">
+            <Button
+              variant="outline"
+              onClick={() => setShowImportModal(true)}
+              className="gap-2"
+            >
+              <Upload className="w-4 h-4" />
+              Import
+            </Button>
+            <Button
+              onClick={() => setShowCreateModal(true)}
+              className="gap-2"
+            >
+              <Plus className="w-4 h-4" />
+              Create Deck
+            </Button>
+          </div>
         </motion.div>
 
         {/* Loading State */}
@@ -460,6 +473,18 @@ export function DeckBrowser() {
               setCreateError('')
             }}
             onCreate={handleCreateDeck}
+          />
+        )}
+      </AnimatePresence>
+
+      {/* Import Modal */}
+      <AnimatePresence>
+        {showImportModal && (
+          <ImportModal
+            onClose={() => setShowImportModal(false)}
+            onImportComplete={(deckId) => {
+              navigate(`/flashcards/deck/${deckId}`)
+            }}
           />
         )}
       </AnimatePresence>
