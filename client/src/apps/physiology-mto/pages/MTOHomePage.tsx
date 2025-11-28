@@ -3,7 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronRight, Check, Play, BookOpen, FileText, ClipboardList, Flag, Loader2 } from 'lucide-react';
 import { useTest } from '../context/TestContext';
-import { mcqFilters, getTopicsGroupedByMcq, getAvailableTestIds, getMcqQuestionCount, getTopicQuestionCount } from '../services/questionsService';
+// Static definitions from local service
+import { mcqFilters, getTopicsGroupedByMcq, getAvailableTestIds } from '../services/questionsService';
+// Dynamic counts from Firebase service
+import { getAllQuestions } from '../services/firebaseQuestionsService';
 import { getBookmarkedQuestionIds } from '../services/bookmarkService';
 import { useAuth } from '@/contexts/AuthContext';
 import type { FilterMode } from '../../physiology/data/questions/types';
@@ -31,6 +34,56 @@ export function MTOHomePage() {
   const [bookmarkedIds, setBookmarkedIds] = useState<string[]>([]);
   const [bookmarksLoading, setBookmarksLoading] = useState(false);
   const topicsGrouped = getTopicsGroupedByMcq();
+
+  // Dynamic question counts from Firebase
+  const [topicCounts, setTopicCounts] = useState<Record<number, number>>({});
+  const [mcqCounts, setMcqCounts] = useState<Record<string, number>>({});
+  const [countsLoading, setCountsLoading] = useState(true);
+
+  // Load question counts from Firebase on mount
+  useEffect(() => {
+    async function loadCounts() {
+      setCountsLoading(true);
+      try {
+        const allQuestions = await getAllQuestions();
+
+        // Calculate topic counts dynamically
+        const newTopicCounts: Record<number, number> = {};
+        const newMcqCounts: Record<string, number> = {};
+
+        // Count questions per topic
+        for (const question of allQuestions) {
+          for (const topicNum of question.topics) {
+            newTopicCounts[topicNum] = (newTopicCounts[topicNum] || 0) + 1;
+          }
+        }
+
+        // Count unique questions per MCQ (deduplicated)
+        for (const mcq of mcqFilters) {
+          const mcqQuestions = new Set<string>();
+          for (const question of allQuestions) {
+            if (question.topics.some(t => mcq.topics.includes(t))) {
+              mcqQuestions.add(question.contentHash || question.id);
+            }
+          }
+          newMcqCounts[mcq.id] = mcqQuestions.size;
+        }
+
+        setTopicCounts(newTopicCounts);
+        setMcqCounts(newMcqCounts);
+        console.log('[MTOHomePage] Loaded dynamic counts from Firebase:', {
+          topics: Object.keys(newTopicCounts).length,
+          totalTopicQuestions: Object.values(newTopicCounts).reduce((a, b) => a + b, 0),
+          mcqs: newMcqCounts
+        });
+      } catch (error) {
+        console.error('[MTOHomePage] Error loading counts:', error);
+      } finally {
+        setCountsLoading(false);
+      }
+    }
+    loadCounts();
+  }, []);
 
   // Load available test IDs on mount
   useEffect(() => {
@@ -141,7 +194,7 @@ export function MTOHomePage() {
                   const selectedInGroup = topics.filter(t =>
                     config.selectedTopics.includes(t.number)
                   ).length;
-                  const mcqQuestionCount = getMcqQuestionCount(mcq.id);
+                  const mcqQuestionCount = mcqCounts[mcq.id] || 0;
 
                   return (
                     <div key={mcq.id} className="border border-border rounded-lg overflow-hidden">
@@ -195,7 +248,7 @@ export function MTOHomePage() {
                             <div className="p-3 grid grid-cols-1 sm:grid-cols-2 gap-2">
                               {topics.map((topic) => {
                                 const isSelected = config.selectedTopics.includes(topic.number);
-                                const questionCount = getTopicQuestionCount(topic.number);
+                                const questionCount = topicCounts[topic.number] || 0;
                                 return (
                                   <label
                                     key={topic.number}
@@ -254,7 +307,7 @@ export function MTOHomePage() {
               <h3 className="font-semibold text-foreground mb-4">Select MCQ Exam</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {mcqFilters.map((mcq) => {
-                  const questionCount = getMcqQuestionCount(mcq.id);
+                  const questionCount = mcqCounts[mcq.id] || 0;
                   const isSelected = config.selectedMcq === mcq.id;
 
                   return (

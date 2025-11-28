@@ -80,7 +80,7 @@ export async function toggleBookmark(
  * Check if a question is bookmarked by the user
  */
 export async function isBookmarked(userId: string, questionId: string): Promise<boolean> {
-  if (!db) return false;
+  if (!db || !userId) return false;
 
   try {
     const bookmarkRef = doc(db, BOOKMARKS_COLLECTION, userId);
@@ -91,7 +91,8 @@ export async function isBookmarked(userId: string, questionId: string): Promise<
     const data = bookmarkSnap.data() as UserBookmarks;
     return data.questionIds.includes(questionId);
   } catch (error) {
-    console.error('[BookmarkService] Error checking bookmark:', error);
+    // Silently fail for permission errors (document may not exist yet)
+    console.warn('[BookmarkService] Could not check bookmark:', (error as Error).message);
     return false;
   }
 }
@@ -100,7 +101,7 @@ export async function isBookmarked(userId: string, questionId: string): Promise<
  * Get all bookmarked question IDs for a user
  */
 export async function getBookmarkedQuestionIds(userId: string): Promise<string[]> {
-  if (!db) return [];
+  if (!db || !userId) return [];
 
   try {
     const bookmarkRef = doc(db, BOOKMARKS_COLLECTION, userId);
@@ -111,7 +112,8 @@ export async function getBookmarkedQuestionIds(userId: string): Promise<string[]
     const data = bookmarkSnap.data() as UserBookmarks;
     return data.questionIds || [];
   } catch (error) {
-    console.error('[BookmarkService] Error getting bookmarks:', error);
+    // Silently fail for permission errors
+    console.warn('[BookmarkService] Could not get bookmarks:', (error as Error).message);
     return [];
   }
 }

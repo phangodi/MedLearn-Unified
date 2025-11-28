@@ -1,6 +1,16 @@
 import { createContext, useContext, useState, useCallback, type ReactNode } from 'react';
 import type { Question, TestConfig, TestSession, TestResult, FilterMode } from '../../physiology/data/questions/types';
-import { getQuestionsForTest, checkAnswer, getTopicTitle } from '../services/questionsService';
+// Use Firebase service for dynamic question loading
+import {
+  getAllQuestions,
+  getQuestionsByTopics,
+  getQuestionsByMcq,
+  deduplicateQuestions,
+  shuffleArray,
+  checkAnswer
+} from '../services/firebaseQuestionsService';
+// Keep local service for static definitions only
+import { getTopicTitle } from '../services/questionsService';
 
 interface TestContextValue {
   // Test configuration
@@ -92,13 +102,49 @@ export function TestProvider({ children }: { children: ReactNode }) {
     setConfig(prev => ({ ...prev, questionCount: count }));
   }, []);
 
-  // Start a new test
+  // Start a new test - loads questions from Firebase
   const startTest = useCallback(async () => {
     setIsLoading(true);
     setError(null);
 
     try {
-      const questions = await getQuestionsForTest(config);
+      let questions: Question[] = [];
+
+      // Get questions based on filter mode
+      switch (config.filterMode) {
+        case 'topic':
+          questions = await getQuestionsByTopics(config.selectedTopics);
+          questions = deduplicateQuestions(questions);
+          break;
+        case 'mcq':
+          if (config.selectedMcq) {
+            questions = await getQuestionsByMcq(config.selectedMcq);
+            questions = deduplicateQuestions(questions);
+          }
+          break;
+        case 'test':
+          // For test mode, we need all questions and filter by testId
+          if (config.selectedTestId) {
+            const allQuestions = await getAllQuestions();
+            questions = allQuestions.filter(q => q.testId === config.selectedTestId);
+          }
+          break;
+        case 'bookmarks':
+          if (config.bookmarkedQuestionIds && config.bookmarkedQuestionIds.length > 0) {
+            const allQuestions = await getAllQuestions();
+            const bookmarkSet = new Set(config.bookmarkedQuestionIds);
+            questions = allQuestions.filter(q => bookmarkSet.has(q.id));
+          }
+          break;
+      }
+
+      // Shuffle questions
+      questions = shuffleArray(questions);
+
+      // Limit questions if specified
+      if (config.questionCount !== 'all' && typeof config.questionCount === 'number') {
+        questions = questions.slice(0, config.questionCount);
+      }
 
       if (questions.length === 0) {
         setError('No questions found for your selection. Please try different filters.');

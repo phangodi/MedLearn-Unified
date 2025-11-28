@@ -86,6 +86,9 @@ export function clearCache(): void {
 /**
  * Convert Firestore MTOQuestion to legacy Question format
  * This ensures backward compatibility with existing UI components
+ *
+ * IMPORTANT: Uses legacyId (not Firestore doc ID) as the question id
+ * because explanations are keyed by legacyId
  */
 function convertToLegacyQuestion(
   firestoreDoc: { id: string; data: MTOQuestion }
@@ -93,7 +96,8 @@ function convertToLegacyQuestion(
   const data = firestoreDoc.data;
 
   return {
-    id: firestoreDoc.id, // Use Firestore document ID
+    // Use legacyId if available (for explanation lookup), fallback to Firestore ID
+    id: data.legacyId || firestoreDoc.id,
     testId: data.testId || 'firebase',
     questionNumber: 0, // Not used in Firebase format
     text: data.text,
@@ -140,13 +144,13 @@ export async function getAllQuestions(): Promise<Question[]> {
     const questions: Question[] = [];
     snapshot.forEach((docSnap) => {
       const data = docSnap.data() as MTOQuestion;
-      questions.push(
-        convertToLegacyQuestion({
-          id: docSnap.id,
-          data,
-        })
-      );
-      // Populate legacyId → firestoreId mapping
+      const question = convertToLegacyQuestion({
+        id: docSnap.id,
+        data,
+      });
+      questions.push(question);
+      // Store mapping: legacyId → firestoreId (for admin operations)
+      // Also store firestoreId → legacyId (for reference)
       if (data.legacyId) {
         cache.legacyIdMap.set(data.legacyId, docSnap.id);
       }
