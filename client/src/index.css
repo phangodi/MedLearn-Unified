@@ -342,3 +342,120 @@
     rgb(156 163 175 / 0.15) 11px
   );
 }
+
+/* ==========================================================================
+   FLASHCARD CONTENT STYLES (for Anki HTML imports)
+   ========================================================================== */
+
+/* Card content container - preserves Anki styling */
+.card-content {
+  font-family: inherit;
+  line-height: 1.7;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Images in card content */
+.card-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 12px 0;
+  display: block;
+}
+
+/* Bold and strong text */
+.card-content b,
+.card-content strong {
+  font-weight: 600;
+}
+
+/* Italic and emphasis text */
+.card-content i,
+.card-content em {
+  font-style: italic;
+}
+
+/* Underlined text */
+.card-content u {
+  text-decoration: underline;
+}
+
+/* Lists */
+.card-content ul,
+.card-content ol {
+  margin: 8px 0;
+  padding-left: 24px;
+}
+
+.card-content li {
+  margin: 4px 0;
+}
+
+/* Tables (common in Anki medical cards) */
+.card-content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 12px 0;
+}
+
+.card-content th,
+.card-content td {
+  border: 1px solid hsl(var(--border));
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.card-content th {
+  background-color: hsl(var(--muted));
+  font-weight: 600;
+}
+
+/* Horizontal rules */
+.card-content hr {
+  border: none;
+  border-top: 1px solid hsl(var(--border));
+  margin: 16px 0;
+}
+
+/* Code blocks */
+.card-content code {
+  background-color: hsl(var(--muted));
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+.card-content pre {
+  background-color: hsl(var(--muted));
+  padding: 12px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 12px 0;
+}
+
+/* Blockquotes */
+.card-content blockquote {
+  border-left: 4px solid hsl(var(--primary));
+  padding-left: 16px;
+  margin: 12px 0;
+  font-style: italic;
+  color: hsl(var(--muted-foreground));
+}
+
+/* Preserve Anki inline color styles */
+.card-content span[style*="color"],
+.card-content font[color] {
+  /* Allow inline color styles to take effect */
+}
+
+/* Links */
+.card-content a {
+  color: hsl(var(--primary));
+  text-decoration: underline;
+}
+
+.card-content a:hover {
+  opacity: 0.8;
+}

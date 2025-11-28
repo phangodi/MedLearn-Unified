@@ -25,6 +25,7 @@ import { AnatomyCNSPage } from './pages/AnatomyCNSPage'
 import { AdminNotificationsPage } from './pages/AdminNotificationsPage'
 import { MTOAdminPage } from './pages/MTOAdminPage'
 import { AIExamPrepPage } from './pages/AIExamPrepPage'
+import { FlashcardsPage } from './pages/FlashcardsPage'
 
 function App() {
   return (
@@ -84,6 +85,14 @@ function App() {
               element={
                 <ProtectedRoute>
                   <AIExamPrepPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/flashcards/*"
+              element={
+                <ProtectedRoute>
+                  <FlashcardsPage />
                 </ProtectedRoute>
               }
             />

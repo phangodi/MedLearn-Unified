@@ -1,0 +1,1253 @@
+{
+  "testIds": ["mto3-pages48-55"],
+  "testMetadata": {
+    "mto3-pages48-55": {
+      "testId": "mto3-pages48-55",
+      "source": "University of Szeged physiology MCQ exam screenshots (Pages 48-55)",
+      "extractionDate": "2025-11-25",
+      "totalQuestions": 51,
+      "questionRange": "Mixed cardiovascular questions",
+      "notes": "Approximately 30 questions excluded due to large orange markers covering text"
+    }
+  },
+  "questions": [
+    {
+      "id": "q-mto3-pages48-55-1",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 1,
+      "text": "In which organ's microcirculation is there NO SIGNIFICANT colloid-osmotic pressure difference between the blood plasma and the interstitial fluid?",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "the mucosa of the small intestine"},
+        {"letter": "b", "text": "skeletal muscle"},
+        {"letter": "c", "text": "lung"},
+        {"letter": "d", "text": "spleen"},
+        {"letter": "e", "text": "liver"}
+      ],
+      "correctAnswers": ["d", "e"],
+      "topics": [41],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Turn 1, Page 1, Question 2"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-2",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 2,
+      "text": "Calculation of the venous compliance:",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "volume change / pressure change"},
+        {"letter": "b", "text": "pressure x radius / wall thickness"},
+        {"letter": "c", "text": "Hagen-Poiseuille equation"},
+        {"letter": "d", "text": "diastolic pressure / systolic pressure"},
+        {"letter": "e", "text": "pressure difference / volume flow"}
+      ],
+      "correctAnswers": ["a"],
+      "topics": [40],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Turn 1, Page 1, Question 5"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-3",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 3,
+      "text": "The mean systemic filling pressure",
+      "correctAnswerCount": 3,
+      "options": [
+        {"letter": "a", "text": "is higher in the arterioles than in the capillaries"},
+        {"letter": "b", "text": "is the same as the normal mean capillary pressure"},
+        {"letter": "c", "text": "is lower than the normal central venous pressure"},
+        {"letter": "d", "text": "is measured after the arrest of the heart"},
+        {"letter": "e", "text": "increases with hypervolemia"},
+        {"letter": "f", "text": "is lower than the normal mean arterial pressure"}
+      ],
+      "correctAnswers": ["d", "e", "f"],
+      "topics": [33, 40],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.9,
+        "originalSource": "Turn 1, Page 1, Question 7"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-4",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 4,
+      "text": "The major Starling-force for reabsorption:",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "interstitial hydrostatic pressure"},
+        {"letter": "b", "text": "interstitial colloid osmotic pressure"},
+        {"letter": "c", "text": "intracapillary hydrostatic pressure"},
+        {"letter": "d", "text": "plasma colloid osmotic pressure"}
+      ],
+      "correctAnswers": ["d"],
+      "topics": [39, 41],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Turn 1, Page 1, Question 8"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-5",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 5,
+      "text": "Vasopressin in the circulation",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "elicits vasoconstriction via V1 receptors"},
+        {"letter": "b", "text": "stimulates cAMP via V1 receptors"},
+        {"letter": "c", "text": "elevates intracellular Ca2+ concentration in the vascular smooth muscle"},
+        {"letter": "d", "text": "decreases the total peripheral resistance"}
+      ],
+      "correctAnswers": ["a", "c"],
+      "topics": [43, 44],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.9,
+        "originalSource": "Turn 1, Page 1, Question 9"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-6",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 6,
+      "text": "Vascular autoregulation",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "is characteristic of veins"},
+        {"letter": "b", "text": "is insignificant in the skin vessels"},
+        {"letter": "c", "text": "manifests itself as vasodilation in response to increases in the intravascular pressure"},
+        {"letter": "d", "text": "is particularly marked in the cerebral vessels"},
+        {"letter": "e", "text": "requires rich sympathetic innervation"}
+      ],
+      "correctAnswers": ["b", "d"],
+      "topics": [33, 43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.9,
+        "originalSource": "Turn 1, Page 1, Question 10"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-7",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 7,
+      "text": "Sympathetic cholinergic fibers innervate the arterioles of",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "salivary glands"},
+        {"letter": "b", "text": "cerebral vessels"},
+        {"letter": "c", "text": "coronaries"},
+        {"letter": "d", "text": "arterioles in skeletal muscles"},
+        {"letter": "e", "text": "external genitals"}
+      ],
+      "correctAnswers": ["d"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Turn 1, Page 1, Question 11"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-8",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 8,
+      "text": "The autonomic nervous system can reduce total peripheral resistance by:",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "decreasing the sympathetic vasomotor tone"},
+        {"letter": "b", "text": "increasing the parasympathetic vasomotor tone"},
+        {"letter": "c", "text": "decreasing the parasympathetic vasomotor tone"},
+        {"letter": "d", "text": "increasing the sympathetic vasomotor tone"}
+      ],
+      "correctAnswers": ["a"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Turn 1, Page 1, Question 12"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-9",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 9,
+      "text": "The beat by beat matching of stroke volume to venous return in the left and right ventricles are due to",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "the negative inotropic effect of the vagal nerves"},
+        {"letter": "b", "text": "the positive inotropic effect of the sympathetic cardiac nerves"},
+        {"letter": "c", "text": "the negative dromotropic effect of the left vagal nerve"},
+        {"letter": "d", "text": "extracardiac mechanisms"},
+        {"letter": "e", "text": "the Frank-Starling's regulatory mechanism of cardiac contraction force"}
+      ],
+      "correctAnswers": ["e"],
+      "topics": [37],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Turn 1, Page 1, Question 13"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-10",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 10,
+      "text": "The portion of the circulatory system with the largest total cross-sectional area is the:",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "capillaries"},
+        {"letter": "b", "text": "small veins"},
+        {"letter": "c", "text": "arterioles"},
+        {"letter": "d", "text": "large arteries"},
+        {"letter": "e", "text": "large veins"}
+      ],
+      "correctAnswers": ["a"],
+      "topics": [33, 39],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Turn 1, Page 2, Question 15"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-11",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 11,
+      "text": "Local hypoxia elicits vasoconstriction in the resistance vessels of",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "the coronary circulation"},
+        {"letter": "b", "text": "the cerebral circulation"},
+        {"letter": "c", "text": "the skeletal muscle circulation"},
+        {"letter": "d", "text": "the pulmonary circulation"}
+      ],
+      "correctAnswers": ["d"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Turn 1, Page 2, Question 16"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-12",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 12,
+      "text": "Mediators released from NERVE ENDINGS during neurogenic inflammation contributing to the development of the triple response:",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "substance P (SP) and calcitonin gene-related peptide (CGRP)"},
+        {"letter": "b", "text": "a prostagyclin (PGI2) and nitrogen oxide (NO)"},
+        {"letter": "c", "text": "noradrenaline and neuropeptide Y (NPY)"},
+        {"letter": "d", "text": "acetyl-choline and vasoactive intestinal polypeptide (VIP)"}
+      ],
+      "correctAnswers": ["a"],
+      "topics": [41],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.9,
+        "originalSource": "Turn 1, Page 2, Question 19"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-13",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 13,
+      "text": "What is the Fahraeus-Lindquist effect?",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "the viscosity of blood decreases if the velocity of flow increases"},
+        {"letter": "b", "text": "viscosity of blood increases if the blood flows in narrower blood vessels up to diameters of 7-10 micrometers"},
+        {"letter": "c", "text": "viscosity of blood decreases if the blood flows in narrower blood vessels up to diameters of 7-10 micrometers"},
+        {"letter": "d", "text": "the viscosity of blood remains constant despite changes in the velocity of flow"},
+        {"letter": "e", "text": "the viscosity of blood increases if the velocity of flow increases"}
+      ],
+      "correctAnswers": ["c"],
+      "topics": [33],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Turn 1, Page 2, Question 20"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-14",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 14,
+      "text": "The decreased compliance of the elastic arteries results in",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "a decreased systolic pressure"},
+        {"letter": "b", "text": "an increased mean pressure"},
+        {"letter": "c", "text": "a decreased diastolic pressure"},
+        {"letter": "d", "text": "an increased pulse pressure"}
+      ],
+      "correctAnswers": ["c", "d"],
+      "topics": [34],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Turn 1, Page 2, Question 21"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-15",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 15,
+      "text": "During increased metabolic activity of a brain area, the regional cerebral blood flow:",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "will remain unchanged because blood pressure is unchanged"},
+        {"letter": "b", "text": "will increase because local vascular resistance will decrease"},
+        {"letter": "c", "text": "will fall because the local blood pressure will become inadequate to maintain it"},
+        {"letter": "d", "text": "will decrease because flow is inversely related to the local vascular resistance"}
+      ],
+      "correctAnswers": ["b"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Turn 1, Page 2, Question 23"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-16",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 16,
+      "text": "The MOST important factor determining the shape of red blood cells in the circulation",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "the elasticity of the red blood cell's membrane"},
+        {"letter": "b", "text": "the cytoskeleton of the red blood cell"},
+        {"letter": "c", "text": "the activity of contractile proteins within the red blood cell"},
+        {"letter": "d", "text": "the passive deformations due to shear forces"}
+      ],
+      "correctAnswers": ["d"],
+      "topics": [33],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Turn 2, Page 3, Question 1"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-17",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 17,
+      "text": "The decreased compliance of the elastic arteries results in",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "a decreased diastolic pressure"},
+        {"letter": "b", "text": "a decreased systolic pressure"},
+        {"letter": "c", "text": "an increased pulse pressure"},
+        {"letter": "d", "text": "an increased mean pressure"}
+      ],
+      "correctAnswers": ["a", "c"],
+      "topics": [34],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Turn 2, Page 3, Question 2"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-18",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 18,
+      "text": "Mediators released from NERVE ENDINGS during neurogenic inflammation contributing to the development of the triple response:",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "acetyl-choline and vasoactive intestinal polypeptide (VIP)"},
+        {"letter": "b", "text": "substance P (SP) and calcitonin gene-related peptide (CGRP)"},
+        {"letter": "c", "text": "a prostagyclin (PGI2) and nitrogen oxide (NO)"},
+        {"letter": "d", "text": "noradrenaline and neuropeptide Y (NPY)"}
+      ],
+      "correctAnswers": ["b"],
+      "topics": [41],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.9,
+        "originalSource": "Turn 2, Page 3, Question 3"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-19",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 19,
+      "text": "The mean systemic filling pressure",
+      "correctAnswerCount": 4,
+      "options": [
+        {"letter": "a", "text": "is measured after the arrest of the heart"},
+        {"letter": "b", "text": "is the same as the normal mean capillary pressure"},
+        {"letter": "c", "text": "increases with hypervolemia"},
+        {"letter": "d", "text": "is lower than the normal mean arterial pressure"},
+        {"letter": "e", "text": "is higher in the arterioles than in the capillaries"},
+        {"letter": "f", "text": "is lower than the normal central venous pressure"}
+      ],
+      "correctAnswers": ["a", "c", "e", "f"],
+      "topics": [33, 40],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.9,
+        "originalSource": "Turn 2, Page 3, Question 4"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-20",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 20,
+      "text": "Choose the CORRECT statements! When standing up:",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "cardiac output decreases"},
+        {"letter": "b", "text": "the sympathetic tone constricting the veins increases"},
+        {"letter": "c", "text": "the baroreceptor activity increases"},
+        {"letter": "d", "text": "heart rate decreases"},
+        {"letter": "e", "text": "the activity of the medullary pressor area increases"},
+        {"letter": "f", "text": "total peripheral resistance decreases"}
+      ],
+      "correctAnswers": ["b", "e"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.9,
+        "originalSource": "Turn 2, Page 3, Question 5"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-21",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 21,
+      "text": "Increase of cAMP level in the smooth muscles of blood vessels",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "activates nitric oxide synthase (NOS)"},
+        {"letter": "b", "text": "causes relaxation"},
+        {"letter": "c", "text": "activates the Na+/K+ pump"},
+        {"letter": "d", "text": "causes contraction"}
+      ],
+      "correctAnswers": ["b"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Turn 2, Page 3, Question 6"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-22",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 22,
+      "text": "Mediators which cause vasodilatation:",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "TXA2"},
+        {"letter": "b", "text": "CGRP"},
+        {"letter": "c", "text": "Endothelin-1"},
+        {"letter": "d", "text": "5-HT"},
+        {"letter": "e", "text": "VIP"}
+      ],
+      "correctAnswers": ["b", "e"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.9,
+        "originalSource": "Turn 2, Page 3, Question 8"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-23",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 23,
+      "text": "During increased metabolic activity of a brain area, the regional cerebral blood flow:",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "will increase because local vascular resistance will decrease"},
+        {"letter": "b", "text": "will remain unchanged because blood pressure is unchanged"},
+        {"letter": "c", "text": "will fall because the local blood pressure will become inadequate to maintain it"},
+        {"letter": "d", "text": "will decrease because flow is inversely related to the local vascular resistance"}
+      ],
+      "correctAnswers": ["a"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Turn 2, Page 3, Question 10"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-24",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 24,
+      "text": "Calculation of the venous compliance:",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "pressure x radius / wall thickness"},
+        {"letter": "b", "text": "pressure difference / volume flow"},
+        {"letter": "c", "text": "diastolic pressure / systolic pressure"},
+        {"letter": "d", "text": "Hagen-Poiseuille equation"},
+        {"letter": "e", "text": "volume change / pressure change"}
+      ],
+      "correctAnswers": ["e"],
+      "topics": [40],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Turn 2, Page 3, Question 12"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-25",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 25,
+      "text": "In which organ's microcirculation is there NO SIGNIFICANT colloid-osmotic pressure difference between the blood plasma and the interstitial fluid?",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "lung"},
+        {"letter": "b", "text": "skeletal muscle"},
+        {"letter": "c", "text": "the mucosa of the small intestine"},
+        {"letter": "d", "text": "spleen"},
+        {"letter": "e", "text": "liver"}
+      ],
+      "correctAnswers": ["d", "e"],
+      "topics": [41],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Turn 2, Page 4, Question 14"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-26",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 26,
+      "text": "The beat by beat matching of stroke volume to venous return in the left and right ventricles are due to",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "the positive inotropic effect of the sympathetic cardiac nerves"},
+        {"letter": "b", "text": "the negative inotropic effect of the vagal nerves"},
+        {"letter": "c", "text": "extracardiac mechanisms"},
+        {"letter": "d", "text": "the Frank-Starling's regulatory mechanism of cardiac contraction force"},
+        {"letter": "e", "text": "the negative dromotropic effect of the left vagal nerve"}
+      ],
+      "correctAnswers": ["d"],
+      "topics": [37],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Turn 2, Page 4, Question 17"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-27",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 27,
+      "text": "The portion of the circulatory system with the largest total cross-sectional area is the:",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "capillaries"},
+        {"letter": "b", "text": "small veins"},
+        {"letter": "c", "text": "large arteries"},
+        {"letter": "d", "text": "large veins"},
+        {"letter": "e", "text": "arterioles"}
+      ],
+      "correctAnswers": ["a"],
+      "topics": [33, 39],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Turn 2, Page 4, Question 18"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-28",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 28,
+      "text": "Sympathetic cholinergic fibers innervate the arterioles of",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "arterioles in skeletal muscles"},
+        {"letter": "b", "text": "external genitals"},
+        {"letter": "c", "text": "salivary glands"},
+        {"letter": "d", "text": "cerebral vessels"},
+        {"letter": "e", "text": "coronaries"}
+      ],
+      "correctAnswers": ["a"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Turn 2, Page 4, Question 19"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-29",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 29,
+      "text": "Local hypoxia elicits vasoconstriction in the resistance vessels of",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "the coronary circulation"},
+        {"letter": "b", "text": "the pulmonary circulation"},
+        {"letter": "c", "text": "the cerebral circulation"},
+        {"letter": "d", "text": "the skeletal muscle circulation"}
+      ],
+      "correctAnswers": ["b"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Turn 2, Page 4, Question 20"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-30",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 30,
+      "text": "The major function of lymphatics is",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "to remove lactic acid and other metabolites from the tissues"},
+        {"letter": "b", "text": "to deliver proteins for the tissues"},
+        {"letter": "c", "text": "to deliver lipid soluble nutrients to the tissues"},
+        {"letter": "d", "text": "to deliver lymphocytes to the tissues"},
+        {"letter": "e", "text": "to remove proteins from the interstitial fluid"}
+      ],
+      "correctAnswers": ["e"],
+      "topics": [42],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Turn 2, Page 4, Question 22"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-31",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 31,
+      "text": "Vascular autoregulation",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "manifests itself as vasodilation in response to increases in the intravascular pressure"},
+        {"letter": "b", "text": "requires rich sympathetic innervation"},
+        {"letter": "c", "text": "is insignificant in the skin vessels"},
+        {"letter": "d", "text": "is particularly marked in the cerebral vessels"},
+        {"letter": "e", "text": "is characteristic of veins"}
+      ],
+      "correctAnswers": ["c", "d"],
+      "topics": [33, 43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.9,
+        "originalSource": "Turn 2, Page 4, Question 23"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-32",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 32,
+      "text": "Mean arterial blood pressure is MOST determined in the long term by:",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "renal volume regulation through pressure diuresis and hormonal regulation"},
+        {"letter": "b", "text": "the peripheral chemoreceptor reflex"},
+        {"letter": "c", "text": "the Cushing reflex"},
+        {"letter": "d", "text": "total peripheral resistance regulated by the direct vasoconstrictor effects of arginin-vasopressin and angiotensin II"},
+        {"letter": "e", "text": "the baroreceptor reflex"}
+      ],
+      "correctAnswers": ["a"],
+      "topics": [44],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Turn 2, Page 4, Question 24"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-33",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 33,
+      "text": "In the systemic circulation, arterioles are characterized by:",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "the highest velocity of blood flow"},
+        {"letter": "b", "text": "the greatest pressure drop"},
+        {"letter": "c", "text": "the greatest compliance"},
+        {"letter": "d", "text": "the greatest resistance to flow"},
+        {"letter": "e", "text": "the lowest fraction of blood volume"}
+      ],
+      "correctAnswers": ["b", "d"],
+      "topics": [33],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Page 1, Question 2"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-34",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 34,
+      "text": "The total lymph flow in adult humans is approximately:",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "1-2 ml/sec"},
+        {"letter": "b", "text": "1-2 microliter/hour"},
+        {"letter": "c", "text": "1-2 microliter/min"},
+        {"letter": "d", "text": "1-2 microliter/sec"},
+        {"letter": "e", "text": "1-2 ml/hour"},
+        {"letter": "f", "text": "1-2 ml/min"}
+      ],
+      "correctAnswers": ["f"],
+      "topics": [42],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Page 1, Question 4"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-35",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 35,
+      "text": "Mean arterial blood pressure is MOST determined in the long term by:",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "the Cushing reflex"},
+        {"letter": "b", "text": "the baroreceptor reflex"},
+        {"letter": "c", "text": "total peripheral resistance regulated by the direct vasoconstrictor effects of arginin-vasopressin and angiotensin II"},
+        {"letter": "d", "text": "renal volume regulation through pressure diuresis and hormonal regulation"},
+        {"letter": "e", "text": "the peripheral chemoreceptor reflex"}
+      ],
+      "correctAnswers": ["d"],
+      "topics": [44],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Page 1, Question 6"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-36",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 36,
+      "text": "The velocity of blood flow",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "determines the magnitude of the pulse pressure"},
+        {"letter": "b", "text": "is inversely related to the cross-sectional area of the blood vessel"},
+        {"letter": "c", "text": "decreases if the compliance of the blood vessels decreases"},
+        {"letter": "d", "text": "is the lowest in the capillary vessels"}
+      ],
+      "correctAnswers": ["b", "d"],
+      "topics": [33],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Page 1, Question 9"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-37",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 37,
+      "text": "What is the systolic pressure measured in the pulmonary artery?",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "24 mm Hg"},
+        {"letter": "b", "text": "0-6 mm Hg"},
+        {"letter": "c", "text": "50 mm Hg"},
+        {"letter": "d", "text": "35 mm Hg"},
+        {"letter": "e", "text": "80 mm Hg"},
+        {"letter": "f", "text": "120 mm Hg"}
+      ],
+      "correctAnswers": ["a"],
+      "topics": [34],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Page 1, Question 11"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-38",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 38,
+      "text": "Local vasoconstrictors:",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "local increase of K+ concentration"},
+        {"letter": "b", "text": "thromboxane A2"},
+        {"letter": "c", "text": "increase of pCO2"},
+        {"letter": "d", "text": "adenosine"},
+        {"letter": "e", "text": "endothelin"},
+        {"letter": "f", "text": "bradykinin"}
+      ],
+      "correctAnswers": ["b", "e"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.9,
+        "originalSource": "Page 2, Question 15"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-39",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 39,
+      "text": "Which one does NOT influence venous capacity in the leg?",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "sympathetic adrenergic venoconstrictor innervation"},
+        {"letter": "b", "text": "body posture"},
+        {"letter": "c", "text": "parasympathetic cholinergic vasodilator innervation"},
+        {"letter": "d", "text": "function of the right ventricle"},
+        {"letter": "e", "text": "contraction of the precapillary sphincters in the leg"}
+      ],
+      "correctAnswers": ["c"],
+      "topics": [40],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Page 2, Question 19"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-40",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 40,
+      "text": "Which circulatory reflex operates at physiologic arterial blood pressure values in a healthy individual?",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "the Cushing reflex"},
+        {"letter": "b", "text": "the central chemoreceptor depressor reflex"},
+        {"letter": "c", "text": "the peripheral chemoreceptor pressor reflex"},
+        {"letter": "d", "text": "the carotid sinus baroreceptor reflex"}
+      ],
+      "correctAnswers": ["d"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Page 2, Question 20"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-41",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 41,
+      "text": "The cerebral arterioles in a healthy subject have their most pronounced vasodilation in response to",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "the stimulation of adrenergic sympathetic neurons"},
+        {"letter": "b", "text": "an increased pO2"},
+        {"letter": "c", "text": "the stimulation of postganglionic parasympathetic neurons"},
+        {"letter": "d", "text": "the stimulation of cholinergic sympathetic neurons"},
+        {"letter": "e", "text": "an increased pCO2"}
+      ],
+      "correctAnswers": ["e"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Page 5, Question 1"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-42",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 42,
+      "text": "The basal tone of the vessels",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "can be measured after the denervation of the vessels"},
+        {"letter": "b", "text": "the cerebral vessels do not have it"},
+        {"letter": "c", "text": "is the same as the neurogen tone"},
+        {"letter": "d", "text": "is identical in the different organs"}
+      ],
+      "correctAnswers": ["a"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.9,
+        "originalSource": "Page 5, Question 4"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-43",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 43,
+      "text": "The receptors of the central nervous system ischemic response are located in",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "the carotis sinus"},
+        {"letter": "b", "text": "the ventral medulla"},
+        {"letter": "c", "text": "the adrenal medulla"},
+        {"letter": "d", "text": "the right atrium"},
+        {"letter": "e", "text": "the carotid bodies"}
+      ],
+      "correctAnswers": ["b"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Page 5, Question 7"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-44",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 44,
+      "text": "The systemic veins differ from the systemic arteries in that the systemic veins",
+      "correctAnswerCount": 4,
+      "options": [
+        {"letter": "a", "text": "are much more compliant"},
+        {"letter": "b", "text": "in the extremities contain valves"},
+        {"letter": "c", "text": "contain a much greater blood volume"},
+        {"letter": "d", "text": "do not receive a sympathetic innervation"},
+        {"letter": "e", "text": "have a more variable blood volume"}
+      ],
+      "correctAnswers": ["a", "b", "c", "e"],
+      "topics": [40],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Page 5, Question 8"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-45",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 45,
+      "text": "The pressor center:",
+      "correctAnswerCount": 4,
+      "options": [
+        {"letter": "a", "text": "it is in the rostroventral reticular formation of the brainstem"},
+        {"letter": "b", "text": "its stimulation causes the increase of blood pressure"},
+        {"letter": "c", "text": "some of its cells have pacemaker activity"},
+        {"letter": "d", "text": "its stimulation results in bradycardia"}
+      ],
+      "correctAnswers": ["a", "b", "c", "d"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.9,
+        "originalSource": "Page 5, Question 10"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-46",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 46,
+      "text": "Which of the following second messenger systems is implicated in the mediation of vasoconstriction?",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "stimulation of cGMP"},
+        {"letter": "b", "text": "PGE2"},
+        {"letter": "c", "text": "stimulation of cAMP"},
+        {"letter": "d", "text": "stimulation of IP3"}
+      ],
+      "correctAnswers": ["d"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.9,
+        "originalSource": "Page 5, Question 11"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-47",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 47,
+      "text": "The mean systemic filling pressure",
+      "correctAnswerCount": 5,
+      "options": [
+        {"letter": "a", "text": "is the same as the normal mean capillary pressure"},
+        {"letter": "b", "text": "is lower than the normal central venous pressure"},
+        {"letter": "c", "text": "is higher in the arterioles than in the capillaries"},
+        {"letter": "d", "text": "is measured after cardiac arrest"},
+        {"letter": "e", "text": "is lower than the normal mean arterial pressure"},
+        {"letter": "f", "text": "increases with hypervolemia"}
+      ],
+      "correctAnswers": ["b", "c", "d", "e", "f"],
+      "topics": [33, 40],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.9,
+        "originalSource": "Page 5, Question 12"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-48",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 48,
+      "text": "Vasodilator substances produced by the endothelium:",
+      "correctAnswerCount": 2,
+      "options": [
+        {"letter": "a", "text": "nitric oxide (NO)"},
+        {"letter": "b", "text": "prostacyclin (PGI2)"},
+        {"letter": "c", "text": "angiotensin II (AT2)"},
+        {"letter": "d", "text": "endothelin (ET)"}
+      ],
+      "correctAnswers": ["a", "b"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Page 5, Question 13"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-49",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 49,
+      "text": "The function of carotis sinus reflex is:",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "prevention of long lasting hypertension"},
+        {"letter": "b", "text": "gas exchange"},
+        {"letter": "c", "text": "fast correction of blood pressure"},
+        {"letter": "d", "text": "regulation of filling of the right heart"},
+        {"letter": "e", "text": "maintaining a constant blood pressure over a long period of time"}
+      ],
+      "correctAnswers": ["c"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Page 6, Question 14"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-50",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 50,
+      "text": "Factors that lead to tissue edema include",
+      "correctAnswerCount": 3,
+      "options": [
+        {"letter": "a", "text": "arteriolar vasoconstriction"},
+        {"letter": "b", "text": "lymphatic obstruction"},
+        {"letter": "c", "text": "venous obstruction"},
+        {"letter": "d", "text": "low intravascular protein concentration"}
+      ],
+      "correctAnswers": ["b", "c", "d"],
+      "topics": [41, 42],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Page 6, Question 15"
+      }
+    },
+    {
+      "id": "q-mto3-pages48-55-51",
+      "testId": "mto3-pages48-55",
+      "questionNumber": 51,
+      "text": "Determine the cardiac output! Oxygen consumption: 2000mL/min, arterial oxygen concentration: 20mL/100mL, venous oxygen concentration: 10 mL/100mL",
+      "correctAnswerCount": 1,
+      "options": [
+        {"letter": "a", "text": "10 L/min"},
+        {"letter": "b", "text": "2.5 L/min"},
+        {"letter": "c", "text": "5 L/min"},
+        {"letter": "d", "text": "20 L/min"}
+      ],
+      "correctAnswers": ["d"],
+      "topics": [37],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "originalSource": "Page 6, Question 16"
+      }
+    }
+  ],
+  "summary": {
+    "totalQuestions": 51,
+    "byAnswerType": {
+      "single": 29,
+      "multiple_2": 15,
+      "multiple_3": 3,
+      "multiple_4": 3,
+      "multiple_5": 1
+    },
+    "byTopic": {
+      "33": 10,
+      "34": 4,
+      "37": 3,
+      "39": 3,
+      "40": 8,
+      "41": 7,
+      "42": 3,
+      "43": 21,
+      "44": 3
+    },
+    "duplicateQuestions": [
+      {
+        "text": "In which organ's microcirculation is there NO SIGNIFICANT colloid-osmotic pressure difference between the blood plasma and the interstitial fluid?",
+        "questionIds": ["q-mto3-pages48-55-1", "q-mto3-pages48-55-25"]
+      },
+      {
+        "text": "Calculation of the venous compliance:",
+        "questionIds": ["q-mto3-pages48-55-2", "q-mto3-pages48-55-24"]
+      },
+      {
+        "text": "The mean systemic filling pressure",
+        "questionIds": ["q-mto3-pages48-55-3", "q-mto3-pages48-55-19", "q-mto3-pages48-55-47"]
+      },
+      {
+        "text": "The decreased compliance of the elastic arteries results in",
+        "questionIds": ["q-mto3-pages48-55-14", "q-mto3-pages48-55-17"]
+      },
+      {
+        "text": "Mediators released from NERVE ENDINGS during neurogenic inflammation contributing to the development of the triple response:",
+        "questionIds": ["q-mto3-pages48-55-12", "q-mto3-pages48-55-18"]
+      },
+      {
+        "text": "During increased metabolic activity of a brain area, the regional cerebral blood flow:",
+        "questionIds": ["q-mto3-pages48-55-15", "q-mto3-pages48-55-23"]
+      },
+      {
+        "text": "The beat by beat matching of stroke volume to venous return in the left and right ventricles are due to",
+        "questionIds": ["q-mto3-pages48-55-9", "q-mto3-pages48-55-26"]
+      },
+      {
+        "text": "The portion of the circulatory system with the largest total cross-sectional area is the:",
+        "questionIds": ["q-mto3-pages48-55-10", "q-mto3-pages48-55-27"]
+      },
+      {
+        "text": "Sympathetic cholinergic fibers innervate the arterioles of",
+        "questionIds": ["q-mto3-pages48-55-7", "q-mto3-pages48-55-28"]
+      },
+      {
+        "text": "Local hypoxia elicits vasoconstriction in the resistance vessels of",
+        "questionIds": ["q-mto3-pages48-55-11", "q-mto3-pages48-55-29"]
+      },
+      {
+        "text": "Vascular autoregulation",
+        "questionIds": ["q-mto3-pages48-55-6", "q-mto3-pages48-55-31"]
+      },
+      {
+        "text": "Mean arterial blood pressure is MOST determined in the long term by:",
+        "questionIds": ["q-mto3-pages48-55-32", "q-mto3-pages48-55-35"]
+      }
+    ],
+    "notes": [
+      "51 questions successfully parsed from pages 48-55 of mto3,AA.pdf",
+      "Approximately 30 questions were excluded due to large orange markers covering text",
+      "Several questions appear multiple times across different pages with slight variations in option order",
+      "All questions relate to cardiovascular physiology topics (33-44)",
+      "Topic 43 (Short-term BP regulation) has the most questions with 21 instances",
+      "Medical terminology and special characters (subscripts/superscripts) preserved throughout"
+    ]
+  }
+}
