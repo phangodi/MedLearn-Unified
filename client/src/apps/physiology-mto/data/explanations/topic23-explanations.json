@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "topic": 23,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 1,
+    "status": "TEMPLATE - needs explanations generated"
+  },
+  "questions": [
+    {
+      "questionId": "q-5090109547-23",
+      "text": "For the different muscle types the following statements are TRUE:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "According to the size principle of motorneurons motor units are recruited from the weakest to the strongest"
+        },
+        {
+          "letter": "b",
+          "text": "Slow twitch (type I fibers): are built to produce peak force in a prolonged activity"
+        },
+        {
+          "letter": "c",
+          "text": "During low intensity activity, the muscle force is generated mainly by type II fibers"
+        },
+        {
+          "letter": "d",
+          "text": "Most human skeletal muscles contain both type I and type II fibers"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "d"
+      ],
+      "correctAnswerCount": 2
+    }
+  ]
+}

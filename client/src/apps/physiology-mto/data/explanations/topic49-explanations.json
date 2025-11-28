@@ -1,0 +1,702 @@
+{
+  "metadata": {
+    "topic": 49,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 22,
+    "status": "TEMPLATE - needs explanations generated"
+  },
+  "questions": [
+    {
+      "questionId": "q-0313014645-B-24",
+      "text": "Angiotensin convertase enzyme cleaves",
+      "options": [
+        {
+          "letter": "a",
+          "text": "and activates angiotensin I"
+        },
+        {
+          "letter": "b",
+          "text": "and inactivates angiotensin I"
+        },
+        {
+          "letter": "c",
+          "text": "and activates bradykinin"
+        },
+        {
+          "letter": "d",
+          "text": "and inactivates bradykinin"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "d"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-0313014645-16",
+      "text": "The most effective long-term blood pressure regulating mechanism is the",
+      "options": [
+        {
+          "letter": "a",
+          "text": "arterial chemoreceptor reflex"
+        },
+        {
+          "letter": "b",
+          "text": "carotis sinus reflex"
+        },
+        {
+          "letter": "c",
+          "text": "vascular autoregulation"
+        },
+        {
+          "letter": "d",
+          "text": "stress-relaxation"
+        },
+        {
+          "letter": "e",
+          "text": "renal volume regulation"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-1526033148-45",
+      "text": "ANP (M)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "is released in response to hypervolemia"
+        },
+        {
+          "letter": "b",
+          "text": "is released in response to hypovolemia"
+        },
+        {
+          "letter": "c",
+          "text": "elicits an increase in the total peripheral resistance"
+        },
+        {
+          "letter": "d",
+          "text": "stimulates aldosterone secretion"
+        },
+        {
+          "letter": "e",
+          "text": "causes vasoconstriction in the renal artery"
+        },
+        {
+          "letter": "f",
+          "text": "inhibits renin secretion"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "f"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-1526033148-46",
+      "text": "Which of the following statements are correct? (M)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "angiotensin has vasoconstrictor activity"
+        },
+        {
+          "letter": "b",
+          "text": "angiotensin is produced by the liver"
+        },
+        {
+          "letter": "c",
+          "text": "renin is released in the response to decreased renal blood flow"
+        },
+        {
+          "letter": "d",
+          "text": "renin is released in the response to increased sodium concentration in the blood"
+        },
+        {
+          "letter": "e",
+          "text": "the release of angiotensin II from angiotensin I is catalyzed by converting enzymes"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "b",
+        "c",
+        "e"
+      ],
+      "correctAnswerCount": 4
+    },
+    {
+      "questionId": "q-1526033148-48",
+      "text": "The effects of atrial natriuretic peptide include (M)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "vasodilatation"
+        },
+        {
+          "letter": "b",
+          "text": "increased sensitivity of beta-adrenergic receptors"
+        },
+        {
+          "letter": "c",
+          "text": "inhibition of ADH secretion"
+        },
+        {
+          "letter": "d",
+          "text": "stimulation of renin secretion"
+        },
+        {
+          "letter": "e",
+          "text": "increased elimination of bradykinin"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "c"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-3221027349-8",
+      "text": "Which transport is modulated by ANH in the kidney? ANH inhibits",
+      "options": [
+        {
+          "letter": "a",
+          "text": "amiloride-sensitive Na channels in the collecting duct"
+        },
+        {
+          "letter": "b",
+          "text": "Na-K exchange in the proximal tubule"
+        },
+        {
+          "letter": "c",
+          "text": "vasopressin-stimulated water reabsorption in the collecting duct"
+        },
+        {
+          "letter": "d",
+          "text": "Na-K-2Cl cotransporter in the thick segment"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-3543048990-67",
+      "text": "Which of the following substances are classified as vasoconstrictors",
+      "options": [
+        {
+          "letter": "a",
+          "text": "bradykinin"
+        },
+        {
+          "letter": "b",
+          "text": "nitric oxide"
+        },
+        {
+          "letter": "c",
+          "text": "endothelin"
+        },
+        {
+          "letter": "d",
+          "text": "beta-1 adrenergic agonists"
+        },
+        {
+          "letter": "e",
+          "text": "angiotensin II"
+        },
+        {
+          "letter": "f",
+          "text": "noradrenaline"
+        },
+        {
+          "letter": "g",
+          "text": "atrial natriuretic peptide"
+        },
+        {
+          "letter": "h",
+          "text": "vasopressin"
+        }
+      ],
+      "correctAnswers": [
+        "c",
+        "e",
+        "f",
+        "h"
+      ],
+      "correctAnswerCount": 4
+    },
+    {
+      "questionId": "q-3543048990-69",
+      "text": "Blood pressure might increase in response to",
+      "options": [
+        {
+          "letter": "a",
+          "text": "T3/T4"
+        },
+        {
+          "letter": "b",
+          "text": "ADH"
+        },
+        {
+          "letter": "c",
+          "text": "increased cerebral blood flow"
+        },
+        {
+          "letter": "d",
+          "text": "decreased renal blood flow"
+        },
+        {
+          "letter": "e",
+          "text": "bradykinin"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "b",
+        "d"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-3543048990-70",
+      "text": "Which of the following substances increases blood pressure",
+      "options": [
+        {
+          "letter": "a",
+          "text": "angiotensin"
+        },
+        {
+          "letter": "b",
+          "text": "histamine"
+        },
+        {
+          "letter": "c",
+          "text": "noradrenaline"
+        },
+        {
+          "letter": "d",
+          "text": "bradykinin"
+        },
+        {
+          "letter": "e",
+          "text": "substance P"
+        },
+        {
+          "letter": "f",
+          "text": "ADH"
+        },
+        {
+          "letter": "g",
+          "text": "ANP"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "c",
+        "f"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-3543048990-71",
+      "text": "It is characteristics of angiotensin II that",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the active angiotensin II is cleaved from renin"
+        },
+        {
+          "letter": "b",
+          "text": "it stimulates the secretion of aldosterone"
+        },
+        {
+          "letter": "c",
+          "text": "it is the most potent endogenous vasodilator agent"
+        },
+        {
+          "letter": "d",
+          "text": "it induces thirst"
+        },
+        {
+          "letter": "e",
+          "text": "angiotensin secretion is stimulated by the excitation of osmoreceptors"
+        },
+        {
+          "letter": "f",
+          "text": "it is a peptide"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "d",
+        "f"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-3543048990-72",
+      "text": "The effects of atrial natriuretic peptide include",
+      "options": [
+        {
+          "letter": "a",
+          "text": "vasodilatation"
+        },
+        {
+          "letter": "b",
+          "text": "increased sensitivity of beta-adrenergic receptors"
+        },
+        {
+          "letter": "c",
+          "text": "inhibition of ADH secretion"
+        },
+        {
+          "letter": "d",
+          "text": "stimulation of renin secretion"
+        },
+        {
+          "letter": "e",
+          "text": "increased elimination of bradykinin"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "c"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-3543048990-78",
+      "text": "Atrial stretch receptors (B-receptors):",
+      "options": [
+        {
+          "letter": "a",
+          "text": "influence ADH secretion"
+        },
+        {
+          "letter": "b",
+          "text": "mediate the Bezold-Jarish reflex"
+        },
+        {
+          "letter": "c",
+          "text": "stimulate the pressor center"
+        },
+        {
+          "letter": "d",
+          "text": "mediate the Herin-Breuer reflex"
+        },
+        {
+          "letter": "e",
+          "text": "elicit a drop in blood pressure"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "e"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-3543048990-80",
+      "text": "Mechanisms involved in the regulation of blood volume are",
+      "options": [
+        {
+          "letter": "a",
+          "text": "baroreceptors in the atria"
+        },
+        {
+          "letter": "b",
+          "text": "baroreceptors in the arterial system"
+        },
+        {
+          "letter": "c",
+          "text": "axon reflex"
+        },
+        {
+          "letter": "d",
+          "text": "vasopressin secretion"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "d"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-4447200607-8",
+      "text": "Vasopressin in the circulation",
+      "options": [
+        {
+          "letter": "a",
+          "text": "elevates intracellular Ca concentration in the vascular smooth muscle"
+        },
+        {
+          "letter": "b",
+          "text": "stimulates cAMP via V1 receptors"
+        },
+        {
+          "letter": "c",
+          "text": "elicits vasoconstriction via V1 receptors"
+        },
+        {
+          "letter": "d",
+          "text": "decreases the total peripheral resistance"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "c"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-4447200607-32",
+      "text": "Mechanisms involved in the regulation of blood volume are",
+      "options": [
+        {
+          "letter": "a",
+          "text": "baroreceptors in the arterial system (glomus bodies)"
+        },
+        {
+          "letter": "b",
+          "text": "baroreceptors in the atria"
+        },
+        {
+          "letter": "c",
+          "text": "vasopressin secretion"
+        },
+        {
+          "letter": "d",
+          "text": "axon-reflex"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-4525102917-17",
+      "text": "Long-term regulation of arterial blood pressure is achieved mainly through",
+      "options": [
+        {
+          "letter": "a",
+          "text": "baroreceptor reflex mechanism"
+        },
+        {
+          "letter": "b",
+          "text": "hormone secretion of the adrenal medulla"
+        },
+        {
+          "letter": "c",
+          "text": "the renal hormonal control of extracellular fluid volume"
+        },
+        {
+          "letter": "d",
+          "text": "the arterial baroreceptor reflex mechanism"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4855200607-5",
+      "text": "Vasopressin in the circulation",
+      "options": [
+        {
+          "letter": "a",
+          "text": "elicits vasoconstriction via V1 receptors"
+        },
+        {
+          "letter": "b",
+          "text": "stimulates cAMP via V1 receptors"
+        },
+        {
+          "letter": "c",
+          "text": "elevates intracellular Ca2+ concentration in the vascular smooth muscle"
+        },
+        {
+          "letter": "d",
+          "text": "decreases the total peripheral resistance"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "c"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-4855200607-32",
+      "text": "Mean arterial blood pressure is MOST determined in the long term by:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "renal volume regulation through pressure diuresis and hormonal regulation"
+        },
+        {
+          "letter": "b",
+          "text": "the peripheral chemoreceptor reflex"
+        },
+        {
+          "letter": "c",
+          "text": "the Cushing reflex"
+        },
+        {
+          "letter": "d",
+          "text": "total peripheral resistance regulated by the direct vasoconstrictor effects of arginin-vasopressin and angiotensin II"
+        },
+        {
+          "letter": "e",
+          "text": "the baroreceptor reflex"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4855200607-35",
+      "text": "Mean arterial blood pressure is MOST determined in the long term by:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the Cushing reflex"
+        },
+        {
+          "letter": "b",
+          "text": "the baroreceptor reflex"
+        },
+        {
+          "letter": "c",
+          "text": "total peripheral resistance regulated by the direct vasoconstrictor effects of arginin-vasopressin and angiotensin II"
+        },
+        {
+          "letter": "d",
+          "text": "renal volume regulation through pressure diuresis and hormonal regulation"
+        },
+        {
+          "letter": "e",
+          "text": "the peripheral chemoreceptor reflex"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-5090109547-22",
+      "text": "The atrial natriuretic peptide",
+      "options": [
+        {
+          "letter": "a",
+          "text": "inhibits renin secretion"
+        },
+        {
+          "letter": "b",
+          "text": "stimulates aldosterone secretion"
+        },
+        {
+          "letter": "c",
+          "text": "is released in response to hypervolemia"
+        },
+        {
+          "letter": "d",
+          "text": "elicits an increase in the total peripheral resistance"
+        },
+        {
+          "letter": "e",
+          "text": "causes vasoconstriction in the renal artery"
+        },
+        {
+          "letter": "f",
+          "text": "is released in response to hypovolemia"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "c"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-5156012322-7",
+      "text": "The atrial natriuretic peptide",
+      "options": [
+        {
+          "letter": "a",
+          "text": "is released in response to hypovolemia"
+        },
+        {
+          "letter": "b",
+          "text": "stimulates aldosterone secretion"
+        },
+        {
+          "letter": "c",
+          "text": "is released in response to hypervolemia"
+        },
+        {
+          "letter": "d",
+          "text": "causes vasoconstriction in the renal artery"
+        },
+        {
+          "letter": "e",
+          "text": "inhibits renin secretion"
+        },
+        {
+          "letter": "f",
+          "text": "elicits an increase in the total peripheral resistance"
+        }
+      ],
+      "correctAnswers": [
+        "c",
+        "e"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-625411501B-24",
+      "text": "The effects of atrial natriuretic peptide include",
+      "options": [
+        {
+          "letter": "a",
+          "text": "increased elimination of bradykinin"
+        },
+        {
+          "letter": "b",
+          "text": "vasodilation"
+        },
+        {
+          "letter": "c",
+          "text": "increased sensitivity of beta-adrenergic receptors"
+        },
+        {
+          "letter": "d",
+          "text": "stimulation of renin secretion"
+        },
+        {
+          "letter": "e",
+          "text": "inhibition of ADH secretion"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "e"
+      ],
+      "correctAnswerCount": 2
+    }
+  ]
+}

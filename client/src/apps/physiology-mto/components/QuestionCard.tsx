@@ -1,7 +1,9 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Check, X, AlertCircle } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Check, X, AlertCircle, ChevronDown, Lightbulb, Loader2 } from 'lucide-react';
 import type { Question } from '../../physiology/data/questions/types';
+import { getExplanationByLegacyId } from '../services/firebaseQuestionsService';
+import type { QuestionExplanation } from '../types/firebase';
 
 interface QuestionCardProps {
   question: Question;
@@ -19,7 +21,41 @@ export function QuestionCard({
   selectedAnswers: submittedAnswers
 }: QuestionCardProps) {
   const [selectedAnswers, setSelectedAnswers] = useState<string[]>([]);
+  const [explanation, setExplanation] = useState<QuestionExplanation | null>(null);
+  const [explanationLoading, setExplanationLoading] = useState(false);
+  const [showExplanation, setShowExplanation] = useState(false);
+  const fetchedForQuestion = useRef<string | null>(null);
   const isMultipleChoice = question.correctAnswerCount > 1;
+
+  // Fetch explanation when question is answered
+  useEffect(() => {
+    // Only fetch once per question when answered
+    if (isAnswered && fetchedForQuestion.current !== question.id) {
+      fetchedForQuestion.current = question.id;
+      setExplanationLoading(true);
+      getExplanationByLegacyId(question.id)
+        .then((exp) => {
+          setExplanation(exp);
+          if (exp) {
+            setShowExplanation(true); // Auto-expand if explanation exists
+          }
+        })
+        .catch((err) => {
+          console.error('Failed to fetch explanation:', err);
+        })
+        .finally(() => {
+          setExplanationLoading(false);
+        });
+    }
+  }, [isAnswered, question.id]);
+
+  // Reset state when question changes
+  useEffect(() => {
+    setSelectedAnswers([]);
+    setExplanation(null);
+    setShowExplanation(false);
+    fetchedForQuestion.current = null;
+  }, [question.id]);
 
   const toggleOption = (letter: string) => {
     if (isAnswered) return;
@@ -218,28 +254,155 @@ export function QuestionCard({
             </p>
           )}
 
-          {/* ============================================================
-              EXPLANATION SECTION - TEMPORARILY HIDDEN
-              To re-enable: Change SHOW_EXPLANATION_SECTION to true
-              ============================================================ */}
-          {/* SHOW_EXPLANATION_SECTION = false - Set to true when explanations are ready */}
-          {false && (
-            <>
-              {/* Explanation */}
-              {question.explanation ? (
-                <div className="bg-card rounded-lg p-4 border border-border">
-                  <h4 className="font-semibold text-foreground mb-2">Explanation</h4>
-                  <p className="text-sm text-muted-foreground">{question.explanation}</p>
-                </div>
-              ) : (
-                <div className="bg-card rounded-lg p-4 border border-border">
-                  <p className="text-sm text-muted-foreground italic">
-                    Explanation not yet available for this question.
-                  </p>
-                </div>
-              )}
-            </>
-          )}
+          {/* Explanation Section */}
+          <div className="mt-4">
+            {explanationLoading ? (
+              <div className="flex items-center gap-2 text-muted-foreground">
+                <Loader2 className="w-4 h-4 animate-spin" />
+                <span className="text-sm">Loading explanation...</span>
+              </div>
+            ) : explanation ? (
+              <div className="bg-card rounded-lg border border-border overflow-hidden">
+                {/* Explanation Header - Clickable */}
+                <button
+                  onClick={() => setShowExplanation(!showExplanation)}
+                  className="w-full flex items-center justify-between p-4 hover:bg-muted/30 transition-colors"
+                >
+                  <div className="flex items-center gap-2">
+                    <Lightbulb className="w-5 h-5 text-amber-500" />
+                    <span className="font-semibold text-foreground">Explanation</span>
+                  </div>
+                  <ChevronDown
+                    className={`w-5 h-5 text-muted-foreground transition-transform duration-200 ${
+                      showExplanation ? 'rotate-180' : ''
+                    }`}
+                  />
+                </button>
+
+                {/* Explanation Content - Collapsible */}
+                <AnimatePresence>
+                  {showExplanation && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="overflow-hidden"
+                    >
+                      <div className="px-4 pb-4 space-y-4">
+                        {/* Summary */}
+                        <div className="p-3 bg-muted/30 rounded-lg">
+                          <p className="text-sm text-foreground leading-relaxed">
+                            {explanation.summary}
+                          </p>
+                        </div>
+
+                        {/* Personalized Feedback Based on User's Selections */}
+                        {(() => {
+                          const userSelections = submittedAnswers || [];
+                          const correctAnswers = question.correctAnswers;
+
+                          // Categorize the user's performance
+                          const correctlySelected = userSelections.filter(s => correctAnswers.includes(s));
+                          const missedCorrect = correctAnswers.filter(c => !userSelections.includes(c));
+                          const wrongSelections = userSelections.filter(s => !correctAnswers.includes(s));
+
+                          return (
+                            <>
+                              {/* Section 1: What user got RIGHT */}
+                              {correctlySelected.length > 0 && (
+                                <div>
+                                  <h5 className="text-sm font-semibold text-green-600 dark:text-green-400 mb-2 flex items-center gap-1">
+                                    <Check className="w-4 h-4" />
+                                    {isCorrect
+                                      ? (correctlySelected.length === 1 ? 'Why Your Answer is Correct' : 'Why Your Answers are Correct')
+                                      : (correctlySelected.length === 1 ? 'You Got This One Right' : 'You Got These Right')
+                                    }
+                                  </h5>
+                                  <div className="space-y-2">
+                                    {correctlySelected.map(letter => (
+                                      <div key={letter} className="flex gap-2 text-sm">
+                                        <span className="font-semibold text-green-600 dark:text-green-400 uppercase flex-shrink-0">
+                                          {letter}.
+                                        </span>
+                                        <span className="text-foreground">
+                                          {explanation.whyCorrect[letter] || 'Correct answer.'}
+                                        </span>
+                                      </div>
+                                    ))}
+                                  </div>
+                                </div>
+                              )}
+
+                              {/* Section 2: What user MISSED (correct answers they didn't select) */}
+                              {missedCorrect.length > 0 && (
+                                <div>
+                                  <h5 className="text-sm font-semibold text-amber-600 dark:text-amber-400 mb-2 flex items-center gap-1">
+                                    <AlertCircle className="w-4 h-4" />
+                                    {question.correctAnswerCount === 1
+                                      ? 'The Correct Answer Is'
+                                      : correctlySelected.length > 0
+                                        ? (missedCorrect.length === 1 ? 'You Should Have Also Selected This' : 'You Should Have Also Selected These')
+                                        : (missedCorrect.length === 1 ? 'The Correct Answer Is' : 'The Correct Answers Are')
+                                    }
+                                  </h5>
+                                  <div className="space-y-2">
+                                    {missedCorrect.map(letter => (
+                                      <div key={letter} className="flex gap-2 text-sm">
+                                        <span className="font-semibold text-amber-600 dark:text-amber-400 uppercase flex-shrink-0">
+                                          {letter}.
+                                        </span>
+                                        <span className="text-foreground">
+                                          {explanation.whyCorrect[letter] || 'This is also a correct answer.'}
+                                        </span>
+                                      </div>
+                                    ))}
+                                  </div>
+                                </div>
+                              )}
+
+                              {/* Section 3: What user got WRONG */}
+                              {wrongSelections.length > 0 && (
+                                <div>
+                                  <h5 className="text-sm font-semibold text-red-600 dark:text-red-400 mb-2 flex items-center gap-1">
+                                    <X className="w-4 h-4" />
+                                    Why Your Selection Was Incorrect
+                                  </h5>
+                                  <div className="space-y-2">
+                                    {wrongSelections.map(letter => (
+                                      <div key={letter} className="flex gap-2 text-sm">
+                                        <span className="font-semibold text-red-600 dark:text-red-400 uppercase flex-shrink-0">
+                                          {letter}.
+                                        </span>
+                                        <span className="text-muted-foreground">
+                                          {explanation.whyIncorrect[letter] || 'This answer is incorrect.'}
+                                        </span>
+                                      </div>
+                                    ))}
+                                  </div>
+                                </div>
+                              )}
+                            </>
+                          );
+                        })()}
+
+                        {/* Topic Reference */}
+                        {explanation.topicReference && (
+                          <p className="text-xs text-muted-foreground italic border-t border-border pt-3">
+                            {explanation.topicReference}
+                          </p>
+                        )}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ) : (
+              <div className="text-sm text-muted-foreground italic">
+                No explanation available for this question yet.
+              </div>
+            )}
+          </div>
         </motion.div>
       )}
     </div>

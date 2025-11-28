@@ -1,0 +1,25 @@
+{
+  "metadata": {
+    "topic": 31,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 1,
+    "status": "COMPLETE"
+  },
+  "explanations": [
+    {
+      "questionId": "q-2734027349-17",
+      "summary": "Central chemoreceptors respond to CSF/brain pH changes caused by CO2. Increased arterial pCO2 → CO2 diffuses into CSF → H⁺ increases (pH drops) → stimulates breathing. They DON'T respond to O2 levels or venous blood.",
+      "whyCorrect": {
+        "c": "Reduced arterial pH (acidosis) stimulates central chemoreceptors. CO2 crosses blood-brain barrier → forms H⁺ in CSF → detected by medullary chemoreceptors → increases ventilation.",
+        "d": "Increased arterial pCO2 is the PRIMARY stimulus. CO2 readily diffuses across BBB, converts to H⁺ in CSF, stimulating central chemoreceptors to increase respiration."
+      },
+      "whyIncorrect": {
+        "a": "INCREASED pH (alkalosis) would DECREASE respiratory drive, not increase it.",
+        "b": "Central chemoreceptors don't respond to venous pO2. They detect arterial/CSF changes, not venous.",
+        "e": "INCREASED brain interstitial pH (alkalosis) would decrease respiratory drive. It's DECREASED pH that stimulates.",
+        "f": "Central chemoreceptors respond primarily to CO2/H⁺, NOT oxygen. Peripheral chemoreceptors (carotid/aortic bodies) detect O2."
+      },
+      "topicReference": "Topic 31: Respiratory Control - Central Chemoreceptors"
+    }
+  ]
+}

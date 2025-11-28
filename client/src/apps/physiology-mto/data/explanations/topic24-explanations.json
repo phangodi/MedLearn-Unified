@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "topic": 24,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 3,
+    "status": "TEMPLATE - needs explanations generated"
+  },
+  "questions": [
+    {
+      "questionId": "q-4447200607-13",
+      "text": "Which of the following second messenger systems is implicated in the mediation of vasoconstriction?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "activation of cGMP"
+        },
+        {
+          "letter": "b",
+          "text": "stimulation of cAMP"
+        },
+        {
+          "letter": "c",
+          "text": "stimulation of cGMP"
+        },
+        {
+          "letter": "d",
+          "text": "stimulation of IP3"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4855200607-21",
+      "text": "Increase of cAMP level in the smooth muscles of blood vessels",
+      "options": [
+        {
+          "letter": "a",
+          "text": "activates nitric oxide synthase (NOS)"
+        },
+        {
+          "letter": "b",
+          "text": "causes relaxation"
+        },
+        {
+          "letter": "c",
+          "text": "activates the Na+/K+ pump"
+        },
+        {
+          "letter": "d",
+          "text": "causes contraction"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4855200607-46",
+      "text": "Which of the following second messenger systems is implicated in the mediation of vasoconstriction?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "stimulation of cGMP"
+        },
+        {
+          "letter": "b",
+          "text": "PGE2"
+        },
+        {
+          "letter": "c",
+          "text": "stimulation of cAMP"
+        },
+        {
+          "letter": "d",
+          "text": "stimulation of IP3"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    }
+  ]
+}

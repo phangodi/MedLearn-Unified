@@ -1,0 +1,132 @@
+{
+  "metadata": {
+    "topic": 79,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 4,
+    "status": "TEMPLATE - needs explanations generated"
+  },
+  "questions": [
+    {
+      "questionId": "q-2734027349-14",
+      "text": "Secretion of aldosteron:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "enhanced by an increase of Na+ concentration of the blood"
+        },
+        {
+          "letter": "b",
+          "text": "enhanced by an increase of K+ concentration of the blood"
+        },
+        {
+          "letter": "c",
+          "text": "enhanced by angiotensin I"
+        },
+        {
+          "letter": "d",
+          "text": "enhanced by angiotensin II"
+        },
+        {
+          "letter": "e",
+          "text": "enhanced by a decrease of K+ concentration of the blood"
+        },
+        {
+          "letter": "f",
+          "text": "enhanced by a decrease of Na+ concentration of the blood"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "d",
+        "f"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-2734027349-26",
+      "text": "The renal effects of ANP:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "increases the GFR"
+        },
+        {
+          "letter": "b",
+          "text": "decreases the effect of mineralocorticoids in the collecting tubules"
+        },
+        {
+          "letter": "c",
+          "text": "increases the Na+ reabsorption"
+        },
+        {
+          "letter": "d",
+          "text": "increases the amount of Na in the urine"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "b",
+        "d"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-2734027349-36",
+      "text": "Which transport is modulated by ANH in the kidney? ANH inhibits",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Amiloride-sensitive Na channels in the collecting duct"
+        },
+        {
+          "letter": "b",
+          "text": "Na-H exchange in the proximal tubule"
+        },
+        {
+          "letter": "c",
+          "text": "vasopressin-stimulated water reabsorption in the collecting duct"
+        },
+        {
+          "letter": "d",
+          "text": "Na-K-2Cl cotransporter in the thick segment"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-2734027349-38",
+      "text": "Stimuli resulting in increased renin secretion:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "excess salt intake"
+        },
+        {
+          "letter": "b",
+          "text": "parasympathetic stimulation"
+        },
+        {
+          "letter": "c",
+          "text": "decreased renal perfusion"
+        },
+        {
+          "letter": "d",
+          "text": "decreased arterial blood pressure"
+        },
+        {
+          "letter": "e",
+          "text": "stimulation of renal beta1 adrenerge receptors"
+        }
+      ],
+      "correctAnswers": [
+        "c",
+        "d",
+        "e"
+      ],
+      "correctAnswerCount": 3
+    }
+  ]
+}

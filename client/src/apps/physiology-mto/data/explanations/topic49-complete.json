@@ -1,0 +1,321 @@
+{
+  "metadata": {
+    "topic": 49,
+    "topicTitle": "Hormonal Regulation of Blood Pressure",
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 22,
+    "status": "COMPLETE"
+  },
+  "explanations": [
+    {
+      "questionId": "q-0313014645-B-24",
+      "summary": "ACE (angiotensin converting enzyme) has dual action: it converts angiotensin I to active angiotensin II, AND it degrades (inactivates) bradykinin. ACE inhibitors block both actions.",
+      "whyCorrect": {
+        "a": "ACE cleaves the inactive decapeptide angiotensin I to form the active octapeptide angiotensin II (a potent vasoconstrictor).",
+        "d": "ACE (also called kininase II) degrades and inactivates bradykinin, a vasodilator. ACE inhibitors therefore increase bradykinin levels."
+      },
+      "whyIncorrect": {
+        "b": "ACE activates (not inactivates) angiotensin I by converting it to angiotensin II.",
+        "c": "ACE inactivates (not activates) bradykinin by degrading it."
+      },
+      "topicReference": "Topic 49: Dual role of ACE in RAAS and kinin systems"
+    },
+    {
+      "questionId": "q-0313014645-16",
+      "summary": "Long-term blood pressure is controlled by the kidneys through regulation of extracellular fluid volume. The kidney adjusts Na+ and water excretion to match intake, controlling blood volume and thus pressure.",
+      "whyCorrect": {
+        "e": "The renal-body fluid mechanism (pressure natriuresis and diuresis) is the most powerful long-term BP regulator. Increased BP causes increased Na+/water excretion until BP normalizes."
+      },
+      "whyIncorrect": {
+        "a": "Chemoreceptor reflex operates during hypoxia/hypotension but doesn't regulate long-term BP.",
+        "b": "The carotid sinus reflex is a rapid (seconds to minutes) BP buffer that RESETS during chronic changes.",
+        "c": "Autoregulation maintains constant organ blood flow, not systemic BP.",
+        "d": "Stress-relaxation adjusts vascular capacity over minutes to hours but doesn't control long-term BP."
+      },
+      "topicReference": "Topic 49: Long-term blood pressure regulation by the kidney"
+    },
+    {
+      "questionId": "q-1526033148-45",
+      "summary": "ANP is released when atrial stretch increases (hypervolemia). It opposes the RAAS by inhibiting renin secretion, causing natriuresis, and vasodilation to reduce blood volume and pressure.",
+      "whyCorrect": {
+        "a": "Hypervolemia stretches the atria, triggering ANP release from atrial myocytes.",
+        "f": "ANP inhibits renin secretion, thereby reducing angiotensin II and aldosterone production."
+      },
+      "whyIncorrect": {
+        "b": "Hypovolemia would reduce atrial stretch and decrease ANP release.",
+        "c": "ANP causes vasodilation, which DECREASES TPR.",
+        "d": "ANP INHIBITS aldosterone secretion (part of its counter-RAAS action).",
+        "e": "ANP causes renal artery vasoDILATION, increasing GFR and natriuresis."
+      },
+      "topicReference": "Topic 49: ANP release and actions"
+    },
+    {
+      "questionId": "q-1526033148-46",
+      "summary": "The RAAS: Angiotensinogen is produced by the liver, cleaved by renin (released from JG cells in response to low renal perfusion) to form Ang I, then converted by ACE to the vasoconstrictor Ang II.",
+      "whyCorrect": {
+        "a": "Angiotensin II is a potent vasoconstrictor (via AT1 receptors on vascular smooth muscle).",
+        "b": "Angiotensinogen (the substrate) is produced by the liver and released into circulation.",
+        "c": "Decreased renal blood flow is sensed by the JG cells, triggering renin release.",
+        "e": "ACE on pulmonary endothelium converts angiotensin I to angiotensin II."
+      },
+      "whyIncorrect": {
+        "d": "DECREASED (not increased) sodium in the macula densa stimulates renin release via tubuloglomerular feedback."
+      },
+      "topicReference": "Topic 49: RAAS pathway components"
+    },
+    {
+      "questionId": "q-1526033148-48",
+      "summary": "ANP effects: vasodilation (via cGMP), inhibition of ADH secretion (reducing water retention), and natriuresis. It opposes the RAAS system.",
+      "whyCorrect": {
+        "a": "ANP activates particulate guanylyl cyclase → cGMP → vasodilation.",
+        "c": "ANP inhibits ADH release from the posterior pituitary, promoting water excretion."
+      },
+      "whyIncorrect": {
+        "b": "ANP doesn't increase β-adrenergic receptor sensitivity.",
+        "d": "ANP INHIBITS renin secretion (counter-RAAS).",
+        "e": "ANP doesn't increase bradykinin elimination; if anything, reduced ACE activity from ANP would preserve bradykinin."
+      },
+      "topicReference": "Topic 49: ANP physiological effects"
+    },
+    {
+      "questionId": "q-3221027349-8",
+      "summary": "ANP inhibits the Na-K-2Cl cotransporter (NKCC2) in the thick ascending limb of the loop of Henle, reducing NaCl reabsorption and the medullary concentration gradient.",
+      "whyCorrect": {
+        "d": "ANP inhibits NKCC2 in the thick ascending segment, reducing NaCl reabsorption and promoting natriuresis while impairing urinary concentration."
+      },
+      "whyIncorrect": {
+        "a": "ENaC (amiloride-sensitive Na+ channels) in the collecting duct are regulated by aldosterone, not directly by ANP.",
+        "b": "There is no significant Na-K exchange in the proximal tubule.",
+        "c": "ANP doesn't directly inhibit ADH-stimulated water reabsorption at the collecting duct."
+      },
+      "topicReference": "Topic 49: ANP effect on renal tubular transport"
+    },
+    {
+      "questionId": "q-3543048990-67",
+      "summary": "Major vasoconstrictors: Endothelin (most potent), Angiotensin II, Noradrenaline (α1), Vasopressin (V1). Vasodilators: Bradykinin, NO, ANP.",
+      "whyCorrect": {
+        "c": "Endothelin-1 is the most potent endogenous vasoconstrictor.",
+        "e": "Angiotensin II causes vasoconstriction via AT1 receptors.",
+        "f": "Noradrenaline causes vasoconstriction via α1-adrenergic receptors.",
+        "h": "Vasopressin (ADH) causes vasoconstriction via V1 receptors on vascular smooth muscle."
+      },
+      "whyIncorrect": {
+        "a": "Bradykinin is a vasodilator (via endothelial NO).",
+        "b": "Nitric oxide is the major vasodilator.",
+        "d": "β1 agonists affect the heart (inotropy/chronotropy), not vascular resistance directly.",
+        "g": "ANP is a vasodilator."
+      },
+      "topicReference": "Topic 49: Classification of vasoactive hormones"
+    },
+    {
+      "questionId": "q-3543048990-69",
+      "summary": "BP increases with: thyroid hormones (increased HR and contractility), ADH (vasoconstriction + water retention), decreased renal blood flow (activates RAAS). Bradykinin decreases BP.",
+      "whyCorrect": {
+        "a": "T3/T4 increase heart rate and contractility, increasing cardiac output and BP.",
+        "b": "ADH causes vasoconstriction (V1 receptors) and water retention (V2 receptors), both increasing BP.",
+        "d": "Decreased renal blood flow activates the RAAS, leading to angiotensin II-mediated vasoconstriction and aldosterone-mediated Na+ retention."
+      },
+      "whyIncorrect": {
+        "c": "Increased cerebral blood flow doesn't cause systemic BP increase; if anything, adequate CBF would reduce the Cushing response.",
+        "e": "Bradykinin is a vasodilator that decreases BP."
+      },
+      "topicReference": "Topic 49: Factors increasing blood pressure"
+    },
+    {
+      "questionId": "q-3543048990-70",
+      "summary": "BP is increased by vasoconstrictors (angiotensin, noradrenaline) and ADH (vasoconstriction + volume expansion). Histamine, bradykinin, substance P, and ANP all decrease BP.",
+      "whyCorrect": {
+        "a": "Angiotensin II is a potent vasoconstrictor that increases BP.",
+        "c": "Noradrenaline causes vasoconstriction via α1 receptors, increasing TPR and BP.",
+        "f": "ADH causes vasoconstriction (V1) and water retention (V2), increasing BP."
+      },
+      "whyIncorrect": {
+        "b": "Histamine causes vasodilation (H1/H2 receptors), decreasing BP.",
+        "d": "Bradykinin causes vasodilation via endothelial NO, decreasing BP.",
+        "e": "Substance P causes vasodilation, decreasing BP.",
+        "g": "ANP causes vasodilation and natriuresis, decreasing BP."
+      },
+      "topicReference": "Topic 49: Substances affecting blood pressure"
+    },
+    {
+      "questionId": "q-3543048990-71",
+      "summary": "Angiotensin II: an octapeptide that stimulates aldosterone secretion, induces thirst (dipsogenic), and is a potent vasoconstrictor (not vasodilator). It's cleaved from Ang I, not renin.",
+      "whyCorrect": {
+        "b": "Ang II stimulates aldosterone release from the adrenal cortex zona glomerulosa.",
+        "d": "Ang II acts on hypothalamic neurons to stimulate thirst (dipsogenic effect).",
+        "f": "Angiotensin II is an octapeptide (8 amino acids)."
+      },
+      "whyIncorrect": {
+        "a": "Ang II is cleaved from angiotensin I by ACE, not from renin. Renin cleaves angiotensinogen to form Ang I.",
+        "c": "Ang II is a potent VASOCONSTRICTOR, not vasodilator. Endothelin is the most potent vasoconstrictor.",
+        "e": "Ang II secretion is stimulated by low renal perfusion and low Na+, not by osmoreceptors (which stimulate ADH)."
+      },
+      "topicReference": "Topic 49: Angiotensin II characteristics and effects"
+    },
+    {
+      "questionId": "q-3543048990-72",
+      "summary": "ANP causes vasodilation and inhibits ADH secretion. It opposes the RAAS by inhibiting renin (not stimulating it) and promotes natriuresis.",
+      "whyCorrect": {
+        "a": "ANP causes vasodilation via cGMP, reducing TPR and BP.",
+        "c": "ANP inhibits ADH secretion, promoting free water excretion."
+      },
+      "whyIncorrect": {
+        "b": "ANP doesn't affect β-adrenergic receptor sensitivity.",
+        "d": "ANP INHIBITS renin secretion as part of its counter-RAAS action.",
+        "e": "ANP doesn't specifically increase bradykinin elimination."
+      },
+      "topicReference": "Topic 49: ANP effects"
+    },
+    {
+      "questionId": "q-3543048990-78",
+      "summary": "Atrial B-receptors (stretch receptors) respond to increased atrial volume by reducing ADH secretion and causing reflex vasodilation (depressor response), reducing blood volume.",
+      "whyCorrect": {
+        "a": "Atrial stretch inhibits ADH release from the posterior pituitary, promoting water excretion.",
+        "e": "Atrial distension triggers a reflex decrease in sympathetic tone, causing vasodilation and reduced BP."
+      },
+      "whyIncorrect": {
+        "b": "The Bezold-Jarisch reflex involves ventricular receptors responding to chemicals/stretch, not atrial B-receptors.",
+        "c": "Atrial stretch receptors inhibit (not stimulate) the pressor center.",
+        "d": "The Hering-Breuer reflex involves pulmonary stretch receptors for respiration, not atrial receptors."
+      },
+      "topicReference": "Topic 49: Atrial stretch receptors and volume regulation"
+    },
+    {
+      "questionId": "q-3543048990-80",
+      "summary": "Blood volume regulation involves: atrial baroreceptors (detect volume changes), and vasopressin/ADH (controls water reabsorption). The axon reflex is a local vascular response, not volume regulation.",
+      "whyCorrect": {
+        "a": "Atrial (low-pressure) baroreceptors detect blood volume changes and trigger appropriate reflexes.",
+        "d": "Vasopressin (ADH) regulates water reabsorption in the collecting duct, controlling blood volume."
+      },
+      "whyIncorrect": {
+        "b": "Arterial baroreceptors primarily regulate blood PRESSURE, not volume directly.",
+        "c": "The axon reflex is a local cutaneous vascular response, not involved in blood volume regulation."
+      },
+      "topicReference": "Topic 49: Mechanisms of blood volume regulation"
+    },
+    {
+      "questionId": "q-4447200607-8",
+      "summary": "Vasopressin (ADH) causes vasoconstriction via V1 receptors coupled to Gq → PLC → IP3 → increased intracellular Ca2+. This raises TPR. V2 receptors (kidney) use cAMP.",
+      "whyCorrect": {
+        "a": "V1 receptor activation increases intracellular Ca2+ via PLC-IP3 pathway, causing smooth muscle contraction.",
+        "c": "V1 receptors on vascular smooth muscle mediate vasopressin's vasoconstrictor effect."
+      },
+      "whyIncorrect": {
+        "b": "V1 receptors use Ca2+/PLC pathway, NOT cAMP. V2 receptors in the kidney use cAMP.",
+        "d": "Vasopressin causes vasoconstriction, which INCREASES TPR."
+      },
+      "topicReference": "Topic 49: Vasopressin vascular effects and signaling"
+    },
+    {
+      "questionId": "q-4447200607-32",
+      "summary": "Blood volume is regulated by: atrial (low-pressure) baroreceptors that sense volume, and vasopressin that controls renal water reabsorption. Arterial baroreceptors sense pressure, not volume directly.",
+      "whyCorrect": {
+        "b": "Atrial baroreceptors (B-receptors) detect central blood volume and trigger appropriate responses.",
+        "c": "Vasopressin/ADH controls water reabsorption, directly affecting blood volume."
+      },
+      "whyIncorrect": {
+        "a": "Glomus bodies are chemoreceptors, not baroreceptors. Arterial baroreceptors regulate pressure, not volume directly.",
+        "d": "The axon reflex is a local cutaneous vascular response, not involved in systemic volume regulation."
+      },
+      "topicReference": "Topic 49: Blood volume regulatory mechanisms"
+    },
+    {
+      "questionId": "q-4525102917-17",
+      "summary": "Long-term BP regulation is achieved through renal control of extracellular fluid volume. The kidney adjusts Na+ and water excretion based on pressure (pressure natriuresis) and hormones (RAAS, ANP, ADH).",
+      "whyCorrect": {
+        "c": "The kidney's hormonal and pressure-mediated control of ECF volume is the dominant long-term BP regulator. Increased BP → increased Na+/water excretion → reduced volume → normalized BP."
+      },
+      "whyIncorrect": {
+        "a": "Baroreceptor reflexes adapt/reset within days and don't control long-term BP.",
+        "b": "Adrenal medulla hormones (epinephrine) provide acute responses, not long-term regulation.",
+        "d": "Same as A - arterial baroreceptor reflex resets and doesn't control chronic BP."
+      },
+      "topicReference": "Topic 49: Kidney's role in long-term BP control"
+    },
+    {
+      "questionId": "q-4855200607-5",
+      "summary": "Circulating vasopressin activates V1 receptors on vascular smooth muscle, increasing intracellular Ca2+ via PLC-IP3 and causing vasoconstriction.",
+      "whyCorrect": {
+        "a": "V1 receptors mediate vasoconstriction through Gq-PLC-IP3-Ca2+ signaling.",
+        "c": "V1 activation increases cytosolic Ca2+, triggering smooth muscle contraction."
+      },
+      "whyIncorrect": {
+        "b": "V1 receptors use PLC/Ca2+ pathway. V2 receptors (kidney collecting duct) use cAMP.",
+        "d": "Vasopressin causes vasoconstriction, which INCREASES TPR."
+      },
+      "topicReference": "Topic 49: Vasopressin V1 receptor signaling"
+    },
+    {
+      "questionId": "q-4855200607-32",
+      "summary": "Long-term MAP is determined by renal volume regulation through pressure diuresis (higher BP → more urine) and hormonal systems (RAAS, ANP, ADH) that control Na+ and water balance.",
+      "whyCorrect": {
+        "a": "The renal-body fluid mechanism is the only system with infinite gain for long-term BP control. It adjusts volume until pressure normalizes."
+      },
+      "whyIncorrect": {
+        "b": "Peripheral chemoreceptor reflex responds to hypoxia/hypercapnia, not long-term BP control.",
+        "c": "Cushing reflex is an emergency response to brain ischemia, not normal BP regulation.",
+        "d": "Vasopressin and Ang II vasoconstriction are important but secondary to volume regulation for long-term control.",
+        "e": "Baroreceptor reflex resets within days and doesn't determine long-term BP."
+      },
+      "topicReference": "Topic 49: Long-term BP determination"
+    },
+    {
+      "questionId": "q-4855200607-35",
+      "summary": "Long-term blood pressure is controlled by the kidney through pressure diuresis and hormonal regulation of ECF volume. All other mechanisms either reset or are emergency responses.",
+      "whyCorrect": {
+        "d": "Renal volume regulation (pressure natriuresis + hormonal control of Na+/water) has infinite gain and sets the long-term BP set-point."
+      },
+      "whyIncorrect": {
+        "a": "Cushing reflex is an emergency response to brain ischemia.",
+        "b": "Baroreceptor reflex resets and doesn't control long-term BP.",
+        "c": "Vasoconstrictor effects of ADH/Ang II are secondary to volume regulation.",
+        "e": "Peripheral chemoreceptor reflex responds to blood gas changes, not long-term BP."
+      },
+      "topicReference": "Topic 49: Kidney as long-term BP controller"
+    },
+    {
+      "questionId": "q-5090109547-22",
+      "summary": "ANP is released in response to atrial stretch (hypervolemia). It inhibits renin secretion, causes vasodilation, and promotes natriuresis - all opposing the RAAS to reduce volume and pressure.",
+      "whyCorrect": {
+        "a": "ANP inhibits renin release from JG cells, reducing angiotensin II and aldosterone.",
+        "c": "Hypervolemia stretches the atrial myocytes, triggering ANP release."
+      },
+      "whyIncorrect": {
+        "b": "ANP INHIBITS aldosterone secretion (counter-RAAS effect).",
+        "d": "ANP causes vasodilation, DECREASING TPR.",
+        "e": "ANP causes renal vasoDILATION, increasing GFR.",
+        "f": "Hypovolemia decreases atrial stretch and reduces ANP release."
+      },
+      "topicReference": "Topic 49: ANP release trigger and effects"
+    },
+    {
+      "questionId": "q-5156012322-7",
+      "summary": "ANP is released when blood volume is high (hypervolemia → atrial stretch). It inhibits renin, causing decreased Ang II and aldosterone, promoting Na+ and water excretion.",
+      "whyCorrect": {
+        "c": "Hypervolemia causes atrial distension, triggering ANP release from atrial myocytes.",
+        "e": "ANP inhibits renin secretion, reducing RAAS activity."
+      },
+      "whyIncorrect": {
+        "a": "Hypovolemia would decrease ANP release (less atrial stretch).",
+        "b": "ANP inhibits aldosterone secretion.",
+        "d": "ANP causes renal vasodilation, not vasoconstriction.",
+        "f": "ANP causes vasodilation, decreasing TPR."
+      },
+      "topicReference": "Topic 49: ANP regulation and actions"
+    },
+    {
+      "questionId": "q-625411501B-24",
+      "summary": "ANP causes vasodilation (via cGMP) and inhibits ADH secretion (promoting water excretion). It doesn't stimulate renin or affect bradykinin elimination.",
+      "whyCorrect": {
+        "b": "ANP activates particulate guanylyl cyclase, increasing cGMP and causing vasodilation.",
+        "e": "ANP inhibits ADH secretion from the posterior pituitary, promoting free water excretion."
+      },
+      "whyIncorrect": {
+        "a": "ANP doesn't increase bradykinin elimination.",
+        "c": "ANP doesn't affect β-adrenergic receptor sensitivity.",
+        "d": "ANP INHIBITS renin secretion as part of its counter-RAAS action."
+      },
+      "topicReference": "Topic 49: ANP physiological effects"
+    }
+  ]
+}

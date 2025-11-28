@@ -1,0 +1,544 @@
+{
+  "metadata": {
+    "topic": 55,
+    "topicTitle": "Renal Clearance",
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 37,
+    "status": "COMPLETE"
+  },
+  "explanations": [
+    {
+      "questionId": "q-0313014645-B-14",
+      "summary": "PAH (para-aminohippuric acid) clearance directly estimates effective renal plasma flow (eRPF) because PAH is both freely filtered and almost completely secreted by the proximal tubule, resulting in ~90% extraction in a single pass.",
+      "whyCorrect": {
+        "a": "PAH has the highest extraction ratio (~90%) of any substance. Since nearly all PAH is removed from plasma in one pass through the kidney, its clearance equals the effective renal plasma flow (eRPF)."
+      },
+      "whyIncorrect": {
+        "b": "Tubular reabsorption capacity is measured using substances that are reabsorbed (like glucose), not secreted like PAH.",
+        "c": "GFR is measured using inulin or estimated with creatinine clearance, not PAH.",
+        "d": "Diuresis (urine flow rate) is measured directly, not estimated from any clearance.",
+        "e": "RBF (renal blood flow) can be calculated from RPF using hematocrit, but PAH clearance directly measures eRPF, not RBF.",
+        "f": "Intratubular pressure cannot be measured using clearance techniques."
+      },
+      "topicReference": "Topic 55: Renal clearance methods for measuring GFR, RPF, and RBF"
+    },
+    {
+      "questionId": "q-0313014645-B-15",
+      "summary": "When a substance is freely filtered (contributing GFR amount) and then an equal amount is secreted, the total clearance doubles. With GFR = 120 ml/min and equal secretion, clearance = 240 ml/min.",
+      "whyCorrect": {
+        "c": "Clearance = amount excreted / plasma concentration. If X is freely filtered (120 ml/min worth) and the same amount is secreted (another 120 ml/min worth), total clearance = 120 + 120 = 240 ml/min."
+      },
+      "whyIncorrect": {
+        "a": "120 ml/min would only be correct if there was no secretion (just filtration), like inulin.",
+        "b": "60 ml/min would imply 50% reabsorption, not additional secretion.",
+        "d": "30 ml/min would imply 75% reabsorption, the opposite of secretion."
+      },
+      "topicReference": "Topic 55: Clearance = (U × V) / P; secretion adds to filtered load"
+    },
+    {
+      "questionId": "q-0313014645-12",
+      "summary": "A substance with free filtration and passive reabsorption (but no secretion) has clearance lower than inulin (because reabsorption removes some). Glucose is completely reabsorbed, so clearance is lower than glucose (which is ~0).",
+      "whyCorrect": {
+        "d": "Glucose has near-zero clearance because it's completely reabsorbed. Any substance with only partial passive reabsorption would have some clearance, which is still higher than glucose's zero.",
+        "g": "Inulin clearance equals GFR because inulin is only filtered (no reabsorption/secretion). Passive reabsorption removes some of the filtered substance, so clearance is lower than inulin."
+      },
+      "whyIncorrect": {
+        "a": "Glucose clearance is essentially zero - this substance has some clearance due to incomplete reabsorption.",
+        "b": "Higher than inulin would require secretion, which this substance lacks.",
+        "c": "Equal to inulin would require no reabsorption at all.",
+        "e": "PAH has the highest clearance (~600 ml/min). This substance has clearance lower than inulin.",
+        "f": "Higher than PAH is impossible - PAH has the highest clearance of common test substances."
+      },
+      "topicReference": "Topic 55: Clearance hierarchy: glucose < urea < inulin < PAH"
+    },
+    {
+      "questionId": "q-1526033148-9",
+      "summary": "Clearance is defined as the volume of plasma completely cleared of a substance per unit time, OR as the ratio of urinary excretion rate to plasma concentration (C = UV/P).",
+      "whyCorrect": {
+        "b": "This is the conceptual definition: clearance is the volume of plasma that has been completely 'cleared' of a particular substance per minute.",
+        "e": "This is the mathematical definition: C = (U × V) / P, where UV is the excretion rate and P is plasma concentration. This ratio gives plasma volume cleared per minute."
+      },
+      "whyIncorrect": {
+        "a": "This describes excretion rate (UV), not clearance. Clearance divides this by plasma concentration.",
+        "c": "This describes GFR, not clearance. Clearance varies depending on the substance.",
+        "d": "This describes filtered load of a substance (GFR × plasma concentration), not clearance."
+      },
+      "topicReference": "Topic 55: Clearance definition and formula C = UV/P"
+    },
+    {
+      "questionId": "q-1526033148-10",
+      "summary": "Zero clearance means no substance appears in urine. This occurs if: 1) substance isn't filtered, 2) substance is completely reabsorbed, or 3) renal vein concentration equals arterial (no net removal).",
+      "whyCorrect": {
+        "b": "If a substance cannot pass the glomerular filter (too large, protein-bound), none enters the tubule, so none can be excreted - clearance is zero.",
+        "c": "If 100% of filtered substance is reabsorbed (like glucose normally), nothing appears in urine - clearance is zero.",
+        "f": "Equal arterial and venous concentrations means the kidney didn't remove any of the substance, so clearance is zero.",
+        "g": "Zero clearance by definition means the substance does not appear in the urine."
+      },
+      "whyIncorrect": {
+        "a": "Secretion would increase clearance, not make it zero.",
+        "d": "If filtered but not reabsorbed or secreted, clearance equals GFR (like inulin), not zero.",
+        "e": "Zero renal vein concentration would mean 100% extraction (maximum clearance), not zero clearance."
+      },
+      "topicReference": "Topic 55: Conditions resulting in zero clearance"
+    },
+    {
+      "questionId": "q-1526033148-11",
+      "summary": "Inulin is the gold standard for measuring GFR because it is freely filtered, not reabsorbed, not secreted, and not metabolized. Its concentration in filtrate equals plasma concentration.",
+      "whyCorrect": {
+        "a": "Inulin (MW ~5000) is small enough to freely pass through glomerular capillaries - 100% filterability.",
+        "d": "Because inulin is freely filtered, its concentration in Bowman's capsule equals its plasma concentration - no sieving effect."
+      },
+      "whyIncorrect": {
+        "b": "Inulin is NOT secreted anywhere in the nephron - this is essential for it to measure pure GFR.",
+        "c": "Inulin is NOT secreted in distal tubules or anywhere else.",
+        "e": "Inulin is NOT reabsorbed. It stays in the tubular fluid and all filtered inulin is excreted."
+      },
+      "topicReference": "Topic 55: Properties of inulin as ideal GFR marker"
+    },
+    {
+      "questionId": "q-1526033148-12",
+      "summary": "Inulin clearance of 120 ml/min is normal GFR. This means 120 ml of plasma is completely cleared of inulin each minute through glomerular filtration alone.",
+      "whyCorrect": {
+        "b": "Normal GFR is 120 ml/min (range 90-125). An inulin clearance of 120 ml/min indicates normal glomerular function.",
+        "c": "By definition, clearance of 120 ml/min means 120 ml of plasma is completely freed of inulin each minute."
+      },
+      "whyIncorrect": {
+        "a": "120 ml/min is normal, not impaired GFR.",
+        "d": "Urine volume is typically 1-2 ml/min, not 120 ml/min. Clearance is not the same as urine flow.",
+        "e": "Renal plasma flow is ~600 ml/min, not 120 ml/min. RPF is measured with PAH, not inulin.",
+        "f": "Inulin is NOT secreted - that's exactly why it measures pure GFR."
+      },
+      "topicReference": "Topic 55: Normal GFR value and inulin clearance interpretation"
+    },
+    {
+      "questionId": "q-1526033148-13",
+      "summary": "Inulin clearance of 80 ml/min indicates reduced GFR (normal is 120 ml/min). Since inulin is only filtered, lower clearance means less plasma being filtered per minute.",
+      "whyCorrect": {
+        "c": "By definition, 80 ml/min clearance means 80 ml of plasma is cleared of inulin each minute.",
+        "d": "Since inulin clearance equals GFR, the glomerular filtrate volume is 80 ml per minute.",
+        "e": "Normal GFR is 120 ml/min; 80 ml/min represents a 33% decrease in GFR."
+      },
+      "whyIncorrect": {
+        "a": "Inulin is never reabsorbed - this is why it's used to measure GFR.",
+        "b": "Inulin is never secreted - low clearance reflects reduced filtration, not secretion changes.",
+        "f": "Tubular function cannot be assessed by inulin clearance. Inulin only measures glomerular function."
+      },
+      "topicReference": "Topic 55: Interpreting decreased inulin clearance"
+    },
+    {
+      "questionId": "q-1526033148-14",
+      "summary": "If U/P ratio for inulin decreases with constant GFR, it means urine is more dilute (less concentrated). This indicates increased urine flow and increased free-water clearance.",
+      "whyCorrect": {
+        "a": "Free-water clearance increases when the kidney excretes more water relative to solutes, diluting the urine and decreasing U/P ratios.",
+        "c": "If GFR is constant but U/P ratio decreases, it must be because more water is being excreted, increasing urine flow and diluting urinary inulin."
+      },
+      "whyIncorrect": {
+        "b": "Inulin clearance = GFR, and GFR is stated to be constant, so inulin clearance hasn't changed.",
+        "d": "Plasma inulin concentration is in the denominator - if only this increased, it would affect clearance calculations, but GFR is stated as constant."
+      },
+      "topicReference": "Topic 55: Relationship between U/P ratio, urine flow, and free-water clearance"
+    },
+    {
+      "questionId": "q-1526033148-15",
+      "summary": "Comparing U/P ratios: Inulin has U/P = 100 (200/2), substance X has U/P = 200 (200/1). X is concentrated more than inulin, indicating filtration plus secretion.",
+      "whyCorrect": {
+        "e": "X has a higher U/P ratio than inulin (200 vs 100). Since inulin represents pure filtration, X must be filtered AND secreted to achieve greater concentration."
+      },
+      "whyIncorrect": {
+        "a": "If neither secreted nor reabsorbed, X would have the same U/P as inulin (100), but X has U/P = 200.",
+        "b": "Reabsorption would decrease U/P ratio below inulin's, but X's ratio is higher.",
+        "c": "Non-freely filtered substances have lower U/P ratios, not higher.",
+        "d": "Partial reabsorption would give U/P between 0 and 100, not 200."
+      },
+      "topicReference": "Topic 55: Using U/P ratios to determine tubular handling"
+    },
+    {
+      "questionId": "q-1526033148-16",
+      "summary": "Creatinine clearance of 140 ml/min is slightly higher than true GFR (120 ml/min) because creatinine undergoes a small amount of tubular secretion in addition to filtration.",
+      "whyCorrect": {
+        "a": "GFR is approximately 120 ml/min normally. Creatinine clearance of 140 ml/min is in the clinically normal range.",
+        "c": "The slightly elevated clearance (140 vs 120 for pure GFR) indicates that some creatinine is added to urine via tubular secretion.",
+        "d": "By definition, 140 ml/min clearance means 140 ml plasma is cleared of creatinine each minute.",
+        "e": "True GFR is slightly less than creatinine clearance because secretion adds extra creatinine to urine."
+      },
+      "whyIncorrect": {
+        "b": "Creatinine IS excreted - that's how we measure its clearance.",
+        "f": "140 ml of creatinine is not excreted. 140 ml is the plasma volume cleared, not the amount of creatinine.",
+        "g": "Urine volume is typically 1-2 ml/min, not 140 ml/min.",
+        "h": "RPF is ~600 ml/min. Creatinine clearance measures GFR, not RPF."
+      },
+      "topicReference": "Topic 55: Creatinine clearance slightly overestimates GFR due to secretion"
+    },
+    {
+      "questionId": "q-1526033148-17",
+      "summary": "PAH and penicillin share the same organic anion transport system in the proximal tubule. PAH competitively inhibits penicillin secretion, reducing its excretion and prolonging its action.",
+      "whyCorrect": {
+        "b": "PAH and penicillin are both organic anions secreted by the same OAT (organic anion transporter) in proximal tubules. They compete for the same carrier, so PAH reduces penicillin secretion."
+      },
+      "whyIncorrect": {
+        "a": "Penicillin is secreted, not reabsorbed. PAH doesn't affect reabsorption.",
+        "c": "PAH doesn't affect medullary concentration mechanisms.",
+        "d": "Neither PAH nor penicillin affects glomerular filtration.",
+        "e": "PAH doesn't affect tubular permeability to penicillin."
+      },
+      "topicReference": "Topic 55: Competitive inhibition of organic anion secretion"
+    },
+    {
+      "questionId": "q-1526033148-21",
+      "summary": "Clearance order from lowest to highest: Glucose (0, complete reabsorption) < Urea (partial reabsorption) < Inulin (GFR, no handling) < PAH (GFR + secretion).",
+      "whyCorrect": {
+        "d": "Glucose clearance ≈ 0 (complete reabsorption), Urea clearance < GFR (partial reabsorption), Inulin clearance = GFR, PAH clearance > GFR (secretion). Order: Cglucose < Curea < Cinulin < CPAH"
+      },
+      "whyIncorrect": {
+        "a": "PAH has the highest clearance due to secretion, not the lowest.",
+        "b": "PAH should be highest, glucose lowest.",
+        "c": "Inulin clearance is between urea and PAH, not between glucose and urea.",
+        "e": "Urea clearance is between glucose and inulin, not between inulin and PAH."
+      },
+      "topicReference": "Topic 55: Clearance hierarchy based on tubular handling"
+    },
+    {
+      "questionId": "q-1526033148-22",
+      "summary": "A substance not filtered in glomeruli has zero clearance (like large proteins). Zero is lower than all other clearances: glucose (≈0), urea, and inulin.",
+      "whyCorrect": {
+        "c": "Not filtered means clearance = 0, which is lower than inulin clearance (= GFR = 120 ml/min).",
+        "d": "Glucose clearance ≈ 0 due to complete reabsorption. A non-filtered substance also has ~0 clearance.",
+        "h": "Urea has clearance of about 70 ml/min. Zero clearance is lower than urea clearance."
+      },
+      "whyIncorrect": {
+        "a": "Inulin clearance = 120 ml/min. Zero clearance is not the same as inulin.",
+        "b": "Zero clearance is not higher than inulin's 120 ml/min.",
+        "e": "Zero is not lower than glucose's near-zero clearance; they're essentially equal.",
+        "f": "Zero clearance is not higher than glucose (both are essentially zero).",
+        "g": "Urea clearance is ~70 ml/min, not zero.",
+        "i": "Zero clearance is not higher than urea's 70 ml/min."
+      },
+      "topicReference": "Topic 55: Clearance of non-filtered substances"
+    },
+    {
+      "questionId": "q-1526033148-23",
+      "summary": "Passive reabsorption removes some filtered substance from tubular fluid, reducing clearance below GFR (inulin). But it's not complete reabsorption, so clearance > glucose (which is zero).",
+      "whyCorrect": {
+        "a": "Passive reabsorption means some filtered substance returns to blood, so less is excreted. Clearance is below inulin (pure GFR).",
+        "g": "Glucose is completely reabsorbed (clearance ≈ 0). Passive (incomplete) reabsorption leaves some substance in urine, so clearance > glucose."
+      },
+      "whyIncorrect": {
+        "b": "Inulin has no reabsorption, so its clearance is higher than substances with reabsorption.",
+        "c": "Higher than inulin would require secretion, which isn't present here.",
+        "d": "PAH has the highest clearance (~600 ml/min) due to secretion.",
+        "e": "PAH clearance is the highest; passive reabsorption gives lower clearance.",
+        "f": "Glucose clearance is nearly zero; partial reabsorption gives higher clearance than complete reabsorption."
+      },
+      "topicReference": "Topic 55: Effect of passive reabsorption on clearance"
+    },
+    {
+      "questionId": "q-1526033148-24",
+      "summary": "RPF can be calculated from any clearance using RPF = C/E (clearance divided by extraction ratio). PAH clearance directly estimates eRPF. Also, RPF = GFR/FF.",
+      "whyCorrect": {
+        "a": "RPF = Clearance / Extraction ratio. This works for any freely filtered substance with known extraction.",
+        "b": "PAH has ~90% extraction, so PAH clearance ≈ eRPF. This is the standard clinical method.",
+        "f": "Filtration Fraction = GFR/RPF, so RPF = GFR/FF = inulin clearance / FF."
+      },
+      "whyIncorrect": {
+        "c": "Inulin clearance measures GFR, not RPF. Inulin extraction (~20%) doesn't equal 100%.",
+        "d": "Creatinine clearance measures GFR, not RPF.",
+        "e": "Sympathetic activation causes renal vasoconstriction, which decreases RPF, not increases it."
+      },
+      "topicReference": "Topic 55: Methods for calculating RPF"
+    },
+    {
+      "questionId": "q-1526033148-25",
+      "summary": "Extraction ratio is the fraction of substance removed from plasma in one pass: (Pa - Pv)/Pa. PAH has higher extraction (~90%) than inulin (~20%).",
+      "whyCorrect": {
+        "b": "PAH extraction is ~90% (filtered + secreted), while inulin extraction is ~20% (only filtered). PAH is more efficiently removed.",
+        "c": "Extraction ratio = (arterial conc - venous conc) / arterial conc. This shows what fraction of substance was removed from blood."
+      },
+      "whyIncorrect": {
+        "a": "GFR/RPF is the filtration fraction, not extraction ratio.",
+        "d": "This would be U/P ratio, not extraction ratio.",
+        "e": "This describes filtration fraction (GFR/RPF), not extraction ratio."
+      },
+      "topicReference": "Topic 55: Definition and comparison of extraction ratios"
+    },
+    {
+      "questionId": "q-1526033148-26",
+      "summary": "Calculate clearance: C = (12 mg/ml × 1 ml/min) / (2 mg/100ml) = 1200/2 = 600 ml/min. This far exceeds GFR (125), indicating filtration + secretion = PAH.",
+      "whyCorrect": {
+        "d": "Clearance = UV/P = (12 × 1) / 0.02 = 600 ml/min. Only PAH has clearance this high (~600 ml/min) due to extensive tubular secretion."
+      },
+      "whyIncorrect": {
+        "a": "Glucose has near-zero clearance due to complete reabsorption.",
+        "b": "Alanine (amino acid) is completely reabsorbed, giving near-zero clearance.",
+        "c": "Inulin clearance equals GFR (125 ml/min), not 600 ml/min.",
+        "e": "Sodium clearance is very low due to extensive reabsorption."
+      },
+      "topicReference": "Topic 55: Identifying substances by clearance calculation"
+    },
+    {
+      "questionId": "q-1526033148-27",
+      "summary": "Excretion = Filtered load - Reabsorption + Secretion = (125 × 2) - 30 + 60 = 250 - 30 + 60 = 280 mg/min.",
+      "whyCorrect": {
+        "d": "Filtered load = GFR × Plasma conc = 125 ml/min × 2 mg/ml = 250 mg/min. Excretion = 250 - 30 (reabs) + 60 (secr) = 280 mg/min."
+      },
+      "whyIncorrect": {
+        "a": "160 mg/min would be 250 - 30 - 60, incorrectly subtracting secretion.",
+        "b": "220 mg/min would be 250 - 30, forgetting to add secretion.",
+        "c": "250 mg/min is just the filtered load, not accounting for tubular handling.",
+        "e": "340 mg/min would be 250 + 30 + 60, incorrectly adding reabsorption."
+      },
+      "topicReference": "Topic 55: Calculating excretion rate from filtration, reabsorption, and secretion"
+    },
+    {
+      "questionId": "q-1526033148-28",
+      "summary": "GFR = Inulin clearance = (Uinulin × V) / Pinulin = (6.0 × 1.5) / 0.1 = 90 ml/min. This is the effective GFR.",
+      "whyCorrect": {
+        "e": "Inulin clearance = (6.0 mg/ml × 1.5 ml/min) / 0.1 mg/ml = 9/0.1 = 90 ml/min."
+      },
+      "whyIncorrect": {
+        "a": "GFR = inulin clearance by definition, not greater than it.",
+        "b": "GFR is always less than PAH clearance (RPF), never greater.",
+        "c": "Clearance clears plasma, not blood. Blood cleared would be affected by hematocrit.",
+        "d": "60 ml/min is incorrect calculation."
+      },
+      "topicReference": "Topic 55: Calculating GFR from inulin clearance"
+    },
+    {
+      "questionId": "q-1526033148-29",
+      "summary": "eRPF = PAH clearance = (UPAH × V) / PPAH = (56 × 1.5) / 0.2 = 420 ml/min. This is the effective renal plasma flow.",
+      "whyCorrect": {
+        "c": "PAH clearance = (56 pg/ml × 1.5 ml/min) / 0.2 pg/ml = 84/0.2 = 420 ml/min = eRPF."
+      },
+      "whyIncorrect": {
+        "a": "eRPF is always less than true RPF because PAH extraction isn't 100%.",
+        "b": "RPF is plasma only; RBF includes cells too. RPF is less than RBF.",
+        "d": "520 ml/min is incorrect calculation.",
+        "e": "700 ml/min is the effective RBF (using hematocrit), not eRPF."
+      },
+      "topicReference": "Topic 55: Calculating eRPF from PAH clearance"
+    },
+    {
+      "questionId": "q-1526033148-30",
+      "summary": "Creatinine excretion = Ucreat × V = 80 mg/100ml × 1.5 ml/min = 1.2 mg/min × 1440 min/day = 1728 mg/day. Per kg: 1728/70 = 24.7 mg/kg/day.",
+      "whyCorrect": {
+        "d": "Excretion rate = 0.8 mg/ml × 1.5 ml/min = 1.2 mg/min. Per day = 1.2 × 1440 = 1728 mg. Per kg = 1728/70 = 24.7 mg/kg body weight."
+      },
+      "whyIncorrect": {
+        "a": "21.6 mg/kg is incorrect calculation.",
+        "b": "15.12 mg/kg is incorrect calculation.",
+        "c": "17.28 mg/kg is incorrect calculation.",
+        "e": "Inulin is not normally secreted/present endogenously; creatinine is endogenous."
+      },
+      "topicReference": "Topic 55: Calculating 24-hour creatinine excretion"
+    },
+    {
+      "questionId": "q-1526033148-31",
+      "summary": "GFR = Inulin clearance = (Uinulin × V) / Pinulin = (20 × 2) / 0.4 = 100 ml/min.",
+      "whyCorrect": {
+        "a": "GFR = inulin clearance = (20 mg/ml × 2 ml/min) / 0.4 mg/ml = 40/0.4 = 100 ml/min."
+      },
+      "whyIncorrect": {
+        "b": "250 ml/min would be an incorrect calculation.",
+        "c": "556 ml/min is closer to RPF calculation.",
+        "d": "1000 ml/min is far too high for GFR.",
+        "e": "1235 ml/min exceeds even renal blood flow."
+      },
+      "topicReference": "Topic 55: GFR calculation using inulin clearance"
+    },
+    {
+      "questionId": "q-1526033148-33",
+      "summary": "GFR = Inulin clearance = (Uinulin × V) / Pinulin = (80 × 1.5) / 1.0 = 120 ml/min.",
+      "whyCorrect": {
+        "a": "GFR = inulin clearance = (80 mg/ml × 1.5 ml/min) / 1.0 mg/ml = 120/1 = 120 ml/min."
+      },
+      "whyIncorrect": {
+        "b": "550 ml/min is PAH clearance (RPF), not GFR.",
+        "c": "948 ml/min would be an incorrect calculation.",
+        "d": "1200 ml/min far exceeds normal GFR."
+      },
+      "topicReference": "Topic 55: GFR calculation practice"
+    },
+    {
+      "questionId": "q-2734027349-3",
+      "summary": "Comparing U/P ratios: Inulin = 200/2 = 100, X = 15/1.5 = 10. X has lower U/P than inulin, meaning X is less concentrated = some was reabsorbed.",
+      "whyCorrect": {
+        "b": "X has U/P ratio of 10, while inulin has 100. X is concentrated less than expected from pure filtration, indicating partial reabsorption."
+      },
+      "whyIncorrect": {
+        "a": "Additional secretion would give U/P higher than inulin, not lower.",
+        "c": "No handling would give the same U/P as inulin (100), not 10."
+      },
+      "topicReference": "Topic 55: Using U/P ratios to detect reabsorption"
+    },
+    {
+      "questionId": "q-2734027349-9",
+      "summary": "If 75% is reabsorbed, only 25% of filtered amount is excreted. Clearance = 25% × GFR = 0.25 × 120 = 30 ml/min.",
+      "whyCorrect": {
+        "d": "75% reabsorption means 25% is excreted. Clearance = 0.25 × GFR = 0.25 × 120 = 30 ml/min."
+      },
+      "whyIncorrect": {
+        "a": "60 ml/min would be 50% reabsorption, not 75%.",
+        "b": "240 ml/min would require secretion equal to filtered load.",
+        "c": "120 ml/min would be no reabsorption (like inulin)."
+      },
+      "topicReference": "Topic 55: Calculating clearance with fractional reabsorption"
+    },
+    {
+      "questionId": "q-2734027349-16",
+      "summary": "Clearance order: Glucose ≈ 0 (complete reabsorption) < Urea (partial reab) < Inulin (= GFR) < PAH (GFR + secretion).",
+      "whyCorrect": {
+        "c": "Correct order is Cglucose < Curea < Cinulin < CPAH based on their tubular handling."
+      },
+      "whyIncorrect": {
+        "a": "PAH has highest clearance, not lowest.",
+        "b": "Glucose has lowest clearance, not highest.",
+        "d": "Urea is between glucose and inulin, and glucose should be lowest.",
+        "e": "Inulin should be between urea and PAH.",
+        "f": "Order is completely wrong - glucose is lowest, PAH is highest."
+      },
+      "topicReference": "Topic 55: Clearance hierarchy"
+    },
+    {
+      "questionId": "q-2734027349-24",
+      "summary": "PAH has the highest clearance (~600 ml/min) because it is both freely filtered AND extensively secreted by proximal tubule transporters.",
+      "whyCorrect": {
+        "b": "PAH clearance (~600 ml/min) is highest due to combined filtration and ~90% extraction via tubular secretion."
+      },
+      "whyIncorrect": {
+        "a": "Glucose clearance ≈ 0 due to complete reabsorption.",
+        "c": "Inulin clearance = GFR (~120 ml/min), lower than PAH.",
+        "d": "Potassium is extensively reabsorbed, giving low clearance.",
+        "e": "Mannitol, like inulin, is only filtered - clearance = GFR."
+      },
+      "topicReference": "Topic 55: PAH has highest clearance due to secretion"
+    },
+    {
+      "questionId": "q-2734027349-32",
+      "summary": "Clearance = (12 mg/ml × 1 ml/min) / (0.02 mg/ml) = 600 ml/min. This high clearance indicates PAH (secreted substance).",
+      "whyCorrect": {
+        "b": "Clearance = UV/P = 12 × 1 / 0.02 = 600 ml/min. Only PAH has such high clearance due to secretion."
+      },
+      "whyIncorrect": {
+        "a": "Creatinine clearance ≈ 140 ml/min (close to GFR), not 600 ml/min.",
+        "c": "Inulin clearance = GFR = 125 ml/min, not 600 ml/min.",
+        "d": "Sodium is extensively reabsorbed, very low clearance.",
+        "e": "Glucose clearance ≈ 0 due to complete reabsorption."
+      },
+      "topicReference": "Topic 55: Identifying PAH by high clearance"
+    },
+    {
+      "questionId": "q-2734027349-33",
+      "summary": "PAH clearance equals effective renal plasma flow (eRPF) because PAH is ~90% extracted in a single pass through the kidney.",
+      "whyCorrect": {
+        "e": "PAH is both filtered and secreted, with ~90% extraction. Its clearance directly measures effective RPF."
+      },
+      "whyIncorrect": {
+        "a": "Diuresis is measured directly as urine flow rate, not from clearance.",
+        "b": "Intratubular pressure cannot be measured by clearance methods.",
+        "c": "RBF can be calculated from RPF using hematocrit, but PAH measures RPF, not RBF directly.",
+        "d": "GFR is measured with inulin or creatinine, not PAH.",
+        "f": "Tubular reabsorption is measured using substances that are reabsorbed, like glucose."
+      },
+      "topicReference": "Topic 55: PAH clearance = eRPF"
+    },
+    {
+      "questionId": "q-3221027349-4",
+      "summary": "Clearance = (12 mg/ml × 1 ml/min) / (0.02 mg/ml) = 600 ml/min. This extremely high clearance can only be PAH.",
+      "whyCorrect": {
+        "b": "Clearance of 600 ml/min far exceeds GFR (125 ml/min), indicating extensive tubular secretion. PAH is the only answer with such high clearance."
+      },
+      "whyIncorrect": {
+        "a": "Alanine is completely reabsorbed - clearance ≈ 0.",
+        "c": "Inulin clearance = GFR = 125 ml/min.",
+        "d": "Sodium is extensively reabsorbed - very low clearance.",
+        "e": "Glucose is completely reabsorbed - clearance ≈ 0."
+      },
+      "topicReference": "Topic 55: PAH identification by clearance"
+    },
+    {
+      "questionId": "q-3221027349-5",
+      "summary": "PAH clearance measures effective renal plasma flow because PAH has ~90% extraction ratio (filtered + secreted).",
+      "whyCorrect": {
+        "e": "PAH clearance = eRPF because PAH is almost completely removed from plasma in one pass (~90% extraction)."
+      },
+      "whyIncorrect": {
+        "a": "Diuresis is urine flow rate, measured directly.",
+        "b": "Intratubular pressure isn't measured by clearance.",
+        "c": "RBF is calculated from RPF using hematocrit.",
+        "d": "GFR is measured by inulin or creatinine clearance.",
+        "f": "Tubular reabsorption is measured using reabsorbed substances like glucose."
+      },
+      "topicReference": "Topic 55: PAH clearance = eRPF"
+    },
+    {
+      "questionId": "q-4525102917-14",
+      "summary": "Glucose has the lowest clearance (essentially zero) because it is completely reabsorbed in the proximal tubule under normal conditions.",
+      "whyCorrect": {
+        "c": "Glucose clearance ≈ 0 ml/min because the SGLT transporters reabsorb 100% of filtered glucose under normal conditions."
+      },
+      "whyIncorrect": {
+        "a": "PAH has the highest clearance (~600 ml/min).",
+        "b": "K+ clearance varies but is not the lowest.",
+        "d": "Cl- is partially reabsorbed but not completely.",
+        "e": "Creatinine clearance ≈ GFR (120-140 ml/min)."
+      },
+      "topicReference": "Topic 55: Glucose has lowest clearance due to complete reabsorption"
+    },
+    {
+      "questionId": "q-4525102917-19",
+      "summary": "Normal values: PAH clearance ≈ 600 ml/min (not 120), FF ≈ 0.20 (not 0.50), RBF ≈ 1200-1300 ml/min, RPF ≈ 660 ml/min, GFR ≈ 120 ml/min.",
+      "whyCorrect": {
+        "c": "Normal RBF is 1200-1300 ml/min - 1300 ml/min is within normal range.",
+        "d": "Normal RPF is 600-700 ml/min - 660 ml/min is normal.",
+        "e": "Normal GFR is 90-125 ml/min - 120 ml/min is normal."
+      },
+      "whyIncorrect": {
+        "a": "Normal PAH clearance (eRPF) is ~600 ml/min, not 120 ml/min. 120 is GFR.",
+        "b": "Normal filtration fraction is 0.18-0.22. FF of 0.50 would indicate severe afferent constriction or massive protein loss."
+      },
+      "topicReference": "Topic 55: Normal reference values for renal parameters"
+    },
+    {
+      "questionId": "q-5090109547-14",
+      "summary": "A substance that is filtered, secreted, and not reabsorbed has clearance higher than GFR (inulin). Since it's also higher than urea (which is partially reabsorbed), both apply.",
+      "whyCorrect": {
+        "b": "Secretion adds to filtered load, so clearance exceeds inulin clearance (GFR).",
+        "e": "Urea clearance is less than GFR due to reabsorption. This substance's clearance is higher than both inulin and urea."
+      },
+      "whyIncorrect": {
+        "a": "Lower than urea would require reabsorption, not secretion.",
+        "c": "Same as inulin would mean no secretion, but this substance is secreted.",
+        "d": "Same as urea would mean partial reabsorption, not secretion.",
+        "f": "Lower than inulin would require net reabsorption."
+      },
+      "topicReference": "Topic 55: Effect of secretion on clearance"
+    },
+    {
+      "questionId": "q-5156012322-3",
+      "summary": "Clearance order from lowest to highest: Glucose (0) < Urea (partial reabsorption) < Inulin (GFR) < PAH (secretion).",
+      "whyCorrect": {
+        "e": "Cglucose ≈ 0 < Curea (~70 ml/min) < Cinulin (120 ml/min) < CPAH (~600 ml/min). This is the correct order based on tubular handling."
+      },
+      "whyIncorrect": {
+        "a": "This option has an error (Cglucose appears twice) and wrong order.",
+        "b": "PAH has highest clearance, not lowest.",
+        "c": "PAH should be highest, not between glucose and urea.",
+        "d": "Glucose should be lowest, not between inulin and PAH.",
+        "f": "Urea should be between glucose and inulin, not lowest."
+      },
+      "topicReference": "Topic 55: Clearance hierarchy"
+    },
+    {
+      "questionId": "q-5156012322-4",
+      "summary": "If 75% is reabsorbed, only 25% is excreted. Clearance = 25% of GFR = 0.25 × 120 = 30 ml/min.",
+      "whyCorrect": {
+        "a": "With 75% reabsorption, clearance = (1 - 0.75) × GFR = 0.25 × 120 = 30 ml/min."
+      },
+      "whyIncorrect": {
+        "b": "160 ml/min would exceed GFR, requiring secretion.",
+        "c": "120 ml/min would mean no reabsorption.",
+        "d": "240 ml/min would require secretion equal to filtered load."
+      },
+      "topicReference": "Topic 55: Clearance with fractional reabsorption"
+    }
+  ]
+}

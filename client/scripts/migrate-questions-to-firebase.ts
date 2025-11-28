@@ -34,14 +34,21 @@
  * - Logs detailed progress and errors
  */
 
-import * as admin from 'firebase-admin';
+import admin from 'firebase-admin';
+import { cert } from 'firebase-admin/app';
 import * as fs from 'fs';
 import * as path from 'path';
+import { fileURLToPath } from 'url';
 import { Timestamp } from 'firebase-admin/firestore';
+import { createHash } from 'crypto';
 
 // ============================================================================
 // CONFIGURATION
 // ============================================================================
+
+// ES Module compatibility - get __dirname equivalent
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const FIREBASE_ADMIN_KEY_PATH = path.resolve(__dirname, '../../firebase-admin-key.json');
 const QUESTIONS_DIR = path.resolve(__dirname, '../src/apps/physiology/data/questions/by-test-id');
@@ -142,8 +149,6 @@ function normalizeText(text: string): string {
  * Generate content hash for duplicate detection
  */
 function generateContentHash(text: string, options: QuestionOption[]): string {
-  const crypto = require('crypto');
-
   const normalizedText = normalizeText(text);
   const normalizedOptions = options
     .map(opt => normalizeText(opt.text))
@@ -151,7 +156,7 @@ function generateContentHash(text: string, options: QuestionOption[]): string {
     .join('|');
 
   const content = `${normalizedText}|||${normalizedOptions}`;
-  return crypto.createHash('md5').update(content).digest('hex');
+  return createHash('md5').update(content).digest('hex');
 }
 
 /**
@@ -237,11 +242,15 @@ function initializeFirebase(): admin.firestore.Firestore {
     const serviceAccount = JSON.parse(fs.readFileSync(FIREBASE_ADMIN_KEY_PATH, 'utf8'));
 
     admin.initializeApp({
-      credential: admin.credential.cert(serviceAccount),
+      credential: cert(serviceAccount),
     });
 
+    const db = admin.firestore();
+    // Enable ignoring undefined properties to handle optional fields
+    db.settings({ ignoreUndefinedProperties: true });
+
     console.log('✅ Firebase Admin SDK initialized');
-    return admin.firestore();
+    return db;
   } catch (error) {
     console.error('❌ Failed to initialize Firebase:', error);
     process.exit(1);
@@ -265,7 +274,10 @@ function readQuestionFiles(): Map<string, LegacyQuestion[]> {
       process.exit(1);
     }
 
-    const files = fs.readdirSync(QUESTIONS_DIR).filter(f => f.endsWith('.json'));
+    // Only use original 12 JSON files, exclude mto3-* files (unverified)
+    const files = fs.readdirSync(QUESTIONS_DIR)
+      .filter(f => f.endsWith('.json'))
+      .filter(f => !f.startsWith('mto3-')); // Exclude unverified mto3-* files
 
     console.log(`\n📁 Found ${files.length} JSON files in:`);
     console.log(`   ${QUESTIONS_DIR}\n`);
@@ -273,7 +285,15 @@ function readQuestionFiles(): Map<string, LegacyQuestion[]> {
     files.forEach(file => {
       const filePath = path.join(QUESTIONS_DIR, file);
       const fileContent = fs.readFileSync(filePath, 'utf8');
-      const questions: LegacyQuestion[] = JSON.parse(fileContent);
+      const parsed = JSON.parse(fileContent);
+
+      // Handle both formats: direct array or {questions: [...]}
+      const questions: LegacyQuestion[] = Array.isArray(parsed) ? parsed : parsed.questions;
+
+      if (!questions || !Array.isArray(questions)) {
+        console.log(`   ⚠ ${file}: No valid questions array found, skipping`);
+        return;
+      }
 
       questionsByFile.set(file, questions);
       console.log(`   ✓ ${file}: ${questions.length} questions`);

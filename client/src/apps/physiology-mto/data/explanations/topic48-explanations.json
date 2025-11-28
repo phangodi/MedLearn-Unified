@@ -1,0 +1,939 @@
+{
+  "metadata": {
+    "topic": 48,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 31,
+    "status": "TEMPLATE - needs explanations generated"
+  },
+  "questions": [
+    {
+      "questionId": "q-0313014645-B-8",
+      "text": "The chemoreceptors responsible for the central nervous system ischemic response are located in",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the right atrium"
+        },
+        {
+          "letter": "b",
+          "text": "the adrenal medulla"
+        },
+        {
+          "letter": "c",
+          "text": "the ventral medulla"
+        },
+        {
+          "letter": "d",
+          "text": "the carotis sinus"
+        },
+        {
+          "letter": "e",
+          "text": "the carotid bodies"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-0313014645-B-11",
+      "text": "Which of the following statements are TRUE concerning the activity of the carotid sinus baroreceptors?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "its increase stimulates the bulbar pressor area"
+        },
+        {
+          "letter": "b",
+          "text": "its increase produces reflex vasodilatation"
+        },
+        {
+          "letter": "c",
+          "text": "it is influenced by changes in body posture"
+        },
+        {
+          "letter": "d",
+          "text": "its increase results in reflex tachycardia"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-0313014645-B-18",
+      "text": "The autonomic nervous system can reduce total peripheral resistance by:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "increasing the sympathetic vasomotor tone"
+        },
+        {
+          "letter": "b",
+          "text": "decreasing the parasympathetic vasomotor tone"
+        },
+        {
+          "letter": "c",
+          "text": "decreasing the sympathetic vasomotor tone"
+        },
+        {
+          "letter": "d",
+          "text": "increasing the parasympathetic vasomotor tone"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-0313014645-2",
+      "text": "Where are the cell bodies of the arterial baroreceptors located?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "in the superior cervical ganglion"
+        },
+        {
+          "letter": "b",
+          "text": "in the adventitia of the carotid artery and the aorta"
+        },
+        {
+          "letter": "c",
+          "text": "in the nucleus tractus solitarius"
+        },
+        {
+          "letter": "d",
+          "text": "in the sensory ganglia of the glossopharyngeal/vagal nerves"
+        },
+        {
+          "letter": "e",
+          "text": "in the nerve of the glossopharyngeal/vagal nerves"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-0313014645-4",
+      "text": "How does the circulatory regulation try to compensate the effects of blood loss (hemorrhage)?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the total peripheral resistance will increase"
+        },
+        {
+          "letter": "b",
+          "text": "plasma ANH levels are elevated"
+        },
+        {
+          "letter": "c",
+          "text": "sympathetic vasoconstrictor tone increases in the capacitance vessels (veins)"
+        },
+        {
+          "letter": "d",
+          "text": "central venous pressure will be increased"
+        },
+        {
+          "letter": "e",
+          "text": "cardiac output increases"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "c"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-0313014645-23",
+      "text": "Vasoconstriction occurs in the skeletal muscle arterioles when:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "local potassium concentration (K+) is increased"
+        },
+        {
+          "letter": "b",
+          "text": "local lactate concentration is increased"
+        },
+        {
+          "letter": "c",
+          "text": "sympathetic vasomotor tone increases"
+        },
+        {
+          "letter": "d",
+          "text": "local hydrogen ion (H+) concentration is increased"
+        },
+        {
+          "letter": "e",
+          "text": "tissue oxygen tension is reduced"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-3543048990-55",
+      "text": "Total peripheral resistance is increased by",
+      "options": [
+        {
+          "letter": "a",
+          "text": "inhibition of the parasympathetic activity"
+        },
+        {
+          "letter": "b",
+          "text": "activation of the carotid sinus baroreceptors"
+        },
+        {
+          "letter": "c",
+          "text": "stimulation of the arterial chemoreceptors"
+        },
+        {
+          "letter": "d",
+          "text": "stimulation of the beta-2 adrenergic receptors"
+        },
+        {
+          "letter": "e",
+          "text": "Bezold-Jarish reflex"
+        },
+        {
+          "letter": "f",
+          "text": "diving reflex"
+        }
+      ],
+      "correctAnswers": [
+        "c",
+        "f"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-3543048990-56",
+      "text": "Total peripheral resistance is decreased by",
+      "options": [
+        {
+          "letter": "a",
+          "text": "parasympathetic stimulation"
+        },
+        {
+          "letter": "b",
+          "text": "inhibition of sympathetic tone"
+        },
+        {
+          "letter": "c",
+          "text": "stimulation of the carotid sinus baroreceptors"
+        },
+        {
+          "letter": "d",
+          "text": "stimulation of the arterial chemoreceptors"
+        },
+        {
+          "letter": "e",
+          "text": "axon reflex"
+        },
+        {
+          "letter": "f",
+          "text": "activation of the rennin-angiotensin system"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-3543048990-68",
+      "text": "After intravenous administration of adrenalin (A) or noradrenalin (NA) the following changes may be observed:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "NA stimulates alpha receptors and thereby increases resistance in the muscle vessels"
+        },
+        {
+          "letter": "b",
+          "text": "small amounts of A decreases resistance of muscle vessels"
+        },
+        {
+          "letter": "c",
+          "text": "large doses of A elicit vasodilatation after an inhibition of alpha receptors"
+        },
+        {
+          "letter": "d",
+          "text": "A and NA induces vasodilatation in the coronary vessels"
+        },
+        {
+          "letter": "e",
+          "text": "A decreases the contraction force of the heart"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "correctAnswerCount": 4
+    },
+    {
+      "questionId": "q-3543048990-73",
+      "text": "The baroreceptors:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "are stretch receptors"
+        },
+        {
+          "letter": "b",
+          "text": "are situated in the carotid and aortic bodies"
+        },
+        {
+          "letter": "c",
+          "text": "when activated, they stimulate the bulbar cardio_____ area"
+        },
+        {
+          "letter": "d",
+          "text": "are innervated with afferent fibers projecting to the tractus solitarius"
+        },
+        {
+          "letter": "e",
+          "text": "are found exclusively in the high pressure part of the circulatory system"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "c",
+        "d"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-3543048990-74",
+      "text": "The baroreceptor reflex",
+      "options": [
+        {
+          "letter": "a",
+          "text": "has sensors located in the carotid artery"
+        },
+        {
+          "letter": "b",
+          "text": "sensors located in the aortic bodies"
+        },
+        {
+          "letter": "c",
+          "text": "operates in the normal range of arterial blood pressure"
+        },
+        {
+          "letter": "d",
+          "text": "activates sympathetic vasodilator (cholinergic) fibers"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "c"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-3543048990-75",
+      "text": "Firing of the carotid sinus baroreceptors increases in response to",
+      "options": [
+        {
+          "letter": "a",
+          "text": "severe hemorrhage"
+        },
+        {
+          "letter": "b",
+          "text": "compression of the carotid sinus"
+        },
+        {
+          "letter": "c",
+          "text": "recumbent posture"
+        },
+        {
+          "letter": "d",
+          "text": "peripheral vasodilatation"
+        },
+        {
+          "letter": "e",
+          "text": "increased pulse pressure"
+        },
+        {
+          "letter": "f",
+          "text": "hypoxia (it is the most important response to hypoxia)"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c",
+        "e"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-3543048990-76",
+      "text": "The function of the carotid sinus reflex is",
+      "options": [
+        {
+          "letter": "a",
+          "text": "prevention of hypertension"
+        },
+        {
+          "letter": "b",
+          "text": "maintaining a constant blood pressure over a long period of time"
+        },
+        {
+          "letter": "c",
+          "text": "gas exchange"
+        },
+        {
+          "letter": "d",
+          "text": "fast correction of blood pressure"
+        },
+        {
+          "letter": "e",
+          "text": "regulation of filling of the right heart"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-3543048990-77",
+      "text": "The differences in the baroreceptor and chemoreceptor vasomotor reflexes are as follows",
+      "options": [
+        {
+          "letter": "a",
+          "text": "baroreceptor reflexes are mediated by an inhibition of sympathetic activity whereas chemoreceptor reflexes involve an activation of sympathetic activity"
+        },
+        {
+          "letter": "b",
+          "text": "chemoreceptor reflexes are active in the normal range of blood pressure whereas baroreceptor reflexes are activated in response to extreme hypotension"
+        },
+        {
+          "letter": "c",
+          "text": "the glossopharyngeal nerve is the afferent for baroreceptor reflexes, whereas the vagal nerve is the afferent for the chemoreceptor reflexes"
+        },
+        {
+          "letter": "d",
+          "text": "activation of baroreceptors stimulates the depressor center whereas the activation of the chemoreceptors stimulates the pressor center"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "d"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-3543048990-88",
+      "text": "Standing up from recumbent posture, the following can be observed:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "cardiac output decreases"
+        },
+        {
+          "letter": "b",
+          "text": "hydraulic resistance increases"
+        },
+        {
+          "letter": "c",
+          "text": "stroke volume decreases"
+        },
+        {
+          "letter": "d",
+          "text": "blood pressure does not change"
+        },
+        {
+          "letter": "e",
+          "text": "central blood volume increases"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "b",
+        "c"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-4447200607-5",
+      "text": "Depressor reflex can be elicited by",
+      "options": [
+        {
+          "letter": "a",
+          "text": "stretching the left ventricle"
+        },
+        {
+          "letter": "b",
+          "text": "stretching the pulmonary artery"
+        },
+        {
+          "letter": "c",
+          "text": "increasing the intracranial pressure"
+        },
+        {
+          "letter": "d",
+          "text": "arterial hypoxia"
+        },
+        {
+          "letter": "e",
+          "text": "stretching the carotis sinus"
+        },
+        {
+          "letter": "f",
+          "text": "stimulating chemosensitive vagal afferents in the lungs and the heart"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "b",
+        "e",
+        "f"
+      ],
+      "correctAnswerCount": 4
+    },
+    {
+      "questionId": "q-4447200607-9",
+      "text": "Which of the following is the most important factor regulating skin blood flow",
+      "options": [
+        {
+          "letter": "a",
+          "text": "parasympathetic innervation"
+        },
+        {
+          "letter": "b",
+          "text": "basal myogenic activity"
+        },
+        {
+          "letter": "c",
+          "text": "local tissue metabolism"
+        },
+        {
+          "letter": "d",
+          "text": "sympathetic vasomotor tone"
+        },
+        {
+          "letter": "e",
+          "text": "autoregulation"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4447200607-21",
+      "text": "The basal tone of the vessels",
+      "options": [
+        {
+          "letter": "a",
+          "text": "is the same as the neurogen tone"
+        },
+        {
+          "letter": "b",
+          "text": "the cerebral vessels do not have it"
+        },
+        {
+          "letter": "c",
+          "text": "can be observed after the denervation of the vessels"
+        },
+        {
+          "letter": "d",
+          "text": "is identical in the different organs"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4447200607-33",
+      "text": "Concerning the baroreceptor reflex:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "it is a depressor reflex"
+        },
+        {
+          "letter": "b",
+          "text": "the increase of heart frequency is a part of it"
+        },
+        {
+          "letter": "c",
+          "text": "dilation of resistance and resistance vessels is involved in it"
+        },
+        {
+          "letter": "d",
+          "text": "the blood pressure is decreased during its activation"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c",
+        "d"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-4525102917-16",
+      "text": "Vasoconstriction occurs in the skeletal muscle arterioles when:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "local lactate concentration is increased"
+        },
+        {
+          "letter": "b",
+          "text": "local hydrogen ion (H+) concentration is increased"
+        },
+        {
+          "letter": "c",
+          "text": "local potassium concentration (K+) is increased"
+        },
+        {
+          "letter": "d",
+          "text": "sympathetic vasomotor tone increases"
+        },
+        {
+          "letter": "e",
+          "text": "tissue oxygen tension is reduced"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4525102917-18",
+      "text": "Which of the following statements are TRUE concerning the activity of the carotid sinus baroreceptors?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "its increase results in reflex tachycardia"
+        },
+        {
+          "letter": "b",
+          "text": "it is influenced by changes in body posture"
+        },
+        {
+          "letter": "c",
+          "text": "its increase produces reflex vasodilatation"
+        },
+        {
+          "letter": "d",
+          "text": "its increase stimulates the medullary pressor area (RVLM)"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-4855200607-8",
+      "text": "The autonomic nervous system can reduce total peripheral resistance by:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "decreasing the sympathetic vasomotor tone"
+        },
+        {
+          "letter": "b",
+          "text": "increasing the parasympathetic vasomotor tone"
+        },
+        {
+          "letter": "c",
+          "text": "decreasing the parasympathetic vasomotor tone"
+        },
+        {
+          "letter": "d",
+          "text": "increasing the sympathetic vasomotor tone"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4855200607-20",
+      "text": "Choose the CORRECT statements! When standing up:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "cardiac output decreases"
+        },
+        {
+          "letter": "b",
+          "text": "the sympathetic tone constricting the veins increases"
+        },
+        {
+          "letter": "c",
+          "text": "the baroreceptor activity increases"
+        },
+        {
+          "letter": "d",
+          "text": "heart rate decreases"
+        },
+        {
+          "letter": "e",
+          "text": "the activity of the medullary pressor area increases"
+        },
+        {
+          "letter": "f",
+          "text": "total peripheral resistance decreases"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "e"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-4855200607-40",
+      "text": "Which circulatory reflex operates at physiologic arterial blood pressure values in a healthy individual?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the Cushing reflex"
+        },
+        {
+          "letter": "b",
+          "text": "the central chemoreceptor depressor reflex"
+        },
+        {
+          "letter": "c",
+          "text": "the peripheral chemoreceptor pressor reflex"
+        },
+        {
+          "letter": "d",
+          "text": "the carotid sinus baroreceptor reflex"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4855200607-42",
+      "text": "The basal tone of the vessels",
+      "options": [
+        {
+          "letter": "a",
+          "text": "can be measured after the denervation of the vessels"
+        },
+        {
+          "letter": "b",
+          "text": "the cerebral vessels do not have it"
+        },
+        {
+          "letter": "c",
+          "text": "is the same as the neurogen tone"
+        },
+        {
+          "letter": "d",
+          "text": "is identical in the different organs"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4855200607-43",
+      "text": "The receptors of the central nervous system ischemic response are located in",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the carotis sinus"
+        },
+        {
+          "letter": "b",
+          "text": "the ventral medulla"
+        },
+        {
+          "letter": "c",
+          "text": "the adrenal medulla"
+        },
+        {
+          "letter": "d",
+          "text": "the right atrium"
+        },
+        {
+          "letter": "e",
+          "text": "the carotid bodies"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4855200607-45",
+      "text": "The pressor center:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "it is in the rostroventral reticular formation of the brainstem"
+        },
+        {
+          "letter": "b",
+          "text": "its stimulation causes the increase of blood pressure"
+        },
+        {
+          "letter": "c",
+          "text": "some of its cells have pacemaker activity"
+        },
+        {
+          "letter": "d",
+          "text": "its stimulation results in bradycardia"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "correctAnswerCount": 4
+    },
+    {
+      "questionId": "q-4855200607-49",
+      "text": "The function of carotis sinus reflex is:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "prevention of long lasting hypertension"
+        },
+        {
+          "letter": "b",
+          "text": "gas exchange"
+        },
+        {
+          "letter": "c",
+          "text": "fast correction of blood pressure"
+        },
+        {
+          "letter": "d",
+          "text": "regulation of filling of the right heart"
+        },
+        {
+          "letter": "e",
+          "text": "maintaining a constant blood pressure over a long period of time"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-5156012322-11",
+      "text": "Vasoconstrictor fibres:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "discharge action potentials only during hypotension"
+        },
+        {
+          "letter": "b",
+          "text": "may show a fivefold increase from resting discharge level during maximal activation"
+        },
+        {
+          "letter": "c",
+          "text": "are located in the vagus nerve"
+        },
+        {
+          "letter": "d",
+          "text": "innervate only arterioles and larger arteries"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-5156012322-15",
+      "text": "Stimulation of the arterial chemoreceptors by hypoxia",
+      "options": [
+        {
+          "letter": "a",
+          "text": "causes vasodilation in the systemic arterioles"
+        },
+        {
+          "letter": "b",
+          "text": "elicits systemic vasoconstriction"
+        },
+        {
+          "letter": "c",
+          "text": "elicits an increase in peripheral resistance"
+        },
+        {
+          "letter": "d",
+          "text": "decreases respiratory minute ventilation"
+        },
+        {
+          "letter": "e",
+          "text": "elicits apnea"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-5156012322-24",
+      "text": "Increased peripheral resistance",
+      "options": [
+        {
+          "letter": "a",
+          "text": "may result from an increased sympathetic activity"
+        },
+        {
+          "letter": "b",
+          "text": "results in a larger increase in the systolic pressure than in the diastolic"
+        },
+        {
+          "letter": "c",
+          "text": "results in an increase of the pulse pressure"
+        },
+        {
+          "letter": "d",
+          "text": "promotes venous return"
+        },
+        {
+          "letter": "e",
+          "text": "does not influence the pulse pressure significantly"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "e"
+      ],
+      "correctAnswerCount": 2
+    }
+  ]
+}

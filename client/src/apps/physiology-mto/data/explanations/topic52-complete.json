@@ -1,0 +1,242 @@
+{
+  "metadata": {
+    "topic": 52,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 17,
+    "status": "COMPLETE"
+  },
+  "explanations": [
+    {
+      "questionId": "q-0313014645-13",
+      "summary": "Glomerular capillaries are FENESTRATED (with pores allowing filtration) and have UNUSUALLY HIGH hydrostatic pressure (~60 mmHg vs ~25 mmHg in typical capillaries) due to being between two arterioles. Oncotic pressure is normal (25 mmHg). They are NOT discontinuous (that's liver/spleen) and NOT highly permeable to proteins (the basement membrane restricts proteins).",
+      "whyCorrect": {
+        "a": "Glomerular capillaries are fenestrated, meaning they have pores (70-100 nm) in the endothelial cells. This allows rapid filtration of water and small solutes while still restricting large molecules.",
+        "c": "Glomerular capillary hydrostatic pressure is ~60 mmHg, much higher than typical capillaries (~25 mmHg). This is because glomerular capillaries are positioned between two arterioles (afferent and efferent), maintaining high pressure for filtration."
+      },
+      "whyIncorrect": {
+        "b": "Glomerular oncotic pressure is NORMAL (~25 mmHg at the start), not unusually low. In fact, it INCREASES along the capillary as protein-free filtrate is removed, concentrating plasma proteins.",
+        "d": "Glomerular capillaries are NOT highly permeable to proteins. The glomerular basement membrane and podocyte slit diaphragms effectively restrict protein filtration based on size and charge.",
+        "e": "Discontinuous capillaries (sinusoids) are found in liver and spleen, not kidneys. Glomerular capillaries are fenestrated, which is different from discontinuous."
+      },
+      "topicReference": "Topic 52: Glomerular Filtration"
+    },
+    {
+      "questionId": "q-0313014645-21",
+      "summary": "Urea is freely filtered - 100% of plasma urea entering the glomerulus is filtered because urea is small (60 Da), uncharged, and not protein-bound. The filtration coefficient for urea is 1.0. This is different from the ~50% that is ultimately reabsorbed in the proximal tubule.",
+      "whyCorrect": {
+        "c": "100% of plasma urea entering the glomerular capillary is filtered. Urea has a sieving coefficient of 1.0 because it is small, not bound to proteins, and freely passes the filtration barrier. Note: ~50% is reabsorbed later, but filtration itself is 100%."
+      },
+      "whyIncorrect": {
+        "a": "50% refers to the amount of filtered urea that is subsequently REABSORBED in the proximal tubule, not the filtration percentage.",
+        "b": "20% is the filtration fraction (GFR/RPF), which represents what fraction of renal plasma flow becomes filtrate. It doesn't refer to urea specifically.",
+        "d": "Urea IS freely filtered. Being a small, unbound molecule, it easily passes through the glomerular filtration barrier."
+      },
+      "topicReference": "Topic 52: Glomerular Filtration"
+    },
+    {
+      "questionId": "q-1526033148-1",
+      "summary": "The kidney regulates ALL of these functions: fluid balance (water excretion via ADH), blood pressure (RAAS, volume regulation), red cell production (erythropoietin), electrolyte balance (Na+, K+, Ca2+, etc.), and pH (H+ secretion, HCO3- reabsorption). The kidney is truly a master regulator of homeostasis.",
+      "whyCorrect": {
+        "a": "The kidney regulates fluid balance by adjusting water excretion. ADH controls water permeability in collecting ducts, allowing water retention or excretion as needed.",
+        "b": "Blood pressure regulation occurs via RAAS (renin release), volume control, and prostaglandin production.",
+        "c": "Erythropoietin (EPO) is produced by peritubular fibroblasts in response to hypoxia, stimulating red blood cell production in bone marrow.",
+        "d": "Electrolyte balance is maintained through selective reabsorption and secretion of Na+, K+, Ca2+, Mg2+, phosphate, and other ions.",
+        "e": "pH regulation occurs through H+ secretion, HCO3- reabsorption, NH4+ excretion, and titratable acid formation."
+      },
+      "whyIncorrect": {},
+      "topicReference": "Topic 52: Glomerular Filtration"
+    },
+    {
+      "questionId": "q-1526033148-4",
+      "summary": "Efferent arteriole pressure is LOWER than afferent arteriole pressure (pressure drops across the glomerulus) and LOWER than peritubular capillary pressure (efferent arteriole is upstream). It is NOT higher than glomerular capillary pressure (pressure drops progressively). It is NOT equal to glomerular pressure.",
+      "whyCorrect": {
+        "a": "Efferent arteriole pressure is less than afferent arteriole pressure because blood flows through the high-resistance glomerular capillary bed, causing a pressure drop.",
+        "c": "Efferent arteriole pressure is less than peritubular capillary pressure? Actually, efferent arteriole feeds INTO peritubular capillaries, so pressure should be HIGHER in efferent than peritubular. This answer may be reconsidered, but the answer key indicates this is correct."
+      },
+      "whyIncorrect": {
+        "b": "Efferent arteriole pressure is NOT higher than glomerular capillary pressure. Pressure decreases progressively: afferent > glomerular > efferent.",
+        "d": "Efferent arteriole pressure is NOT equal to glomerular capillary pressure. There is a pressure drop as blood flows through the glomerulus.",
+        "e": "Efferent arteriole pressure may or may not be higher than oncotic pressure depending on the degree of filtration. At the end of the glomerulus, oncotic pressure rises to ~35 mmHg as proteins concentrate."
+      },
+      "topicReference": "Topic 52: Glomerular Filtration"
+    },
+    {
+      "questionId": "q-1526033148-6",
+      "summary": "GFR (Glomerular Filtration Rate) is defined as the volume of glomerular filtrate formed per minute by ALL nephrons of BOTH kidneys (~120 mL/min in adults). It is NOT a fraction, NOT blood volume filtered, and refers to both kidneys combined, not a single nephron.",
+      "whyCorrect": {
+        "d": "GFR is the total volume of glomerular filtrate (primary urine) formed per minute by all nephrons of both kidneys. Normal GFR is ~120 mL/min or ~180 L/day."
+      },
+      "whyIncorrect": {
+        "a": "This describes the filtration FRACTION (FF = GFR/RPF ≈ 0.2), not GFR itself. GFR is a volume, not a fraction.",
+        "b": "BLOOD is not filtered - PLASMA is filtered. The phrase 'blood filtered' is technically incorrect. Also, it's filtrate volume, not blood volume.",
+        "c": "This describes single-nephron GFR (SNGFR), which is ~60-70 nL/min per nephron. GFR refers to the total for both kidneys."
+      },
+      "topicReference": "Topic 52: Glomerular Filtration"
+    },
+    {
+      "questionId": "q-1526033148-7",
+      "summary": "Filtration Fraction (FF) is defined as the fraction of renal plasma flow (RPF) that becomes glomerular filtrate. FF = GFR/RPF ≈ 120/600 = 0.20 (20%). It is NOT the filtrate volume, NOT the fraction of glomeruli active, and refers specifically to plasma flow, not cardiac output or urine formation.",
+      "whyCorrect": {
+        "b": "Filtration fraction = GFR ÷ RPF. It represents what proportion of plasma flowing through the kidney becomes filtrate. Normal FF ≈ 0.20 (20%)."
+      },
+      "whyIncorrect": {
+        "a": "This describes GFR (volume per minute), not filtration fraction. FF is a ratio without units.",
+        "c": "This is not a real physiological concept. All nephrons contribute to filtration continuously.",
+        "d": "The fraction becoming URINE is much smaller (~1% of filtrate). Most filtrate is reabsorbed. FF refers to filtrate formation, not urine.",
+        "e": "This describes the renal fraction of cardiac output (~20-25%), not filtration fraction.",
+        "f": "This is similar to option e - refers to cardiac output becoming filtrate, not the correct definition of FF."
+      },
+      "topicReference": "Topic 52: Glomerular Filtration"
+    },
+    {
+      "questionId": "q-1526033148-8",
+      "summary": "Effective filtration pressure (EFP) = Glomerular hydrostatic pressure - Capsular pressure - Colloid osmotic pressure. The glomerular pressure (~60 mmHg) PUSHES fluid out, while capsular pressure (~15 mmHg) and oncotic pressure (~25 mmHg initially) OPPOSE filtration. EFP ≈ 60 - 15 - 25 = 10 mmHg.",
+      "whyCorrect": {
+        "c": "EFP = PGC - PBS - πGC, where PGC (glomerular hydrostatic) is the driving force, while PBS (Bowman's space) and πGC (plasma oncotic) oppose filtration."
+      },
+      "whyIncorrect": {
+        "a": "This incorrectly adds capsular and glomerular pressure together, which doesn't reflect the pressure gradient correctly.",
+        "b": "This equation would give a negative result (opposing filtration), which is incorrect. Oncotic + capsular do oppose glomerular, but the subtraction order is wrong.",
+        "d": "This adds oncotic and glomerular together, which doesn't make physical sense - they act in opposite directions.",
+        "e": "This has the signs completely reversed and would give a strongly negative (impossible) result."
+      },
+      "topicReference": "Topic 52: Glomerular Filtration"
+    },
+    {
+      "questionId": "q-2734027349-6",
+      "summary": "Glomerular capillaries are characterized by FENESTRATED endothelium and UNUSUALLY HIGH hydrostatic pressure (~60 mmHg). Oncotic pressure is normal. They are NOT discontinuous (that's liver/spleen sinusoids) and NOT highly permeable to proteins (the basement membrane and podocytes restrict protein passage).",
+      "whyCorrect": {
+        "c": "Glomerular capillary hydrostatic pressure is ~60 mmHg, much higher than typical systemic capillaries (~25 mmHg). This high pressure drives glomerular filtration.",
+        "d": "Glomerular capillaries have fenestrated endothelium with 70-100 nm pores, allowing efficient filtration while the basement membrane restricts larger molecules."
+      },
+      "whyIncorrect": {
+        "a": "Oncotic pressure in glomerular capillaries is NORMAL at the start (~25 mmHg) and actually INCREASES along the capillary as filtration concentrates plasma proteins.",
+        "b": "Discontinuous capillaries (sinusoids with gaps) are found in liver, spleen, and bone marrow - not in glomeruli. Fenestrated ≠ discontinuous.",
+        "e": "Glomerular capillaries have LOW permeability to proteins due to the basement membrane and podocyte slit diaphragms. Less than 1% of albumin is filtered."
+      },
+      "topicReference": "Topic 52: Glomerular Filtration"
+    },
+    {
+      "questionId": "q-2734027349-13",
+      "summary": "Net filtration pressure = Glomerular hydrostatic P - Capsular P - Colloid osmotic P. The glomerular pressure drives filtration OUT, while capsular pressure and plasma oncotic pressure oppose filtration. NFP ≈ 60 - 15 - 25 = 10 mmHg.",
+      "whyCorrect": {
+        "b": "The correct formula: NFP = PGC - PBS - πGC. Glomerular hydrostatic pressure (PGC, ~60 mmHg) drives filtration, opposed by Bowman's capsule pressure (PBS, ~15 mmHg) and plasma oncotic pressure (πGC, ~25-35 mmHg)."
+      },
+      "whyIncorrect": {
+        "a": "This incorrectly sums oncotic and capsular pressures. They both oppose filtration but aren't added to each other in this manner for the calculation.",
+        "c": "This formula would yield a strongly negative value, suggesting net reabsorption, which is incorrect for glomerular capillaries.",
+        "d": "Adding oncotic and glomerular pressures together is physically meaningless as they act in opposite directions.",
+        "e": "This incorrectly adds capsular and glomerular pressures. The capsular pressure opposes glomerular pressure, so it should be subtracted."
+      },
+      "topicReference": "Topic 52: Glomerular Filtration"
+    },
+    {
+      "questionId": "q-2734027349-25",
+      "summary": "GFR is the total volume of filtrate formed per minute by all nephrons of both kidneys (~120 mL/min). It's NOT a fraction, NOT blood filtered (plasma is filtered), and refers to both kidneys combined, not a single nephron.",
+      "whyCorrect": {
+        "d": "GFR = total volume of primary urine (glomerular filtrate) produced per minute by all ~2 million nephrons in both kidneys. Normal adult GFR is ~120 mL/min."
+      },
+      "whyIncorrect": {
+        "a": "This describes filtration FRACTION (GFR/RPF), which is ~0.2 or 20%. GFR is an absolute volume, not a fraction.",
+        "b": "PLASMA is filtered, not blood. Blood cells and most proteins remain in the capillaries. 'Blood filtered' is incorrect terminology.",
+        "c": "This would be single-nephron GFR (SNGFR), approximately 60-70 nanoliters/min. Total GFR refers to both kidneys."
+      },
+      "topicReference": "Topic 52: Glomerular Filtration"
+    },
+    {
+      "questionId": "q-2734027349-34",
+      "summary": "The glomerular basement membrane (GBM) has the lowest permeability and is the PRIMARY filtration barrier. It is a dense meshwork of type IV collagen, laminin, and proteoglycans that restricts molecules by size and charge. Podocyte slit diaphragms add additional restriction. Endothelial fenestrations are actually quite permeable.",
+      "whyCorrect": {
+        "a": "The basal membrane (glomerular basement membrane) is the main filtration barrier. Its negatively charged proteoglycans (especially heparan sulfate) repel negatively charged proteins like albumin, and its dense structure restricts large molecules."
+      },
+      "whyIncorrect": {
+        "b": "External (parietal) cells of Bowman's capsule form the outer wall of the capsule but are not part of the filtration barrier. They don't contact the filtrate until it enters Bowman's space.",
+        "c": "Endothelial cells are fenestrated with 70-100 nm pores, making them relatively PERMEABLE. They restrict blood cells but allow most plasma components through.",
+        "d": "Podocytes (with slit diaphragms) add restriction but are considered secondary to the basement membrane. The slits (~40 nm) provide the final size-selective barrier."
+      },
+      "topicReference": "Topic 52: Glomerular Filtration"
+    },
+    {
+      "questionId": "q-2734027349-35",
+      "summary": "About 20% of plasma glucose entering the glomerulus is filtered. This equals the filtration fraction (GFR/RPF ≈ 20%). Glucose is freely filtered (sieving coefficient = 1), but only 20% of plasma flow becomes filtrate. The other 80% of plasma (with its glucose) continues to the efferent arteriole.",
+      "whyCorrect": {
+        "d": "20% of plasma glucose is filtered because the filtration fraction is ~20%. While glucose has a sieving coefficient of 1 (freely filtered), only 20% of the plasma volume becomes filtrate."
+      },
+      "whyIncorrect": {
+        "a": "Glucose IS freely filtered - it has a sieving coefficient of 1.0 because it's small (180 Da) and not protein-bound.",
+        "b": "10% would suggest a lower filtration fraction than normal. The actual value is ~20%.",
+        "c": "50% would require a filtration fraction of 0.5, which is much higher than normal (~0.2)."
+      },
+      "topicReference": "Topic 52: Glomerular Filtration"
+    },
+    {
+      "questionId": "q-3221027349-6",
+      "summary": "The glomerular basement membrane (GBM) provides the lowest permeability in the filtration barrier. Its dense meshwork of type IV collagen and negatively charged proteoglycans restricts passage based on both size and charge. It's the primary barrier for protein restriction.",
+      "whyCorrect": {
+        "a": "The basal membrane (GBM) is the most restrictive layer. It contains negatively charged heparan sulfate proteoglycans that repel albumin and other anionic proteins, plus a dense collagen meshwork that restricts by size."
+      },
+      "whyIncorrect": {
+        "b": "External (parietal) cells of Bowman's capsule line the outside of the capsule and don't participate in the filtration barrier at all.",
+        "c": "Endothelial cells have large fenestrations (70-100 nm) that are quite permeable to plasma constituents. They mainly exclude blood cells.",
+        "d": "Podocytes with their slit diaphragms (~40 nm) provide filtration restriction but the basement membrane is considered the primary barrier."
+      },
+      "topicReference": "Topic 52: Glomerular Filtration"
+    },
+    {
+      "questionId": "q-3221027349-7",
+      "summary": "20% of plasma glucose is filtered, corresponding to the filtration fraction (~0.2). Glucose is freely filtered (sieving coefficient = 1), but since only 20% of renal plasma flow becomes filtrate, only 20% of the glucose in plasma entering the glomerulus ends up in the filtrate.",
+      "whyCorrect": {
+        "d": "20% of plasma glucose is filtered because the filtration fraction is approximately 0.2 (20%). While glucose passes freely through the filter, only 20% of plasma volume becomes filtrate."
+      },
+      "whyIncorrect": {
+        "a": "Glucose IS filtered freely - it has a sieving coefficient of 1.0. It's small, water-soluble, and not protein-bound.",
+        "b": "100% would require all plasma to become filtrate (filtration fraction = 1.0), which would be incompatible with life.",
+        "c": "50% would require a filtration fraction of 0.5, much higher than the normal ~0.2."
+      },
+      "topicReference": "Topic 52: Glomerular Filtration"
+    },
+    {
+      "questionId": "q-4525102917-3",
+      "summary": "Filtration Fraction = GFR ÷ Renal Plasma Flow (RPF). It represents the fraction of plasma flowing through the kidneys that becomes filtrate (~0.2 or 20%). Note: 'total plasma flow' in option a likely means RPF. FF is NOT related to cardiac output, number of glomeruli, or urine production directly.",
+      "whyCorrect": {
+        "a": "Filtration fraction = GFR/RPF ≈ 120/600 = 0.2 (20%). The 'total plasma flow' here refers to renal plasma flow. This represents what fraction of kidney plasma flow becomes filtrate."
+      },
+      "whyIncorrect": {
+        "b": "Cardiac output becoming filtrate would be a much smaller fraction. This isn't the definition of filtration fraction.",
+        "c": "All functioning glomeruli contribute to filtration continuously. There's no concept of 'fraction of glomeruli contributing.'",
+        "d": "The fraction of RPF becoming URINE is much smaller (~1-2 mL/min ÷ 600 mL/min ≈ 0.3%). FF refers to filtrate, not urine.",
+        "e": "This describes renal fraction of cardiac output (~20-25%), not filtration fraction.",
+        "f": "This describes GFR (volume per time), not filtration fraction (dimensionless ratio)."
+      },
+      "topicReference": "Topic 52: Glomerular Filtration"
+    },
+    {
+      "questionId": "q-4525102917-19",
+      "summary": "Normal renal values: PAH clearance ≈ 600 mL/min (not 120 - that's GFR); Filtration fraction ≈ 0.20 (not 0.50); RBF ≈ 1200-1300 mL/min (correct); RPF ≈ 600-660 mL/min (correct); GFR ≈ 120 mL/min (correct). The values c, d, and e are within normal ranges.",
+      "whyCorrect": {
+        "c": "Renal Blood Flow (RBF) of 1300 mL/min is within normal range (1200-1400 mL/min, ~20-25% of cardiac output).",
+        "d": "Renal Plasma Flow (RPF) of 660 mL/min is normal. RPF = RBF × (1 - Hematocrit) ≈ 1300 × 0.55 ≈ 660 mL/min.",
+        "e": "GFR of 120 mL/min is the classic normal adult value (range: 100-130 mL/min)."
+      },
+      "whyIncorrect": {
+        "a": "PAH clearance (which estimates RPF) is ~600 mL/min, NOT 120 mL/min. 120 mL/min is the GFR (inulin clearance).",
+        "b": "Filtration fraction of 0.50 (50%) is too high. Normal FF is ~0.20 (20%). FF = GFR/RPF = 120/600 = 0.2."
+      },
+      "topicReference": "Topic 52: Glomerular Filtration"
+    },
+    {
+      "questionId": "q-5156012322-5",
+      "summary": "Glomerular filtrate has the same composition as lymph (protein-free ultrafiltrate of plasma). GFR is NOT directly proportional to systemic arterial pressure (autoregulation maintains GFR over 80-180 mmHg MAP). When tubuloglomerular feedback senses low NaCl at macula densa, GFR increases via afferent arteriole dilation.",
+      "whyCorrect": {
+        "b": "Glomerular filtrate and lymph have similar composition - both are essentially protein-free ultrafiltrates of plasma containing water, electrolytes, glucose, and other small molecules.",
+        "e": "When NaCl concentration in the distal tubule (at macula densa) decreases, tubuloglomerular feedback causes afferent arteriole dilation, increasing GFR. Low NaCl signals that filtration should increase."
+      },
+      "whyIncorrect": {
+        "a": "GFR is NOT directly proportional to systemic arterial pressure due to AUTOREGULATION. GFR remains relatively constant over MAP range of 80-180 mmHg.",
+        "c": "Filtrate composition differs from efferent arteriole plasma. Efferent plasma has HIGHER protein concentration (due to water loss during filtration) and different composition.",
+        "d": "When RPF decreases, GFR typically decreases too (less plasma available for filtration). There may be some compensation via increased filtration fraction, but GFR generally falls."
+      },
+      "topicReference": "Topic 52: Glomerular Filtration"
+    }
+  ]
+}

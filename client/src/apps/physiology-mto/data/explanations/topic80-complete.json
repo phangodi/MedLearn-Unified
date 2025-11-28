@@ -1,0 +1,6 @@
+{
+  "metadata": {"topic": 80, "generatedAt": "2025-11-28", "totalQuestions": 1, "status": "COMPLETE"},
+  "explanations": [
+    {"questionId": "q-2734027349-5", "summary": "K+ excretion mainly via SECRETION in distal tubule and collecting duct (principal cells). Aldosterone enhances this. Proximal tubule reabsorbs ~65% of filtered K+, but secretion in distal nephron determines final excretion.", "whyCorrect": {"b": "Increased K+ excretion is primarily due to increased SECRETION by principal cells in distal tubule and collecting duct. High K+ diet → aldosterone → more K+ channels/pumps → more secretion."}, "whyIncorrect": {"a": "Decreased reabsorption is minor factor; secretion is key.", "c": "High K+ diet INCREASES aldosterone (to excrete more K+).", "d": "GFR changes are not the main mechanism for K+ adaptation.", "e": "PT reabsorption is relatively constant; distal secretion varies."}, "topicReference": "Topic 80: Potassium Handling"}
+  ]
+}

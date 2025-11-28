@@ -1,0 +1,241 @@
+{
+  "metadata": {
+    "topic": 58,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 8,
+    "status": "TEMPLATE - needs explanations generated"
+  },
+  "questions": [
+    {
+      "questionId": "q-0313014645-B-7",
+      "text": "During the filling phase of the urinary bladder:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "sympathetic tone dominates in the bladder wall."
+        },
+        {
+          "letter": "b",
+          "text": "the bladder volume and intravesical pressure increase in direct proportion."
+        },
+        {
+          "letter": "c",
+          "text": "the inner urethral sphincter relaxes."
+        },
+        {
+          "letter": "d",
+          "text": "the outer urethral sphincter relaxes."
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-0313014645-17",
+      "text": "Which of the following statements is true concerning human urinary bladder function?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "emptying of the bladder during urination can be supported by the simultaneous contractions of abdominal muscles"
+        },
+        {
+          "letter": "b",
+          "text": "in the presence of vasopressin, water is reabsorbed through the urothelium of the bladder"
+        },
+        {
+          "letter": "c",
+          "text": "activation of the parasympathetic nerves of the bladder contributes to the receptive relaxation of the smooth muscle during bladder filling"
+        },
+        {
+          "letter": "d",
+          "text": "the urine storage function is promoted by the Bayliss effect of the bladder smooth muscle"
+        },
+        {
+          "letter": "e",
+          "text": "in healthy subjects, there is always some urine retention after urination"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-2734027349-2",
+      "text": "The autonomic innervation of the urinary bladder involves:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the activation of nicotinic acetyl-choline receptors by parasympathetic activity"
+        },
+        {
+          "letter": "b",
+          "text": "the activation of beta-2 receptors by sympathetic activity"
+        },
+        {
+          "letter": "c",
+          "text": "sympathetic nerves exert presynaptic inhibition on parasympathetic terminals"
+        },
+        {
+          "letter": "d",
+          "text": "the activation of alfa-1 receptors by sympathetic activity"
+        },
+        {
+          "letter": "e",
+          "text": "the activation of muscarinic acetyl-choline receptors by parasympathetic activity"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c",
+        "e"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-2734027349-8",
+      "text": "Which of the following statements is true concerning human urinary bladder function?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "in the presence of vasopressin, water is reabsorbed through the urothelium of the bladder"
+        },
+        {
+          "letter": "b",
+          "text": "emptying of bladder during urination is supported by the simultaneous contraction of the detrusor muscle"
+        },
+        {
+          "letter": "c",
+          "text": "the urine storage function is promoted by the Bayliss effect of the bladder smooth muscle"
+        },
+        {
+          "letter": "d",
+          "text": "in healthy adults, there is always some urine retention after urination"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-2734027349-21",
+      "text": "During urination:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the inner urethral sphincter voluntarily relaxes"
+        },
+        {
+          "letter": "b",
+          "text": "sympathetic tone decreases on the inner urethral sphincter"
+        },
+        {
+          "letter": "c",
+          "text": "the outer uretral sphincter voluntarily relaxes"
+        },
+        {
+          "letter": "d",
+          "text": "parasympathetic tone decreases on the outer urethral sphincter"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-5090109547-18",
+      "text": "The parasympathetic preganglionic neuronal cell bodies controlling the detrusor muscle of the bladder are located in the",
+      "options": [
+        {
+          "letter": "a",
+          "text": "hypothalamus"
+        },
+        {
+          "letter": "b",
+          "text": "medulla oblongata"
+        },
+        {
+          "letter": "c",
+          "text": "lumbar spinal cord"
+        },
+        {
+          "letter": "d",
+          "text": "sacral spinal cord"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-5156012322-2",
+      "text": "The reflex of micturition can never be evoked if the following region is damaged",
+      "options": [
+        {
+          "letter": "a",
+          "text": "midbrain"
+        },
+        {
+          "letter": "b",
+          "text": "thoracic spinal cord"
+        },
+        {
+          "letter": "c",
+          "text": "pons"
+        },
+        {
+          "letter": "d",
+          "text": "sacral spinal cord"
+        },
+        {
+          "letter": "e",
+          "text": "lumbal spinal cord"
+        },
+        {
+          "letter": "f",
+          "text": "cortex"
+        },
+        {
+          "letter": "g",
+          "text": "hypothalamus"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-625411501B-25",
+      "text": "The parasympathetic preganglionic neuronal cell bodies controlling the detrusor muscle of the bladder are located in the",
+      "options": [
+        {
+          "letter": "a",
+          "text": "lumbar spinal cord"
+        },
+        {
+          "letter": "b",
+          "text": "sacral spinal cord"
+        },
+        {
+          "letter": "c",
+          "text": "medulla oblongata"
+        },
+        {
+          "letter": "d",
+          "text": "hypothalamus"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    }
+  ]
+}

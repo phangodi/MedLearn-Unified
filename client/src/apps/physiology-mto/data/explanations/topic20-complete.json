@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "topic": 20,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 2,
+    "status": "COMPLETE"
+  },
+  "explanations": [
+    {
+      "questionId": "q-4855200607-7",
+      "summary": "Sympathetic CHOLINERGIC fibers are rare - most sympathetic fibers are adrenergic. Exception: skeletal muscle arterioles receive sympathetic cholinergic vasodilator fibers for anticipatory exercise vasodilation. Salivary glands use parasympathetic, not sympathetic cholinergic.",
+      "whyCorrect": {
+        "d": "Skeletal muscle arterioles uniquely receive sympathetic CHOLINERGIC vasodilator innervation. These fibers release ACh to cause vasodilation in anticipation of exercise."
+      },
+      "whyIncorrect": {
+        "a": "Salivary gland vasodilation is PARASYMPATHETIC cholinergic (cranial nerves), not sympathetic cholinergic.",
+        "b": "Cerebral vessels have minimal autonomic innervation - blood flow is mainly autoregulated.",
+        "c": "Coronary vessels are controlled by metabolic factors. Sympathetic innervation is ADRENERGIC (beta-2).",
+        "e": "External genitalia vasodilation is PARASYMPATHETIC (pelvic splanchnic nerves), not sympathetic cholinergic."
+      },
+      "topicReference": "Topic 20: Autonomic Control of Blood Vessels"
+    },
+    {
+      "questionId": "q-4855200607-28",
+      "summary": "Sympathetic cholinergic vasodilator fibers innervate skeletal muscle arterioles - unique exception to adrenergic sympathetic rule. Causes anticipatory vasodilation before/during exercise.",
+      "whyCorrect": {
+        "a": "Skeletal muscle arterioles receive sympathetic CHOLINERGIC fibers that release ACh causing vasodilation. This is for anticipatory/exercise-related increase in muscle blood flow."
+      },
+      "whyIncorrect": {
+        "b": "External genitalia use PARASYMPATHETIC cholinergic innervation from pelvic splanchnic nerves.",
+        "c": "Salivary glands receive PARASYMPATHETIC cholinergic innervation from cranial nerves (VII, IX).",
+        "d": "Cerebral vessels have minimal autonomic innervation - flow is metabolically/pressure autoregulated.",
+        "e": "Coronary arteries are mainly metabolically controlled; sympathetic innervation is ADRENERGIC."
+      },
+      "topicReference": "Topic 20: Autonomic Control of Blood Vessels"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "metadata": {
+    "topic": 37,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 3,
+    "status": "TEMPLATE - needs explanations generated"
+  },
+  "questions": [
+    {
+      "questionId": "q-3543048990-84",
+      "text": "Cardiac output is NOT increased by",
+      "options": [
+        {
+          "letter": "a",
+          "text": "an increase in preload"
+        },
+        {
+          "letter": "b",
+          "text": "a decrease in preload"
+        },
+        {
+          "letter": "c",
+          "text": "an increase in afterload"
+        },
+        {
+          "letter": "d",
+          "text": "a decrease in afterload"
+        },
+        {
+          "letter": "e",
+          "text": "an increase in blood pressure"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c",
+        "e"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-4855200607-9",
+      "text": "The beat by beat matching of stroke volume to venous return in the left and right ventricles are due to",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the negative inotropic effect of the vagal nerves"
+        },
+        {
+          "letter": "b",
+          "text": "the positive inotropic effect of the sympathetic cardiac nerves"
+        },
+        {
+          "letter": "c",
+          "text": "the negative dromotropic effect of the left vagal nerve"
+        },
+        {
+          "letter": "d",
+          "text": "extracardial mechanisms"
+        },
+        {
+          "letter": "e",
+          "text": "the Frank-Starling's regulatory mechanism of cardiac contraction force"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4855200607-26",
+      "text": "The beat by beat matching of stroke volume to venous return in the left and right ventricles are due to",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the positive inotropic effect of the sympathetic cardiac nerves"
+        },
+        {
+          "letter": "b",
+          "text": "the negative inotropic effect of the vagal nerves"
+        },
+        {
+          "letter": "c",
+          "text": "extracardial mechanisms"
+        },
+        {
+          "letter": "d",
+          "text": "the Frank-Starling's regulatory mechanism of cardiac contraction force"
+        },
+        {
+          "letter": "e",
+          "text": "the negative dromotropic effect of the left vagal nerve"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    }
+  ]
+}

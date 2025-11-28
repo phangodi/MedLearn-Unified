@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "topic": 58,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 8,
+    "status": "COMPLETE"
+  },
+  "explanations": [
+    {
+      "questionId": "q-0313014645-B-7",
+      "summary": "During bladder FILLING: sympathetic dominates (beta-2 relaxes detrusor, alpha-1 contracts internal sphincter), pressure stays LOW despite volume increase (compliance), sphincters remain CLOSED.",
+      "whyCorrect": {
+        "a": "During filling, SYMPATHETIC tone dominates: beta-2 receptors relax detrusor muscle, alpha-1 receptors contract internal urethral sphincter. This promotes urine storage."
+      },
+      "whyIncorrect": {
+        "b": "Pressure does NOT increase proportionally with volume during filling. The bladder has high COMPLIANCE - volume increases with minimal pressure rise until near capacity.",
+        "c": "Internal sphincter is CONTRACTED (not relaxed) during filling to prevent leakage.",
+        "d": "External sphincter is also CONTRACTED during filling (somatic/voluntary control maintains continence)."
+      },
+      "topicReference": "Topic 58: Micturition"
+    },
+    {
+      "questionId": "q-0313014645-17",
+      "summary": "Bladder function: (1) Abdominal muscles CAN assist emptying (Valsalva); (2) NO water reabsorption through urothelium; (3) Parasympathetic causes CONTRACTION not relaxation; (4) No Bayliss effect in bladder; (5) Healthy adults have complete emptying.",
+      "whyCorrect": {
+        "a": "Abdominal muscle contraction (Valsalva maneuver) increases intra-abdominal pressure, which can assist bladder emptying by compressing the bladder."
+      },
+      "whyIncorrect": {
+        "b": "Urothelium is impermeable to water - NO reabsorption occurs. Vasopressin acts on collecting ducts, not bladder.",
+        "c": "Parasympathetic activation causes detrusor CONTRACTION for emptying, NOT relaxation during filling.",
+        "d": "Bayliss effect (myogenic response) applies to blood vessels, not bladder. Bladder compliance is different.",
+        "e": "Healthy adults have COMPLETE bladder emptying. Residual urine indicates dysfunction."
+      },
+      "topicReference": "Topic 58: Micturition"
+    },
+    {
+      "questionId": "q-2734027349-2",
+      "summary": "Bladder autonomic innervation: Parasympathetic uses MUSCARINIC receptors (M3) on detrusor. Sympathetic uses BETA-2 (detrusor relaxation) and ALPHA-1 (sphincter contraction). Sympathetic inhibits parasympathetic presynaptically. NOT nicotinic on bladder.",
+      "whyCorrect": {
+        "b": "Sympathetic beta-2 receptors on detrusor muscle cause RELAXATION during filling phase.",
+        "c": "Sympathetic fibers exert PRESYNAPTIC INHIBITION on parasympathetic terminals, reducing ACh release during storage phase.",
+        "e": "Parasympathetic activates MUSCARINIC (M3) receptors on detrusor muscle, causing contraction during voiding."
+      },
+      "whyIncorrect": {
+        "a": "MUSCARINIC (not nicotinic) receptors mediate parasympathetic effects on detrusor. Nicotinic receptors are in autonomic ganglia, not on bladder muscle.",
+        "d": "Alpha-1 receptors are on internal urethral SPHINCTER (contraction), not detrusor. Detrusor has beta-2 (relaxation)."
+      },
+      "topicReference": "Topic 58: Micturition"
+    },
+    {
+      "questionId": "q-2734027349-8",
+      "summary": "Bladder emptying: Detrusor muscle CONTRACTION (parasympathetic) is the primary mechanism. NOT water reabsorption, NOT Bayliss effect, and healthy adults have COMPLETE emptying (no residual).",
+      "whyCorrect": {
+        "b": "Detrusor muscle CONTRACTION is the key mechanism for bladder emptying. Parasympathetic activation (S2-S4) releases ACh, activating M3 receptors, causing coordinated detrusor contraction."
+      },
+      "whyIncorrect": {
+        "a": "No water reabsorption through urothelium. Bladder is impermeable storage organ.",
+        "c": "Bayliss effect is a vascular smooth muscle phenomenon (myogenic autoregulation), not applicable to bladder.",
+        "d": "Healthy adults have COMPLETE bladder emptying with minimal residual (<50 mL). Significant residual indicates pathology."
+      },
+      "topicReference": "Topic 58: Micturition"
+    },
+    {
+      "questionId": "q-2734027349-21",
+      "summary": "During urination: (1) Internal sphincter relaxes due to DECREASED SYMPATHETIC tone (alpha-1 withdrawal); (2) External sphincter VOLUNTARILY relaxes (somatic control). Internal sphincter is NOT voluntary.",
+      "whyCorrect": {
+        "b": "Internal urethral sphincter relaxes due to DECREASED sympathetic tone (withdrawal of alpha-1 stimulation). This is autonomic, not voluntary.",
+        "c": "External urethral sphincter relaxes VOLUNTARILY via somatic control (pudendal nerve, S2-S4). This initiates voluntary voiding."
+      },
+      "whyIncorrect": {
+        "a": "Internal sphincter relaxation is NOT voluntary - it's autonomic (sympathetic withdrawal). Only external sphincter is under voluntary control.",
+        "d": "External sphincter is under SOMATIC (not parasympathetic) control via pudendal nerve. Parasympathetic controls detrusor, not external sphincter."
+      },
+      "topicReference": "Topic 58: Micturition"
+    },
+    {
+      "questionId": "q-5090109547-18",
+      "summary": "Parasympathetic innervation to bladder detrusor originates from SACRAL spinal cord (S2-S4) - the pelvic splanchnic nerves. NOT lumbar, NOT brainstem.",
+      "whyCorrect": {
+        "d": "Parasympathetic preganglionic neurons controlling detrusor are in SACRAL spinal cord segments S2-S4. They travel via pelvic splanchnic nerves (nervi erigentes)."
+      },
+      "whyIncorrect": {
+        "a": "Hypothalamus provides higher control/coordination but doesn't contain preganglionic cell bodies.",
+        "b": "Medulla oblongata contains pontine micturition center but not preganglionic neurons to bladder.",
+        "c": "LUMBAR cord contains SYMPATHETIC neurons to bladder (L1-L2), not parasympathetic."
+      },
+      "topicReference": "Topic 58: Micturition"
+    },
+    {
+      "questionId": "q-5156012322-2",
+      "summary": "Micturition reflex REQUIRES intact SACRAL spinal cord (S2-S4) - this is where parasympathetic preganglionic neurons and the reflex arc are located. Damage here eliminates the reflex completely.",
+      "whyCorrect": {
+        "d": "Sacral spinal cord (S2-S4) damage eliminates micturition reflex because: (1) Parasympathetic preganglionic neurons are located here; (2) The basic reflex arc is in sacral segments; (3) Without this, no detrusor contraction can occur."
+      },
+      "whyIncorrect": {
+        "a": "Midbrain damage affects coordination but basic spinal reflex can still occur.",
+        "b": "Thoracic cord damage doesn't directly affect sacral micturition center.",
+        "c": "Pons (micturition center) damage impairs coordination but spinal reflex persists (though dyssynergic).",
+        "e": "Lumbar cord contains sympathetic neurons; damage affects storage but reflex can still occur.",
+        "f": "Cortical damage removes voluntary control but reflex persists (can cause incontinence).",
+        "g": "Hypothalamus damage affects higher control but doesn't eliminate basic reflex."
+      },
+      "topicReference": "Topic 58: Micturition"
+    },
+    {
+      "questionId": "q-625411501B-25",
+      "summary": "Parasympathetic preganglionic cell bodies for bladder detrusor are in SACRAL spinal cord (S2-S4). Pelvic splanchnic nerves carry these fibers to bladder.",
+      "whyCorrect": {
+        "b": "SACRAL spinal cord (S2-S4) contains parasympathetic preganglionic neurons for bladder. These form pelvic splanchnic nerves that innervate detrusor muscle."
+      },
+      "whyIncorrect": {
+        "a": "Lumbar cord (L1-L2) contains SYMPATHETIC preganglionic neurons for bladder, not parasympathetic.",
+        "c": "Medulla oblongata is in brainstem - parasympathetic to bladder is sacral, not cranial.",
+        "d": "Hypothalamus coordinates micturition but preganglionic neurons are in sacral cord."
+      },
+      "topicReference": "Topic 58: Micturition"
+    }
+  ]
+}

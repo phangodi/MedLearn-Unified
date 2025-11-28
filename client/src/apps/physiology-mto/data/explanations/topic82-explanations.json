@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "topic": 82,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 3,
+    "status": "TEMPLATE - needs explanations generated"
+  },
+  "questions": [
+    {
+      "questionId": "q-2734027349-10",
+      "text": "Which cells in the kidney express H+-K+-pump?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "intercalated cells in the collecting duct"
+        },
+        {
+          "letter": "b",
+          "text": "epithelial cells of the proximal tubule"
+        },
+        {
+          "letter": "c",
+          "text": "principals cells in the collecting duct"
+        },
+        {
+          "letter": "d",
+          "text": "epithelial cells of the distal tubule"
+        },
+        {
+          "letter": "e",
+          "text": "epithelial cells of the thick segment of the loop of Henle"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-2734027349-42",
+      "text": "Which of the following values means partially compensated metabolic acidosis? (Normal pCO2= 40 mmHg; Normal [HCO3-]= 24 mM) pCO2(mmHg) [HCO3-](mM) pH",
+      "options": [
+        {
+          "letter": "a",
+          "text": "60 / 57 / 7.60"
+        },
+        {
+          "letter": "b",
+          "text": "66 / 28 / 7.25"
+        },
+        {
+          "letter": "c",
+          "text": "60 / 37 / 7.4"
+        },
+        {
+          "letter": "d",
+          "text": "35 / 15 / 7.25"
+        },
+        {
+          "letter": "e",
+          "text": "29 / 22 / 7.51"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-2734027349-43",
+      "text": "Which cells in the kidney express vacuolar H+-pump?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "epithelial cells of the proximal tubule"
+        },
+        {
+          "letter": "b",
+          "text": "principals cells in the collecting duct"
+        },
+        {
+          "letter": "c",
+          "text": "intercalated cells in the collecting duct"
+        },
+        {
+          "letter": "d",
+          "text": "epithelial cells of the distal tubule"
+        },
+        {
+          "letter": "e",
+          "text": "epithelial cells of the thick segment of the loop of Henle"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    }
+  ]
+}

@@ -23,6 +23,7 @@ import { SociologyExam2ChapterPage } from './pages/SociologyExam2ChapterPage'
 import { AnatomyPage } from './pages/AnatomyPage'
 import { AnatomyCNSPage } from './pages/AnatomyCNSPage'
 import { AdminNotificationsPage } from './pages/AdminNotificationsPage'
+import { MTOAdminPage } from './pages/MTOAdminPage'
 import { AIExamPrepPage } from './pages/AIExamPrepPage'
 
 function App() {
@@ -67,6 +68,14 @@ function App() {
               element={
                 <ProtectedRoute requireSuperAdmin>
                   <AdminNotificationsPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/admin/mto"
+              element={
+                <ProtectedRoute requireSuperAdmin>
+                  <MTOAdminPage />
                 </ProtectedRoute>
               }
             />

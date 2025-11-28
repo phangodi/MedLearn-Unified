@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "topic": 31,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 1,
+    "status": "TEMPLATE - needs explanations generated"
+  },
+  "questions": [
+    {
+      "questionId": "q-2734027349-17",
+      "text": "The physiological stimulus which increases respiration by acting on the central chemosensitive area is",
+      "options": [
+        {
+          "letter": "a",
+          "text": "increase in arterial pH"
+        },
+        {
+          "letter": "b",
+          "text": "reduced venous pO2"
+        },
+        {
+          "letter": "c",
+          "text": "reduced in arterial pH"
+        },
+        {
+          "letter": "d",
+          "text": "increase in arterial pCO2"
+        },
+        {
+          "letter": "e",
+          "text": "increase in brain interstitial fluid pH"
+        },
+        {
+          "letter": "f",
+          "text": "reduction of O2"
+        }
+      ],
+      "correctAnswers": [
+        "c",
+        "d"
+      ],
+      "correctAnswerCount": 2
+    }
+  ]
+}

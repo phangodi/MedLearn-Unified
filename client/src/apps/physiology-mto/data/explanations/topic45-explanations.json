@@ -1,0 +1,407 @@
+{
+  "metadata": {
+    "topic": 45,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 12,
+    "status": "TEMPLATE - needs explanations generated"
+  },
+  "questions": [
+    {
+      "questionId": "q-0313014645-9",
+      "text": "Venous return is enhanced by",
+      "options": [
+        {
+          "letter": "a",
+          "text": "arteriolar vasoconstriction"
+        },
+        {
+          "letter": "b",
+          "text": "inspiration"
+        },
+        {
+          "letter": "c",
+          "text": "increased contractility of the heart"
+        },
+        {
+          "letter": "d",
+          "text": "relaxation of the veins"
+        },
+        {
+          "letter": "e",
+          "text": "lack of skeletal muscle activity"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-3543048990-49",
+      "text": "It is characteristic of the venous system that",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the central venous pressure is about -4 to -7 mmHg"
+        },
+        {
+          "letter": "b",
+          "text": "enhancement of the jugular pulse indicates increased right atrial pressure"
+        },
+        {
+          "letter": "c",
+          "text": "the pressure gradient in the venous system is about 10 mmHg"
+        },
+        {
+          "letter": "d",
+          "text": "venomotor activity is stimulated by the parasympathetic system"
+        },
+        {
+          "letter": "e",
+          "text": "venous return is enhanced by arteriolar vasoconstriction"
+        },
+        {
+          "letter": "f",
+          "text": "blood flow in veins increases during exercise"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c",
+        "f"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-3543048990-50",
+      "text": "500 ml blood is infused into the cubital vein. As a result",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the increment of arterial blood volume is very small"
+        },
+        {
+          "letter": "b",
+          "text": "venous pressure increases"
+        },
+        {
+          "letter": "c",
+          "text": "pressure in the right atrium increases"
+        },
+        {
+          "letter": "d",
+          "text": "hydrostatic pressure in the veins increases"
+        },
+        {
+          "letter": "e",
+          "text": "cardiac output increases"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "correctAnswerCount": 5
+    },
+    {
+      "questionId": "q-3543048990-52",
+      "text": "The MOST important blood reservoir in man is",
+      "options": [
+        {
+          "letter": "a",
+          "text": "spleen"
+        },
+        {
+          "letter": "b",
+          "text": "liver"
+        },
+        {
+          "letter": "c",
+          "text": "skin"
+        },
+        {
+          "letter": "d",
+          "text": "bone marrow"
+        },
+        {
+          "letter": "e",
+          "text": "skeletal muscle"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-3543048990-81",
+      "text": "Venous return is promoted by",
+      "options": [
+        {
+          "letter": "a",
+          "text": "increased mean systemic filling pressure"
+        },
+        {
+          "letter": "b",
+          "text": "static work"
+        },
+        {
+          "letter": "c",
+          "text": "inspiration"
+        },
+        {
+          "letter": "d",
+          "text": "lying position"
+        },
+        {
+          "letter": "e",
+          "text": "stimulation of alpha-adrenergic receptors"
+        },
+        {
+          "letter": "f",
+          "text": "head-standing"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "c",
+        "d",
+        "e",
+        "f"
+      ],
+      "correctAnswerCount": 5
+    },
+    {
+      "questionId": "q-3543048990-82",
+      "text": "Factors promoting venous return are as follows:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "lymph nodes"
+        },
+        {
+          "letter": "b",
+          "text": "vasoconstriction in the arterioles"
+        },
+        {
+          "letter": "c",
+          "text": "muscle activity"
+        },
+        {
+          "letter": "d",
+          "text": "inspiration"
+        },
+        {
+          "letter": "e",
+          "text": "pumping activity of the heart"
+        },
+        {
+          "letter": "f",
+          "text": "enhancement of the venous pulse"
+        },
+        {
+          "letter": "g",
+          "text": "reduced hydrostatic pressure in the legs"
+        }
+      ],
+      "correctAnswers": [
+        "c",
+        "d",
+        "e",
+        "g"
+      ],
+      "correctAnswerCount": 4
+    },
+    {
+      "questionId": "q-3543048990-85",
+      "text": "Which of the following statements are correct?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "venous return increases during expiration"
+        },
+        {
+          "letter": "b",
+          "text": "venous return increase on arteriolar dilation"
+        },
+        {
+          "letter": "c",
+          "text": "alpha-1 adrenergic receptor stimulation increases venous return"
+        },
+        {
+          "letter": "d",
+          "text": "venous return is an important factor determining capillary filtration"
+        },
+        {
+          "letter": "e",
+          "text": "intraabdominal pressure promotes filling of the right atrium during inspiration"
+        },
+        {
+          "letter": "f",
+          "text": "venous return is the major factor determining cardiac output"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c",
+        "d",
+        "e",
+        "f"
+      ],
+      "correctAnswerCount": 5
+    },
+    {
+      "questionId": "q-4447200607-7",
+      "text": "The MOST important blood reservoir in man is:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "spleen"
+        },
+        {
+          "letter": "b",
+          "text": "skin"
+        },
+        {
+          "letter": "c",
+          "text": "skeletal muscles"
+        },
+        {
+          "letter": "d",
+          "text": "liver"
+        },
+        {
+          "letter": "e",
+          "text": "bone marrow"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4447200607-26",
+      "text": "The most effective factor enhancing venous return is",
+      "options": [
+        {
+          "letter": "a",
+          "text": "skeletal muscle pump"
+        },
+        {
+          "letter": "b",
+          "text": "inspiration"
+        },
+        {
+          "letter": "c",
+          "text": "negative hydrostatic pressure in the veins above the heart"
+        },
+        {
+          "letter": "d",
+          "text": "positive intraabdominal pressure"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4525102917-15",
+      "text": "Which one does NOT influence venous capacity in the leg?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "contraction of the precapillary sphincters"
+        },
+        {
+          "letter": "b",
+          "text": "sympathetic venomotor tone"
+        },
+        {
+          "letter": "c",
+          "text": "posture"
+        },
+        {
+          "letter": "d",
+          "text": "function of the right ventricle"
+        },
+        {
+          "letter": "e",
+          "text": "parasympathetic venomotor tone"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4855200607-39",
+      "text": "Which one does NOT influence venous capacity in the leg?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "sympathetic adrenergic venoconstrictor innervation"
+        },
+        {
+          "letter": "b",
+          "text": "body posture"
+        },
+        {
+          "letter": "c",
+          "text": "parasympathetic cholinergic vasodilator innervation"
+        },
+        {
+          "letter": "d",
+          "text": "function of the right ventricle"
+        },
+        {
+          "letter": "e",
+          "text": "contraction of the precapillary sphincters in the leg"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4855200607-44",
+      "text": "The systemic veins differ from the systemic arteries in that the systemic veins",
+      "options": [
+        {
+          "letter": "a",
+          "text": "are much more compliant"
+        },
+        {
+          "letter": "b",
+          "text": "in the extremities contain valves"
+        },
+        {
+          "letter": "c",
+          "text": "contain a much greater blood volume"
+        },
+        {
+          "letter": "d",
+          "text": "do not receive a sympathetic innervation"
+        },
+        {
+          "letter": "e",
+          "text": "have a more variable blood volume"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "b",
+        "c",
+        "e"
+      ],
+      "correctAnswerCount": 4
+    }
+  ]
+}

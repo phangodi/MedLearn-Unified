@@ -1,0 +1,25 @@
+{
+  "metadata": {
+    "topic": 19,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 1,
+    "status": "COMPLETE"
+  },
+  "explanations": [
+    {
+      "questionId": "q-4447200607-15",
+      "summary": "Parasympathetic vasodilator neurotransmitters: (1) ACh - activates eNOS in endothelium, (2) VIP - direct smooth muscle relaxation, (3) NO - released as cotransmitter. NOT: NPY (sympathetic), PGI2 (from endothelium not nerves), adrenaline (sympathetic).",
+      "whyCorrect": {
+        "c": "VIP (vasoactive intestinal polypeptide) is released from parasympathetic nerves and causes direct smooth muscle relaxation.",
+        "d": "Acetylcholine is the primary parasympathetic neurotransmitter. In blood vessels, it acts on endothelial muscarinic receptors to release NO, causing vasodilation.",
+        "e": "NO (nitric oxide) is released as a cotransmitter from some parasympathetic nerve endings, directly causing vasodilation via cGMP."
+      },
+      "whyIncorrect": {
+        "a": "NPY (neuropeptide Y) is released from SYMPATHETIC nerve endings and causes vasoconstriction.",
+        "b": "Prostacyclin (PGI2) is produced by vascular ENDOTHELIUM, not released from nerve endings.",
+        "f": "Adrenaline (epinephrine) is from adrenal medulla and sympathetic system, not parasympathetic."
+      },
+      "topicReference": "Topic 19: Autonomic Neurotransmitters"
+    }
+  ]
+}

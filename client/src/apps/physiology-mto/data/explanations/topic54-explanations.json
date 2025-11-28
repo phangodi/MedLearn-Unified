@@ -1,0 +1,190 @@
+{
+  "metadata": {
+    "topic": 54,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 5,
+    "status": "TEMPLATE - needs explanations generated"
+  },
+  "questions": [
+    {
+      "questionId": "q-0313014645-B-5",
+      "text": "In which segment of the tubular system is the paracellular permeability the highest?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "proximal convoluted tubule"
+        },
+        {
+          "letter": "b",
+          "text": "collecting duct (in the presence of ADH)"
+        },
+        {
+          "letter": "c",
+          "text": "thick segment of the loop of Henle"
+        },
+        {
+          "letter": "d",
+          "text": "descending thin segment of the loop of Henle"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-1526033148-35",
+      "text": "Which of the following structures are located, at least in part, in the renal medulla (M)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "cortical glomeruli"
+        },
+        {
+          "letter": "b",
+          "text": "thin segment of the loop of Henle"
+        },
+        {
+          "letter": "c",
+          "text": "Bowman's capsule"
+        },
+        {
+          "letter": "d",
+          "text": "proximal tubule, pars convoluta"
+        },
+        {
+          "letter": "e",
+          "text": "distal tubule, pars convoluta"
+        },
+        {
+          "letter": "f",
+          "text": "descending limb of the loop of Henle"
+        },
+        {
+          "letter": "g",
+          "text": "collecting duct"
+        },
+        {
+          "letter": "h",
+          "text": "juxtamedullary glomeruli"
+        },
+        {
+          "letter": "i",
+          "text": "juxtaglomerular apparatus"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "f",
+        "g"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-1526033148-36",
+      "text": "Which of the following statements are correct? (M)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the basal channels multiply the luminar surface of the tubular epithelial cells"
+        },
+        {
+          "letter": "b",
+          "text": "the brush border multiplies the luminar surface of the tubular epithelial cells"
+        },
+        {
+          "letter": "c",
+          "text": "sodium is actively transported from the tubular lumen into the epithelial cells"
+        },
+        {
+          "letter": "d",
+          "text": "the interior of the tubular epithelial cells has a negative voltage which promotes sodium resortion from the lumen"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "d"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-2734027349-11",
+      "text": "These parts of the kidney are situated in the cortex:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "glomeruli of juxtamedullary nephrons"
+        },
+        {
+          "letter": "b",
+          "text": "loop of Henle"
+        },
+        {
+          "letter": "c",
+          "text": "vasa recta"
+        },
+        {
+          "letter": "d",
+          "text": "the beginning of the collecting tubules"
+        },
+        {
+          "letter": "e",
+          "text": "cortical nephrons"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "d"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-2734027349-22",
+      "text": "Which of the following structures are located, at least in part, in the renal medulla",
+      "options": [
+        {
+          "letter": "a",
+          "text": "thin segment of the loop of Henle"
+        },
+        {
+          "letter": "b",
+          "text": "Bowman's capsule"
+        },
+        {
+          "letter": "c",
+          "text": "glomeruli"
+        },
+        {
+          "letter": "d",
+          "text": "proximal tubule, pars convoluta"
+        },
+        {
+          "letter": "e",
+          "text": "collecting duct"
+        },
+        {
+          "letter": "f",
+          "text": "juxtamedullary glomeruli"
+        },
+        {
+          "letter": "g",
+          "text": "juxtaglomerular apparatus"
+        },
+        {
+          "letter": "h",
+          "text": "descending limb of the loop of Henle"
+        },
+        {
+          "letter": "i",
+          "text": "distal tubule, pars convoluta"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "e",
+        "h"
+      ],
+      "correctAnswerCount": 3
+    }
+  ]
+}

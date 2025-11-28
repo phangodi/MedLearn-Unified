@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "topic": 40,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 7,
+    "status": "COMPLETE"
+  },
+  "explanations": [
+    {
+      "questionId": "q-2734027349-29",
+      "summary": "Left ventricle subendocardium blood flow is GREATEST during DIASTOLE. During systole, high intramyocardial pressure (especially in inner layers) compresses vessels and reduces/stops flow. Subendocardium is NOT avascular - it has coronary supply.",
+      "whyCorrect": {
+        "a": "Subendocardial blood flow is much larger during DIASTOLE because: (1) During systole, left ventricle wall tension compresses coronary vessels; (2) Subendocardium experiences the highest compression being closest to ventricular cavity; (3) During diastole, muscle relaxes and vessels open fully."
+      },
+      "whyIncorrect": {
+        "b": "The subendocardium IS vascularized by coronary arteries. It is NOT supplied by ventricular blood - there's no direct diffusion from chambers to myocardium in adults.",
+        "c": "Flow is NOT larger during systole - it's actually minimal or reversed due to high intramyocardial pressure compressing vessels.",
+        "d": "Flow is NOT equal - there's dramatic phasic variation with diastole >> systole in the left ventricle."
+      },
+      "topicReference": "Topic 40: Coronary Circulation"
+    },
+    {
+      "questionId": "q-3221027349-1",
+      "summary": "Subendocardial blood flow in left ventricle is GREATEST during DIASTOLE due to systolic compression of coronary vessels by high intramyocardial pressure. The inner wall layers experience most compression.",
+      "whyCorrect": {
+        "a": "Blood flow is much larger during diastole than systole. During systole, high left ventricular pressure (120+ mmHg) compresses intramural vessels, especially in subendocardium. During diastole, ventricular muscle relaxes and coronary perfusion occurs."
+      },
+      "whyIncorrect": {
+        "b": "Wrong on two counts: (1) Flow is NOT larger during systole - it's reduced; (2) Subendocardium IS perfused by coronary arteries, not chamber blood.",
+        "c": "Flow is REDUCED during systole due to compression of coronary vessels by contracting myocardium.",
+        "d": "Flow is dramatically unequal - predominantly diastolic in the left ventricle due to high systolic wall tension."
+      },
+      "topicReference": "Topic 40: Coronary Circulation"
+    },
+    {
+      "questionId": "q-3543048990-61",
+      "summary": "Coronary flow depends on: diastolic BP (perfusion pressure), heart rate (determines diastole duration), right atrial pressure (downstream pressure), diastole duration (perfusion time), and posture (hydrostatic effects). NOT intrathoracic pressure directly.",
+      "whyCorrect": {
+        "a": "Diastolic blood pressure is the main determinant of coronary perfusion pressure since flow occurs predominantly during diastole.",
+        "b": "Heart rate affects coronary flow by determining the duration of diastole - higher HR = shorter diastole = less perfusion time.",
+        "c": "Right atrial pressure affects coronary venous drainage (coronary sinus drains to RA). Higher RAP impedes drainage.",
+        "d": "Duration of diastole directly determines how much time is available for coronary perfusion.",
+        "f": "Posture affects coronary flow through hydrostatic pressure effects and autonomic reflexes."
+      },
+      "whyIncorrect": {
+        "e": "Intrathoracic pressure has minimal direct effect on coronary flow. It affects venous return but not coronary perfusion specifically."
+      },
+      "topicReference": "Topic 40: Coronary Circulation"
+    },
+    {
+      "questionId": "q-4447200607-10",
+      "summary": "Left coronary flow: (1) IS greatest during DIASTOLE (systolic compression), (2) IS regulated by myocardial O2 consumption (metabolic control). Flow DOES depend on BP and is only ~5% of CO, not 10%.",
+      "whyCorrect": {
+        "b": "Left coronary flow is greatest during DIASTOLE because systolic contraction compresses the intramural vessels. Most perfusion occurs when the ventricle relaxes.",
+        "d": "Coronary flow is regulated mainly by myocardial O2 consumption through metabolic vasodilation. Adenosine is a key mediator - increased O2 demand causes vasodilation."
+      },
+      "whyIncorrect": {
+        "a": "Coronary flow absolutely DOES depend on arterial blood pressure - diastolic pressure is the driving pressure for coronary perfusion.",
+        "c": "Coronary blood flow is about 4-5% of cardiac output at rest (250 mL/min out of 5 L/min), not 10%."
+      },
+      "topicReference": "Topic 40: Coronary Circulation"
+    },
+    {
+      "questionId": "q-4447200607-16",
+      "summary": "Cardiac work has THREE components: (1) PRESSURE work (generating pressure against resistance), (2) VOLUME work (ejecting stroke volume), (3) ACCELERATION work (accelerating blood mass). Pressure work consumes most O2.",
+      "whyCorrect": {
+        "b": "Total cardiac work = Pressure work + Volume work + Acceleration work. Pressure work (isovolumetric contraction against afterload) is largest and most O2-consuming. Volume work moves blood. Acceleration work gives kinetic energy to ejected blood."
+      },
+      "whyIncorrect": {
+        "a": "Incomplete - missing acceleration work component.",
+        "c": "Incomplete - missing pressure work, which is actually the largest component.",
+        "d": "Incomplete - missing volume work component."
+      },
+      "topicReference": "Topic 40: Coronary Circulation"
+    },
+    {
+      "questionId": "q-4525102917-8",
+      "summary": "Left coronary artery flow: GREATEST during DIASTOLE (systolic compression impedes flow), regulated mainly by myocardial O2 consumption (metabolic control via adenosine). Does depend on BP, and is ~5% of CO.",
+      "whyCorrect": {
+        "b": "Coronary flow is regulated mainly by myocardial O2 consumption. Increased metabolic demand releases adenosine and other vasodilators, causing coronary vasodilation to match flow to demand.",
+        "c": "Left coronary flow is greatest during DIASTOLE. During systole, the contracting left ventricle compresses intramural coronary vessels, reducing or stopping flow."
+      },
+      "whyIncorrect": {
+        "a": "Coronary flow DOES depend on arterial blood pressure. Diastolic pressure is the perfusion pressure for coronary circulation.",
+        "d": "Coronary blood flow is approximately 4-5% of cardiac output (about 250 mL/min), not 10%."
+      },
+      "topicReference": "Topic 40: Coronary Circulation"
+    },
+    {
+      "questionId": "q-5156012322-19",
+      "summary": "Left ventricle myocardium receives coronary blood supply predominantly during DIASTOLE. Systolic contraction compresses intramural vessels, reducing or stopping flow. This is unique to left ventricle due to high systolic pressures.",
+      "whyCorrect": {
+        "b": "Left ventricular myocardium receives blood predominantly during DIASTOLE when the muscle is relaxed and coronary vessels are open. Systolic contraction generates high intramyocardial pressure that compresses coronary vessels."
+      },
+      "whyIncorrect": {
+        "a": "Isometric (isovolumetric) contraction is early systole when ventricular pressure rises sharply - this actually REDUCES coronary flow by compressing vessels.",
+        "c": "Flow is NOT continuous - there's marked phasic variation with very little flow during systole and most flow during diastole.",
+        "d": "Rapid ejection phase is mid-systole with high wall tension - coronary flow is minimal during this phase."
+      },
+      "topicReference": "Topic 40: Coronary Circulation"
+    }
+  ]
+}

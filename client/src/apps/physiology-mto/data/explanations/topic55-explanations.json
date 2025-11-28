@@ -1,0 +1,1202 @@
+{
+  "metadata": {
+    "topic": 55,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 37,
+    "status": "TEMPLATE - needs explanations generated"
+  },
+  "questions": [
+    {
+      "questionId": "q-0313014645-B-14",
+      "text": "The clearance of PAH can be used for direct estimation of",
+      "options": [
+        {
+          "letter": "a",
+          "text": "effective RPF"
+        },
+        {
+          "letter": "b",
+          "text": "tubular reabsorption capacity"
+        },
+        {
+          "letter": "c",
+          "text": "GFR"
+        },
+        {
+          "letter": "d",
+          "text": "diuresis"
+        },
+        {
+          "letter": "e",
+          "text": "RBF"
+        },
+        {
+          "letter": "f",
+          "text": "intratubular pressure"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-0313014645-B-15",
+      "text": "What is the clearance of substance X, if X is freely filtrated, there is no reabsorption and in addition to the filtrated amount, the same amount is secreted by the tubular system? (GFR= 120 ml/min)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "120 ml/min"
+        },
+        {
+          "letter": "b",
+          "text": "60 ml/min"
+        },
+        {
+          "letter": "c",
+          "text": "240 ml/min"
+        },
+        {
+          "letter": "d",
+          "text": "30 ml/min"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-0313014645-12",
+      "text": "A substance with free filtration, passive tubular reabsorption and without tubular secretion has a clearance",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the same as glucose"
+        },
+        {
+          "letter": "b",
+          "text": "higher than inulin"
+        },
+        {
+          "letter": "c",
+          "text": "the same as inulin"
+        },
+        {
+          "letter": "d",
+          "text": "lower than glucose"
+        },
+        {
+          "letter": "e",
+          "text": "the same as PAH"
+        },
+        {
+          "letter": "f",
+          "text": "higher than PAH"
+        },
+        {
+          "letter": "g",
+          "text": "lower than inulin"
+        }
+      ],
+      "correctAnswers": [
+        "d",
+        "g"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-1526033148-9",
+      "text": "The clearance is defined as (M)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the quantity of a substance that passes into the urine each minute"
+        },
+        {
+          "letter": "b",
+          "text": "the quantity of the plasma that has been cleared from a particular substance"
+        },
+        {
+          "letter": "c",
+          "text": "the quantity of the plasma filtered each minute"
+        },
+        {
+          "letter": "d",
+          "text": "the quantity of a particular substance filtered each minute"
+        },
+        {
+          "letter": "e",
+          "text": "the ratio of the renal excretion of a substance in the urine to its concentration in the plasma"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "e"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-1526033148-10",
+      "text": "The kidney functions normally and the clearance of a substance is zero. This finding may indicate (M)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the substance might be secreted in the tubular system"
+        },
+        {
+          "letter": "b",
+          "text": "the substance might not be filtered in the glomeruli"
+        },
+        {
+          "letter": "c",
+          "text": "the substance might be completely reabsorbed in the tubular system"
+        },
+        {
+          "letter": "d",
+          "text": "the substance is neither secreted or reabsorbed in the tubular system though it is filtered in the glomeruli"
+        },
+        {
+          "letter": "e",
+          "text": "the concentration of the substance is zero in the renal vein"
+        },
+        {
+          "letter": "f",
+          "text": "the concentration of the substance is the same in the renal vein and the renal artery"
+        },
+        {
+          "letter": "g",
+          "text": "this substance does not pass into the urine"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c",
+        "f",
+        "g"
+      ],
+      "correctAnswerCount": 4
+    },
+    {
+      "questionId": "q-1526033148-11",
+      "text": "It is characteristic of inulin excretion that (M)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "inulin passes the glomerular membrane with perfect ease"
+        },
+        {
+          "letter": "b",
+          "text": "inulin is actively secreted in the proximal tubules"
+        },
+        {
+          "letter": "c",
+          "text": "inulin is actively secreted in the distal tubules"
+        },
+        {
+          "letter": "d",
+          "text": "inulin concentration in the glomerular filtrate is the same as in the plasma"
+        },
+        {
+          "letter": "e",
+          "text": "depending on the osmotic pressure in the interstitial fluid, inulin may re-diffuse from the tubules"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "d"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-1526033148-12",
+      "text": "An inulin clearance of 120 ml/min indicates (M)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "an impaired glomerular filtration"
+        },
+        {
+          "letter": "b",
+          "text": "normal GFR"
+        },
+        {
+          "letter": "c",
+          "text": "120 ml plasma volume is cleared of inulin each minute"
+        },
+        {
+          "letter": "d",
+          "text": "120 ml urine volume is formed each minute"
+        },
+        {
+          "letter": "e",
+          "text": "the renal plasma flow is 120 ml/min"
+        },
+        {
+          "letter": "f",
+          "text": "secretion of inulin in the tubular system"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-1526033148-13",
+      "text": "An inulin clearance of 80 ml/min is interpreted as follows (M)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "inulin is reabsorbed from the tubular system"
+        },
+        {
+          "letter": "b",
+          "text": "inulin is secreted in the tubular system"
+        },
+        {
+          "letter": "c",
+          "text": "80 ml plasma volume is cleared from inulin each minute"
+        },
+        {
+          "letter": "d",
+          "text": "the volume of glomerular filtrate is 80 ml each minute"
+        },
+        {
+          "letter": "e",
+          "text": "GFR is decreased"
+        },
+        {
+          "letter": "f",
+          "text": "the function of the tubular system is impaired"
+        }
+      ],
+      "correctAnswers": [
+        "c",
+        "d",
+        "e"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-1526033148-14",
+      "text": "A decrease in the urine to plasma (U/P) ratio of inulin concentration with a constant GFR indicates an increase in (M)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "free-water clearance"
+        },
+        {
+          "letter": "b",
+          "text": "inulin clearance"
+        },
+        {
+          "letter": "c",
+          "text": "urine flow"
+        },
+        {
+          "letter": "d",
+          "text": "plasma inulin concentration"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "c"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-1526033148-15",
+      "text": "Given the following data for inulin and substance X which of the following would explain the renal handling of substance X? Inulin concentration in the urine 200 mg/100ml, Inulin concentration in the plasma 2 mg/100ml, Concentration in the urine for substance X 200 mg/100ml, Concentration in the plasma for substance X 1 mg/100ml (S)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "substance X is freely filtered but neither secreted nor reabsorbed"
+        },
+        {
+          "letter": "b",
+          "text": "substance X is not freely filtered but reabsorbed"
+        },
+        {
+          "letter": "c",
+          "text": "substance X is not freely filtered but secreted"
+        },
+        {
+          "letter": "d",
+          "text": "substance X is freely filtered but partially reabsorbed"
+        },
+        {
+          "letter": "e",
+          "text": "substance X is freely filtered and additionally secreted"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-1526033148-16",
+      "text": "The creatinin clearance is 140 ml/min. This finding is interpreted as follows (M)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the GFR is normal"
+        },
+        {
+          "letter": "b",
+          "text": "creatinin is not excreted"
+        },
+        {
+          "letter": "c",
+          "text": "there is a slight tubular secretion of creatinin"
+        },
+        {
+          "letter": "d",
+          "text": "140 ml plasma volume has been freed of creatinin each minute"
+        },
+        {
+          "letter": "e",
+          "text": "the glomerular filtrate formed each minute is slightly less than 140 ml"
+        },
+        {
+          "letter": "f",
+          "text": "140 ml creatinin are excreted in the urine each minute"
+        },
+        {
+          "letter": "g",
+          "text": "140 ml urine are formed each minute"
+        },
+        {
+          "letter": "h",
+          "text": "renal plasma flow is 140 ml/min, it is greatly reduced"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "c",
+        "d",
+        "e"
+      ],
+      "correctAnswerCount": 4
+    },
+    {
+      "questionId": "q-1526033148-17",
+      "text": "PAH decreases renal excretion of penicillin because (S)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "PAH inhibits penicillin reabsorption"
+        },
+        {
+          "letter": "b",
+          "text": "There is competitive inhibition between PAH and penicillin secretion"
+        },
+        {
+          "letter": "c",
+          "text": "PAH decreases the renal concentration mechanisms"
+        },
+        {
+          "letter": "d",
+          "text": "PAH inhibits the glomerular filtration of penicillin"
+        },
+        {
+          "letter": "e",
+          "text": "PAH increases the penicillin permeability in the distal tubules"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-1526033148-21",
+      "text": "Find the correct order of relative clearances for glucose, PAH, urea, and inulin (S)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Cglucose < CPAH < Curea < Cinulin"
+        },
+        {
+          "letter": "b",
+          "text": "CPAH < Curea < Cinulin < Cglucose"
+        },
+        {
+          "letter": "c",
+          "text": "Cglucose < Cinulin < Curea < CPAH"
+        },
+        {
+          "letter": "d",
+          "text": "Cglucose < Curea < Cinulin < CPAH"
+        },
+        {
+          "letter": "e",
+          "text": "Cinulin < Cglucose < CPAH < Curea"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-1526033148-22",
+      "text": "A substance which is not filtered in the glomeruli has a clearance (M)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the same as inulin"
+        },
+        {
+          "letter": "b",
+          "text": "higher than inulin"
+        },
+        {
+          "letter": "c",
+          "text": "lower than inulin"
+        },
+        {
+          "letter": "d",
+          "text": "the same as glucose"
+        },
+        {
+          "letter": "e",
+          "text": "lower than glucose"
+        },
+        {
+          "letter": "f",
+          "text": "higher than glucose"
+        },
+        {
+          "letter": "g",
+          "text": "the same as urea"
+        },
+        {
+          "letter": "h",
+          "text": "lower than urea"
+        },
+        {
+          "letter": "i",
+          "text": "higher than urea"
+        }
+      ],
+      "correctAnswers": [
+        "c",
+        "d",
+        "h"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-1526033148-23",
+      "text": "A substance with passive reabsorption and without secretion in the tubular system has a clearance (M)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "lower than inulin"
+        },
+        {
+          "letter": "b",
+          "text": "the same as inulin"
+        },
+        {
+          "letter": "c",
+          "text": "higher than inulin"
+        },
+        {
+          "letter": "d",
+          "text": "the same as PAH"
+        },
+        {
+          "letter": "e",
+          "text": "higher than PAH"
+        },
+        {
+          "letter": "f",
+          "text": "the same as glucose"
+        },
+        {
+          "letter": "g",
+          "text": "higher than glucose"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "g"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-1526033148-24",
+      "text": "The RPF (M)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "can be calculated by means of the equation of RPF = C/E, where C is the clearance and E is the extraction for any substance that is filtered in the glomeruli and is excreted in the urine"
+        },
+        {
+          "letter": "b",
+          "text": "can be estimated by calculating the clearance of PAH"
+        },
+        {
+          "letter": "c",
+          "text": "can be estimated by calculating the clearance of inulin"
+        },
+        {
+          "letter": "d",
+          "text": "can be estimated by calculating the clearance of creatinin"
+        },
+        {
+          "letter": "e",
+          "text": "increases in response to sympathetic activation"
+        },
+        {
+          "letter": "f",
+          "text": "can be calculated as the product of the inulin clearance and the filtration fraction"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "b",
+        "f"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-1526033148-25",
+      "text": "The extraction ratio (M)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "is the ratio of GFR and RPF"
+        },
+        {
+          "letter": "b",
+          "text": "is higher for PAH than for inulin"
+        },
+        {
+          "letter": "c",
+          "text": "is the ratio of the arteriovenous concentration difference and the arterial concentration of a substance"
+        },
+        {
+          "letter": "d",
+          "text": "is the ratio of the urine concentration and the arterial concentration of a substance"
+        },
+        {
+          "letter": "e",
+          "text": "shows the percentage quantity of a substance filtered in the glomeruli"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-1526033148-26",
+      "text": "If the plasma concentration of substance X is 2 mg/100ml, the urine concentration of substance X is 12 mg/ml, the urine flow rate is 1 ml/min, and the glomerular filtration rate is 125 ml/min, then substance X could be (S)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "glucose"
+        },
+        {
+          "letter": "b",
+          "text": "alanine"
+        },
+        {
+          "letter": "c",
+          "text": "inulin"
+        },
+        {
+          "letter": "d",
+          "text": "para-aminohippuric acid"
+        },
+        {
+          "letter": "e",
+          "text": "sodium"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-1526033148-27",
+      "text": "Use the data to calculate the rate of excretion of substance X in the urine. Substance X is freely filtered across the glomerular membrane. GFR = 125 ml/min, Plasma concentration of X = 2 mg/ml, Tubular reabsorption of X = 30 mg/min, Tubular secretion of X = 60 mg/min (S)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "160 mg/min"
+        },
+        {
+          "letter": "b",
+          "text": "220 mg/min"
+        },
+        {
+          "letter": "c",
+          "text": "250 mg/min"
+        },
+        {
+          "letter": "d",
+          "text": "280 mg/min"
+        },
+        {
+          "letter": "e",
+          "text": "340 mg/min"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-1526033148-28",
+      "text": "The renal function of a 70kg man is tested. Plasma PAH conc. 0.2 pg/ml, Urine PAH conc. 56 pg/ml, Plasma inulin conc. 0.1 mg/ml, Urine inulin conc. 6.0 mg/ml, Plasma creatinine conc. 0.8 mg/100ml, Urine creatinine conc. 80.0 mg/100ml, Hematocrit 40%. Assuming urine flow is 1.5 ml/min, the effective GFR for this man is (S)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "greater than inulin clearance"
+        },
+        {
+          "letter": "b",
+          "text": "greater than PAH clearance"
+        },
+        {
+          "letter": "c",
+          "text": "equal to the volume of blood from which inulin is completely cleared"
+        },
+        {
+          "letter": "d",
+          "text": "60 ml/min"
+        },
+        {
+          "letter": "e",
+          "text": "90 ml/min"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-1526033148-29",
+      "text": "The renal function of a 70kg man is tested. Plasma PAH conc. 0.2 pg/ml, Urine PAH conc. 56 pg/ml, Plasma inulin conc. 0.1 mg/ml, Urine inulin conc. 6.0 mg/ml, Plasma creatinine conc. 0.8 mg/100ml, Urine creatinine conc. 80.0 mg/100ml, Hematocrit 40%. Assuming urine flow is 1.5 ml/min, the effective RPF for this man is (S)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "higher than the true RPF"
+        },
+        {
+          "letter": "b",
+          "text": "higher than the effective RBF"
+        },
+        {
+          "letter": "c",
+          "text": "420 ml/min"
+        },
+        {
+          "letter": "d",
+          "text": "520 ml/min"
+        },
+        {
+          "letter": "e",
+          "text": "700 ml/min"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-1526033148-30",
+      "text": "The renal function of a 70kg man is tested. Plasma PAH conc. 0.2 pg/ml, Urine PAH conc. 56 pg/ml, Plasma inulin conc. 0.1 mg/ml, Urine inulin conc. 6.0 mg/ml, Plasma creatinine conc. 0.8 mg/100ml, Urine creatinine conc. 80.0 mg/100ml, Hematocrit 40%. Assuming urine flow is 1.5 ml/min, the 24-hour endogenous creatinin excretion for this man is (S)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "21.6 mg/kg body weight"
+        },
+        {
+          "letter": "b",
+          "text": "15.12 mg/kg body weight"
+        },
+        {
+          "letter": "c",
+          "text": "17.28 mg/kg body weight"
+        },
+        {
+          "letter": "d",
+          "text": "24.7 mg/kg body weight"
+        },
+        {
+          "letter": "e",
+          "text": "the same as the 24-hour inulin secretion"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-1526033148-31",
+      "text": "Use the data below to calculate the GFR. Arterial plasma PAH conc. 0.04 mg/ml, Venous plasma PAH conc. 0.004 mg/ml, Arterial plasma inulin conc. 0.4 mg/ml, Urine PAH conc. 10.0 mg/ml, Urine inulin conc. 20.0 mg/ml, Urine flow rate 2.0 ml/min, Hematocrit 45% (S)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "100 ml/min"
+        },
+        {
+          "letter": "b",
+          "text": "250 ml/min"
+        },
+        {
+          "letter": "c",
+          "text": "556 ml/min"
+        },
+        {
+          "letter": "d",
+          "text": "1000 ml/min"
+        },
+        {
+          "letter": "e",
+          "text": "1235 ml/min"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-1526033148-33",
+      "text": "Use the data below to calculate the GFR. Urine flow rate 1.5 ml/min, Plasma inulin conc. 1.0 mg/ml, Urine inulin conc. 80 mg/ml, Plasma PAH conc. 0.05 mg/ml, Urine PAH conc. 18.33 mg/ml, Plasma glucose conc. 0.8 mg/ml, Urine glucose conc. 0.0 mg/ml, Hematocrit 42% (S)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "120 ml/min"
+        },
+        {
+          "letter": "b",
+          "text": "550 ml/min"
+        },
+        {
+          "letter": "c",
+          "text": "948 ml/min"
+        },
+        {
+          "letter": "d",
+          "text": "1200 ml/min"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-2734027349-3",
+      "text": "Given the following data for inulin and substance \"X\" which of the following would explain the renal handling of substance \"X\": Inulin concentration in the urine 200 mg/100 ml, Inulin concentration in the plasma 2 mg/100 ml, Concentration in the urine for \"X\" substance 15 mg/100 ml, Concentration in the plasma for \"X\" substance 1.5 mg/100 ml",
+      "options": [
+        {
+          "letter": "a",
+          "text": "\"X\" is freely filtered and additionally secreted"
+        },
+        {
+          "letter": "b",
+          "text": "\"X\" is freely filtered but partially reabsorbed"
+        },
+        {
+          "letter": "c",
+          "text": "\"X\" is freely filtered but neither secreted nor reabsorbed"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-2734027349-9",
+      "text": "What is the clearance of substance X, if X is freely filtrated, and 75% of the filtrated amount is reabsorbed in the tubular system? (GFR= 120 ml/min)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "60 ml/min"
+        },
+        {
+          "letter": "b",
+          "text": "240 ml/min"
+        },
+        {
+          "letter": "c",
+          "text": "120 ml/min"
+        },
+        {
+          "letter": "d",
+          "text": "30 ml/min"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-2734027349-16",
+      "text": "Find the correct order of relative clearances for glucose, PAH, urea, and inulin!",
+      "options": [
+        {
+          "letter": "a",
+          "text": "CPAH < Curea < Cinulin < Cglucose"
+        },
+        {
+          "letter": "b",
+          "text": "Cglucose< CPAH < Curea < Cinulin"
+        },
+        {
+          "letter": "c",
+          "text": "Cglucose < Curea < Cinulin < CPAH"
+        },
+        {
+          "letter": "d",
+          "text": "Curea < Cinulin < Cglucose < CPAH"
+        },
+        {
+          "letter": "e",
+          "text": "Cglucose < Cinulin < Curea < CPAH"
+        },
+        {
+          "letter": "f",
+          "text": "Cinulin < Cglucose < CPAH < Curea"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-2734027349-24",
+      "text": "Which of the following substances has the highest clearance",
+      "options": [
+        {
+          "letter": "a",
+          "text": "glucose"
+        },
+        {
+          "letter": "b",
+          "text": "PAH"
+        },
+        {
+          "letter": "c",
+          "text": "inulin"
+        },
+        {
+          "letter": "d",
+          "text": "potassium"
+        },
+        {
+          "letter": "e",
+          "text": "mannitol"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-2734027349-32",
+      "text": "If the plasma concentration of substance X is 2 mg/100ml, the urine concentration of X is 12 mg/ml, the urine flow rate is 1 ml/min, and if the glomerular filtration rate is 125 ml/min, then substance X could be:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "creatinine"
+        },
+        {
+          "letter": "b",
+          "text": "para-aminohippuric acid"
+        },
+        {
+          "letter": "c",
+          "text": "inulin"
+        },
+        {
+          "letter": "d",
+          "text": "sodium"
+        },
+        {
+          "letter": "e",
+          "text": "glucose"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-2734027349-33",
+      "text": "The clearance of PAH can be used for direct estimation of",
+      "options": [
+        {
+          "letter": "a",
+          "text": "diuresis"
+        },
+        {
+          "letter": "b",
+          "text": "intratubular pressure"
+        },
+        {
+          "letter": "c",
+          "text": "RBF"
+        },
+        {
+          "letter": "d",
+          "text": "GFR"
+        },
+        {
+          "letter": "e",
+          "text": "effective RPF"
+        },
+        {
+          "letter": "f",
+          "text": "tubular reabsorption capacity"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-3221027349-4",
+      "text": "If the plasma concentration of X is 2 mg/100ml, the urine concentration of X is 12 mg/ml, the urine flow rate is 1 ml/min, and the glomerular filtration rate is 125 ml/min, then substance X crosses the glomerular membrane.",
+      "options": [
+        {
+          "letter": "a",
+          "text": "alanine"
+        },
+        {
+          "letter": "b",
+          "text": "para-aminohippuric acid"
+        },
+        {
+          "letter": "c",
+          "text": "inulin"
+        },
+        {
+          "letter": "d",
+          "text": "sodium"
+        },
+        {
+          "letter": "e",
+          "text": "glucose"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-3221027349-5",
+      "text": "The clearance of PAH can be used for direct estimation of",
+      "options": [
+        {
+          "letter": "a",
+          "text": "diuresis"
+        },
+        {
+          "letter": "b",
+          "text": "intratubular pressure"
+        },
+        {
+          "letter": "c",
+          "text": "RBF"
+        },
+        {
+          "letter": "d",
+          "text": "GFR"
+        },
+        {
+          "letter": "e",
+          "text": "effective RPF"
+        },
+        {
+          "letter": "f",
+          "text": "tubular reabsorption capacity"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4525102917-14",
+      "text": "Which of the following substances has the lowest clearance in the human kidney?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "PAH"
+        },
+        {
+          "letter": "b",
+          "text": "K+"
+        },
+        {
+          "letter": "c",
+          "text": "glucose"
+        },
+        {
+          "letter": "d",
+          "text": "Cl-"
+        },
+        {
+          "letter": "e",
+          "text": "creatinine"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4525102917-19",
+      "text": "Which of the following values are within the normal range?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "PAH clearance - 120 ml / min"
+        },
+        {
+          "letter": "b",
+          "text": "filtration fraction - 0.50"
+        },
+        {
+          "letter": "c",
+          "text": "RBF - 1300 ml/min"
+        },
+        {
+          "letter": "d",
+          "text": "RPF - 660 ml / min"
+        },
+        {
+          "letter": "e",
+          "text": "GFR - 120 ml / min"
+        }
+      ],
+      "correctAnswers": [
+        "c",
+        "d",
+        "e"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-5090109547-14",
+      "text": "A substance which is freely filtered, secreted and not reabsorbed in the tubular system has a clearance:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "lower than urea"
+        },
+        {
+          "letter": "b",
+          "text": "higher than inulin"
+        },
+        {
+          "letter": "c",
+          "text": "the same as inulin"
+        },
+        {
+          "letter": "d",
+          "text": "the same as urea"
+        },
+        {
+          "letter": "e",
+          "text": "higher than urea"
+        },
+        {
+          "letter": "f",
+          "text": "lower than inulin"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "e"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-5156012322-3",
+      "text": "To set the correct order of relative clearances for glucose, PAH, urea, and inulin",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Cglucose < Cinulin < Curea < Cglucose < CPAH"
+        },
+        {
+          "letter": "b",
+          "text": "CPAH < Curea < Cinulin < Cglucose"
+        },
+        {
+          "letter": "c",
+          "text": "Cglucose< CPAH < Curea < Cinulin"
+        },
+        {
+          "letter": "d",
+          "text": "Cinulin < Cglucose < CPAH < Curea"
+        },
+        {
+          "letter": "e",
+          "text": "Cglucose < Cinulin < Curea < CPAH"
+        },
+        {
+          "letter": "f",
+          "text": "Curea < Cinulin < Cglucose < CPAH"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-5156012322-4",
+      "text": "If a concentration of substance X, if X is freely filtered, and 75% of the filtrated amount is reabsorbed in the tubular system? (GFR= 120 ml/min)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "30 ml/min"
+        },
+        {
+          "letter": "b",
+          "text": "160 ml/min"
+        },
+        {
+          "letter": "c",
+          "text": "120 ml/min"
+        },
+        {
+          "letter": "d",
+          "text": "240 ml/min"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    }
+  ]
+}

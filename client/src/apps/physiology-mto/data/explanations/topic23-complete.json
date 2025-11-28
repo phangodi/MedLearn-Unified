@@ -1,0 +1,23 @@
+{
+  "metadata": {
+    "topic": 23,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 1,
+    "status": "COMPLETE"
+  },
+  "explanations": [
+    {
+      "questionId": "q-5090109547-23",
+      "summary": "Muscle fiber recruitment: (1) Size principle - small motor neurons (Type I) recruited first, then larger (Type II); (2) Type I = slow, fatigue-resistant, used first; (3) Type II = fast, powerful, recruited for high force; (4) Most muscles have mixed fiber types.",
+      "whyCorrect": {
+        "a": "Size principle: Motor units are recruited from smallest (weakest, Type I) to largest (strongest, Type II). Small motor neurons have lower thresholds and are activated first.",
+        "d": "Most human skeletal muscles contain BOTH Type I (slow oxidative) and Type II (fast glycolytic) fibers in varying proportions depending on muscle function."
+      },
+      "whyIncorrect": {
+        "b": "Type I fibers are for SUSTAINED activity and fatigue resistance, NOT peak force. Peak force requires Type II fast-twitch fibers.",
+        "c": "During LOW intensity activity, Type I fibers are used FIRST (not Type II). Type II is recruited only for high-intensity/high-force activities."
+      },
+      "topicReference": "Topic 23: Skeletal Muscle Fiber Types"
+    }
+  ]
+}

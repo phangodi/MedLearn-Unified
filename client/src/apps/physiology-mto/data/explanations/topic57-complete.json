@@ -1,0 +1,539 @@
+{
+  "metadata": {
+    "topic": 57,
+    "topicTitle": "Tubular Transport and Concentration Mechanisms",
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 38,
+    "status": "COMPLETE"
+  },
+  "explanations": [
+    {
+      "questionId": "q-0313014645-B-6",
+      "summary": "The thin segment at the tip of the loop of Henle reaches the deepest part of the medulla where interstitial osmolarity is highest (up to 1200 mOsm/L). The tubular fluid equilibrates with this hyperosmotic environment.",
+      "whyCorrect": {
+        "d": "The thin descending limb and the tip of the loop of Henle are in the deepest medulla (up to 1200 mOsm/L). Water leaves the descending limb, concentrating the tubular fluid to match the hyperosmotic medullary interstitium."
+      },
+      "whyIncorrect": {
+        "a": "Bowman's capsule filtrate is isosmotic with plasma (~290 mOsm/L).",
+        "b": "The end of the thick ascending limb is hypOsmotic (~100 mOsm/L) because NaCl is reabsorbed without water.",
+        "c": "The distal tubule begins hypoosmotic and varies depending on ADH.",
+        "e": "The proximal tubule is isosmotic - water and solutes are reabsorbed proportionally."
+      },
+      "topicReference": "Topic 57: Countercurrent multiplication and tubular fluid osmolarity"
+    },
+    {
+      "questionId": "q-0313014645-B-9",
+      "summary": "In the proximal tubule, the primary driving force for Cl- reabsorption is paracellular movement through tight junctions, driven by the lumen-positive voltage gradient created after Na+ reabsorption.",
+      "whyCorrect": {
+        "d": "After Na+ is actively reabsorbed (creating lumen-positive potential in late proximal tubule), Cl- follows paracellularly down this electrical gradient. This passive paracellular route handles the majority of proximal Cl- reabsorption."
+      },
+      "whyIncorrect": {
+        "a": "Cl-/HCO3- antiport occurs but is not the primary mechanism for bulk Cl- reabsorption.",
+        "b": "Na-K-2Cl cotransport is located in the thick ascending limb, not proximal tubule.",
+        "c": "H+/Cl- cotransport is not a major mechanism in the proximal tubule."
+      },
+      "topicReference": "Topic 57: Proximal tubule chloride reabsorption mechanisms"
+    },
+    {
+      "questionId": "q-0313014645-B-12",
+      "summary": "The medullary osmotic gradient is established by the Na-K-2Cl cotransporter (NKCC2) in the thick ascending limb. This transporter actively moves solutes into the medullary interstitium while the segment remains water-impermeable.",
+      "whyCorrect": {
+        "b": "The NKCC2 cotransporter in the thick ascending limb is the 'single effect' that drives countercurrent multiplication. It actively reabsorbs NaCl into the medullary interstitium without water, creating the hyperosmotic medulla."
+      },
+      "whyIncorrect": {
+        "a": "Proximal tubule Na+ reabsorption is isosmotic and occurs in the cortex, not building medullary gradient.",
+        "c": "Cortical collecting duct Na+ reabsorption doesn't contribute to medullary hypertonicity.",
+        "d": "ADH-stimulated water reabsorption uses the gradient but doesn't create it.",
+        "e": "Aldosterone acts on cortical collecting duct, not involved in medullary gradient creation."
+      },
+      "topicReference": "Topic 57: Role of NKCC2 in countercurrent multiplication"
+    },
+    {
+      "questionId": "q-0313014645-10",
+      "summary": "Urea recirculation contributes to medullary hypertonicity. ADH (vasopressin) stimulates urea transport via UT-A1/A3 transporters in the inner medullary collecting duct, allowing urea to enter the medullary interstitium.",
+      "whyCorrect": {
+        "b": "Urea recycling adds about 600 mOsm/L to the inner medullary osmotic gradient (of the total 1200 mOsm/L). This supplements the NaCl gradient created by the loop of Henle.",
+        "e": "Vasopressin (ADH) increases UT-A1/A3 transporter expression in the inner medullary collecting duct, enhancing urea reabsorption and the medullary concentration gradient."
+      },
+      "whyIncorrect": {
+        "a": "Urea is handled by principal cells primarily, not intercalated cells which deal with H+ and HCO3-.",
+        "c": "Urea recirculation promotes concentrated urine by adding to the medullary gradient.",
+        "d": "Vasopressin stimulates (not inhibits) urea recirculation.",
+        "f": "UT-1 (now called UT-A2) is in the thin descending limb; UT-A1/A3 are in collecting duct."
+      },
+      "topicReference": "Topic 57: Urea cycling and contribution to medullary gradient"
+    },
+    {
+      "questionId": "q-0313014645-19",
+      "summary": "Cl- reabsorption in the proximal tubule primarily occurs paracellularly. After Na+ is reabsorbed, the lumen becomes positive, driving Cl- through tight junctions by the electrical gradient.",
+      "whyCorrect": {
+        "c": "In the late proximal tubule, active Na+ reabsorption leaves the lumen relatively positive. This voltage gradient drives Cl- paracellularly through tight junctions - the main mechanism of proximal Cl- reabsorption."
+      },
+      "whyIncorrect": {
+        "a": "Cl-/HCO3- antiport exists but is not the primary bulk mechanism.",
+        "b": "There is no H+-Cl- primary active pump in the proximal tubule.",
+        "d": "H+/Cl- cotransport is not a significant mechanism here.",
+        "e": "Na-K-2Cl cotransport is found in the thick ascending limb, not proximal tubule."
+      },
+      "topicReference": "Topic 57: Paracellular Cl- transport in proximal tubule"
+    },
+    {
+      "questionId": "q-0313014645-20",
+      "summary": "The Na-K-2Cl cotransporter (NKCC2) is located in the luminal membrane of the thick ascending limb of Henle. It's a secondary active transporter using the Na+ gradient to move K+ and Cl- against their gradients.",
+      "whyCorrect": {
+        "d": "NKCC2 is secondary active transport - Na+ moves down its gradient (maintained by basolateral Na-K-ATPase), and this energy drives K+ and Cl- uphill into the cell.",
+        "f": "NKCC2 is specifically located in the luminal (apical) membrane of the thick ascending limb of the loop of Henle."
+      },
+      "whyIncorrect": {
+        "a": "NKCC2 is not in the proximal tubule; it's in the thick ascending limb.",
+        "b": "NKCC2 is not an ATPase. The Na-K-ATPase on the basolateral membrane provides the Na+ gradient that NKCC2 uses.",
+        "c": "Thiazides inhibit the NaCl cotransporter (NCC) in the distal tubule, not NKCC2. Loop diuretics (furosemide) inhibit NKCC2.",
+        "e": "Aldosterone-stimulated Na+ reabsorption occurs via ENaC in the collecting duct, not NKCC2."
+      },
+      "topicReference": "Topic 57: NKCC2 location and mechanism"
+    },
+    {
+      "questionId": "q-1526033148-37",
+      "summary": "The thick ascending limb reabsorbs NaCl via NKCC2 but is impermeable to water and urea. This 'diluting segment' makes tubular fluid hypoosmotic.",
+      "whyCorrect": {
+        "c": "The thick ascending limb vigorously transports Na+ (via NKCC2) but is impermeant to water and urea. This combination dilutes the tubular fluid and maintains medullary hypertonicity."
+      },
+      "whyIncorrect": {
+        "a": "About 65% of reabsorption occurs in the proximal tubule, not the loop of Henle.",
+        "b": "In the proximal tubule, Na+ is transported against its gradient (uphill) by basolateral Na-K-ATPase.",
+        "d": "Active Na+ transport in distal tubule/collecting duct requires aldosterone, not ADH. ADH affects water permeability."
+      },
+      "topicReference": "Topic 57: Thick ascending limb characteristics"
+    },
+    {
+      "questionId": "q-1526033148-38",
+      "summary": "Tubular Na+ reabsorption involves: 1) Passive Na+ entry into cells from lumen (down electrochemical gradient), 2) Active Na+ extrusion via basolateral Na-K-ATPase. The active step is basolateral.",
+      "whyCorrect": {
+        "a": "The active step is the basolateral Na-K-ATPase, which actively pumps Na+ out of the cell into the interstitial space using ATP."
+      },
+      "whyIncorrect": {
+        "b": "Na+ entry from lumen to cell is passive (down the gradient), not against it.",
+        "c": "The tubular fluid is slightly positive in the proximal tubule, not negative.",
+        "d": "The Na-K-ATPase is in the basolateral membrane, not using carrier proteins on the basal side for Na+ entry.",
+        "e": "There is no concentration gradient for Na+ from filtrate to interstitium directly.",
+        "f": "Hydrostatic pressure difference doesn't drive Na+ reabsorption."
+      },
+      "topicReference": "Topic 57: Mechanism of tubular Na+ reabsorption"
+    },
+    {
+      "questionId": "q-1526033148-39",
+      "summary": "In secondary active transport, ATP directly powers the Na-K-ATPase on the basolateral membrane, which maintains the Na+ gradient. This gradient then drives Na+-coupled transport at the luminal membrane.",
+      "whyCorrect": {
+        "d": "ATP is directly used by the Na-K-ATPase on the basolateral membrane to pump Na+ out of the cell. This creates the low intracellular Na+ that drives secondary active transport at the luminal membrane."
+      },
+      "whyIncorrect": {
+        "a": "Glucose crosses the brush border via SGLT (Na+-glucose cotransporter) using the Na+ gradient, not direct ATP.",
+        "b": "Glucose leaves via GLUT2 on the basolateral membrane by facilitated diffusion, not ATP.",
+        "c": "Na+ enters across brush border passively down its gradient (maintained by basolateral Na-K-ATPase).",
+        "e": "Option d is correct."
+      },
+      "topicReference": "Topic 57: Location of ATP use in secondary active transport"
+    },
+    {
+      "questionId": "q-1526033148-40",
+      "summary": "Na+ uptake from lumen into the cell occurs DOWN the electrochemical gradient (passive), not against it. The cell interior is negative and low in Na+, favoring Na+ entry.",
+      "whyCorrect": {
+        "c": "This is NOT correct (and thus is the answer). Na+ entry from tubular lumen into the cell is DOWN the electrochemical gradient because intracellular Na+ is low and the cell interior is negative."
+      },
+      "whyIncorrect": {
+        "a": "This is correct - basolateral Na-K-ATPase is the active step.",
+        "b": "This is correct - intracellular Na+ is low, creating a gradient from lumen into cell.",
+        "d": "This is correct - various Na+ carriers (NHE3, SGLT, etc.) are on the luminal membrane."
+      },
+      "topicReference": "Topic 57: Direction of Na+ movement across tubular membranes"
+    },
+    {
+      "questionId": "q-1526033148-41",
+      "summary": "K+ handling by the kidney includes: 1) Free filtration at glomerulus, 2) ~65% reabsorption in proximal tubule, 3) Further reabsorption in thick ascending limb, 4) Secretion in collecting duct (aldosterone-regulated).",
+      "whyCorrect": {
+        "d": "The kidney filters K+, reabsorbs it (mostly in proximal tubule and thick ascending limb), and secretes it (in the collecting duct). All three processes occur."
+      },
+      "whyIncorrect": {
+        "a": "K+ is not only filtered - it's also reabsorbed and secreted.",
+        "b": "K+ undergoes secretion in addition to filtration and reabsorption.",
+        "c": "K+ is also reabsorbed, not just filtered and secreted.",
+        "e": "Option d is correct."
+      },
+      "topicReference": "Topic 57: Renal handling of potassium"
+    },
+    {
+      "questionId": "q-1526033148-43",
+      "summary": "ADH (vasopressin) is synthesized in hypothalamic nuclei (supraoptic and paraventricular) and transported to the posterior pituitary (neurohypophysis) where it's stored and released.",
+      "whyCorrect": {
+        "a": "ADH is synthesized in the hypothalamus (supraoptic and paraventricular nuclei) by magnocellular neurons.",
+        "e": "ADH is stored and released from the neurohypophysis (posterior pituitary). Though technically synthesized in hypothalamus, the neurohypophysis is where it enters the bloodstream."
+      },
+      "whyIncorrect": {
+        "b": "The posterior pituitary stores and releases ADH but doesn't produce it - the hypothalamus does.",
+        "c": "The anterior pituitary produces different hormones (GH, TSH, ACTH, etc.), not ADH.",
+        "d": "The adrenal cortex produces aldosterone and cortisol, not ADH.",
+        "f": "The juxtaglomerular apparatus produces renin, not ADH."
+      },
+      "topicReference": "Topic 57: Origin of ADH"
+    },
+    {
+      "questionId": "q-1526033148-44",
+      "summary": "ADH increases water permeability of the collecting duct by inserting aquaporin-2 channels. This allows free-water reabsorption from the hypoosmotic tubular fluid into the hyperosmotic medulla.",
+      "whyCorrect": {
+        "c": "ADH increases AQP2 insertion in collecting duct, allowing water to move from tubule to hyperosmotic interstitium. This is 'free-water reabsorption' - water without solute."
+      },
+      "whyIncorrect": {
+        "a": "Free-water clearance DECREASES with ADH (more water is reabsorbed, less excreted).",
+        "b": "ADH doesn't increase medullary blood flow; if anything, it might decrease it.",
+        "d": "ADH doesn't affect proximal tubular Na+ reabsorption - that's constitutive.",
+        "e": "Proximal tubule water reabsorption is constitutive and not ADH-regulated."
+      },
+      "topicReference": "Topic 57: ADH mechanism of action"
+    },
+    {
+      "questionId": "q-1526033148-47",
+      "summary": "Aldosterone deficiency (Addison's disease) causes: decreased Na+ reabsorption, decreased K+/H+ secretion. Results include acidosis (H+ retention), hyperkalemia, hyponatremia, and hypotension.",
+      "whyCorrect": {
+        "c": "Without aldosterone, the collecting duct cannot secrete H+ efficiently (intercalated cells), leading to metabolic acidosis."
+      },
+      "whyIncorrect": {
+        "a": "Hematocrit may be normal or decreased due to cortisol deficiency (also in Addison's), not increased.",
+        "b": "Blood pressure decreases in Addison's due to Na+ and water loss.",
+        "d": "HyperKalemia occurs (not hypokalemia) because K+ secretion is impaired.",
+        "e": "Hyperglycemia is not typical; hypoglycemia may occur due to cortisol deficiency.",
+        "f": "Acidosis (option c) is correct."
+      },
+      "topicReference": "Topic 57: Consequences of aldosterone deficiency"
+    },
+    {
+      "questionId": "q-2734027349-1",
+      "summary": "ADH acts on V2 receptors in the collecting duct principal cells to insert aquaporin-2 water channels, increasing water permeability and allowing concentrated urine production.",
+      "whyCorrect": {
+        "e": "ADH binds to V2 receptors on collecting tubule principal cells, triggering AQP2 insertion into the apical membrane, dramatically increasing water permeability."
+      },
+      "whyIncorrect": {
+        "a": "Proximal tubule water permeability is constitutively high - ADH doesn't regulate it.",
+        "b": "ADH doesn't affect peritubular capillary permeability.",
+        "c": "ADH doesn't affect glomerular capillary permeability.",
+        "d": "ADH doesn't regulate filtration slits."
+      },
+      "topicReference": "Topic 57: ADH target in the kidney"
+    },
+    {
+      "questionId": "q-2734027349-4",
+      "summary": "Na+ crosses the luminal membrane via: 1) ENaC channels (diffusion), 2) Cotransporters (SGLT, amino acid transporters, NKCC2), 3) Antiporters (NHE3 = Na+/H+ exchanger). The Na-K-ATPase is on the basolateral side, not luminal.",
+      "whyCorrect": {
+        "a": "ENaC (epithelial Na+ channels) allow Na+ to diffuse down its electrochemical gradient into the cell.",
+        "b": "SGLT (Na+-glucose), NaPi (Na+-phosphate), and amino acid cotransporters all move Na+ with organic solutes.",
+        "c": "NHE3 (Na+/H+ exchanger) moves Na+ in while moving H+ out - counter transport."
+      },
+      "whyIncorrect": {
+        "d": "The Na-K-ATPase is located on the basolateral membrane, not the luminal membrane."
+      },
+      "topicReference": "Topic 57: Na+ transport mechanisms at luminal membrane"
+    },
+    {
+      "questionId": "q-2734027349-15",
+      "summary": "Hormone-regulated transports: Aldosterone regulates Na+ reabsorption and K+ secretion in collecting duct via ENaC. PTH regulates Ca2+ reabsorption in distal tubule. ANH inhibits Na+ reabsorption in collecting duct.",
+      "whyCorrect": {
+        "b": "Aldosterone increases K+ secretion in collecting duct by increasing ENaC activity (more Na+ entry drives K+ secretion via ROMK channels).",
+        "d": "ANH (atrial natriuretic hormone) inhibits Na+ reabsorption in the collecting duct, promoting natriuresis.",
+        "e": "PTH increases Ca2+ reabsorption in the distal convoluted tubule via TRPV5 channels."
+      },
+      "whyIncorrect": {
+        "a": "Thick ascending segment Na+ transport is not primarily regulated by vasopressin.",
+        "c": "Proximal tubule Na+ reabsorption is not directly regulated by aldosterone.",
+        "f": "There's no K+ reabsorption regulated by aldosterone in distal tubule - aldosterone increases K+ secretion."
+      },
+      "topicReference": "Topic 57: Hormonal regulation of tubular transport"
+    },
+    {
+      "questionId": "q-2734027349-27",
+      "summary": "Loop of Henle: Descending limb - water leaves (thin segment is water-permeable). Ascending limb - water stays in (impermeable), but NaCl is actively reabsorbed in thick segment.",
+      "whyCorrect": {
+        "a": "The descending limb is water-permeable; water moves out into the hyperosmotic medullary interstitium.",
+        "b": "The ascending limb (both thin and thick) is water-impermeable - no water reabsorption occurs here.",
+        "c": "The thick ascending limb has active NaCl reabsorption via NKCC2."
+      },
+      "whyIncorrect": {
+        "d": "There is no active solute reabsorption in the descending limb - only passive water movement."
+      },
+      "topicReference": "Topic 57: Loop of Henle transport characteristics"
+    },
+    {
+      "questionId": "q-2734027349-31",
+      "summary": "When the kidney is concentrating urine (high ADH), the highest osmolarity is at the end of the collecting duct in the inner medulla, where it equilibrates with the hyperosmotic interstitium (up to 1200 mOsm/L).",
+      "whyCorrect": {
+        "e": "In a concentrating kidney, the collecting duct traverses the medullary gradient. At its end (papillary tip), the tubular fluid equilibrates with the maximally hyperosmotic interstitium (1200 mOsm/L)."
+      },
+      "whyIncorrect": {
+        "a": "The thick ascending limb produces HYPOosmotic fluid (~100 mOsm/L) - the 'diluting segment'.",
+        "b": "The proximal tubule is isosmotic (~290 mOsm/L).",
+        "c": "The distal tubule varies but never reaches 1200 mOsm/L.",
+        "d": "The beginning of the distal tubule is hypoosmotic (~100 mOsm/L)."
+      },
+      "topicReference": "Topic 57: Maximum osmolarity location in concentrating kidney"
+    },
+    {
+      "questionId": "q-2734027349-37",
+      "summary": "A large volume of dilute urine (100 mOsm/L) indicates the medullary gradient is impaired. Loop diuretics (like furosemide) inhibit NKCC2 in the thick ascending limb, destroying the gradient.",
+      "whyCorrect": {
+        "c": "Inhibiting NKCC2 (Na-K-2Cl cotransporter) in the thick ascending limb prevents the single effect of countercurrent multiplication, destroying the medullary gradient. Result: large volume of dilute urine."
+      },
+      "whyIncorrect": {
+        "a": "Inhibiting ADH secretion would cause dilute urine but wouldn't necessarily cause very high volume with 100 mOsm/L.",
+        "b": "V2 receptor inhibition would block ADH action but doesn't explain 100 mOsm/L specifically.",
+        "d": "Renin inhibition affects blood pressure/Na+ balance but not directly urine dilution.",
+        "e": "Increased water permeability would concentrate urine, not dilute it."
+      },
+      "topicReference": "Topic 57: Loop diuretics and urine concentration"
+    },
+    {
+      "questionId": "q-2734027349-39",
+      "summary": "In the proximal tubule, Na+ is reabsorbed primarily via Na+/H+ exchange (NHE3). This secretes H+ which combines with filtered HCO3-, resulting in net Na+ and HCO3- reabsorption.",
+      "whyCorrect": {
+        "c": "NHE3 (Na+/H+ exchanger) is the major mechanism. Na+ enters the cell while H+ is secreted. The H+ combines with HCO3- to form H2O + CO2, which is reabsorbed. Net result: Na+ and HCO3- reabsorption."
+      },
+      "whyIncorrect": {
+        "a": "Na-K-2Cl cotransport is in the thick ascending limb, not proximal tubule.",
+        "b": "Direct Na+/K+ exchange doesn't occur on the luminal membrane.",
+        "d": "Na+/Ca2+ exchange occurs on the basolateral membrane in some segments but isn't major for Na+ reabsorption."
+      },
+      "topicReference": "Topic 57: NHE3 role in proximal tubule"
+    },
+    {
+      "questionId": "q-3221027349-3",
+      "summary": "In a concentrating kidney, the final urine at the end of the collecting duct reaches maximum concentration (up to 1200 mOsm/L) as it equilibrates with the inner medullary interstitium.",
+      "whyCorrect": {
+        "e": "The end of the collecting duct is in the inner medulla. With ADH present, AQP2 allows water to exit, concentrating the urine to match the hyperosmotic interstitium (up to 1200 mOsm/L)."
+      },
+      "whyIncorrect": {
+        "a": "The thick ascending limb produces hypoosmotic fluid (~100 mOsm/L).",
+        "b": "The proximal tubule is isosmotic (~290 mOsm/L).",
+        "c": "The distal tubule doesn't reach maximum concentration.",
+        "d": "The beginning of the distal tubule is hypoosmotic."
+      },
+      "topicReference": "Topic 57: Location of maximum urine concentration"
+    },
+    {
+      "questionId": "q-3221027349-8",
+      "summary": "ANH (Atrial Natriuretic Hormone) inhibits the Na-K-2Cl cotransporter in the thick ascending limb, reducing NaCl reabsorption and promoting natriuresis and diuresis.",
+      "whyCorrect": {
+        "d": "ANH inhibits NKCC2 in the thick ascending segment, reducing the medullary concentration gradient and promoting natriuresis."
+      },
+      "whyIncorrect": {
+        "a": "ANH's main effect is not on ENaC channels directly.",
+        "b": "There's no significant Na-K exchange in proximal tubule that ANH targets.",
+        "c": "ANH doesn't directly inhibit ADH-stimulated water reabsorption at the receptor level."
+      },
+      "topicReference": "Topic 57: ANH mechanism in kidney"
+    },
+    {
+      "questionId": "q-3221027349-9",
+      "summary": "Dilute urine (100 mOsm/L) in large volume can result from: 1) V2 receptor inhibition (blocking ADH effect), or 2) NKCC2 inhibition (destroying medullary gradient).",
+      "whyCorrect": {
+        "b": "V2 receptor inhibitors (vaptans) block ADH action, preventing water reabsorption in collecting duct.",
+        "c": "Decreased Cl- reabsorption in thick ascending limb (via NKCC2 inhibition) destroys the medullary gradient needed for concentration."
+      },
+      "whyIncorrect": {
+        "a": "ADH secretion inhibition is not a common drug mechanism.",
+        "d": "Renin inhibition affects RAAS but doesn't directly cause dilute urine.",
+        "e": "Increased water permeability would concentrate urine, not dilute it."
+      },
+      "topicReference": "Topic 57: Mechanisms producing dilute urine"
+    },
+    {
+      "questionId": "q-3221027349-11",
+      "summary": "Na+ reabsorption in the proximal tubule occurs primarily via Na+/H+ exchange (NHE3), which also facilitates HCO3- reabsorption through carbonic anhydrase-mediated reactions.",
+      "whyCorrect": {
+        "c": "NHE3 exchanges Na+ for H+. The secreted H+ titrates filtered HCO3- (forming H2O + CO2), resulting in net reabsorption of both Na+ and HCO3-."
+      },
+      "whyIncorrect": {
+        "a": "Na-K-2Cl cotransport is in the thick ascending limb, not proximal tubule.",
+        "b": "Direct Na+/K+ exchange doesn't occur on luminal membrane.",
+        "d": "Na+/Ca2+ exchange is on basolateral membrane and not a major Na+ reabsorption mechanism."
+      },
+      "topicReference": "Topic 57: Proximal tubule Na+ reabsorption mechanism"
+    },
+    {
+      "questionId": "q-3221027349-15",
+      "summary": "The vacuolar H+-ATPase (proton pump) is expressed on type A intercalated cells in the collecting duct. These cells secrete H+ to acidify urine and regenerate HCO3-.",
+      "whyCorrect": {
+        "c": "Type A intercalated cells in the collecting duct have H+-ATPase on their apical membrane for active H+ secretion into urine."
+      },
+      "whyIncorrect": {
+        "a": "Proximal tubule uses NHE3 for H+ secretion, not vacuolar H+-ATPase.",
+        "b": "Principal cells handle Na+ and K+ transport, not H+ secretion.",
+        "d": "Distal tubule epithelial cells are not the primary site of vacuolar H+-ATPase.",
+        "e": "Thick ascending limb doesn't have significant H+ secretion via vacuolar pump."
+      },
+      "topicReference": "Topic 57: Location of H+-ATPase in kidney"
+    },
+    {
+      "questionId": "q-4525102917-2",
+      "summary": "The major mechanism of proximal tubule Na+ reabsorption is Na+/H+ exchange via NHE3, resulting in coupled Na+ and HCO3- reabsorption.",
+      "whyCorrect": {
+        "b": "NHE3 mediates Na+/H+ exchange. H+ secretion combines with filtered HCO3- (via carbonic anhydrase), and both Na+ and HCO3- are effectively reabsorbed."
+      },
+      "whyIncorrect": {
+        "a": "Na+/Ca2+ exchange is basolateral and not a major Na+ reabsorption mechanism.",
+        "c": "Na-K-2Cl cotransport is in thick ascending limb, not proximal tubule.",
+        "d": "Direct Na+/K+ exchange doesn't occur on luminal membrane."
+      },
+      "topicReference": "Topic 57: NHE3 in proximal tubule"
+    },
+    {
+      "questionId": "q-4525102917-20",
+      "summary": "Aldosterone is a steroid hormone that enters cells and binds to mineralocorticoid receptors. It increases transcription of genes for ENaC subunits, increasing the number of Na+ channels on the luminal membrane.",
+      "whyCorrect": {
+        "b": "Aldosterone upregulates transcription of ENaC (epithelial sodium channel) subunits and SGK1, increasing the number of active channels on the apical membrane over hours."
+      },
+      "whyIncorrect": {
+        "a": "Opening existing channels is a rapid effect; aldosterone's main action is genomic (increasing channel numbers).",
+        "c": "'Activating cytoplasm' is too vague and incorrect.",
+        "d": "Aldosterone doesn't directly block ANH receptors.",
+        "e": "K+ channels (ROMK) are indirectly affected but ENaC upregulation is the primary action."
+      },
+      "topicReference": "Topic 57: Aldosterone mechanism at cellular level"
+    },
+    {
+      "questionId": "q-4525102917-22",
+      "summary": "The thick ascending limb actively reabsorbs NaCl via NKCC2 but is impermeable to water and urea. This creates the 'diluting segment' and contributes to medullary hypertonicity.",
+      "whyCorrect": {
+        "b": "The thick ascending limb has vigorous NaCl transport (via NKCC2) but is impermeant to water and urea. This combination is essential for countercurrent multiplication."
+      },
+      "whyIncorrect": {
+        "a": "The thick ascending limb is water-IMpermeant - no water follows the Na+.",
+        "c": "Urea is NOT reabsorbed here - the segment is impermeable to urea.",
+        "d": "No water reabsorption occurs in the water-impermeable thick ascending limb.",
+        "e": "K+ secretion is mainly in collecting duct, not thick ascending limb.",
+        "f": "Too vague and doesn't capture the key feature.",
+        "g": "Aldosterone acts on collecting duct, not thick ascending limb.",
+        "h": "Intense H+ secretion is in collecting duct intercalated cells."
+      },
+      "topicReference": "Topic 57: Thick ascending limb function"
+    },
+    {
+      "questionId": "q-5090109547-3",
+      "summary": "Hormone-regulated transports in the kidney: Aldosterone regulates K+ secretion and Na+ reabsorption in collecting duct. PTH regulates Ca2+ reabsorption in distal tubule.",
+      "whyCorrect": {
+        "c": "Aldosterone increases K+ secretion in the collecting duct by enhancing Na+ entry through ENaC, which drives K+ secretion via ROMK.",
+        "e": "Aldosterone increases Na+ reabsorption in the collecting duct via ENaC.",
+        "f": "PTH increases Ca2+ reabsorption in the distal convoluted tubule via TRPV5 channels."
+      },
+      "whyIncorrect": {
+        "a": "Proximal tubule Na+ reabsorption is not primarily regulated by aldosterone.",
+        "b": "There's no aldosterone-regulated K+ reabsorption in distal tubule.",
+        "d": "K+ reabsorption in thick ascending segment is not primarily vasopressin-regulated."
+      },
+      "topicReference": "Topic 57: Hormonal regulation of renal transport"
+    },
+    {
+      "questionId": "q-5090109547-5",
+      "summary": "Diabetes insipidus is characterized by lack of ADH (central) or resistance to ADH (nephrogenic). Without ADH action, the collecting duct cannot concentrate urine, leading to massive water loss.",
+      "whyCorrect": {
+        "a": "In severe diabetes insipidus, urine output can exceed 15-20 liters per day because the kidney cannot concentrate urine."
+      },
+      "whyIncorrect": {
+        "b": "Diabetes insipidus is completely different from diabetes mellitus (which involves glucose metabolism).",
+        "c": "Central DI is caused by LOW ADH levels, not elevated.",
+        "d": "DI causes dehydration, not hyperhydration. Patients are at risk of hypernatremia.",
+        "e": "There's no glycosuria in DI - glucose metabolism is unaffected."
+      },
+      "topicReference": "Topic 57: Diabetes insipidus characteristics"
+    },
+    {
+      "questionId": "q-5090109547-8",
+      "summary": "Ammonium (NH4+) secreted by renal tubules comes from glutamine metabolism in proximal tubule cells. Glutaminase and glutamate dehydrogenase release NH4+ from glutamine.",
+      "whyCorrect": {
+        "a": "Glutamine is taken up by proximal tubule cells and metabolized by glutaminase to release NH4+. This is the primary source of urinary ammonium."
+      },
+      "whyIncorrect": {
+        "b": "Basic amino acid side chains are not a significant source of urinary ammonium.",
+        "c": "Urea is not broken down to release ammonia in the tubules.",
+        "d": "Circulating NH4+ is minimal and not a significant source - it's produced locally in the kidney."
+      },
+      "topicReference": "Topic 57: Source of urinary ammonium"
+    },
+    {
+      "questionId": "q-5090109547-13",
+      "summary": "Ca2+ reabsorption: Proximal tubule - ~65% passive/paracellular. Thick ascending limb - ~25% paracellular. Distal tubule - ~10% active transcellular (PTH-regulated via TRPV5).",
+      "whyCorrect": {
+        "a": "PTH increases Ca2+ reabsorption specifically in the distal convoluted tubule by upregulating TRPV5 channels.",
+        "b": "Proximal tubule has active (transcellular) Ca2+ reabsorption in addition to passive paracellular movement.",
+        "f": "The distal tubule has active transcellular Ca2+ reabsorption via TRPV5, calbindin, and basolateral Ca2+-ATPase/NCX."
+      },
+      "whyIncorrect": {
+        "c": "PTH doesn't significantly affect collecting duct Ca2+ reabsorption.",
+        "d": "PTH's effect on loop of Henle Ca2+ reabsorption is minimal.",
+        "e": "PTH doesn't enhance proximal tubule Ca2+ reabsorption - it mainly acts on distal tubule."
+      },
+      "topicReference": "Topic 57: Calcium reabsorption and PTH regulation"
+    },
+    {
+      "questionId": "q-5090109547-20",
+      "summary": "Furosemide (a loop diuretic) inhibits the NKCC2 transporter (Na+-K+-2Cl- cotransporter) located in the thick ascending segment of the loop of Henle.",
+      "whyCorrect": {
+        "c": "Loop diuretics like furosemide specifically block NKCC2 in the thick ascending limb, inhibiting NaCl reabsorption and destroying the medullary concentration gradient."
+      },
+      "whyIncorrect": {
+        "a": "The collecting duct doesn't have NKCC2 - it has ENaC.",
+        "b": "The proximal tubule doesn't have NKCC2.",
+        "d": "The distal tubule has NCC (thiazide-sensitive), not NKCC2."
+      },
+      "topicReference": "Topic 57: Site of loop diuretic action"
+    },
+    {
+      "questionId": "q-5156012322-1",
+      "summary": "Juxtamedullary nephrons have long loops of Henle that reach deep into the medulla. They are essential for creating the medullary osmotic gradient required for urine concentration.",
+      "whyCorrect": {
+        "d": "The long loops of juxtamedullary nephrons reach deep into the inner medulla, creating the steep osmotic gradient (up to 1200 mOsm/L) necessary for maximum urine concentration."
+      },
+      "whyIncorrect": {
+        "a": "Juxtamedullary nephrons are LONGER than cortical nephrons, not shorter. They do produce urine.",
+        "b": "All nephrons produce the same glomerular filtrate osmolarity (~290 mOsm/L).",
+        "c": "All nephrons with juxtaglomerular apparatus produce renin; this isn't specific to juxtamedullary nephrons."
+      },
+      "topicReference": "Topic 57: Role of juxtamedullary nephrons"
+    },
+    {
+      "questionId": "q-5156012322-8",
+      "summary": "About 65-70% of filtered K+ is reabsorbed in the proximal tubule, making it the site of largest K+ reabsorption. Additional reabsorption occurs in the thick ascending limb via NKCC2.",
+      "whyCorrect": {
+        "c": "The proximal tubule reabsorbs the largest fraction (~65-70%) of filtered K+, primarily via paracellular routes following water and Na+."
+      },
+      "whyIncorrect": {
+        "a": "The thick ascending limb reabsorbs some K+ (~25%) but less than the proximal tubule.",
+        "b": "The collecting duct is mainly a site of K+ secretion, not reabsorption.",
+        "d": "The distal tubule has minimal K+ reabsorption."
+      },
+      "topicReference": "Topic 57: Site of major K+ reabsorption"
+    },
+    {
+      "questionId": "q-5156012322-9",
+      "summary": "Thiazide diuretics inhibit the NaCl cotransporter (NCC) in the distal convoluted tubule, reducing Na+ and Cl- reabsorption at that site.",
+      "whyCorrect": {
+        "a": "Thiazides block NCC (Na+-Cl- cotransporter) specifically in the distal convoluted tubule."
+      },
+      "whyIncorrect": {
+        "b": "Proximal tubule is not the site of thiazide action.",
+        "c": "The thick ascending limb has NKCC2, which is blocked by loop diuretics, not thiazides.",
+        "d": "The collecting duct has ENaC (blocked by amiloride), not the thiazide target."
+      },
+      "topicReference": "Topic 57: Site of thiazide diuretic action"
+    },
+    {
+      "questionId": "q-625411501B-18",
+      "summary": "The thick ascending limb actively reabsorbs NaCl via NKCC2 but is water-impermeable. This 'dilutes' the tubular fluid, making it hypoosmotic as it enters the distal tubule.",
+      "whyCorrect": {
+        "c": "Because NaCl is removed but water cannot follow (water-impermeable membrane), the tubular fluid becomes hypoosmotic (~100 mOsm/L) - the 'diluting segment'."
+      },
+      "whyIncorrect": {
+        "a": "Aldosterone acts on the collecting duct, not the thick ascending limb.",
+        "b": "The largest fraction of Na+ is reabsorbed in the proximal tubule (~65%), not the thick ascending limb.",
+        "d": "The thick ascending limb is water-impermeable - no water flows into the interstitium here."
+      },
+      "topicReference": "Topic 57: Diluting segment characteristics"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "topic": 54,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 5,
+    "status": "COMPLETE"
+  },
+  "explanations": [
+    {
+      "questionId": "q-0313014645-B-5",
+      "summary": "Proximal tubule has HIGHEST paracellular permeability - 'leaky' tight junctions allow passive water/solute movement. Collecting duct and thick ascending limb have TIGHT junctions. Thin descending limb is permeable to water (transcellular) but not highest paracellular.",
+      "whyCorrect": {
+        "a": "The proximal convoluted tubule has the highest paracellular permeability due to its 'leaky' tight junctions. This allows massive passive reabsorption of water following solute reabsorption - ~65% of filtered water is reabsorbed here via paracellular route."
+      },
+      "whyIncorrect": {
+        "b": "Collecting duct (with ADH) has increased TRANSCELLULAR water permeability via aquaporin-2 channels, but its tight junctions remain relatively TIGHT, not leaky paracellularly.",
+        "c": "Thick ascending limb of Henle has VERY TIGHT junctions - it's water impermeable. This creates the diluting segment that separates solute from water.",
+        "d": "Thin descending limb is permeable to water (transcellular via aquaporins) but has lower paracellular permeability than proximal tubule."
+      },
+      "topicReference": "Topic 54: Functional Anatomy of Nephrons"
+    },
+    {
+      "questionId": "q-1526033148-35",
+      "summary": "MEDULLA contains: loops of Henle (thin segments, descending limbs), collecting ducts (inner portions), vasa recta. CORTEX contains: all glomeruli (cortical AND juxtamedullary), Bowman's capsules, proximal/distal convoluted tubules, juxtaglomerular apparatus.",
+      "whyCorrect": {
+        "b": "Thin segment of loop of Henle dips deep into the medulla, especially in juxtamedullary nephrons which create the concentrated inner medulla.",
+        "f": "Descending limb of loop of Henle extends into the medulla - longer in juxtamedullary nephrons, shorter in cortical nephrons.",
+        "g": "Collecting ducts traverse the medulla vertically, passing through progressively more concentrated interstitium toward the papilla."
+      },
+      "whyIncorrect": {
+        "a": "Cortical glomeruli are located in the CORTEX (outer region), not medulla. All glomeruli are in the cortex.",
+        "c": "Bowman's capsule surrounds the glomerulus and is located entirely in the CORTEX.",
+        "d": "Proximal tubule pars CONVOLUTA (convoluted portion) is in the cortex. Only pars recta may extend toward medulla.",
+        "e": "Distal tubule pars convoluta is entirely in the CORTEX, near its own glomerulus.",
+        "h": "Juxtamedullary glomeruli, despite their name, are in the CORTEX (at the corticomedullary junction), not medulla.",
+        "i": "Juxtaglomerular apparatus is at the vascular pole of glomerulus in the CORTEX."
+      },
+      "topicReference": "Topic 54: Functional Anatomy of Nephrons"
+    },
+    {
+      "questionId": "q-1526033148-36",
+      "summary": "Tubular epithelium: BRUSH BORDER (microvilli) increases LUMINAL surface for reabsorption. BASAL channels (infoldings) increase basolateral surface for Na-K-ATPase. Na+ entry is PASSIVE (not active) from lumen. Intracellular NEGATIVE potential (-70mV) drives Na+ entry.",
+      "whyCorrect": {
+        "b": "The brush border (microvilli) on the LUMINAL (apical) surface multiplies surface area ~20-fold for efficient reabsorption in proximal tubule.",
+        "d": "Tubular cells have negative intracellular voltage (~-70mV). This electrical gradient PLUS low intracellular Na+ drives passive Na+ entry from the lumen through channels and cotransporters."
+      },
+      "whyIncorrect": {
+        "a": "BASAL channels (basolateral membrane infoldings) multiply the BASAL surface, not luminal surface. They house Na-K-ATPase pumps.",
+        "c": "Na+ is NOT actively transported INTO cells from lumen. Entry is PASSIVE (down electrochemical gradient). Active transport occurs at BASOLATERAL membrane (Na-K-ATPase pumps Na+ OUT of cell)."
+      },
+      "topicReference": "Topic 54: Functional Anatomy of Nephrons"
+    },
+    {
+      "questionId": "q-2734027349-11",
+      "summary": "CORTEX contains: ALL glomeruli (including juxtamedullary), Bowman's capsules, convoluted tubules, BEGINNING of collecting tubules, juxtaglomerular apparatus. MEDULLA contains: loops of Henle, vasa recta, main collecting duct system.",
+      "whyCorrect": {
+        "a": "Juxtamedullary nephron GLOMERULI are in the CORTEX at the corticomedullary junction. Only their LOOPS extend deep into medulla.",
+        "d": "Collecting tubules BEGIN in the cortex (cortical collecting ducts) before descending through medulla toward papilla."
+      },
+      "whyIncorrect": {
+        "b": "Loop of Henle extends into MEDULLA. While it starts and ends in cortex, the loop itself dips into medulla.",
+        "c": "Vasa recta are specialized capillaries that follow loops of Henle into MEDULLA. They maintain medullary osmotic gradient.",
+        "e": "This is too vague. Cortical nephrons are ENTIRELY in cortex but this doesn't specify which part - loops still dip into outer medulla."
+      },
+      "topicReference": "Topic 54: Functional Anatomy of Nephrons"
+    },
+    {
+      "questionId": "q-2734027349-22",
+      "summary": "Medullary structures: thin segment of Henle, descending limb, collecting duct (main portions), vasa recta. Cortical structures: ALL glomeruli, Bowman's capsule, convoluted tubules, juxtaglomerular apparatus.",
+      "whyCorrect": {
+        "a": "Thin segment of loop of Henle is located in the medulla - it's the deepest part of the nephron loop.",
+        "e": "Collecting duct traverses the entire medulla, becoming increasingly concentrated with urea and electrolytes.",
+        "h": "Descending limb of Henle extends into medulla - permeable to water, allowing water extraction into hypertonic interstitium."
+      },
+      "whyIncorrect": {
+        "b": "Bowman's capsule encapsulates glomerulus and is entirely in CORTEX.",
+        "c": "ALL glomeruli are in CORTEX. Even juxtamedullary glomeruli are cortical - only their loops extend into medulla.",
+        "d": "Proximal tubule pars convoluta is the CONVOLUTED portion in CORTEX around the glomerulus.",
+        "f": "Juxtamedullary glomeruli are in CORTEX at corticomedullary border. 'Juxta' means 'next to' - they're next to medulla, not in it.",
+        "g": "Juxtaglomerular apparatus (macula densa + JG cells) is at vascular pole of glomerulus in CORTEX.",
+        "i": "Distal tubule pars convoluta is entirely in CORTEX, contacting its own glomerulus at macula densa."
+      },
+      "topicReference": "Topic 54: Functional Anatomy of Nephrons"
+    }
+  ]
+}

@@ -1,0 +1,553 @@
+{
+  "metadata": {
+    "topic": 41,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 18,
+    "status": "TEMPLATE - needs explanations generated"
+  },
+  "questions": [
+    {
+      "questionId": "q-0313014645-B-22",
+      "text": "The portion of the circulatory system with the largest total cross-sectional area is the:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "arterioles"
+        },
+        {
+          "letter": "b",
+          "text": "large arteries"
+        },
+        {
+          "letter": "c",
+          "text": "small veins"
+        },
+        {
+          "letter": "d",
+          "text": "capillaries"
+        },
+        {
+          "letter": "e",
+          "text": "large veins"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-0313014645-3",
+      "text": "The law of Laplace states that (assuming T-tension, P-pressure, r-radius, h-wall thickness)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "T=P x h/r"
+        },
+        {
+          "letter": "b",
+          "text": "T=P x r/h"
+        },
+        {
+          "letter": "c",
+          "text": "T=h/P x r"
+        },
+        {
+          "letter": "d",
+          "text": "P=T x r/h"
+        },
+        {
+          "letter": "e",
+          "text": "P=h/T x r"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-3543048990-45",
+      "text": "In the systemic circulation",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the capillaries are the major site of hydraulic resistance"
+        },
+        {
+          "letter": "b",
+          "text": "about 15% of the total blood volume is in the capillaries"
+        },
+        {
+          "letter": "c",
+          "text": "the arteries are much more compliant than the veins"
+        },
+        {
+          "letter": "d",
+          "text": "about 65% of the total blood volume is in the veins"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-3543048990-48",
+      "text": "The \"resistance vessels\" include",
+      "options": [
+        {
+          "letter": "a",
+          "text": "venules"
+        },
+        {
+          "letter": "b",
+          "text": "capillaries"
+        },
+        {
+          "letter": "c",
+          "text": "arterioles"
+        },
+        {
+          "letter": "d",
+          "text": "end-arteries"
+        },
+        {
+          "letter": "e",
+          "text": "arteriovenous anastomoses"
+        },
+        {
+          "letter": "f",
+          "text": "veins"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-3543048990-51",
+      "text": "Which of the following statements are correct?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the resistance to flow is smaller in the capillary bed than in the arteriolar bed"
+        },
+        {
+          "letter": "b",
+          "text": "the aorta is the segment of the circulatory system which has the greatest compliance"
+        },
+        {
+          "letter": "c",
+          "text": "velocity decreases continuously from the aorta to the right atrium"
+        },
+        {
+          "letter": "d",
+          "text": "due to the large cross sectional area, the capillary bed contains the largest fraction of blood volume"
+        },
+        {
+          "letter": "e",
+          "text": "the tendency for the occurrence of turbulent flow increases when viscosity decreases"
+        },
+        {
+          "letter": "f",
+          "text": "in a laminar flow, the highest velocities are measured in the axial stream"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "e",
+        "f"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-3543048990-53",
+      "text": "Which of the following statements are correct?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "vasoconstriction increases wall tension in the vessels"
+        },
+        {
+          "letter": "b",
+          "text": "increased sympathetic tone increases the compliance of the vessels"
+        },
+        {
+          "letter": "c",
+          "text": "the critical closing pressure increases with vasoconstriction"
+        },
+        {
+          "letter": "d",
+          "text": "venous compliance is higher than arterial compliance"
+        },
+        {
+          "letter": "e",
+          "text": "diastolic pressure increases when the compliance of the aorta decreases"
+        }
+      ],
+      "correctAnswers": [
+        "c",
+        "d",
+        "e"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-4447200607-4",
+      "text": "Which one of the following 10 cm long structures has the highest compliance?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "an arteriosclerotic femoral artery"
+        },
+        {
+          "letter": "b",
+          "text": "a healthy femoral vein"
+        },
+        {
+          "letter": "c",
+          "text": "a healthy femoral artery"
+        },
+        {
+          "letter": "d",
+          "text": "an abdominal aorta"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4447200607-14",
+      "text": "Arterioles are characterized by:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the highest velocity of blood flow"
+        },
+        {
+          "letter": "b",
+          "text": "the greatest resistance to flow in the systemic circulation"
+        },
+        {
+          "letter": "c",
+          "text": "the greatest pressure drop"
+        },
+        {
+          "letter": "d",
+          "text": "the lowest fraction of blood volume"
+        },
+        {
+          "letter": "e",
+          "text": "the greatest compliance"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c",
+        "d"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-4525102917-1",
+      "text": "Arterioles are characterized by:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the greatest compliance"
+        },
+        {
+          "letter": "b",
+          "text": "the lowest fraction of blood volume"
+        },
+        {
+          "letter": "c",
+          "text": "the greatest resistance to flow in the systemic circulation"
+        },
+        {
+          "letter": "d",
+          "text": "the highest velocity of blood flow"
+        },
+        {
+          "letter": "e",
+          "text": "the greatest pressure drop"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c",
+        "e"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-4525102917-10",
+      "text": "Calculation of the venous compliance:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "venous blood volume change / venous transmural pressure change"
+        },
+        {
+          "letter": "b",
+          "text": "pressure difference / volume flow"
+        },
+        {
+          "letter": "c",
+          "text": "pressure x radius / wall thickness"
+        },
+        {
+          "letter": "d",
+          "text": "Hagen- Poiseuille equation"
+        },
+        {
+          "letter": "e",
+          "text": "diastolic pressure / systolic pressure"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4855200607-2",
+      "text": "Calculation of the venous compliance:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "volume change / pressure change"
+        },
+        {
+          "letter": "b",
+          "text": "pressure x radius / wall thickness"
+        },
+        {
+          "letter": "c",
+          "text": "Hagen- Poiseuille equation"
+        },
+        {
+          "letter": "d",
+          "text": "diastolic pressure / systolic pressure"
+        },
+        {
+          "letter": "e",
+          "text": "pressure difference / volume flow"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4855200607-10",
+      "text": "The portion of the circulatory system with the largest total cross-sectional area is the:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "capillaries"
+        },
+        {
+          "letter": "b",
+          "text": "small veins"
+        },
+        {
+          "letter": "c",
+          "text": "arterioles"
+        },
+        {
+          "letter": "d",
+          "text": "large arteries"
+        },
+        {
+          "letter": "e",
+          "text": "large veins"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4855200607-24",
+      "text": "Calculation of the venous compliance:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "pressure x radius / wall thickness"
+        },
+        {
+          "letter": "b",
+          "text": "pressure difference / volume flow"
+        },
+        {
+          "letter": "c",
+          "text": "diastolic pressure / systolic pressure"
+        },
+        {
+          "letter": "d",
+          "text": "Hagen- Poiseuille equation"
+        },
+        {
+          "letter": "e",
+          "text": "volume change / pressure change"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4855200607-27",
+      "text": "The portion of the circulatory system with the largest total cross-sectional area is the:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "capillaries"
+        },
+        {
+          "letter": "b",
+          "text": "small veins"
+        },
+        {
+          "letter": "c",
+          "text": "large arteries"
+        },
+        {
+          "letter": "d",
+          "text": "large veins"
+        },
+        {
+          "letter": "e",
+          "text": "arterioles"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4855200607-33",
+      "text": "In the systemic circulation, arterioles are characterized by:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the highest velocity of blood flow"
+        },
+        {
+          "letter": "b",
+          "text": "the greatest pressure drop"
+        },
+        {
+          "letter": "c",
+          "text": "the greatest compliance"
+        },
+        {
+          "letter": "d",
+          "text": "the greatest resistance to flow"
+        },
+        {
+          "letter": "e",
+          "text": "the lowest fraction of blood volume"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "d"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-4855200607-36",
+      "text": "The velocity of blood flow",
+      "options": [
+        {
+          "letter": "a",
+          "text": "determines the magnitude of the pulse pressure"
+        },
+        {
+          "letter": "b",
+          "text": "is inversely related to the cross-sectional area of the blood vessel"
+        },
+        {
+          "letter": "c",
+          "text": "decreases if the compliance of the blood vessels decreases"
+        },
+        {
+          "letter": "d",
+          "text": "is the lowest in the capillary vessels"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "d"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-4855200607-52",
+      "text": "The velocity of blood flow",
+      "options": [
+        {
+          "letter": "a",
+          "text": "determines the magnitude of the pulse pressure"
+        },
+        {
+          "letter": "b",
+          "text": "decreases if the compliance of the blood vessels decreases"
+        },
+        {
+          "letter": "c",
+          "text": "is the lowest in the capillary vessels"
+        },
+        {
+          "letter": "d",
+          "text": "is inversely related to the cross-sectional area of the blood vessel"
+        }
+      ],
+      "correctAnswers": [
+        "c",
+        "d"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-5156012322-18",
+      "text": "The law of Laplace states that (assuming T:tension, P:pressure, r:radius, h:wall thickness)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "T=P x h r"
+        },
+        {
+          "letter": "b",
+          "text": "P=T x r x h"
+        },
+        {
+          "letter": "c",
+          "text": "P=h/T x r"
+        },
+        {
+          "letter": "d",
+          "text": "P=T x r/h"
+        },
+        {
+          "letter": "e",
+          "text": "T=P x r/h"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "correctAnswerCount": 1
+    }
+  ]
+}

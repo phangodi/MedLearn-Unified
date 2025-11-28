@@ -1,0 +1,292 @@
+{
+  "metadata": {
+    "topic": 42,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 10,
+    "status": "TEMPLATE - needs explanations generated"
+  },
+  "questions": [
+    {
+      "questionId": "q-0313014645-B-10",
+      "text": "The arterial diastolic pressure",
+      "options": [
+        {
+          "letter": "a",
+          "text": "decreases when the elasticity of the aorta increases"
+        },
+        {
+          "letter": "b",
+          "text": "decreases when the peripheral resistance increases"
+        },
+        {
+          "letter": "c",
+          "text": "decreases when the stroke volume increases"
+        },
+        {
+          "letter": "d",
+          "text": "decreases whenever the systolic pressure increases"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-0313014645-8",
+      "text": "The decreased compliance of the elastic arteries results in",
+      "options": [
+        {
+          "letter": "a",
+          "text": "a decreased systolic pressure"
+        },
+        {
+          "letter": "b",
+          "text": "a decreased diastolic pressure"
+        },
+        {
+          "letter": "c",
+          "text": "an increased mean pressure"
+        },
+        {
+          "letter": "d",
+          "text": "an increased pulse pressure"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "d"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-3543048990-46",
+      "text": "When a person is standing, mean arterial pressure",
+      "options": [
+        {
+          "letter": "a",
+          "text": "at the level of the heart remains 100 mmHg"
+        },
+        {
+          "letter": "b",
+          "text": "of the large artery in the brain is about 60 mmHg"
+        },
+        {
+          "letter": "c",
+          "text": "of the large artery in the foot is about 190 mmHg"
+        },
+        {
+          "letter": "d",
+          "text": "does not differ from the reclining position"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "b",
+        "c"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-3543048990-47",
+      "text": "The mean arterial pressure",
+      "options": [
+        {
+          "letter": "a",
+          "text": "is directly proportional to cardiac output and peripheral resistance"
+        },
+        {
+          "letter": "b",
+          "text": "is approximately equal to the diastolic pressure plus one-third of the pulse pressure"
+        },
+        {
+          "letter": "c",
+          "text": "decreases with age"
+        },
+        {
+          "letter": "d",
+          "text": "in a large artery in the foot will change from about 100 mmHg to about 180 mmHg when a recumbent person stands up"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "b",
+        "d"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-4447200607-2",
+      "text": "Increases in arterial pulse pressure may be caused by:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "decreases in stroke volume"
+        },
+        {
+          "letter": "b",
+          "text": "decreases in arterial blood volume"
+        },
+        {
+          "letter": "c",
+          "text": "increases in heart rate"
+        },
+        {
+          "letter": "d",
+          "text": "decreases in arterial compliance"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4447200607-20",
+      "text": "The pressure pulse in the systemic arteries",
+      "options": [
+        {
+          "letter": "a",
+          "text": "propagates at about 5 m/sec"
+        },
+        {
+          "letter": "b",
+          "text": "is produced by the ejection of blood into the aorta"
+        },
+        {
+          "letter": "c",
+          "text": "is palpable at the wrist shortly after ventricular ejection"
+        },
+        {
+          "letter": "d",
+          "text": "has the same velocity as arterial blood flow"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "b",
+        "c"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-4855200607-14",
+      "text": "The decreased compliance of the elastic arteries results in",
+      "options": [
+        {
+          "letter": "a",
+          "text": "a decreased systolic pressure"
+        },
+        {
+          "letter": "b",
+          "text": "an increased mean pressure"
+        },
+        {
+          "letter": "c",
+          "text": "a decreased diastolic pressure"
+        },
+        {
+          "letter": "d",
+          "text": "an increased pulse pressure"
+        }
+      ],
+      "correctAnswers": [
+        "c",
+        "d"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-4855200607-17",
+      "text": "The decreased compliance of the elastic arteries results in",
+      "options": [
+        {
+          "letter": "a",
+          "text": "a decreased diastolic pressure"
+        },
+        {
+          "letter": "b",
+          "text": "a decreased systolic pressure"
+        },
+        {
+          "letter": "c",
+          "text": "an increased pulse pressure"
+        },
+        {
+          "letter": "d",
+          "text": "an increased mean pressure"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "c"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-4855200607-55",
+      "text": "Which of the following statements are correct?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "damping of the high frequency components of the pressure pulse is especially marked during transmission"
+        },
+        {
+          "letter": "b",
+          "text": "the diastolic component of the pressure pulse decreases during transmission in the arterial system"
+        },
+        {
+          "letter": "c",
+          "text": "arteriolar vasodilation may result in significant pulsations in the capillaries"
+        },
+        {
+          "letter": "d",
+          "text": "propagation velocity of the pressure pulse is much higher than the velocity of the blood flow"
+        },
+        {
+          "letter": "e",
+          "text": "the amplitude of the pressure pulse is very dependent on the compliance of the arteries"
+        },
+        {
+          "letter": "f",
+          "text": "the amplitude of systolic component of the pressure pulse increases during transmission in the arterial system"
+        }
+      ],
+      "correctAnswers": [
+        "f"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-5156012322-24",
+      "text": "Increased peripheral resistance",
+      "options": [
+        {
+          "letter": "a",
+          "text": "may result from an increased sympathetic activity"
+        },
+        {
+          "letter": "b",
+          "text": "results in a larger increase in the systolic pressure than in the diastolic"
+        },
+        {
+          "letter": "c",
+          "text": "results in an increase of the pulse pressure"
+        },
+        {
+          "letter": "d",
+          "text": "promotes venous return"
+        },
+        {
+          "letter": "e",
+          "text": "does not influence the pulse pressure significantly"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "e"
+      ],
+      "correctAnswerCount": 2
+    }
+  ]
+}

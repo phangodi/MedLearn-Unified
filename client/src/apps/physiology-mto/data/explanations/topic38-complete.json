@@ -1,0 +1,24 @@
+{
+  "metadata": {
+    "topic": 38,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 1,
+    "status": "COMPLETE"
+  },
+  "explanations": [
+    {
+      "questionId": "q-4447200607-1",
+      "summary": "Conduction velocities: SA node SLOWEST (~0.05 m/s) due to Ca²⁺-dependent APs, small cells, poor gap junctions. AV node also slow. Bundle of His and Purkinje fastest (~4 m/s). Ventricular muscle intermediate (~1 m/s).",
+      "whyCorrect": {
+        "a": "SA node has the SLOWEST conduction velocity (~0.05 m/s). Reasons: (1) Ca²⁺-dependent action potentials (slow upstroke); (2) Small cell size; (3) Sparse gap junctions; (4) This slow conduction allows proper pacemaker function."
+      },
+      "whyIncorrect": {
+        "b": "Bundle of His has FAST conduction (~1-2 m/s) to rapidly transmit impulses to ventricles.",
+        "c": "Ventricles have intermediate velocity (~1 m/s) - faster than nodes but slower than Purkinje fibers.",
+        "d": "Atria have moderate conduction velocity (~1 m/s), not the slowest.",
+        "e": "Conduction velocity is NOT the same everywhere - it varies dramatically from 0.05 m/s (SA node) to 4 m/s (Purkinje fibers)."
+      },
+      "topicReference": "Topic 38: Electrocardiography"
+    }
+  ]
+}

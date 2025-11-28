@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "topic": 38,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 1,
+    "status": "TEMPLATE - needs explanations generated"
+  },
+  "questions": [
+    {
+      "questionId": "q-4447200607-1",
+      "text": "The slowest action potential velocity is measured in:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "SA node"
+        },
+        {
+          "letter": "b",
+          "text": "in the bundle of His"
+        },
+        {
+          "letter": "c",
+          "text": "in the ventricles"
+        },
+        {
+          "letter": "d",
+          "text": "in the atria, but not in others"
+        },
+        {
+          "letter": "e",
+          "text": "it is everywhere the same - always"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    }
+  ]
+}

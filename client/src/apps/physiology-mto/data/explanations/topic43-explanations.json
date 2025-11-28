@@ -1,0 +1,440 @@
+{
+  "metadata": {
+    "topic": 43,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 15,
+    "status": "TEMPLATE - needs explanations generated"
+  },
+  "questions": [
+    {
+      "questionId": "q-0313014645-B-13",
+      "text": "Capillaries with continuous endothelium are present except in:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the spleen"
+        },
+        {
+          "letter": "b",
+          "text": "the lungs"
+        },
+        {
+          "letter": "c",
+          "text": "the skin"
+        },
+        {
+          "letter": "d",
+          "text": "the heart"
+        },
+        {
+          "letter": "e",
+          "text": "the skeletal muscle"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-0313014645-B-21",
+      "text": "The major Starling-force for reabsorption:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "interstitial hydrostatic pressure"
+        },
+        {
+          "letter": "b",
+          "text": "interstitial colloid osmotic pressure"
+        },
+        {
+          "letter": "c",
+          "text": "intracapillary hydrostatic pressure"
+        },
+        {
+          "letter": "d",
+          "text": "plasma colloid osmotic pressure"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-0313014645-5",
+      "text": "The volume of the interstitial fluid DOES NOT increase in response to",
+      "options": [
+        {
+          "letter": "a",
+          "text": "decreased concentration of plasma proteins"
+        },
+        {
+          "letter": "b",
+          "text": "obstruction of lymphatic vessels"
+        },
+        {
+          "letter": "c",
+          "text": "decreased interstitial colloid osmotic pressure"
+        },
+        {
+          "letter": "d",
+          "text": "increased microvascular permeability"
+        },
+        {
+          "letter": "e",
+          "text": "increased blood pressure in the veins"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-0313014645-22",
+      "text": "Movement of solutes such as Na+ across the capillary wall occurs primarily by which process?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "diffusion"
+        },
+        {
+          "letter": "b",
+          "text": "filtration"
+        },
+        {
+          "letter": "c",
+          "text": "active transport"
+        },
+        {
+          "letter": "d",
+          "text": "vesicular transport"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-3543048990-63",
+      "text": "In the Starling equilibrium, the effective filtration force is determined by",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the concentration differences of the osmotically active particles in the plasma and in the interstitium"
+        },
+        {
+          "letter": "b",
+          "text": "the osmotic pressure of the blood determined by Na ion concentrations"
+        },
+        {
+          "letter": "c",
+          "text": "the hydrostatic pressure in the capillaries"
+        },
+        {
+          "letter": "d",
+          "text": "the difference of the capillary hydrostatic pressure and the interstitial pressure, and the difference of the blood colloid osmotic pressure and the interstitial fluid colloid osmotic pressure"
+        },
+        {
+          "letter": "e",
+          "text": "the difference between the colloid osmotic pressure of blood and the hydrostatic pressure of the tissues"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-3543048990-64",
+      "text": "The volume of the interstitial fluid increases in a tissue in response to",
+      "options": [
+        {
+          "letter": "a",
+          "text": "decreased concentration of plasma proteins"
+        },
+        {
+          "letter": "b",
+          "text": "decreased interstitial colloid osmotic pressure"
+        },
+        {
+          "letter": "c",
+          "text": "increased blood pressure in the veins"
+        },
+        {
+          "letter": "d",
+          "text": "increased pressure of the arterioles"
+        },
+        {
+          "letter": "e",
+          "text": "opened arteriovenous anastomoses"
+        },
+        {
+          "letter": "f",
+          "text": "histamine release"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "c",
+        "d",
+        "f"
+      ],
+      "correctAnswerCount": 4
+    },
+    {
+      "questionId": "q-4447200607-3",
+      "text": "The major Starling-force for reabsorption:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "interstitial colloid osmotic pressure"
+        },
+        {
+          "letter": "b",
+          "text": "intracapillary hydrostatic pressure"
+        },
+        {
+          "letter": "c",
+          "text": "plasma colloid osmotic pressure"
+        },
+        {
+          "letter": "d",
+          "text": "intracapillary hydrostatic pressure"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4447200607-12",
+      "text": "With regard to the microcirculation",
+      "options": [
+        {
+          "letter": "a",
+          "text": "precapillary sphincters are between the arterioles and capillaries"
+        },
+        {
+          "letter": "b",
+          "text": "during periods of rest, not all the capillaries are open"
+        },
+        {
+          "letter": "c",
+          "text": "dilation of arterioles decreases the pressure in the capillaries"
+        },
+        {
+          "letter": "d",
+          "text": "increased sympathetic activity tends to constrict the capillaries"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "b"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-4447200607-24",
+      "text": "Capillary reabsorption",
+      "options": [
+        {
+          "letter": "a",
+          "text": "is enhanced by high colloidosmotic pressure of the blood"
+        },
+        {
+          "letter": "b",
+          "text": "is enhanced by high capillary hydrostatic pressure"
+        },
+        {
+          "letter": "c",
+          "text": "is decreased by high interstitial hydrostatic pressure"
+        },
+        {
+          "letter": "d",
+          "text": "can not be observed in case of the pulmonary capillaries"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4525102917-9",
+      "text": "Which of the following would have the slowest rate of net movement across the capillary wall?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "glucose"
+        },
+        {
+          "letter": "b",
+          "text": "oxygen"
+        },
+        {
+          "letter": "c",
+          "text": "albumin"
+        },
+        {
+          "letter": "d",
+          "text": "sodium"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4525102917-24",
+      "text": "Capillary hydrostatic pressure in the systemic circulation:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "its value is on the average 8-10 mmHg"
+        },
+        {
+          "letter": "b",
+          "text": "moves the fluid out of the capillaries"
+        },
+        {
+          "letter": "c",
+          "text": "is negligible"
+        },
+        {
+          "letter": "d",
+          "text": "its value is on the average 15-25 mmHg"
+        },
+        {
+          "letter": "e",
+          "text": "moves the fluid into the capillaries"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "d"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-4855200607-1",
+      "text": "In which organ's microcirculation is there NO SIGNIFICANT colloid-osmotic pressure difference between the blood plasma and the interstitial fluid?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the mucosa of the small intestine"
+        },
+        {
+          "letter": "b",
+          "text": "skeletal muscle"
+        },
+        {
+          "letter": "c",
+          "text": "lung"
+        },
+        {
+          "letter": "d",
+          "text": "spleen"
+        },
+        {
+          "letter": "e",
+          "text": "liver"
+        }
+      ],
+      "correctAnswers": [
+        "d",
+        "e"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-4855200607-4",
+      "text": "The major Starling-force for reabsorption:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "interstitial hydrostatic pressure"
+        },
+        {
+          "letter": "b",
+          "text": "interstitial colloid osmotic pressure"
+        },
+        {
+          "letter": "c",
+          "text": "intracapillary hydrostatic pressure"
+        },
+        {
+          "letter": "d",
+          "text": "plasma colloid osmotic pressure"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4855200607-25",
+      "text": "In which organ's microcirculation is there NO SIGNIFICANT colloid-osmotic pressure difference between the blood plasma and the interstitial fluid?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "lung"
+        },
+        {
+          "letter": "b",
+          "text": "skeletal muscle"
+        },
+        {
+          "letter": "c",
+          "text": "the mucosa of the small intestine"
+        },
+        {
+          "letter": "d",
+          "text": "spleen"
+        },
+        {
+          "letter": "e",
+          "text": "liver"
+        }
+      ],
+      "correctAnswers": [
+        "d",
+        "e"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-5156012322-23",
+      "text": "With regard to the microcirculation",
+      "options": [
+        {
+          "letter": "a",
+          "text": "dilation of arterioles decreases the pressure in the capillaries"
+        },
+        {
+          "letter": "b",
+          "text": "precapillary sphincters regulate capillary blood flow"
+        },
+        {
+          "letter": "c",
+          "text": "increased sympathetic activity tends to constrict the capillaries"
+        },
+        {
+          "letter": "d",
+          "text": "during periods of rest, not all the capillaries are open"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "d"
+      ],
+      "correctAnswerCount": 2
+    }
+  ]
+}

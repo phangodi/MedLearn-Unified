@@ -1,0 +1,510 @@
+{
+  "metadata": {
+    "topic": 52,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 17,
+    "status": "TEMPLATE - needs explanations generated"
+  },
+  "questions": [
+    {
+      "questionId": "q-0313014645-13",
+      "text": "It is characteristic of the intraglomerular capillaries that",
+      "options": [
+        {
+          "letter": "a",
+          "text": "they are fenestrated capillaries"
+        },
+        {
+          "letter": "b",
+          "text": "their oncotic pressure is unusually low compared to the average capillary value"
+        },
+        {
+          "letter": "c",
+          "text": "their intracapillary hydrostatic pressure is unusually high compared to the average capillary value"
+        },
+        {
+          "letter": "d",
+          "text": "they are highly permeable to proteins"
+        },
+        {
+          "letter": "e",
+          "text": "they are discontinuous capillaries"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "c"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-0313014645-21",
+      "text": "What percentage of plasma urea entering the glomerular capillary is filtered in the glomeruli?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "50 %"
+        },
+        {
+          "letter": "b",
+          "text": "20 %"
+        },
+        {
+          "letter": "c",
+          "text": "100 %"
+        },
+        {
+          "letter": "d",
+          "text": "urea is not filtered"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-1526033148-1",
+      "text": "The kidney has a role in the regulation of (M)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "fluid balance"
+        },
+        {
+          "letter": "b",
+          "text": "blood pressure"
+        },
+        {
+          "letter": "c",
+          "text": "red cell production"
+        },
+        {
+          "letter": "d",
+          "text": "electrolyte balance"
+        },
+        {
+          "letter": "e",
+          "text": "pH"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "correctAnswerCount": 5
+    },
+    {
+      "questionId": "q-1526033148-4",
+      "text": "The hydrostatic pressure in the efferent arteriole in the kidney is best described as being (S)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "less than that in the afferent arteriole"
+        },
+        {
+          "letter": "b",
+          "text": "higher than the glomerular capillary pressure"
+        },
+        {
+          "letter": "c",
+          "text": "less than the peritubular capillary pressure"
+        },
+        {
+          "letter": "d",
+          "text": "equal to the glomerular capillary pressure"
+        },
+        {
+          "letter": "e",
+          "text": "higher than the oncotic pressure in the glomerular capillary"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "c"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-1526033148-6",
+      "text": "The correct definition of GFR is as follows (S)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the fraction of blood flow that becomes filtrate each minute"
+        },
+        {
+          "letter": "b",
+          "text": "the quantity of blood filtered through the glomerular capillaries each minute in all nephrons of both kidneys"
+        },
+        {
+          "letter": "c",
+          "text": "the quantity of blood filtered in a nephron in a minute"
+        },
+        {
+          "letter": "d",
+          "text": "the quantity of glomerular filtrate formed each minute in all nephrons of both kidneys"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-1526033148-7",
+      "text": "The correct definition of filtration fraction is as follows (S)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the quantity of glomerular filtrate formed each minute"
+        },
+        {
+          "letter": "b",
+          "text": "the fraction of the renal plasma flow that becomes glomerular filtrate"
+        },
+        {
+          "letter": "c",
+          "text": "the fraction of glomeruli that contributes to the formation of filtrate"
+        },
+        {
+          "letter": "d",
+          "text": "the fraction of the renal plasma flow that becomes urine"
+        },
+        {
+          "letter": "e",
+          "text": "the fraction of cardiac output that perfuses the kidneys"
+        },
+        {
+          "letter": "f",
+          "text": "the fraction of cardiac output that becomes glomerular filtrate"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-1526033148-8",
+      "text": "The effective filtration pressure in the glomeruli is calculated as follows: (S)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "capsular pressure + glomerular pressure – colloid osmotic pressure"
+        },
+        {
+          "letter": "b",
+          "text": "colloid osmotic pressure + capsular pressure – glomerular pressure"
+        },
+        {
+          "letter": "c",
+          "text": "glomerular pressure – capsular pressure – colloid osmotic pressure"
+        },
+        {
+          "letter": "d",
+          "text": "colloid osmotic pressure + glomerular pressure – capsular pressure"
+        },
+        {
+          "letter": "e",
+          "text": "colloid osmotic pressure – glomerular pressure – capsular pressure"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-2734027349-6",
+      "text": "It is characteristic of the intraglomerular capillaries that",
+      "options": [
+        {
+          "letter": "a",
+          "text": "their oncotic pressure is unusually low"
+        },
+        {
+          "letter": "b",
+          "text": "they are discontinuous capillaries"
+        },
+        {
+          "letter": "c",
+          "text": "their intracapillary pressure is unusually high"
+        },
+        {
+          "letter": "d",
+          "text": "they are fenestrated capillaries"
+        },
+        {
+          "letter": "e",
+          "text": "they are highly permeable to proteins"
+        }
+      ],
+      "correctAnswers": [
+        "c",
+        "d"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-2734027349-13",
+      "text": "The effective filtration pressure in the glomeruli is calculated as follows:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "colloid osmotic P + capsular P - glomerular P"
+        },
+        {
+          "letter": "b",
+          "text": "glomerular P - capsular P - colloid osmotic P"
+        },
+        {
+          "letter": "c",
+          "text": "colloid osmotic P - glomerular P - capsular P"
+        },
+        {
+          "letter": "d",
+          "text": "colloid osmotic P + glomerular P - capsular P"
+        },
+        {
+          "letter": "e",
+          "text": "capsular P + glomerular P - colloid osmotic P"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-2734027349-25",
+      "text": "The correct definition of GFR is as follows",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the fraction of the blood flow that becomes filtrate each min"
+        },
+        {
+          "letter": "b",
+          "text": "the quantity of blood filtered through the glomerular capillaries each minute in all nephrons of both kidneys"
+        },
+        {
+          "letter": "c",
+          "text": "the quantity of blood filtered in a nephron in a minute"
+        },
+        {
+          "letter": "d",
+          "text": "the quantity of glomerular filtrate formed each minute in all nephrons of both kidneys"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-2734027349-34",
+      "text": "Which filtration layer has the lowest permeability in the glomerulus?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "basal membrane"
+        },
+        {
+          "letter": "b",
+          "text": "external cells of the Bowman capsule"
+        },
+        {
+          "letter": "c",
+          "text": "endothelial cells"
+        },
+        {
+          "letter": "d",
+          "text": "podocytes"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-2734027349-35",
+      "text": "What percentage of plasma glucose entering the glomerular capillaries is filtered into the glomeruli?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "glucose is not filtered"
+        },
+        {
+          "letter": "b",
+          "text": "10 %"
+        },
+        {
+          "letter": "c",
+          "text": "50 %"
+        },
+        {
+          "letter": "d",
+          "text": "20 %"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-3221027349-6",
+      "text": "Which filtration layer has the lowest permeability in the glomerulus?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "basal membrane"
+        },
+        {
+          "letter": "b",
+          "text": "external cells of the Bowman capsule"
+        },
+        {
+          "letter": "c",
+          "text": "endothelial cells"
+        },
+        {
+          "letter": "d",
+          "text": "podocytes"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-3221027349-7",
+      "text": "What percentage of plasma glucose entering the glomerular capillary is filtered in the glomeruli?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "glucose is not filtered"
+        },
+        {
+          "letter": "b",
+          "text": "100 %"
+        },
+        {
+          "letter": "c",
+          "text": "50 %"
+        },
+        {
+          "letter": "d",
+          "text": "20 %"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4525102917-3",
+      "text": "The correct definition of filtration fraction is as follows",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the fraction of the total plasma flow that becomes glomerular filtrate"
+        },
+        {
+          "letter": "b",
+          "text": "the fraction of cardiac output that becomes glomerular filtrate"
+        },
+        {
+          "letter": "c",
+          "text": "the fraction of glomeruli that contributes to the formation of filtrate"
+        },
+        {
+          "letter": "d",
+          "text": "the fraction of the renal plasma flow that becomes urine"
+        },
+        {
+          "letter": "e",
+          "text": "the fraction of cardiac output that perfuses the kidneys"
+        },
+        {
+          "letter": "f",
+          "text": "the quantity of glomerular filtrate formed each min"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4525102917-19",
+      "text": "Which of the following values are within the normal range?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "PAH clearance - 120 ml / min"
+        },
+        {
+          "letter": "b",
+          "text": "filtration fraction - 0.50"
+        },
+        {
+          "letter": "c",
+          "text": "RBF - 1300 ml/min"
+        },
+        {
+          "letter": "d",
+          "text": "RPF - 660 ml / min"
+        },
+        {
+          "letter": "e",
+          "text": "GFR - 120 ml / min"
+        }
+      ],
+      "correctAnswers": [
+        "c",
+        "d",
+        "e"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-5156012322-5",
+      "text": "The glomerular filtration",
+      "options": [
+        {
+          "letter": "a",
+          "text": "rate is directly proportional to systemic arterial pressure"
+        },
+        {
+          "letter": "b",
+          "text": "has the same composition as lymph"
+        },
+        {
+          "letter": "c",
+          "text": "has the same composition as plasma in the efferent arterioles"
+        },
+        {
+          "letter": "d",
+          "text": "rate increases when the RPF decreases"
+        },
+        {
+          "letter": "e",
+          "text": "rate (GFR) increases when the NaCl concentration of the distal tubules decreases"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "e"
+      ],
+      "correctAnswerCount": 2
+    }
+  ]
+}

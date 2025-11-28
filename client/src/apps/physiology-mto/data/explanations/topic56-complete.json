@@ -1,0 +1,288 @@
+{
+  "metadata": {
+    "topic": 56,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 20,
+    "status": "COMPLETE"
+  },
+  "explanations": [
+    {
+      "questionId": "q-0313014645-B-19",
+      "summary": "ADH (vasopressin) stimulates urea reabsorption in the inner medullary collecting duct by upregulating UT-A1 urea transporters. This urea recycling is crucial for the countercurrent multiplication system that concentrates urine. ANP, PTH, and aldosterone do not directly regulate urea transport.",
+      "whyCorrect": {
+        "c": "ADH (arginine-vasopressin) increases UT-A1 urea transporter expression in the inner medullary collecting duct. This allows urea to be reabsorbed into the medullary interstitium, contributing to the hyperosmotic gradient needed for water reabsorption."
+      },
+      "whyIncorrect": {
+        "a": "Atrial natriuretic hormone (ANP) promotes natriuresis and diuresis but does not directly stimulate urea reabsorption in the collecting duct.",
+        "b": "Parathormone (PTH) primarily affects calcium and phosphate handling in the kidney, not urea transport.",
+        "d": "Aldosterone acts on principal cells of the collecting duct to enhance sodium reabsorption and potassium secretion, not urea reabsorption."
+      },
+      "topicReference": "Topic 56: Renal Transport of Organic Substances"
+    },
+    {
+      "questionId": "q-0313014645-B-23",
+      "summary": "The renal threshold for glucose is approximately 10-12 mmol/L (180-200 mg/dL). Below this concentration, all filtered glucose is reabsorbed. Above it, the transport maximum (Tm) is exceeded and glucose appears in urine (glucosuria). Normal fasting glucose (5-6 mmol/L) is well below threshold.",
+      "whyCorrect": {
+        "b": "The renal glucose threshold is 11-13 mmol/L (approximately 180-200 mg/dL). At this plasma concentration, SGLT2 transporters in the proximal tubule become saturated, and glucose begins to spill into the urine."
+      },
+      "whyIncorrect": {
+        "a": "5-6 mmol/L is the normal fasting blood glucose level, which is well below the renal threshold. All glucose is completely reabsorbed at this concentration.",
+        "c": "Same as option a - 5-6 mmol/L is normal fasting glucose, not the renal threshold.",
+        "d": "Glucose DOES appear in urine when plasma levels exceed the renal threshold (~11-13 mmol/L), as occurs in uncontrolled diabetes mellitus."
+      },
+      "topicReference": "Topic 56: Renal Transport of Organic Substances"
+    },
+    {
+      "questionId": "q-0313014645-7",
+      "summary": "The renal glucose threshold is 10-12 mmol/L (180-200 mg/dL). At this plasma concentration, the SGLT2 transporters become saturated and glucose appears in urine. Values of 20-22 or 15-20 mmol/L are above Tm where glucose excretion is already occurring. Normal (4-6 mmol/L) is well below threshold.",
+      "whyCorrect": {
+        "b": "The renal threshold for glucose is between 10-12 mmol/L. This is when SGLT2 transporters begin to saturate and glucose first appears in urine (glucosuria threshold)."
+      },
+      "whyIncorrect": {
+        "a": "20-22 mmol/L is well above the threshold where significant glucosuria is already occurring. This represents severe hyperglycemia.",
+        "c": "4-6 micromol/L is an impossibly low concentration (units error). Normal plasma glucose is 4-6 mmol/L (millimolar, not micromolar).",
+        "d": "6-8 mmol/L is slightly above normal fasting but still below the renal threshold. All glucose would still be reabsorbed.",
+        "e": "15-20 mmol/L is above the threshold where glucose is already being excreted. This is not where glucose FIRST appears."
+      },
+      "topicReference": "Topic 56: Renal Transport of Organic Substances"
+    },
+    {
+      "questionId": "q-0313014645-10",
+      "summary": "Urea recirculation: urea is reabsorbed from the inner medullary collecting duct (via UT-A1, stimulated by ADH), enters the medullary interstitium contributing to osmotic gradient, then enters the thin descending limb of Henle via UT-A2. This cycle concentrates urea in the medulla. It promotes concentrated (not dilute) urine.",
+      "whyCorrect": {
+        "b": "Urea recirculation is essential for creating the hyperosmotic medullary gradient. Urea contributes ~40-50% of the inner medullary osmolality, enabling water reabsorption and urine concentration.",
+        "e": "Vasopressin (ADH) STIMULATES urea recirculation by upregulating UT-A1 transporters in the inner medullary collecting duct, increasing urea reabsorption into the medulla."
+      },
+      "whyIncorrect": {
+        "a": "Intercalated cells are involved in acid-base regulation (H+ secretion, HCO3- handling), not urea reabsorption. Urea is reabsorbed by principal cells.",
+        "c": "Urea recirculation promotes CONCENTRATED urine, not dilute. The medullary osmotic gradient created by urea allows water reabsorption from the collecting duct.",
+        "d": "Vasopressin STIMULATES (not inhibits) urea recirculation. It increases UT-A1 expression, enhancing urea reabsorption.",
+        "f": "UT-A2 (not UT-1) is found in the thin descending limb of Henle. UT-A1 is in the collecting duct, and UT-A2 allows urea to enter the loop of Henle."
+      },
+      "topicReference": "Topic 56: Renal Transport of Organic Substances"
+    },
+    {
+      "questionId": "q-1526033148-5",
+      "summary": "Small proteins that pass the glomerular filter are reabsorbed by proximal tubule cells via receptor-mediated endocytosis (megalin/cubilin receptors). The endocytosed proteins are digested intracellularly into amino acids, which are then used by the cell or released. Proteins are NOT secreted or transferred intact to interstitium.",
+      "whyCorrect": {
+        "d": "Filtered proteins (small ones that pass the glomerular barrier) are taken up by proximal tubule epithelial cells via receptor-mediated endocytosis (megalin-cubilin complex). They are then digested in lysosomes, and the resulting amino acids are released."
+      },
+      "whyIncorrect": {
+        "a": "Proteins are NOT filtered with 'perfect ease'. The glomerular filtration barrier restricts protein passage based on size and charge. Albumin filtration is minimal (<1% of plasma concentration).",
+        "b": "Small proteins ARE filtered, just not as freely as water or small solutes. The sieving coefficient depends on molecular size and charge.",
+        "c": "Proteins are NOT secreted in tubules. They are reabsorbed (endocytosed) in the proximal tubule.",
+        "e": "Reabsorbed proteins are NOT transferred intact to interstitial fluid. They are digested intracellularly in lysosomes.",
+        "f": "Protein reabsorption is NOT linked to sodium transport. It occurs via receptor-mediated endocytosis independent of sodium cotransport.",
+        "g": "Option d is correct, so 'none of the above' is incorrect."
+      },
+      "topicReference": "Topic 56: Renal Transport of Organic Substances"
+    },
+    {
+      "questionId": "q-1526033148-18",
+      "summary": "Tubular maximum (Tm) for glucose represents the maximum glucose transport capacity - the highest rate at which glucose can be reabsorbed (~375 mg/min). Above Tm, glucose excretion increases linearly with plasma glucose. Tm is NOT the threshold concentration (that's lower due to splay) and doesn't correspond to exactly 10 mmol/L.",
+      "whyCorrect": {
+        "b": "Tubular maximum (Tm) characterizes the maximum transport CAPACITY of the tubular glucose transporters (SGLT2). It represents complete saturation of all transporters.",
+        "e": "Above Tm, glucose reabsorption is maximal and constant. Therefore, any additional filtered glucose is excreted, and urinary glucose concentration varies linearly with plasma glucose concentration."
+      },
+      "whyIncorrect": {
+        "a": "Tm doesn't correspond to a specific plasma concentration. The threshold (~10 mmol/L) is lower than the concentration needed to fully saturate transporters (Tm is reached at ~20 mmol/L).",
+        "c": "The threshold for glucose excretion is NOT the Tm. The threshold (~10-12 mmol/L) is where glucose FIRST appears in urine. Tm is reached at higher concentrations.",
+        "d": "This describes the threshold, not Tm. The threshold is where glucose first appears in urine. Tm is the maximum reabsorption rate, reached at higher glucose concentrations."
+      },
+      "topicReference": "Topic 56: Renal Transport of Organic Substances"
+    },
+    {
+      "questionId": "q-1526033148-19",
+      "summary": "Glucose characteristics: glucose IS filtered freely in glomeruli (same concentration in filtrate as plasma), is NOT secreted (only reabsorbed), has a tubular maximum (Tm), and has a clearance of ~0 mL/min at normal glucose levels (complete reabsorption). Tm is not the threshold concentration.",
+      "whyCorrect": {
+        "c": "Glucose transport has a tubular maximum (Tm ≈ 375 mg/min). This represents the maximum rate at which SGLT2 transporters can reabsorb glucose.",
+        "e": "Glucose is freely filtered. Its concentration in glomerular filtrate equals its plasma concentration (sieving coefficient = 1) because it's small and not protein-bound."
+      },
+      "whyIncorrect": {
+        "a": "Glucose IS freely filtered in the glomeruli. It's a small molecule (180 Da) that passes the filtration barrier without restriction.",
+        "b": "Glucose is NOT secreted in the tubules. It is only REABSORBED (in the proximal tubule via SGLT2 and SGLT1).",
+        "d": "The tubular maximum (Tm) is NOT the threshold concentration. Tm is the maximum reabsorption rate. The threshold is a lower plasma concentration where glucose first appears in urine.",
+        "f": "Normal glucose clearance is essentially ZERO (not higher than sodium clearance) because all filtered glucose is completely reabsorbed. Sodium clearance is ~1 mL/min."
+      },
+      "topicReference": "Topic 56: Renal Transport of Organic Substances"
+    },
+    {
+      "questionId": "q-1526033148-20",
+      "summary": "Glucose is freely filtered (sieving coefficient = 1), NOT secreted (only reabsorbed), and has a clearance of essentially ZERO at normal plasma glucose levels (complete reabsorption). It is NOT secreted in proximal or distal tubules, clearance is not 120 mL/min (that's GFR/inulin), and transport is not linked to protein reabsorption.",
+      "whyCorrect": {
+        "a": "Glucose is freely filtered in glomeruli. Its small size (180 Da) and lack of protein binding allow it to pass the filtration barrier without restriction (sieving coefficient = 1).",
+        "d": "At normal plasma glucose levels, glucose clearance is essentially ZERO because 100% of filtered glucose is reabsorbed by SGLT2 and SGLT1 transporters in the proximal tubule."
+      },
+      "whyIncorrect": {
+        "b": "Glucose is NOT secreted in the proximal tubules. It is REABSORBED there via SGLT2 (S1/S2 segments) and SGLT1 (S3 segment).",
+        "c": "Glucose is NOT secreted in the distal tubules either. There is no glucose transport in the distal nephron.",
+        "e": "120 mL/min is the clearance of INULIN (equals GFR), not glucose. Glucose clearance is ~0 mL/min because it's completely reabsorbed.",
+        "f": "Glucose transport (via SGLT2, sodium-glucose cotransporter) is linked to SODIUM reabsorption, not protein reabsorption. Protein reabsorption uses receptor-mediated endocytosis."
+      },
+      "topicReference": "Topic 56: Renal Transport of Organic Substances"
+    },
+    {
+      "questionId": "q-1526033148-42",
+      "summary": "Glucose is freely filtered (no restriction). Amino acids are actively reabsorbed coupled to sodium transport in the proximal tubule. Inulin IS in the blood (used to measure GFR). Glucose is NOT secreted. The thick ascending limb is NOT a major site for urea reabsorption (that's collecting duct). Water is reabsorbed, not secreted.",
+      "whyCorrect": {
+        "a": "Glucose is freely filtered in glomeruli without restriction. Its small molecular weight (180 Da) and lack of charge/protein binding allow complete passage.",
+        "d": "Amino acids are reabsorbed in the proximal tubule by sodium-coupled cotransporters (multiple types for different amino acid classes). This is secondary active transport."
+      },
+      "whyIncorrect": {
+        "b": "Blood IS NOT free of inulin during clearance studies - inulin is infused intravenously to measure GFR. Without blood inulin, it couldn't be filtered and measured.",
+        "c": "Glucose is NOT secreted. It is only REABSORBED (via SGLT2/SGLT1 in proximal tubule).",
+        "e": "The thick ascending limb is NOT a major site for urea reabsorption. Urea reabsorption occurs mainly in the inner medullary COLLECTING DUCT (via UT-A1).",
+        "f": "Water is NOT secreted. It is REABSORBED passively following osmotic gradients. ADH increases water reabsorption by inserting aquaporin-2 channels."
+      },
+      "topicReference": "Topic 56: Renal Transport of Organic Substances"
+    },
+    {
+      "questionId": "q-2734027349-7",
+      "summary": "Urea is the only substance listed that is PASSIVELY reabsorbed from the proximal tubule. As water is reabsorbed, urea concentration increases and it follows by passive diffusion. Sodium uses active transport (Na-K-ATPase). Amino acids and glucose use sodium-coupled secondary active transport.",
+      "whyCorrect": {
+        "a": "Urea is passively reabsorbed in the proximal tubule by diffusion. As water is reabsorbed (following sodium), urea concentration in the tubular fluid increases, creating a concentration gradient that drives passive urea diffusion into the interstitium."
+      },
+      "whyIncorrect": {
+        "b": "Sodium is actively reabsorbed via Na-K-ATPase on the basolateral membrane and various transporters (Na-H exchanger, sodium-glucose cotransporter) on the luminal membrane.",
+        "c": "Amino acids are reabsorbed by secondary active transport coupled to sodium. Multiple sodium-amino acid cotransporters exist for different amino acid classes.",
+        "d": "Glucose is reabsorbed by secondary active transport via SGLT2 (and SGLT1), which uses the sodium gradient established by Na-K-ATPase."
+      },
+      "topicReference": "Topic 56: Renal Transport of Organic Substances"
+    },
+    {
+      "questionId": "q-2734027349-18",
+      "summary": "Filtered proteins (small ones passing the glomerular barrier) are endocytosed by proximal tubule cells via megalin-cubilin receptors, then digested intracellularly in lysosomes. The amino acids are released for metabolic use. Proteins are NOT secreted, not filtered 'perfectly easily', and are not transferred intact to interstitium.",
+      "whyCorrect": {
+        "d": "Filtered proteins are reabsorbed by receptor-mediated endocytosis (megalin/cubilin receptors) in the proximal tubule. Once inside the cell, they are degraded in lysosomes to amino acids."
+      },
+      "whyIncorrect": {
+        "a": "Proteins are NOT secreted in the tubules. They are only reabsorbed (endocytosed) in the proximal tubule.",
+        "b": "Protein transport is NOT linked to sodium reabsorption. It uses receptor-mediated endocytosis, which is independent of sodium cotransport mechanisms.",
+        "c": "Proteins are NOT filtered with 'perfect ease'. The glomerular barrier restricts protein filtration based on size and charge. Large proteins like albumin are largely retained.",
+        "e": "Proteins are NOT filtered 'at all' is incorrect. Small proteins and some albumin do cross the filtration barrier (though restricted).",
+        "f": "Reabsorbed proteins are NOT transferred intact to interstitial fluid. They are degraded to amino acids within the tubule cells."
+      },
+      "topicReference": "Topic 56: Renal Transport of Organic Substances"
+    },
+    {
+      "questionId": "q-2734027349-28",
+      "summary": "The renal threshold for glucose is where glucose transport becomes saturated (reaches Tm) and glucose appears in urine (~10-12 mmol/L). Normal glucose clearance is ~0 mL/min (not 20-30). At fasting glucose, transport is NOT saturated. Glucose reabsorption depends on Na-K-ATPase (SGLT2 is sodium-coupled). No hormonal regulation occurs in collecting duct.",
+      "whyCorrect": {
+        "e": "The renal threshold of glucose is the plasma concentration at which glucose transport becomes saturated (reaches Tm) and glucose begins to appear in urine. This occurs around 10-12 mmol/L."
+      },
+      "whyIncorrect": {
+        "a": "Renal glucose clearance is essentially ZERO (not 20-30 mL/min) under normal circumstances because all filtered glucose is reabsorbed.",
+        "b": "At normal fasting glucose (5-6 mmol/L), transport is NOT saturated. There is significant reserve capacity. Saturation occurs at ~10-12 mmol/L (threshold) to ~20 mmol/L (full Tm).",
+        "c": "Glucose reabsorption DOES depend on Na-K-ATPase because SGLT2/SGLT1 are sodium-glucose cotransporters. They require the sodium gradient maintained by Na-K-ATPase. It's NOT facilitated diffusion (that's GLUT2 on basolateral side).",
+        "d": "There is no hormonal regulation of glucose excretion in collecting duct principal cells. Glucose is handled entirely in the proximal tubule."
+      },
+      "topicReference": "Topic 56: Renal Transport of Organic Substances"
+    },
+    {
+      "questionId": "q-2734027349-40",
+      "summary": "Urea is passively reabsorbed in the proximal tubule following water reabsorption. As water is reabsorbed, tubular urea concentration rises, and urea diffuses down its concentration gradient. Albumin uses receptor-mediated endocytosis. Glucose and amino acids use sodium-coupled active transport.",
+      "whyCorrect": {
+        "d": "Urea is passively reabsorbed in the proximal tubule. Water reabsorption concentrates urea in the tubular fluid, creating a gradient for passive diffusion into the interstitium."
+      },
+      "whyIncorrect": {
+        "a": "Albumin is reabsorbed by receptor-mediated endocytosis (megalin/cubilin), not passive diffusion. It's an active, energy-requiring process.",
+        "b": "Glucose is actively reabsorbed via SGLT2/SGLT1, sodium-glucose cotransporters. This is secondary active transport, not passive.",
+        "c": "Amino acids are actively reabsorbed via various sodium-amino acid cotransporters. This is also secondary active transport."
+      },
+      "topicReference": "Topic 56: Renal Transport of Organic Substances"
+    },
+    {
+      "questionId": "q-2734027349-41",
+      "summary": "Glucose appears in urine when plasma glucose exceeds the renal threshold of approximately 11-13 mmol/L (180-200 mg/dL). At this concentration, SGLT2 transporters become saturated. Normal fasting glucose (3-6 mmol/L) is well below threshold. Glucose DOES appear in urine above threshold (glucosuria).",
+      "whyCorrect": {
+        "b": "The renal glucose threshold is approximately 11-13 mmol/L. Above this plasma concentration, the SGLT2 transporters in the proximal tubule become saturated, and glucose begins to spill into the urine."
+      },
+      "whyIncorrect": {
+        "a": "22-25 mmol/L is well above the threshold. At this level, significant glucosuria is already occurring. This is where Tm is fully reached.",
+        "c": "3-6 mmol/L is normal fasting glucose, well below the renal threshold. All glucose is completely reabsorbed at this concentration.",
+        "d": "Glucose DOES appear in urine when plasma glucose exceeds the renal threshold (~11-13 mmol/L), as occurs in uncontrolled diabetes mellitus."
+      },
+      "topicReference": "Topic 56: Renal Transport of Organic Substances"
+    },
+    {
+      "questionId": "q-3221027349-12",
+      "summary": "Urea is passively reabsorbed from the proximal tubule. Water reabsorption concentrates urea, creating a gradient for passive diffusion. Albumin uses receptor-mediated endocytosis (active process). Glucose and amino acids use sodium-coupled secondary active transport.",
+      "whyCorrect": {
+        "d": "Urea reabsorption in the proximal tubule is passive. As water follows sodium, urea concentration increases in tubular fluid, and urea moves down its concentration gradient into the interstitium."
+      },
+      "whyIncorrect": {
+        "a": "Albumin reabsorption uses receptor-mediated endocytosis via megalin/cubilin receptors. This is an active, ATP-dependent process.",
+        "b": "Glucose reabsorption uses SGLT2 (sodium-glucose cotransporter type 2), which is secondary active transport requiring the sodium gradient.",
+        "c": "Amino acid reabsorption uses various sodium-amino acid cotransporters, which is also secondary active transport."
+      },
+      "topicReference": "Topic 56: Renal Transport of Organic Substances"
+    },
+    {
+      "questionId": "q-3221027349-13",
+      "summary": "The renal glucose threshold is approximately 11-13 mmol/L (~200 mg/dL). SGLT2 transporters become saturated at this concentration, causing glucose to appear in urine. Normal fasting glucose (5-6 mmol/L) is below threshold. Very high values (22-25 mmol/L) represent levels where Tm is fully reached.",
+      "whyCorrect": {
+        "b": "Glucose first appears in urine at plasma concentrations of 11-13 mmol/L (renal threshold). This is when SGLT2 transporters begin to saturate."
+      },
+      "whyIncorrect": {
+        "a": "22-25 mmol/L is above the threshold and above Tm. At this level, there is already significant glucosuria.",
+        "c": "5-6 mmol/L is normal fasting glucose, well below the renal threshold. Complete glucose reabsorption occurs.",
+        "d": "Glucose DOES appear in urine when plasma concentration exceeds the threshold (~11-13 mmol/L), such as in diabetes mellitus."
+      },
+      "topicReference": "Topic 56: Renal Transport of Organic Substances"
+    },
+    {
+      "questionId": "q-4525102917-4",
+      "summary": "Amino acids are reabsorbed ONLY in the proximal tubule via sodium-coupled cotransporters. Multiple transporter types exist for different amino acid classes (neutral, basic, acidic). There is no significant amino acid transport in the distal tubule, loop of Henle, collecting duct, or Bowman's capsule.",
+      "whyCorrect": {
+        "a": "Amino acid reabsorption occurs exclusively in the proximal tubule. Multiple sodium-amino acid cotransporters handle different amino acid classes (B°, B°+, PAT1, etc.). Virtually all filtered amino acids are recovered here."
+      },
+      "whyIncorrect": {
+        "b": "The distal tubule does NOT reabsorb amino acids. All amino acid reabsorption is completed in the proximal tubule.",
+        "c": "Bowman's capsule is where filtration occurs, not reabsorption. No transporters exist there.",
+        "d": "The thick ascending limb reabsorbs NaCl (via NKCC2) but NOT amino acids.",
+        "e": "The collecting duct handles final water and electrolyte adjustments but does NOT reabsorb amino acids."
+      },
+      "topicReference": "Topic 56: Renal Transport of Organic Substances"
+    },
+    {
+      "questionId": "q-4525102917-11",
+      "summary": "The renal threshold is where glucose transport saturates (reaches Tm) and glucose appears in urine. Normal clearance is ~0 (not 20-30 mL/min). At fasting glucose, transport is NOT saturated. Glucose reabsorption depends on Na-K-ATPase (SGLT2 is sodium-coupled). Vasopressin doesn't regulate glucose in collecting duct.",
+      "whyCorrect": {
+        "d": "The renal threshold of glucose is the plasma concentration where SGLT2 transporters become saturated (reach Tm) and glucose begins appearing in urine (~10-12 mmol/L)."
+      },
+      "whyIncorrect": {
+        "a": "At normal fasting glucose (5-6 mmol/L), glucose transport is NOT saturated. There is significant reserve capacity before reaching threshold.",
+        "b": "Normal glucose clearance is essentially ZERO (not 20-30 mL/min) because all filtered glucose is reabsorbed.",
+        "c": "Vasopressin acts on collecting duct for WATER reabsorption (aquaporin-2), not glucose. Glucose is handled entirely in the proximal tubule.",
+        "e": "Glucose reabsorption DEPENDS on Na-K-ATPase because SGLT2 is a sodium-glucose cotransporter requiring the sodium gradient. The luminal SGLT2 uses sodium cotransport, not facilitated diffusion (GLUT2 on basolateral side is facilitated diffusion)."
+      },
+      "topicReference": "Topic 56: Renal Transport of Organic Substances"
+    },
+    {
+      "questionId": "q-5156012322-6",
+      "summary": "Osmotic diuresis occurs when unreabsorbed solutes in the tubular fluid osmotically retain water, increasing urine volume. This is classic in diabetes MELLITUS where high glucose (above Tm) draws water into the tubule. Diabetes insipidus causes water diuresis (lack of ADH), not osmotic diuresis. Excessive water drinking causes dilute urine, not osmotic diuresis.",
+      "whyCorrect": {
+        "a": "Diabetes mellitus causes osmotic diuresis because high plasma glucose exceeds the renal threshold and Tm. Unreabsorbed glucose in the tubule osmotically prevents water reabsorption, leading to polyuria."
+      },
+      "whyIncorrect": {
+        "b": "Excessive water drinking causes WATER diuresis (dilute, high-volume urine) due to suppressed ADH, not osmotic diuresis. The tubular fluid is hypotonic, not hyperosmotic with solutes.",
+        "c": "Diabetes insipidus causes WATER diuresis due to lack of ADH (central DI) or renal ADH resistance (nephrogenic DI). It's not osmotic diuresis because no extra solutes are present.",
+        "d": "Urinary incontinence is a bladder/sphincter control issue, not a diuresis mechanism. It doesn't relate to tubular osmotic effects."
+      },
+      "topicReference": "Topic 56: Renal Transport of Organic Substances"
+    },
+    {
+      "questionId": "q-5156012322-10",
+      "summary": "Approximately 50% of filtered urea is passively reabsorbed in the proximal tubule (following water). In the thin ascending limb, urea is SECRETED (not reabsorbed) via UT-A2. In the inner medullary collecting duct, urea is reabsorbed (UT-A1, ADH-regulated). The thick ascending limb is not a major site for urea transport.",
+      "whyCorrect": {
+        "c": "About 50% of filtered urea is passively reabsorbed in the proximal tubule. Water reabsorption concentrates tubular urea, which then diffuses into the interstitium down its concentration gradient."
+      },
+      "whyIncorrect": {
+        "a": "Urea is SECRETED (not excreted from already excreted) in the thin descending limb, entering from the medullary interstitium. About 50% of filtered urea is added back via secretion.",
+        "b": "The thick ascending limb is relatively impermeable to urea. It's not a major site for urea reabsorption.",
+        "d": "The thin descending limb is where urea is SECRETED into the tubule (via UT-A2), not reabsorbed from it. This is part of urea recycling."
+      },
+      "topicReference": "Topic 56: Renal Transport of Organic Substances"
+    }
+  ]
+}

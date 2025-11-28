@@ -1,0 +1,280 @@
+{
+  "metadata": {
+    "topic": 41,
+    "topicTitle": "Hemodynamics: the functional categorization of blood vessels",
+    "generatedAt": "2025-11-28",
+    "totalExplanations": 16
+  },
+  "explanations": [
+    {
+      "questionId": "q-4525102917-1",
+      "correctLetters": ["b", "c", "e"],
+      "summary": "Arterioles have the lowest blood volume fraction, greatest resistance, and largest pressure drop in the systemic circulation.",
+      "whyCorrect": {
+        "b": "Correct. Arterioles contain a very small percentage of total blood volume due to their small size. The vast majority of blood volume (60-70%) is in the veins, while arteries contain 10-15%. Arterioles, despite their critical role as resistance vessels, hold very little blood volume.",
+        "c": "Correct. Arterioles are the primary site of vascular resistance, accounting for 50-70% of total peripheral vascular resistance. Their small diameter significantly increases resistance according to Poiseuille's law (R ∝ 1/r⁴), making them the major resistance vessels in the systemic circulation.",
+        "e": "Correct. The largest pressure drop in the circulatory system occurs in arterioles, from approximately 80 mmHg to 30 mmHg, a drop of 60 mmHg. This massive pressure drop is a direct consequence of their high resistance, as pressure drop equals flow times resistance (ΔP = Q × R)."
+      },
+      "whyIncorrect": {
+        "a": "Incorrect. Arterioles have the lowest compliance, not the greatest. Veins have the highest compliance (approximately 24 times that of corresponding arteries). Arterioles are muscular vessels with thick walls relative to their lumen, making them stiff and resistant to expansion, which is necessary for their role in regulating blood flow and pressure.",
+        "d": "Incorrect. Arteries, particularly the aorta, have the highest flow velocity (22.5 cm/s in the aorta). Arterioles have greater cross-sectional area than arteries, which decreases velocity. The lowest velocity occurs in capillaries (0.03 cm/s) due to their enormous total cross-sectional area (3000 cm²)."
+      },
+      "topicReference": "Topic 41, LO-8: Characterize the contribution of arteries, arterioles, capillaries, venules, and veins to peripheral vascular resistance",
+      "sourceTopics": [41],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-4525102917-10",
+      "correctLetters": ["a"],
+      "summary": "Vascular compliance equals the change in volume divided by the change in transmural pressure (C = ΔV/ΔP).",
+      "whyCorrect": {
+        "a": "Correct. Venous compliance is calculated as the change in venous blood volume divided by the change in venous transmural pressure: C = ΔV/ΔP. This formula measures the vessel's ability to expand in response to increased pressure. Compliance is expressed in mL/mmHg or mL/kPa. Veins have very high compliance, allowing them to store large volumes of blood with minimal pressure increases."
+      },
+      "whyIncorrect": {
+        "b": "Incorrect. The formula pressure difference divided by volume flow describes resistance, not compliance. According to Ohm's law, resistance R = ΔP/Q, where ΔP is pressure difference and Q is flow. This is the opposite relationship - resistance measures opposition to flow, while compliance measures ease of expansion.",
+        "c": "Incorrect. The formula pressure × radius / wall thickness describes wall tension according to Laplace's law: T = (P × r) / h. This quantifies the tangential force acting on vessel walls, not the vessel's ability to expand. Wall tension is relevant for assessing rupture risk, particularly in large arteries like the aorta.",
+        "d": "Incorrect. The Hagen-Poiseuille equation describes the relationship between flow, pressure gradient, vessel radius, vessel length, and viscosity: Q = (π × ΔP × r⁴) / (8 × η × L). This equation defines hydraulic resistance but does not measure compliance. It shows that flow is highly sensitive to radius changes (fourth power relationship).",
+        "e": "Incorrect. Diastolic pressure divided by systolic pressure has no physiological meaning. Pulse pressure (systolic minus diastolic) is meaningful, and mean arterial pressure can be approximated as diastolic pressure plus one-third of pulse pressure, but the ratio of diastolic to systolic is not a standard hemodynamic parameter."
+      },
+      "topicReference": "Topic 41, LO-2: Explain the concept of vascular compliance, give the formula for its determination (C=ΔV/ΔP)",
+      "sourceTopics": [41],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-4447200607-4",
+      "correctLetters": ["b"],
+      "summary": "A healthy femoral vein has the highest compliance among the listed structures because veins are 24 times more compliant than corresponding arteries.",
+      "whyCorrect": {
+        "b": "Correct. A healthy femoral vein has the highest compliance of all listed structures. Veins are called capacitance vessels because their thin walls allow significant expansion at low pressures. The compliance of the venous system is approximately 24 times that of corresponding arteries. This high compliance allows veins to store 60-70% of total blood volume and act as a blood reservoir."
+      },
+      "whyIncorrect": {
+        "a": "Incorrect. An arteriosclerotic femoral artery has very low compliance due to arterial wall stiffening. Arteriosclerosis involves thickening and loss of elasticity in arterial walls, further reducing their already low compliance. Even healthy arteries have much lower compliance than veins (1/24th of venous compliance), and arteriosclerosis makes them even stiffer.",
+        "c": "Incorrect. A healthy femoral artery has low compliance compared to veins. Arteries have thick walls with abundant elastic fibers and smooth muscle, making them stiff and resistant to expansion. This low compliance is necessary to maintain high pressure and smooth blood flow from pulsatile cardiac output. Arterial compliance is only about 1/24th that of venous compliance.",
+        "d": "Incorrect. The abdominal aorta, while having some compliance due to elastic fibers in its walls, still has much lower compliance than veins. The aorta's compliance is important for converting pulsatile flow from the heart into more continuous flow, but it is still classified as a low-compliance vessel. Its compliance is inversely related to pressure - it becomes less compliant at higher pressures."
+      },
+      "topicReference": "Topic 41, LO-4: Characterize the different vascular segments based on their compliance",
+      "sourceTopics": [41],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-4447200607-14",
+      "correctLetters": ["b", "c", "d"],
+      "summary": "Arterioles are characterized by the greatest resistance, greatest pressure drop, and lowest blood volume fraction in the systemic circulation.",
+      "whyCorrect": {
+        "b": "Correct. Arterioles provide the greatest resistance to flow in the systemic circulation, accounting for 50-70% of total peripheral vascular resistance. Their small diameter (typically 10-100 μm) causes high resistance according to Poiseuille's law, where resistance is inversely proportional to the fourth power of radius (R ∝ 1/r⁴).",
+        "c": "Correct. The greatest pressure drop in the circulatory system occurs across arterioles, approximately 60 mmHg (from 80 mmHg to 30 mmHg). This substantial pressure drop is a direct consequence of their high resistance. The pressure drop equals flow times resistance (ΔP = Q × R), so high arteriolar resistance creates a large pressure drop.",
+        "d": "Correct. Arterioles contain the lowest fraction of blood volume in the circulatory system due to their small size and limited capacity. Despite their critical role as resistance vessels, they hold very little blood. In contrast, veins contain 60-70% of total blood volume, and arteries contain 10-15%."
+      },
+      "whyIncorrect": {
+        "a": "Incorrect. The highest velocity of blood flow occurs in the aorta (approximately 22.5 cm/s), not in arterioles. Flow velocity is inversely proportional to total cross-sectional area (v = Q/A). As cross-sectional area increases from arteries to arterioles, velocity decreases. The lowest velocity occurs in capillaries (0.03 cm/s) due to their enormous total cross-sectional area.",
+        "e": "Incorrect. Arterioles have very low compliance, not the greatest compliance. Veins have the greatest compliance (approximately 24 times that of corresponding arteries). Arterioles have thick muscular walls relative to their lumen diameter, making them stiff vessels that can actively regulate resistance through vasoconstriction and vasodilation but do not expand significantly with pressure changes."
+      },
+      "topicReference": "Topic 41, LO-8: Characterize the contribution of arteries, arterioles, capillaries, venules, and veins to peripheral vascular resistance",
+      "sourceTopics": [41],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-5156012322-18",
+      "correctLetters": ["e"],
+      "summary": "Laplace's law states that wall tension equals transmural pressure times radius divided by wall thickness (T = P × r / h).",
+      "whyCorrect": {
+        "e": "Correct. Laplace's law for blood vessels states T = (P × r) / h, where T is wall tension, P is transmural pressure, r is vessel radius, and h is wall thickness. Wall tension is the tangential force per unit length acting on the vessel wall. This equation shows that wall tension is directly proportional to pressure and radius, and inversely proportional to wall thickness. It explains why large vessels like the aorta are at risk of rupture despite their thick walls."
+      },
+      "whyIncorrect": {
+        "a": "Incorrect. The formula T = P × h × r incorrectly multiplies wall thickness by pressure and radius. This would predict that thicker walls increase tension, which is the opposite of reality. In fact, thicker walls reduce wall tension by distributing the distending force over more tissue. The correct formula has wall thickness in the denominator, not numerator.",
+        "b": "Incorrect. The formula P = T × r × h incorrectly rearranges the relationship and would predict that pressure increases with wall thickness, which is false. This formula also incorrectly multiplies all three variables together. The correct relationship shows that pressure equals wall tension times wall thickness divided by radius: P = (T × h) / r.",
+        "c": "Incorrect. The formula P = h / (T × r) has the variables in incorrect positions and relationships. This would predict that pressure increases with wall thickness and decreases with tension and radius, which contradicts basic physics. Wall thickness reduces wall tension for a given pressure, and pressure is proportional to tension, not inversely proportional.",
+        "d": "Incorrect. The formula P = (T × r) / h incorrectly places tension and radius in the numerator with thickness in the denominator. While the mathematical form is similar to Laplace's law, the variables are swapped. The correct relationship is T = (P × r) / h, where tension (not pressure) is calculated from the other variables."
+      },
+      "topicReference": "Topic 41, LO-6: Describe the relationship among wall tension, transmural pressure, vessel radius and wall thickness using the equation of Laplace's law",
+      "sourceTopics": [41],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-3543048990-45",
+      "correctLetters": ["d"],
+      "summary": "In the systemic circulation, approximately 60-70% of total blood volume is in the veins due to their high compliance.",
+      "whyCorrect": {
+        "d": "Correct. About 60-70% of total blood volume resides in the veins. Of the 84% of blood in the systemic circulation, approximately 64% is in veins, 13% in arteries, and 7% in arterioles and capillaries. Veins act as capacitance vessels due to their high compliance, allowing them to store large volumes of blood at low pressures. This makes them an important blood reservoir that can be mobilized during exercise or hemorrhage."
+      },
+      "whyIncorrect": {
+        "a": "Incorrect. Arterioles, not capillaries, are the major site of hydraulic resistance. Arterioles account for 50-70% of total peripheral vascular resistance due to their small diameter and thick muscular walls. While capillaries do contribute some resistance, their parallel arrangement (thousands of capillaries in parallel) reduces total capillary resistance. Arterioles are the primary resistance vessels that control blood flow distribution.",
+        "b": "Incorrect. Only about 5% of total blood volume is in capillaries, not 15%. Despite having the largest total cross-sectional area (3000 cm²), capillaries are very narrow vessels with minimal volume capacity. Their primary function is exchange of gases and nutrients, not blood storage. The vast capillary network provides surface area for exchange but holds relatively little blood volume.",
+        "c": "Incorrect. Arteries are much less compliant than veins, not more compliant. The compliance of the venous system is approximately 24 times that of corresponding arteries. Arteries have thick walls with elastic fibers and smooth muscle, making them stiff vessels that can withstand high pressures. Veins have thin walls and are highly distensible, allowing them to expand greatly with small pressure increases."
+      },
+      "topicReference": "Topic 41, LO-8: Contrast blood volume in these vascular segments",
+      "sourceTopics": [41],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-3543048990-48",
+      "correctLetters": ["c"],
+      "summary": "Arterioles are the resistance vessels because they account for 50-70% of total peripheral vascular resistance.",
+      "whyCorrect": {
+        "c": "Correct. Arterioles are the primary resistance vessels in the circulation. They account for 50-70% of total peripheral vascular resistance due to their small diameter (typically 10-100 μm) and thick muscular walls. According to Poiseuille's law, resistance is inversely proportional to the fourth power of radius (R ∝ 1/r⁴), so small changes in arteriolar diameter through vasoconstriction or vasodilation can dramatically alter blood flow and pressure. Arterioles are the main site for regulation of blood pressure and flow distribution to tissues."
+      },
+      "whyIncorrect": {
+        "a": "Incorrect. Venules are low-resistance vessels that collect blood from capillaries and return it to veins. Their larger diameter compared to capillaries results in low resistance. Venules serve primarily as transition vessels between capillaries and veins, not as resistance vessels. They have minimal smooth muscle and limited ability to regulate resistance.",
+        "b": "Incorrect. Capillaries contribute moderate resistance individually, but their vast parallel arrangement greatly reduces total capillary resistance. While individual capillaries have small diameters, the total cross-sectional area of all capillaries (3000 cm²) is the largest in the circulation. Resistances in parallel add reciprocally (1/Rtotal = 1/R1 + 1/R2 + ...), reducing overall resistance. Capillaries are designed for exchange, not resistance regulation.",
+        "d": "Incorrect. End-arteries are simply arteries that do not anastomose with other arteries before becoming arterioles. While they are important for delivering blood to specific tissue regions, they are not the primary resistance vessels. Their diameter is much larger than arterioles, giving them relatively low resistance. The term 'resistance vessels' specifically refers to arterioles.",
+        "e": "Incorrect. Arteriovenous anastomoses are direct connections between arterioles and venules that bypass capillaries. They are found in specific locations like the skin and are used for thermoregulation. When open, they actually decrease resistance by providing a low-resistance shunt pathway that bypasses the capillary beds. They do not contribute to the primary vascular resistance that regulates blood pressure and flow.",
+        "f": "Incorrect. Veins are high-compliance, low-resistance vessels that serve as capacitance vessels storing blood, not resistance vessels. Their large diameter and thin walls minimize resistance to blood flow. Veins facilitate venous return to the heart with minimal opposition. The venous system contains 60-70% of blood volume but contributes minimally to total peripheral resistance."
+      },
+      "topicReference": "Topic 41, LO-8: Characterize the contribution of arteries, arterioles, capillaries, venules, and veins to peripheral vascular resistance",
+      "sourceTopics": [41],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-3543048990-51",
+      "correctLetters": ["a", "e", "f"],
+      "summary": "In the circulation: capillary resistance is lower than arteriolar resistance, turbulence increases when viscosity decreases, and laminar flow has highest velocities in the axial stream.",
+      "whyCorrect": {
+        "a": "Correct. The resistance to flow is smaller in the capillary bed than in the arteriolar bed, even though individual capillaries are very narrow. This is because capillaries are arranged in parallel, and resistances in parallel add reciprocally (1/Rtotal = 1/R1 + 1/R2 + ...), which dramatically reduces total resistance. While arterioles account for 50-70% of total peripheral resistance, the parallel arrangement of thousands of capillaries results in lower overall capillary bed resistance.",
+        "e": "Correct. The tendency for turbulent flow increases when viscosity decreases. This is expressed in Reynolds number (Re = ρvd/η), where turbulence is more likely at higher Re values. Since viscosity (η) is in the denominator, decreased viscosity increases Reynolds number and promotes turbulent flow. High viscosity dampens turbulence by providing more internal friction that stabilizes laminar flow patterns. This is why anemia (low hematocrit, low viscosity) can lead to turbulent flow and heart murmurs.",
+        "f": "Correct. In laminar flow, the highest velocities are measured in the axial stream (center of the vessel). This creates a parabolic velocity profile, with maximum velocity at the center and zero velocity at the vessel wall due to friction. The velocity profile in laminar flow is parabolic, with the central axis moving approximately twice the average velocity. This is in contrast to turbulent flow, which has a flatter velocity profile."
+      },
+      "whyIncorrect": {
+        "b": "Incorrect. The aorta does not have the greatest compliance; veins do. While the aorta and large elastic arteries have some compliance that helps dampen the pulsatile flow from the heart, their compliance is still much lower than that of veins. The compliance of the venous system is approximately 24 times that of corresponding arteries. The aorta is relatively stiff to withstand high pressures.",
+        "c": "Incorrect. Velocity does not decrease continuously from the aorta to the right atrium. Velocity is highest in the aorta (22.5 cm/s), decreases dramatically in arterioles and reaches its minimum in capillaries (0.03 cm/s) due to their enormous total cross-sectional area (3000 cm²), then increases again as blood flows through venules and veins back toward the heart as cross-sectional area decreases. Velocity is inversely proportional to cross-sectional area (v = Q/A).",
+        "d": "Incorrect. The capillary bed does not contain the largest fraction of blood volume despite having the largest cross-sectional area. Capillaries contain only about 5% of total blood volume. The largest fraction (60-70%) is in the veins due to their high compliance. While capillaries have the largest total cross-sectional area for exchange, they are very short and narrow vessels with minimal volume capacity."
+      },
+      "topicReference": "Topic 41, LO-7 and LO-8; Topic 33: Laminar and turbulent flow",
+      "sourceTopics": [41, 33],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-3543048990-53",
+      "correctLetters": ["c", "d", "e"],
+      "summary": "Critical closing pressure increases with vasoconstriction, venous compliance exceeds arterial compliance, and decreased aortic compliance increases diastolic pressure.",
+      "whyCorrect": {
+        "c": "Correct. Critical closing pressure increases with vasoconstriction. Critical closing pressure is the minimum perfusion pressure required to keep a vessel open. It is determined by vascular smooth muscle tone and extravascular pressure. When smooth muscle contracts during vasoconstriction, the vessel wall exerts greater compressive force on the lumen, requiring higher internal pressure to prevent collapse. Therefore, increased smooth muscle tone increases critical closing pressure.",
+        "d": "Correct. Venous compliance is much higher than arterial compliance. The compliance of the venous system is approximately 24 times that of corresponding arteries. This is because veins have thin walls with less elastic tissue and smooth muscle compared to arteries, allowing them to expand greatly with small pressure increases. This high compliance makes veins ideal capacitance vessels that can store large blood volumes.",
+        "e": "Correct. When the compliance of the aorta decreases (as occurs with aging and arteriosclerosis), diastolic pressure increases. Decreased aortic compliance reduces the Windkessel effect - the ability of the elastic aorta to store blood during systole and release it during diastole. With stiffer arteries, less blood is stored during systole and more flows directly to the periphery, reducing the reservoir that sustains diastolic pressure. This increases systolic pressure and pulse pressure while actually allowing diastolic pressure to fall more rapidly."
+      },
+      "whyIncorrect": {
+        "a": "Incorrect. Vasoconstriction does not increase wall tension; it actually decreases wall tension according to Laplace's law: T = (P × r) / h. When arterioles vasoconstrict, radius (r) decreases, which decreases wall tension for a given pressure. However, if vasoconstriction occurs in response to increased blood pressure, the pressure increase may offset the radius decrease. But the direct effect of vasoconstriction (radius reduction) is to reduce wall tension.",
+        "b": "Incorrect. Increased sympathetic tone decreases, not increases, the compliance of vessels. Sympathetic stimulation causes vascular smooth muscle contraction (vasoconstriction), which stiffens the vessel wall and reduces its ability to expand in response to pressure. This shifts the compliance curve downward, meaning less volume change for a given pressure change. Decreased compliance means vessels are stiffer and less distensible."
+      },
+      "topicReference": "Topic 41, LO-2, LO-4, LO-5: Vascular compliance and critical closing pressure",
+      "sourceTopics": [41],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-4855200607-2",
+      "correctLetters": ["a"],
+      "summary": "Venous compliance is calculated as volume change divided by pressure change (C = ΔV/ΔP).",
+      "whyCorrect": {
+        "a": "Correct. Venous compliance equals volume change divided by pressure change: C = ΔV/ΔP. This formula measures how much a vessel's volume increases in response to a given pressure increase. Compliance is expressed in mL/mmHg or mL/kPa. Veins have very high compliance (~24 times that of arteries), meaning they can accommodate large volume changes with minimal pressure increases, making them excellent capacitance vessels."
+      },
+      "whyIncorrect": {
+        "b": "Incorrect. Pressure × radius / wall thickness describes wall tension according to Laplace's law: T = (P × r) / h. This quantifies the tangential force acting along the vessel wall that tends to tear it apart, not the vessel's ability to expand. Wall tension is important for understanding vessel rupture risk, particularly in large arteries with high pressure and large radius like the aorta.",
+        "c": "Incorrect. The Hagen-Poiseuille equation describes laminar flow through a cylindrical tube: Q = (π × ΔP × r⁴) / (8 × η × L). This relates flow rate to pressure gradient, radius (to the fourth power), viscosity, and vessel length. It describes hydraulic resistance, not compliance. It shows why small changes in vessel radius have dramatic effects on flow (fourth power relationship).",
+        "d": "Incorrect. Diastolic pressure divided by systolic pressure has no physiological significance. Pulse pressure (systolic minus diastolic) is meaningful as it reflects stroke volume and arterial compliance. Mean arterial pressure can be approximated as diastolic pressure plus one-third of pulse pressure, but the ratio of diastolic to systolic pressures is not a standard hemodynamic measurement.",
+        "e": "Incorrect. Pressure difference divided by volume flow describes resistance: R = ΔP/Q. This is Ohm's law for fluid flow, where resistance measures opposition to flow. High resistance means a large pressure difference is needed to drive flow. This is the reciprocal of conductance (G = Q/ΔP) and is fundamentally different from compliance, which relates volume changes to pressure changes."
+      },
+      "topicReference": "Topic 41, LO-2: Explain the concept of vascular compliance, give the formula for its determination (C=ΔV/ΔP)",
+      "sourceTopics": [41],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-4855200607-10",
+      "correctLetters": ["a"],
+      "summary": "Capillaries have the largest total cross-sectional area in the circulatory system (3000 cm², approximately 600-800 times larger than the aorta).",
+      "whyCorrect": {
+        "a": "Correct. Capillaries have the largest total cross-sectional area in the circulation, approximately 3000 cm², which is 600-800 times larger than the aorta's cross-sectional area of 4 cm². Although individual capillaries are very narrow (5-10 μm diameter), the vast number of capillaries arranged in parallel creates an enormous total cross-sectional area. This large area serves two purposes: it slows blood flow to allow time for exchange of gases and nutrients, and it reduces overall capillary resistance through parallel arrangement."
+      },
+      "whyIncorrect": {
+        "b": "Incorrect. Small veins have moderate total cross-sectional area but not the largest. As blood flows from capillaries into venules and then small veins, vessels begin to merge and total cross-sectional area decreases compared to the capillary bed. Veins are larger individually but fewer in number than capillaries, resulting in less total cross-sectional area. Flow velocity begins to increase in veins as cross-sectional area decreases.",
+        "c": "Incorrect. Arterioles have greater total cross-sectional area than arteries due to extensive branching, but much less than capillaries. While arterioles branch extensively to distribute blood, their total cross-sectional area is still orders of magnitude smaller than the capillary bed. Arterioles serve as resistance vessels controlling flow, not primarily as exchange vessels requiring large surface area.",
+        "d": "Incorrect. Large arteries, including the aorta, have the smallest total cross-sectional area in the circulation. The aorta has a cross-sectional area of only 4 cm². As arteries branch into smaller arteries and arterioles, total cross-sectional area increases, but it is still much smaller than the capillary bed. The small cross-sectional area of arteries results in high flow velocity (22.5 cm/s in the aorta).",
+        "e": "Incorrect. Large veins have relatively small total cross-sectional area. As venules merge into larger veins and eventually the vena cavae, total cross-sectional area decreases substantially from the capillary level. The vena cavae have a combined cross-sectional area of about 10 cm², much smaller than the capillary bed. This reduction in cross-sectional area causes flow velocity to increase as blood returns to the heart."
+      },
+      "topicReference": "Topic 41, LO-8: Contrast cross sectional area in these vascular segments. Total cross sectional area of capillaries: 3000 cm²",
+      "sourceTopics": [41],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-4855200607-24",
+      "correctLetters": ["e"],
+      "summary": "Venous compliance equals volume change divided by pressure change (C = ΔV/ΔP).",
+      "whyCorrect": {
+        "e": "Correct. Compliance is calculated as volume change divided by pressure change: C = ΔV/ΔP. This measures a vessel's ability to expand in response to increased pressure. Veins have exceptionally high compliance (24 times that of arteries), allowing them to store large volumes of blood with minimal pressure increases. This makes veins ideal capacitance vessels that can buffer changes in blood volume."
+      },
+      "whyIncorrect": {
+        "a": "Incorrect. Pressure × radius / wall thickness describes wall tension by Laplace's law: T = (P × r) / h. This calculates the force trying to tear the vessel wall apart, not the vessel's distensibility. Wall tension is highest in large arteries with high pressure and large radius, explaining why aortic aneurysms are at risk of rupture.",
+        "b": "Incorrect. Pressure difference / volume flow equals resistance: R = ΔP/Q (Ohm's law for fluids). This measures opposition to flow, not vessel distensibility. High resistance requires large pressure differences to maintain flow. Arterioles have the highest resistance in the circulation.",
+        "c": "Incorrect. Diastolic pressure / systolic pressure is not a standard hemodynamic parameter. While pulse pressure (systolic - diastolic) and mean arterial pressure are clinically useful, this ratio has no physiological significance. It does not measure compliance or any other vascular property.",
+        "d": "Incorrect. The Hagen-Poiseuille equation describes laminar flow: Q = (π × ΔP × r⁴) / (8 × η × L). This relates flow to pressure gradient, radius (fourth power), viscosity, and length. It quantifies resistance but not compliance. The fourth power relationship explains why small diameter changes dramatically affect flow."
+      },
+      "topicReference": "Topic 41, LO-2: Explain the concept of vascular compliance, give the formula for its determination (C=ΔV/ΔP)",
+      "sourceTopics": [41],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-4855200607-27",
+      "correctLetters": ["a"],
+      "summary": "Capillaries have the largest total cross-sectional area (3000 cm²) in the circulatory system.",
+      "whyCorrect": {
+        "a": "Correct. Capillaries have the largest total cross-sectional area in the circulation at approximately 3000 cm², which is 600-800 times larger than the aorta (4 cm²). Despite each capillary being extremely narrow (5-10 μm), the massive number of capillaries arranged in parallel creates enormous total cross-sectional area. This maximizes surface area for exchange of oxygen, nutrients, and waste products, and slows blood flow to 0.03 cm/s to allow adequate time for diffusion."
+      },
+      "whyIncorrect": {
+        "b": "Incorrect. Small veins have moderate cross-sectional area as they collect blood from capillaries, but not the largest. As venules converge into small veins, total cross-sectional area decreases compared to the capillary bed. This reduction in area causes flow velocity to increase from the very low capillary velocity.",
+        "c": "Incorrect. Large arteries like the aorta have the smallest total cross-sectional area (aorta = 4 cm²). This small area results in the highest flow velocity (22.5 cm/s in aorta). As arteries branch repeatedly, total cross-sectional area increases, but never approaches the enormous area of the capillary beds.",
+        "d": "Incorrect. Large veins (including vena cavae) have small total cross-sectional area (vena cavae ~10 cm²) as they merge to return blood to the heart. The progressive merging of veins reduces total cross-sectional area compared to the capillary bed, increasing flow velocity toward the heart.",
+        "e": "Incorrect. Arterioles have greater total cross-sectional area than arteries due to extensive branching, but much less than capillaries. While arterioles are numerous, their total cross-sectional area is still orders of magnitude smaller than the vast capillary network."
+      },
+      "topicReference": "Topic 41, LO-8: Contrast cross sectional area. Total cross sectional area of capillaries: 3000 cm²; Cross sectional area of the aorta: 4 cm²",
+      "sourceTopics": [41],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-4855200607-33",
+      "correctLetters": ["b", "d"],
+      "summary": "Arterioles have the greatest pressure drop (60 mmHg) and greatest resistance to flow in the systemic circulation.",
+      "whyCorrect": {
+        "b": "Correct. The greatest pressure drop in the circulation occurs across arterioles, dropping from approximately 80 mmHg to 30 mmHg - a drop of 60 mmHg. This massive pressure drop reflects their role as the primary resistance vessels. According to Ohm's law (ΔP = Q × R), the pressure drop is proportional to resistance, and arterioles account for 50-70% of total peripheral resistance.",
+        "d": "Correct. Arterioles provide the greatest resistance to flow in the systemic circulation, contributing 50-70% of total peripheral vascular resistance. Their small diameter (10-100 μm) creates high resistance according to Poiseuille's law, where resistance is inversely proportional to the fourth power of radius (R ∝ 1/r⁴). This makes them ideal for controlling blood flow distribution and regulating blood pressure through vasoconstriction and vasodilation."
+      },
+      "whyIncorrect": {
+        "a": "Incorrect. The highest velocity occurs in the aorta (22.5 cm/s), not in arterioles. Flow velocity is inversely proportional to total cross-sectional area (v = Q/A). The aorta has the smallest cross-sectional area (4 cm²) and therefore the highest velocity. As blood flows into progressively branching arterioles with greater total cross-sectional area, velocity decreases. The lowest velocity is in capillaries (0.03 cm/s).",
+        "c": "Incorrect. Arterioles have very low compliance, not the greatest compliance. Veins have the greatest compliance (24 times that of arteries). Arterioles have thick muscular walls relative to their lumen diameter, making them stiff vessels with minimal ability to expand. Their low compliance allows them to actively regulate resistance through smooth muscle contraction rather than passively expanding with pressure.",
+        "e": "Incorrect. While arterioles do contain a very small fraction of total blood volume due to their small size, option (d) is more specifically correct about resistance. Arterioles contain less than 1% of blood volume. The majority of blood (60-70%) is in veins, with 10-15% in arteries and about 5% in capillaries. Despite their small volume, arterioles are critical for hemodynamic regulation."
+      },
+      "topicReference": "Topic 41, LO-8: Characterize the contribution of arterioles to peripheral vascular resistance. Blood pressure drop in systemic resistance vessels (arterioles): 60 mmHg",
+      "sourceTopics": [41],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-4855200607-36",
+      "correctLetters": ["b", "d"],
+      "summary": "Blood flow velocity is inversely related to cross-sectional area and is lowest in capillaries (0.03 cm/s).",
+      "whyCorrect": {
+        "b": "Correct. Flow velocity is inversely related to the cross-sectional area of the blood vessel according to the continuity equation: v = Q/A, where v is velocity, Q is flow rate (constant throughout the circulation), and A is cross-sectional area. As cross-sectional area increases, velocity decreases proportionally. This explains why velocity is highest in the aorta (small area, 22.5 cm/s) and lowest in capillaries (enormous total area 3000 cm², velocity 0.03 cm/s).",
+        "d": "Correct. Blood flow velocity is lowest in capillary vessels at approximately 0.03 cm/s. This extremely slow velocity results from the enormous total cross-sectional area of all capillaries (3000 cm²), which is 600-800 times larger than the aorta. The slow velocity is functionally important because it provides adequate time for diffusion of oxygen, nutrients, and waste products across the capillary walls."
+      },
+      "whyIncorrect": {
+        "a": "Incorrect. Flow velocity does not determine the magnitude of pulse pressure. Pulse pressure (systolic pressure minus diastolic pressure) is primarily determined by stroke volume and arterial compliance. Large stroke volumes and decreased arterial compliance (stiff arteries, as in aging) increase pulse pressure. Flow velocity is a consequence of cardiac output and vascular geometry, not a determinant of pressure pulsations.",
+        "c": "Incorrect. Flow velocity does not decrease if vessel compliance decreases. Velocity is determined by flow rate and cross-sectional area (v = Q/A), not by compliance. Compliance affects the relationship between pressure and volume in a vessel, and decreased compliance increases pulse pressure, but it does not directly affect flow velocity. Velocity remains determined by cardiac output and total cross-sectional area."
+      },
+      "topicReference": "Topic 41, LO-8: Contrast flow velocity in vascular segments. Average flow velocity in capillaries: 0.03 cm/s; Average flow velocity in aorta: 22.5 cm/s",
+      "sourceTopics": [41],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-4855200607-52",
+      "correctLetters": ["c", "d"],
+      "summary": "Blood flow velocity is lowest in capillaries and inversely related to vessel cross-sectional area (v = Q/A).",
+      "whyCorrect": {
+        "c": "Correct. Blood flow velocity is lowest in capillary vessels at 0.03 cm/s, compared to 22.5 cm/s in the aorta. This dramatic reduction occurs because capillaries have the largest total cross-sectional area in the circulation (3000 cm²), about 600-800 times larger than the aorta (4 cm²). According to the continuity equation v = Q/A, velocity is inversely proportional to cross-sectional area. The slow capillary flow allows time for gas and nutrient exchange.",
+        "d": "Correct. Flow velocity is inversely related to the cross-sectional area of the blood vessel: v = Q/A, where v is velocity, Q is cardiac output (constant throughout the circulation at steady state), and A is total cross-sectional area. As vessels branch and total area increases, velocity decreases. This relationship explains the velocity gradient from high velocity in the aorta through progressively slower flow in arterioles to minimum velocity in capillaries, then increasing velocity again in veins as they merge."
+      },
+      "whyIncorrect": {
+        "a": "Incorrect. Flow velocity does not determine pulse pressure magnitude. Pulse pressure (systolic minus diastolic pressure) is determined by stroke volume and arterial compliance. Higher stroke volume and lower arterial compliance (stiffer arteries) increase pulse pressure. While both velocity and pulse pressure are affected by cardiac output, velocity doesn't directly determine pulse pressure. Compliance and stroke volume are the primary determinants.",
+        "b": "Incorrect. Flow velocity does not decrease when vessel compliance decreases. Velocity is determined by flow rate (cardiac output) and cross-sectional area via v = Q/A, independent of compliance. Decreased compliance affects the pressure-volume relationship and increases pulse pressure, but doesn't directly alter velocity. A vessel can become stiffer (less compliant) without changing its average diameter or the velocity of blood flowing through it."
+      },
+      "topicReference": "Topic 41, LO-8: Contrast flow velocity. Flow velocity is inversely proportional to cross-sectional area: v = Q/A",
+      "sourceTopics": [41],
+      "needsReview": false
+    }
+  ]
+}

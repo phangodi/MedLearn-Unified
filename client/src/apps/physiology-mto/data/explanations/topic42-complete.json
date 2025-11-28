@@ -1,0 +1,143 @@
+{
+  "metadata": {
+    "topic": 42,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 10,
+    "status": "COMPLETE"
+  },
+  "explanations": [
+    {
+      "questionId": "q-0313014645-B-10",
+      "summary": "Diastolic pressure depends on how much blood drains from arteries during diastole. Increased aortic elasticity allows better recoil, maintaining diastolic pressure - so INCREASED elasticity would maintain (not decrease) diastolic. Increased TPR slows drainage, raising diastolic. Increased SV raises systolic more than diastolic.",
+      "whyCorrect": {
+        "a": "When aortic elasticity INCREASES, the aorta stores more energy during systole and releases it more effectively during diastole, maintaining diastolic pressure. Conversely, DECREASED elasticity (stiff arteries) causes lower diastolic pressure."
+      },
+      "whyIncorrect": {
+        "b": "Increased peripheral resistance INCREASES diastolic pressure by slowing blood drainage from arteries during diastole.",
+        "c": "Increased stroke volume primarily increases SYSTOLIC pressure. It may slightly increase diastolic but doesn't decrease it.",
+        "d": "Systolic and diastolic pressures can change independently. Increased systolic doesn't automatically mean decreased diastolic."
+      },
+      "topicReference": "Topic 42: Arterial Blood Pressure"
+    },
+    {
+      "questionId": "q-0313014645-8",
+      "summary": "Decreased arterial compliance (stiffer arteries, as in aging) causes: higher systolic (less stretch absorption), lower diastolic (less elastic recoil), and wider pulse pressure. Mean pressure may increase slightly but the key changes are systolic↑, diastolic↓, pulse pressure↑.",
+      "whyCorrect": {
+        "b": "Decreased compliance means less elastic recoil during diastole, so diastolic pressure DECREASES. Blood drains faster without the elastic 'squeeze.'",
+        "d": "Pulse pressure (systolic - diastolic) INCREASES because systolic rises (less absorption) while diastolic falls (less recoil). This is classic 'isolated systolic hypertension' of aging."
+      },
+      "whyIncorrect": {
+        "a": "Systolic pressure INCREASES (not decreases) with decreased compliance because stiff arteries can't absorb the stroke volume.",
+        "c": "Mean pressure may increase slightly but this isn't the primary effect. The hallmark is widened pulse pressure."
+      },
+      "topicReference": "Topic 42: Arterial Blood Pressure"
+    },
+    {
+      "questionId": "q-3543048990-46",
+      "summary": "Standing adds hydrostatic pressure below heart level and subtracts it above. Heart level stays ~100 mmHg. Brain (~40 cm above heart): 100 - 30 = ~70 mmHg. Foot (~120 cm below): 100 + 90 = ~190 mmHg. Position DOES affect pressure at different levels.",
+      "whyCorrect": {
+        "a": "At heart level, MAP remains ~100 mmHg regardless of position because this is the reference point.",
+        "b": "Brain arteries (~40 cm above heart) lose ~30 mmHg hydrostatic pressure: 100 - 30 ≈ 70 mmHg (close to 60).",
+        "c": "Foot arteries (~120 cm below heart) gain ~90 mmHg: 100 + 90 = 190 mmHg."
+      },
+      "whyIncorrect": {
+        "d": "Position DOES affect pressure at different body levels due to hydrostatic effects. Only heart-level pressure stays constant."
+      },
+      "topicReference": "Topic 42: Arterial Blood Pressure"
+    },
+    {
+      "questionId": "q-3543048990-47",
+      "summary": "MAP = CO × TPR (directly proportional to both). MAP ≈ diastolic + 1/3(pulse pressure). MAP typically INCREASES with age (arteriosclerosis). Standing adds ~80 mmHg hydrostatic pressure to foot arteries (100→180 mmHg).",
+      "whyCorrect": {
+        "a": "MAP = Cardiac Output × Total Peripheral Resistance. Directly proportional to both.",
+        "b": "MAP ≈ Diastolic + (Pulse Pressure/3) because diastole is longer than systole (~2/3 of cardiac cycle).",
+        "d": "Standing adds hydrostatic column (~80-90 mmHg for foot distance from heart), changing foot artery pressure from ~100 to ~180 mmHg."
+      },
+      "whyIncorrect": {
+        "c": "MAP typically INCREASES with age due to arterial stiffening and increased TPR, not decreases."
+      },
+      "topicReference": "Topic 42: Arterial Blood Pressure"
+    },
+    {
+      "questionId": "q-4447200607-2",
+      "summary": "Pulse pressure = Stroke Volume / Arterial Compliance. DECREASED compliance (stiffer arteries) INCREASES pulse pressure. Decreased SV would decrease PP. Decreased blood volume decreases SV, decreasing PP. Heart rate alone doesn't directly increase PP.",
+      "whyCorrect": {
+        "d": "Decreased arterial compliance means the same stroke volume causes a larger pressure rise. PP = SV/C, so lower C = higher PP. This is why elderly have wide pulse pressure."
+      },
+      "whyIncorrect": {
+        "a": "Decreased stroke volume would DECREASE pulse pressure (PP = SV/C).",
+        "b": "Decreased arterial blood volume reduces venous return and stroke volume, decreasing pulse pressure.",
+        "c": "Increased heart rate alone doesn't directly increase pulse pressure. It may slightly decrease it by reducing filling time and SV."
+      },
+      "topicReference": "Topic 42: Arterial Blood Pressure"
+    },
+    {
+      "questionId": "q-4447200607-20",
+      "summary": "The arterial pressure pulse wave travels at ~5-8 m/sec (much faster than blood flow at ~0.5 m/sec). It's created by ventricular ejection into the aorta. It reaches the wrist ~0.1 sec after ejection. Wave velocity ≠ blood flow velocity.",
+      "whyCorrect": {
+        "a": "Pulse wave velocity is ~5-8 m/sec in young adults (faster in stiff arteries of elderly).",
+        "b": "The pressure pulse is generated when the left ventricle ejects blood into the aorta, stretching the arterial wall.",
+        "c": "The pulse reaches the radial artery (wrist) ~0.1 seconds after ventricular ejection due to the ~5 m/sec wave speed over ~50 cm distance."
+      },
+      "whyIncorrect": {
+        "d": "Pulse wave velocity (~5 m/sec) is much FASTER than blood flow velocity (~0.5 m/sec in aorta). They're independent phenomena."
+      },
+      "topicReference": "Topic 42: Arterial Blood Pressure"
+    },
+    {
+      "questionId": "q-4855200607-14",
+      "summary": "Decreased compliance (stiff arteries): systolic↑ (less stretch), diastolic↓ (less recoil), pulse pressure↑ (wider gap). Mean pressure effect is variable. Classic pattern of aging/arteriosclerosis.",
+      "whyCorrect": {
+        "c": "Diastolic pressure DECREASES because stiff arteries have less elastic recoil to maintain pressure during diastole.",
+        "d": "Pulse pressure INCREASES: systolic rises (less absorption) while diastolic falls (less recoil), widening the gap."
+      },
+      "whyIncorrect": {
+        "a": "Systolic pressure INCREASES (not decreases) because stiff arteries can't stretch to absorb stroke volume.",
+        "b": "Mean pressure change is less predictable and not the primary consequence of decreased compliance."
+      },
+      "topicReference": "Topic 42: Arterial Blood Pressure"
+    },
+    {
+      "questionId": "q-4855200607-17",
+      "summary": "Stiff arteries (decreased compliance) = higher systolic, lower diastolic, wider pulse pressure. This is isolated systolic hypertension of aging. Mean pressure may rise but pulse pressure widening is the hallmark.",
+      "whyCorrect": {
+        "a": "Diastolic pressure DECREASES with decreased compliance due to reduced elastic recoil during diastole.",
+        "c": "Pulse pressure INCREASES dramatically because systolic rises while diastolic falls."
+      },
+      "whyIncorrect": {
+        "b": "Systolic pressure INCREASES, not decreases, with stiff arteries.",
+        "d": "Mean pressure change is secondary to the marked pulse pressure widening."
+      },
+      "topicReference": "Topic 42: Arterial Blood Pressure"
+    },
+    {
+      "questionId": "q-4855200607-55",
+      "summary": "During arterial transmission, the systolic peak actually INCREASES (amplification) due to wave reflection and vessel tapering. High frequencies are damped, diastolic component changes, and pulse amplitude depends heavily on compliance.",
+      "whyCorrect": {
+        "f": "Systolic pressure amplitude INCREASES during transmission from aorta to peripheral arteries (pulse amplification) due to wave reflection from branch points and vessel tapering."
+      },
+      "whyIncorrect": {
+        "a": "High frequency damping occurs but this alone isn't correct as the single answer.",
+        "b": "The diastolic component changes but this statement is incomplete.",
+        "c": "Arteriolar dilation can cause pulsations in capillaries but this isn't always 'significant.'",
+        "d": "True but not the single correct answer here.",
+        "e": "True - compliance greatly affects pulse amplitude - but not the single correct answer."
+      },
+      "topicReference": "Topic 42: Arterial Blood Pressure"
+    },
+    {
+      "questionId": "q-5156012322-24",
+      "summary": "Increased TPR: caused by sympathetic vasoconstriction, raises BOTH systolic and diastolic proportionally (not preferentially systolic), so pulse pressure stays relatively unchanged. TPR increase actually impedes venous return (doesn't promote it).",
+      "whyCorrect": {
+        "a": "Increased sympathetic activity causes arteriolar vasoconstriction, increasing TPR.",
+        "e": "Increased TPR raises both systolic and diastolic pressure proportionally, so pulse pressure (the difference) stays relatively unchanged."
+      },
+      "whyIncorrect": {
+        "b": "Increased TPR raises diastolic MORE than systolic (or equally), not less. Diastolic is especially sensitive to TPR.",
+        "c": "Pulse pressure doesn't increase significantly with TPR changes alone - both pressures rise together.",
+        "d": "Increased TPR impedes venous return by backing up blood in arteries. It doesn't promote venous return."
+      },
+      "topicReference": "Topic 42: Arterial Blood Pressure"
+    }
+  ]
+}

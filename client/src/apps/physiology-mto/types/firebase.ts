@@ -232,16 +232,17 @@ export function normalizeText(text: string): string {
 /**
  * Generate content hash for duplicate detection
  *
- * Creates an MD5 hash from normalized question text + all option texts.
+ * Creates a simple hash from normalized question text + all option texts.
  * Used to detect duplicate questions even if wording differs slightly.
+ *
+ * Note: This uses a simple djb2 hash for browser compatibility.
+ * The migration script uses MD5 for more robust hashing.
  *
  * @param text - Question text
  * @param options - Question options
- * @returns MD5 hash string
+ * @returns Hash string
  */
 export function generateContentHash(text: string, options: QuestionOption[]): string {
-  const crypto = require('crypto');
-
   // Normalize question text
   const normalizedText = normalizeText(text);
 
@@ -251,9 +252,14 @@ export function generateContentHash(text: string, options: QuestionOption[]): st
     .sort() // Sort to handle option order changes
     .join('|');
 
-  // Combine and hash
+  // Combine and hash using djb2 (browser-compatible)
   const content = `${normalizedText}|||${normalizedOptions}`;
-  return crypto.createHash('md5').update(content).digest('hex');
+  let hash = 5381;
+  for (let i = 0; i < content.length; i++) {
+    hash = ((hash << 5) + hash) + content.charCodeAt(i);
+    hash = hash & hash; // Convert to 32-bit integer
+  }
+  return Math.abs(hash).toString(36);
 }
 
 /**

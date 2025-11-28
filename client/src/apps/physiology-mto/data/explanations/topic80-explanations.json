@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "topic": 80,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 1,
+    "status": "TEMPLATE - needs explanations generated"
+  },
+  "questions": [
+    {
+      "questionId": "q-2734027349-5",
+      "text": "A healthy individual on a diet high in potassium exhibits increased potassium excretion. The major cause of this increased renal secretion of potassium is",
+      "options": [
+        {
+          "letter": "a",
+          "text": "decreased reabsorption of potassium by the tubule and collecting duct"
+        },
+        {
+          "letter": "b",
+          "text": "increased secretion of potassium by the distal tubule and collecting duct"
+        },
+        {
+          "letter": "c",
+          "text": "decreased aldosterone secretion"
+        },
+        {
+          "letter": "d",
+          "text": "increased GFR"
+        },
+        {
+          "letter": "e",
+          "text": "decreased reabsorption of potassium by the proximal tubule"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    }
+  ]
+}

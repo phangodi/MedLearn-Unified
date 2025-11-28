@@ -1,0 +1,132 @@
+{
+  "metadata": {
+    "topic": 51,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 4,
+    "status": "TEMPLATE - needs explanations generated"
+  },
+  "questions": [
+    {
+      "questionId": "q-0313014645-B-3",
+      "text": "Sympathetic cholinergic fibers innervate the arterioles of",
+      "options": [
+        {
+          "letter": "a",
+          "text": "cerebral vessels"
+        },
+        {
+          "letter": "b",
+          "text": "coronaries"
+        },
+        {
+          "letter": "c",
+          "text": "salivary glands"
+        },
+        {
+          "letter": "d",
+          "text": "external genitalia"
+        },
+        {
+          "letter": "e",
+          "text": "arterioles in skeletal muscles"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-3543048990-60",
+      "text": "The mechanisms involved in increased skeletal blood flow during exercise may include",
+      "options": [
+        {
+          "letter": "a",
+          "text": "increased angiotensin secretion"
+        },
+        {
+          "letter": "b",
+          "text": "local release of K+ and adenosine"
+        },
+        {
+          "letter": "c",
+          "text": "local production of prostaglandins"
+        },
+        {
+          "letter": "d",
+          "text": "beta-1 receptor activation"
+        },
+        {
+          "letter": "e",
+          "text": "activation of cholinergic sympathetic fibers"
+        },
+        {
+          "letter": "f",
+          "text": "activation of parasympathetic vasodilator neurons"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c",
+        "e"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-4447200607-29",
+      "text": "Which of the following circulatory system will respond to the stimulation of its adrenergic sympathetic neurons with the maximal increase (i.e. in terms of percent of control) in its blood flow?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "cerebral circulation"
+        },
+        {
+          "letter": "b",
+          "text": "coronary circulation"
+        },
+        {
+          "letter": "c",
+          "text": "pulmonary circulation"
+        },
+        {
+          "letter": "d",
+          "text": "skeletal muscle circulation"
+        },
+        {
+          "letter": "e",
+          "text": "cutaneous circulation"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-5090109547-21",
+      "text": "During moderate exercise, diastolic arterial pressure may not change significantly from that during rest, although cardiac output increases. This is the result of the",
+      "options": [
+        {
+          "letter": "a",
+          "text": "decreased total peripheral resistance"
+        },
+        {
+          "letter": "b",
+          "text": "decreased arteriolar flow during diastole"
+        },
+        {
+          "letter": "c",
+          "text": "increased stroke volume"
+        },
+        {
+          "letter": "d",
+          "text": "increased heart rate"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    }
+  ]
+}

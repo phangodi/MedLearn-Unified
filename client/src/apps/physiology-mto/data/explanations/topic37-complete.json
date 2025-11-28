@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "topic": 37,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 3,
+    "status": "COMPLETE"
+  },
+  "explanations": [
+    {
+      "questionId": "q-3543048990-84",
+      "summary": "CO = SV × HR. Increased by: increased preload (Starling), decreased afterload. NOT increased by: decreased preload, increased afterload, increased BP (which increases afterload). Preload↑ = CO↑; Afterload↑ = CO↓.",
+      "whyCorrect": {
+        "b": "Decreased preload (reduced venous return) DECREASES stroke volume via Frank-Starling mechanism, thus DECREASING cardiac output.",
+        "c": "Increased afterload (increased arterial resistance) makes ejection harder, DECREASING stroke volume and cardiac output.",
+        "e": "Increased blood pressure increases afterload, which DECREASES cardiac output (heart must work against higher pressure)."
+      },
+      "whyIncorrect": {
+        "a": "Increased preload INCREASES cardiac output via Frank-Starling mechanism (more stretch = stronger contraction = larger SV).",
+        "d": "Decreased afterload INCREASES cardiac output (easier to eject blood = larger SV)."
+      },
+      "topicReference": "Topic 37: Cardiac Output"
+    },
+    {
+      "questionId": "q-4855200607-9",
+      "summary": "Beat-by-beat matching of stroke volume to venous return is the FRANK-STARLING MECHANISM - an intrinsic cardiac property. More filling → more stretch → stronger contraction → larger SV. No nerves required.",
+      "whyCorrect": {
+        "e": "Frank-Starling mechanism: Increased venous return stretches ventricle → optimizes actin-myosin overlap → stronger contraction → SV matches venous return. This is INTRINSIC (no nerves needed), works beat-by-beat."
+      },
+      "whyIncorrect": {
+        "a": "Vagal negative inotropy REDUCES contractility - doesn't match SV to venous return.",
+        "b": "Sympathetic positive inotropy increases contractility but is NOT the beat-by-beat matching mechanism - it's extrinsic regulation.",
+        "c": "Dromotropic effects affect conduction velocity, not stroke volume matching.",
+        "d": "Extracardiac mechanisms (like baroreflexes) are slower responses, not beat-by-beat intrinsic matching."
+      },
+      "topicReference": "Topic 37: Cardiac Output"
+    },
+    {
+      "questionId": "q-4855200607-26",
+      "summary": "Frank-Starling mechanism provides beat-by-beat matching of left and right ventricular output to venous return. Intrinsic mechanism based on length-tension relationship - no neural input required.",
+      "whyCorrect": {
+        "d": "Frank-Starling mechanism: Increased end-diastolic volume stretches myocytes → increased force of contraction → stroke volume automatically matches venous return. This ensures L and R ventricles pump equal volumes."
+      },
+      "whyIncorrect": {
+        "a": "Sympathetic positive inotropy is extrinsic regulation for exercise/stress - not the intrinsic beat-by-beat matching.",
+        "b": "Vagal negative inotropy reduces contractility - opposite of what's needed for matching.",
+        "c": "Extracardiac mechanisms are slower regulatory responses (seconds to minutes), not instantaneous beat-by-beat matching.",
+        "e": "Dromotropic effects affect AV conduction, not ventricular stroke volume."
+      },
+      "topicReference": "Topic 37: Cardiac Output"
+    }
+  ]
+}

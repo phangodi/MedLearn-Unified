@@ -16,7 +16,8 @@ import {
   LogOut,
   Moon,
   Sun,
-  Bell
+  Bell,
+  FileQuestion
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { Logo } from '@/components/ui/Logo'
@@ -417,18 +418,30 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
 
       {/* Footer - Settings & Admin */}
       <div className="p-3 border-t border-border/50 mt-auto space-y-1">
-        {/* Admin link (super admin only) */}
+        {/* Admin links (super admin only) */}
         {userProfile?.role === 'superadmin' && (
-          <button
-            onClick={() => navigate('/admin/notifications')}
-            className={`sidebar-item ${
-              location.pathname === '/admin/notifications' ? 'active' : ''
-            } w-full flex items-center ${isCollapsed ? 'justify-center' : 'space-x-2.5'} px-3 py-2 rounded-lg text-left`}
-            title={isCollapsed ? 'Notifications Admin' : undefined}
-          >
-            <Bell className="sidebar-icon w-4.5 h-4.5" />
-            {!isCollapsed && <span className="text-sm">Notifications Admin</span>}
-          </button>
+          <>
+            <button
+              onClick={() => navigate('/admin/notifications')}
+              className={`sidebar-item ${
+                location.pathname === '/admin/notifications' ? 'active' : ''
+              } w-full flex items-center ${isCollapsed ? 'justify-center' : 'space-x-2.5'} px-3 py-2 rounded-lg text-left`}
+              title={isCollapsed ? 'Notifications Admin' : undefined}
+            >
+              <Bell className="sidebar-icon w-4.5 h-4.5" />
+              {!isCollapsed && <span className="text-sm">Notifications Admin</span>}
+            </button>
+            <button
+              onClick={() => navigate('/admin/mto')}
+              className={`sidebar-item ${
+                location.pathname === '/admin/mto' ? 'active' : ''
+              } w-full flex items-center ${isCollapsed ? 'justify-center' : 'space-x-2.5'} px-3 py-2 rounded-lg text-left`}
+              title={isCollapsed ? 'MTO Admin' : undefined}
+            >
+              <FileQuestion className="sidebar-icon w-4.5 h-4.5" />
+              {!isCollapsed && <span className="text-sm">MTO Admin</span>}
+            </button>
+          </>
         )}
 
         {/* Settings Button with Dropdown */}

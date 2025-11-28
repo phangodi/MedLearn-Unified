@@ -1,0 +1,221 @@
+{
+  "metadata": {
+    "topic": 47,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 15,
+    "status": "COMPLETE"
+  },
+  "explanations": [
+    {
+      "questionId": "q-0313014645-4",
+      "summary": "During hemorrhage, compensatory mechanisms include increased total peripheral resistance (via sympathetic vasoconstriction of arterioles) and increased sympathetic tone to capacitance vessels (veins), which helps maintain venous return. ANP levels decrease (not increase) as atrial stretch decreases. Central venous pressure and cardiac output both decrease during hemorrhage.",
+      "whyCorrect": {
+        "a": "Increased TPR is a key compensatory response to hemorrhage. Sympathetic activation causes arteriolar vasoconstriction to maintain blood pressure despite reduced cardiac output.",
+        "c": "Venoconstriction of capacitance vessels (which hold ~65% of blood volume) is crucial during hemorrhage. Sympathetic activation reduces venous compliance, shifting blood toward the heart to maintain venous return."
+      },
+      "whyIncorrect": {
+        "b": "ANP (ANH) levels DECREASE during hemorrhage because reduced blood volume causes less atrial stretch, reducing ANP release. Lower ANP allows more sodium/water retention to restore volume.",
+        "d": "Central venous pressure DECREASES during hemorrhage due to reduced blood volume. This is actually the stimulus that triggers compensatory reflexes.",
+        "e": "Cardiac output DECREASES during hemorrhage due to reduced venous return and preload. The body compensates by increasing heart rate and contractility, but CO remains below normal until volume is restored."
+      },
+      "topicReference": "Topic 47: Cardiac Output, Venous Return, Guyton Diagram"
+    },
+    {
+      "questionId": "q-3543048990-50",
+      "summary": "Infusing 500 mL blood increases venous pressure (and right atrial pressure) significantly because veins are highly compliant and hold most blood volume. Arterial blood volume increases minimally because arteries are low-compliance. Increased preload leads to increased cardiac output via Frank-Starling mechanism.",
+      "whyCorrect": {
+        "a": "Arteries have low compliance (high elastance) and only contain ~15% of blood volume. A 500 mL infusion distributes mostly to the venous system, causing only a small arterial volume increment.",
+        "b": "Venous pressure increases because veins receive most of the infused volume. Though compliant, even a small pressure increase reflects significant volume change.",
+        "c": "Right atrial pressure increases directly due to increased venous return. This is the key determinant of preload and triggers increased cardiac output.",
+        "d": "Hydrostatic pressure in veins increases as a direct consequence of increased venous volume. This also affects capillary filtration.",
+        "e": "Cardiac output increases via the Frank-Starling mechanism: increased right atrial pressure → increased ventricular filling → increased stroke volume → increased CO."
+      },
+      "whyIncorrect": {},
+      "topicReference": "Topic 47: Cardiac Output, Venous Return, Guyton Diagram"
+    },
+    {
+      "questionId": "q-3543048990-78",
+      "summary": "Atrial B-type stretch receptors (different from A-type that respond to atrial contraction) respond to atrial distension during filling. They inhibit ADH secretion when stretched and contribute to lowering blood pressure. They do NOT mediate the Bezold-Jarisch reflex (that's ventricular chemoreceptors) or Hering-Breuer reflex (pulmonary stretch receptors).",
+      "whyCorrect": {
+        "a": "Atrial stretch receptors regulate ADH (vasopressin) secretion. Increased atrial stretch (high blood volume) inhibits ADH release from the posterior pituitary, promoting water excretion.",
+        "e": "B-receptors contribute to a depressor reflex. When stretched by increased blood volume, they cause reflex vasodilation and decreased sympathetic tone, lowering blood pressure."
+      },
+      "whyIncorrect": {
+        "b": "The Bezold-Jarisch reflex originates from ventricular chemoreceptors (C-fibers), not atrial stretch receptors. It's triggered by chemicals like serotonin, nicotine, or veratridine causing bradycardia and hypotension.",
+        "c": "Atrial B-receptors INHIBIT (not stimulate) the pressor center. Their activation leads to depressor responses to help reduce elevated blood volume/pressure.",
+        "d": "The Hering-Breuer reflex involves pulmonary stretch receptors that inhibit inspiration when lungs are over-inflated. This is a respiratory reflex, not a cardiovascular one."
+      },
+      "topicReference": "Topic 47: Cardiac Output, Venous Return, Guyton Diagram"
+    },
+    {
+      "questionId": "q-3543048990-79",
+      "summary": "The Bainbridge reflex is a cardioacceleratory reflex originating from right atrial (and possibly veno-atrial junction) baroreceptors. When venous return increases and stretches the right atrium, heart rate increases to accommodate the extra volume. It is NOT a depressor reflex and is NOT triggered by veratridine (that's Bezold-Jarisch).",
+      "whyCorrect": {
+        "c": "The Bainbridge reflex originates from mechanoreceptors (baroreceptors) in the right atrium and the veno-atrial junction. These receptors sense stretch from increased venous return.",
+        "d": "The primary effect of the Bainbridge reflex is increased heart rate. When venous return increases, this reflex helps the heart pump the extra blood, preventing venous congestion."
+      },
+      "whyIncorrect": {
+        "a": "The reflex originates from the right ATRIUM, not the pulmonary arteries. Pulmonary artery baroreceptors exist but mediate different reflexes.",
+        "b": "The Bainbridge reflex is a PRESSOR (or at least cardioacceleratory) reflex, not a depressor reflex. It increases heart rate and can increase cardiac output.",
+        "e": "Veratridine elicits the BEZOLD-JARISCH reflex (bradycardia, hypotension), not the Bainbridge reflex. The Bainbridge reflex is triggered by mechanical stretch, not chemical stimulation."
+      },
+      "topicReference": "Topic 47: Cardiac Output, Venous Return, Guyton Diagram"
+    },
+    {
+      "questionId": "q-3543048990-83",
+      "summary": "Cardiac output (CO = HR × SV) can be measured using the Fick principle (oxygen consumption divided by arteriovenous oxygen difference). Vagal stimulation decreases CO (decreases HR), sympathetic stimulation increases CO (increases both HR and contractility). In adults, CO ranges from ~4 L/min at rest to ~25 L/min during maximal exercise.",
+      "whyCorrect": {
+        "a": "The Fick principle: CO = O₂ consumption ÷ (arterial O₂ - venous O₂). This is a fundamental method for measuring cardiac output using oxygen consumption and arteriovenous O₂ difference.",
+        "b": "By definition: CO = Heart Rate × Stroke Volume. This is the basic equation for cardiac output.",
+        "c": "Vagal (parasympathetic) stimulation releases acetylcholine at the SA node, decreasing heart rate (negative chronotropy), which reduces cardiac output.",
+        "d": "Sympathetic stimulation releases norepinephrine, causing positive chronotropy (↑HR) and positive inotropy (↑contractility), both increasing cardiac output.",
+        "e": "Resting CO is ~4-5 L/min. During maximal exercise in trained athletes, CO can increase 5-6 fold to ~25 L/min (or even higher in elite endurance athletes)."
+      },
+      "whyIncorrect": {},
+      "topicReference": "Topic 47: Cardiac Output, Venous Return, Guyton Diagram"
+    },
+    {
+      "questionId": "q-3543048990-85",
+      "summary": "Venous return is the major determinant of cardiac output (Guyton's concept). It increases with: arteriolar dilation (reduces upstream resistance), alpha-1 stimulation (venoconstriction mobilizes venous blood), and during inspiration (negative intrathoracic pressure + abdominal compression). Venous return affects capillary filtration via venous pressure. It actually DECREASES during expiration.",
+      "whyCorrect": {
+        "b": "Arteriolar dilation increases blood flow from arteries to veins, increasing venous return. Lower arteriolar resistance allows more blood to reach the venous system.",
+        "c": "Alpha-1 receptor stimulation causes venoconstriction, reducing venous compliance. This shifts blood from venous capacitance vessels toward the heart, increasing venous return.",
+        "d": "Venous return affects venous pressure, which affects capillary hydrostatic pressure and thus capillary filtration. Higher venous return can increase venous pressure and filtration.",
+        "e": "During inspiration, the diaphragm descends and increases intra-abdominal pressure while decreasing intrathoracic pressure. This pressure gradient pushes abdominal venous blood toward the right atrium.",
+        "f": "This is Guyton's fundamental concept: the heart can only pump what it receives. Venous return determines the filling (preload), which via Frank-Starling determines cardiac output."
+      },
+      "whyIncorrect": {
+        "a": "Venous return DECREASES during expiration, not increases. During expiration, intrathoracic pressure increases (becomes less negative), reducing the pressure gradient for venous return."
+      },
+      "topicReference": "Topic 47: Cardiac Output, Venous Return, Guyton Diagram"
+    },
+    {
+      "questionId": "q-3543048990-86",
+      "summary": "Mean systemic filling pressure (MSFP, ~7 mmHg) is measured after cardiac arrest when pressure equilibrates throughout the circulation. It's lower than mean arterial pressure (~93 mmHg) but slightly higher than normal central venous pressure (~2 mmHg). It's the same throughout the stopped circulation. MSFP increases with hypervolemia.",
+      "whyCorrect": {
+        "a": "MSFP is measured after cardiac arrest (or with rapid ventricular fibrillation) when blood flow stops and pressures equilibrate throughout the circulation to a single value (~7 mmHg).",
+        "d": "MSFP (~7 mmHg) is much lower than mean arterial pressure (~93 mmHg). The difference is maintained by the pumping heart creating high arterial and low venous pressures.",
+        "f": "Hypervolemia increases MSFP because more blood volume in a finite vascular space increases the equilibrium pressure. MSFP reflects vascular compliance and blood volume."
+      },
+      "whyIncorrect": {
+        "b": "After cardiac arrest, pressure is the SAME everywhere (that's the definition of MSFP). There is no pressure gradient between arterioles and capillaries when flow stops.",
+        "c": "MSFP (~7 mmHg) is HIGHER than normal central venous pressure (~2 mmHg). CVP is low during normal circulation because the heart pumps blood away from the venous system.",
+        "e": "MSFP (~7 mmHg) is NOT the same as mean capillary pressure (~17-25 mmHg). Mean capillary pressure during normal circulation is maintained by the pressure gradient from arterioles."
+      },
+      "topicReference": "Topic 47: Cardiac Output, Venous Return, Guyton Diagram"
+    },
+    {
+      "questionId": "q-3543048990-87",
+      "summary": "After cardiac arrest, arterial pressure drops (no pumping force) while venous pressure rises (blood redistributes from high-pressure arterial to low-pressure venous system) until they equilibrate at MSFP (~7 mmHg). The reduced capillary pressure causes fluid reabsorption from interstitium. Pressures don't fall to zero because blood volume maintains MSFP.",
+      "whyCorrect": {
+        "a": "Arterial pressure decreases dramatically after cardiac arrest because there's no pumping force to maintain the high arterial pressure (~93 mmHg falls toward MSFP ~7 mmHg).",
+        "b": "Venous pressure increases because blood redistributes from the arterial system into the more compliant venous system until equilibrium is reached at MSFP.",
+        "d": "When capillary pressure drops below plasma oncotic pressure (~25 mmHg), the Starling forces favor reabsorption of interstitial fluid back into the capillaries."
+      },
+      "whyIncorrect": {
+        "c": "Pressures do NOT fall to zero. They equilibrate at the mean systemic filling pressure (~7 mmHg), which is maintained by blood volume filling the vascular compartment.",
+        "e": "Blood volume in low-pressure areas (veins) actually INCREASES after cardiac arrest as blood redistributes from the high-pressure arterial system."
+      },
+      "topicReference": "Topic 47: Cardiac Output, Venous Return, Guyton Diagram"
+    },
+    {
+      "questionId": "q-4447200607-11",
+      "summary": "Using the Fick equation: CO = O₂ consumption ÷ (arterial O₂ - venous O₂). With O₂ consumption of 2000 mL/min, arterial O₂ of 20 mL/100mL (200 mL/L), and venous O₂ of 10 mL/100mL (100 mL/L): CO = 2000 ÷ (200-100) = 2000 ÷ 100 = 20 L/min.",
+      "whyCorrect": {
+        "a": "Fick equation: CO = VO₂ ÷ (CaO₂ - CvO₂). Converting to same units: 2000 mL/min ÷ (200 - 100 mL/L) = 2000 ÷ 100 = 20 L/min. This represents very high CO (exercise level)."
+      },
+      "whyIncorrect": {
+        "b": "25 L/min would require: 2000 ÷ 80 mL/L difference, meaning A-V O₂ difference of only 8 mL/100mL, which doesn't match the given values.",
+        "c": "10 L/min would require: 2000 ÷ 200 = 10, meaning A-V O₂ difference of 20 mL/100mL (200 mL/L), which is double the actual difference given.",
+        "d": "5 L/min would require: 2000 ÷ 400 = 5, meaning A-V O₂ difference of 40 mL/100mL, which is 4× the actual difference given."
+      },
+      "topicReference": "Topic 47: Cardiac Output, Venous Return, Guyton Diagram"
+    },
+    {
+      "questionId": "q-4855200607-3",
+      "summary": "Mean systemic filling pressure (MSFP, ~7 mmHg) is measured after cardiac arrest when all pressures equilibrate. It's lower than mean arterial pressure (~93 mmHg) but higher than normal CVP (~2 mmHg). After arrest, pressure is uniform throughout, so there's no arteriole-capillary difference. MSFP increases with hypervolemia.",
+      "whyCorrect": {
+        "d": "MSFP can only be measured when the heart is stopped (arrested), allowing pressures throughout the circulation to equilibrate to a single value reflecting blood volume and vascular compliance.",
+        "e": "Hypervolemia (increased blood volume) increases MSFP because more volume in a fixed vascular space raises the equilibrium pressure.",
+        "f": "MSFP (~7 mmHg) is much lower than mean arterial pressure (~93 mmHg). The heart's pumping action creates the arterial-venous pressure gradient."
+      },
+      "whyIncorrect": {
+        "a": "After cardiac arrest, pressure is EQUAL throughout the circulation. There is no pressure difference between arterioles and capillaries when blood is not flowing.",
+        "b": "MSFP (~7 mmHg) is NOT equal to mean capillary pressure during normal circulation (~17-25 mmHg). Capillary pressure is maintained by ongoing blood flow.",
+        "c": "MSFP (~7 mmHg) is actually HIGHER than normal central venous pressure (~2 mmHg). CVP is kept low by the heart pumping blood away from the venous system."
+      },
+      "topicReference": "Topic 47: Cardiac Output, Venous Return, Guyton Diagram"
+    },
+    {
+      "questionId": "q-4855200607-19",
+      "summary": "Mean systemic filling pressure (MSFP) is measured after cardiac arrest. It increases with hypervolemia. At equilibrium after arrest, pressure should be uniform, so arterioles shouldn't be higher than capillaries. MSFP (~7 mmHg) is lower than MAP (~93 mmHg), lower than mean capillary pressure, but higher than normal CVP (~2 mmHg).",
+      "whyCorrect": {
+        "a": "MSFP is measured after cardiac arrest when blood flow stops and pressures equilibrate throughout the vascular system.",
+        "c": "Hypervolemia increases MSFP because more blood volume fills the vascular space, raising the equilibrium pressure.",
+        "e": "Note: This option seems contradictory to the definition of MSFP (equal pressure everywhere after arrest). However, if interpreted as comparing to NORMAL circulation values, arterioles do have higher pressure than capillaries. This question may have an error - during cardiac arrest, pressures equalize.",
+        "f": "MSFP (~7 mmHg) is lower than normal CVP (~2 mmHg)? This seems incorrect - MSFP is typically HIGHER than CVP. This option may be an error in the question. If correct, there may be specific context."
+      },
+      "whyIncorrect": {
+        "b": "MSFP (~7 mmHg) is NOT equal to mean capillary pressure during normal circulation (~17-25 mmHg).",
+        "d": "MSFP (~7 mmHg) IS lower than mean arterial pressure (~93 mmHg), so this should be CORRECT. The answer key may have variations."
+      },
+      "topicReference": "Topic 47: Cardiac Output, Venous Return, Guyton Diagram"
+    },
+    {
+      "questionId": "q-4855200607-47",
+      "summary": "Mean systemic filling pressure (MSFP ~7 mmHg) is measured after cardiac arrest. It increases with hypervolemia and is lower than MAP (~93 mmHg). The relationship to CVP and arteriole-capillary pressure depends on interpretation: at arrest all pressures equalize, but comparing to normal circulation values differs.",
+      "whyCorrect": {
+        "b": "MSFP (~7 mmHg) is indeed lower than normal central venous pressure (~2 mmHg)? Note: This conflicts with standard physiology where MSFP > CVP. May be question-specific interpretation.",
+        "c": "During NORMAL circulation, arteriolar pressure is higher than capillary pressure. At arrest, they equalize. This answer may refer to normal circulation comparisons.",
+        "d": "MSFP is measured after cardiac arrest when blood flow stops and all vascular pressures equilibrate to a single value.",
+        "e": "MSFP (~7 mmHg) is lower than mean arterial pressure (~93 mmHg). The pumping heart creates the arterial-venous pressure difference.",
+        "f": "Hypervolemia increases MSFP because additional blood volume in the vascular space increases the equilibrium filling pressure."
+      },
+      "whyIncorrect": {
+        "a": "MSFP (~7 mmHg) is NOT equal to mean capillary pressure during normal circulation (~17-25 mmHg). They are different values."
+      },
+      "topicReference": "Topic 47: Cardiac Output, Venous Return, Guyton Diagram"
+    },
+    {
+      "questionId": "q-4855200607-51",
+      "summary": "Fick equation: CO = O₂ consumption ÷ (arterial O₂ - venous O₂). Given: O₂ consumption = 2000 mL/min, arterial O₂ = 20 mL/100mL, venous O₂ = 10 mL/100mL. Calculate: CO = 2000 ÷ (200-100 mL/L) = 2000 ÷ 100 = 20 L/min.",
+      "whyCorrect": {
+        "d": "Using Fick principle: CO = 2000 mL/min ÷ [(20-10) mL/100mL × 10] = 2000 ÷ 100 mL/L = 20 L/min. This high CO indicates exercise state (resting CO ~5 L/min)."
+      },
+      "whyIncorrect": {
+        "a": "10 L/min would require A-V O₂ difference of 200 mL/L (20 mL/100mL), but the actual difference is only 10 mL/100mL (100 mL/L).",
+        "b": "2.5 L/min would require A-V O₂ difference of 800 mL/L, which is physiologically impossible and doesn't match the given 10 mL/100mL difference.",
+        "c": "5 L/min would require A-V O₂ difference of 400 mL/L (40 mL/100mL), which is 4× the actual difference given in the question."
+      },
+      "topicReference": "Topic 47: Cardiac Output, Venous Return, Guyton Diagram"
+    },
+    {
+      "questionId": "q-5156012322-14",
+      "summary": "The Guyton diagram (cardiac output curve plotted against vascular function curve) describes the interaction between cardiac function and venous return in determining cardiac output. It does NOT describe pressure-volume relationships, neural architecture, or blood pressure regulatory mechanisms directly.",
+      "whyCorrect": {
+        "a": "The Guyton diagram plots cardiac output curve (how CO changes with right atrial pressure) against vascular function curve (how venous return changes with RAP). Their intersection determines steady-state cardiac output."
+      },
+      "whyIncorrect": {
+        "b": "Pressure-volume relationships of blood vessels are described by compliance curves, not the Guyton diagram. P-V loops describe cardiac chamber function.",
+        "c": "Neural architecture of circulatory reflexes involves the brainstem cardiovascular centers, baroreceptor pathways, etc. The Guyton diagram is a hemodynamic model, not a neural map.",
+        "d": "While cardiac output affects blood pressure, the Guyton diagram specifically models CO determination, not BP regulation per se. BP regulation involves multiple feedback systems."
+      },
+      "topicReference": "Topic 47: Cardiac Output, Venous Return, Guyton Diagram"
+    },
+    {
+      "questionId": "q-5156012322-16",
+      "summary": "Central venous pressure (CVP) increases when: venous return exceeds cardiac output (heart failure, increased peripheral resistance backing up blood), blood volume increases (hypervolemia), or cardiac pumping decreases. CVP decreases with hypovolemia. Expiration increases intrathoracic pressure, impeding venous return.",
+      "whyCorrect": {
+        "a": "Increased peripheral resistance backs up blood in the venous system. If cardiac output cannot match venous return, blood accumulates, raising CVP.",
+        "c": "Decreased cardiac pumping (heart failure) means the heart cannot effectively empty the venous system, causing blood to accumulate and CVP to rise.",
+        "d": "Hypervolemia directly increases CVP by adding more blood volume to the circulation, increasing filling pressures throughout the venous system."
+      },
+      "whyIncorrect": {
+        "b": "Decreased blood volume (hypovolemia) DECREASES CVP because there's less blood to fill the venous system.",
+        "e": "Expiration increases intrathoracic pressure, which impedes venous return and can transiently DECREASE CVP (less blood returning to thorax) or have complex effects. During sustained expiration, blood backs up peripherally.",
+        "f": "Parasympathetic stimulation decreases heart rate and may decrease cardiac output, but the direct effect on CVP is complex and typically not a primary factor increasing CVP."
+      },
+      "topicReference": "Topic 47: Cardiac Output, Venous Return, Guyton Diagram"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "topic": 34,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 6,
+    "status": "COMPLETE"
+  },
+  "explanations": [
+    {
+      "questionId": "q-0313014645-15",
+      "summary": "High shear rate reduces blood viscosity by TWO mechanisms: (1) Breaks up rouleaux (money-roll) RBC aggregates, (2) Deforms RBCs into elongated streamlined shapes. Blood is a non-Newtonian fluid - viscosity depends on shear rate.",
+      "whyCorrect": {
+        "c": "BOTH mechanisms contribute to shear-thinning of blood: (1) High shear disperses rouleaux formations that form at low shear; (2) High shear deforms flexible RBCs into streamlined shapes that slide past each other more easily."
+      },
+      "whyIncorrect": {
+        "a": "Rouleaux dispersion is ONE mechanism, but not the only one.",
+        "b": "RBC elongation/streamlining is ONE mechanism, but not the only one.",
+        "d": "Wrong - blood viscosity IS shear-rate dependent. Blood is NON-Newtonian (viscosity changes with shear)."
+      },
+      "topicReference": "Topic 34: Blood Viscosity"
+    },
+    {
+      "questionId": "q-3543048990-57",
+      "summary": "Increased hematocrit: INCREASES viscosity → INCREASES peripheral resistance → DECREASES turbulence tendency (higher viscosity = lower Reynolds number). Does NOT affect Bohr effect (which is pH/CO2 dependent).",
+      "whyCorrect": {
+        "a": "Higher hematocrit increases viscosity. Higher viscosity DECREASES Reynolds number (Re = ρvD/η), making turbulent flow LESS likely.",
+        "e": "Higher hematocrit increases blood viscosity. By Poiseuille's law (R ∝ η), increased viscosity increases peripheral resistance."
+      },
+      "whyIncorrect": {
+        "b": "Increased hematocrit INCREASES viscosity (more RBCs = thicker blood), not decreases.",
+        "c": "Increased hematocrit INCREASES peripheral resistance (more viscous blood = higher resistance).",
+        "d": "Bohr effect relates to pH/CO2 effects on hemoglobin O2 affinity - unrelated to hematocrit."
+      },
+      "topicReference": "Topic 34: Blood Viscosity"
+    },
+    {
+      "questionId": "q-3543048990-58",
+      "summary": "Viscosity facts: (1) HEMATOCRIT (not proteins) is major determinant; (2) Fahraeus-Lindqvist = viscosity decreases in small vessels; (3) Viscosity DECREASES at high flow (shear-thinning); (4) High viscosity decreases turbulence; (5) Shear stress = viscosity × shear rate.",
+      "whyCorrect": {
+        "b": "Fahraeus-Lindqvist effect: Blood viscosity DECREASES in vessels <300μm diameter due to axial streaming of RBCs leaving plasma-rich layer at walls.",
+        "d": "High viscosity DECREASES turbulence tendency. Reynolds number = ρvD/η; higher η means lower Re, favoring laminar flow.",
+        "e": "Shear stress (τ) = viscosity (η) × shear rate (dv/dr). Higher viscosity means greater wall shear stress at same flow rate."
+      },
+      "whyIncorrect": {
+        "a": "HEMATOCRIT is the major factor determining blood viscosity, not plasma proteins. RBCs contribute most to viscosity.",
+        "c": "Viscosity DECREASES at high flow velocities (shear-thinning behavior) due to rouleaux breakup and RBC deformation."
+      },
+      "topicReference": "Topic 34: Blood Viscosity"
+    },
+    {
+      "questionId": "q-4525102917-12",
+      "summary": "Fahraeus-Lindqvist effect: Blood viscosity DECREASES in narrow vessels (down to ~7-10μm). Cause: axial streaming concentrates RBCs in center, leaving cell-free plasma layer at wall. Below 7μm, viscosity increases again.",
+      "whyCorrect": {
+        "e": "Fahraeus-Lindqvist effect = viscosity DECREASES in narrow vessels (to ~7-10μm). RBCs stream axially, plasma layer at wall reduces apparent viscosity."
+      },
+      "whyIncorrect": {
+        "a": "This describes shear-thinning, not Fahraeus-Lindqvist (which relates to vessel diameter, not flow velocity).",
+        "b": "Opposite - viscosity DECREASES (not increases) in narrow vessels down to 7-10μm.",
+        "c": "Wrong - viscosity IS affected by both flow velocity (shear-thinning) and vessel size (Fahraeus-Lindqvist).",
+        "d": "Wrong - viscosity DECREASES with increased velocity (shear-thinning)."
+      },
+      "topicReference": "Topic 34: Blood Viscosity"
+    },
+    {
+      "questionId": "q-4855200607-13",
+      "summary": "Fahraeus-Lindqvist effect: Blood apparent viscosity DECREASES as vessel diameter narrows (to ~7-10μm) because RBCs concentrate in axial stream, leaving cell-poor plasma at vessel walls.",
+      "whyCorrect": {
+        "c": "Fahraeus-Lindqvist effect: Viscosity DECREASES in narrower vessels (down to 7-10μm diameter) due to axial streaming of RBCs and cell-free plasma layer at walls."
+      },
+      "whyIncorrect": {
+        "a": "This describes the shear-thinning property (velocity-dependent), not Fahraeus-Lindqvist (diameter-dependent).",
+        "b": "Opposite - viscosity DECREASES in narrow vessels. It only increases again below ~7μm (inverse F-L effect).",
+        "d": "Wrong - blood viscosity varies with both shear rate and vessel size.",
+        "e": "Opposite - viscosity DECREASES at high velocity (shear-thinning)."
+      },
+      "topicReference": "Topic 34: Blood Viscosity"
+    },
+    {
+      "questionId": "q-4855200607-16",
+      "summary": "RBC shape in circulation is determined primarily by PASSIVE DEFORMATION from shear forces. RBCs have no contractile proteins. Their membrane/cytoskeleton allows deformation but shear forces actually CAUSE the shape changes.",
+      "whyCorrect": {
+        "d": "RBC shape in flowing blood is determined by PASSIVE DEFORMATION due to shear forces. The biconcave disc becomes parachute-shaped in capillaries due to external forces, not internal activity."
+      },
+      "whyIncorrect": {
+        "a": "Membrane elasticity ALLOWS deformation but doesn't DETERMINE shape - shear forces do.",
+        "b": "Cytoskeleton (spectrin network) maintains RBC integrity and allows recovery, but shear forces determine shape.",
+        "c": "RBCs have NO contractile proteins - they're anucleate cells with only cytoskeleton, no active shape changes."
+      },
+      "topicReference": "Topic 34: Blood Viscosity"
+    }
+  ]
+}

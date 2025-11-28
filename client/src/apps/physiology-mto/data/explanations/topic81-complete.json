@@ -1,0 +1,6 @@
+{
+  "metadata": {"topic": 81, "generatedAt": "2025-11-28", "totalQuestions": 1, "status": "COMPLETE"},
+  "explanations": [
+    {"questionId": "q-2734027349-15", "summary": "Hormone-regulated renal transports: (1) K+ secretion - aldosterone (collecting duct), (2) Na+ reabsorption - ANH inhibits it (collecting duct), (3) Ca2+ reabsorption - PTH (distal tubule). NOT: vasopressin on thick ascending limb Na+, aldosterone on proximal tubule.", "whyCorrect": {"b": "Aldosterone increases K+ secretion in collecting duct principal cells via ENaC and ROMK channels.", "d": "ANH (ANP) INHIBITS Na+ reabsorption in collecting duct (opposes aldosterone).", "e": "PTH increases Ca2+ reabsorption in distal tubule via TRPV5 channels."}, "whyIncorrect": {"a": "Vasopressin acts on collecting duct water permeability, not thick ascending limb Na+.", "c": "Aldosterone acts on collecting duct, NOT proximal tubule.", "f": "Aldosterone increases K+ SECRETION, not reabsorption."}, "topicReference": "Topic 81: Hormone Regulation of Renal Transport"}
+  ]
+}

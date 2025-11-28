@@ -1,0 +1,138 @@
+{
+  "metadata": {
+    "topic": 44,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 9,
+    "status": "COMPLETE"
+  },
+  "explanations": [
+    {
+      "questionId": "q-3543048990-64",
+      "summary": "Interstitial fluid increases with: decreased plasma proteins (↓πc → less reabsorption), elevated venous pressure (↑Pc), elevated arteriolar pressure (↑Pc), and histamine (↑permeability → proteins leak → ↑πi). Decreased interstitial colloid pressure would REDUCE edema. A-V anastomoses bypass capillaries and don't increase filtration.",
+      "whyCorrect": {
+        "a": "Decreased plasma proteins reduce plasma oncotic pressure (πc), decreasing the reabsorption force and causing net fluid accumulation in the interstitium (hypoproteinemic edema).",
+        "c": "Increased venous pressure raises capillary hydrostatic pressure (especially at venular end), increasing filtration and reducing reabsorption (venous congestion edema).",
+        "d": "Increased arteriolar pressure transmits higher pressure to capillaries, increasing filtration throughout the capillary bed.",
+        "f": "Histamine increases capillary permeability, allowing proteins to leak into interstitium. This raises interstitial oncotic pressure (πi), drawing more fluid out (inflammatory edema)."
+      },
+      "whyIncorrect": {
+        "b": "Decreased interstitial colloid osmotic pressure (πi) would DECREASE interstitial fluid by reducing the force pulling fluid out of capillaries.",
+        "e": "Opened arteriovenous anastomoses BYPASS capillaries, shunting blood directly from arterioles to venules. This reduces capillary flow and filtration."
+      },
+      "topicReference": "Topic 44: Lymphatic System, Edema"
+    },
+    {
+      "questionId": "q-3543048990-65",
+      "summary": "Lymphatic facts: There are NO lymphatics in brain tissue (CSF serves this role). Lymphatics regulate interstitial fluid volume by draining excess fluid and proteins. Lungs DO have lymphatics. Thoracic duct pressure is slightly POSITIVE (not lower than RA). Increased MSFP doesn't directly promote lymph flow.",
+      "whyCorrect": {
+        "b": "The brain has NO lymphatic vessels. Instead, the glymphatic system (perivascular channels) and CSF drainage serve similar functions. This is unique to the CNS.",
+        "c": "The lymphatic system is essential for interstitial fluid volume regulation. It returns filtered fluid and proteins to the circulation, preventing edema."
+      },
+      "whyIncorrect": {
+        "a": "The lungs DO have extensive lymphatic vessels. They are crucial for keeping alveoli dry and clearing any filtered fluid/proteins.",
+        "d": "Thoracic duct pressure is typically slightly POSITIVE (0-2 mmHg), which is similar to or slightly higher than right atrial pressure. Lymph drains into veins due to one-way valves and muscle compression.",
+        "e": "Increased mean systemic filling pressure doesn't directly promote lymph flow. Lymph flow is determined by interstitial fluid pressure and lymphatic pumping, not MSFP."
+      },
+      "topicReference": "Topic 44: Lymphatic System, Edema"
+    },
+    {
+      "questionId": "q-3543048990-89",
+      "summary": "Cardiovascular causes of edema: (1) Venous obstruction raises capillary Pc, (2) Low plasma protein reduces πc, (3) Lymphatic obstruction prevents drainage. Arteriolar vasoconstriction actually REDUCES edema by decreasing capillary pressure and flow.",
+      "whyCorrect": {
+        "a": "Venous obstruction raises capillary hydrostatic pressure (Pc) by backing up blood. Increased Pc increases filtration and reduces reabsorption, causing edema.",
+        "b": "Low intravascular protein concentration reduces plasma oncotic pressure (πc). Less reabsorption force leads to net fluid accumulation in tissues.",
+        "c": "Lymphatic obstruction prevents drainage of interstitial fluid and proteins. Fluid accumulates, causing lymphedema."
+      },
+      "whyIncorrect": {
+        "d": "Arteriolar vasoconstriction REDUCES capillary hydrostatic pressure by limiting arterial inflow. This actually DECREASES filtration and would reduce (not cause) edema."
+      },
+      "topicReference": "Topic 44: Lymphatic System, Edema"
+    },
+    {
+      "questionId": "q-4447200607-25",
+      "summary": "Lymphatic facts: Brain has NO lymphatics (glymphatic system serves similar function). Lymphatics regulate interstitial fluid volume. Lungs DO have lymphatics. Thoracic duct pressure is similar to or slightly higher than RA pressure. MSFP doesn't directly affect lymph flow.",
+      "whyCorrect": {
+        "a": "The brain lacks conventional lymphatic vessels. The recently discovered glymphatic system and meningeal lymphatics serve similar drainage functions.",
+        "b": "The lymphatic system is crucial for interstitial fluid homeostasis. It returns approximately 3-4 L/day of filtered fluid and proteins to circulation."
+      },
+      "whyIncorrect": {
+        "c": "The lungs have extensive lymphatic drainage. Pulmonary lymphatics are essential for clearing interstitial fluid and preventing pulmonary edema.",
+        "d": "Increased mean systemic filling pressure does not directly promote lymph flow. Lymph propulsion depends on intrinsic lymphatic contractions, external compression, and interstitial pressure.",
+        "e": "Thoracic duct pressure is typically equal to or slightly above right atrial pressure. Lymph drainage into veins occurs due to one-way valves during inspiration when RA pressure drops."
+      },
+      "topicReference": "Topic 44: Lymphatic System, Edema"
+    },
+    {
+      "questionId": "q-4855200607-30",
+      "summary": "The MAJOR function of lymphatics is to REMOVE PROTEINS from interstitial fluid. Proteins that leak through capillaries cannot return directly to blood (too large) and must be removed via lymphatics. Without this, interstitial oncotic pressure would rise, causing progressive edema.",
+      "whyCorrect": {
+        "e": "Removing proteins from interstitium is the most critical lymphatic function. Leaked plasma proteins cannot re-enter capillaries and would accumulate, raising interstitial oncotic pressure and causing progressive edema without lymphatic drainage."
+      },
+      "whyIncorrect": {
+        "a": "Lactic acid and small metabolites are removed by venous blood, not lymphatics. These small molecules easily cross capillary walls.",
+        "b": "Lymphatics REMOVE proteins from tissues, they don't deliver them. Proteins for tissue use arrive via blood plasma.",
+        "c": "Lipid-soluble nutrients are absorbed via intestinal lacteals (lymphatics) but this is not the major function of the entire lymphatic system. Also, lacteals deliver to blood, not tissues.",
+        "d": "Lymphatics transport lymphocytes FROM tissues TO lymph nodes and circulation, not to tissues. Lymphocytes enter tissues from blood."
+      },
+      "topicReference": "Topic 44: Lymphatic System, Edema"
+    },
+    {
+      "questionId": "q-4855200607-34",
+      "summary": "Total lymph flow in adults is approximately 1-2 mL/min (≈2-4 L/day). This matches net capillary filtration. Values in mL/sec would be too high; values in microliters would be too low. This represents the drainage needed to maintain fluid balance.",
+      "whyCorrect": {
+        "f": "Total lymph flow is approximately 1-2 mL/min (or about 2-4 L/day). This flow rate matches the net capillary filtration not reabsorbed directly and maintains interstitial fluid homeostasis."
+      },
+      "whyIncorrect": {
+        "a": "1-2 mL/sec would be 60-120 mL/min, far too high. This would exceed capillary filtration capacity.",
+        "b": "1-2 microliters/hour is negligibly small (0.001-0.002 mL/hour). This couldn't maintain fluid balance.",
+        "c": "1-2 microliters/min is also too small (0.001-0.002 mL/min). Normal lymph flow is about 1000× higher.",
+        "d": "1-2 microliters/sec = 0.06-0.12 mL/min, still too low for normal lymph flow.",
+        "e": "1-2 mL/hour = 0.017-0.033 mL/min, about 50× too low for adequate interstitial drainage."
+      },
+      "topicReference": "Topic 44: Lymphatic System, Edema"
+    },
+    {
+      "questionId": "q-4855200607-50",
+      "summary": "Edema-causing factors: (1) Lymphatic obstruction prevents fluid/protein drainage, (2) Venous obstruction raises capillary Pc, (3) Low plasma proteins reduce πc. Arteriolar vasoconstriction REDUCES capillary pressure and would decrease (not cause) edema.",
+      "whyCorrect": {
+        "b": "Lymphatic obstruction prevents interstitial fluid and protein drainage. Without lymphatic return, fluid and proteins accumulate causing lymphedema.",
+        "c": "Venous obstruction backs up blood, raising capillary hydrostatic pressure (Pc). Elevated Pc increases filtration, causing edema.",
+        "d": "Low intravascular protein concentration reduces plasma oncotic pressure (πc), decreasing reabsorption and leading to edema."
+      },
+      "whyIncorrect": {
+        "a": "Arteriolar vasoconstriction DECREASES capillary hydrostatic pressure by limiting blood inflow. This reduces filtration and would prevent (not cause) edema."
+      },
+      "topicReference": "Topic 44: Lymphatic System, Edema"
+    },
+    {
+      "questionId": "q-5156012322-21",
+      "summary": "Total lymph flow in adults is approximately 1-2 mL/min, which equals roughly 2-4 L/day. This balances the net capillary filtration that isn't directly reabsorbed. Higher rates (mL/sec) or lower rates (microliters) are physiologically incorrect.",
+      "whyCorrect": {
+        "b": "Lymph flow is approximately 1-2 mL/min in adults. This equals about 2-4 L/day and matches the volume of capillary filtrate not reabsorbed directly back into capillaries."
+      },
+      "whyIncorrect": {
+        "a": "1-2 mL/sec would be 60-120 mL/min, approximately 100× too high and exceeding total capillary filtration.",
+        "c": "1-2 mL/hour = 0.017-0.033 mL/min, far too low to maintain interstitial fluid balance.",
+        "d": "1-2 microliters/min = 0.001-0.002 mL/min, negligibly small.",
+        "e": "1-2 microliters/hour is essentially zero flow physiologically.",
+        "f": "1-2 microliters/sec = 0.06-0.12 mL/min, still about 10× too low."
+      },
+      "topicReference": "Topic 44: Lymphatic System, Edema"
+    },
+    {
+      "questionId": "q-5156012322-22",
+      "summary": "Malnutrition causes edema primarily through DECREASED plasma colloid osmotic pressure (πc) due to low protein (albumin) synthesis. Kwashiorkor (protein malnutrition) classically causes edema because low albumin reduces the reabsorption force at capillaries.",
+      "whyCorrect": {
+        "e": "Malnutrition causes hypoalbuminemia (low plasma albumin) → decreased plasma colloid osmotic pressure (πc) → reduced capillary reabsorption → edema. This is the classic mechanism of kwashiorkor edema."
+      },
+      "whyIncorrect": {
+        "a": "Doubled plasma albumin would INCREASE oncotic pressure and PREVENT edema, not cause it.",
+        "b": "Increased interstitial oncotic pressure would cause edema, but this isn't the primary mechanism in malnutrition. The problem is low PLASMA oncotic pressure.",
+        "c": "Increased plasma hydrostatic pressure would cause edema, but this isn't characteristic of malnutrition.",
+        "d": "Increased capillary permeability causes inflammatory edema, not malnutrition-related edema.",
+        "f": "Decreased interstitial hydrostatic pressure would slightly favor filtration, but this is minor and not the mechanism of malnutrition edema."
+      },
+      "topicReference": "Topic 44: Lymphatic System, Edema"
+    }
+  ]
+}

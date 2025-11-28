@@ -1,0 +1,502 @@
+{
+  "metadata": {
+    "topic": 47,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 15,
+    "status": "TEMPLATE - needs explanations generated"
+  },
+  "questions": [
+    {
+      "questionId": "q-0313014645-4",
+      "text": "How does the circulatory regulation try to compensate the effects of blood loss (hemorrhage)?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the total peripheral resistance will increase"
+        },
+        {
+          "letter": "b",
+          "text": "plasma ANH levels are elevated"
+        },
+        {
+          "letter": "c",
+          "text": "sympathetic vasoconstrictor tone increases in the capacitance vessels (veins)"
+        },
+        {
+          "letter": "d",
+          "text": "central venous pressure will be increased"
+        },
+        {
+          "letter": "e",
+          "text": "cardiac output increases"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "c"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-3543048990-50",
+      "text": "500 ml blood is infused into the cubital vein. As a result",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the increment of arterial blood volume is very small"
+        },
+        {
+          "letter": "b",
+          "text": "venous pressure increases"
+        },
+        {
+          "letter": "c",
+          "text": "pressure in the right atrium increases"
+        },
+        {
+          "letter": "d",
+          "text": "hydrostatic pressure in the veins increases"
+        },
+        {
+          "letter": "e",
+          "text": "cardiac output increases"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "correctAnswerCount": 5
+    },
+    {
+      "questionId": "q-3543048990-78",
+      "text": "Atrial stretch receptors (B-receptors):",
+      "options": [
+        {
+          "letter": "a",
+          "text": "influence ADH secretion"
+        },
+        {
+          "letter": "b",
+          "text": "mediate the Bezold-Jarish reflex"
+        },
+        {
+          "letter": "c",
+          "text": "stimulate the pressor center"
+        },
+        {
+          "letter": "d",
+          "text": "mediate the Herin-Breuer reflex"
+        },
+        {
+          "letter": "e",
+          "text": "elicit a drop in blood pressure"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "e"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-3543048990-79",
+      "text": "The Bainbridge reflex:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "is elicited by stretching the pulmonary arteries"
+        },
+        {
+          "letter": "b",
+          "text": "is a depressor reflex"
+        },
+        {
+          "letter": "c",
+          "text": "originates from the right atrial baroreceptors"
+        },
+        {
+          "letter": "d",
+          "text": "increases heart rate in response to enhanced venous return"
+        },
+        {
+          "letter": "e",
+          "text": "can be elicited by administering veratridine"
+        }
+      ],
+      "correctAnswers": [
+        "c",
+        "d"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-3543048990-83",
+      "text": "Cardiac output",
+      "options": [
+        {
+          "letter": "a",
+          "text": "can be calculated from oxygen consumption and arterial and venous oxygen content"
+        },
+        {
+          "letter": "b",
+          "text": "is the product of heart rate and stroke volume"
+        },
+        {
+          "letter": "c",
+          "text": "is reduced by stimulation of the vagus nerve"
+        },
+        {
+          "letter": "d",
+          "text": "is increased by stimulation of sympathetic nerves to the heart"
+        },
+        {
+          "letter": "e",
+          "text": "may vary in adults from 4 liters/min to 25 liters/min"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "correctAnswerCount": 5
+    },
+    {
+      "questionId": "q-3543048990-85",
+      "text": "Which of the following statements are correct?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "venous return increases during expiration"
+        },
+        {
+          "letter": "b",
+          "text": "venous return increase on arteriolar dilation"
+        },
+        {
+          "letter": "c",
+          "text": "alpha-1 adrenergic receptor stimulation increases venous return"
+        },
+        {
+          "letter": "d",
+          "text": "venous return is an important factor determining capillary filtration"
+        },
+        {
+          "letter": "e",
+          "text": "intraabdominal pressure promotes filling of the right atrium during inspiration"
+        },
+        {
+          "letter": "f",
+          "text": "venous return is the major factor determining cardiac output"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c",
+        "d",
+        "e",
+        "f"
+      ],
+      "correctAnswerCount": 5
+    },
+    {
+      "questionId": "q-3543048990-86",
+      "text": "The mean systemic filling pressure",
+      "options": [
+        {
+          "letter": "a",
+          "text": "is measured after the arrest of the heart"
+        },
+        {
+          "letter": "b",
+          "text": "is higher in the arterioles than in the capillaries"
+        },
+        {
+          "letter": "c",
+          "text": "is lower than the normal central venous pressure"
+        },
+        {
+          "letter": "d",
+          "text": "is lower than the normal mean arterial pressure"
+        },
+        {
+          "letter": "e",
+          "text": "is the same as the normal mean capillary pressure"
+        },
+        {
+          "letter": "f",
+          "text": "increases with hypervolemia"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "d",
+        "f"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-3543048990-87",
+      "text": "After cardiac arrest:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "arterial pressure is decreased"
+        },
+        {
+          "letter": "b",
+          "text": "venous pressure increases"
+        },
+        {
+          "letter": "c",
+          "text": "arterial and venous pressure falls to zero"
+        },
+        {
+          "letter": "d",
+          "text": "interstitial fluid is reabsorbed into the vessels"
+        },
+        {
+          "letter": "e",
+          "text": "the blood volume in the low-pressure areas of the circulatory system decrease"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "b",
+        "d"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-4447200607-11",
+      "text": "Determine the cardiac output! Oxygen consumption: 2000mL/min, arterial oxygen concentration: 20mL/100mL, venous oxygen concentration: 10 mL/100mL",
+      "options": [
+        {
+          "letter": "a",
+          "text": "20 L/min"
+        },
+        {
+          "letter": "b",
+          "text": "25 L/min"
+        },
+        {
+          "letter": "c",
+          "text": "10 L/min"
+        },
+        {
+          "letter": "d",
+          "text": "5 L/min"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4855200607-3",
+      "text": "The mean systemic filling pressure",
+      "options": [
+        {
+          "letter": "a",
+          "text": "is higher in the arterioles than in the capillaries"
+        },
+        {
+          "letter": "b",
+          "text": "is the same as the normal mean capillary pressure"
+        },
+        {
+          "letter": "c",
+          "text": "is lower than the normal central venous pressure"
+        },
+        {
+          "letter": "d",
+          "text": "is measured after the arrest of the heart"
+        },
+        {
+          "letter": "e",
+          "text": "increases with hypervolemia"
+        },
+        {
+          "letter": "f",
+          "text": "is lower than the normal mean arterial pressure"
+        }
+      ],
+      "correctAnswers": [
+        "d",
+        "e",
+        "f"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-4855200607-19",
+      "text": "The mean systemic filling pressure",
+      "options": [
+        {
+          "letter": "a",
+          "text": "is measured after the arrest of the heart"
+        },
+        {
+          "letter": "b",
+          "text": "is the same as the normal mean capillary pressure"
+        },
+        {
+          "letter": "c",
+          "text": "increases with hypervolemia"
+        },
+        {
+          "letter": "d",
+          "text": "is lower than the normal mean arterial pressure"
+        },
+        {
+          "letter": "e",
+          "text": "is higher in the arterioles than in the capillaries"
+        },
+        {
+          "letter": "f",
+          "text": "is lower than the normal central venous pressure"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "c",
+        "e",
+        "f"
+      ],
+      "correctAnswerCount": 4
+    },
+    {
+      "questionId": "q-4855200607-47",
+      "text": "The mean systemic filling pressure",
+      "options": [
+        {
+          "letter": "a",
+          "text": "is the same as the normal mean capillary pressure"
+        },
+        {
+          "letter": "b",
+          "text": "is lower than the normal central venous pressure"
+        },
+        {
+          "letter": "c",
+          "text": "is higher in the arterioles than in the capillaries"
+        },
+        {
+          "letter": "d",
+          "text": "is measured after cardiac arrest"
+        },
+        {
+          "letter": "e",
+          "text": "is lower than the normal mean arterial pressure"
+        },
+        {
+          "letter": "f",
+          "text": "increases with hypervolemia"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c",
+        "d",
+        "e",
+        "f"
+      ],
+      "correctAnswerCount": 5
+    },
+    {
+      "questionId": "q-4855200607-51",
+      "text": "Determine the cardiac output! Oxygen consumption: 2000mL/min, arterial oxygen concentration: 20mL/100mL, venous oxygen concentration: 10 mL/100mL",
+      "options": [
+        {
+          "letter": "a",
+          "text": "10 L/min"
+        },
+        {
+          "letter": "b",
+          "text": "2.5 L/min"
+        },
+        {
+          "letter": "c",
+          "text": "5 L/min"
+        },
+        {
+          "letter": "d",
+          "text": "20 L/min"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-5156012322-14",
+      "text": "The Guyton diagram describes:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the interaction of the mechanisms determining cardiac output"
+        },
+        {
+          "letter": "b",
+          "text": "the pressure-volume relationship of blood vessels"
+        },
+        {
+          "letter": "c",
+          "text": "neuronal architecture of circulatory reflexes"
+        },
+        {
+          "letter": "d",
+          "text": "the major mechanisms regulating blood pressure"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-5156012322-16",
+      "text": "Factors increasing the central venous pressure include",
+      "options": [
+        {
+          "letter": "a",
+          "text": "increased peripheral resistance"
+        },
+        {
+          "letter": "b",
+          "text": "decreased blood volume"
+        },
+        {
+          "letter": "c",
+          "text": "decreased pumping activity of the heart"
+        },
+        {
+          "letter": "d",
+          "text": "hypervolemia"
+        },
+        {
+          "letter": "e",
+          "text": "expiration"
+        },
+        {
+          "letter": "f",
+          "text": "parasympathetic stimulation"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "c",
+        "d"
+      ],
+      "correctAnswerCount": 3
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "metadata": {
+    "topic": 24,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 3,
+    "status": "COMPLETE"
+  },
+  "explanations": [
+    {
+      "questionId": "q-4447200607-13",
+      "summary": "Vasoconstriction uses IP3 pathway: alpha-1 receptors → PLC → IP3 → Ca²⁺ release → contraction. cGMP and cAMP both cause RELAXATION (vasodilation), not constriction.",
+      "whyCorrect": {
+        "d": "IP3 (inositol trisphosphate) mediates vasoconstriction. Alpha-1 receptor activation → phospholipase C → IP3 production → Ca²⁺ release from SR → smooth muscle contraction."
+      },
+      "whyIncorrect": {
+        "a": "cGMP ACTIVATION causes vasoDILATION (NO/nitric oxide pathway).",
+        "b": "cAMP STIMULATION causes vasoDILATION (beta-2 receptor pathway).",
+        "c": "cGMP STIMULATION causes vasoDILATION, not vasoconstriction."
+      },
+      "topicReference": "Topic 24: Smooth Muscle Second Messengers"
+    },
+    {
+      "questionId": "q-4855200607-21",
+      "summary": "Increased cAMP in vascular smooth muscle causes RELAXATION. cAMP activates PKA → phosphorylates MLCK → decreased Ca²⁺ sensitivity → relaxation. cAMP does NOT activate NOS or cause contraction.",
+      "whyCorrect": {
+        "b": "Increased cAMP causes vascular smooth muscle RELAXATION. cAMP → PKA → phosphorylation of myosin light chain kinase (MLCK) → reduced Ca²⁺ sensitivity → relaxation/vasodilation."
+      },
+      "whyIncorrect": {
+        "a": "NOS (nitric oxide synthase) is activated by Ca²⁺/calmodulin, not by cAMP.",
+        "c": "The Na⁺/K⁺ pump is not directly activated by cAMP in this context.",
+        "d": "Increased cAMP causes RELAXATION, not contraction. Contraction uses IP3/Ca²⁺ pathway."
+      },
+      "topicReference": "Topic 24: Smooth Muscle Second Messengers"
+    },
+    {
+      "questionId": "q-4855200607-46",
+      "summary": "Vasoconstriction is mediated by IP3 signaling: alpha receptors → PLC → IP3 → Ca²⁺ release → contraction. cGMP, cAMP, and PGE2 generally cause vasodilation.",
+      "whyCorrect": {
+        "d": "IP3 (inositol trisphosphate) mediates vasoconstriction. Gq-coupled receptors (alpha-1) activate PLC → IP3 → releases Ca²⁺ from SR → smooth muscle contracts."
+      },
+      "whyIncorrect": {
+        "a": "cGMP stimulation causes vasoDILATION via NO pathway, not vasoconstriction.",
+        "b": "PGE2 generally causes vasodilation (though effects vary by receptor subtype and vascular bed).",
+        "c": "cAMP stimulation causes vasoDILATION via beta receptor pathway."
+      },
+      "topicReference": "Topic 24: Smooth Muscle Second Messengers"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "topic": 33,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 7,
+    "status": "COMPLETE"
+  },
+  "explanations": [
+    {
+      "questionId": "q-0313014645-B-4",
+      "summary": "TPR is SMALLEST because parallel resistances sum as 1/Rtotal = 1/R1 + 1/R2 + ... When vascular beds are in parallel, total resistance is LESS than any individual bed's resistance. Each organ bed has higher resistance than TPR.",
+      "whyCorrect": {
+        "b": "Total peripheral resistance is the SMALLEST because all vascular beds are arranged in PARALLEL. In parallel circuits, 1/Rtotal = 1/R1 + 1/R2 + 1/R3... This makes total resistance LESS than any individual resistance."
+      },
+      "whyIncorrect": {
+        "a": "Intestinal vascular bed resistance is HIGHER than TPR because it's just one parallel pathway. Individual organ resistances > TPR.",
+        "c": "Renal vascular bed resistance is HIGHER than TPR - it's a single parallel branch.",
+        "d": "Intracerebral vascular resistance is HIGHER than TPR.",
+        "e": "Skin vessel resistance is HIGHER than TPR - especially at rest when skin vessels are constricted."
+      },
+      "topicReference": "Topic 33: Hemodynamics"
+    },
+    {
+      "questionId": "q-3543048990-51",
+      "summary": "Hemodynamics: (1) Capillary resistance < arteriolar due to massive parallel arrangement; (2) Veins (not aorta) have greatest compliance; (3) Velocity lowest at capillaries, not continuously decreasing; (4) Veins hold most blood, not capillaries; (5) Low viscosity increases turbulence (Re=ρvD/η); (6) Laminar flow fastest at axis.",
+      "whyCorrect": {
+        "a": "Capillary bed resistance < arteriolar despite small individual capillary diameter because MASSIVE parallelism (~10 billion capillaries) dramatically reduces total resistance.",
+        "e": "Reynolds number = ρvD/η. Lower viscosity (η) increases Re, making turbulence more likely (Re > 2000).",
+        "f": "In laminar flow, velocity profile is parabolic with MAXIMUM velocity at the center (axis) and zero at the vessel wall."
+      },
+      "whyIncorrect": {
+        "b": "VEINS have greatest compliance (capacitance vessels), not aorta. Veins hold ~65% of blood volume.",
+        "c": "Velocity does NOT decrease continuously - it's LOWEST at capillaries (large total cross-section), then INCREASES in veins.",
+        "d": "VEINS contain largest blood volume (~65%), not capillaries (~5%). Veins are capacitance vessels."
+      },
+      "topicReference": "Topic 33: Hemodynamics"
+    },
+    {
+      "questionId": "q-4447200607-17",
+      "summary": "Poiseuille's Law: Flow = πΔPr⁴/8ηL. Radius has 4th power effect - doubling radius increases flow 16× (2⁴). Doubling pressure only doubles flow. Halving viscosity doubles flow. Radius is MOST effective.",
+      "whyCorrect": {
+        "b": "Doubling radius increases flow by 2⁴ = 16-fold (Poiseuille: Q ∝ r⁴). This is FAR more effective than any other change. Small vessel dilation has enormous flow effects."
+      },
+      "whyIncorrect": {
+        "a": "Doubling pressure only doubles flow (Q ∝ ΔP). 2× increase, not 16×.",
+        "c": "Halving viscosity doubles flow (Q ∝ 1/η). 2× increase, not 16×.",
+        "d": "Halving radius DECREASES flow to 1/16 (0.5⁴ = 1/16). Opposite of what's needed.",
+        "e": "Doubling length HALVES flow (Q ∝ 1/L). Wrong direction.",
+        "f": "Halving length doubles flow. 2× increase, not 16×.",
+        "g": "Doubling viscosity HALVES flow. Wrong direction."
+      },
+      "topicReference": "Topic 33: Hemodynamics"
+    },
+    {
+      "questionId": "q-4447200607-18",
+      "summary": "Turbulence occurs when Reynolds number > 2000. Re = ρvD/η. Turbulence favored by: larger vessel diameter (D↑), lower viscosity/hematocrit (η↓), higher velocity, sharp bends. NOT by high WBC or low velocity.",
+      "whyCorrect": {
+        "b": "Larger vessel caliber (diameter D) increases Reynolds number, promoting turbulence. Re = ρvD/η.",
+        "c": "Decreased hematocrit means lower blood viscosity (η↓), increasing Reynolds number and turbulence tendency.",
+        "e": "Sharp bends/angles disrupt laminar flow patterns and create turbulence even at lower Reynolds numbers.",
+        "f": "Low viscosity increases Reynolds number (Re ∝ 1/η), promoting turbulent flow."
+      },
+      "whyIncorrect": {
+        "a": "Increased WBC (leukemia) INCREASES viscosity, which DECREASES turbulence tendency.",
+        "d": "LOW velocity DECREASES Reynolds number, making flow MORE laminar, not turbulent."
+      },
+      "topicReference": "Topic 33: Hemodynamics"
+    },
+    {
+      "questionId": "q-4525102917-6",
+      "summary": "TPR = (P1-P2)/CO where P1=aortic pressure, P2=right atrial pressure, CO=cardiac output. This is Ohm's law for fluids: Resistance = Pressure difference / Flow. NOT CO/(P1-P2) or volume-based formulas.",
+      "whyCorrect": {
+        "c": "TPR = (P1-P2)/CO. Resistance = Pressure gradient / Flow. This is analogous to Ohm's law (R=V/I). Mean arterial pressure minus right atrial pressure divided by cardiac output."
+      },
+      "whyIncorrect": {
+        "a": "CO/(P1-P2) is inverted - this would calculate conductance, not resistance.",
+        "b": "V1-V2/CO uses volumes, not pressures. Resistance relates pressure to flow, not volume to flow.",
+        "d": "V1-V2/P1-P2 is nonsensical - volume difference divided by pressure difference has no physiological meaning for resistance."
+      },
+      "topicReference": "Topic 33: Hemodynamics"
+    },
+    {
+      "questionId": "q-4855200607-54",
+      "summary": "Both TPR and pulmonary resistance are smallest because they represent parallel arrangements of many vascular beds. Individual organ beds (cerebral, intestinal, renal) have higher resistance than total parallel resistance.",
+      "whyCorrect": {
+        "b": "TPR is small because systemic beds are in PARALLEL - parallel resistances sum as reciprocals, making total less than any individual.",
+        "c": "Pulmonary circulation resistance is also very LOW (~1/10 of systemic TPR) because pulmonary vessels are wide, short, and highly compliant."
+      },
+      "whyIncorrect": {
+        "a": "Intracerebral vascular bed is a single parallel branch - its resistance exceeds TPR.",
+        "d": "Intestinal vascular bed resistance is higher than TPR.",
+        "e": "Renal vascular bed resistance is higher than TPR, despite kidneys receiving 20% of CO."
+      },
+      "topicReference": "Topic 33: Hemodynamics"
+    },
+    {
+      "questionId": "q-5156012322-17",
+      "summary": "Poiseuille's Law: Resistance ∝ 1/r⁴ (inversely proportional to FOURTH power of radius). Small changes in radius cause dramatic resistance changes. Doubling radius decreases resistance 16-fold.",
+      "whyCorrect": {
+        "c": "Resistance is inversely proportional to the FOURTH power of radius (R ∝ 1/r⁴). From Poiseuille: R = 8ηL/πr⁴. This is why arteriolar tone is so powerful in controlling blood flow."
+      },
+      "whyIncorrect": {
+        "a": "Inversely proportional to r² is wrong - it's r⁴, not r².",
+        "b": "Directly proportional to radius is backwards - larger radius means LESS resistance.",
+        "d": "Inversely proportional to r³ is wrong - it's r⁴.",
+        "e": "Directly proportional to r² is doubly wrong - resistance DECREASES with radius and by 4th power, not 2nd."
+      },
+      "topicReference": "Topic 33: Hemodynamics"
+    }
+  ]
+}

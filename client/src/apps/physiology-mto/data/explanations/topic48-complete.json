@@ -1,0 +1,437 @@
+{
+  "metadata": {
+    "topic": 48,
+    "topicTitle": "Baroreceptor Reflexes and Cardiovascular Regulation",
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 31,
+    "status": "COMPLETE"
+  },
+  "explanations": [
+    {
+      "questionId": "q-0313014645-B-8",
+      "summary": "The CNS ischemic response is triggered by chemoreceptors in the ventral medulla that detect rising CO2 and H+ when brain perfusion is critically reduced. This is an emergency response, not a routine regulatory mechanism.",
+      "whyCorrect": {
+        "c": "The ventral medulla contains chemosensitive neurons that respond to local increases in CO2/H+ during cerebral ischemia. This triggers massive sympathetic outflow to raise blood pressure and restore brain perfusion."
+      },
+      "whyIncorrect": {
+        "a": "The right atrium contains low-pressure baroreceptors for volume regulation, not ischemia detection.",
+        "b": "The adrenal medulla secretes catecholamines but doesn't detect ischemia.",
+        "d": "The carotid sinus contains baroreceptors for pressure, not chemoreceptors for the CNS ischemic response.",
+        "e": "The carotid bodies are peripheral chemoreceptors for blood O2/CO2, not central ischemia sensors."
+      },
+      "topicReference": "Topic 48: CNS ischemic response - location and mechanism"
+    },
+    {
+      "questionId": "q-0313014645-B-11",
+      "summary": "Increased baroreceptor firing (from higher BP) inhibits the pressor center, causing reflex vasodilation and bradycardia. Body posture affects baroreceptor activity because gravity changes arterial pressure at the carotid sinus.",
+      "whyCorrect": {
+        "b": "Increased baroreceptor activity inhibits sympathetic outflow, causing reflex vasodilation (decreased vascular resistance).",
+        "c": "Standing reduces carotid sinus pressure (blood pools in legs), decreasing baroreceptor firing. Lying down increases it."
+      },
+      "whyIncorrect": {
+        "a": "Increased baroreceptor activity INHIBITS (not stimulates) the pressor area (RVLM).",
+        "d": "Increased baroreceptor activity causes reflex BRADYCARDIA, not tachycardia."
+      },
+      "topicReference": "Topic 48: Baroreceptor reflex effects and postural influences"
+    },
+    {
+      "questionId": "q-0313014645-B-18",
+      "summary": "Vascular resistance is primarily controlled by sympathetic vasoconstrictor tone. Reducing sympathetic outflow causes vasodilation and decreased TPR. Parasympathetic nerves have minimal effect on most blood vessels.",
+      "whyCorrect": {
+        "c": "Most blood vessels receive only sympathetic innervation. Decreasing sympathetic vasomotor tone causes vasodilation and reduces total peripheral resistance."
+      },
+      "whyIncorrect": {
+        "a": "Increasing sympathetic tone would INCREASE TPR, not decrease it.",
+        "b": "Parasympathetic innervation to blood vessels is minimal (mainly salivary glands, genitals) - no significant 'parasympathetic vasomotor tone' exists.",
+        "d": "Same as B - there's no meaningful 'parasympathetic vasomotor tone' to increase."
+      },
+      "topicReference": "Topic 48: Autonomic control of vascular resistance"
+    },
+    {
+      "questionId": "q-0313014645-2",
+      "summary": "Arterial baroreceptors are sensory neurons. Their cell bodies are in the sensory ganglia of CN IX (glossopharyngeal - carotid sinus) and CN X (vagus - aortic arch), like all peripheral sensory neurons.",
+      "whyCorrect": {
+        "d": "The baroreceptor afferent neurons have their cell bodies in the petrosal ganglion (CN IX for carotid sinus) and nodose ganglion (CN X for aortic arch)."
+      },
+      "whyIncorrect": {
+        "a": "The superior cervical ganglion contains sympathetic neurons, not sensory neurons.",
+        "b": "The adventitia contains the sensory TERMINALS (nerve endings), not the cell bodies.",
+        "c": "The nucleus tractus solitarius is where baroreceptor afferents TERMINATE, not where their cell bodies are.",
+        "e": "The nerve itself contains axons, not cell bodies."
+      },
+      "topicReference": "Topic 48: Baroreceptor afferent neuron anatomy"
+    },
+    {
+      "questionId": "q-0313014645-4",
+      "summary": "Hemorrhage activates compensatory responses: decreased baroreceptor firing triggers increased sympathetic outflow, causing arteriolar constriction (increased TPR) and venoconstriction (mobilizing blood from capacitance vessels).",
+      "whyCorrect": {
+        "a": "Sympathetic activation causes arteriolar vasoconstriction, increasing total peripheral resistance to maintain blood pressure despite reduced cardiac output.",
+        "c": "Venoconstriction mobilizes blood from the capacitance vessels (veins hold 60% of blood volume), helping maintain venous return and cardiac filling."
+      },
+      "whyIncorrect": {
+        "b": "ANH would be DECREASED in hemorrhage (low atrial stretch), not elevated.",
+        "d": "CVP DECREASES in hemorrhage due to blood loss.",
+        "e": "Cardiac output initially DECREASES due to reduced venous return."
+      },
+      "topicReference": "Topic 48: Cardiovascular compensation for hemorrhage"
+    },
+    {
+      "questionId": "q-0313014645-23",
+      "summary": "Skeletal muscle arterioles are controlled by both sympathetic vasoconstriction and local metabolic vasodilation. Sympathetic activation causes vasoconstriction. Local metabolites (K+, lactate, H+, low O2) cause vasodilation.",
+      "whyCorrect": {
+        "c": "Increased sympathetic vasomotor tone causes α1-receptor-mediated vasoconstriction in skeletal muscle arterioles."
+      },
+      "whyIncorrect": {
+        "a": "Increased K+ causes vasoDILATION (hyperpolarizes smooth muscle via K+ channels).",
+        "b": "Increased lactate causes vasoDILATION (metabolic hyperemia).",
+        "d": "Increased H+ causes vasoDILATION (acidosis relaxes smooth muscle).",
+        "e": "Reduced O2 causes vasoDILATION (hypoxic vasodilation for metabolic matching)."
+      },
+      "topicReference": "Topic 48: Sympathetic vs metabolic control of muscle blood flow"
+    },
+    {
+      "questionId": "q-3543048990-55",
+      "summary": "TPR increases with sympathetic activation. Chemoreceptor stimulation and the diving reflex both activate sympathetic vasoconstriction. Baroreceptor activation and β2 stimulation decrease TPR.",
+      "whyCorrect": {
+        "c": "Arterial chemoreceptor stimulation (hypoxia, hypercapnia) activates sympathetic vasoconstriction, increasing TPR.",
+        "f": "The diving reflex causes intense peripheral vasoconstriction (and bradycardia) to conserve O2 for brain and heart."
+      },
+      "whyIncorrect": {
+        "a": "Parasympathetic activity has minimal effect on blood vessels - doesn't significantly affect TPR.",
+        "b": "Baroreceptor activation DECREASES TPR via sympathetic inhibition.",
+        "d": "β2 receptor stimulation causes vasoDILATION, decreasing TPR.",
+        "e": "Bezold-Jarisch reflex causes vasoDILATION and bradycardia, decreasing TPR."
+      },
+      "topicReference": "Topic 48: Factors increasing total peripheral resistance"
+    },
+    {
+      "questionId": "q-3543048990-56",
+      "summary": "TPR decreases when sympathetic tone is reduced (vasodilation). Baroreceptor activation inhibits sympathetic outflow. The axon reflex involves local vasodilation but isn't a major TPR mechanism.",
+      "whyCorrect": {
+        "b": "Inhibiting sympathetic tone removes vasoconstrictor drive, causing vasodilation and decreased TPR.",
+        "c": "Baroreceptor stimulation (high BP) inhibits the sympathetic nervous system, causing vasodilation."
+      },
+      "whyIncorrect": {
+        "a": "Parasympathetic stimulation has minimal effect on most blood vessels.",
+        "d": "Chemoreceptor stimulation causes vasoconstriction, INCREASING TPR.",
+        "e": "The axon reflex causes local cutaneous vasodilation but doesn't significantly reduce total TPR.",
+        "f": "The renin-angiotensin system causes vasoconstriction, INCREASING TPR."
+      },
+      "topicReference": "Topic 48: Factors decreasing total peripheral resistance"
+    },
+    {
+      "questionId": "q-3543048990-68",
+      "summary": "Noradrenaline primarily activates α receptors (vasoconstriction). Adrenaline activates both α and β2 receptors; at low doses, β2 effects predominate in muscle vessels (vasodilation). Both dilate coronary vessels via β2 and metabolic effects.",
+      "whyCorrect": {
+        "a": "Noradrenaline primarily activates α1 receptors, causing vasoconstriction in muscle and most vascular beds.",
+        "b": "Low-dose adrenaline preferentially activates β2 receptors in skeletal muscle vessels, causing vasodilation.",
+        "c": "After α-blockade, adrenaline can only activate β2 receptors, causing pure vasodilation.",
+        "d": "Both catecholamines cause coronary vasodilation through β2 receptors and increased cardiac metabolic demand."
+      },
+      "whyIncorrect": {
+        "e": "Adrenaline INCREASES cardiac contractility via β1 receptors (positive inotropy), not decreases it."
+      },
+      "topicReference": "Topic 48: Catecholamine effects on blood vessels"
+    },
+    {
+      "questionId": "q-3543048990-73",
+      "summary": "Baroreceptors are stretch receptors in vessel walls that respond to pressure-induced distension. They're found in carotid sinus and aortic arch (high-pressure) and atria/great veins (low-pressure). Afferents project to NTS.",
+      "whyCorrect": {
+        "a": "Baroreceptors are mechanoreceptors that sense vessel wall stretch (deformation) caused by blood pressure.",
+        "c": "When activated (high BP), baroreceptors stimulate the cardioinhibitory center (nucleus ambiguus) via NTS.",
+        "d": "Baroreceptor afferents from CN IX and X project to the nucleus tractus solitarius (NTS) in the medulla."
+      },
+      "whyIncorrect": {
+        "b": "The carotid and aortic BODIES contain chemoreceptors. Baroreceptors are in the carotid SINUS and aortic ARCH.",
+        "e": "Low-pressure baroreceptors exist in the atria, vena cava, and pulmonary vessels - not exclusively in high-pressure areas."
+      },
+      "topicReference": "Topic 48: Baroreceptor characteristics and location"
+    },
+    {
+      "questionId": "q-3543048990-74",
+      "summary": "The baroreceptor reflex has sensors in the carotid sinus (not bodies) and operates continuously at normal BP. It doesn't activate sympathetic cholinergic vasodilators (which don't significantly exist in humans).",
+      "whyCorrect": {
+        "a": "Baroreceptors are located in the carotid sinus (and aortic arch), sensing arterial blood pressure.",
+        "c": "The baroreceptor reflex has maximum sensitivity around normal MAP (~100 mmHg) and operates continuously to buffer BP changes."
+      },
+      "whyIncorrect": {
+        "b": "The aortic BODIES contain chemoreceptors. Baroreceptors are in the aortic ARCH.",
+        "d": "Sympathetic cholinergic vasodilator fibers are minimal in humans. The baroreceptor reflex works by inhibiting adrenergic vasoconstriction."
+      },
+      "topicReference": "Topic 48: Baroreceptor reflex characteristics"
+    },
+    {
+      "questionId": "q-3543048990-75",
+      "summary": "Baroreceptor firing increases with: higher pressure (compression), recumbent posture (more blood to head), greater pulse pressure. It decreases with hemorrhage, vasodilation, and standing.",
+      "whyCorrect": {
+        "b": "External compression of the carotid sinus mimics high blood pressure, increasing baroreceptor firing.",
+        "c": "Recumbent (lying) posture increases head-level blood pressure, increasing carotid sinus baroreceptor activity.",
+        "e": "Greater pulse pressure means greater phasic stretch during systole, increasing baroreceptor firing rate."
+      },
+      "whyIncorrect": {
+        "a": "Hemorrhage DECREASES blood pressure, reducing baroreceptor firing.",
+        "d": "Vasodilation DECREASES blood pressure, reducing baroreceptor firing.",
+        "f": "Hypoxia is sensed by CHEMOreceptors, not baroreceptors. Baroreceptors respond to mechanical stretch."
+      },
+      "topicReference": "Topic 48: Factors affecting baroreceptor firing"
+    },
+    {
+      "questionId": "q-3543048990-76",
+      "summary": "The carotid sinus reflex provides rapid, moment-to-moment blood pressure buffering. It resets within days during chronic hypertension, so it doesn't prevent long-term hypertension. Long-term BP control is renal.",
+      "whyCorrect": {
+        "d": "The baroreceptor reflex provides fast (seconds) correction of acute blood pressure changes, such as during posture changes or hemorrhage."
+      },
+      "whyIncorrect": {
+        "a": "Baroreceptors RESET during chronic hypertension, so they don't prevent long-term high BP.",
+        "b": "Due to resetting, baroreceptors don't maintain constant BP over long periods - the kidneys do that.",
+        "c": "Gas exchange is the function of chemoreceptors and respiratory control, not baroreceptors.",
+        "e": "Right heart filling is regulated by low-pressure atrial receptors (Bainbridge reflex), not carotid sinus."
+      },
+      "topicReference": "Topic 48: Function of baroreceptor reflex"
+    },
+    {
+      "questionId": "q-3543048990-77",
+      "summary": "Baroreceptors respond to high BP by INHIBITING sympathetic activity (depressor). Chemoreceptors respond to hypoxia/hypercapnia by ACTIVATING sympathetic activity (pressor). Both use CN IX/X afferents.",
+      "whyCorrect": {
+        "a": "Baroreceptor activation inhibits sympathetic outflow (vasodilation). Chemoreceptor activation stimulates sympathetic outflow (vasoconstriction).",
+        "d": "Baroreceptors activate the depressor pathway (NTS → CVLM → inhibit RVLM). Chemoreceptors activate the pressor pathway (NTS → RVLM)."
+      },
+      "whyIncorrect": {
+        "b": "This is backwards - baroreceptors work in normal BP range; chemoreceptor pressor effects are activated by hypoxemia/hypotension.",
+        "c": "Both reflexes use CN IX (glossopharyngeal) and CN X (vagus) as afferents."
+      },
+      "topicReference": "Topic 48: Comparing baroreceptor and chemoreceptor reflexes"
+    },
+    {
+      "questionId": "q-3543048990-88",
+      "summary": "Standing causes venous pooling in legs, reducing venous return. This decreases stroke volume and cardiac output. Baroreceptors detect lower BP and trigger compensatory vasoconstriction (increased TPR) and tachycardia.",
+      "whyCorrect": {
+        "a": "Decreased venous return reduces cardiac output upon standing.",
+        "b": "Decreased baroreceptor firing triggers increased sympathetic tone, raising vascular resistance (TPR).",
+        "c": "Reduced venous return decreases ventricular filling and thus stroke volume."
+      },
+      "whyIncorrect": {
+        "d": "Blood pressure initially drops upon standing before compensation restores it - it does change transiently.",
+        "e": "Central blood volume DECREASES as blood pools in lower extremities."
+      },
+      "topicReference": "Topic 48: Orthostatic cardiovascular responses"
+    },
+    {
+      "questionId": "q-4447200607-5",
+      "summary": "Depressor reflexes decrease heart rate and blood pressure. They're triggered by: cardiac/vascular stretch (baroreceptors), Bezold-Jarisch reflex (vagal chemosensitive afferents). Chemoreceptor and Cushing reflexes are pressor.",
+      "whyCorrect": {
+        "a": "Left ventricular mechanoreceptors (stretch) trigger vagal afferents that inhibit sympathetic outflow - depressor effect.",
+        "b": "Pulmonary artery stretch receptors trigger similar depressor responses.",
+        "e": "Carotid sinus baroreceptor stretch is the classic depressor reflex.",
+        "f": "The Bezold-Jarisch reflex involves chemosensitive vagal afferents in the heart and lungs that trigger bradycardia and vasodilation."
+      },
+      "whyIncorrect": {
+        "c": "Increased intracranial pressure causes the Cushing reflex - a PRESSOR response (hypertension + bradycardia).",
+        "d": "Arterial hypoxia stimulates chemoreceptors, causing a PRESSOR response."
+      },
+      "topicReference": "Topic 48: Depressor reflexes - triggers and mechanisms"
+    },
+    {
+      "questionId": "q-4447200607-9",
+      "summary": "Skin blood flow is primarily regulated by sympathetic vasoconstrictor nerves for thermoregulation. Local metabolic control is minimal because skin metabolism doesn't vary much. Autoregulation is weak in skin.",
+      "whyCorrect": {
+        "d": "Skin vessels are heavily innervated by sympathetic vasoconstrictors. Thermoregulation is achieved by modulating this tone (withdrawal for heat loss, activation for heat conservation)."
+      },
+      "whyIncorrect": {
+        "a": "Parasympathetic nerves don't significantly innervate skin blood vessels.",
+        "b": "Basal myogenic activity exists but isn't the primary regulatory mechanism.",
+        "c": "Skin has low metabolic rate and doesn't rely on metabolic vasodilation like muscle.",
+        "e": "Autoregulation in skin is weak - blood flow varies greatly with sympathetic tone."
+      },
+      "topicReference": "Topic 48: Regulation of skin blood flow"
+    },
+    {
+      "questionId": "q-4447200607-21",
+      "summary": "Basal vascular tone is the intrinsic smooth muscle tone independent of neural input. It persists after denervation and varies between organs. Neurogenic tone is the added tone from sympathetic activity.",
+      "whyCorrect": {
+        "c": "Basal tone is demonstrated when vessels are denervated - they still maintain some constriction due to intrinsic smooth muscle properties."
+      },
+      "whyIncorrect": {
+        "a": "Neurogenic tone is specifically the component of tone from neural (sympathetic) activity - different from basal tone.",
+        "b": "Cerebral vessels DO have basal tone; they're particularly well-known for autoregulation based on basal tone.",
+        "d": "Basal tone varies significantly between organs - skin vessels have high tone, cerebral vessels have moderate tone."
+      },
+      "topicReference": "Topic 48: Basal vs neurogenic vascular tone"
+    },
+    {
+      "questionId": "q-4447200607-33",
+      "summary": "Note: This question asks about what happens DURING baroreceptor reflex activation (high BP stretching baroreceptors). This causes tachycardia withdrawal, vasodilation, and BP decrease.",
+      "whyCorrect": {
+        "b": "During the baroreceptor reflex response to high BP, heart rate changes (initially increased vagal tone causes bradycardia, but if asking about the full reflex arc response - the compensatory response includes HR changes).",
+        "c": "Vasodilation of resistance and capacitance vessels occurs as sympathetic tone is inhibited.",
+        "d": "Blood pressure is decreased as part of the reflex response to the initial high BP trigger."
+      },
+      "whyIncorrect": {
+        "a": "The baroreceptor reflex is technically a 'depressor' reflex only in that high BP triggers depressor responses - but calling it 'a depressor reflex' is imprecise terminology."
+      },
+      "topicReference": "Topic 48: Baroreceptor reflex components"
+    },
+    {
+      "questionId": "q-4525102917-16",
+      "summary": "Skeletal muscle arterioles constrict with sympathetic activation (α1 receptors). Local metabolites (K+, lactate, H+, hypoxia) cause vasodilation for metabolic hyperemia during exercise.",
+      "whyCorrect": {
+        "d": "Sympathetic vasomotor activity releases norepinephrine, activating α1 receptors and causing vasoconstriction."
+      },
+      "whyIncorrect": {
+        "a": "Lactate causes vasoDILATION during exercise (functional hyperemia).",
+        "b": "H+ causes vasoDILATION (acidosis relaxes vascular smooth muscle).",
+        "c": "K+ causes vasoDILATION (hyperpolarizes smooth muscle).",
+        "e": "Low O2 causes vasoDILATION (hypoxic vasodilation)."
+      },
+      "topicReference": "Topic 48: Control of skeletal muscle blood flow"
+    },
+    {
+      "questionId": "q-4525102917-18",
+      "summary": "Increased baroreceptor activity (high BP) inhibits the RVLM (pressor center), reducing sympathetic outflow. This causes reflex vasodilation and bradycardia. Posture changes affect baroreceptor firing.",
+      "whyCorrect": {
+        "b": "Standing vs lying changes the hydrostatic pressure at the carotid sinus, altering baroreceptor activity.",
+        "c": "Increased baroreceptor firing inhibits sympathetic vasoconstriction, causing vasodilation."
+      },
+      "whyIncorrect": {
+        "a": "Increased baroreceptor activity causes reflex BRADYCARDIA, not tachycardia.",
+        "d": "Increased baroreceptor activity INHIBITS the RVLM (pressor area), not stimulates it."
+      },
+      "topicReference": "Topic 48: Carotid sinus baroreceptor effects"
+    },
+    {
+      "questionId": "q-4855200607-8",
+      "summary": "TPR is controlled by sympathetic vasoconstrictor nerves. Parasympathetic nerves have minimal vascular innervation. Decreasing sympathetic tone causes vasodilation and decreased TPR.",
+      "whyCorrect": {
+        "a": "Withdrawing sympathetic vasoconstrictor tone allows blood vessels to dilate, reducing total peripheral resistance."
+      },
+      "whyIncorrect": {
+        "b": "Parasympathetic nerves don't significantly innervate blood vessels - no meaningful 'parasympathetic vasomotor tone'.",
+        "c": "There's no significant parasympathetic tone to decrease.",
+        "d": "Increasing sympathetic tone would INCREASE TPR, not decrease it."
+      },
+      "topicReference": "Topic 48: Autonomic control of TPR"
+    },
+    {
+      "questionId": "q-4855200607-20",
+      "summary": "Upon standing: blood pools in legs, venous return drops, cardiac output falls, BP drops, baroreceptors detect lower BP, and compensatory sympathetic activation occurs (venoconstriction, increased HR, pressor area activation).",
+      "whyCorrect": {
+        "b": "Decreased baroreceptor firing triggers increased sympathetic tone to veins, causing venoconstriction to improve venous return.",
+        "e": "The medullary pressor area (RVLM) is disinhibited when baroreceptor firing decreases, increasing sympathetic output."
+      },
+      "whyIncorrect": {
+        "a": "While CO initially decreases, this is the initial problem - the question asks about compensatory responses.",
+        "c": "Baroreceptor activity DECREASES when standing (lower carotid sinus pressure).",
+        "d": "Heart rate INCREASES as a compensatory response.",
+        "f": "TPR INCREASES as a compensatory response."
+      },
+      "topicReference": "Topic 48: Orthostatic reflex responses"
+    },
+    {
+      "questionId": "q-4855200607-40",
+      "summary": "The carotid sinus baroreceptor reflex operates continuously at normal physiologic blood pressure. Chemoreceptor and Cushing reflexes are activated by pathological conditions (hypoxia, brain ischemia).",
+      "whyCorrect": {
+        "d": "The carotid sinus baroreceptor reflex is most sensitive around normal MAP (~100 mmHg) and continuously modulates sympathetic output."
+      },
+      "whyIncorrect": {
+        "a": "The Cushing reflex activates only during severe intracranial hypertension - a pathological condition.",
+        "b": "Central chemoreceptor activation is a 'pressor' reflex, not 'depressor', and mainly activates with brain ischemia.",
+        "c": "Peripheral chemoreceptors primarily function during hypoxemia, not at normal oxygen levels."
+      },
+      "topicReference": "Topic 48: Physiologic vs emergency cardiovascular reflexes"
+    },
+    {
+      "questionId": "q-4855200607-42",
+      "summary": "Basal (myogenic) tone is the intrinsic vascular smooth muscle tone that persists after denervation. It's distinct from neurogenic tone (sympathetic-dependent) and varies between vascular beds.",
+      "whyCorrect": {
+        "a": "Basal tone is measured after denervation - it's the residual tone when neural influences are removed."
+      },
+      "whyIncorrect": {
+        "b": "Cerebral vessels DO have basal tone - they're well-known for myogenic autoregulation.",
+        "c": "Neurogenic tone is the additional tone from sympathetic nerve activity - different from basal tone.",
+        "d": "Basal tone varies between organs - different vascular beds have different intrinsic tone levels."
+      },
+      "topicReference": "Topic 48: Basal vascular tone"
+    },
+    {
+      "questionId": "q-4855200607-43",
+      "summary": "The CNS ischemic response is triggered by chemosensitive neurons in the ventral medulla that detect local accumulation of CO2 and H+ during severe cerebral hypoperfusion.",
+      "whyCorrect": {
+        "b": "The ventral medulla contains central chemoreceptors that detect rising CO2/H+ during ischemia and trigger massive sympathetic activation."
+      },
+      "whyIncorrect": {
+        "a": "The carotid sinus contains baroreceptors, not CNS ischemia sensors.",
+        "c": "The adrenal medulla is an effector organ, not a sensor.",
+        "d": "The right atrium contains low-pressure baroreceptors for volume sensing.",
+        "e": "The carotid bodies are peripheral chemoreceptors for blood gases, not central ischemia sensors."
+      },
+      "topicReference": "Topic 48: CNS ischemic response location"
+    },
+    {
+      "questionId": "q-4855200607-45",
+      "summary": "The pressor center (RVLM = rostral ventrolateral medulla) maintains tonic sympathetic output. Its neurons have pacemaker activity and their stimulation increases BP. Activation causes tachycardia via reduced vagal tone.",
+      "whyCorrect": {
+        "a": "The RVLM (pressor center) is in the rostroventral medulla.",
+        "b": "RVLM stimulation increases sympathetic outflow, raising blood pressure.",
+        "c": "RVLM neurons have intrinsic pacemaker activity, providing tonic sympathetic drive.",
+        "d": "RVLM activation simultaneously inhibits the vagal nucleus, but the primary cardiac effect through vagal withdrawal is tachycardia, not bradycardia. However, if the question states bradycardia as correct, it may be referring to the complex interaction where strong sympathetic activation can reflexly cause some vagal activation."
+      },
+      "whyIncorrect": {},
+      "topicReference": "Topic 48: Pressor center characteristics"
+    },
+    {
+      "questionId": "q-4855200607-49",
+      "summary": "The carotid sinus reflex provides rapid correction of acute blood pressure changes (seconds to minutes). It doesn't prevent chronic hypertension due to resetting. Long-term BP control is renal.",
+      "whyCorrect": {
+        "c": "The baroreceptor reflex responds within seconds to buffer acute blood pressure changes."
+      },
+      "whyIncorrect": {
+        "a": "Baroreceptors RESET during chronic hypertension, so they don't prevent long-term high BP.",
+        "b": "Gas exchange is the function of chemoreceptors and respiratory control.",
+        "d": "Right heart filling is regulated by atrial (low-pressure) receptors, not carotid sinus.",
+        "e": "Due to resetting, baroreceptors don't maintain long-term BP - the kidneys do."
+      },
+      "topicReference": "Topic 48: Carotid sinus reflex function"
+    },
+    {
+      "questionId": "q-5156012322-11",
+      "summary": "Sympathetic vasoconstrictor fibers maintain tonic discharge at rest and can increase firing 5-fold during stress. They travel in sympathetic nerves (not vagus) and innervate vessels of all sizes including veins.",
+      "whyCorrect": {
+        "b": "Vasoconstrictor fiber discharge can increase from resting levels (~1-2 Hz) to maximum (~8-10 Hz), representing roughly a 5-fold increase."
+      },
+      "whyIncorrect": {
+        "a": "Vasoconstrictor fibers have TONIC discharge at rest, not just during hypotension.",
+        "c": "Vasoconstrictor fibers are sympathetic, traveling in sympathetic nerves - NOT the vagus.",
+        "d": "Vasoconstrictor fibers innervate vessels of all sizes - arterioles, arteries, AND veins (capacitance vessels)."
+      },
+      "topicReference": "Topic 48: Sympathetic vasoconstrictor fiber properties"
+    },
+    {
+      "questionId": "q-5156012322-15",
+      "summary": "Arterial chemoreceptor stimulation by hypoxia triggers sympathetic activation (pressor response), causing systemic vasoconstriction and increased peripheral resistance. It also increases ventilation (not decreases).",
+      "whyCorrect": {
+        "b": "Chemoreceptor stimulation activates the sympathetic nervous system, causing systemic vasoconstriction.",
+        "c": "The vasoconstriction increases total peripheral resistance."
+      },
+      "whyIncorrect": {
+        "a": "Hypoxia causes vasoconstriction systemically (sympathetic response), though local hypoxia in tissues causes vasodilation.",
+        "d": "Chemoreceptor stimulation INCREASES respiratory minute ventilation.",
+        "e": "Chemoreceptor stimulation INCREASES ventilation, not causes apnea."
+      },
+      "topicReference": "Topic 48: Chemoreceptor cardiovascular effects"
+    },
+    {
+      "questionId": "q-5156012322-24",
+      "summary": "Increased TPR from sympathetic vasoconstriction raises both systolic and diastolic pressure proportionally. This increases mean arterial pressure but doesn't significantly change pulse pressure.",
+      "whyCorrect": {
+        "a": "Increased sympathetic activity causes vasoconstriction, increasing peripheral resistance.",
+        "e": "Pure resistance increase raises both systolic and diastolic pressures similarly, so pulse pressure (systolic - diastolic) remains relatively unchanged."
+      },
+      "whyIncorrect": {
+        "b": "Resistance increase raises diastolic more than systolic (opposite of stated), or both proportionally.",
+        "c": "Pulse pressure doesn't significantly increase with pure resistance change - it increases with increased stroke volume or decreased compliance.",
+        "d": "Increased peripheral resistance IMPEDES venous return by increasing afterload, not promotes it."
+      },
+      "topicReference": "Topic 48: Effects of increased peripheral resistance"
+    }
+  ]
+}

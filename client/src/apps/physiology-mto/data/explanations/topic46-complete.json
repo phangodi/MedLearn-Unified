@@ -1,0 +1,404 @@
+{
+  "metadata": {
+    "topic": 46,
+    "topicTitle": "Local Blood Flow Regulation",
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 28,
+    "status": "COMPLETE"
+  },
+  "explanations": [
+    {
+      "questionId": "q-0313014645-B-1",
+      "summary": "Vasoconstrictors include angiotensin II and endothelin (the most potent endogenous vasoconstrictor). Vasodilators include β2-agonists, NO, prostacyclin, bradykinin/kallidin, and PGE2.",
+      "whyCorrect": {
+        "b": "Angiotensin II is a potent vasoconstrictor, acting via AT1 receptors to cause vascular smooth muscle contraction.",
+        "c": "Endothelin-1 is the most potent endogenous vasoconstrictor, produced by endothelial cells and acting on ETA receptors."
+      },
+      "whyIncorrect": {
+        "a": "β2-adrenergic agonists cause vasoDILATION by increasing cAMP in vascular smooth muscle.",
+        "d": "Nitric oxide is the major endothelium-derived vasoDILATOR.",
+        "e": "Prostacyclin (PGI2) is a potent vasoDILATOR and platelet inhibitor.",
+        "f": "Kallidin (lysyl-bradykinin) is a vasoDILATOR, similar to bradykinin.",
+        "g": "PGE2 generally causes vasoDILATION in most vascular beds."
+      },
+      "topicReference": "Topic 46: Classification of vasoactive substances"
+    },
+    {
+      "questionId": "q-0313014645-B-2",
+      "summary": "Increased cAMP in vascular smooth muscle causes RELAXATION by activating protein kinase A, which phosphorylates MLCK (reducing its activity) and promotes Ca2+ sequestration.",
+      "whyCorrect": {
+        "c": "cAMP activates PKA, which inhibits myosin light chain kinase (MLCK) and promotes Ca2+ extrusion/sequestration, causing vascular smooth muscle RELAXATION (vasodilation)."
+      },
+      "whyIncorrect": {
+        "a": "Increased cAMP causes relaxation, not contraction. Contraction requires increased intracellular Ca2+ and MLCK activation.",
+        "b": "The Na+/K+ pump is activated by intracellular Na+, not directly by cAMP in vascular smooth muscle.",
+        "d": "NOS activation involves Ca2+/calmodulin, not cAMP. NOS is in endothelial cells, not vascular smooth muscle."
+      },
+      "topicReference": "Topic 46: cAMP-mediated vasodilation mechanism"
+    },
+    {
+      "questionId": "q-0313014645-B-20",
+      "summary": "Acetylcholine and histamine cause vasodilation via endothelial NO release. Without eNOS, these substances cannot produce NO, and their direct smooth muscle effects (which are contractile) predominate.",
+      "whyCorrect": {
+        "a": "ACh causes vasodilation by stimulating M3 receptors on endothelium → NO release. Without NO, ACh can act on smooth muscle M3 receptors causing contraction.",
+        "d": "Histamine H1 receptors on endothelium trigger NO release. Without NO, histamine's direct smooth muscle effect (contraction) may predominate."
+      },
+      "whyIncorrect": {
+        "b": "Bradykinin is a vasoDILATOR that works via NO. Inhibiting eNOS would weaken its vasodilator effect, not reverse a 'vasoconstrictor effect' (it doesn't have one).",
+        "c": "Noradrenaline causes vasoconstriction via α1 receptors directly on smooth muscle. eNOS inhibition wouldn't reverse this - it might even enhance it."
+      },
+      "topicReference": "Topic 46: Endothelium-dependent vasodilation"
+    },
+    {
+      "questionId": "q-0313014645-6",
+      "summary": "Neurogenic inflammation involves antidromic activation of sensory C-fibers, which release Substance P and CGRP from their terminals. These neuropeptides cause vasodilation and the flare component of the triple response.",
+      "whyCorrect": {
+        "d": "Substance P and CGRP are released from sensory nerve endings during the axon reflex, causing the spreading flare (vasodilation) in neurogenic inflammation."
+      },
+      "whyIncorrect": {
+        "a": "Angiotensin and vasopressin are circulating vasoconstrictors, not released from nerve endings during inflammation.",
+        "b": "ACh and VIP are released from parasympathetic nerves, not sensory nerves in neurogenic inflammation.",
+        "c": "PGI2 and NO are produced by endothelial cells, not released from nerve endings.",
+        "e": "Noradrenaline and NPY are released from sympathetic (vasoconstrictor) nerves, not sensory nerves."
+      },
+      "topicReference": "Topic 46: Neurogenic inflammation and triple response"
+    },
+    {
+      "questionId": "q-0313014645-18",
+      "summary": "Active hyperemia (functional hyperemia) is the increase in blood flow that accompanies increased metabolic activity of a tissue. Local metabolites cause vasodilation to match blood flow to metabolic demand.",
+      "whyCorrect": {
+        "d": "Active hyperemia = increased blood flow during tissue activity. Metabolic products (CO2, H+, K+, adenosine) cause local vasodilation to meet increased O2 demand."
+      },
+      "whyIncorrect": {
+        "a": "This describes differences in resting cardiac output, not active hyperemia.",
+        "b": "Autoregulation maintains constant flow despite pressure changes - the opposite of linear flow-pressure relationship.",
+        "c": "This describes REACTIVE hyperemia (post-ischemic), not active hyperemia.",
+        "e": "This is too vague and doesn't capture the metabolic activity relationship."
+      },
+      "topicReference": "Topic 46: Definition of active hyperemia"
+    },
+    {
+      "questionId": "q-3543048990-54",
+      "summary": "The kidney has the most pronounced autoregulation, maintaining constant blood flow over a wide range of perfusion pressures (80-180 mmHg). This protects glomerular filtration from pressure fluctuations.",
+      "whyCorrect": {
+        "c": "The kidney has excellent autoregulation to maintain stable GFR. Both myogenic and tubuloglomerular feedback mechanisms contribute."
+      },
+      "whyIncorrect": {
+        "a": "Pulmonary circulation has poor autoregulation and responds to hypoxia with vasoconstriction (opposite to systemic).",
+        "b": "Thyroid gland doesn't have particularly strong autoregulation.",
+        "d": "Liver receives mainly portal venous blood and has limited autoregulation.",
+        "e": "Small intestine has moderate autoregulation, less than kidney.",
+        "f": "Spleen doesn't have significant autoregulation."
+      },
+      "topicReference": "Topic 46: Organs with strong autoregulation"
+    },
+    {
+      "questionId": "q-3543048990-59",
+      "summary": "Reactive hyperemia is the increased blood flow that occurs after a period of ischemia/occlusion. It's caused by accumulated vasodilator metabolites. Active hyperemia occurs DURING activity.",
+      "whyCorrect": {
+        "c": "Reactive hyperemia = increased flow AFTER occlusion is released. Accumulated metabolites (adenosine, H+, K+, CO2) cause intense vasodilation."
+      },
+      "whyIncorrect": {
+        "a": "Increased cortical blood flow during mental activity is ACTIVE (functional) hyperemia.",
+        "b": "Increased muscle blood flow during work is ACTIVE hyperemia.",
+        "d": "Decreased sympathetic activity causing increased skin flow is passive vasodilation, not reactive hyperemia."
+      },
+      "topicReference": "Topic 46: Reactive vs active hyperemia"
+    },
+    {
+      "questionId": "q-3543048990-62",
+      "summary": "Cerebral blood flow is primarily regulated by local factors: PCO2 (most important - hypercapnia causes vasodilation) and pH (acidosis causes vasodilation). Neural control is minimal.",
+      "whyCorrect": {
+        "c": "PCO2 is the most potent regulator of cerebral blood flow. Hypercapnia causes marked cerebral vasodilation (via H+ effect on smooth muscle).",
+        "e": "Blood pH affects cerebral vessels - acidosis causes vasodilation, alkalosis causes vasoconstriction."
+      },
+      "whyIncorrect": {
+        "a": "Bezold-Jarisch reflex is a cardiac reflex, not involved in cerebral blood flow regulation.",
+        "b": "Sympathetic innervation of cerebral vessels exists but has minimal functional significance.",
+        "d": "There are no significant vasodilator fibers controlling cerebral circulation."
+      },
+      "topicReference": "Topic 46: Regulation of cerebral blood flow"
+    },
+    {
+      "questionId": "q-3543048990-66",
+      "summary": "Local blood flow regulation is primarily determined by tissue metabolic activity. Increased metabolism produces vasodilator metabolites (CO2, H+, K+, adenosine) that cause local vasodilation.",
+      "whyCorrect": {
+        "b": "Metabolic activity determines local blood flow through production of vasodilator metabolites that relax arteriolar smooth muscle."
+      },
+      "whyIncorrect": {
+        "a": "Arteriovenous pressure difference drives flow but is systemic, not a local regulatory factor.",
+        "c": "Local neurotransmitters (like NE from sympathetics) influence flow but aren't the PRIMARY local regulator.",
+        "d": "Circulating hormones are systemic regulators, not local.",
+        "e": "Cardiac output determines total systemic flow but not local distribution."
+      },
+      "topicReference": "Topic 46: Primary factor in local blood flow regulation"
+    },
+    {
+      "questionId": "q-3543048990-67",
+      "summary": "Major vasoconstrictors: Endothelin (most potent), Angiotensin II, Noradrenaline (via α1), and Vasopressin (ADH). Vasodilators: Bradykinin, NO, ANP.",
+      "whyCorrect": {
+        "c": "Endothelin-1 is the most potent endogenous vasoconstrictor.",
+        "e": "Angiotensin II causes potent vasoconstriction via AT1 receptors.",
+        "f": "Noradrenaline causes vasoconstriction via α1-adrenergic receptors.",
+        "h": "Vasopressin (ADH) causes vasoconstriction via V1 receptors on vascular smooth muscle."
+      },
+      "whyIncorrect": {
+        "a": "Bradykinin is a vasoDILATOR (via endothelial NO and prostacyclin release).",
+        "b": "Nitric oxide is the major vasoDILATOR.",
+        "d": "β1 agonists affect the heart (chronotropy, inotropy) but don't directly cause vasoconstriction.",
+        "g": "ANP (atrial natriuretic peptide) is a vasoDILATOR."
+      },
+      "topicReference": "Topic 46: Classification of vasoconstrictors"
+    },
+    {
+      "questionId": "q-4447200607-22",
+      "summary": "The endothelium produces both vasodilators (NO, prostacyclin) and vasoconstrictors (endothelin, angiotensin II via ACE). NO and PGI2 are the primary endothelium-derived vasodilators.",
+      "whyCorrect": {
+        "c": "Nitric oxide is synthesized by endothelial NO synthase (eNOS) and is the major endothelium-derived vasodilator.",
+        "d": "Prostacyclin (PGI2) is produced by endothelial cyclooxygenase and causes vasodilation and platelet inhibition."
+      },
+      "whyIncorrect": {
+        "a": "Endothelin is an endothelium-derived VASOCONSTRICTOR.",
+        "b": "Angiotensin II is a VASOCONSTRICTOR produced by ACE on endothelial surface."
+      },
+      "topicReference": "Topic 46: Endothelium-derived vasoactive substances"
+    },
+    {
+      "questionId": "q-4447200607-23",
+      "summary": "Vasodilators include: Bradykinin (via NO), Nitric oxide, β2-agonists (via cAMP), ANP (via cGMP). Vasoconstrictors: Angiotensin II, Endothelin, Vasopressin, Noradrenaline.",
+      "whyCorrect": {
+        "a": "Bradykinin stimulates endothelial B2 receptors → NO and prostacyclin release → vasodilation.",
+        "c": "Nitric oxide activates guanylyl cyclase in smooth muscle → cGMP → vasodilation.",
+        "d": "β2-agonists activate adenylyl cyclase → cAMP → PKA → smooth muscle relaxation.",
+        "g": "ANP activates particulate guanylyl cyclase → cGMP → vasodilation."
+      },
+      "whyIncorrect": {
+        "b": "Angiotensin II is a potent vasoconstrictor.",
+        "e": "Endothelin is the most potent vasoconstrictor.",
+        "f": "Vasopressin is a vasoconstrictor (V1 receptors).",
+        "h": "Noradrenaline is a vasoconstrictor (α1 receptors)."
+      },
+      "topicReference": "Topic 46: Classification of vasodilators"
+    },
+    {
+      "questionId": "q-4447200607-27",
+      "summary": "Increased brain metabolic activity produces CO2 and other metabolites that cause local vasodilation, decreasing vascular resistance and increasing regional blood flow (neurovascular coupling).",
+      "whyCorrect": {
+        "c": "Increased metabolism → increased CO2 and metabolites → local vasodilation → decreased resistance → increased blood flow. This is metabolic (active) hyperemia."
+      },
+      "whyIncorrect": {
+        "a": "Blood pressure doesn't become inadequate locally - local resistance decreases to increase flow.",
+        "b": "Flow is inversely related to resistance - decreased resistance INCREASES flow, not decreases it.",
+        "d": "Blood flow does change with metabolism - this is the basis of functional hyperemia and neurovascular coupling."
+      },
+      "topicReference": "Topic 46: Neurovascular coupling in the brain"
+    },
+    {
+      "questionId": "q-4447200607-28",
+      "summary": "Autoregulation maintains constant blood flow despite pressure changes. It's marked in brain, kidney, and heart; weak in skin. It's intrinsic (doesn't require nerves) and involves myogenic response.",
+      "whyCorrect": {
+        "a": "Cerebral vessels have excellent autoregulation to protect the brain from pressure fluctuations.",
+        "c": "Skin vessels have poor autoregulation - their flow is primarily controlled by sympathetic nerves for thermoregulation."
+      },
+      "whyIncorrect": {
+        "b": "Autoregulation is INTRINSIC - it occurs after denervation. It doesn't require sympathetic innervation.",
+        "d": "Autoregulation causes vasoconstriction (not dilation) in response to increased pressure (myogenic response).",
+        "e": "Veins don't show significant autoregulation - it's primarily an arteriolar phenomenon."
+      },
+      "topicReference": "Topic 46: Autoregulation characteristics"
+    },
+    {
+      "questionId": "q-4525102917-13",
+      "summary": "CGRP and Bradykinin cause vasodilation through endothelial NO release. CGRP also has direct effects. Histamine works partly through NO but also has direct effects. PGE2 works independently of NO.",
+      "whyCorrect": {
+        "a": "CGRP (calcitonin gene-related peptide) causes vasodilation partly through endothelial NO release.",
+        "b": "Bradykinin activates B2 receptors on endothelium, stimulating eNOS and NO release."
+      },
+      "whyIncorrect": {
+        "c": "Endothelin-1 is a VASOCONSTRICTOR, not a vasodilator.",
+        "d": "PGE2 causes vasodilation but through prostaglandin receptors and cAMP, not primarily through NO.",
+        "e": "Histamine causes vasodilation partly via NO, but the question asks specifically about 2 mediators, and CGRP and bradykinin are more purely NO-dependent."
+      },
+      "topicReference": "Topic 46: NO-dependent vasodilators"
+    },
+    {
+      "questionId": "q-4525102917-23",
+      "summary": "Reactive hyperemia after ischemia is caused by accumulated vasodilator metabolites: H+ (acidosis), adenosine (from ATP breakdown), K+, CO2. These dilate arterioles when blood flow is restored.",
+      "whyCorrect": {
+        "b": "During ischemia, H+ accumulates (lactic acidosis) and causes vasodilation when flow resumes.",
+        "e": "Adenosine accumulates during ischemia (ATP breakdown) and is a potent vasodilator."
+      },
+      "whyIncorrect": {
+        "a": "Thromboxane A2 is a vasoconstrictor and platelet aggregator, not involved in reactive hyperemia.",
+        "c": "pCO2 INCREASES during ischemia (not decreases), and the increased CO2 contributes to vasodilation.",
+        "d": "K+ INCREASES during ischemia, not decreases, and the increased K+ causes vasodilation."
+      },
+      "topicReference": "Topic 46: Mediators of reactive hyperemia"
+    },
+    {
+      "questionId": "q-4855200607-6",
+      "summary": "Autoregulation is an arteriolar phenomenon that maintains constant flow despite pressure changes. It's strong in brain/kidney, weak in skin. It's intrinsic (doesn't need nerves) and involves myogenic vasoconstriction to increased pressure.",
+      "whyCorrect": {
+        "b": "Skin vessels have weak autoregulation because their primary role is thermoregulation via sympathetic control.",
+        "d": "Cerebral vessels have strong autoregulation to protect brain function from pressure variations."
+      },
+      "whyIncorrect": {
+        "a": "Veins don't have significant autoregulation - it's an arteriolar property.",
+        "c": "Autoregulation causes vasoconstriction (not dilation) to increased pressure (myogenic response).",
+        "e": "Autoregulation is intrinsic - it persists after denervation."
+      },
+      "topicReference": "Topic 46: Autoregulation in different vascular beds"
+    },
+    {
+      "questionId": "q-4855200607-12",
+      "summary": "The flare in the triple response is caused by axon reflex - antidromic activation of sensory C-fibers releases Substance P and CGRP from their peripheral terminals, causing spreading vasodilation.",
+      "whyCorrect": {
+        "a": "Substance P and CGRP are neuropeptides released from sensory nerve endings during neurogenic inflammation, causing the flare."
+      },
+      "whyIncorrect": {
+        "b": "PGI2 and NO are endothelium-derived, not released from nerve endings.",
+        "c": "Noradrenaline and NPY are from sympathetic nerves and cause vasoconstriction, not the vasodilator flare.",
+        "d": "ACh and VIP are from parasympathetic nerves, not involved in the cutaneous axon reflex."
+      },
+      "topicReference": "Topic 46: Axon reflex mediators"
+    },
+    {
+      "questionId": "q-4855200607-15",
+      "summary": "Increased brain metabolism produces CO2 and metabolites → local vasodilation → decreased resistance → increased blood flow. This neurovascular coupling matches flow to metabolic demand.",
+      "whyCorrect": {
+        "b": "Metabolic byproducts cause local vasodilation, decreasing resistance and increasing flow (Q = ΔP/R)."
+      },
+      "whyIncorrect": {
+        "a": "Blood flow DOES change with brain metabolism - this is functional hyperemia.",
+        "c": "Local blood pressure is maintained; resistance decreases to increase flow.",
+        "d": "Decreased resistance INCREASES flow (inverse relationship)."
+      },
+      "topicReference": "Topic 46: Cerebral metabolic hyperemia"
+    },
+    {
+      "questionId": "q-4855200607-18",
+      "summary": "Neurogenic inflammation involves sensory C-fiber activation releasing Substance P and CGRP, which cause vasodilation contributing to the flare of the triple response.",
+      "whyCorrect": {
+        "b": "Substance P and CGRP from sensory nerve terminals cause the spreading flare in neurogenic inflammation."
+      },
+      "whyIncorrect": {
+        "a": "ACh and VIP are parasympathetic neurotransmitters, not involved in cutaneous sensory nerve axon reflex.",
+        "c": "PGI2 and NO are from endothelium, not nerve endings.",
+        "d": "Noradrenaline and NPY are sympathetic neurotransmitters causing vasoconstriction."
+      },
+      "topicReference": "Topic 46: Triple response mediators"
+    },
+    {
+      "questionId": "q-4855200607-22",
+      "summary": "CGRP and VIP are neuropeptide vasodilators. CGRP is one of the most potent vasodilators known. VIP causes vasodilation in several vascular beds.",
+      "whyCorrect": {
+        "b": "CGRP (calcitonin gene-related peptide) is an extremely potent vasodilator released from sensory nerves.",
+        "e": "VIP (vasoactive intestinal peptide) causes vasodilation, particularly in splanchnic and cerebral circulations."
+      },
+      "whyIncorrect": {
+        "a": "TXA2 (thromboxane A2) is a potent VASOCONSTRICTOR and platelet aggregator.",
+        "c": "Endothelin-1 is the most potent endogenous VASOCONSTRICTOR.",
+        "d": "5-HT (serotonin) generally causes VASOCONSTRICTION in most vascular beds."
+      },
+      "topicReference": "Topic 46: Neuropeptide vasodilators"
+    },
+    {
+      "questionId": "q-4855200607-23",
+      "summary": "Brain activity increases local CO2 and metabolites, causing vasodilation. This decreases local vascular resistance and increases regional blood flow to match metabolic demand.",
+      "whyCorrect": {
+        "a": "Metabolic vasodilation decreases resistance, increasing blood flow (Flow = Pressure/Resistance)."
+      },
+      "whyIncorrect": {
+        "b": "Blood flow changes with metabolism - this is the basis of fMRI.",
+        "c": "Pressure is maintained; resistance decreases locally.",
+        "d": "Decreased resistance means INCREASED flow (inverse relationship)."
+      },
+      "topicReference": "Topic 46: Neurovascular coupling"
+    },
+    {
+      "questionId": "q-4855200607-31",
+      "summary": "Autoregulation maintains constant flow despite pressure changes. Strong in brain/kidney (flow-sensitive organs), weak in skin (thermoregulatory). It's intrinsic and involves myogenic vasoconstriction to pressure.",
+      "whyCorrect": {
+        "c": "Skin has weak autoregulation because its blood flow is primarily regulated by sympathetic nerves for temperature control.",
+        "d": "Cerebral autoregulation is strong to protect brain function from blood pressure variations."
+      },
+      "whyIncorrect": {
+        "a": "Autoregulation responds to increased pressure with vasoconstriction, not vasodilation.",
+        "b": "Autoregulation is intrinsic - it doesn't require sympathetic innervation.",
+        "e": "Veins don't show significant autoregulation."
+      },
+      "topicReference": "Topic 46: Autoregulation distribution"
+    },
+    {
+      "questionId": "q-4855200607-38",
+      "summary": "Local vasoconstrictors include thromboxane A2 (TXA2) and endothelin. Vasodilators include K+, adenosine, increased pCO2, and bradykinin.",
+      "whyCorrect": {
+        "b": "Thromboxane A2 is a potent local vasoconstrictor produced by platelets and some tissues.",
+        "e": "Endothelin is the most potent endogenous vasoconstrictor."
+      },
+      "whyIncorrect": {
+        "a": "Increased K+ causes vasodilation by hyperpolarizing smooth muscle.",
+        "c": "Increased pCO2 causes vasodilation (especially in cerebral vessels).",
+        "d": "Adenosine is a potent vasodilator (accumulates during ischemia/hypoxia).",
+        "f": "Bradykinin is a vasodilator (via endothelial NO release)."
+      },
+      "topicReference": "Topic 46: Local vasoconstrictors vs vasodilators"
+    },
+    {
+      "questionId": "q-4855200607-41",
+      "summary": "Cerebral blood flow is most responsive to PCO2. Hypercapnia causes marked cerebral vasodilation (CO2 → H+ in CSF → smooth muscle relaxation). Neural control is minimal compared to metabolic control.",
+      "whyCorrect": {
+        "e": "Increased PCO2 is the most potent stimulus for cerebral vasodilation. CO2 diffuses across blood-brain barrier, forms H+ via carbonic anhydrase, which relaxes smooth muscle."
+      },
+      "whyIncorrect": {
+        "a": "Sympathetic stimulation has minimal effect on cerebral blood flow.",
+        "b": "Increased pO2 doesn't cause significant cerebral vasodilation.",
+        "c": "Parasympathetic innervation of cerebral vessels is minimal.",
+        "d": "Cholinergic sympathetic neurons aren't significant in cerebral circulation."
+      },
+      "topicReference": "Topic 46: Primary regulator of cerebral blood flow"
+    },
+    {
+      "questionId": "q-4855200607-48",
+      "summary": "The endothelium produces vasodilators (NO from eNOS, prostacyclin from COX) and vasoconstrictors (endothelin, Ang II via ACE). NO and PGI2 are the main relaxing factors.",
+      "whyCorrect": {
+        "a": "Nitric oxide (EDRF) is produced by eNOS in response to shear stress, ACh, bradykinin, etc.",
+        "b": "Prostacyclin (PGI2) is produced by endothelial COX and causes vasodilation and platelet inhibition."
+      },
+      "whyIncorrect": {
+        "c": "Angiotensin II is a VASOCONSTRICTOR (formed by ACE on endothelium).",
+        "d": "Endothelin is the most potent VASOCONSTRICTOR produced by endothelium."
+      },
+      "topicReference": "Topic 46: Endothelium-derived relaxing factors"
+    },
+    {
+      "questionId": "q-5156012322-12",
+      "summary": "Endothelial NOS (eNOS) is activated by Ca2+-calmodulin. The PLC-IP3-Ca2+ pathway is triggered by receptor activation (ACh, bradykinin) to raise intracellular Ca2+ and activate eNOS.",
+      "whyCorrect": {
+        "b": "ACh, bradykinin, and histamine activate Gq-coupled receptors → PLC activation → IP3 production → Ca2+ release from ER → Ca2+-calmodulin activates eNOS."
+      },
+      "whyIncorrect": {
+        "a": "The cAMP-PKA pathway doesn't directly activate eNOS. PKA phosphorylation of eNOS is modulatory but not the primary activation mechanism.",
+        "c": "The DAG-PKC pathway is not the primary activator of eNOS.",
+        "d": "Same as option a."
+      },
+      "topicReference": "Topic 46: eNOS activation pathway"
+    },
+    {
+      "questionId": "q-5156012322-13",
+      "summary": "Vasodilators include histamine, K+ (hyperpolarizes smooth muscle), and NO. Note: This question lists 'angiotensin' as correct, which is unusual as Ang II is typically a vasoconstrictor.",
+      "whyCorrect": {
+        "a": "Histamine causes vasodilation via H1 receptors on endothelium (NO release) and H2 receptors on smooth muscle.",
+        "c": "This appears to be an error in the question - angiotensin II is a vasoconstrictor. However, angiotensin-(1-7) is a vasodilator.",
+        "d": "K+ causes vasodilation by hyperpolarizing vascular smooth muscle via K+ channels.",
+        "f": "Nitric oxide is the major endothelium-derived vasodilator."
+      },
+      "whyIncorrect": {
+        "b": "Endothelin is the most potent endogenous VASOCONSTRICTOR.",
+        "e": "Thromboxane is a VASOCONSTRICTOR.",
+        "g": "Noradrenaline is a VASOCONSTRICTOR (α1 receptors)."
+      },
+      "topicReference": "Topic 46: Vasodilator substances"
+    }
+  ]
+}

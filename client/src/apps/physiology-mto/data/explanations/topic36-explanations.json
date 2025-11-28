@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "topic": 36,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 2,
+    "status": "TEMPLATE - needs explanations generated"
+  },
+  "questions": [
+    {
+      "questionId": "q-3543048990-83",
+      "text": "Cardiac output",
+      "options": [
+        {
+          "letter": "a",
+          "text": "can be calculated from oxygen consumption and arterial and venous oxygen content"
+        },
+        {
+          "letter": "b",
+          "text": "is the product of heart rate and stroke volume"
+        },
+        {
+          "letter": "c",
+          "text": "is reduced by stimulation of the vagus nerve"
+        },
+        {
+          "letter": "d",
+          "text": "is increased by stimulation of sympathetic nerves to the heart"
+        },
+        {
+          "letter": "e",
+          "text": "may vary in adults from 4 liters/min to 25 liters/min"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "correctAnswerCount": 5
+    },
+    {
+      "questionId": "q-4447200607-19",
+      "text": "The venous pulse:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "is necessary for proper cardiac filling"
+        },
+        {
+          "letter": "b",
+          "text": "is diminished in cardiac failure"
+        },
+        {
+          "letter": "c",
+          "text": "is a damped arterial pulse"
+        },
+        {
+          "letter": "d",
+          "text": "is a result of pressure changes in the heart propagated to neighboring veins"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    }
+  ]
+}

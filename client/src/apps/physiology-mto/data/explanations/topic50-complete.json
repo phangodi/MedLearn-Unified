@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "topic": 50,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 11,
+    "status": "COMPLETE"
+  },
+  "explanations": [
+    {
+      "questionId": "q-0313014645-11",
+      "summary": "The FALSE statement is that pulmonary blood flow is chiefly determined by sympathetic vasoconstrictor tone. Actually, pulmonary circulation has minimal sympathetic control - blood flow is mainly passive, determined by cardiac output. The other statements are true: low pressure (~15 mmHg mean), carries deoxygenated blood, equal flow to aorta, and hypoxic pulmonary vasoconstriction (HPV).",
+      "whyCorrect": {
+        "b": "FALSE - Pulmonary blood flow is NOT chiefly controlled by sympathetic vasoconstriction. The pulmonary circulation has minimal sympathetic tone compared to systemic circulation. Blood flow is mainly passive and determined by cardiac output and gravity."
+      },
+      "whyIncorrect": {
+        "a": "TRUE - Mean pulmonary artery pressure (~15 mmHg) is about 15-20% of mean aortic pressure (~93 mmHg). This is a key distinguishing feature of the low-pressure pulmonary system.",
+        "c": "TRUE - Pulmonary arteries carry deoxygenated (venous) blood from the right ventricle to the lungs for oxygenation.",
+        "d": "TRUE - Pulmonary and systemic circulations are in series, so flow through both must be equal (cardiac output ≈ 5 L/min in both).",
+        "e": "TRUE - Hypoxic pulmonary vasoconstriction (HPV) is unique to lungs. Local hypoxia CONSTRICTS pulmonary vessels (opposite of systemic circulation) to redirect blood to better-ventilated alveoli."
+      },
+      "topicReference": "Topic 50: Pulmonary Circulation"
+    },
+    {
+      "questionId": "q-4447200607-6",
+      "summary": "Pulmonary circulation has LOWER: mean arterial pressure (~15 vs ~93 mmHg), arterial-venous pressure gradient (~10 vs ~90 mmHg), and total resistance (~1.5 vs ~15 PRU). Cardiac output is EQUAL in both (they're in series). Venous pressures are similar (~5-8 mmHg both).",
+      "whyCorrect": {
+        "b": "Mean pulmonary arterial pressure (~15 mmHg) is much lower than systemic MAP (~93 mmHg). This allows the thin-walled right ventricle to pump adequately.",
+        "c": "The pressure gradient in pulmonary circulation (PA ~15 mmHg - LA ~8 mmHg ≈ 7 mmHg) is much smaller than systemic (aorta ~93 mmHg - RA ~3 mmHg ≈ 90 mmHg).",
+        "e": "Pulmonary vascular resistance (~1.5 PRU) is about 1/10th of systemic (~15 PRU). Low resistance allows high flow at low pressure."
+      },
+      "whyIncorrect": {
+        "a": "Cardiac output is EQUAL in pulmonary and systemic circulations because they are in series. The same blood volume passes through both per minute.",
+        "d": "Venous pressures are similar: pulmonary venous (left atrial) pressure ~5-8 mmHg, systemic venous (CVP) ~2-6 mmHg. If anything, pulmonary venous pressure may be slightly higher."
+      },
+      "topicReference": "Topic 50: Pulmonary Circulation"
+    },
+    {
+      "questionId": "q-4447200607-30",
+      "summary": "After large fluid infusion: Pulmonary vascular resistance DECREASES significantly (recruitment and distension of vessels), while pulmonary arterial pressure increases only SLIGHTLY (the resistance decrease compensates for increased flow). This is passive pressure-flow regulation unique to lungs.",
+      "whyCorrect": {
+        "b": "Fluid infusion increases cardiac output and pulmonary blood flow. The pulmonary vasculature responds by: (1) RECRUITING previously closed vessels and (2) DISTENDING open vessels. This causes a LARGE decrease in PVR with only a SMALL increase in pressure."
+      },
+      "whyIncorrect": {
+        "a": "'Small decrease | large increase' is incorrect. The resistance decrease is large (recruitment + distension), not small.",
+        "c": "'Large decrease | small decrease' - pressure should increase (not decrease) with more flow, even if only slightly.",
+        "d": "'Large increase | large increase' - resistance decreases (not increases) due to vessel recruitment and distension.",
+        "e": "'Small increase | large increase' - resistance decreases (not increases) with higher flow due to the unique passive pressure-flow relationship."
+      },
+      "topicReference": "Topic 50: Pulmonary Circulation"
+    },
+    {
+      "questionId": "q-4447200607-31",
+      "summary": "Pulmonary circulation differences: (1) More distensible arteries (thin walls, low pressure), (2) Obstruction causes RIGHT heart failure (retrograde from RV), (3) Less sympathetic control of resistance. Pulmonary capillary transmural pressure is LOWER, and pulmonary veins ARE important blood reservoirs.",
+      "whyCorrect": {
+        "a": "Pulmonary arteries are more distensible than systemic arteries due to thinner walls and lower collagen content. This allows accommodation of stroke volume at low pressure.",
+        "e": "Obstruction of pulmonary blood flow (e.g., pulmonary embolism) causes retrograde RIGHT ventricular failure. The RV cannot pump against increased resistance, leading to RV dilation and failure.",
+        "f": "Sympathetic neurons play a minor role in pulmonary vascular control compared to systemic. Pulmonary vascular tone is largely determined by local factors (especially O2 and CO2 levels)."
+      },
+      "whyIncorrect": {
+        "b": "Pulmonary capillary transmural pressure is LOWER (~7-10 mmHg) than systemic capillaries (~17-25 mmHg). This is essential for preventing pulmonary edema.",
+        "c": "Pulmonary ARTERIES are not more important blood reservoirs. The pulmonary veins and left atrium serve as important reservoirs for the left heart.",
+        "d": "Pulmonary veins ARE important blood reservoirs. They contain ~10% of blood volume and provide preload to the left ventricle."
+      },
+      "topicReference": "Topic 50: Pulmonary Circulation"
+    },
+    {
+      "questionId": "q-4525102917-21",
+      "summary": "During exercise, increased pulmonary blood flow is accommodated primarily by DECREASED pulmonary vascular resistance. This occurs through passive recruitment of closed vessels and distension of open vessels. Pulmonary pressure increases only minimally despite 4-5× increase in flow.",
+      "whyCorrect": {
+        "e": "Large decrease in PVR is the main mechanism. Increased cardiac output causes: (1) Recruitment of previously closed capillaries, (2) Distension of already open vessels. This passive mechanism allows huge flow increases with minimal pressure rise."
+      },
+      "whyIncorrect": {
+        "a": "Pulmonary artery pressure increases only SLIGHTLY during exercise (from ~15 to ~25 mmHg), not largely. The resistance decrease compensates for increased flow.",
+        "b": "Smooth muscle TONE in pulmonary arterioles may actually DECREASE slightly or stay constant. There's no large increase in tone during exercise.",
+        "c": "ACE activity doesn't change significantly during exercise and isn't responsible for pulmonary flow changes.",
+        "d": "Left atrial pressure increases only slightly during exercise. This is not the primary mechanism for increased pulmonary flow."
+      },
+      "topicReference": "Topic 50: Pulmonary Circulation"
+    },
+    {
+      "questionId": "q-4855200607-11",
+      "summary": "ONLY the pulmonary circulation responds to local hypoxia with vasoconstriction (Hypoxic Pulmonary Vasoconstriction - HPV). This is the OPPOSITE of systemic beds (coronary, cerebral, skeletal muscle) which DILATE in response to hypoxia to increase oxygen delivery. HPV redirects blood to better-ventilated alveoli.",
+      "whyCorrect": {
+        "d": "The pulmonary circulation uniquely responds to hypoxia with VASOCONSTRICTION. This Hypoxic Pulmonary Vasoconstriction (HPV) redirects blood away from poorly ventilated alveoli to better-ventilated regions, optimizing gas exchange."
+      },
+      "whyIncorrect": {
+        "a": "Coronary vessels DILATE in response to hypoxia. Adenosine and other metabolites accumulate during hypoxia, causing vasodilation to increase oxygen delivery.",
+        "b": "Cerebral vessels DILATE in response to hypoxia and hypercapnia. This autoregulation increases blood flow to meet metabolic demands.",
+        "c": "Skeletal muscle vessels DILATE in response to hypoxia. Metabolic vasodilation ensures adequate oxygen supply during exercise or ischemia."
+      },
+      "topicReference": "Topic 50: Pulmonary Circulation"
+    },
+    {
+      "questionId": "q-4855200607-29",
+      "summary": "The PULMONARY circulation is the only vascular bed that responds to local hypoxia with VASOCONSTRICTION (HPV). All systemic circulations (coronary, cerebral, skeletal muscle) respond to hypoxia with vasoDILATION to increase oxygen delivery. HPV matches perfusion to ventilation.",
+      "whyCorrect": {
+        "b": "Pulmonary vessels uniquely CONSTRICT in response to low alveolar oxygen (Hypoxic Pulmonary Vasoconstriction). This diverts blood from poorly ventilated to well-ventilated lung regions."
+      },
+      "whyIncorrect": {
+        "a": "Coronary vessels DILATE during hypoxia. Myocardial oxygen demand triggers release of adenosine and other vasodilators.",
+        "c": "Cerebral vessels DILATE in response to hypoxia. This is a protective mechanism to maintain brain oxygen supply.",
+        "d": "Skeletal muscle vessels DILATE during hypoxia. Metabolic byproducts (lactate, adenosine, K+) cause local vasodilation."
+      },
+      "topicReference": "Topic 50: Pulmonary Circulation"
+    },
+    {
+      "questionId": "q-4855200607-37",
+      "summary": "Normal pulmonary artery systolic pressure is approximately 24 mmHg (range 15-30 mmHg). Diastolic is ~8-10 mmHg, mean ~15 mmHg. Values of 50 mmHg or higher indicate pulmonary hypertension. Values like 80 or 120 mmHg are systemic arterial pressures, not pulmonary.",
+      "whyCorrect": {
+        "a": "Normal pulmonary artery systolic pressure is approximately 24 mmHg (range 15-30 mmHg). The pulmonary circulation operates at low pressure to allow efficient gas exchange without causing pulmonary edema."
+      },
+      "whyIncorrect": {
+        "b": "0-6 mmHg is the range for central venous pressure (CVP) or right atrial pressure, not pulmonary artery systolic pressure.",
+        "c": "50 mmHg systolic would indicate pulmonary hypertension. Normal systolic is 15-30 mmHg.",
+        "d": "35 mmHg is above normal (could indicate mild pulmonary hypertension). Normal systolic is ~24 mmHg.",
+        "e": "80 mmHg is a diastolic systemic arterial pressure. Pulmonary pressures are much lower.",
+        "f": "120 mmHg is normal systemic arterial systolic pressure (aorta), not pulmonary."
+      },
+      "topicReference": "Topic 50: Pulmonary Circulation"
+    },
+    {
+      "questionId": "q-4855200607-53",
+      "summary": "Note: This question has an error - 'coronary circulation' appears twice in options b and d, and the correct answer marked is 'b' (coronary). However, hypoxia causes vasoDILATION in coronary circulation, not vasoconstriction. The intended answer should be PULMONARY circulation, which is the only bed that constricts with hypoxia.",
+      "whyCorrect": {
+        "b": "Note: This appears to be a question error. The marked answer is coronary, but coronary vessels actually DILATE in hypoxia. The pulmonary circulation is the only one that vasoconstricts in response to hypoxia (HPV). If 'pulmonary' was intended as an option, that would be correct."
+      },
+      "whyIncorrect": {
+        "a": "Cerebral vessels DILATE in response to hypoxia to maintain brain oxygen supply.",
+        "c": "Skeletal muscle vessels DILATE during hypoxia due to metabolic vasodilation.",
+        "d": "Coronary vessels DILATE during hypoxia (same as option b - appears to be question error)."
+      },
+      "topicReference": "Topic 50: Pulmonary Circulation"
+    },
+    {
+      "questionId": "q-4855200607-54",
+      "summary": "The SMALLEST vascular resistances are: (1) Total peripheral resistance (TPR) when considering all parallel beds together, and (2) Pulmonary vascular resistance (~1.5 PRU vs systemic ~15 PRU). Individual organ beds (cerebral, intestinal, renal) have higher resistances because they're individual branches.",
+      "whyCorrect": {
+        "b": "Total peripheral resistance is relatively low because all systemic vascular beds are in PARALLEL, which dramatically reduces combined resistance (1/Rtotal = 1/R1 + 1/R2 + ...).",
+        "c": "Pulmonary vascular resistance (~1.5 PRU) is the lowest of any single vascular bed. It's about 1/10th of systemic TPR, allowing high flow at low pressure."
+      },
+      "whyIncorrect": {
+        "a": "Intracerebral vascular resistance is relatively HIGH because it's a single organ bed with autoregulation. Total flow is only ~750 mL/min.",
+        "d": "Intestinal vascular resistance is moderate - it handles ~1200-1500 mL/min but is still a single organ circuit.",
+        "e": "Renal vascular resistance is moderate despite receiving ~20-25% of cardiac output. Individual organ resistance is higher than combined parallel circuits."
+      },
+      "topicReference": "Topic 50: Pulmonary Circulation"
+    },
+    {
+      "questionId": "q-5156012322-20",
+      "summary": "Only PULMONARY circulation responds to hypoxia with vasoconstriction. This Hypoxic Pulmonary Vasoconstriction (HPV) diverts blood from poorly ventilated to well-ventilated alveoli. All systemic beds (skeletal, coronary, cerebral) DILATE in hypoxia to increase oxygen delivery.",
+      "whyCorrect": {
+        "d": "Pulmonary vessels uniquely CONSTRICT during hypoxia. HPV is mediated by inhibition of voltage-gated K+ channels in pulmonary artery smooth muscle, leading to depolarization and Ca2+ influx. This matches perfusion to ventilation."
+      },
+      "whyIncorrect": {
+        "a": "Skeletal muscle vessels DILATE during hypoxia. Metabolic products (adenosine, lactate, K+, H+) cause vasodilation to increase oxygen delivery.",
+        "b": "Coronary vessels DILATE during hypoxia. Adenosine released from hypoxic myocytes is a potent coronary vasodilator.",
+        "c": "Cerebral vessels DILATE during hypoxia (and hypercapnia). This maintains cerebral oxygen supply during reduced arterial O2."
+      },
+      "topicReference": "Topic 50: Pulmonary Circulation"
+    }
+  ]
+}

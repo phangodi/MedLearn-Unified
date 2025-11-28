@@ -1,0 +1,66 @@
+{
+  "metadata": {
+    "topic": 51,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 4,
+    "status": "COMPLETE"
+  },
+  "explanations": [
+    {
+      "questionId": "q-0313014645-B-3",
+      "summary": "Sympathetic CHOLINERGIC fibers are rare - most sympathetic fibers are adrenergic. The exception is skeletal muscle arterioles, which have sympathetic cholinergic vasodilator fibers that cause anticipatory vasodilation before exercise. Other beds use adrenergic innervation.",
+      "whyCorrect": {
+        "e": "Skeletal muscle arterioles uniquely receive sympathetic CHOLINERGIC vasodilator innervation. These fibers release acetylcholine and cause vasodilation in anticipation of exercise, preparing muscles for increased blood flow."
+      },
+      "whyIncorrect": {
+        "a": "Cerebral vessels have minimal autonomic innervation. Blood flow is controlled mainly by autoregulation and metabolic factors.",
+        "b": "Coronary vessels are controlled mainly by metabolic factors. Sympathetic innervation is adrenergic (beta-2 causes dilation).",
+        "c": "Salivary glands have parasympathetic cholinergic innervation (from cranial nerves), not sympathetic cholinergic.",
+        "d": "External genitalia vasodilation is parasympathetic (via pelvic splanchnic nerves), not sympathetic cholinergic."
+      },
+      "topicReference": "Topic 51: Skeletal Muscle Circulation"
+    },
+    {
+      "questionId": "q-3543048990-60",
+      "summary": "Exercise hyperemia involves: metabolic vasodilators (K+, adenosine, prostaglandins), and sympathetic cholinergic vasodilation. NOT angiotensin (vasoconstrictor), NOT beta-1 (heart receptor), NOT parasympathetic vasodilator (doesn't exist in muscle).",
+      "whyCorrect": {
+        "b": "K+ and adenosine are released from active muscle cells and cause local vasodilation. K+ depolarizes smooth muscle, adenosine acts on A2 receptors.",
+        "c": "Prostaglandins (especially PGI2/prostacyclin) are produced locally and contribute to exercise vasodilation.",
+        "e": "Sympathetic cholinergic fibers to skeletal muscle arterioles cause vasodilation, especially in anticipatory phase of exercise."
+      },
+      "whyIncorrect": {
+        "a": "Angiotensin II is a vasoconstrictor. It would DECREASE, not increase, muscle blood flow.",
+        "d": "Beta-1 receptors are primarily in the heart (positive inotropic/chronotropic). Muscle vasodilation uses beta-2 receptors.",
+        "f": "There are NO parasympathetic vasodilator neurons to skeletal muscle. This doesn't exist."
+      },
+      "topicReference": "Topic 51: Skeletal Muscle Circulation"
+    },
+    {
+      "questionId": "q-4447200607-29",
+      "summary": "Skeletal muscle has the greatest capacity for blood flow increase (up to 20× resting) due to: large vascular bed, sympathetic cholinergic dilation, beta-2 receptors, AND metabolic vasodilation. Other circulations have less reserve or different responses.",
+      "whyCorrect": {
+        "d": "Skeletal muscle circulation shows the MAXIMAL increase with adrenergic sympathetic stimulation because: (1) largest vascular bed, (2) beta-2 receptors cause dilation, (3) combined with metabolic vasodilation can increase flow 20-fold."
+      },
+      "whyIncorrect": {
+        "a": "Cerebral circulation has strong autoregulation and minimal sympathetic response. Flow stays relatively constant.",
+        "b": "Coronary circulation is primarily metabolically controlled. Sympathetic effects are complex (beta-2 dilation opposed by alpha constriction).",
+        "c": "Pulmonary circulation has minimal sympathetic control. Blood flow is largely passive.",
+        "e": "Cutaneous circulation responds to sympathetic stimulation with vasoconstriction (alpha receptors), not maximal flow increase."
+      },
+      "topicReference": "Topic 51: Skeletal Muscle Circulation"
+    },
+    {
+      "questionId": "q-5090109547-21",
+      "summary": "During exercise, despite increased CO, diastolic BP stays stable because TPR DECREASES (muscle vasodilation). The decreased resistance offsets the increased output. Systolic rises (increased SV), but diastolic is maintained by lower TPR.",
+      "whyCorrect": {
+        "a": "Decreased total peripheral resistance is the key. Massive vasodilation in exercising muscles lowers TPR, offsetting the increased cardiac output. This keeps diastolic pressure stable despite higher blood flow."
+      },
+      "whyIncorrect": {
+        "b": "Arteriolar flow doesn't specifically decrease during diastole in exercise. This isn't the mechanism.",
+        "c": "Increased stroke volume raises SYSTOLIC pressure, not explains stable diastolic.",
+        "d": "Increased heart rate affects systolic more than diastolic and doesn't explain stable diastolic pressure."
+      },
+      "topicReference": "Topic 51: Skeletal Muscle Circulation"
+    }
+  ]
+}

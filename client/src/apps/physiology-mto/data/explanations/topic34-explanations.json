@@ -1,0 +1,185 @@
+{
+  "metadata": {
+    "topic": 34,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 6,
+    "status": "TEMPLATE - needs explanations generated"
+  },
+  "questions": [
+    {
+      "questionId": "q-0313014645-15",
+      "text": "Increase in the shear rate will reduce blood viscosity due to",
+      "options": [
+        {
+          "letter": "a",
+          "text": "dispersion of red blood cell aggregates also known as moneyroll formations"
+        },
+        {
+          "letter": "b",
+          "text": "red blood cells assume a streamlined elongated shape"
+        },
+        {
+          "letter": "c",
+          "text": "both mechanisms contribute to the effect"
+        },
+        {
+          "letter": "d",
+          "text": "none of them contribute, since blood viscosity is independent of shear rate"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-3543048990-57",
+      "text": "Increased hematocrit",
+      "options": [
+        {
+          "letter": "a",
+          "text": "decreases the incidence of turbulent blood flow"
+        },
+        {
+          "letter": "b",
+          "text": "decreases the viscosity of the blood"
+        },
+        {
+          "letter": "c",
+          "text": "decreases the peripheral resistance"
+        },
+        {
+          "letter": "d",
+          "text": "promotes the Bohr's effect"
+        },
+        {
+          "letter": "e",
+          "text": "increases the peripheral resistance"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "e"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-3543048990-58",
+      "text": "Which of the following statements are correct?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "plasma protein concentration is the major factor determining the viscosity of blood"
+        },
+        {
+          "letter": "b",
+          "text": "the Fahreus-Lindquist effect shows that viscosity decreases in small vessels"
+        },
+        {
+          "letter": "c",
+          "text": "viscosity increases at high flow velocities"
+        },
+        {
+          "letter": "d",
+          "text": "high viscosity decreases the tendency to turbulent flow"
+        },
+        {
+          "letter": "e",
+          "text": "shear stress (shear force) on wall increases with viscosity"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "d",
+        "e"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-4525102917-12",
+      "text": "What is the Fahraeus-Lindquist effect?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the viscosity of blood decreases if the velocity of flow increases"
+        },
+        {
+          "letter": "b",
+          "text": "viscosity of blood increases if the blood flows in narrower blood vessels up to diameters of 7-10 micrometers"
+        },
+        {
+          "letter": "c",
+          "text": "the viscosity of blood remains constant despite changes in the velocity of flow"
+        },
+        {
+          "letter": "d",
+          "text": "the viscosity of blood increases if the velocity of flow increases"
+        },
+        {
+          "letter": "e",
+          "text": "viscosity of blood decreases if the blood flows in narrower blood vessels up to diameters of 7-10 micrometers"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4855200607-13",
+      "text": "What is the Fahraeus-Lindquist effect?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the viscosity of blood decreases if the velocity of flow increases"
+        },
+        {
+          "letter": "b",
+          "text": "viscosity of blood increases if the blood flows in narrower blood vessels up to diameters of 7-10 micrometers"
+        },
+        {
+          "letter": "c",
+          "text": "viscosity of blood decreases if the blood flows in narrower blood vessels up to diameters of 7-10 micrometers"
+        },
+        {
+          "letter": "d",
+          "text": "the viscosity of blood remains constant despite changes in the velocity of flow"
+        },
+        {
+          "letter": "e",
+          "text": "the viscosity of blood increases if the velocity of flow increases"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4855200607-16",
+      "text": "The MOST important factor determining the shape of red blood cells in the circulation",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the elasticity of the red blood cell's membrane"
+        },
+        {
+          "letter": "b",
+          "text": "the cytoskeleton of the red blood cell"
+        },
+        {
+          "letter": "c",
+          "text": "the activity of contractile proteins within the red blood cell"
+        },
+        {
+          "letter": "d",
+          "text": "the passive deformations due to shear forces"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    }
+  ]
+}

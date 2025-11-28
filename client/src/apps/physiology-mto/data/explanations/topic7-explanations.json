@@ -1,0 +1,36 @@
+{
+  "metadata": {
+    "topic": 7,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 1,
+    "status": "TEMPLATE - needs explanations generated"
+  },
+  "questions": [
+    {
+      "questionId": "q-4447200607-13",
+      "text": "Which of the following second messenger systems is implicated in the mediation of vasoconstriction?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "activation of cGMP"
+        },
+        {
+          "letter": "b",
+          "text": "stimulation of cAMP"
+        },
+        {
+          "letter": "c",
+          "text": "stimulation of cGMP"
+        },
+        {
+          "letter": "d",
+          "text": "stimulation of IP3"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "metadata": {
+    "topic": 40,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 7,
+    "status": "TEMPLATE - needs explanations generated"
+  },
+  "questions": [
+    {
+      "questionId": "q-2734027349-29",
+      "text": "In the left ventricle, the blood flow in the subendocardium:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "is much larger during the diastole than during the systole"
+        },
+        {
+          "letter": "b",
+          "text": "the subendocardium is avascular, has no blood flow, this tissue is supplied by the blood within the heart chambers"
+        },
+        {
+          "letter": "c",
+          "text": "is much larger during the systole than during the diastole"
+        },
+        {
+          "letter": "d",
+          "text": "blood flow is equal in the subendocardium during the cardiac cycle"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-3221027349-1",
+      "text": "In the left ventricle, the blood flow in the subendocardium:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "is much larger during the diastole than during the systole"
+        },
+        {
+          "letter": "b",
+          "text": "is much larger during the systole than during the diastole, this tissue is supplied by the blood within the heart chambers"
+        },
+        {
+          "letter": "c",
+          "text": "is much larger during the systole than during the diastole"
+        },
+        {
+          "letter": "d",
+          "text": "blood flow is equal in the subendocardium during the cardiac cycle"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-3543048990-61",
+      "text": "Coronary flow depends on:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "diastolic blood pressure"
+        },
+        {
+          "letter": "b",
+          "text": "heart rate"
+        },
+        {
+          "letter": "c",
+          "text": "right atrial pressure"
+        },
+        {
+          "letter": "d",
+          "text": "duration of diastole"
+        },
+        {
+          "letter": "e",
+          "text": "intrathoracic pressure"
+        },
+        {
+          "letter": "f",
+          "text": "posture"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "f"
+      ],
+      "correctAnswerCount": 5
+    },
+    {
+      "questionId": "q-4447200607-10",
+      "text": "Left coronary artery blood flow",
+      "options": [
+        {
+          "letter": "a",
+          "text": "does not depend on arterial blood pressure"
+        },
+        {
+          "letter": "b",
+          "text": "is greatest during diastole"
+        },
+        {
+          "letter": "c",
+          "text": "accounts for about 10% of the cardiac output"
+        },
+        {
+          "letter": "d",
+          "text": "is regulated mainly by myocardial O2 consumption"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "d"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-4447200607-16",
+      "text": "Cardiac work is composed of the followings:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "volume work + pressure work"
+        },
+        {
+          "letter": "b",
+          "text": "pressure work + acceleration work + volume work"
+        },
+        {
+          "letter": "c",
+          "text": "acceleration work + volume work"
+        },
+        {
+          "letter": "d",
+          "text": "pressure work + acceleration work"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4525102917-8",
+      "text": "Left coronary artery blood flow",
+      "options": [
+        {
+          "letter": "a",
+          "text": "does not depend on arterial blood pressure"
+        },
+        {
+          "letter": "b",
+          "text": "is regulated mainly by myocardial O2 consumption"
+        },
+        {
+          "letter": "c",
+          "text": "is greatest during diastole"
+        },
+        {
+          "letter": "d",
+          "text": "accounts for about 10% of the cardiac output"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-5156012322-19",
+      "text": "The muscle cells of the left ventricle receive blood supply via the coronary arteries predominantly",
+      "options": [
+        {
+          "letter": "a",
+          "text": "during isometric contraction"
+        },
+        {
+          "letter": "b",
+          "text": "during diastole"
+        },
+        {
+          "letter": "c",
+          "text": "continuously during both systole and diastole"
+        },
+        {
+          "letter": "d",
+          "text": "during rapid ejection"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    }
+  ]
+}

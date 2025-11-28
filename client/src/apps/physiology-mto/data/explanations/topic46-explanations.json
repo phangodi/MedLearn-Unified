@@ -1,0 +1,875 @@
+{
+  "metadata": {
+    "topic": 46,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 28,
+    "status": "TEMPLATE - needs explanations generated"
+  },
+  "questions": [
+    {
+      "questionId": "q-0313014645-B-1",
+      "text": "Which of the following substances are classified as vasoconstrictors",
+      "options": [
+        {
+          "letter": "a",
+          "text": "beta-2-adrenergic agonists"
+        },
+        {
+          "letter": "b",
+          "text": "angiotensin II"
+        },
+        {
+          "letter": "c",
+          "text": "endothelin"
+        },
+        {
+          "letter": "d",
+          "text": "nitric oxide"
+        },
+        {
+          "letter": "e",
+          "text": "prostacycline"
+        },
+        {
+          "letter": "f",
+          "text": "kallidin (lysl-bradykinin)"
+        },
+        {
+          "letter": "g",
+          "text": "PGE2"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-0313014645-B-2",
+      "text": "Increase of cAMP level in the vascular smooth muscle cells",
+      "options": [
+        {
+          "letter": "a",
+          "text": "causes contraction"
+        },
+        {
+          "letter": "b",
+          "text": "activates the Na+/K+ pump"
+        },
+        {
+          "letter": "c",
+          "text": "causes relaxation"
+        },
+        {
+          "letter": "d",
+          "text": "activates nitric oxide synthase (NOS)"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-0313014645-B-20",
+      "text": "If the endothelial NO-synthase activity is INHIBITED in an arteriole, the followings can be observed:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the vasodilator effect of acethyl-choline weakens, or it reverses to vasoconstriction"
+        },
+        {
+          "letter": "b",
+          "text": "the vasoconstrictor effect of bradykinin weakens, or it reverses to vasodilatation"
+        },
+        {
+          "letter": "c",
+          "text": "the vasoconstrictor effect of noradrenaline weakens, or it reverses to vasodilation"
+        },
+        {
+          "letter": "d",
+          "text": "the vasodilator effect of histamine weakens, or it reverses to vasoconstriction"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "d"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-0313014645-6",
+      "text": "Mediators released from NERVE ENDINGS during neurogenic inflammation contributing to the development of the flare of the triple response:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "angiotensin and vasopressin"
+        },
+        {
+          "letter": "b",
+          "text": "acetyl-choline and vasoactive intestinal polypeptide (VIP)"
+        },
+        {
+          "letter": "c",
+          "text": "a prostacyclin (PGI2) and nitrogen oxide (NO)"
+        },
+        {
+          "letter": "d",
+          "text": "substance P (SP) and calcitonin gene-related peptide (CGRP)"
+        },
+        {
+          "letter": "e",
+          "text": "noradrenaline and neuropeptide Y (NPY)"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-0313014645-18",
+      "text": "What is active hyperemia?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "It refers to the elevated cardiac output in people with an active lifestyle in comparison to inactive people."
+        },
+        {
+          "letter": "b",
+          "text": "It is the opposite of autoregulation, in these tissues blood flow is linearly changing with arterial blood pressure changes."
+        },
+        {
+          "letter": "c",
+          "text": "It means increased blood flow after ischemia of the tissue."
+        },
+        {
+          "letter": "d",
+          "text": "It means increased blood flow during metabolic activation of the tissue."
+        },
+        {
+          "letter": "e",
+          "text": "It means that the maintenance of local blood flow is dependent on an active contribution of the tissue."
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-3543048990-54",
+      "text": "Which of the following organs shows the most significant circulatory autoregulation?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "lungs"
+        },
+        {
+          "letter": "b",
+          "text": "thyroid gland"
+        },
+        {
+          "letter": "c",
+          "text": "kidney"
+        },
+        {
+          "letter": "d",
+          "text": "liver"
+        },
+        {
+          "letter": "e",
+          "text": "small intestine"
+        },
+        {
+          "letter": "f",
+          "text": "spleen"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-3543048990-59",
+      "text": "Which of the following examples indicates reactive hyperemia",
+      "options": [
+        {
+          "letter": "a",
+          "text": "increased blood flow in a specific cortical area during the performance of a mental task"
+        },
+        {
+          "letter": "b",
+          "text": "increased local blood flow in a muscle during work"
+        },
+        {
+          "letter": "c",
+          "text": "increased blood flow in the arm after the occlusion of the arm has been relieved"
+        },
+        {
+          "letter": "d",
+          "text": "decreased sympathetic activity stimulates blood flow in the skin"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-3543048990-62",
+      "text": "Which of the following factors regulate the brain circulation?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Bezold-Jarisch reflex"
+        },
+        {
+          "letter": "b",
+          "text": "sympathetic tone"
+        },
+        {
+          "letter": "c",
+          "text": "PCO2 level"
+        },
+        {
+          "letter": "d",
+          "text": "vasodilator fibers"
+        },
+        {
+          "letter": "e",
+          "text": "blood pH"
+        }
+      ],
+      "correctAnswers": [
+        "c",
+        "e"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-3543048990-66",
+      "text": "Which of the following factors is the most important to blood flow regulation at the local level?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "arteriovenous pressure difference"
+        },
+        {
+          "letter": "b",
+          "text": "metabolic activity of the organ or tissue"
+        },
+        {
+          "letter": "c",
+          "text": "local neurotransmitters"
+        },
+        {
+          "letter": "d",
+          "text": "circulating neurotransmitters"
+        },
+        {
+          "letter": "e",
+          "text": "cardiac output"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-3543048990-67",
+      "text": "Which of the following substances are classified as vasoconstrictors",
+      "options": [
+        {
+          "letter": "a",
+          "text": "bradykinin"
+        },
+        {
+          "letter": "b",
+          "text": "nitric oxide"
+        },
+        {
+          "letter": "c",
+          "text": "endothelin"
+        },
+        {
+          "letter": "d",
+          "text": "beta-1 adrenergic agonists"
+        },
+        {
+          "letter": "e",
+          "text": "angiotensin II"
+        },
+        {
+          "letter": "f",
+          "text": "noradrenaline"
+        },
+        {
+          "letter": "g",
+          "text": "atrial natriuretic peptide"
+        },
+        {
+          "letter": "h",
+          "text": "vasopressin"
+        }
+      ],
+      "correctAnswers": [
+        "c",
+        "e",
+        "f",
+        "h"
+      ],
+      "correctAnswerCount": 4
+    },
+    {
+      "questionId": "q-4447200607-22",
+      "text": "Vasodilator substances produced by the endothelium:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "endothelin (ET)"
+        },
+        {
+          "letter": "b",
+          "text": "angiotensin II (AT2)"
+        },
+        {
+          "letter": "c",
+          "text": "nitric oxide (NO)"
+        },
+        {
+          "letter": "d",
+          "text": "prostacyclin (PGI2)"
+        }
+      ],
+      "correctAnswers": [
+        "c",
+        "d"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-4447200607-23",
+      "text": "Which of the following substances are classified as vasodilators?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "bradykinin"
+        },
+        {
+          "letter": "b",
+          "text": "angiotensin II"
+        },
+        {
+          "letter": "c",
+          "text": "nitric oxide"
+        },
+        {
+          "letter": "d",
+          "text": "beta2-adrenergic agonists"
+        },
+        {
+          "letter": "e",
+          "text": "endothelin"
+        },
+        {
+          "letter": "f",
+          "text": "vasopressin"
+        },
+        {
+          "letter": "g",
+          "text": "atrial natriuretic peptide"
+        },
+        {
+          "letter": "h",
+          "text": "noradrenaline"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "c",
+        "d",
+        "g"
+      ],
+      "correctAnswerCount": 4
+    },
+    {
+      "questionId": "q-4447200607-27",
+      "text": "During increased metabolic activity of a brain area, the regional cerebral blood flow:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "will fall because the local blood pressure will become inadequate to maintain it"
+        },
+        {
+          "letter": "b",
+          "text": "will decrease because flow is inversely related to the local vascular resistance"
+        },
+        {
+          "letter": "c",
+          "text": "will increase because local vascular resistance will decrease"
+        },
+        {
+          "letter": "d",
+          "text": "will remain unchanged because blood pressure is unchanged"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4447200607-28",
+      "text": "Vascular autoregulation",
+      "options": [
+        {
+          "letter": "a",
+          "text": "is particularly marked in the cerebral vessels"
+        },
+        {
+          "letter": "b",
+          "text": "requires rich sympathetic innervation"
+        },
+        {
+          "letter": "c",
+          "text": "is insignificant in the skin vessels"
+        },
+        {
+          "letter": "d",
+          "text": "manifests itself as vasodilation in response to increases in the intravascular pressure"
+        },
+        {
+          "letter": "e",
+          "text": "is characteristic of veins"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "c"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-4525102917-13",
+      "text": "Select the 2 inflammatory mediators that cause vasodilatation via endothelial NO release:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "CGRP"
+        },
+        {
+          "letter": "b",
+          "text": "Bradykinin"
+        },
+        {
+          "letter": "c",
+          "text": "Endothelin-1"
+        },
+        {
+          "letter": "d",
+          "text": "PGE2"
+        },
+        {
+          "letter": "e",
+          "text": "Histamine"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "b"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-4525102917-23",
+      "text": "Important vasoactive mediators in the development of reactive hyperemia:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "thromboxane A2 (TxA2)"
+        },
+        {
+          "letter": "b",
+          "text": "an increase in the extracellular H+ ion concentration"
+        },
+        {
+          "letter": "c",
+          "text": "a decrease in pCO2"
+        },
+        {
+          "letter": "d",
+          "text": "decrease in the extracellular K+ ion concentration"
+        },
+        {
+          "letter": "e",
+          "text": "adenosine"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "e"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-4855200607-6",
+      "text": "Vascular autoregulation",
+      "options": [
+        {
+          "letter": "a",
+          "text": "is characteristic of veins"
+        },
+        {
+          "letter": "b",
+          "text": "is insignificant in the skin vessels"
+        },
+        {
+          "letter": "c",
+          "text": "manifests itself as vasodilation in response to increases in the intravascular pressure"
+        },
+        {
+          "letter": "d",
+          "text": "is particularly marked in the cerebral vessels"
+        },
+        {
+          "letter": "e",
+          "text": "requires rich sympathetic innervation"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "d"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-4855200607-12",
+      "text": "Mediators released from NERVE ENDINGS during neurogenic inflammation contributing to the development of the triple response:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "substance P (SP) and calcitonin gene-related peptide (CGRP)"
+        },
+        {
+          "letter": "b",
+          "text": "a prostagyclin (PGI2) and nitrogen oxide (NO)"
+        },
+        {
+          "letter": "c",
+          "text": "noradrenaline and neuropeptide Y (NPY)"
+        },
+        {
+          "letter": "d",
+          "text": "acetyl-choline and vasoactive intestinal polypeptide (VIP)"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4855200607-15",
+      "text": "During increased metabolic activity of a brain area, the regional cerebral blood flow:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "will remain unchanged because blood pressure is unchanged"
+        },
+        {
+          "letter": "b",
+          "text": "will increase because local vascular resistance will decrease"
+        },
+        {
+          "letter": "c",
+          "text": "will fall because the local blood pressure will become inadequate to maintain it"
+        },
+        {
+          "letter": "d",
+          "text": "will decrease because flow is inversely related to the local vascular resistance"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4855200607-18",
+      "text": "Mediators released from NERVE ENDINGS during neurogenic inflammation contributing to the development of the triple response:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "acetyl-choline and vasoactive intestinal polypeptide (VIP)"
+        },
+        {
+          "letter": "b",
+          "text": "substance P (SP) and calcitonin gene-related peptide (CGRP)"
+        },
+        {
+          "letter": "c",
+          "text": "a prostagyclin (PGI2) and nitrogen oxide (NO)"
+        },
+        {
+          "letter": "d",
+          "text": "noradrenaline and neuropeptide Y (NPY)"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4855200607-22",
+      "text": "Mediators which cause vasodilatation:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "TXA2"
+        },
+        {
+          "letter": "b",
+          "text": "CGRP"
+        },
+        {
+          "letter": "c",
+          "text": "Endothelin-1"
+        },
+        {
+          "letter": "d",
+          "text": "5-HT"
+        },
+        {
+          "letter": "e",
+          "text": "VIP"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "e"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-4855200607-23",
+      "text": "During increased metabolic activity of a brain area, the regional cerebral blood flow:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "will increase because local vascular resistance will decrease"
+        },
+        {
+          "letter": "b",
+          "text": "will remain unchanged because blood pressure is unchanged"
+        },
+        {
+          "letter": "c",
+          "text": "will fall because the local blood pressure will become inadequate to maintain it"
+        },
+        {
+          "letter": "d",
+          "text": "will decrease because flow is inversely related to the local vascular resistance"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4855200607-31",
+      "text": "Vascular autoregulation",
+      "options": [
+        {
+          "letter": "a",
+          "text": "manifests itself as vasodilation in response to increases in the intravascular pressure"
+        },
+        {
+          "letter": "b",
+          "text": "requires rich sympathetic innervation"
+        },
+        {
+          "letter": "c",
+          "text": "is insignificant in the skin vessels"
+        },
+        {
+          "letter": "d",
+          "text": "is particularly marked in the cerebral vessels"
+        },
+        {
+          "letter": "e",
+          "text": "is characteristic of veins"
+        }
+      ],
+      "correctAnswers": [
+        "c",
+        "d"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-4855200607-38",
+      "text": "Local vasoconstrictors:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "local increase of K+ concentration"
+        },
+        {
+          "letter": "b",
+          "text": "thromboxane A2"
+        },
+        {
+          "letter": "c",
+          "text": "increase of pCO2"
+        },
+        {
+          "letter": "d",
+          "text": "adenosine"
+        },
+        {
+          "letter": "e",
+          "text": "endothelin"
+        },
+        {
+          "letter": "f",
+          "text": "bradykinin"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "e"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-4855200607-41",
+      "text": "The cerebral arterioles in a healthy subject have their most pronounced vasodilation in response to",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the stimulation of adrenergic sympathetic neurons"
+        },
+        {
+          "letter": "b",
+          "text": "an increased pO2"
+        },
+        {
+          "letter": "c",
+          "text": "the stimulation of postganglionic parasympathetic neurons"
+        },
+        {
+          "letter": "d",
+          "text": "the stimulation of cholinergic sympathetic neurons"
+        },
+        {
+          "letter": "e",
+          "text": "an increased pCO2"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4855200607-48",
+      "text": "Vasodilator substances produced by the endothelium:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "nitric oxide (NO)"
+        },
+        {
+          "letter": "b",
+          "text": "prostacyclin (PGI2)"
+        },
+        {
+          "letter": "c",
+          "text": "angiotensin II (AT2)"
+        },
+        {
+          "letter": "d",
+          "text": "endothelin (ET)"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "b"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-5156012322-12",
+      "text": "Which signal transduction pathway is most important for the activation of endothelial NO synthase?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "adenylyl cyclase - cAMP - protein kinase A"
+        },
+        {
+          "letter": "b",
+          "text": "phospholipase C - inositol-triphosphate - IP3 receptor - Ca2+"
+        },
+        {
+          "letter": "c",
+          "text": "phospholipase C - DAG - protein kinase C"
+        },
+        {
+          "letter": "d",
+          "text": "adenylyl cyclase - cAMP - protein kinase A"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-5156012322-13",
+      "text": "Which of the following substances produce vasodilation?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "histamine"
+        },
+        {
+          "letter": "b",
+          "text": "endothelin"
+        },
+        {
+          "letter": "c",
+          "text": "angiotensin"
+        },
+        {
+          "letter": "d",
+          "text": "potassium ion"
+        },
+        {
+          "letter": "e",
+          "text": "thromboxane"
+        },
+        {
+          "letter": "f",
+          "text": "nitric oxide"
+        },
+        {
+          "letter": "g",
+          "text": "noradrenaline"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "c",
+        "d",
+        "f"
+      ],
+      "correctAnswerCount": 4
+    }
+  ]
+}

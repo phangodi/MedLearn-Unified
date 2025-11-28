@@ -1,0 +1,36 @@
+{
+  "metadata": {
+    "topic": 36,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 2,
+    "status": "COMPLETE"
+  },
+  "explanations": [
+    {
+      "questionId": "q-3543048990-83",
+      "summary": "Cardiac output facts: (1) CO = HR × SV; (2) Fick principle: CO = VO2/(CaO2-CvO2); (3) Vagus reduces CO (negative chronotropy); (4) Sympathetic increases CO; (5) Range: 4-25 L/min (rest to max exercise).",
+      "whyCorrect": {
+        "a": "Fick principle: CO = Oxygen consumption / (arterial O2 - venous O2 content). This is a gold standard method.",
+        "b": "CO = Heart Rate × Stroke Volume. Basic definition.",
+        "c": "Vagus nerve stimulation REDUCES CO via negative chronotropic (↓HR) and inotropic effects.",
+        "d": "Sympathetic stimulation INCREASES CO via positive chronotropic (↑HR) and inotropic (↑SV) effects.",
+        "e": "CO ranges from ~4-5 L/min at rest to 20-25 L/min during maximal exercise in trained athletes."
+      },
+      "whyIncorrect": {},
+      "topicReference": "Topic 36: The Cardiac Cycle"
+    },
+    {
+      "questionId": "q-4447200607-19",
+      "summary": "Venous pulse is caused by pressure changes in RIGHT ATRIUM propagating backward to jugular veins. It's NOT necessary for filling, NOT diminished in heart failure (often enhanced), and NOT a damped arterial pulse.",
+      "whyCorrect": {
+        "d": "The venous pulse results from pressure changes in the heart (especially right atrium) being transmitted retrograde to the jugular veins. The a, c, and v waves reflect atrial contraction, tricuspid bulging, and venous filling."
+      },
+      "whyIncorrect": {
+        "a": "Venous pulse is NOT necessary for cardiac filling - it's just a consequence of pressure transmission. Cardiac filling depends on venous return pressure.",
+        "b": "Venous pulse is often ENHANCED in cardiac failure (e.g., giant v waves in tricuspid regurgitation), not diminished.",
+        "c": "Venous pulse is NOT a damped arterial pulse - it has completely different origin and waveform. It originates from heart, not from arterial pulsations."
+      },
+      "topicReference": "Topic 36: The Cardiac Cycle"
+    }
+  ]
+}

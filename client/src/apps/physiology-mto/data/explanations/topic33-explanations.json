@@ -1,0 +1,238 @@
+{
+  "metadata": {
+    "topic": 33,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 7,
+    "status": "TEMPLATE - needs explanations generated"
+  },
+  "questions": [
+    {
+      "questionId": "q-0313014645-B-4",
+      "text": "Which of the following vascular resistances is the smallest",
+      "options": [
+        {
+          "letter": "a",
+          "text": "resistance of the intestinal vascular bed"
+        },
+        {
+          "letter": "b",
+          "text": "total peripheral resistance"
+        },
+        {
+          "letter": "c",
+          "text": "resistance of the renal vascular bed"
+        },
+        {
+          "letter": "d",
+          "text": "resistance of the intracerebral vascular bed"
+        },
+        {
+          "letter": "e",
+          "text": "resistance of the skin vessels"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-3543048990-51",
+      "text": "Which of the following statements are correct?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the resistance to flow is smaller in the capillary bed than in the arteriolar bed"
+        },
+        {
+          "letter": "b",
+          "text": "the aorta is the segment of the circulatory system which has the greatest compliance"
+        },
+        {
+          "letter": "c",
+          "text": "velocity decreases continuously from the aorta to the right atrium"
+        },
+        {
+          "letter": "d",
+          "text": "due to the large cross sectional area, the capillary bed contains the largest fraction of blood volume"
+        },
+        {
+          "letter": "e",
+          "text": "the tendency for the occurrence of turbulent flow increases when viscosity decreases"
+        },
+        {
+          "letter": "f",
+          "text": "in a laminar flow, the highest velocities are measured in the axial stream"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "e",
+        "f"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-4447200607-17",
+      "text": "Which of the following changes is the MOST effective in enhancing flow?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "doubling the pressure gradient"
+        },
+        {
+          "letter": "b",
+          "text": "doubling the radius of the tubing"
+        },
+        {
+          "letter": "c",
+          "text": "reducing the viscosity to one half of the original"
+        },
+        {
+          "letter": "d",
+          "text": "reducing the radius of the tubing to one half of the original"
+        },
+        {
+          "letter": "e",
+          "text": "doubling the length of the tubing"
+        },
+        {
+          "letter": "f",
+          "text": "reducing the length of the tubing to one half of the original"
+        },
+        {
+          "letter": "g",
+          "text": "doubling the viscosity"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4447200607-18",
+      "text": "Blood flow tends to be turbulent when",
+      "options": [
+        {
+          "letter": "a",
+          "text": "white blood cell count increases (leukemia)"
+        },
+        {
+          "letter": "b",
+          "text": "the caliber of the vessel increases"
+        },
+        {
+          "letter": "c",
+          "text": "hematocrit decreases"
+        },
+        {
+          "letter": "d",
+          "text": "flow velocity is low"
+        },
+        {
+          "letter": "e",
+          "text": "the vessel is bent in a sharp angle"
+        },
+        {
+          "letter": "f",
+          "text": "viscosity is low"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c",
+        "e",
+        "f"
+      ],
+      "correctAnswerCount": 4
+    },
+    {
+      "questionId": "q-4525102917-6",
+      "text": "Total Peripheral Resistance (TPR) can be calculated by the following formula: (V1=aorta volume, V2= right atrial volume, CO= cardiac output, P1= aortal pressure, P2= right atrial pressure)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "TPR=CO/P1-P2"
+        },
+        {
+          "letter": "b",
+          "text": "TPR=V1-V2/CO"
+        },
+        {
+          "letter": "c",
+          "text": "TPR=P1-P2/CO"
+        },
+        {
+          "letter": "d",
+          "text": "TPR=V1-V2/P1-P2"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4855200607-54",
+      "text": "Which of the following vascular resistances is the smallest",
+      "options": [
+        {
+          "letter": "a",
+          "text": "resistance of the intracerebral vascular bed"
+        },
+        {
+          "letter": "b",
+          "text": "total peripheral resistance"
+        },
+        {
+          "letter": "c",
+          "text": "resistance of the pulmonary circulation"
+        },
+        {
+          "letter": "d",
+          "text": "resistance of the intestinal vascular bed"
+        },
+        {
+          "letter": "e",
+          "text": "resistance of the renal vascular bed"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-5156012322-17",
+      "text": "As a function of vessel size, the resistance to fluid flow in a vessel is",
+      "options": [
+        {
+          "letter": "a",
+          "text": "inversely proportional to the square of the radius"
+        },
+        {
+          "letter": "b",
+          "text": "directly proportional to the radius"
+        },
+        {
+          "letter": "c",
+          "text": "inversely proportional to the fourth power of the radius"
+        },
+        {
+          "letter": "d",
+          "text": "inversely proportional to the cube of the radius"
+        },
+        {
+          "letter": "e",
+          "text": "directly proportional to the square of the radius"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    }
+  ]
+}

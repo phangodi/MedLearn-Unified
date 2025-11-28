@@ -1,0 +1,96 @@
+{
+  "metadata": {
+    "topic": 69,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 3,
+    "status": "TEMPLATE - needs explanations generated"
+  },
+  "questions": [
+    {
+      "questionId": "q-2734027349-12",
+      "text": "Considering an average mixed diet, the caloric equivalence of oxygen is",
+      "options": [
+        {
+          "letter": "a",
+          "text": "17.2 kJ/L"
+        },
+        {
+          "letter": "b",
+          "text": "26.5 kJ/L"
+        },
+        {
+          "letter": "c",
+          "text": "40 kJ/L"
+        },
+        {
+          "letter": "d",
+          "text": "40 kcal/L"
+        },
+        {
+          "letter": "e",
+          "text": "20.2 kJ/L"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-2734027349-19",
+      "text": "Metabolic rate may be defined as",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the amount of energy stored per unit of time"
+        },
+        {
+          "letter": "b",
+          "text": "external work plus energy storage"
+        },
+        {
+          "letter": "c",
+          "text": "energy output plus heat liberated"
+        },
+        {
+          "letter": "d",
+          "text": "energy storage plus heat liberated"
+        },
+        {
+          "letter": "e",
+          "text": "none of the above"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-2734027349-20",
+      "text": "The method to determine basal metabolic rate by measuring oxygen consumption is called:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "indirect calorimetry"
+        },
+        {
+          "letter": "b",
+          "text": "whole-body plethysmograph"
+        },
+        {
+          "letter": "c",
+          "text": "spirometry"
+        },
+        {
+          "letter": "d",
+          "text": "oxymetry"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    }
+  ]
+}

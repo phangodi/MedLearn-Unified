@@ -1,0 +1,181 @@
+{
+  "metadata": {
+    "topic": 45,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 12,
+    "status": "COMPLETE"
+  },
+  "explanations": [
+    {
+      "questionId": "q-0313014645-9",
+      "summary": "Venous return is enhanced by inspiration (negative intrathoracic pressure draws blood toward heart) and increased cardiac contractility (heart pumps out blood, lowering right atrial pressure and creating suction). Arteriolar vasoconstriction reduces venous return by decreasing capillary flow. Venous relaxation pools blood peripherally. Skeletal muscle activity (not lack of it) promotes venous return.",
+      "whyCorrect": {
+        "b": "Inspiration lowers intrathoracic pressure (more negative), creating a pressure gradient that draws venous blood from the abdomen and periphery toward the right atrium.",
+        "c": "Increased cardiac contractility improves cardiac output, lowering right atrial pressure. This increases the pressure gradient from peripheral veins to the heart, enhancing venous return."
+      },
+      "whyIncorrect": {
+        "a": "Arteriolar vasoconstriction DECREASES venous return by reducing blood flow through capillaries into the venous system. Less blood enters the veins from the arterial side.",
+        "d": "Relaxation of veins DECREASES venous return by increasing venous compliance, allowing blood to pool in the venous system rather than return to the heart.",
+        "e": "LACK of skeletal muscle activity DECREASES venous return. The skeletal muscle pump compresses veins during contraction, propelling blood toward the heart."
+      },
+      "topicReference": "Topic 45: Venous System, Venous Return"
+    },
+    {
+      "questionId": "q-3543048990-49",
+      "summary": "Venous characteristics: CVP is +2-6 mmHg (not negative). Enhanced jugular pulse indicates elevated right atrial pressure. The venous pressure gradient (~10 mmHg) drives return to the heart. Venomotor activity is controlled by sympathetic (not parasympathetic) nerves. Arteriolar vasoconstriction reduces (not enhances) venous return. Exercise increases venous flow via muscle pump.",
+      "whyCorrect": {
+        "b": "The jugular venous pulse reflects right atrial pressure. Enhanced (distended) jugular pulse indicates elevated right atrial pressure, seen in heart failure, tricuspid regurgitation, or fluid overload.",
+        "c": "The venous pressure gradient from peripheral veins (~15 mmHg) to central veins (~5 mmHg) is approximately 10 mmHg, which drives blood toward the heart.",
+        "f": "During exercise, the skeletal muscle pump and respiratory pump dramatically increase venous return and thus venous flow, supporting the increased cardiac output needed for exercise."
+      },
+      "whyIncorrect": {
+        "a": "Central venous pressure is POSITIVE, approximately +2 to +6 mmHg. Negative CVP would indicate severe hypovolemia or improper measurement.",
+        "d": "Venomotor activity is controlled by the SYMPATHETIC nervous system (alpha-1 receptors), not parasympathetic. Veins have minimal parasympathetic innervation.",
+        "e": "Arteriolar vasoconstriction REDUCES venous return by decreasing flow from arteries through capillaries into veins. Less blood enters the venous side."
+      },
+      "topicReference": "Topic 45: Venous System, Venous Return"
+    },
+    {
+      "questionId": "q-3543048990-50",
+      "summary": "Infusing 500 mL blood primarily affects the venous system due to high venous compliance. Arterial volume increases minimally. Venous pressure, right atrial pressure, and venous hydrostatic pressure all increase. Via Frank-Starling mechanism, increased preload leads to increased cardiac output.",
+      "whyCorrect": {
+        "a": "Arteries have low compliance and contain only ~15% of blood volume. Most infused blood distributes to the highly compliant venous system, causing minimal arterial volume change.",
+        "b": "Venous pressure increases as the venous system accommodates the additional volume. Even with high compliance, adding 500 mL raises pressure measurably.",
+        "c": "Right atrial pressure increases as more blood flows into the right atrium via increased venous return. This is the direct effect of volume expansion.",
+        "d": "Hydrostatic pressure in veins increases proportionally to the volume increase. This also affects capillary filtration pressure.",
+        "e": "Increased right atrial pressure increases ventricular preload. By Frank-Starling mechanism, this increases stroke volume and thus cardiac output."
+      },
+      "whyIncorrect": {},
+      "topicReference": "Topic 45: Venous System, Venous Return"
+    },
+    {
+      "questionId": "q-3543048990-52",
+      "summary": "In humans, the SKIN is the most important blood reservoir, containing up to 8-10% of blood volume in its extensive venous plexuses. Unlike other species (dogs have splenic reservoir), humans rely on cutaneous venoconstriction to mobilize blood during stress or hemorrhage. The spleen in humans is relatively small.",
+      "whyCorrect": {
+        "c": "The skin's extensive subpapillary venous plexus serves as the primary blood reservoir in humans, containing 8-10% of blood volume. Sympathetic venoconstriction can rapidly mobilize this blood during hemorrhage or exercise."
+      },
+      "whyIncorrect": {
+        "a": "The spleen is a major blood reservoir in some animals (dogs, horses) but NOT in humans. The human spleen is relatively small and stores minimal blood.",
+        "b": "The liver contains significant blood volume but is not considered the MOST important reservoir. It functions more in blood filtration and metabolic processing.",
+        "d": "Bone marrow contains blood for hematopoiesis but does not serve as a mobilizable blood reservoir.",
+        "e": "Skeletal muscle contains blood during activity but acts more as a pump than a reservoir. The muscle pump propels blood toward the heart rather than storing it."
+      },
+      "topicReference": "Topic 45: Venous System, Venous Return"
+    },
+    {
+      "questionId": "q-3543048990-81",
+      "summary": "Venous return is promoted by: increased MSFP (higher driving pressure), inspiration (respiratory pump), lying position (eliminates gravity effects), alpha-adrenergic stimulation (venoconstriction), and even head-standing (gravity aids return from upper body). Static work impedes venous return by sustained muscle compression blocking venous flow.",
+      "whyCorrect": {
+        "a": "Increased mean systemic filling pressure (MSFP) increases the pressure gradient from peripheral veins to the heart, directly promoting venous return.",
+        "c": "Inspiration creates negative intrathoracic pressure that acts like suction, drawing blood from abdominal and peripheral veins into the thorax and right atrium.",
+        "d": "Lying position eliminates the hydrostatic column of blood that opposes venous return when standing. Blood returns more easily from lower extremities.",
+        "e": "Alpha-adrenergic receptor stimulation causes venoconstriction, reducing venous compliance and shifting blood from peripheral venous storage toward the heart.",
+        "f": "Head-standing reverses the normal gravitational impediment in leg veins. Gravity now assists return from what are normally the upper extremities (now lower)."
+      },
+      "whyIncorrect": {
+        "b": "Static work (sustained isometric contraction) actually IMPEDES venous return. Sustained muscle tension compresses veins continuously, blocking blood flow rather than promoting the pumping action of rhythmic contractions."
+      },
+      "topicReference": "Topic 45: Venous System, Venous Return"
+    },
+    {
+      "questionId": "q-3543048990-82",
+      "summary": "Factors promoting venous return include: muscle activity (muscle pump), inspiration (respiratory pump), cardiac pumping (maintains pressure gradient), and reduced hydrostatic pressure in legs (removes gravitational opposition). Lymph nodes, arteriolar vasoconstriction, and enhanced venous pulse do not promote venous return.",
+      "whyCorrect": {
+        "c": "Muscle activity compresses veins during contraction, propelling blood toward the heart. Venous valves prevent backflow, creating a unidirectional pump.",
+        "d": "Inspiration decreases intrathoracic pressure and increases abdominal pressure, creating a pressure gradient that draws venous blood toward the right atrium.",
+        "e": "Cardiac pumping activity maintains low right atrial pressure by continuously ejecting blood. This maintains the pressure gradient driving venous return.",
+        "g": "Reduced hydrostatic pressure in leg veins (e.g., by lying down or leg elevation) removes the gravitational opposition to venous return, facilitating blood flow to the heart."
+      },
+      "whyIncorrect": {
+        "a": "Lymph nodes filter lymph, not blood. They are part of the lymphatic system and do not directly affect venous return.",
+        "b": "Arteriolar vasoconstriction DECREASES venous return by reducing blood flow from the arterial system into veins.",
+        "f": "Enhanced venous pulse indicates cardiac pathology (tricuspid regurgitation, heart failure) and reflects impediment to venous return, not promotion of it."
+      },
+      "topicReference": "Topic 45: Venous System, Venous Return"
+    },
+    {
+      "questionId": "q-3543048990-85",
+      "summary": "Venous return increases with: arteriolar dilation (more blood enters veins), alpha-1 stimulation (venoconstriction mobilizes blood), and inspiration (abdominal pressure pushes blood toward heart). Venous return determines capillary filtration (via venous pressure) and is the major determinant of cardiac output (Guyton). Venous return DECREASES during expiration.",
+      "whyCorrect": {
+        "b": "Arteriolar dilation increases blood flow from arteries through capillaries into veins, increasing venous filling and return.",
+        "c": "Alpha-1 receptor stimulation causes venoconstriction, reducing venous compliance and shifting blood from peripheral veins toward the heart.",
+        "d": "Venous return affects venous pressure, which influences capillary hydrostatic pressure (Pc) and thus filtration. Higher venous pressure increases filtration.",
+        "e": "During inspiration, increased intra-abdominal pressure (from diaphragm descent) compresses abdominal veins, pushing blood into the thorax where lower pressure exists.",
+        "f": "Guyton's principle: the heart can only pump what it receives. Venous return is THE major determinant of cardiac output, setting the preload for ventricular filling."
+      },
+      "whyIncorrect": {
+        "a": "Venous return DECREASES during expiration. Expiration raises intrathoracic pressure (less negative), reducing the pressure gradient that draws blood toward the heart."
+      },
+      "topicReference": "Topic 45: Venous System, Venous Return"
+    },
+    {
+      "questionId": "q-4447200607-7",
+      "summary": "In humans, the SKIN is the most important blood reservoir due to its extensive cutaneous venous plexuses containing 8-10% of total blood volume. Sympathetic venoconstriction can rapidly mobilize this blood. Unlike dogs (splenic reservoir), humans rely on cutaneous vasculature for blood storage.",
+      "whyCorrect": {
+        "b": "The skin's subpapillary venous plexus is the largest blood reservoir in humans, holding 8-10% of blood volume. It can be rapidly mobilized by sympathetic activation during stress, exercise, or hemorrhage."
+      },
+      "whyIncorrect": {
+        "a": "The spleen is a major reservoir in dogs and horses but NOT in humans. Human spleen is relatively small and stores minimal blood.",
+        "c": "Skeletal muscles contain significant blood during activity but function as a pump (propelling blood) rather than a true reservoir (storing blood).",
+        "d": "The liver contains blood but is not the primary reservoir. Its main functions are metabolic and filtration.",
+        "e": "Bone marrow produces blood cells but does not serve as a mobilizable blood reservoir."
+      },
+      "topicReference": "Topic 45: Venous System, Venous Return"
+    },
+    {
+      "questionId": "q-4447200607-26",
+      "summary": "The skeletal muscle pump is the MOST effective factor enhancing venous return. Rhythmic muscle contractions compress veins, propelling blood toward the heart, while valves prevent backflow. It can increase venous return by 5-10 fold during exercise. Other factors (inspiration, negative pressure, abdominal pressure) contribute but are less powerful.",
+      "whyCorrect": {
+        "a": "The skeletal muscle pump is most effective because: (1) it directly compresses veins with significant force, (2) venous valves ensure unidirectional flow, (3) it operates continuously during activity, and (4) it can increase venous return dramatically during exercise."
+      },
+      "whyIncorrect": {
+        "b": "Inspiration promotes venous return but is limited to the respiratory cycle frequency and magnitude of intrathoracic pressure change. It's less powerful than the muscle pump.",
+        "c": "Negative hydrostatic pressure in veins above the heart (due to gravity) does assist drainage but this is passive and limited in magnitude compared to active muscle pumping.",
+        "d": "Positive intra-abdominal pressure during inspiration helps push blood toward the heart but is cyclical and less effective than the sustained action of the muscle pump during activity."
+      },
+      "topicReference": "Topic 45: Venous System, Venous Return"
+    },
+    {
+      "questionId": "q-4525102917-15",
+      "summary": "Factors influencing venous capacity in the leg include: precapillary sphincter contraction (controls venous filling), sympathetic venomotor tone (venoconstriction), posture (hydrostatic pressure), and right ventricular function (determines venous drainage). There is NO parasympathetic venomotor tone to veins - they lack significant parasympathetic innervation.",
+      "whyCorrect": {
+        "e": "Veins do NOT have significant parasympathetic (cholinergic) innervation. Venomotor control is almost exclusively sympathetic (adrenergic). This is why parasympathetic tone cannot influence venous capacity."
+      },
+      "whyIncorrect": {
+        "a": "Precapillary sphincter contraction affects how much blood enters the venous system. Constriction reduces venous filling, thus affecting venous capacity.",
+        "b": "Sympathetic venomotor tone is the primary neural control of venous capacity. Alpha-1 receptor activation causes venoconstriction, reducing venous compliance and capacity.",
+        "c": "Posture dramatically affects leg venous capacity through hydrostatic pressure. Standing increases leg venous pressure and pooling.",
+        "d": "Right ventricular function determines how effectively blood is pumped out of the venous system. Poor RV function leads to venous congestion and increased capacity."
+      },
+      "topicReference": "Topic 45: Venous System, Venous Return"
+    },
+    {
+      "questionId": "q-4855200607-39",
+      "summary": "Factors influencing leg venous capacity include: sympathetic venoconstrictor innervation, body posture (hydrostatic effects), right ventricular function (venous drainage), and precapillary sphincter contraction (venous filling). Parasympathetic cholinergic vasodilator innervation does NOT exist in leg veins - veins lack parasympathetic innervation.",
+      "whyCorrect": {
+        "c": "Veins do NOT receive parasympathetic cholinergic vasodilator innervation. Venous tone is controlled almost exclusively by sympathetic adrenergic nerves. This is a fundamental difference from some arterial beds."
+      },
+      "whyIncorrect": {
+        "a": "Sympathetic adrenergic venoconstrictor innervation is the primary neural control of venous capacity. It reduces venous compliance via alpha-1 receptors.",
+        "b": "Body posture significantly affects leg venous capacity. Standing increases hydrostatic pressure and venous pooling; lying down reduces it.",
+        "d": "Right ventricular function determines venous drainage. Impaired RV function leads to systemic venous congestion and increased venous capacity.",
+        "e": "Precapillary sphincter contraction in the leg controls how much blood flows from arterioles into capillaries and subsequently into veins, affecting venous filling."
+      },
+      "topicReference": "Topic 45: Venous System, Venous Return"
+    },
+    {
+      "questionId": "q-4855200607-44",
+      "summary": "Systemic veins differ from arteries in several key ways: veins are more compliant (20-30× greater), contain valves in extremities, hold more blood volume (~65% vs ~15%), and have more variable volume (act as capacitance vessels). However, veins DO receive sympathetic innervation for venoconstriction.",
+      "whyCorrect": {
+        "a": "Veins are 20-30 times more compliant than arteries. This allows them to accommodate large volume changes with small pressure changes, functioning as capacitance vessels.",
+        "b": "Veins in the extremities (especially legs) contain valves that prevent backflow and enable the muscle pump mechanism. Arteries do not have valves (except at the heart).",
+        "c": "Veins contain approximately 65% of total blood volume, while arteries contain only about 15%. This reflects the venous system's role as a blood reservoir.",
+        "e": "Venous blood volume is highly variable because veins can expand or contract significantly. This variability allows rapid mobilization of blood during stress or hemorrhage."
+      },
+      "whyIncorrect": {
+        "d": "Veins DO receive sympathetic innervation. Sympathetic adrenergic nerves activate alpha-1 receptors causing venoconstriction. This is how the body mobilizes blood from venous reservoirs."
+      },
+      "topicReference": "Topic 45: Venous System, Venous Return"
+    }
+  ]
+}

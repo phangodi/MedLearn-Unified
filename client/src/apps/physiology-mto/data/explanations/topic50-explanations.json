@@ -1,0 +1,337 @@
+{
+  "metadata": {
+    "topic": 50,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 11,
+    "status": "TEMPLATE - needs explanations generated"
+  },
+  "questions": [
+    {
+      "questionId": "q-0313014645-11",
+      "text": "Which statement is FALSE concerning the pulmonary circulation?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "mean pressure in pulmonary arteries is about 15-20% of that in the aorta"
+        },
+        {
+          "letter": "b",
+          "text": "blood flow is chiefly determined by sympathethic vasoconstrictor tone"
+        },
+        {
+          "letter": "c",
+          "text": "arteries carry desaturated venous blood from the systemic circulation"
+        },
+        {
+          "letter": "d",
+          "text": "the ratio of flow in the pulmonary artery to flow in the aorta is approximately 1"
+        },
+        {
+          "letter": "e",
+          "text": "hypoxia triggers vasoconstriction in pulmonary arterioles"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4447200607-6",
+      "text": "The values of which of the following parameters are smaller in the pulmonary circulation than in the systemic circulation",
+      "options": [
+        {
+          "letter": "a",
+          "text": "cardiac output"
+        },
+        {
+          "letter": "b",
+          "text": "mean arterial pressure"
+        },
+        {
+          "letter": "c",
+          "text": "the pressure gradient between the arterial and the venous parts"
+        },
+        {
+          "letter": "d",
+          "text": "venous pressure"
+        },
+        {
+          "letter": "e",
+          "text": "total resistance"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c",
+        "e"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-4447200607-30",
+      "text": "What changes would you expect in the pulmonary system after infusion of large fluid volume in the Pulmonary Vascular Resistance and in the Pulmonary Arterial Pressure",
+      "options": [
+        {
+          "letter": "a",
+          "text": "a small decrease | a large increase"
+        },
+        {
+          "letter": "b",
+          "text": "a large decrease | a small increase"
+        },
+        {
+          "letter": "c",
+          "text": "a large decrease | a small decrease"
+        },
+        {
+          "letter": "d",
+          "text": "a large increase | a large increase"
+        },
+        {
+          "letter": "e",
+          "text": "a small increase | a large increase"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4447200607-31",
+      "text": "The pulmonary circulation differs from the systemic circulation in that in the pulmonary circulation:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the arterial system is more distensible"
+        },
+        {
+          "letter": "b",
+          "text": "the capillaries have a higher transmural pressure"
+        },
+        {
+          "letter": "c",
+          "text": "the arteries serve as more important blood reservoir"
+        },
+        {
+          "letter": "d",
+          "text": "the veins are not an important reservoir of blood for the heart"
+        },
+        {
+          "letter": "e",
+          "text": "obstruction of blood flow is much more likely to cause a retrograde ventricular failure"
+        },
+        {
+          "letter": "f",
+          "text": "adrenergic sympathetic neurons are less important in controlling arteriolar and precapillary resistances"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "e",
+        "f"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-4525102917-21",
+      "text": "During exercise, pulmonary blood flow greatly increases. Which of the following change is responsible?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "large increase in blood pressure in the pulmonary artery"
+        },
+        {
+          "letter": "b",
+          "text": "large increase in the tone of smooth muscle in the pulmonary arterioles"
+        },
+        {
+          "letter": "c",
+          "text": "large increase in the activity of the angiotensin converting enzyme (ACE)"
+        },
+        {
+          "letter": "d",
+          "text": "large increase in left atrial blood pressure"
+        },
+        {
+          "letter": "e",
+          "text": "large decrease in pulmonary vascular resistance"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4855200607-11",
+      "text": "Local hypoxia elicits vasoconstriction in the resistance vessels of",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the coronary circulation"
+        },
+        {
+          "letter": "b",
+          "text": "the cerebral circulation"
+        },
+        {
+          "letter": "c",
+          "text": "the skeletal muscle circulation"
+        },
+        {
+          "letter": "d",
+          "text": "the pulmonary circulation"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4855200607-29",
+      "text": "Local hypoxia elicits vasoconstriction in the resistance vessels of",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the coronary circulation"
+        },
+        {
+          "letter": "b",
+          "text": "the pulmonary circulation"
+        },
+        {
+          "letter": "c",
+          "text": "the cerebral circulation"
+        },
+        {
+          "letter": "d",
+          "text": "the skeletal muscle circulation"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4855200607-37",
+      "text": "What is the systolic pressure measured in the pulmonary artery?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "24 mm Hg"
+        },
+        {
+          "letter": "b",
+          "text": "0-6 mm Hg"
+        },
+        {
+          "letter": "c",
+          "text": "50 mm Hg"
+        },
+        {
+          "letter": "d",
+          "text": "35 mm Hg"
+        },
+        {
+          "letter": "e",
+          "text": "80 mm Hg"
+        },
+        {
+          "letter": "f",
+          "text": "120 mm Hg"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4855200607-53",
+      "text": "Local hypoxia elicits vasoconstriction in the resistance vessels of",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the cerebral circulation"
+        },
+        {
+          "letter": "b",
+          "text": "the coronary circulation"
+        },
+        {
+          "letter": "c",
+          "text": "the skeletal muscle circulation"
+        },
+        {
+          "letter": "d",
+          "text": "the coronary circulation"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4855200607-54",
+      "text": "Which of the following vascular resistances is the smallest",
+      "options": [
+        {
+          "letter": "a",
+          "text": "resistance of the intracerebral vascular bed"
+        },
+        {
+          "letter": "b",
+          "text": "total peripheral resistance"
+        },
+        {
+          "letter": "c",
+          "text": "resistance of the pulmonary circulation"
+        },
+        {
+          "letter": "d",
+          "text": "resistance of the intestinal vascular bed"
+        },
+        {
+          "letter": "e",
+          "text": "resistance of the renal vascular bed"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-5156012322-20",
+      "text": "Local hypoxia elicits vasoconstriction in the resistance vessels of",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the skeletal muscle circulation"
+        },
+        {
+          "letter": "b",
+          "text": "the coronary circulation"
+        },
+        {
+          "letter": "c",
+          "text": "the cerebral circulation"
+        },
+        {
+          "letter": "d",
+          "text": "the pulmonary circulation"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    }
+  ]
+}

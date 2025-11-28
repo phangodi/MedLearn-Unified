@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "topic": 20,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 2,
+    "status": "TEMPLATE - needs explanations generated"
+  },
+  "questions": [
+    {
+      "questionId": "q-4855200607-7",
+      "text": "Sympathetic cholinergic fibers innervate the arterioles of",
+      "options": [
+        {
+          "letter": "a",
+          "text": "salivary glands"
+        },
+        {
+          "letter": "b",
+          "text": "cerebral vessels"
+        },
+        {
+          "letter": "c",
+          "text": "coronaries"
+        },
+        {
+          "letter": "d",
+          "text": "arterioles in skeletal muscles"
+        },
+        {
+          "letter": "e",
+          "text": "external genitals"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4855200607-28",
+      "text": "Sympathetic cholinergic fibers innervate the arterioles of",
+      "options": [
+        {
+          "letter": "a",
+          "text": "arterioles in skeletal muscles"
+        },
+        {
+          "letter": "b",
+          "text": "external genitals"
+        },
+        {
+          "letter": "c",
+          "text": "salivary glands"
+        },
+        {
+          "letter": "d",
+          "text": "cerebral vessels"
+        },
+        {
+          "letter": "e",
+          "text": "coronaries"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    }
+  ]
+}

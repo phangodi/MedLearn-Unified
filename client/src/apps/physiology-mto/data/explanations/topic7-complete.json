@@ -1,0 +1,23 @@
+{
+  "metadata": {
+    "topic": 7,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 1,
+    "status": "COMPLETE"
+  },
+  "explanations": [
+    {
+      "questionId": "q-4447200607-13",
+      "summary": "Vasoconstriction uses IP3/DAG pathway: alpha-1 receptors activate PLC → IP3 releases Ca²⁺ from SR → contraction. cGMP causes RELAXATION (NO pathway). cAMP causes RELAXATION (beta receptors).",
+      "whyCorrect": {
+        "d": "IP3 (inositol trisphosphate) mediates vasoconstriction. Alpha-1 receptors activate phospholipase C → IP3 → Ca²⁺ release from sarcoplasmic reticulum → smooth muscle contraction → vasoconstriction."
+      },
+      "whyIncorrect": {
+        "a": "cGMP activation causes VASODILATION, not constriction. NO activates guanylyl cyclase → cGMP → relaxation.",
+        "b": "cAMP stimulation causes VASODILATION. Beta-2 receptors → adenylyl cyclase → cAMP → relaxation.",
+        "c": "cGMP stimulation causes VASODILATION via NO pathway."
+      },
+      "topicReference": "Topic 7: Second Messengers"
+    }
+  ]
+}

@@ -1,0 +1,466 @@
+{
+  "metadata": {
+    "topic": 53,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 15,
+    "status": "TEMPLATE - needs explanations generated"
+  },
+  "questions": [
+    {
+      "questionId": "q-0313014645-B-16",
+      "text": "Which of the following organs shows the most significant blood flow autoregulation?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "liver"
+        },
+        {
+          "letter": "b",
+          "text": "spleen"
+        },
+        {
+          "letter": "c",
+          "text": "thyroid gland"
+        },
+        {
+          "letter": "d",
+          "text": "small intestine"
+        },
+        {
+          "letter": "e",
+          "text": "lungs"
+        },
+        {
+          "letter": "f",
+          "text": "kidney"
+        }
+      ],
+      "correctAnswers": [
+        "f"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-0313014645-B-17",
+      "text": "The macula densa",
+      "options": [
+        {
+          "letter": "a",
+          "text": "is the site of renin production"
+        },
+        {
+          "letter": "b",
+          "text": "is a receptor detecting NaCl concentration in the tubular fluid"
+        },
+        {
+          "letter": "c",
+          "text": "when stimulated, elicits constriction of the afferent arteriole"
+        },
+        {
+          "letter": "d",
+          "text": "is a baroreceptor detecting pressure in the afferent arteriole"
+        },
+        {
+          "letter": "e",
+          "text": "when stimulated by an increase in tubular Na+ concentration, elicits the release of renin"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "e"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-0313014645-1",
+      "text": "Which of the following organs in the resting subject receives the greatest blood flow per gram of tissue?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "kidney"
+        },
+        {
+          "letter": "b",
+          "text": "brain"
+        },
+        {
+          "letter": "c",
+          "text": "heart"
+        },
+        {
+          "letter": "d",
+          "text": "gastrocnemius muscle"
+        },
+        {
+          "letter": "e",
+          "text": "liver"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-0313014645-14",
+      "text": "True statements on renal blood flow:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the renal vascular resistance is smaller than the total peripheral resistance"
+        },
+        {
+          "letter": "b",
+          "text": "the sympathetic vasoconstrictor tone is minimal in the renal vessels"
+        },
+        {
+          "letter": "c",
+          "text": "it is about 20-25 % of the cardiac output at rest"
+        },
+        {
+          "letter": "d",
+          "text": "it increases proportionally with increased cardiac output"
+        },
+        {
+          "letter": "e",
+          "text": "functional hyperemia is characteristic of the renal circulation"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "c"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-1526033148-2",
+      "text": "The peritubular capillaries of the convoluted segment of the proximal tubule receives blood from (S)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "afferent arteriole"
+        },
+        {
+          "letter": "b",
+          "text": "efferent arteriole"
+        },
+        {
+          "letter": "c",
+          "text": "vasa recta"
+        },
+        {
+          "letter": "d",
+          "text": "small venules"
+        },
+        {
+          "letter": "e",
+          "text": "glomerular tuft"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-1526033148-3",
+      "text": "Which of the following statements is correct? (S)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the renal fraction of blood flow amounts to approximately one fifth of the cardiac output"
+        },
+        {
+          "letter": "b",
+          "text": "each nephron is supplied by two arterioles, one for the glomerulus, and one for the tubular system"
+        },
+        {
+          "letter": "c",
+          "text": "the pressure in the glomerular capillary bed is lower than the pressure in the peritubular capillary bed"
+        },
+        {
+          "letter": "d",
+          "text": "in the glomeruli, unwanted substances are removed"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-1526033148-32",
+      "text": "Use the data below to calculate the RBF. Arterial plasma PAH conc. 0.04 mg/ml, Venous plasma PAH conc. 0.004 mg/ml, Arterial plasma inulin conc. 0.4 mg/ml, Urine PAH conc. 10.0 mg/ml, Urine inulin conc. 20.0 mg/ml, Urine flow rate 2.0 ml/min, Hematocrit 45% (S)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "100 ml/min"
+        },
+        {
+          "letter": "b",
+          "text": "250 ml/min"
+        },
+        {
+          "letter": "c",
+          "text": "556 ml/min"
+        },
+        {
+          "letter": "d",
+          "text": "1000 ml/min"
+        },
+        {
+          "letter": "e",
+          "text": "1235 ml/min"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-1526033148-34",
+      "text": "Use the data below to calculate the RBF. Urine flow rate 2.0 ml/min, Plasma inulin conc. 1.0 mg/ml, Urine inulin conc. 60 mg/ml, Plasma PAH conc. 0.1 mg/ml, Urine PAH conc. 27.5 mg/ml, Plasma glucose conc. 1.5 mg/ml, Urine glucose conc. 5.0 mg/ml, Hematocrit 42% (S)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "120 ml/min"
+        },
+        {
+          "letter": "b",
+          "text": "550 ml/min"
+        },
+        {
+          "letter": "c",
+          "text": "948 ml/min"
+        },
+        {
+          "letter": "d",
+          "text": "1200 ml/min"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-2734027349-23",
+      "text": "Use the data below to calculate the renal blood flow: Arterial plasma PAH conc.= 0.04 mg/ml; Venous plasma PAH conc.= 0.004 mg/ml; Arterial plasma inulin conc.= 0.4 mg/ml; Urine PAH conc.= 10 mg/ml; Urine inulin conc.= 20 mg/ml; Urine flow rate = 2 ml/min; Hematocrit= 45%",
+      "options": [
+        {
+          "letter": "a",
+          "text": "100 ml/min"
+        },
+        {
+          "letter": "b",
+          "text": "430 ml/min"
+        },
+        {
+          "letter": "c",
+          "text": "556 ml/min"
+        },
+        {
+          "letter": "d",
+          "text": "1010 ml/min"
+        },
+        {
+          "letter": "e",
+          "text": "1235 ml/min"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-2734027349-30",
+      "text": "Which of the following organs in the resting subject receives the greatest blood flow per gram of tissue?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "brain"
+        },
+        {
+          "letter": "b",
+          "text": "liver"
+        },
+        {
+          "letter": "c",
+          "text": "gastrocnemius muscle"
+        },
+        {
+          "letter": "d",
+          "text": "heart"
+        },
+        {
+          "letter": "e",
+          "text": "kidney"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-3221027349-2",
+      "text": "Which of the following organs in the resting subject receives the greatest blood flow per gram of tissue?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "brain"
+        },
+        {
+          "letter": "b",
+          "text": "liver"
+        },
+        {
+          "letter": "c",
+          "text": "gastrocnemius muscle"
+        },
+        {
+          "letter": "d",
+          "text": "heart"
+        },
+        {
+          "letter": "e",
+          "text": "kidney"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-3543048990-54",
+      "text": "Which of the following organs shows the most significant circulatory autoregulation?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "lungs"
+        },
+        {
+          "letter": "b",
+          "text": "thyroid gland"
+        },
+        {
+          "letter": "c",
+          "text": "kidney"
+        },
+        {
+          "letter": "d",
+          "text": "liver"
+        },
+        {
+          "letter": "e",
+          "text": "small intestine"
+        },
+        {
+          "letter": "f",
+          "text": "spleen"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4525102917-7",
+      "text": "The macula densa",
+      "options": [
+        {
+          "letter": "a",
+          "text": "is the site of myofilament"
+        },
+        {
+          "letter": "b",
+          "text": "when stimulated by an increase in tubular Na+ concentration, elicits the release of renin"
+        },
+        {
+          "letter": "c",
+          "text": "is a baroreceptor detecting pressure in the afferent arteriole"
+        },
+        {
+          "letter": "d",
+          "text": "is a receptor detecting NaCl concentration in the tubular fluid"
+        },
+        {
+          "letter": "e",
+          "text": "when stimulated, elicits constriction of the afferent arteriole"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "d"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-4525102917-19",
+      "text": "Which of the following values are within the normal range?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "PAH clearance - 120 ml / min"
+        },
+        {
+          "letter": "b",
+          "text": "filtration fraction - 0.50"
+        },
+        {
+          "letter": "c",
+          "text": "RBF - 1300 ml/min"
+        },
+        {
+          "letter": "d",
+          "text": "RPF - 660 ml / min"
+        },
+        {
+          "letter": "e",
+          "text": "GFR - 120 ml / min"
+        }
+      ],
+      "correctAnswers": [
+        "c",
+        "d",
+        "e"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-5156012322-5",
+      "text": "The glomerular filtration",
+      "options": [
+        {
+          "letter": "a",
+          "text": "rate is directly proportional to systemic arterial pressure"
+        },
+        {
+          "letter": "b",
+          "text": "has the same composition as lymph"
+        },
+        {
+          "letter": "c",
+          "text": "has the same composition as plasma in the efferent arterioles"
+        },
+        {
+          "letter": "d",
+          "text": "rate increases when the RPF decreases"
+        },
+        {
+          "letter": "e",
+          "text": "rate (GFR) increases when the NaCl concentration of the distal tubules decreases"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "e"
+      ],
+      "correctAnswerCount": 2
+    }
+  ]
+}

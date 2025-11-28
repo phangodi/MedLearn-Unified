@@ -1,0 +1,1148 @@
+{
+  "metadata": {
+    "topic": 57,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 38,
+    "status": "TEMPLATE - needs explanations generated"
+  },
+  "questions": [
+    {
+      "questionId": "q-0313014645-B-6",
+      "text": "In which segment of the tubular system is the fluid hyperosmotic?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Bowman capsule"
+        },
+        {
+          "letter": "b",
+          "text": "end of thick segment of the loop of Henle"
+        },
+        {
+          "letter": "c",
+          "text": "distal tubule"
+        },
+        {
+          "letter": "d",
+          "text": "thin segment of the loop of Henle (tip of the loop)"
+        },
+        {
+          "letter": "e",
+          "text": "proximal tubule"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-0313014645-B-9",
+      "text": "What is the most important mechanism of Cl- reabsorption in the proximal tubule?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "anion exchange (Cl- - HCO3- antiport)"
+        },
+        {
+          "letter": "b",
+          "text": "Na-K-2Cl cotransport"
+        },
+        {
+          "letter": "c",
+          "text": "cotransport with H+ ions"
+        },
+        {
+          "letter": "d",
+          "text": "paracellular reabsorption driven by the voltage gradient after the primary reabsorption of Na+"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-0313014645-B-12",
+      "text": "Which of the following transport is important for establishing the osmotic gradient in the renal medulla?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "reabsorption of Na+ in the proximal tubule"
+        },
+        {
+          "letter": "b",
+          "text": "Na-K-2Cl cotransport in the thick segment of the loop of Henle"
+        },
+        {
+          "letter": "c",
+          "text": "Na+-reabsorption in the cortical collecting duct"
+        },
+        {
+          "letter": "d",
+          "text": "vasopressin-stimulated reabsorption of water in the collecting duct"
+        },
+        {
+          "letter": "e",
+          "text": "aldosterone-stimulated reabsorption of Na+ in the collecting duct"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-0313014645-10",
+      "text": "The renal recirculation of urea",
+      "options": [
+        {
+          "letter": "a",
+          "text": "involves urea reabsorption by the intercalated cells"
+        },
+        {
+          "letter": "b",
+          "text": "is a mechanism contributing to the creation the osmotic gradient in the medulla"
+        },
+        {
+          "letter": "c",
+          "text": "promotes the excretion of dilute urine"
+        },
+        {
+          "letter": "d",
+          "text": "is inhibited by vasopressin"
+        },
+        {
+          "letter": "e",
+          "text": "is stimulated by vasopressin"
+        },
+        {
+          "letter": "f",
+          "text": "requires UT-1 transporters in the thin segment of the loop of Henle"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "e"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-0313014645-19",
+      "text": "What is the most important mechanism of Cl- reabsorption in the proximal tubule?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "anion exchange (Cl- - HCO3- antiport)"
+        },
+        {
+          "letter": "b",
+          "text": "H+-Cl- antiporter (primary active pump)"
+        },
+        {
+          "letter": "c",
+          "text": "paracellular reabsorption driven by the voltage gradient after the primary reabsorption of Na+"
+        },
+        {
+          "letter": "d",
+          "text": "cotransport with H+ ions"
+        },
+        {
+          "letter": "e",
+          "text": "Na-K-2Cl cotransport"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-0313014645-20",
+      "text": "The Na-K-2Cl cotransporter in the kidney",
+      "options": [
+        {
+          "letter": "a",
+          "text": "resides in the luminal membrane of the proximal convoluted tubulus"
+        },
+        {
+          "letter": "b",
+          "text": "is a transporter directly using ATP (ATPase)"
+        },
+        {
+          "letter": "c",
+          "text": "is inhibited by thiazides"
+        },
+        {
+          "letter": "d",
+          "text": "is a secondary active transport for the K+ and the Cl-"
+        },
+        {
+          "letter": "e",
+          "text": "mediates aldosterone-stimulated Na+-reabsorption"
+        },
+        {
+          "letter": "f",
+          "text": "resides in the luminal membrane of the thick segment of the loop of Henle"
+        }
+      ],
+      "correctAnswers": [
+        "d",
+        "f"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-1526033148-37",
+      "text": "The absorptive capabilities of the different tubular segments vary as follows (S)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "about 65% of all reabsorption that occurs in the tubular system takes part in the loop of Henle"
+        },
+        {
+          "letter": "b",
+          "text": "sodium is transported downhill along the concentration gradient from the proximal tubules into the interstitial fluid"
+        },
+        {
+          "letter": "c",
+          "text": "the thick segment of the loop of Henle shows a marked transport of sodium but it is almost impermeable to urea"
+        },
+        {
+          "letter": "d",
+          "text": "the active sodium transport in the distal tubules and collecting duct epithelium requires ADH"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-1526033148-38",
+      "text": "Which of the following mechanisms is involved in the tubular Na+ reabsorption? (S)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "active discharge of Na+ from the epithelial cells into the interstitial space"
+        },
+        {
+          "letter": "b",
+          "text": "transport of Na+ against a concentration gradient from the tubular lumen into the epithelial cells"
+        },
+        {
+          "letter": "c",
+          "text": "a negative charge of the intratubular fluid"
+        },
+        {
+          "letter": "d",
+          "text": "carrier proteins for Na+ in the basal membrane of the epithelial cells"
+        },
+        {
+          "letter": "e",
+          "text": "a concentration gradient for Na+ from the glomerular filtrate towards the interstitial fluid"
+        },
+        {
+          "letter": "f",
+          "text": "intratubular hydrostatic pressure is higher than the interstitial hydrostatic pressure"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-1526033148-39",
+      "text": "In Na-dependent secondary active transport, metabolic energy is directly used to transport (S)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "glucose across the brush border membrane"
+        },
+        {
+          "letter": "b",
+          "text": "glucose across the basolateral membrane"
+        },
+        {
+          "letter": "c",
+          "text": "Na+ across the brush border membrane"
+        },
+        {
+          "letter": "d",
+          "text": "Na+ across the basolateral membrane"
+        },
+        {
+          "letter": "e",
+          "text": "none of the above is correct"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-1526033148-40",
+      "text": "Which of the following statements is NOT correct? In the kidney (S)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the discharge of Na+ from the tubular epithelial cells into the interstitial space is the active component of the tubular Na+ transport"
+        },
+        {
+          "letter": "b",
+          "text": "there is a concentration gradient for Na+ from the lumen of the tubule into the epithelial cell"
+        },
+        {
+          "letter": "c",
+          "text": "Na+ uptake from the tubular lumen into the epithelial cell occurs against an electrochemical gradient"
+        },
+        {
+          "letter": "d",
+          "text": "Na+ transport from the lumen into the epithelial cell uses carrier proteins"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-1526033148-41",
+      "text": "The kidney \"handles\" K+ by (S)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "filtration only"
+        },
+        {
+          "letter": "b",
+          "text": "filtration and reabsorption only"
+        },
+        {
+          "letter": "c",
+          "text": "filtration and secretion only"
+        },
+        {
+          "letter": "d",
+          "text": "filtration, secretion, and reabsorption"
+        },
+        {
+          "letter": "e",
+          "text": "none of the above is correct"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-1526033148-43",
+      "text": "ADH is a peptide hormone (M)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "produced in the hypothalamus"
+        },
+        {
+          "letter": "b",
+          "text": "produced in the posterior pituitary"
+        },
+        {
+          "letter": "c",
+          "text": "produced in the anterior pituitary"
+        },
+        {
+          "letter": "d",
+          "text": "produced in the adrenal cortex"
+        },
+        {
+          "letter": "e",
+          "text": "produced in the neurohypophysis"
+        },
+        {
+          "letter": "f",
+          "text": "produced in the juxtaglomerular apparatus"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "e"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-1526033148-44",
+      "text": "ADH exerts its action on the kidney by increasing (S)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "free-water clearance"
+        },
+        {
+          "letter": "b",
+          "text": "renal medullary blood flow"
+        },
+        {
+          "letter": "c",
+          "text": "free-water reabsorption"
+        },
+        {
+          "letter": "d",
+          "text": "proximal tubular reabsorption of sodium"
+        },
+        {
+          "letter": "e",
+          "text": "proximal tubular reabsorption of water"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-1526033148-47",
+      "text": "Aldosterone deficiency (Addison's disease) is characterized by (S)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "increased hematocrit"
+        },
+        {
+          "letter": "b",
+          "text": "increased blood pressure"
+        },
+        {
+          "letter": "c",
+          "text": "acidosis"
+        },
+        {
+          "letter": "d",
+          "text": "hypokalemia"
+        },
+        {
+          "letter": "e",
+          "text": "hyperglycemia"
+        },
+        {
+          "letter": "f",
+          "text": "none of the above is correct"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-2734027349-1",
+      "text": "The effect of ADH is",
+      "options": [
+        {
+          "letter": "a",
+          "text": "increase the water permeability of the proximal tubules"
+        },
+        {
+          "letter": "b",
+          "text": "increase the permeability of the peritubular capillaries"
+        },
+        {
+          "letter": "c",
+          "text": "increase the capillary permeability in the glomerulus"
+        },
+        {
+          "letter": "d",
+          "text": "regulate the filtration slits"
+        },
+        {
+          "letter": "e",
+          "text": "increase the water permeability of the collecting tubules"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-2734027349-4",
+      "text": "Na+ can be transported across the luminal membrane of renal tubular cells by",
+      "options": [
+        {
+          "letter": "a",
+          "text": "diffusion through Na+ channels"
+        },
+        {
+          "letter": "b",
+          "text": "co-transport with organic solutes"
+        },
+        {
+          "letter": "c",
+          "text": "counter transport for H+"
+        },
+        {
+          "letter": "d",
+          "text": "the Na-K ATPase"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "b",
+        "c"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-2734027349-15",
+      "text": "Which of the following transports are hormone-regulated?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Na+ reabsorption in the thick ascending segment - vasopressin"
+        },
+        {
+          "letter": "b",
+          "text": "K+ secretion in the collecting duct - aldosterone"
+        },
+        {
+          "letter": "c",
+          "text": "Na+ reabsorption in the proximal tubule - aldosterone"
+        },
+        {
+          "letter": "d",
+          "text": "Na+ reabsorption in the collecting duct - ANH"
+        },
+        {
+          "letter": "e",
+          "text": "Ca2+ reabsorption in the distal tubule - PTH"
+        },
+        {
+          "letter": "f",
+          "text": "K+ reabsorption in the distal tubule - aldosterone"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "d",
+        "e"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-2734027349-27",
+      "text": "In the loop of Henle",
+      "options": [
+        {
+          "letter": "a",
+          "text": "water is reabsorbed from the descending limb"
+        },
+        {
+          "letter": "b",
+          "text": "little or no water is reabsorbed from the ascending limb"
+        },
+        {
+          "letter": "c",
+          "text": "active solute reabsorption occurs in the ascending limb"
+        },
+        {
+          "letter": "d",
+          "text": "active solute reabsorption occurs in the descending limb mainly"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "b",
+        "c"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-2734027349-31",
+      "text": "Which segment of the tubular system is characterized by the highest osmotic concentration in the human kidney?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "ascending thick segment of the loop of Henle"
+        },
+        {
+          "letter": "b",
+          "text": "proximal convoluted tubule"
+        },
+        {
+          "letter": "c",
+          "text": "the total length of the distal convoluted tubule"
+        },
+        {
+          "letter": "d",
+          "text": "the beginning of the distal convoluted tubule"
+        },
+        {
+          "letter": "e",
+          "text": "end of the collecting tubule"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-2734027349-37",
+      "text": "A patient is treated with a drug that causes the formation of a large volume of urine with an osmolarity of 100 mOsm/l. The actions of this drug include:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "inhibition of ADH secretion"
+        },
+        {
+          "letter": "b",
+          "text": "inhibition of the tubular V2 receptors"
+        },
+        {
+          "letter": "c",
+          "text": "inhibition of Na-K-2Cl cotransport by the thick segment of the ascending limb of the loop of Henle"
+        },
+        {
+          "letter": "d",
+          "text": "inhibition of renin secretion"
+        },
+        {
+          "letter": "e",
+          "text": "increased water permeability of the distal tubule and collecting duct"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-2734027349-39",
+      "text": "A major mechanism of Na+-reabsorption in the proximal tubulus is as follows",
+      "options": [
+        {
+          "letter": "a",
+          "text": "exchange for K+ (Na+ - K+ - 2Cl-)"
+        },
+        {
+          "letter": "b",
+          "text": "exchange for K+"
+        },
+        {
+          "letter": "c",
+          "text": "exchange for H+ resulting in net Na+ and HCO3- absorption"
+        },
+        {
+          "letter": "d",
+          "text": "exchange for Ca2+"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-3221027349-3",
+      "text": "Which segment of the tubular system is characterized by the highest osmotic concentration in the concentrating kidney?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "ascending thick segment of the loop of Henle"
+        },
+        {
+          "letter": "b",
+          "text": "proximal convoluted tubule"
+        },
+        {
+          "letter": "c",
+          "text": "the total length of the distal convoluted tubule"
+        },
+        {
+          "letter": "d",
+          "text": "the beginning of the distal convoluted tubule"
+        },
+        {
+          "letter": "e",
+          "text": "end of the collecting tubule"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-3221027349-8",
+      "text": "Which transport is modulated by ANH in the kidney? ANH inhibits",
+      "options": [
+        {
+          "letter": "a",
+          "text": "amiloride-sensitive Na channels in the collecting duct"
+        },
+        {
+          "letter": "b",
+          "text": "Na-K exchange in the proximal tubule"
+        },
+        {
+          "letter": "c",
+          "text": "vasopressin-stimulated water reabsorption in the collecting duct"
+        },
+        {
+          "letter": "d",
+          "text": "Na-K-2Cl cotransporter in the thick segment"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-3221027349-9",
+      "text": "A patient is treated with a diuretic for the formation of a large volume of urine with an osmolarity of 100 mOsm/l. The actions of this drug include:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "inhibition of ADH secretion"
+        },
+        {
+          "letter": "b",
+          "text": "inhibition of the tubular V2 receptors"
+        },
+        {
+          "letter": "c",
+          "text": "decreased active Cl- reabsorption by the thick segment of the ascending limb of the loop of Henle"
+        },
+        {
+          "letter": "d",
+          "text": "inhibition of renin secretion"
+        },
+        {
+          "letter": "e",
+          "text": "increased water permeability of the distal tubule and collecting duct"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-3221027349-11",
+      "text": "A major mechanism of Na+-reabsorption in the proximal tubulus is as follows",
+      "options": [
+        {
+          "letter": "a",
+          "text": "cotransport with Cl- and K+ (Na+ - K+ - 2Cl-)"
+        },
+        {
+          "letter": "b",
+          "text": "exchange for K+"
+        },
+        {
+          "letter": "c",
+          "text": "exchange for H+ resulting in net Na+ and HCO3- absorption"
+        },
+        {
+          "letter": "d",
+          "text": "exchange for Ca2+"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-3221027349-15",
+      "text": "Which cells in the kidney express vacuolar H+-pump?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "epithelial cells of the proximal tubule"
+        },
+        {
+          "letter": "b",
+          "text": "principals cells in the collecting duct"
+        },
+        {
+          "letter": "c",
+          "text": "intercalated cells in the collecting duct"
+        },
+        {
+          "letter": "d",
+          "text": "epithelial cells of the distal tubule"
+        },
+        {
+          "letter": "e",
+          "text": "epithelial cells of the thick segment of the loop of Henle"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4525102917-2",
+      "text": "A major mechanism of Na+-reabsorption in the proximal tubulus is as follows",
+      "options": [
+        {
+          "letter": "a",
+          "text": "exchange for Ca2+"
+        },
+        {
+          "letter": "b",
+          "text": "exchange for H+ resulting in net Na+ and HCO3- absorption"
+        },
+        {
+          "letter": "c",
+          "text": "cotransport of Cl- and K+ (Na+-K+-2Cl-)"
+        },
+        {
+          "letter": "d",
+          "text": "exchange for K+"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4525102917-20",
+      "text": "What is the direct cellular action of aldosterone in the collecting duct?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "opening of luminal Na+-channels"
+        },
+        {
+          "letter": "b",
+          "text": "increasing the number of the luminal Na+ channels"
+        },
+        {
+          "letter": "c",
+          "text": "activation of their cytoplasm"
+        },
+        {
+          "letter": "d",
+          "text": "blocking of ANH receptors"
+        },
+        {
+          "letter": "e",
+          "text": "opening of the luminal K+ channels"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4525102917-22",
+      "text": "The function of the thick segment of the loop of Henle is best described by",
+      "options": [
+        {
+          "letter": "a",
+          "text": "reabsorption of sodium accompanied by water"
+        },
+        {
+          "letter": "b",
+          "text": "reabsorption of NaCl and impermeability to water and urea"
+        },
+        {
+          "letter": "c",
+          "text": "reabsorption of urea resulting in an increased osmolarity of the medullary interstitium"
+        },
+        {
+          "letter": "d",
+          "text": "water reabsorption which reduces the volume of urine"
+        },
+        {
+          "letter": "e",
+          "text": "secretion of potassium"
+        },
+        {
+          "letter": "f",
+          "text": "exchange of various substances"
+        },
+        {
+          "letter": "g",
+          "text": "sodium transport regulated by aldosterone"
+        },
+        {
+          "letter": "h",
+          "text": "intense H+ secretion"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-5090109547-3",
+      "text": "Which of the following transports are hormone-regulated?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Na+ reabsorption in the proximal tubule - aldosterone"
+        },
+        {
+          "letter": "b",
+          "text": "K+ reabsorption in the distal tubule - aldosterone"
+        },
+        {
+          "letter": "c",
+          "text": "K+ secretion in the collecting duct - aldosterone"
+        },
+        {
+          "letter": "d",
+          "text": "K+ reabsorption in the thick ascending segment - vasopressin"
+        },
+        {
+          "letter": "e",
+          "text": "Na+ reabsorption in the collecting duct - aldosterone"
+        },
+        {
+          "letter": "f",
+          "text": "Ca2+-reabsorption in the distal tubule - PTH"
+        }
+      ],
+      "correctAnswers": [
+        "c",
+        "e",
+        "f"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-5090109547-5",
+      "text": "Diabetes insipidus:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "daily urine production may exceed 14-15 liters"
+        },
+        {
+          "letter": "b",
+          "text": "also known as diabetes mellitus"
+        },
+        {
+          "letter": "c",
+          "text": "usually caused by elevated blood AVP (ADH) levels"
+        },
+        {
+          "letter": "d",
+          "text": "may cause hyperhydration (water intoxication)"
+        },
+        {
+          "letter": "e",
+          "text": "usually presents with glycosuria"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-5090109547-8",
+      "text": "What is the source of ammonium ions secreted by the renal tubuli?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "amine groups of glutamine"
+        },
+        {
+          "letter": "b",
+          "text": "side chain amine groups of basic amino acids (arginine, lysine)"
+        },
+        {
+          "letter": "c",
+          "text": "amino groups from urea reabsorbed in the tubuli"
+        },
+        {
+          "letter": "d",
+          "text": "ammonium ions circulating in the blood plasma"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-5090109547-13",
+      "text": "Which statement is true concerning Ca reabsorption in the kidney?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Parathyroid hormone enhances Ca reabsorption in the distal tubule"
+        },
+        {
+          "letter": "b",
+          "text": "There is an active Ca reabsorption in the proximal tubule"
+        },
+        {
+          "letter": "c",
+          "text": "Parathyroid hormone enhances Ca reabsorption in the collecting ducts"
+        },
+        {
+          "letter": "d",
+          "text": "Parathyroid hormone enhances Ca reabsorption in the Loop of Henle"
+        },
+        {
+          "letter": "e",
+          "text": "Parathyroid hormone enhances Ca reabsorption in the proximal tubule"
+        },
+        {
+          "letter": "f",
+          "text": "There is an active Ca reabsorption in the distal tubule"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "b",
+        "f"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-5090109547-20",
+      "text": "Which tubular segment is the action site of furosemide type diuretics inhibiting the Na+K+2Cl- transporter?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "collecting duct"
+        },
+        {
+          "letter": "b",
+          "text": "proximal convoluted tubule"
+        },
+        {
+          "letter": "c",
+          "text": "thick ascending segment of the loop of Henle"
+        },
+        {
+          "letter": "d",
+          "text": "distal convoluted tubule"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-5156012322-1",
+      "text": "The physiological importance of the juxtamedullary (long-loop) nephrons is as follows",
+      "options": [
+        {
+          "letter": "a",
+          "text": "they are shorter than the cortical nephrons in the kidney: they do not participate in the production of urine"
+        },
+        {
+          "letter": "b",
+          "text": "they produce more concentrated glomerular filtrate than the rest of the nephrons"
+        },
+        {
+          "letter": "c",
+          "text": "they are the major source of renin"
+        },
+        {
+          "letter": "d",
+          "text": "they determine the capacity of the kidney to concentrate the urine"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-5156012322-8",
+      "text": "Where is the largest fraction of filtered K+ reabsorbed in the kidney?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "in the thick segment of the loop of Henle"
+        },
+        {
+          "letter": "b",
+          "text": "in the collecting duct"
+        },
+        {
+          "letter": "c",
+          "text": "in the proximal tubule"
+        },
+        {
+          "letter": "d",
+          "text": "in the distal tubule"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-5156012322-9",
+      "text": "Which tubular segment is the action site of the thiazide type diuretics?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "distal tubule"
+        },
+        {
+          "letter": "b",
+          "text": "proximal tubule"
+        },
+        {
+          "letter": "c",
+          "text": "thick segment of the loop of Henle"
+        },
+        {
+          "letter": "d",
+          "text": "collecting duct"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-625411501B-18",
+      "text": "What is characteristic of the thick segment of the loop of Henle?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the Na reabsorption is stimulated by aldosterone"
+        },
+        {
+          "letter": "b",
+          "text": "this is where the largest fraction of filtered Na is reabsorbed"
+        },
+        {
+          "letter": "c",
+          "text": "the tubular fluid becomes hypoosmotic"
+        },
+        {
+          "letter": "d",
+          "text": "large amount of water flows into the interstitium"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    }
+  ]
+}

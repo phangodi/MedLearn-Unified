@@ -1,0 +1,297 @@
+{
+  "metadata": {
+    "topic": 44,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 9,
+    "status": "TEMPLATE - needs explanations generated"
+  },
+  "questions": [
+    {
+      "questionId": "q-3543048990-64",
+      "text": "The volume of the interstitial fluid increases in a tissue in response to",
+      "options": [
+        {
+          "letter": "a",
+          "text": "decreased concentration of plasma proteins"
+        },
+        {
+          "letter": "b",
+          "text": "decreased interstitial colloid osmotic pressure"
+        },
+        {
+          "letter": "c",
+          "text": "increased blood pressure in the veins"
+        },
+        {
+          "letter": "d",
+          "text": "increased pressure of the arterioles"
+        },
+        {
+          "letter": "e",
+          "text": "opened arteriovenous anastomoses"
+        },
+        {
+          "letter": "f",
+          "text": "histamine release"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "c",
+        "d",
+        "f"
+      ],
+      "correctAnswerCount": 4
+    },
+    {
+      "questionId": "q-3543048990-65",
+      "text": "Which of the following statements regarding lymphatic circulation are correct?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "there are no lymphatic vessels in the lung"
+        },
+        {
+          "letter": "b",
+          "text": "there are no lymphatic vessels in the brain tissue"
+        },
+        {
+          "letter": "c",
+          "text": "the lymphatic system is involved in the regulation of the interstitial fluid volume"
+        },
+        {
+          "letter": "d",
+          "text": "the pressure in the thoracic duct is smaller that that in the right atrium"
+        },
+        {
+          "letter": "e",
+          "text": "increased mean systemic filling pressure promotes lymph flow"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-3543048990-89",
+      "text": "Cardiovascular disturbances that lead to tissue edema include",
+      "options": [
+        {
+          "letter": "a",
+          "text": "venous obstruction"
+        },
+        {
+          "letter": "b",
+          "text": "low intravascular protein concentration"
+        },
+        {
+          "letter": "c",
+          "text": "lymphatic obstruction"
+        },
+        {
+          "letter": "d",
+          "text": "arteriolar vasoconstriction"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "b",
+        "c"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-4447200607-25",
+      "text": "Which of the following statements regarding lymphatic circulation are correct?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "there are no lymphatic vessels in the brain tissue"
+        },
+        {
+          "letter": "b",
+          "text": "the lymphatic system is involved in the regulation of the interstitial fluid volume"
+        },
+        {
+          "letter": "c",
+          "text": "there are no lymphatic vessels in the lung"
+        },
+        {
+          "letter": "d",
+          "text": "increased mean systemic filling pressure promotes lymph flow"
+        },
+        {
+          "letter": "e",
+          "text": "the pressure in the thoracic duct is smaller than that in the right atrium"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "b"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-4855200607-30",
+      "text": "The major function of lymphatics is",
+      "options": [
+        {
+          "letter": "a",
+          "text": "to remove lactic acid and other metabolites from the tissues"
+        },
+        {
+          "letter": "b",
+          "text": "to deliver proteins for the tissues"
+        },
+        {
+          "letter": "c",
+          "text": "to deliver lipid soluble nutrients to the tissues"
+        },
+        {
+          "letter": "d",
+          "text": "to deliver lymphocytes to the tissues"
+        },
+        {
+          "letter": "e",
+          "text": "to remove proteins from the interstitial fluid"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4855200607-34",
+      "text": "The total lymph flow in adult humans is approximately:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "1-2 ml/sec"
+        },
+        {
+          "letter": "b",
+          "text": "1-2 microliter/hour"
+        },
+        {
+          "letter": "c",
+          "text": "1-2 microliter/min"
+        },
+        {
+          "letter": "d",
+          "text": "1-2 microliter/sec"
+        },
+        {
+          "letter": "e",
+          "text": "1-2 ml/hour"
+        },
+        {
+          "letter": "f",
+          "text": "1-2 ml/min"
+        }
+      ],
+      "correctAnswers": [
+        "f"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4855200607-50",
+      "text": "Factors that lead to tissue edema include",
+      "options": [
+        {
+          "letter": "a",
+          "text": "arteriolar vasoconstriction"
+        },
+        {
+          "letter": "b",
+          "text": "lymphatic obstruction"
+        },
+        {
+          "letter": "c",
+          "text": "venous obstruction"
+        },
+        {
+          "letter": "d",
+          "text": "low intravascular protein concentration"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c",
+        "d"
+      ],
+      "correctAnswerCount": 3
+    },
+    {
+      "questionId": "q-5156012322-21",
+      "text": "The total lymph flow in adult humans is approximately:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "1-2 ml/sec"
+        },
+        {
+          "letter": "b",
+          "text": "1-2 ml/min"
+        },
+        {
+          "letter": "c",
+          "text": "1-2 ml/hour"
+        },
+        {
+          "letter": "d",
+          "text": "1-2 microliter/min"
+        },
+        {
+          "letter": "e",
+          "text": "1-2 microliter/hour"
+        },
+        {
+          "letter": "f",
+          "text": "1-2 microliter/sec"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-5156012322-22",
+      "text": "The most probable cause of malnutrition-related tissue edema is:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "blood plasma albumin level is doubled."
+        },
+        {
+          "letter": "b",
+          "text": "interstitial oncotic pressure is increased."
+        },
+        {
+          "letter": "c",
+          "text": "blood plasma hydrostatic pressure is increased."
+        },
+        {
+          "letter": "d",
+          "text": "the permeability of capillaries is increased."
+        },
+        {
+          "letter": "e",
+          "text": "blood plasma colloid osmotic pressure is decreased."
+        },
+        {
+          "letter": "f",
+          "text": "interstitial hydrostatic pressure is decreased."
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "correctAnswerCount": 1
+    }
+  ]
+}

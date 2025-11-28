@@ -1,0 +1,607 @@
+{
+  "metadata": {
+    "topic": 56,
+    "generatedAt": "2025-11-28",
+    "totalQuestions": 20,
+    "status": "TEMPLATE - needs explanations generated"
+  },
+  "questions": [
+    {
+      "questionId": "q-0313014645-B-19",
+      "text": "Which hormone stimulates reabsorption of urea in the collecting duct?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "atrial natriuretic hormone (ANH)"
+        },
+        {
+          "letter": "b",
+          "text": "parathormone (PTH)"
+        },
+        {
+          "letter": "c",
+          "text": "arginine-vasopressin (ADH)"
+        },
+        {
+          "letter": "d",
+          "text": "aldosterone"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-0313014645-B-23",
+      "text": "At which plasma glucose concentration does the glucose appear in the urine (renal threshold)?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "5-6 mmol/L"
+        },
+        {
+          "letter": "b",
+          "text": "11-13 mmol/L"
+        },
+        {
+          "letter": "c",
+          "text": "5-6 mmol/L"
+        },
+        {
+          "letter": "d",
+          "text": "there is never glucose in the urine"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-0313014645-7",
+      "text": "The plasma glucose concentration when glucose first appears in the urine (renal threshold) is",
+      "options": [
+        {
+          "letter": "a",
+          "text": "above 20-22 mmol/L"
+        },
+        {
+          "letter": "b",
+          "text": "between 10 and 12 mmol/L"
+        },
+        {
+          "letter": "c",
+          "text": "between 4 and 6 micromol/L"
+        },
+        {
+          "letter": "d",
+          "text": "between 6 and 8 mmol/L"
+        },
+        {
+          "letter": "e",
+          "text": "between 15 and 20 mmol/L"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-0313014645-10",
+      "text": "The renal recirculation of urea",
+      "options": [
+        {
+          "letter": "a",
+          "text": "involves urea reabsorption by the intercalated cells"
+        },
+        {
+          "letter": "b",
+          "text": "is a mechanism contributing to the creation the osmotic gradient in the medulla"
+        },
+        {
+          "letter": "c",
+          "text": "promotes the excretion of dilute urine"
+        },
+        {
+          "letter": "d",
+          "text": "is inhibited by vasopressin"
+        },
+        {
+          "letter": "e",
+          "text": "is stimulated by vasopressin"
+        },
+        {
+          "letter": "f",
+          "text": "requires UT-1 transporters in the thin segment of the loop of Henle"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "e"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-1526033148-5",
+      "text": "It is characteristic of protein transport in the nephron that (S)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "proteins are filtered with perfect ease in the glomeruli"
+        },
+        {
+          "letter": "b",
+          "text": "proteins are not filtered at all in the glomeruli"
+        },
+        {
+          "letter": "c",
+          "text": "proteins are secreted in the tubules"
+        },
+        {
+          "letter": "d",
+          "text": "proteins are taken up from the tubular fluid and are digested by the epithelial cells"
+        },
+        {
+          "letter": "e",
+          "text": "the reabsorbed proteins are transferred into the interstitial fluid"
+        },
+        {
+          "letter": "f",
+          "text": "protein transport is linked to sodium reabsorption"
+        },
+        {
+          "letter": "g",
+          "text": "none of the above is correct"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-1526033148-18",
+      "text": "The tubular maximum for glucose (M)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "corresponds to a plasma glucose concentration of about 10 mmol/liter"
+        },
+        {
+          "letter": "b",
+          "text": "characterizes the tubular glucose transport capacity"
+        },
+        {
+          "letter": "c",
+          "text": "is the threshold concentration for excretion of glucose in the urine"
+        },
+        {
+          "letter": "d",
+          "text": "is the maximum concentration of glucose in the glomerular filtrate which is completely reabsorbed"
+        },
+        {
+          "letter": "e",
+          "text": "is the tubular load of glucose above which the glucose concentration in the urine varies linearly with the glucose concentration in the plasma"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "e"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-1526033148-19",
+      "text": "It is characteristic of glucose excretion that (M)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "glucose is not filtered in the glomeruli"
+        },
+        {
+          "letter": "b",
+          "text": "glucose is secreted in the proximal tubules"
+        },
+        {
+          "letter": "c",
+          "text": "glucose transport has a tubular maximum"
+        },
+        {
+          "letter": "d",
+          "text": "the glucose tubular maximum is the tubular glucose concentration threshold where glucose is excreted in the urine"
+        },
+        {
+          "letter": "e",
+          "text": "the concentration of glucose in the glomerular filtrate is the same as the concentration of glucose in the plasma"
+        },
+        {
+          "letter": "f",
+          "text": "the clearance of glucose is higher than the clearance of sodium"
+        }
+      ],
+      "correctAnswers": [
+        "c",
+        "e"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-1526033148-20",
+      "text": "It is characteristic of glucose excretion that (M)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "glucose is filtered with perfect ease in the glomeruli"
+        },
+        {
+          "letter": "b",
+          "text": "glucose is secreted in the proximal tubules"
+        },
+        {
+          "letter": "c",
+          "text": "glucose is secreted in the distal tubules"
+        },
+        {
+          "letter": "d",
+          "text": "the clearance for glucose is zero"
+        },
+        {
+          "letter": "e",
+          "text": "the clearance for glucose is 120 ml/min"
+        },
+        {
+          "letter": "f",
+          "text": "glucose transport is linked to protein reabsorption"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "d"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-1526033148-42",
+      "text": "Which of the following statements are correct? (M)",
+      "options": [
+        {
+          "letter": "a",
+          "text": "glucose is filtered without restrictions in the glomeruli"
+        },
+        {
+          "letter": "b",
+          "text": "the blood perfusing the glomeruli is completely free of inulin"
+        },
+        {
+          "letter": "c",
+          "text": "glucose is secreted in the proximal tubules"
+        },
+        {
+          "letter": "d",
+          "text": "amino acids are reabsorbed by an active mechanism coupled to sodium transport"
+        },
+        {
+          "letter": "e",
+          "text": "the thick segment is the major site for passive urea reabsorption"
+        },
+        {
+          "letter": "f",
+          "text": "secretion of water requires ADH"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "d"
+      ],
+      "correctAnswerCount": 2
+    },
+    {
+      "questionId": "q-2734027349-7",
+      "text": "Find the substance that is passively reabsorbed from the proximal tubule",
+      "options": [
+        {
+          "letter": "a",
+          "text": "urea"
+        },
+        {
+          "letter": "b",
+          "text": "sodium"
+        },
+        {
+          "letter": "c",
+          "text": "amino acids"
+        },
+        {
+          "letter": "d",
+          "text": "glucose"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-2734027349-18",
+      "text": "It is characteristic of protein transport in the nephron that",
+      "options": [
+        {
+          "letter": "a",
+          "text": "proteins are secreted in the tubules"
+        },
+        {
+          "letter": "b",
+          "text": "protein transport is linked to sodium reabsorption"
+        },
+        {
+          "letter": "c",
+          "text": "proteins are filtered with perfect ease in the glomeruli"
+        },
+        {
+          "letter": "d",
+          "text": "proteins are taken up from the tubular fluid and are digested by the epithelial cells"
+        },
+        {
+          "letter": "e",
+          "text": "proteins are not filtered at all in the glomeruli"
+        },
+        {
+          "letter": "f",
+          "text": "the reabsorbed proteins are transferred into the interstitial fluid"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-2734027349-28",
+      "text": "Which statement is true concerning the renal excretion of glucose?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "the renal clearance of glucose is approximately 20-30 ml/min under physiological circumstances"
+        },
+        {
+          "letter": "b",
+          "text": "at normal fasting blood glucose levels the renal glucose transport is fully saturated"
+        },
+        {
+          "letter": "c",
+          "text": "tubular glucose reabsorption is independent of the Na-K pump inhibition, since the transport mechanism of glucose is facilitated diffusion"
+        },
+        {
+          "letter": "d",
+          "text": "the hormonal regulation of renal glucose excretion is taking place in the principal cells of the collecting duct"
+        },
+        {
+          "letter": "e",
+          "text": "The renal threshold of glucose is the plasma glucose concentration, where the glucose transport is saturated and reaches the Tmax value"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-2734027349-40",
+      "text": "Find the substance that is passively reabsorbed from the proximal tubule",
+      "options": [
+        {
+          "letter": "a",
+          "text": "albumin"
+        },
+        {
+          "letter": "b",
+          "text": "glucose"
+        },
+        {
+          "letter": "c",
+          "text": "amino acids"
+        },
+        {
+          "letter": "d",
+          "text": "urea"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-2734027349-41",
+      "text": "At which plasma glucose concentration does the glucose appear in the urine?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "22-25 mmol/L"
+        },
+        {
+          "letter": "b",
+          "text": "11-13 mmol/L"
+        },
+        {
+          "letter": "c",
+          "text": "3-6 mmol/L"
+        },
+        {
+          "letter": "d",
+          "text": "there is never glucose in the urine"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-3221027349-12",
+      "text": "Find the substance that is passively reabsorbed from the proximal tubule",
+      "options": [
+        {
+          "letter": "a",
+          "text": "albumin"
+        },
+        {
+          "letter": "b",
+          "text": "glucose"
+        },
+        {
+          "letter": "c",
+          "text": "amino acids"
+        },
+        {
+          "letter": "d",
+          "text": "urea"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-3221027349-13",
+      "text": "At which plasma glucose concentration does the glucose appear in the urine?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "22-25 mmol/L"
+        },
+        {
+          "letter": "b",
+          "text": "11-13 mmol/L"
+        },
+        {
+          "letter": "c",
+          "text": "5-6 mmol/L"
+        },
+        {
+          "letter": "d",
+          "text": "there is never glucose in the urine"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4525102917-4",
+      "text": "Where are the amino acids reabsorbed in the kidney?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "only in the proximal tubule"
+        },
+        {
+          "letter": "b",
+          "text": "in the proximal and distal tubules"
+        },
+        {
+          "letter": "c",
+          "text": "in the Bowman-capsule"
+        },
+        {
+          "letter": "d",
+          "text": "only in the thick segment of the loop of Henle"
+        },
+        {
+          "letter": "e",
+          "text": "only in the collecting duct"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-4525102917-11",
+      "text": "Which statement is true concerning the renal excretion of glucose?",
+      "options": [
+        {
+          "letter": "a",
+          "text": "at normal fasting blood glucose levels the renal glucose transport is fully saturated"
+        },
+        {
+          "letter": "b",
+          "text": "the kidney is able to excrete glucose at approximately 20-30 ml/min under physiological circumstances"
+        },
+        {
+          "letter": "c",
+          "text": "the hormone vasopressin is renal glucose is taking place in the principal cells of the collecting duct"
+        },
+        {
+          "letter": "d",
+          "text": "The renal threshold of glucose is the plasma glucose concentration, where the glucose transport is saturated and reaches the Tmax value."
+        },
+        {
+          "letter": "e",
+          "text": "tubular glucose reabsorption is independent of the Na-K pump inhibition, since the luminal transport mechanism of glucose is facilitated diffusion"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-5156012322-6",
+      "text": "Osmotic diuresis is often observed in",
+      "options": [
+        {
+          "letter": "a",
+          "text": "diabetes mellitus"
+        },
+        {
+          "letter": "b",
+          "text": "after drinking excessive amounts of water"
+        },
+        {
+          "letter": "c",
+          "text": "diabetes insipidus"
+        },
+        {
+          "letter": "d",
+          "text": "in the case of urinary incontinence"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "correctAnswerCount": 1
+    },
+    {
+      "questionId": "q-5156012322-10",
+      "text": "The transport of urea in the kidney is such that",
+      "options": [
+        {
+          "letter": "a",
+          "text": "cc. 10 % of excreted urea is secreted in the collecting duct"
+        },
+        {
+          "letter": "b",
+          "text": "cc. 10 % of the filtered urea is reabsorbed in the thick segment of the loop of Henle"
+        },
+        {
+          "letter": "c",
+          "text": "cc. 50 % of the filtered urea is reabsorbed in the proximal tubule"
+        },
+        {
+          "letter": "d",
+          "text": "cc. 10 % of the filtered urea is reabsorbed in the thin segment of the loop of Henle"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "correctAnswerCount": 1
+    }
+  ]
+}
