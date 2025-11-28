@@ -502,199 +502,127 @@ This dual-ID system exists due to migration from local JSON files. A future clea
 - Profile page user stats not implemented
 - MTO system uses dual-ID pattern (legacyId for explanations) - see section above
 
-## 🔀 Pending Branch: feature/flashcards (MERGE INSTRUCTIONS)
+## 🔀 Current Branch State: Flashcards Development
 
-**⚠️ CRITICAL: Read this ENTIRE section before merging the flashcards branch!**
+**Last updated:** Nov 28, 2025
 
-The `feature/flashcards` branch contains the Flashcard system with Anki import. When the user requests to merge this branch, follow these instructions carefully.
+### Branch Overview
 
-### Branch Status (as of Nov 28, 2025)
+| Branch | Contents | Status |
+|--------|----------|--------|
+| `main` | MTO system only | ✅ Production-ready, deployed |
+| `feature/flashcards` | Flashcards only (old base) | ⚠️ Obsolete - do not use directly |
+| `test-flashcards-merge` | **MTO + Flashcards combined** | ✅ Working development branch |
 
-- **Branch name:** `feature/flashcards`
-- **Based on:** `main` (before MTO merge)
-- **Status:** Feature complete, needs merge with updated main
+### Visual Diagram
 
-### Files That Will Have Merge Conflicts
+```
+main (MTO only) ─────────────────────● production/staging deployed here
+                                      \
+feature/flashcards (old) ──●           \
+                            \           \
+                             └───────────● test-flashcards-merge (ACTIVE DEVELOPMENT)
+                                           Has: MTO + Flashcards + all fixes
+```
 
-When merging `feature/flashcards` into `main`, Git will report conflicts in these files:
+### Current Working Branch: `test-flashcards-merge`
 
-| File | Conflict Type | How to Resolve |
-|------|---------------|----------------|
-| `CLAUDE.md` | Both branches added new sections | **Keep BOTH sections** - MTO ID rules AND Flashcard docs |
-| `firestore.rules` | Both branches added new collections | **Keep BOTH rules** - MTO rules AND Flashcard rules |
-| `client/package.json` | Both branches added dependencies | **Keep BOTH dependencies** - merge the objects |
-| `client/package-lock.json` | Auto-generated | **Delete and regenerate** with `npm install` |
+This is where flashcard development should continue. It contains:
+- ✅ All MTO system features (questions, explanations, bookmarks, flagging)
+- ✅ Flashcard system with Anki import
+- ✅ Fixed `firebase.ts` (reads from .env.local, not hardcoded)
+- ✅ Combined Firestore rules (MTO + Flashcard collections)
+- ✅ All sidebar navigation items
 
-### Step-by-Step Merge Process
+### How to Continue Flashcard Development
 
 ```bash
-# 1. Make sure you're on main and it's up to date
-git checkout main
-git pull origin main
+# Make sure you're on the right branch
+git checkout test-flashcards-merge
 
-# 2. Attempt the merge
-git merge feature/flashcards
-
-# 3. Git will report conflicts - THIS IS EXPECTED
-# You'll see something like:
-# CONFLICT (content): Merge conflict in CLAUDE.md
-# CONFLICT (content): Merge conflict in firestore.rules
-# CONFLICT (content): Merge conflict in client/package.json
-
-# 4. Resolve each conflict (see detailed instructions below)
-
-# 5. After resolving, stage the files
-git add .
-
-# 6. Complete the merge
-git commit -m "Merge feature/flashcards into main"
-
-# 7. Regenerate package-lock.json
-cd client
-rm package-lock.json
-npm install
-cd ..
-
-# 8. Test that everything works
+# Start dev server
 cd client && npm run dev
 
-# 9. Push to GitHub
+# Make changes, then commit
+git add .
+git commit -m "Your commit message"
+```
+
+### When Ready to Finalize: Merge to Main
+
+When flashcards are complete and ready for production:
+
+```bash
+# 1. Switch to main
+git checkout main
+
+# 2. Merge the test branch
+git merge test-flashcards-merge
+
+# 3. Push to GitHub (when ready)
 git push origin main
+
+# 4. Deploy Firestore rules (already done, but verify)
+firebase deploy --only firestore:rules
+
+# 5. Deploy to Netlify
+netlify deploy --prod
 ```
 
-### Detailed Conflict Resolution
+### ⚠️ Critical Fix Applied: Firebase Configuration
 
-#### 1. CLAUDE.md Conflict
+The original `feature/flashcards` branch had a broken `client/src/lib/firebase.ts` that:
+- Used hardcoded demo credentials
+- **Always** connected to Firebase emulators in development
+- Ignored `.env.local` settings
 
-**What you'll see:**
-```
-<<<<<<< HEAD
-(MTO documentation that's currently in main)
-=======
-(Flashcard documentation from the branch)
->>>>>>> feature/flashcards
-```
+**This was fixed** in `test-flashcards-merge`. The correct `firebase.ts`:
+- Reads credentials from `.env.local`
+- Only connects to emulators if `VITE_USE_FIREBASE_EMULATORS=true`
+- Shows "🔥 Connected to Firebase Production" in console when working correctly
 
-**How to resolve:**
-- Keep ALL content from both sides
-- The MTO ID Rules section should stay where it is
-- Add the Flashcard documentation as a NEW section (don't replace anything)
-- Make sure both sections are complete and not cut off
+**If you see "Connected to Emulator" errors:** The wrong firebase.ts is being used. Check that `client/src/lib/firebase.ts` reads from `import.meta.env.VITE_FIREBASE_*`.
 
-#### 2. firestore.rules Conflict
+### Firestore Rules Status
 
-**What you'll see:**
-```
-<<<<<<< HEAD
-    // MTO collections (mtoQuestions, questionExplanations, etc.)
-=======
-    // Flashcard collections (flashcardDecks, flashcards, etc.)
->>>>>>> feature/flashcards
-```
+The combined rules have been deployed to Firebase and include:
+- Users, Posts, Comments collections
+- MTO collections (mtoQuestions, questionExplanations, questionFlags, mtoAuditLog, systemStats, userBookmarks)
+- Flashcard collections (flashcards/decks, flashcards/cards, flashcards/reviews, flashcards/sessions)
 
-**How to resolve:**
-- Keep ALL rules from both branches
-- The final file should have rules for:
-  - Users collection
-  - Posts/Comments collections
-  - MTO collections (mtoQuestions, questionExplanations, questionFlags, mtoAuditLog, systemStats, userBookmarks)
-  - Flashcard collections (if any were added)
-- Make sure no rules are duplicated or missing
+### What NOT to Do
 
-#### 3. client/package.json Conflict
+- ❌ Don't work directly on `feature/flashcards` branch (it's outdated)
+- ❌ Don't merge `feature/flashcards` into main (use `test-flashcards-merge` instead)
+- ❌ Don't delete `test-flashcards-merge` until it's merged to main
 
-**What you'll see:**
-```json
-<<<<<<< HEAD
-  "dependencies": {
-    // MTO dependencies
-  }
-=======
-  "dependencies": {
-    // Flashcard dependencies (ts-fsrs, etc.)
-  }
->>>>>>> feature/flashcards
+### Deploying Main Without Flashcards
+
+If you need to deploy MTO-only updates to production:
+
+```bash
+# Switch to main (no flashcards)
+git checkout main
+
+# Deploy
+netlify deploy --prod
+
+# Return to flashcard development
+git checkout test-flashcards-merge
 ```
 
-**How to resolve:**
-- Merge the `dependencies` objects - keep ALL packages from both sides
-- Merge the `devDependencies` objects if affected
-- The flashcards branch likely added:
-  - `ts-fsrs` (spaced repetition algorithm)
-  - Possibly other packages for Anki import
+### Stashed Changes
 
-#### 4. client/package-lock.json
+There may be stashed changes from the original main branch. To view:
+```bash
+git stash list
+```
 
-**How to resolve:**
-- Don't try to manually merge this file
-- Delete it entirely
-- Run `npm install` in the client folder to regenerate it
-
-### Files That Should NOT Conflict
-
-These files are modified by flashcards branch but NOT by MTO, so they should merge cleanly:
-
-- `client/src/App.tsx` - Adds flashcard routes
-- `client/src/components/layout/Sidebar.tsx` - Adds flashcard nav item
-- `client/src/index.css` - Adds flashcard styles
-- `client/src/pages/FlashcardsPage.tsx` - New page
-- `client/src/apps/flashcards/*` - Entire new folder
-- `client/src/store/flashcardStore.ts` - New Zustand store
-- `storage.rules` - New file for Firebase Storage
-
-### Post-Merge Verification Checklist
-
-After merging, verify these features still work:
-
-**MTO System:**
-- [ ] Navigate to `/physiology/mto` - Home page loads
-- [ ] Start a test - Questions load from Firebase
-- [ ] Answer a question - Explanation appears
-- [ ] Bookmark a question - Save button works
-- [ ] Report Issue button works
-
-**Flashcard System:**
-- [ ] Navigate to `/flashcards` - Page loads
-- [ ] View existing decks (if any)
-- [ ] Anki import works (if implemented)
-- [ ] Study session works
-
-**General:**
-- [ ] No console errors on page load
-- [ ] Firebase connection works
-- [ ] Authentication works
-
-### What If Something Breaks?
-
-If the merge causes issues:
-
-1. **Don't panic** - Git keeps history, nothing is lost
-2. **Check the console** for specific errors
-3. **Common issues:**
-   - Missing import → Add the import statement
-   - Type error → Check if types need to be updated
-   - Firebase error → Check firestore.rules deployment
-4. **Nuclear option:** `git merge --abort` to undo the merge and try again
-
-### After Successful Merge
-
-1. **Deploy Firestore rules** (if they changed):
-   ```bash
-   firebase deploy --only firestore:rules
-   ```
-
-2. **Deploy Storage rules** (new file from flashcards):
-   ```bash
-   firebase deploy --only storage
-   ```
-
-3. **Test locally** before deploying to Netlify
-
-4. **Delete the feature branch** (optional):
-   ```bash
-   git branch -d feature/flashcards
-   git push origin --delete feature/flashcards
-   ```
+To restore if needed:
+```bash
+git checkout main
+git stash pop
+```
 
 ## Environment Variables
 
