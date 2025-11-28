@@ -1,54 +1,78 @@
-import { initializeApp, getApps } from 'firebase/app'
-import { getFirestore, connectFirestoreEmulator } from 'firebase/firestore'
+import { initializeApp } from 'firebase/app'
+import type { FirebaseApp } from 'firebase/app'
 import { getAuth, connectAuthEmulator } from 'firebase/auth'
+import type { Auth } from 'firebase/auth'
+import { getFirestore, connectFirestoreEmulator } from 'firebase/firestore'
+import type { Firestore } from 'firebase/firestore'
 import { getStorage, connectStorageEmulator } from 'firebase/storage'
+import type { FirebaseStorage } from 'firebase/storage'
 
-// Firebase configuration for demo/development
-// In production, replace with your actual Firebase config
+// Firebase configuration from environment variables
 const firebaseConfig = {
-  apiKey: 'demo-api-key',
-  authDomain: 'demo-medlearn.firebaseapp.com',
-  projectId: 'demo-medlearn',
-  storageBucket: 'demo-medlearn.appspot.com',
-  messagingSenderId: '123456789',
-  appId: 'demo-app-id'
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 }
 
-// Initialize Firebase (prevent duplicate initialization during hot reload)
-const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0]
+// Validate configuration
+const validateConfig = () => {
+  const required = [
+    'VITE_FIREBASE_API_KEY',
+    'VITE_FIREBASE_AUTH_DOMAIN',
+    'VITE_FIREBASE_PROJECT_ID',
+    'VITE_FIREBASE_STORAGE_BUCKET',
+    'VITE_FIREBASE_APP_ID',
+  ]
 
-// Initialize services
-const db = getFirestore(app)
-const auth = getAuth(app)
-const storage = getStorage(app)
+  const missing = required.filter((key) => !import.meta.env[key])
 
-// Connect to emulators IMMEDIATELY in development (before exporting)
-const isDevelopment = import.meta.env.DEV || window.location.hostname === 'localhost'
-
-if (isDevelopment) {
-  try {
-    connectFirestoreEmulator(db, 'localhost', 8080)
-    console.log('🔥 Connected to Firestore Emulator (localhost:8080)')
-  } catch (error) {
-    console.warn('⚠️ Firestore emulator not available:', (error as Error).message)
+  if (missing.length > 0) {
+    console.error('Missing Firebase environment variables:', missing)
+    console.error('Please copy .env.example to .env.local and fill in your Firebase config')
+    return false
   }
 
-  try {
-    connectAuthEmulator(auth, 'http://localhost:9099', { disableWarnings: true })
-    console.log('🔥 Connected to Auth Emulator (localhost:9099)')
-  } catch (error) {
-    console.warn('⚠️ Auth emulator not available:', (error as Error).message)
-  }
-
-  try {
-    connectStorageEmulator(storage, 'localhost', 9199)
-    console.log('🔥 Connected to Storage Emulator (localhost:9199)')
-  } catch (error) {
-    console.warn('⚠️ Storage emulator not available:', (error as Error).message)
-  }
+  return true
 }
 
-// Export after emulator connection
-export { db, auth, storage }
+// Initialize Firebase only if config is valid
+let app: FirebaseApp | undefined
+let auth: Auth | undefined
+let db: Firestore | undefined
+let storage: FirebaseStorage | undefined
 
+if (validateConfig()) {
+  app = initializeApp(firebaseConfig)
+  auth = getAuth(app)
+  db = getFirestore(app)
+  storage = getStorage(app)
+
+  // Connect to emulators in development mode ONLY if explicitly enabled
+  if (import.meta.env.DEV && import.meta.env.VITE_USE_FIREBASE_EMULATORS === 'true') {
+    try {
+      connectAuthEmulator(auth, 'http://localhost:9099', { disableWarnings: true })
+      connectFirestoreEmulator(db, 'localhost', 8080)
+      connectStorageEmulator(storage, 'localhost', 9199)
+
+      console.log('🧪 Connected to Firebase Emulators')
+      console.log('   Auth: http://localhost:9099')
+      console.log('   Firestore: http://localhost:8080')
+      console.log('   Storage: http://localhost:9199')
+      console.log('   UI: http://localhost:4000')
+    } catch (error) {
+      console.warn('Failed to connect to emulators (they may not be running):', error)
+    }
+  } else if (import.meta.env.DEV) {
+    console.log('🔥 Connected to Firebase Production')
+    console.log('   Tip: Set VITE_USE_FIREBASE_EMULATORS=true in .env.local to use emulators')
+  }
+} else {
+  console.warn('Firebase not initialized. Please configure environment variables.')
+}
+
+export { app, auth, db, storage }
 export default app

@@ -538,45 +538,47 @@ export function DeckDetail() {
             </div>
 
             {/* Action buttons */}
-            <div className="flex items-center gap-3">
-              {!currentDeck.isPreloaded && (
+            <div className="flex items-center gap-3 flex-shrink-0">
+              {!currentDeck.isPreloaded ? (
                 <>
                   <Button
                     variant="outline"
-                    size="sm"
                     onClick={() => {
                       setEditingCardId(undefined)
                       setShowCardEditor(true)
                     }}
+                    className="whitespace-nowrap"
                   >
                     <Plus className="w-4 h-4 mr-2" />
                     Add Card
                   </Button>
                   <Button
                     variant="outline"
-                    size="sm"
                     onClick={() => setShowSettings(true)}
+                    className="whitespace-nowrap"
                   >
                     <Settings className="w-4 h-4 mr-2" />
                     Settings
                   </Button>
                 </>
-              )}
-              <div className="flex items-center gap-3">
-                {currentDeck.isPreloaded && (
-                  <span className="text-xs text-muted-foreground/70 px-2 py-1 rounded border border-border/50 bg-muted/30">
-                    Read-only
-                  </span>
-                )}
+              ) : (
                 <Button
-                  onClick={handleStartStudy}
-                  disabled={!currentDeckDue.total}
-                  className="px-6 py-2.5 rounded-lg bg-[#0066CC] text-white font-medium hover:bg-[#0055AA] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                  variant="outline"
+                  disabled
+                  className="whitespace-nowrap cursor-default"
                 >
-                  <Play className="w-4 h-4 mr-2" />
-                  Study Now {currentDeckDue.total > 0 ? `(${currentDeckDue.total})` : ''}
+                  <BookOpen className="w-4 h-4 mr-2" />
+                  Read-only
                 </Button>
-              </div>
+              )}
+              <Button
+                onClick={handleStartStudy}
+                disabled={!currentDeckDue.total}
+                className="whitespace-nowrap"
+              >
+                <Play className="w-4 h-4 mr-2" />
+                Study Now {currentDeckDue.total > 0 ? `(${currentDeckDue.total})` : ''}
+              </Button>
             </div>
           </div>
 

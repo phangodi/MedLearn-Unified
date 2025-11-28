@@ -68,13 +68,29 @@ function docToData<T>(docData: DocumentData, id: string): T {
 }
 
 /**
- * Helper to remove undefined values from an object before sending to Firestore
+ * Helper to recursively remove undefined values from an object before sending to Firestore
  * Firestore doesn't accept undefined values - they must be omitted entirely
+ * This function handles nested objects (like fsrs) that may contain undefined values
  */
 function removeUndefinedFields<T extends Record<string, any>>(obj: T): Partial<T> {
-  return Object.fromEntries(
-    Object.entries(obj).filter(([_, value]) => value !== undefined)
-  ) as Partial<T>
+  const result: Record<string, any> = {}
+
+  for (const [key, value] of Object.entries(obj)) {
+    if (value === undefined) {
+      // Skip undefined values
+      continue
+    } else if (value !== null && typeof value === 'object' && !Array.isArray(value) && !(value instanceof Date) && typeof value.toDate !== 'function') {
+      // Recursively clean nested objects (but not arrays, Dates, or Firestore Timestamps)
+      const cleaned = removeUndefinedFields(value)
+      if (Object.keys(cleaned).length > 0) {
+        result[key] = cleaned
+      }
+    } else {
+      result[key] = value
+    }
+  }
+
+  return result as Partial<T>
 }
 
 // =============================================================================

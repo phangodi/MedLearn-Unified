@@ -395,7 +395,7 @@ export function DeckBrowser() {
               transition={{ delay: 0.2 }}
               className="text-2xl font-bold mb-6 max-w-4xl mx-auto"
             >
-              Your Decks
+              My Decks
             </motion.h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
               {userDecks.map((deck, idx) => (
@@ -698,10 +698,10 @@ function DeckCard({
           {hasDue ? `Study (${dueCount})` : deck.cardCount === 0 ? 'Add First Card' : 'All Caught Up'}
         </button>
 
-        {/* Preloaded Badge */}
+        {/* Preloaded Badge - positioned at top center */}
         {isPreloaded && (
-          <div className="absolute bottom-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
-            <span className="text-xs font-semibold px-2 py-1 rounded-md bg-primary/10 text-primary border border-primary/20">
+          <div className="absolute top-3 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity z-10">
+            <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 shadow-sm">
               Pre-loaded
             </span>
           </div>
