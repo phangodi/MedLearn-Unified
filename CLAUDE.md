@@ -477,6 +477,200 @@ This dual-ID system exists due to migration from local JSON files. A future clea
 - Profile page user stats not implemented
 - MTO system uses dual-ID pattern (legacyId for explanations) - see section above
 
+## 🔀 Pending Branch: feature/flashcards (MERGE INSTRUCTIONS)
+
+**⚠️ CRITICAL: Read this ENTIRE section before merging the flashcards branch!**
+
+The `feature/flashcards` branch contains the Flashcard system with Anki import. When the user requests to merge this branch, follow these instructions carefully.
+
+### Branch Status (as of Nov 28, 2025)
+
+- **Branch name:** `feature/flashcards`
+- **Based on:** `main` (before MTO merge)
+- **Status:** Feature complete, needs merge with updated main
+
+### Files That Will Have Merge Conflicts
+
+When merging `feature/flashcards` into `main`, Git will report conflicts in these files:
+
+| File | Conflict Type | How to Resolve |
+|------|---------------|----------------|
+| `CLAUDE.md` | Both branches added new sections | **Keep BOTH sections** - MTO ID rules AND Flashcard docs |
+| `firestore.rules` | Both branches added new collections | **Keep BOTH rules** - MTO rules AND Flashcard rules |
+| `client/package.json` | Both branches added dependencies | **Keep BOTH dependencies** - merge the objects |
+| `client/package-lock.json` | Auto-generated | **Delete and regenerate** with `npm install` |
+
+### Step-by-Step Merge Process
+
+```bash
+# 1. Make sure you're on main and it's up to date
+git checkout main
+git pull origin main
+
+# 2. Attempt the merge
+git merge feature/flashcards
+
+# 3. Git will report conflicts - THIS IS EXPECTED
+# You'll see something like:
+# CONFLICT (content): Merge conflict in CLAUDE.md
+# CONFLICT (content): Merge conflict in firestore.rules
+# CONFLICT (content): Merge conflict in client/package.json
+
+# 4. Resolve each conflict (see detailed instructions below)
+
+# 5. After resolving, stage the files
+git add .
+
+# 6. Complete the merge
+git commit -m "Merge feature/flashcards into main"
+
+# 7. Regenerate package-lock.json
+cd client
+rm package-lock.json
+npm install
+cd ..
+
+# 8. Test that everything works
+cd client && npm run dev
+
+# 9. Push to GitHub
+git push origin main
+```
+
+### Detailed Conflict Resolution
+
+#### 1. CLAUDE.md Conflict
+
+**What you'll see:**
+```
+<<<<<<< HEAD
+(MTO documentation that's currently in main)
+=======
+(Flashcard documentation from the branch)
+>>>>>>> feature/flashcards
+```
+
+**How to resolve:**
+- Keep ALL content from both sides
+- The MTO ID Rules section should stay where it is
+- Add the Flashcard documentation as a NEW section (don't replace anything)
+- Make sure both sections are complete and not cut off
+
+#### 2. firestore.rules Conflict
+
+**What you'll see:**
+```
+<<<<<<< HEAD
+    // MTO collections (mtoQuestions, questionExplanations, etc.)
+=======
+    // Flashcard collections (flashcardDecks, flashcards, etc.)
+>>>>>>> feature/flashcards
+```
+
+**How to resolve:**
+- Keep ALL rules from both branches
+- The final file should have rules for:
+  - Users collection
+  - Posts/Comments collections
+  - MTO collections (mtoQuestions, questionExplanations, questionFlags, mtoAuditLog, systemStats, userBookmarks)
+  - Flashcard collections (if any were added)
+- Make sure no rules are duplicated or missing
+
+#### 3. client/package.json Conflict
+
+**What you'll see:**
+```json
+<<<<<<< HEAD
+  "dependencies": {
+    // MTO dependencies
+  }
+=======
+  "dependencies": {
+    // Flashcard dependencies (ts-fsrs, etc.)
+  }
+>>>>>>> feature/flashcards
+```
+
+**How to resolve:**
+- Merge the `dependencies` objects - keep ALL packages from both sides
+- Merge the `devDependencies` objects if affected
+- The flashcards branch likely added:
+  - `ts-fsrs` (spaced repetition algorithm)
+  - Possibly other packages for Anki import
+
+#### 4. client/package-lock.json
+
+**How to resolve:**
+- Don't try to manually merge this file
+- Delete it entirely
+- Run `npm install` in the client folder to regenerate it
+
+### Files That Should NOT Conflict
+
+These files are modified by flashcards branch but NOT by MTO, so they should merge cleanly:
+
+- `client/src/App.tsx` - Adds flashcard routes
+- `client/src/components/layout/Sidebar.tsx` - Adds flashcard nav item
+- `client/src/index.css` - Adds flashcard styles
+- `client/src/pages/FlashcardsPage.tsx` - New page
+- `client/src/apps/flashcards/*` - Entire new folder
+- `client/src/store/flashcardStore.ts` - New Zustand store
+- `storage.rules` - New file for Firebase Storage
+
+### Post-Merge Verification Checklist
+
+After merging, verify these features still work:
+
+**MTO System:**
+- [ ] Navigate to `/physiology/mto` - Home page loads
+- [ ] Start a test - Questions load from Firebase
+- [ ] Answer a question - Explanation appears
+- [ ] Bookmark a question - Save button works
+- [ ] Report Issue button works
+
+**Flashcard System:**
+- [ ] Navigate to `/flashcards` - Page loads
+- [ ] View existing decks (if any)
+- [ ] Anki import works (if implemented)
+- [ ] Study session works
+
+**General:**
+- [ ] No console errors on page load
+- [ ] Firebase connection works
+- [ ] Authentication works
+
+### What If Something Breaks?
+
+If the merge causes issues:
+
+1. **Don't panic** - Git keeps history, nothing is lost
+2. **Check the console** for specific errors
+3. **Common issues:**
+   - Missing import → Add the import statement
+   - Type error → Check if types need to be updated
+   - Firebase error → Check firestore.rules deployment
+4. **Nuclear option:** `git merge --abort` to undo the merge and try again
+
+### After Successful Merge
+
+1. **Deploy Firestore rules** (if they changed):
+   ```bash
+   firebase deploy --only firestore:rules
+   ```
+
+2. **Deploy Storage rules** (new file from flashcards):
+   ```bash
+   firebase deploy --only storage
+   ```
+
+3. **Test locally** before deploying to Netlify
+
+4. **Delete the feature branch** (optional):
+   ```bash
+   git branch -d feature/flashcards
+   git push origin --delete feature/flashcards
+   ```
+
 ## Environment Variables
 
 Required for development (see `.env.example`):
