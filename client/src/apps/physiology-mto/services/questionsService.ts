@@ -244,6 +244,18 @@ export async function getQuestionsByTopics(topicNumbers: number[]): Promise<Ques
   );
 }
 
+// Get questions by IDs (for bookmarks)
+export async function getQuestionsByIds(questionIds: string[]): Promise<Question[]> {
+  if (questionIds.length === 0) return [];
+
+  const allQuestions = await getAllQuestions();
+  const questionMap = new Map(allQuestions.map(q => [q.id, q]));
+
+  return questionIds
+    .map(id => questionMap.get(id))
+    .filter((q): q is Question => q !== undefined);
+}
+
 // Filter questions based on test config
 export async function getQuestionsForTest(config: TestConfig): Promise<Question[]> {
   let questions: Question[] = [];
@@ -265,6 +277,12 @@ export async function getQuestionsForTest(config: TestConfig): Promise<Question[
       if (config.selectedTestId) {
         questions = await getQuestionsByTestId(config.selectedTestId);
         // No deduplication for test-based queries (show all questions from that test)
+      }
+      break;
+    case 'bookmarks':
+      if (config.bookmarkedQuestionIds && config.bookmarkedQuestionIds.length > 0) {
+        questions = await getQuestionsByIds(config.bookmarkedQuestionIds);
+        // No deduplication for bookmarks (user explicitly saved these)
       }
       break;
   }

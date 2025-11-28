@@ -138,5 +138,14 @@ service cloud.firestore {
       allow write: if isSuperAdmin();
     }
 
+    // User Bookmarks collection
+    // Users can only read/write their own bookmarks
+    // Document ID = userId
+    match /userBookmarks/{userId} {
+      allow read: if isSignedIn() && isOwner(userId);
+      allow create, update: if isSignedIn() && isOwner(userId);
+      allow delete: if isSignedIn() && isOwner(userId);
+    }
+
   }
 }

@@ -1,13 +1,16 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, ArrowRight, Flag, Trophy, Clock, Target, AlertTriangle } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Flag, Trophy, Clock, Target, AlertTriangle, Loader2 } from 'lucide-react';
 import { useTest } from '../context/TestContext';
 import { QuestionCard } from '../components/QuestionCard';
+import { toggleBookmark, isBookmarked } from '../services/bookmarkService';
+import { useAuth } from '@/contexts/AuthContext';
 import type { TestResult } from '../../physiology/data/questions/types';
 
 export function MTOTestPage() {
   const navigate = useNavigate();
+  const { user } = useAuth();
   const {
     session,
     currentQuestion,
@@ -22,6 +25,8 @@ export function MTOTestPage() {
 
   const [result, setResult] = useState<TestResult | null>(null);
   const [showExitConfirm, setShowExitConfirm] = useState(false);
+  const [isQuestionBookmarked, setIsQuestionBookmarked] = useState(false);
+  const [bookmarkLoading, setBookmarkLoading] = useState(false);
 
   // Redirect if no session
   useEffect(() => {
@@ -29,6 +34,24 @@ export function MTOTestPage() {
       navigate('/physiology/mto');
     }
   }, [session, navigate]);
+
+  // Check bookmark status when question changes
+  useEffect(() => {
+    if (user && currentQuestion) {
+      isBookmarked(user.uid, currentQuestion.id).then(setIsQuestionBookmarked);
+    }
+  }, [user, currentQuestion?.id]);
+
+  const handleToggleBookmark = async () => {
+    if (!user || !currentQuestion || bookmarkLoading) return;
+
+    setBookmarkLoading(true);
+    const result = await toggleBookmark(user.uid, currentQuestion.id);
+    if (result.success) {
+      setIsQuestionBookmarked(result.isBookmarked);
+    }
+    setBookmarkLoading(false);
+  };
 
   if (!session || !currentQuestion) {
     return null;
@@ -218,11 +241,21 @@ export function MTOTestPage() {
         </div>
 
         <button
-          onClick={() => {/* TODO: Flag question */}}
-          className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+          onClick={handleToggleBookmark}
+          disabled={bookmarkLoading}
+          className={`flex items-center gap-2 transition-colors ${
+            isQuestionBookmarked
+              ? 'text-amber-500 hover:text-amber-600'
+              : 'text-muted-foreground hover:text-foreground'
+          }`}
+          title={isQuestionBookmarked ? 'Remove bookmark' : 'Bookmark for review'}
         >
-          <Flag className="w-4 h-4" />
-          Flag
+          {bookmarkLoading ? (
+            <Loader2 className="w-4 h-4 animate-spin" />
+          ) : (
+            <Flag className={`w-4 h-4 ${isQuestionBookmarked ? 'fill-current' : ''}`} />
+          )}
+          {isQuestionBookmarked ? 'Saved' : 'Save'}
         </button>
       </div>
 

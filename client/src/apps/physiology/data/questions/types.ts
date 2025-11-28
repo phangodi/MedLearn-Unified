@@ -55,13 +55,14 @@ export interface TopicQuestions {
 }
 
 // Filter types for the test configuration UI
-export type FilterMode = 'topic' | 'mcq' | 'test';
+export type FilterMode = 'topic' | 'mcq' | 'test' | 'bookmarks';
 
 export interface TestConfig {
   filterMode: FilterMode;
   selectedTopics: number[];      // Topic numbers
   selectedMcq?: string;          // MCQ ID (mcq-1 through mcq-6)
   selectedTestId?: string;       // Specific test ID
+  bookmarkedQuestionIds?: string[]; // For bookmarks mode
   questionCount: number | 'all'; // Number of questions or all
 }
 

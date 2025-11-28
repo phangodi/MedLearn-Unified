@@ -11,6 +11,7 @@ interface TestContextValue {
   clearTopicsInMcq: (mcqId: string, topics: number[]) => void;
   setSelectedMcq: (mcqId: string | undefined) => void;
   setSelectedTestId: (testId: string | undefined) => void;
+  setBookmarkedQuestionIds: (ids: string[]) => void;
   setQuestionCount: (count: number | 'all') => void;
 
   // Test session
@@ -81,6 +82,10 @@ export function TestProvider({ children }: { children: ReactNode }) {
 
   const setSelectedTestId = useCallback((testId: string | undefined) => {
     setConfig(prev => ({ ...prev, selectedTestId: testId }));
+  }, []);
+
+  const setBookmarkedQuestionIds = useCallback((ids: string[]) => {
+    setConfig(prev => ({ ...prev, bookmarkedQuestionIds: ids }));
   }, []);
 
   const setQuestionCount = useCallback((count: number | 'all') => {
@@ -225,6 +230,7 @@ export function TestProvider({ children }: { children: ReactNode }) {
     clearTopicsInMcq,
     setSelectedMcq,
     setSelectedTestId,
+    setBookmarkedQuestionIds,
     setQuestionCount,
     session,
     isLoading,

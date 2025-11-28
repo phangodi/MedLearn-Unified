@@ -1,13 +1,16 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, ChevronRight, Check, Play, BookOpen, FileText, ClipboardList } from 'lucide-react';
+import { ChevronDown, ChevronRight, Check, Play, BookOpen, FileText, ClipboardList, Flag, Loader2 } from 'lucide-react';
 import { useTest } from '../context/TestContext';
 import { mcqFilters, getTopicsGroupedByMcq, getAvailableTestIds, getMcqQuestionCount, getTopicQuestionCount } from '../services/questionsService';
+import { getBookmarkedQuestionIds } from '../services/bookmarkService';
+import { useAuth } from '@/contexts/AuthContext';
 import type { FilterMode } from '../../physiology/data/questions/types';
 
 export function MTOHomePage() {
   const navigate = useNavigate();
+  const { user } = useAuth();
   const {
     config,
     setFilterMode,
@@ -16,6 +19,7 @@ export function MTOHomePage() {
     clearTopicsInMcq,
     setSelectedMcq,
     setSelectedTestId,
+    setBookmarkedQuestionIds,
     setQuestionCount,
     startTest,
     isLoading,
@@ -24,12 +28,26 @@ export function MTOHomePage() {
 
   const [expandedMcqs, setExpandedMcqs] = useState<string[]>([]);
   const [availableTests, setAvailableTests] = useState<string[]>([]);
+  const [bookmarkedIds, setBookmarkedIds] = useState<string[]>([]);
+  const [bookmarksLoading, setBookmarksLoading] = useState(false);
   const topicsGrouped = getTopicsGroupedByMcq();
 
   // Load available test IDs on mount
   useEffect(() => {
     getAvailableTestIds().then(setAvailableTests);
   }, []);
+
+  // Load bookmarks when switching to bookmarks mode or on mount
+  useEffect(() => {
+    if (user && config.filterMode === 'bookmarks') {
+      setBookmarksLoading(true);
+      getBookmarkedQuestionIds(user.uid).then(ids => {
+        setBookmarkedIds(ids);
+        setBookmarkedQuestionIds(ids);
+        setBookmarksLoading(false);
+      });
+    }
+  }, [user, config.filterMode, setBookmarkedQuestionIds]);
 
   const toggleMcqExpanded = (mcqId: string) => {
     setExpandedMcqs(prev =>
@@ -52,6 +70,8 @@ export function MTOHomePage() {
         return !!config.selectedMcq;
       case 'test':
         return !!config.selectedTestId;
+      case 'bookmarks':
+        return bookmarkedIds.length > 0;
       default:
         return false;
     }
@@ -61,6 +81,7 @@ export function MTOHomePage() {
     { id: 'topic', label: 'By Topic', icon: BookOpen },
     { id: 'mcq', label: 'By MCQ Exam', icon: ClipboardList },
     { id: 'test', label: 'By Test', icon: FileText },
+    { id: 'bookmarks', label: 'Saved', icon: Flag },
   ];
 
   return (
@@ -324,6 +345,55 @@ export function MTOHomePage() {
               )}
             </motion.div>
           )}
+
+          {config.filterMode === 'bookmarks' && (
+            <motion.div
+              key="bookmarks"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 20 }}
+            >
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="font-semibold text-foreground">Saved Questions</h3>
+                <span className="text-sm text-muted-foreground">
+                  {bookmarkedIds.length} saved
+                </span>
+              </div>
+
+              {bookmarksLoading ? (
+                <div className="bg-muted/30 rounded-lg p-8 text-center">
+                  <Loader2 className="w-8 h-8 text-primary mx-auto mb-3 animate-spin" />
+                  <p className="text-muted-foreground">Loading your saved questions...</p>
+                </div>
+              ) : bookmarkedIds.length === 0 ? (
+                <div className="bg-muted/30 rounded-lg p-8 text-center">
+                  <Flag className="w-12 h-12 text-muted-foreground mx-auto mb-3" />
+                  <p className="text-foreground font-medium mb-2">No saved questions yet</p>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    While practicing, click the "Save" button on any question to add it here for review later.
+                  </p>
+                  <button
+                    onClick={() => setFilterMode('topic')}
+                    className="text-primary hover:underline text-sm"
+                  >
+                    Start practicing by topic
+                  </button>
+                </div>
+              ) : (
+                <div className="bg-primary/5 border border-primary/20 rounded-lg p-6 text-center">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Flag className="w-8 h-8 text-primary fill-primary" />
+                  </div>
+                  <p className="text-foreground font-medium mb-2">
+                    You have {bookmarkedIds.length} saved {bookmarkedIds.length === 1 ? 'question' : 'questions'}
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    Ready to practice your flagged questions for review!
+                  </p>
+                </div>
+              )}
+            </motion.div>
+          )}
         </AnimatePresence>
       </div>
 
@@ -389,6 +459,7 @@ export function MTOHomePage() {
           {config.filterMode === 'topic' && 'Select at least one topic to continue'}
           {config.filterMode === 'mcq' && 'Select an MCQ exam to continue'}
           {config.filterMode === 'test' && 'Select a test to continue'}
+          {config.filterMode === 'bookmarks' && 'No saved questions to practice'}
         </p>
       )}
     </div>
