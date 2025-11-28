@@ -122,6 +122,7 @@ Migrate MTO practice questions to Firebase Firestore, implement automated explan
 - [x] Explanation management tab - filter by with/without/needs review ✅
 - [x] Tools tab with database verification and orphan finder ✅
 - [x] CLI commands reference for bulk operations ✅
+- [x] IMPROVED: Duplicates tab now shows full question + all answer options for comparison ✅
 
 ### Session 8: Flagging System
 - [ ] Implement flag button UI

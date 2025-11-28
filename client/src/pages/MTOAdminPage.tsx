@@ -593,6 +593,7 @@ function DuplicatesTab() {
   const [loading, setLoading] = useState(true)
   const [duplicateGroups, setDuplicateGroups] = useState<DuplicateGroup[]>([])
   const [expandedGroup, setExpandedGroup] = useState<string | null>(null)
+  const [expandedQuestion, setExpandedQuestion] = useState<string | null>(null)
 
   useEffect(() => {
     async function findDuplicates() {
@@ -687,7 +688,12 @@ function DuplicatesTab() {
       {/* Duplicate Groups */}
       {duplicateGroups.length > 0 && (
         <div className="space-y-4">
-          <h3 className="text-lg font-semibold text-foreground">Duplicate Groups</h3>
+          <div className="flex items-center justify-between">
+            <h3 className="text-lg font-semibold text-foreground">Duplicate Groups</h3>
+            <p className="text-sm text-muted-foreground">
+              Click on each question to see full details and compare
+            </p>
+          </div>
 
           {duplicateGroups.map((group, index) => {
             const isExpanded = expandedGroup === group.hash
@@ -730,58 +736,168 @@ function DuplicatesTab() {
                       transition={{ duration: 0.2 }}
                       className="overflow-hidden"
                     >
-                      <div className="px-4 pb-4 border-t border-border pt-4 space-y-3">
-                        {group.questions.map((q, qIndex) => (
-                          <div
-                            key={q.id}
-                            className={`p-3 rounded-lg ${
-                              qIndex === 0
-                                ? 'bg-green-50 dark:bg-green-900/10 border border-green-200 dark:border-green-800'
-                                : 'bg-muted/50'
-                            }`}
-                          >
-                            <div className="flex items-start justify-between gap-4">
-                              <div className="flex-1">
-                                <div className="flex items-center gap-2 mb-1">
-                                  {qIndex === 0 && (
-                                    <span className="px-2 py-0.5 bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 text-xs rounded-full">
-                                      Keep
-                                    </span>
-                                  )}
-                                  <span className="text-xs text-muted-foreground">
-                                    ID: {q.legacyId || q.id}
-                                  </span>
-                                </div>
-                                <div className="flex flex-wrap gap-1 mt-1">
-                                  {q.topics?.map(t => (
-                                    <span key={t} className="px-1.5 py-0.5 bg-primary/10 text-primary text-xs rounded">
-                                      T{t}
-                                    </span>
-                                  ))}
-                                  {q.mcqs?.map(m => (
-                                    <span key={m} className="px-1.5 py-0.5 bg-muted text-muted-foreground text-xs rounded">
-                                      {m}
-                                    </span>
-                                  ))}
-                                </div>
-                              </div>
-                              {qIndex > 0 && (
-                                <Button
-                                  variant="outline"
-                                  size="sm"
-                                  className="text-red-500 hover:text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20"
-                                  onClick={(e) => {
-                                    e.stopPropagation()
-                                    // TODO: Implement delete
-                                    alert(`Would delete question ${q.id}`)
-                                  }}
+                      <div className="border-t border-border">
+                        {/* Compare header */}
+                        <div className="px-4 py-3 bg-muted/30 border-b border-border">
+                          <p className="text-sm font-medium text-foreground">
+                            Compare {group.questions.length} questions - click each to expand
+                          </p>
+                        </div>
+
+                        {/* Questions side by side comparison */}
+                        <div className="p-4 space-y-4">
+                          {group.questions.map((q, qIndex) => {
+                            const isQuestionExpanded = expandedQuestion === q.id
+                            const isKeep = qIndex === 0
+
+                            return (
+                              <div
+                                key={q.id}
+                                className={`rounded-lg border-2 overflow-hidden ${
+                                  isKeep
+                                    ? 'border-green-300 dark:border-green-700'
+                                    : 'border-border'
+                                }`}
+                              >
+                                {/* Question header - always visible */}
+                                <div
+                                  className={`p-4 cursor-pointer transition-colors ${
+                                    isKeep
+                                      ? 'bg-green-50 dark:bg-green-900/20 hover:bg-green-100 dark:hover:bg-green-900/30'
+                                      : 'bg-card hover:bg-muted/50'
+                                  }`}
+                                  onClick={() => setExpandedQuestion(isQuestionExpanded ? null : q.id)}
                                 >
-                                  <Trash2 className="w-4 h-4" />
-                                </Button>
-                              )}
-                            </div>
-                          </div>
-                        ))}
+                                  <div className="flex items-start justify-between gap-4">
+                                    <div className="flex-1 min-w-0">
+                                      {/* Header with badges */}
+                                      <div className="flex items-center flex-wrap gap-2 mb-2">
+                                        {isKeep ? (
+                                          <span className="px-2 py-0.5 bg-green-500 text-white text-xs font-medium rounded-full">
+                                            KEEP (Primary)
+                                          </span>
+                                        ) : (
+                                          <span className="px-2 py-0.5 bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400 text-xs font-medium rounded-full">
+                                            Duplicate #{qIndex}
+                                          </span>
+                                        )}
+                                        {q.topics?.map(t => (
+                                          <span key={t} className="px-2 py-0.5 bg-primary/10 text-primary text-xs rounded-full">
+                                            Topic {t}
+                                          </span>
+                                        ))}
+                                        {q.mcqs?.map(m => (
+                                          <span key={m} className="px-2 py-0.5 bg-muted text-muted-foreground text-xs rounded-full">
+                                            {m.toUpperCase()}
+                                          </span>
+                                        ))}
+                                      </div>
+
+                                      {/* Question text */}
+                                      <p className={`text-foreground font-medium ${isQuestionExpanded ? '' : 'line-clamp-2'}`}>
+                                        {q.text}
+                                      </p>
+
+                                      {/* ID */}
+                                      <p className="text-xs text-muted-foreground mt-2">
+                                        ID: {q.legacyId || q.id}
+                                      </p>
+                                    </div>
+
+                                    <div className="flex items-center gap-2 flex-shrink-0">
+                                      {!isKeep && (
+                                        <Button
+                                          variant="outline"
+                                          size="sm"
+                                          className="text-red-500 hover:text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20"
+                                          onClick={(e) => {
+                                            e.stopPropagation()
+                                            if (confirm(`Delete question ${q.legacyId || q.id}?\n\nThis action cannot be undone.`)) {
+                                              // TODO: Implement actual delete
+                                              alert('Delete functionality coming soon')
+                                            }
+                                          }}
+                                        >
+                                          <Trash2 className="w-4 h-4 mr-1" />
+                                          Delete
+                                        </Button>
+                                      )}
+                                      {isQuestionExpanded ? (
+                                        <ChevronUp className="w-5 h-5 text-muted-foreground" />
+                                      ) : (
+                                        <ChevronDown className="w-5 h-5 text-muted-foreground" />
+                                      )}
+                                    </div>
+                                  </div>
+                                </div>
+
+                                {/* Expanded content - options and answers */}
+                                <AnimatePresence>
+                                  {isQuestionExpanded && (
+                                    <motion.div
+                                      initial={{ height: 0, opacity: 0 }}
+                                      animate={{ height: 'auto', opacity: 1 }}
+                                      exit={{ height: 0, opacity: 0 }}
+                                      transition={{ duration: 0.2 }}
+                                      className="overflow-hidden"
+                                    >
+                                      <div className={`p-4 border-t ${
+                                        isKeep
+                                          ? 'border-green-200 dark:border-green-800 bg-green-50/50 dark:bg-green-900/10'
+                                          : 'border-border bg-muted/30'
+                                      }`}>
+                                        <h4 className="text-sm font-medium text-muted-foreground mb-3">
+                                          Answer Options:
+                                        </h4>
+                                        <div className="space-y-2">
+                                          {q.options?.map(option => {
+                                            const isCorrect = q.correctAnswers?.includes(option.letter)
+                                            return (
+                                              <div
+                                                key={option.letter}
+                                                className={`flex items-start gap-3 p-3 rounded-lg ${
+                                                  isCorrect
+                                                    ? 'bg-green-100 dark:bg-green-900/30 border border-green-300 dark:border-green-700'
+                                                    : 'bg-background border border-border'
+                                                }`}
+                                              >
+                                                <span className={`font-bold text-lg ${
+                                                  isCorrect
+                                                    ? 'text-green-700 dark:text-green-400'
+                                                    : 'text-muted-foreground'
+                                                }`}>
+                                                  {option.letter}.
+                                                </span>
+                                                <span className={`flex-1 ${
+                                                  isCorrect
+                                                    ? 'text-green-800 dark:text-green-300 font-medium'
+                                                    : 'text-foreground'
+                                                }`}>
+                                                  {option.text}
+                                                </span>
+                                                {isCorrect && (
+                                                  <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-400 flex-shrink-0" />
+                                                )}
+                                              </div>
+                                            )
+                                          })}
+                                        </div>
+
+                                        {/* Correct answer summary */}
+                                        <div className="mt-4 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                                          <p className="text-sm text-blue-700 dark:text-blue-400">
+                                            <strong>Correct answer(s):</strong>{' '}
+                                            {q.correctAnswers?.join(', ') || 'None specified'}
+                                          </p>
+                                        </div>
+                                      </div>
+                                    </motion.div>
+                                  )}
+                                </AnimatePresence>
+                              </div>
+                            )
+                          })}
+                        </div>
                       </div>
                     </motion.div>
                   )}
