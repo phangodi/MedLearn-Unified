@@ -1,0 +1,531 @@
+{
+  "testId": "mto3-examset2",
+  "metadata": {
+    "sources": [
+      "Phisio_27-34_structured.json"
+    ],
+    "importedAt": "2025-11-25T18:18:04.122Z",
+    "totalQuestions": 11,
+    "topics": [
+      33,
+      45,
+      46,
+      47,
+      48,
+      50,
+      51
+    ],
+    "mcqs": [
+      "mcq-3"
+    ]
+  },
+  "questions": [
+    {
+      "id": "q-mto3-examset2-1",
+      "testId": "mto3-examset2",
+      "questionNumber": 1,
+      "text": "Which of the following statements is true concerning human urinary bladder function?",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "in the presence of vasopressin, water is reabsorbed through the urothelium of the bladder"
+        },
+        {
+          "letter": "b",
+          "text": "emptying of bladder during urination is supported by the simultaneous contraction of the detrusor muscle"
+        },
+        {
+          "letter": "c",
+          "text": "the urine storage function is promoted by the Bayliss effect of the bladder smooth muscle"
+        },
+        {
+          "letter": "d",
+          "text": "in healthy adults, there is always some urine retention after urination"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "topics": [
+        48
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.85,
+        "notes": "Bladder function - topic 48: Renal concentration/dilution (related to bladder physiology)"
+      }
+    },
+    {
+      "id": "q-mto3-examset2-4",
+      "testId": "mto3-examset2",
+      "questionNumber": 4,
+      "text": "What is the clearance of substance X, if X is freely filtrated, and 75% of the filtrated amount is reabsorbed in the tubular system? (GFR= 120 ml/min)",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "60 ml/min"
+        },
+        {
+          "letter": "b",
+          "text": "240 ml/min"
+        },
+        {
+          "letter": "c",
+          "text": "120 ml/min"
+        },
+        {
+          "letter": "d",
+          "text": "30 ml/min"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "topics": [
+        45,
+        46
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "notes": "Clearance calculation - topics 45 (GFR) and 46 (tubular reabsorption)"
+      }
+    },
+    {
+      "id": "q-mto3-examset2-6",
+      "testId": "mto3-examset2",
+      "questionNumber": 6,
+      "text": "Which cells in the kidney express H+-K+-pump?",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "intercalated cells in the collecting duct"
+        },
+        {
+          "letter": "b",
+          "text": "epithelial cells of the proximal tubule"
+        },
+        {
+          "letter": "c",
+          "text": "principals cells in the collecting duct"
+        },
+        {
+          "letter": "d",
+          "text": "epithelial cells of the distal tubule"
+        },
+        {
+          "letter": "e",
+          "text": "epithelial cells of the thick segment of the loop of Henle"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "topics": [
+        51
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "notes": "H+-K+ pump - topic 51: Acid-base balance"
+      }
+    },
+    {
+      "id": "q-mto3-examset2-7",
+      "testId": "mto3-examset2",
+      "questionNumber": 7,
+      "text": "These parts of the kidney are situated in the cortex:",
+      "correctAnswerCount": 2,
+      "options": [
+        {
+          "letter": "a",
+          "text": "glomeruli of juxtamedullary nephrons"
+        },
+        {
+          "letter": "b",
+          "text": "loop of Henle"
+        },
+        {
+          "letter": "c",
+          "text": "vasa recta"
+        },
+        {
+          "letter": "d",
+          "text": "the beginning of the collecting tubules"
+        },
+        {
+          "letter": "e",
+          "text": "cortical nephrons"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "d"
+      ],
+      "topics": [
+        45
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.9,
+        "notes": "Kidney anatomy - topic 45: Renal blood flow, GFR (structural basis)"
+      }
+    },
+    {
+      "id": "q-mto3-examset2-8",
+      "testId": "mto3-examset2",
+      "questionNumber": 8,
+      "text": "Considering an average mixed diet, the caloric equivalence of oxygen is",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "17.2 kJ/L"
+        },
+        {
+          "letter": "b",
+          "text": "26.5 kJ/L"
+        },
+        {
+          "letter": "c",
+          "text": "40 kJ/L"
+        },
+        {
+          "letter": "d",
+          "text": "40 kcal/L"
+        },
+        {
+          "letter": "e",
+          "text": "20.2 kJ/L"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "topics": [
+        33
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.8,
+        "notes": "Metabolism topic - assigned to topic 33 (cardiovascular-related metabolism)"
+      }
+    },
+    {
+      "id": "q-mto3-examset2-9",
+      "testId": "mto3-examset2",
+      "questionNumber": 9,
+      "text": "The effective filtration pressure in the glomeruli is calculated as follows:",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "colloid osmotic P + capsular P - glomerular P"
+        },
+        {
+          "letter": "b",
+          "text": "glomerular P - capsular P - colloid osmotic P"
+        },
+        {
+          "letter": "c",
+          "text": "colloid osmotic P - glomerular P - capsular P"
+        },
+        {
+          "letter": "d",
+          "text": "colloid osmotic P + glomerular P - capsular P"
+        },
+        {
+          "letter": "e",
+          "text": "capsular P + glomerular P - colloid osmotic P"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "topics": [
+        45
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "notes": "Filtration pressure - topic 45: Renal blood flow, GFR"
+      }
+    },
+    {
+      "id": "q-mto3-examset2-12",
+      "testId": "mto3-examset2",
+      "questionNumber": 12,
+      "text": "Secretion of aldosteron:",
+      "correctAnswerCount": 3,
+      "options": [
+        {
+          "letter": "a",
+          "text": "enhanced by an increase of Na+ concentration of the blood"
+        },
+        {
+          "letter": "b",
+          "text": "enhanced by an increase of K+ concentration of the blood"
+        },
+        {
+          "letter": "c",
+          "text": "enhanced by angiotensin I"
+        },
+        {
+          "letter": "d",
+          "text": "enhanced by angiotensin II"
+        },
+        {
+          "letter": "e",
+          "text": "enhanced by a decrease of K+ concentration of the blood"
+        },
+        {
+          "letter": "f",
+          "text": "enhanced by a decrease of Na+ concentration of the blood"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "d",
+        "f"
+      ],
+      "topics": [
+        50
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "notes": "Aldosterone regulation - topic 50: ECF volume regulation"
+      }
+    },
+    {
+      "id": "q-mto3-examset2-13",
+      "testId": "mto3-examset2",
+      "questionNumber": 13,
+      "text": "Which of the following transports are hormone-regulated?",
+      "correctAnswerCount": 3,
+      "options": [
+        {
+          "letter": "a",
+          "text": "Na+ reabsorption in the thick ascending segment - vasopressin"
+        },
+        {
+          "letter": "b",
+          "text": "K+ secretion in the collecting duct - aldosterone"
+        },
+        {
+          "letter": "c",
+          "text": "Na+ reabsorption in the proximal tubule - aldosterone"
+        },
+        {
+          "letter": "d",
+          "text": "Na+ reabsorption in the collecting duct - ANH"
+        },
+        {
+          "letter": "e",
+          "text": "Ca2+ reabsorption in the distal tubule - PTH"
+        },
+        {
+          "letter": "f",
+          "text": "K+ reabsorption in the distal tubule - aldosterone"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "d",
+        "e"
+      ],
+      "topics": [
+        46,
+        47,
+        50
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.9,
+        "notes": "Hormone-regulated transport - topics 46 (reabsorption), 47 (secretion), 50 (volume regulation)"
+      }
+    },
+    {
+      "id": "q-mto3-examset2-16",
+      "testId": "mto3-examset2",
+      "questionNumber": 16,
+      "text": "Find the correct order of relative clearances for glucose, PAH, urea, and inulin!",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "CPAH < Curea < Cinulin < Cglucose"
+        },
+        {
+          "letter": "b",
+          "text": "Cglucose< CPAH < Curea < Cinulin"
+        },
+        {
+          "letter": "c",
+          "text": "Cglucose < Curea < Cinulin < CPAH"
+        },
+        {
+          "letter": "d",
+          "text": "Curea < Cinulin < Cglucose < CPAH"
+        },
+        {
+          "letter": "e",
+          "text": "Cglucose < Cinulin < Curea < CPAH"
+        },
+        {
+          "letter": "f",
+          "text": "Cinulin < Cglucose < CPAH < Curea"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "topics": [
+        45,
+        46,
+        47
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "notes": "Clearance comparison - topics 45 (GFR), 46 (reabsorption), 47 (secretion)"
+      }
+    },
+    {
+      "id": "q-mto3-examset2-17",
+      "testId": "mto3-examset2",
+      "questionNumber": 17,
+      "text": "The physiological stimulus which increases respiration by acting on the central chemosensitive area is",
+      "correctAnswerCount": 2,
+      "options": [
+        {
+          "letter": "a",
+          "text": "increase in arterial pH"
+        },
+        {
+          "letter": "b",
+          "text": "reduced venous pO2"
+        },
+        {
+          "letter": "c",
+          "text": "reduced in arterial pH"
+        },
+        {
+          "letter": "d",
+          "text": "increase in arterial pCO2"
+        },
+        {
+          "letter": "e",
+          "text": "increase in brain interstitial fluid pH"
+        },
+        {
+          "letter": "f",
+          "text": "reduction of O2"
+        }
+      ],
+      "correctAnswers": [
+        "c",
+        "d"
+      ],
+      "topics": [
+        51
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.85,
+        "notes": "Respiratory control related to acid-base - topic 51: Acid-base balance"
+      }
+    },
+    {
+      "id": "q-mto3-examset2-22",
+      "testId": "mto3-examset2",
+      "questionNumber": 22,
+      "text": "It is characteristic of protein transport in the nephron that",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "proteins are secreted in the tubules"
+        },
+        {
+          "letter": "b",
+          "text": "protein transport is linked to sodium reabsorption"
+        },
+        {
+          "letter": "c",
+          "text": "proteins are filtered with perfect ease in the glomeruli"
+        },
+        {
+          "letter": "d",
+          "text": "proteins are taken up from the tubular fluid and are digested by the epithelial cells"
+        },
+        {
+          "letter": "e",
+          "text": "proteins are not filtered at all in the glomeruli"
+        },
+        {
+          "letter": "f",
+          "text": "the reabsorbed proteins are transferred into the interstitial fluid"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "topics": [
+        46
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "notes": "Protein reabsorption - topic 46: Tubular reabsorption"
+      }
+    }
+  ]
+}

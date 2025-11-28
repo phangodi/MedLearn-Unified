@@ -26,11 +26,12 @@ Migrate MTO practice questions to Firebase Firestore, implement automated explan
 - [x] No refinements needed - format approved
 
 ### Session 1: Foundation & Migration
-- [ ] Set up Firestore collections structure
-- [ ] Write migration script
-- [ ] Run test migration (one JSON file)
+- [x] Set up Firestore collections structure (types/firebase.ts)
+- [x] Write migration script (scripts/migrate-questions-to-firebase.ts)
+- [x] Update Firestore security rules (firestore.rules)
+- [x] Add firebase-admin-key.json to .gitignore
+- [ ] Run test migration (dry-run)
 - [ ] Full migration (all 344 questions)
-- [ ] Update Firestore security rules
 - [ ] Deploy rules to Firebase
 
 ### Session 2: Firebase Services
@@ -90,6 +91,10 @@ Migrate MTO practice questions to Firebase Firestore, implement automated explan
 | File | Change Type | Description | Session |
 |------|-------------|-------------|---------|
 | `client/docs/MTO_IMPLEMENTATION_TRACKER.md` | Created | Implementation tracking file | Phase 0 |
+| `client/src/apps/physiology-mto/types/firebase.ts` | Created | Firebase TypeScript interfaces | Session 1 |
+| `client/scripts/migrate-questions-to-firebase.ts` | Created | Migration script for questions | Session 1 |
+| `firestore.rules` | Modified | Added MTO collections rules | Session 1 |
+| `.gitignore` | Modified | Added firebase-admin-key.json | Session 1 |
 
 ## Firebase Collections Schema
 

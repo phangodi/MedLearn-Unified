@@ -1,0 +1,320 @@
+{
+  "testId": "mto3-examset1",
+  "metadata": {
+    "sources": [
+      "Phisio_27-34_structured.json"
+    ],
+    "importedAt": "2025-11-25T18:18:04.122Z",
+    "totalQuestions": 7,
+    "topics": [
+      45,
+      46,
+      47,
+      48,
+      49
+    ],
+    "mcqs": [
+      "mcq-3"
+    ]
+  },
+  "questions": [
+    {
+      "id": "q-mto3-examset1-1",
+      "testId": "mto3-examset1",
+      "questionNumber": 1,
+      "text": "The effect of ADH is",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "increase the water permeability of the proximal tubules"
+        },
+        {
+          "letter": "b",
+          "text": "increase the permeability of the peritubular capillaries"
+        },
+        {
+          "letter": "c",
+          "text": "increase the capillary permeability in the glomerulus"
+        },
+        {
+          "letter": "d",
+          "text": "regulate the filtration slits"
+        },
+        {
+          "letter": "e",
+          "text": "increase the water permeability of the collecting tubules"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "topics": [
+        49
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "notes": "ADH regulation - topic 49: ECF osmolarity regulation"
+      }
+    },
+    {
+      "id": "q-mto3-examset1-8",
+      "testId": "mto3-examset1",
+      "questionNumber": 8,
+      "text": "The autonomic innervation of the urinary bladder involves:",
+      "correctAnswerCount": 3,
+      "options": [
+        {
+          "letter": "a",
+          "text": "the activation of nicotinic acetyl-choline receptors by parasympathetic activity"
+        },
+        {
+          "letter": "b",
+          "text": "the activation of beta-2 receptors by sympathetic activity"
+        },
+        {
+          "letter": "c",
+          "text": "sympathetic nerves exert presynaptic inhibition on parasympathetic terminals"
+        },
+        {
+          "letter": "d",
+          "text": "the activation of alfa-1 receptors by sympathetic activity"
+        },
+        {
+          "letter": "e",
+          "text": "the activation of muscarinic acetyl-choline receptors by parasympathetic activity"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c",
+        "e"
+      ],
+      "topics": [
+        48
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.85,
+        "notes": "Bladder innervation - topic 48: Renal concentration/dilution (related to bladder function)"
+      }
+    },
+    {
+      "id": "q-mto3-examset1-9",
+      "testId": "mto3-examset1",
+      "questionNumber": 9,
+      "text": "Given the following data for inulin and substance \"X\" which of the following would explain the renal handling of substance \"X\" Inulin concentration in the urine 200 mg/100 ml, Inulin concentration in the plasma 2 mg/100 ml, Concentration in the urine for \"X\" substance 15 mg/100 ml, Concentration in the plasma for \"X\" substance 1.5 mg/100 ml",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "\"X\" is freely filtered and additionally secreted"
+        },
+        {
+          "letter": "b",
+          "text": "\"X\" is freely filtered but partially reabsorbed"
+        },
+        {
+          "letter": "c",
+          "text": "\"X\" is freely filtered but neither secreted nor reabsorbed"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "topics": [
+        45,
+        46
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "notes": "Clearance calculation - topics 45 (GFR) and 46 (tubular reabsorption)"
+      }
+    },
+    {
+      "id": "q-mto3-examset1-14",
+      "testId": "mto3-examset1",
+      "questionNumber": 14,
+      "text": "Na+ can be transported across the luminal membrane of renal tubular cells by",
+      "correctAnswerCount": 3,
+      "options": [
+        {
+          "letter": "a",
+          "text": "diffusion through Na+ channels"
+        },
+        {
+          "letter": "b",
+          "text": "co-transport with organic solutes"
+        },
+        {
+          "letter": "c",
+          "text": "counter transport for H+"
+        },
+        {
+          "letter": "d",
+          "text": "the Na-K ATPase"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "b",
+        "c"
+      ],
+      "topics": [
+        46
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "notes": "Na+ transport mechanisms - topic 46: Tubular reabsorption"
+      }
+    },
+    {
+      "id": "q-mto3-examset1-16",
+      "testId": "mto3-examset1",
+      "questionNumber": 16,
+      "text": "A healthy individual on a diet high in potassium exhibits increased potassium excretion. The major cause of this increased renal secretion of potassium is",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "decreased reabsorption of potassium by the tubule and collecting duct"
+        },
+        {
+          "letter": "b",
+          "text": "increased secretion of potassium by the distal tubule and collecting duct"
+        },
+        {
+          "letter": "c",
+          "text": "decreased aldosterone secretion"
+        },
+        {
+          "letter": "d",
+          "text": "increased GFR"
+        },
+        {
+          "letter": "e",
+          "text": "decreased reabsorption of potassium by the proximal tubule"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "topics": [
+        47
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "notes": "K+ secretion - topic 47: Tubular secretion"
+      }
+    },
+    {
+      "id": "q-mto3-examset1-17",
+      "testId": "mto3-examset1",
+      "questionNumber": 17,
+      "text": "It is characteristic of the intraglomerular capillaries that",
+      "correctAnswerCount": 2,
+      "options": [
+        {
+          "letter": "a",
+          "text": "their oncotic pressure is unusually low"
+        },
+        {
+          "letter": "b",
+          "text": "they are discontinuous capillaries"
+        },
+        {
+          "letter": "c",
+          "text": "their intracapillary pressure is unusually high"
+        },
+        {
+          "letter": "d",
+          "text": "they are fenestrated capillaries"
+        },
+        {
+          "letter": "e",
+          "text": "they are highly permeable to proteins"
+        }
+      ],
+      "correctAnswers": [
+        "c",
+        "d"
+      ],
+      "topics": [
+        45
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "notes": "Glomerular capillary structure - topic 45: Renal blood flow, GFR"
+      }
+    },
+    {
+      "id": "q-mto3-examset1-22",
+      "testId": "mto3-examset1",
+      "questionNumber": 22,
+      "text": "Find the substance that is passively reabsorbed from the proximal tubule",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "urea"
+        },
+        {
+          "letter": "b",
+          "text": "sodium"
+        },
+        {
+          "letter": "c",
+          "text": "amino acids"
+        },
+        {
+          "letter": "d",
+          "text": "glucose"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "topics": [
+        46
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "notes": "Passive reabsorption - topic 46: Tubular reabsorption"
+      }
+    }
+  ]
+}

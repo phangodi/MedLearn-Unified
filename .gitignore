@@ -14,3 +14,7 @@ PHYSIOLOGY_INTEGRATION_FINAL*.md
 
 # Audio files (generated, not tracked)
 client/public/Audio/
+
+# Firebase Admin SDK credentials (NEVER commit these!)
+firebase-admin-key.json
+*-firebase-adminsdk-*.json

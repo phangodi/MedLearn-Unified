@@ -1,0 +1,469 @@
+{
+  "testId": "mto3-2006-2007-test3",
+  "metadata": {
+    "sources": [
+      "Phisio_27-34_structured.json"
+    ],
+    "importedAt": "2025-11-25T18:18:04.122Z",
+    "totalQuestions": 10,
+    "topics": [
+      33,
+      45,
+      46,
+      47,
+      48,
+      50
+    ],
+    "mcqs": [
+      "mcq-3"
+    ]
+  },
+  "questions": [
+    {
+      "id": "q-mto3-2006-2007-test3-1",
+      "testId": "mto3-2006-2007-test3",
+      "questionNumber": 1,
+      "text": "Metabolic rate may be defined as",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "the amount of energy stored per unit of time"
+        },
+        {
+          "letter": "b",
+          "text": "external work plus energy storage"
+        },
+        {
+          "letter": "c",
+          "text": "energy output plus heat liberated"
+        },
+        {
+          "letter": "d",
+          "text": "energy storage plus heat liberated"
+        },
+        {
+          "letter": "e",
+          "text": "none of the above"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "topics": [
+        33
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.8,
+        "notes": "Metabolic rate - assigned to topic 33 (cardiovascular-related metabolism)"
+      }
+    },
+    {
+      "id": "q-mto3-2006-2007-test3-2",
+      "testId": "mto3-2006-2007-test3",
+      "questionNumber": 2,
+      "text": "The method to determine basal metabolic rate by measuring oxygen consumption is called:",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "indirect calorimetry"
+        },
+        {
+          "letter": "b",
+          "text": "whole-body plethysmograph"
+        },
+        {
+          "letter": "c",
+          "text": "spirometry"
+        },
+        {
+          "letter": "d",
+          "text": "oxymetry"
+        }
+      ],
+      "correctAnswers": [
+        "a"
+      ],
+      "topics": [
+        33
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.8,
+        "notes": "Indirect calorimetry - assigned to topic 33 (cardiovascular-related metabolism)"
+      }
+    },
+    {
+      "id": "q-mto3-2006-2007-test3-9",
+      "testId": "mto3-2006-2007-test3",
+      "questionNumber": 9,
+      "text": "During urination:",
+      "correctAnswerCount": 2,
+      "options": [
+        {
+          "letter": "a",
+          "text": "the inner urethral sphincter voluntarily relaxes"
+        },
+        {
+          "letter": "b",
+          "text": "sympathetic tone decreases on  the inner urethral sphincter"
+        },
+        {
+          "letter": "c",
+          "text": "the outer uretral sphincter voluntarily relaxes"
+        },
+        {
+          "letter": "d",
+          "text": "parasympathetic tone decreases on  the outer urethral sphincter"
+        }
+      ],
+      "correctAnswers": [
+        "b",
+        "c"
+      ],
+      "topics": [
+        48
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.85,
+        "notes": "Urination mechanics - topic 48: Renal concentration/dilution (related to bladder function)"
+      }
+    },
+    {
+      "id": "q-mto3-2006-2007-test3-12",
+      "testId": "mto3-2006-2007-test3",
+      "questionNumber": 12,
+      "text": "Which of the following structures are located, at least in part, in the renal medulla",
+      "correctAnswerCount": 3,
+      "options": [
+        {
+          "letter": "a",
+          "text": "thin segment of the loop of Henle"
+        },
+        {
+          "letter": "b",
+          "text": "Bowman's capsule"
+        },
+        {
+          "letter": "c",
+          "text": "glomeruli"
+        },
+        {
+          "letter": "d",
+          "text": "proximal tubule, pars convoluta"
+        },
+        {
+          "letter": "e",
+          "text": "collecting duct"
+        },
+        {
+          "letter": "f",
+          "text": "juxtamedullary glomeruli"
+        },
+        {
+          "letter": "g",
+          "text": "juxtaglomerular apparatus"
+        },
+        {
+          "letter": "h",
+          "text": "descending limb of the loop of Henle"
+        },
+        {
+          "letter": "i",
+          "text": "distal tubule, pars convoluta"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "e",
+        "h"
+      ],
+      "topics": [
+        45,
+        48
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.9,
+        "notes": "Renal medulla anatomy - topics 45 (GFR/structure) and 48 (concentration mechanism)"
+      }
+    },
+    {
+      "id": "q-mto3-2006-2007-test3-13",
+      "testId": "mto3-2006-2007-test3",
+      "questionNumber": 13,
+      "text": "Use the data below to calculate the renal blood flow. Arterial plasma PAH conc.= 0.04 mg/ml; Venous plasma PAH conc.= 0.004 mg/ml; Arterial plasma inulin conc.= 0.4 mg/ml; Urine PAH conc.= 10 mg/ml; Urine inulin conc.= 20 mg/ml; Urine flow rate = 2 ml/min; Hematocrit= 45 %",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "100 ml/min"
+        },
+        {
+          "letter": "b",
+          "text": "430 ml/min"
+        },
+        {
+          "letter": "c",
+          "text": "556 ml/min"
+        },
+        {
+          "letter": "d",
+          "text": "1010 ml/min"
+        },
+        {
+          "letter": "e",
+          "text": "1235 ml/min"
+        }
+      ],
+      "correctAnswers": [
+        "c"
+      ],
+      "topics": [
+        45
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "notes": "Renal blood flow calculation - topic 45: Renal blood flow, GFR"
+      }
+    },
+    {
+      "id": "q-mto3-2006-2007-test3-14",
+      "testId": "mto3-2006-2007-test3",
+      "questionNumber": 14,
+      "text": "Which of the following substances has the highest clearance",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "glucose"
+        },
+        {
+          "letter": "b",
+          "text": "PAH"
+        },
+        {
+          "letter": "c",
+          "text": "inulin"
+        },
+        {
+          "letter": "d",
+          "text": "potassium"
+        },
+        {
+          "letter": "e",
+          "text": "mannitol"
+        }
+      ],
+      "correctAnswers": [
+        "b"
+      ],
+      "topics": [
+        45,
+        47
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "notes": "Clearance comparison - topics 45 (GFR) and 47 (secretion)"
+      }
+    },
+    {
+      "id": "q-mto3-2006-2007-test3-15",
+      "testId": "mto3-2006-2007-test3",
+      "questionNumber": 15,
+      "text": "The correct definition of GFR is as follows",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "the fraction of the blood flow that becomes filtrate each min"
+        },
+        {
+          "letter": "b",
+          "text": "the quantity of blood filtered through the glomerular capillaries each minute in all nephrons of both kidneys"
+        },
+        {
+          "letter": "c",
+          "text": "the quantity of blood filtered in a nephron in a minute"
+        },
+        {
+          "letter": "d",
+          "text": "the quantity of glomerular filtrate formed each minute in all nephrons of both kidneys"
+        }
+      ],
+      "correctAnswers": [
+        "d"
+      ],
+      "topics": [
+        45
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "notes": "GFR definition - topic 45: Renal blood flow, GFR"
+      }
+    },
+    {
+      "id": "q-mto3-2006-2007-test3-16",
+      "testId": "mto3-2006-2007-test3",
+      "questionNumber": 16,
+      "text": "The renal effects of ANP:",
+      "correctAnswerCount": 3,
+      "options": [
+        {
+          "letter": "a",
+          "text": "increases the GFR"
+        },
+        {
+          "letter": "b",
+          "text": "decreases the effect of mineralocorticoids in the collecting tubules"
+        },
+        {
+          "letter": "c",
+          "text": "increases the Na+ reabsorption"
+        },
+        {
+          "letter": "d",
+          "text": "increases the amount of Na in the urine"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "b",
+        "d"
+      ],
+      "topics": [
+        45,
+        50
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "notes": "ANP effects - topics 45 (GFR) and 50 (ECF volume regulation)"
+      }
+    },
+    {
+      "id": "q-mto3-2006-2007-test3-17",
+      "testId": "mto3-2006-2007-test3",
+      "questionNumber": 17,
+      "text": "In the loop of Henle",
+      "correctAnswerCount": 3,
+      "options": [
+        {
+          "letter": "a",
+          "text": "water is reabsorbed from the descending limb"
+        },
+        {
+          "letter": "b",
+          "text": "little or no water is reabsorbed from the ascending limb"
+        },
+        {
+          "letter": "c",
+          "text": "active solute reabsorption occurs in the ascending limb"
+        },
+        {
+          "letter": "d",
+          "text": "active solute reabsorption occurs in the descending limb mainly"
+        }
+      ],
+      "correctAnswers": [
+        "a",
+        "b",
+        "c"
+      ],
+      "topics": [
+        48
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "notes": "Loop of Henle function - topic 48: Renal concentration/dilution"
+      }
+    },
+    {
+      "id": "q-mto3-2006-2007-test3-18",
+      "testId": "mto3-2006-2007-test3",
+      "questionNumber": 18,
+      "text": "Which statement is true concerning the renal excretion of glucose?",
+      "correctAnswerCount": 1,
+      "options": [
+        {
+          "letter": "a",
+          "text": "the renal clearance of glucose is approximately 20-30 ml/min under physiological circumstances"
+        },
+        {
+          "letter": "b",
+          "text": "at normal fasting blood glucose levels the renal glucose transport is fully saturated"
+        },
+        {
+          "letter": "c",
+          "text": "tubular glucose reabsorption is independent of the Na-K pump inhibition, since the transport mechanism of glucose is facilitated diffusion"
+        },
+        {
+          "letter": "d",
+          "text": "the hormonal regulation of renal glucose excretion is taking place in the principal cells of the collecting duct"
+        },
+        {
+          "letter": "e",
+          "text": "The renal threshold of glucose is the plasma glucose concentration, where the glucose transport is saturated and reaches the Tmax value"
+        }
+      ],
+      "correctAnswers": [
+        "e"
+      ],
+      "topics": [
+        46
+      ],
+      "mcqs": [
+        "mcq-3"
+      ],
+      "metadata": {
+        "importedAt": "2025-11-25T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "notes": "Glucose reabsorption - topic 46: Tubular reabsorption"
+      }
+    }
+  ]
+}
