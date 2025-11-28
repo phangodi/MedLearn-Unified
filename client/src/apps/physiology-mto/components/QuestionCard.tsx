@@ -1,8 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Check, X, AlertCircle, ChevronDown, Lightbulb, Loader2 } from 'lucide-react';
+import { Check, X, AlertCircle, ChevronDown, Lightbulb, Loader2, Flag } from 'lucide-react';
 import type { Question } from '../../physiology/data/questions/types';
 import { getExplanationByLegacyId } from '../services/firebaseQuestionsService';
+import { flagQuestion, hasUserFlagged, type FlagReason } from '../services/flagService';
+import { useAuth } from '@/contexts/AuthContext';
 import type { QuestionExplanation } from '../types/firebase';
 
 interface QuestionCardProps {
@@ -20,11 +22,16 @@ export function QuestionCard({
   isCorrect,
   selectedAnswers: submittedAnswers
 }: QuestionCardProps) {
+  const { user } = useAuth();
   const [selectedAnswers, setSelectedAnswers] = useState<string[]>([]);
   const [explanation, setExplanation] = useState<QuestionExplanation | null>(null);
   const [explanationLoading, setExplanationLoading] = useState(false);
   const [showExplanation, setShowExplanation] = useState(false);
+  const [showFlagMenu, setShowFlagMenu] = useState(false);
+  const [flagStatus, setFlagStatus] = useState<'idle' | 'loading' | 'success' | 'already-flagged'>('idle');
+  const [userHasFlagged, setUserHasFlagged] = useState(false);
   const fetchedForQuestion = useRef<string | null>(null);
+  const flagCheckRef = useRef<string | null>(null);
   const isMultipleChoice = question.correctAnswerCount > 1;
 
   // Fetch explanation when question is answered
@@ -54,8 +61,44 @@ export function QuestionCard({
     setSelectedAnswers([]);
     setExplanation(null);
     setShowExplanation(false);
+    setShowFlagMenu(false);
+    setFlagStatus('idle');
+    setUserHasFlagged(false);
     fetchedForQuestion.current = null;
+    flagCheckRef.current = null;
   }, [question.id]);
+
+  // Check if user has already flagged this question
+  useEffect(() => {
+    if (isAnswered && user && flagCheckRef.current !== question.id) {
+      flagCheckRef.current = question.id;
+      hasUserFlagged(question.id, user.uid).then((flagged) => {
+        setUserHasFlagged(flagged);
+        if (flagged) {
+          setFlagStatus('already-flagged');
+        }
+      });
+    }
+  }, [isAnswered, question.id, user]);
+
+  const handleFlag = async (reason: FlagReason) => {
+    if (!user) return;
+
+    setFlagStatus('loading');
+    setShowFlagMenu(false);
+
+    const result = await flagQuestion(question.id, user.uid, reason);
+
+    if (result.success) {
+      setFlagStatus('success');
+      setUserHasFlagged(true);
+    } else if (result.alreadyFlagged) {
+      setFlagStatus('already-flagged');
+      setUserHasFlagged(true);
+    } else {
+      setFlagStatus('idle');
+    }
+  };
 
   const toggleOption = (letter: string) => {
     if (isAnswered) return;
@@ -222,26 +265,96 @@ export function QuestionCard({
             }
           `}
         >
-          <div className="flex items-center gap-3 mb-3">
-            {isCorrect ? (
-              <>
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
-                  <Check className="w-5 h-5 text-white" />
+          <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center gap-3">
+              {isCorrect ? (
+                <>
+                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                    <Check className="w-5 h-5 text-white" />
+                  </div>
+                  <span className="font-semibold text-foreground dark:text-green-300">
+                    Correct!
+                  </span>
+                </>
+              ) : (
+                <>
+                  <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
+                    <X className="w-5 h-5 text-white" />
+                  </div>
+                  <span className="font-semibold text-foreground dark:text-red-300">
+                    Incorrect
+                  </span>
+                </>
+              )}
+            </div>
+
+            {/* Flag Button */}
+            <div className="relative">
+              {flagStatus === 'loading' ? (
+                <div className="flex items-center gap-2 text-muted-foreground text-sm">
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                  <span>Flagging...</span>
                 </div>
-                <span className="font-semibold text-foreground dark:text-green-300">
-                  Correct!
-                </span>
-              </>
-            ) : (
-              <>
-                <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
-                  <X className="w-5 h-5 text-white" />
+              ) : flagStatus === 'success' || flagStatus === 'already-flagged' ? (
+                <div className="flex items-center gap-2 text-amber-600 dark:text-amber-400 text-sm">
+                  <Flag className="w-4 h-4 fill-current" />
+                  <span>Flagged</span>
                 </div>
-                <span className="font-semibold text-foreground dark:text-red-300">
-                  Incorrect
-                </span>
-              </>
-            )}
+              ) : (
+                <>
+                  <button
+                    onClick={() => setShowFlagMenu(!showFlagMenu)}
+                    className="flex items-center gap-2 px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-lg transition-colors"
+                  >
+                    <Flag className="w-4 h-4" />
+                    <span>Report Issue</span>
+                  </button>
+
+                  {/* Flag Menu Dropdown */}
+                  <AnimatePresence>
+                    {showFlagMenu && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                        transition={{ duration: 0.15 }}
+                        className="absolute right-0 top-full mt-2 w-56 bg-card border border-border rounded-lg shadow-lg z-50 overflow-hidden"
+                      >
+                        <div className="p-2 border-b border-border">
+                          <p className="text-xs text-muted-foreground font-medium">What's the issue?</p>
+                        </div>
+                        <div className="p-1">
+                          <button
+                            onClick={() => handleFlag('incorrectAnswer')}
+                            className="w-full text-left px-3 py-2 text-sm hover:bg-muted rounded-md transition-colors"
+                          >
+                            Incorrect answer marked
+                          </button>
+                          <button
+                            onClick={() => handleFlag('wrongTopic')}
+                            className="w-full text-left px-3 py-2 text-sm hover:bg-muted rounded-md transition-colors"
+                          >
+                            Wrong topic assigned
+                          </button>
+                          <button
+                            onClick={() => handleFlag('unclearQuestion')}
+                            className="w-full text-left px-3 py-2 text-sm hover:bg-muted rounded-md transition-colors"
+                          >
+                            Question is unclear
+                          </button>
+                          <button
+                            onClick={() => handleFlag('other')}
+                            className="w-full text-left px-3 py-2 text-sm hover:bg-muted rounded-md transition-colors"
+                          >
+                            Other issue
+                          </button>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </>
+              )}
+            </div>
           </div>
 
           {/* Correct Answer Display */}

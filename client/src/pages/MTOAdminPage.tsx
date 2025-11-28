@@ -19,8 +19,19 @@ import {
   RefreshCw,
   AlertTriangle,
   Eye,
-  EyeOff
+  EyeOff,
+  Flag,
+  CheckSquare
 } from 'lucide-react'
+import {
+  getAllFlagsIncludingResolved,
+  resolveFlag,
+  unresolveFlag,
+  deleteFlag,
+  getFlagStats,
+  type FlagReason
+} from '@/apps/physiology-mto/services/flagService'
+import { useAuth } from '@/contexts/AuthContext'
 import { motion, AnimatePresence } from 'framer-motion'
 
 interface MTOQuestion {
@@ -59,7 +70,23 @@ interface DuplicateGroup {
   questions: MTOQuestion[]
 }
 
-type TabType = 'dashboard' | 'questions' | 'duplicates' | 'explanations' | 'tools'
+interface QuestionFlag {
+  id: string
+  questionId: string
+  flagCount: number
+  flaggedBy: string[]
+  flagReasons: {
+    wrongTopic: number
+    incorrectAnswer: number
+    unclearQuestion: number
+    other: number
+  }
+  resolved: boolean
+  resolvedAt?: { seconds: number }
+  resolvedBy?: string
+}
+
+type TabType = 'dashboard' | 'questions' | 'duplicates' | 'explanations' | 'flags' | 'tools'
 
 export function MTOAdminPage() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -71,6 +98,7 @@ export function MTOAdminPage() {
     { id: 'questions', label: 'Questions', icon: <FileQuestion className="w-4 h-4" /> },
     { id: 'duplicates', label: 'Duplicates', icon: <Copy className="w-4 h-4" /> },
     { id: 'explanations', label: 'Explanations', icon: <BookOpen className="w-4 h-4" /> },
+    { id: 'flags', label: 'Flags', icon: <Flag className="w-4 h-4" /> },
     { id: 'tools', label: 'Tools', icon: <Wrench className="w-4 h-4" /> },
   ]
 
@@ -120,6 +148,7 @@ export function MTOAdminPage() {
           {activeTab === 'questions' && <QuestionsTab />}
           {activeTab === 'duplicates' && <DuplicatesTab />}
           {activeTab === 'explanations' && <ExplanationsTab />}
+          {activeTab === 'flags' && <FlagsTab />}
           {activeTab === 'tools' && <ToolsTab />}
         </div>
       </main>
@@ -1157,6 +1186,416 @@ function ExplanationsTab() {
           <div className="text-center py-12 text-muted-foreground">
             No items found for this filter.
           </div>
+        )}
+      </div>
+    </div>
+  )
+}
+
+function FlagsTab() {
+  const { user } = useAuth()
+  const [loading, setLoading] = useState(true)
+  const [flags, setFlags] = useState<(QuestionFlag & { id: string })[]>([])
+  const [questions, setQuestions] = useState<Map<string, MTOQuestion>>(new Map())
+  const [filter, setFilter] = useState<'all' | 'unresolved' | 'resolved'>('unresolved')
+  const [expandedFlag, setExpandedFlag] = useState<string | null>(null)
+  const [processingId, setProcessingId] = useState<string | null>(null)
+  const [stats, setStats] = useState({
+    total: 0,
+    unresolved: 0,
+    resolved: 0,
+    byReason: {
+      wrongTopic: 0,
+      incorrectAnswer: 0,
+      unclearQuestion: 0,
+      other: 0
+    }
+  })
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const [flagsData, statsData, questionsSnapshot] = await Promise.all([
+          getAllFlagsIncludingResolved(),
+          getFlagStats(),
+          getDocs(collection(db, 'mtoQuestions'))
+        ])
+
+        const questionsMap = new Map<string, MTOQuestion>()
+        questionsSnapshot.docs.forEach(doc => {
+          const data = doc.data() as MTOQuestion
+          questionsMap.set(doc.id, { id: doc.id, ...data })
+          if (data.legacyId) {
+            questionsMap.set(data.legacyId, { id: doc.id, ...data })
+          }
+        })
+
+        setFlags(flagsData)
+        setStats(statsData)
+        setQuestions(questionsMap)
+      } catch (error) {
+        console.error('Error fetching flags:', error)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchData()
+  }, [])
+
+  const filteredFlags = useMemo(() => {
+    switch (filter) {
+      case 'unresolved':
+        return flags.filter(f => !f.resolved)
+      case 'resolved':
+        return flags.filter(f => f.resolved)
+      default:
+        return flags
+    }
+  }, [flags, filter])
+
+  async function handleResolve(questionId: string) {
+    if (!user) return
+    setProcessingId(questionId)
+    const result = await resolveFlag(questionId, user.uid)
+    if (result.success) {
+      setFlags(prev => prev.map(f =>
+        f.questionId === questionId ? { ...f, resolved: true } : f
+      ))
+      setStats(prev => ({
+        ...prev,
+        unresolved: prev.unresolved - 1,
+        resolved: prev.resolved + 1
+      }))
+    }
+    setProcessingId(null)
+  }
+
+  async function handleUnresolve(questionId: string) {
+    setProcessingId(questionId)
+    const result = await unresolveFlag(questionId)
+    if (result.success) {
+      setFlags(prev => prev.map(f =>
+        f.questionId === questionId ? { ...f, resolved: false } : f
+      ))
+      setStats(prev => ({
+        ...prev,
+        unresolved: prev.unresolved + 1,
+        resolved: prev.resolved - 1
+      }))
+    }
+    setProcessingId(null)
+  }
+
+  async function handleDelete(questionId: string) {
+    if (!confirm('Delete this flag? This action cannot be undone.')) return
+    setProcessingId(questionId)
+    const result = await deleteFlag(questionId)
+    if (result.success) {
+      const deletedFlag = flags.find(f => f.questionId === questionId)
+      setFlags(prev => prev.filter(f => f.questionId !== questionId))
+      if (deletedFlag) {
+        setStats(prev => ({
+          ...prev,
+          total: prev.total - 1,
+          unresolved: deletedFlag.resolved ? prev.unresolved : prev.unresolved - 1,
+          resolved: deletedFlag.resolved ? prev.resolved - 1 : prev.resolved
+        }))
+      }
+    }
+    setProcessingId(null)
+  }
+
+  function getReasonLabel(reason: string): string {
+    switch (reason) {
+      case 'wrongTopic': return 'Wrong Topic'
+      case 'incorrectAnswer': return 'Incorrect Answer'
+      case 'unclearQuestion': return 'Unclear Question'
+      case 'other': return 'Other'
+      default: return reason
+    }
+  }
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center py-12">
+        <Loader2 className="w-8 h-8 animate-spin text-primary" />
+      </div>
+    )
+  }
+
+  return (
+    <div className="space-y-6">
+      {/* Stats */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <button
+          onClick={() => setFilter('all')}
+          className={`p-4 rounded-lg border transition-colors text-left ${
+            filter === 'all'
+              ? 'border-primary bg-primary/5'
+              : 'border-border bg-card hover:bg-muted/50'
+          }`}
+        >
+          <div className="text-2xl font-bold text-foreground">{stats.total}</div>
+          <div className="text-sm text-muted-foreground">Total Flags</div>
+        </button>
+        <button
+          onClick={() => setFilter('unresolved')}
+          className={`p-4 rounded-lg border transition-colors text-left ${
+            filter === 'unresolved'
+              ? 'border-primary bg-primary/5'
+              : 'border-border bg-card hover:bg-muted/50'
+          }`}
+        >
+          <div className="text-2xl font-bold text-red-600 dark:text-red-400">
+            {stats.unresolved}
+          </div>
+          <div className="text-sm text-muted-foreground">Unresolved</div>
+        </button>
+        <button
+          onClick={() => setFilter('resolved')}
+          className={`p-4 rounded-lg border transition-colors text-left ${
+            filter === 'resolved'
+              ? 'border-primary bg-primary/5'
+              : 'border-border bg-card hover:bg-muted/50'
+          }`}
+        >
+          <div className="text-2xl font-bold text-green-600 dark:text-green-400">
+            {stats.resolved}
+          </div>
+          <div className="text-sm text-muted-foreground">Resolved</div>
+        </button>
+        <div className="p-4 rounded-lg border border-border bg-card">
+          <div className="text-sm text-muted-foreground mb-2">By Reason</div>
+          <div className="space-y-1 text-xs">
+            <div className="flex justify-between">
+              <span>Incorrect Answer</span>
+              <span className="font-medium">{stats.byReason.incorrectAnswer}</span>
+            </div>
+            <div className="flex justify-between">
+              <span>Wrong Topic</span>
+              <span className="font-medium">{stats.byReason.wrongTopic}</span>
+            </div>
+            <div className="flex justify-between">
+              <span>Unclear</span>
+              <span className="font-medium">{stats.byReason.unclearQuestion}</span>
+            </div>
+            <div className="flex justify-between">
+              <span>Other</span>
+              <span className="font-medium">{stats.byReason.other}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Flags List */}
+      <div className="space-y-3">
+        {filteredFlags.length === 0 ? (
+          <div className="text-center py-12 text-muted-foreground">
+            {filter === 'unresolved'
+              ? 'No unresolved flags. All clear!'
+              : filter === 'resolved'
+                ? 'No resolved flags yet.'
+                : 'No flags have been submitted yet.'}
+          </div>
+        ) : (
+          filteredFlags.map(flag => {
+            const question = questions.get(flag.questionId)
+            const isExpanded = expandedFlag === flag.id
+            const isProcessing = processingId === flag.questionId
+
+            return (
+              <div
+                key={flag.id}
+                className={`bg-card border rounded-lg overflow-hidden ${
+                  flag.resolved
+                    ? 'border-green-300 dark:border-green-800'
+                    : 'border-red-300 dark:border-red-800'
+                }`}
+              >
+                <div
+                  className="p-4 cursor-pointer hover:bg-muted/50 transition-colors"
+                  onClick={() => setExpandedFlag(isExpanded ? null : flag.id)}
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="flex-1 min-w-0">
+                      {/* Header */}
+                      <div className="flex items-center flex-wrap gap-2 mb-2">
+                        {flag.resolved ? (
+                          <span className="px-2 py-0.5 bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 text-xs font-medium rounded-full flex items-center gap-1">
+                            <CheckCircle className="w-3 h-3" />
+                            Resolved
+                          </span>
+                        ) : (
+                          <span className="px-2 py-0.5 bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400 text-xs font-medium rounded-full flex items-center gap-1">
+                            <AlertCircle className="w-3 h-3" />
+                            Unresolved
+                          </span>
+                        )}
+                        <span className="px-2 py-0.5 bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400 text-xs font-medium rounded-full">
+                          {flag.flagCount} {flag.flagCount === 1 ? 'flag' : 'flags'}
+                        </span>
+                      </div>
+
+                      {/* Question text */}
+                      {question ? (
+                        <p className={`text-foreground font-medium ${isExpanded ? '' : 'line-clamp-2'}`}>
+                          {question.text}
+                        </p>
+                      ) : (
+                        <p className="text-muted-foreground italic">
+                          Question not found (ID: {flag.questionId})
+                        </p>
+                      )}
+
+                      {/* Reasons */}
+                      <div className="flex flex-wrap gap-1 mt-2">
+                        {Object.entries(flag.flagReasons)
+                          .filter(([, count]) => count > 0)
+                          .map(([reason, count]) => (
+                            <span
+                              key={reason}
+                              className="px-2 py-0.5 bg-muted text-muted-foreground text-xs rounded"
+                            >
+                              {getReasonLabel(reason)}: {count}
+                            </span>
+                          ))}
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-2 flex-shrink-0">
+                      {isExpanded ? (
+                        <ChevronUp className="w-5 h-5 text-muted-foreground" />
+                      ) : (
+                        <ChevronDown className="w-5 h-5 text-muted-foreground" />
+                      )}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Expanded content */}
+                <AnimatePresence>
+                  {isExpanded && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="overflow-hidden"
+                    >
+                      <div className="border-t border-border p-4 space-y-4">
+                        {/* Question details */}
+                        {question && (
+                          <div className="space-y-3">
+                            <h4 className="text-sm font-medium text-muted-foreground">Answer Options:</h4>
+                            <div className="space-y-2">
+                              {question.options?.map(option => {
+                                const isCorrect = question.correctAnswers?.includes(option.letter)
+                                return (
+                                  <div
+                                    key={option.letter}
+                                    className={`flex items-start gap-3 p-3 rounded-lg ${
+                                      isCorrect
+                                        ? 'bg-green-100 dark:bg-green-900/30 border border-green-300 dark:border-green-700'
+                                        : 'bg-background border border-border'
+                                    }`}
+                                  >
+                                    <span className={`font-bold ${
+                                      isCorrect
+                                        ? 'text-green-700 dark:text-green-400'
+                                        : 'text-muted-foreground'
+                                    }`}>
+                                      {option.letter}.
+                                    </span>
+                                    <span className={`flex-1 ${
+                                      isCorrect
+                                        ? 'text-green-800 dark:text-green-300 font-medium'
+                                        : 'text-foreground'
+                                    }`}>
+                                      {option.text}
+                                    </span>
+                                    {isCorrect && (
+                                      <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-400 flex-shrink-0" />
+                                    )}
+                                  </div>
+                                )
+                              })}
+                            </div>
+
+                            <div className="flex flex-wrap gap-2 pt-2">
+                              {question.topics?.map(t => (
+                                <span key={t} className="px-2 py-0.5 bg-primary/10 text-primary text-xs rounded-full">
+                                  Topic {t}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+
+                        {/* Flag info */}
+                        <div className="bg-muted/50 rounded-lg p-3">
+                          <h4 className="text-sm font-medium text-muted-foreground mb-2">Flag Details:</h4>
+                          <div className="text-sm text-foreground space-y-1">
+                            <p><strong>Question ID:</strong> {flag.questionId}</p>
+                            <p><strong>Total Flags:</strong> {flag.flagCount}</p>
+                            <p><strong>Flagged By:</strong> {flag.flaggedBy.length} users</p>
+                          </div>
+                        </div>
+
+                        {/* Actions */}
+                        <div className="flex items-center gap-3 pt-2">
+                          {flag.resolved ? (
+                            <Button
+                              variant="outline"
+                              onClick={(e) => {
+                                e.stopPropagation()
+                                handleUnresolve(flag.questionId)
+                              }}
+                              disabled={isProcessing}
+                            >
+                              {isProcessing ? (
+                                <Loader2 className="w-4 h-4 animate-spin mr-2" />
+                              ) : (
+                                <AlertCircle className="w-4 h-4 mr-2" />
+                              )}
+                              Unresolve
+                            </Button>
+                          ) : (
+                            <Button
+                              onClick={(e) => {
+                                e.stopPropagation()
+                                handleResolve(flag.questionId)
+                              }}
+                              disabled={isProcessing}
+                            >
+                              {isProcessing ? (
+                                <Loader2 className="w-4 h-4 animate-spin mr-2" />
+                              ) : (
+                                <CheckSquare className="w-4 h-4 mr-2" />
+                              )}
+                              Mark Resolved
+                            </Button>
+                          )}
+                          <Button
+                            variant="outline"
+                            className="text-red-500 hover:text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20"
+                            onClick={(e) => {
+                              e.stopPropagation()
+                              handleDelete(flag.questionId)
+                            }}
+                            disabled={isProcessing}
+                          >
+                            <Trash2 className="w-4 h-4 mr-2" />
+                            Delete Flag
+                          </Button>
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            )
+          })
         )}
       </div>
     </div>

@@ -1,19 +1,20 @@
 # MTO System Implementation Tracker
 
-## Status: Session 7 - COMPLETE (Admin Panel Advanced)
+## Status: Session 8 - COMPLETE (Flagging System)
 **Last Updated**: 2025-11-28
 
 ## CURRENT STATE (For Context Recovery)
 - **Branch**: `feature/mto-explanations-system`
-- **Phase**: Session 7 - Admin Panel Advanced COMPLETE
+- **Phase**: Session 8 - Flagging System COMPLETE
 - **Migration Status**: ✅ 344 questions in Firestore
 - **Firebase Services**: ✅ Created and working
 - **Explanation Skill**: ✅ Created and tested
 - **UI Explanations**: ✅ IMPLEMENTED - QuestionCard shows explanations
 - **Explanations Generated**: ✅ 348 explanations across 35 topics in Firebase
-- **Admin Panel**: ✅ 5 tabs - Dashboard, Questions, Duplicates, Explanations, Tools
+- **Admin Panel**: ✅ 6 tabs - Dashboard, Questions, Duplicates, Explanations, Flags, Tools
+- **Flagging System**: ✅ IMPLEMENTED - Users can flag questions, admins can review
 - **App Status**: MTO Practice works, Admin Panel at /admin/mto
-- **Next Step**: Session 8 - Flagging System
+- **Next Step**: Session 9 - Polish & Testing
 
 ## ⚠️ CRITICAL: WHAT'S NOT ENABLED YET
 
@@ -124,11 +125,12 @@ Migrate MTO practice questions to Firebase Firestore, implement automated explan
 - [x] CLI commands reference for bulk operations ✅
 - [x] IMPROVED: Duplicates tab now shows full question + all answer options for comparison ✅
 
-### Session 8: Flagging System
-- [ ] Implement flag button UI
-- [ ] Create questionFlags collection logic
-- [ ] Flag review queue page
-- [ ] Resolve flag functionality
+### Session 8: Flagging System ✅ COMPLETE
+- [x] Implement flag button UI in QuestionCard ✅
+- [x] Create flagService.ts with CRUD operations ✅
+- [x] Flag review queue in Admin Panel (Flags tab) ✅
+- [x] Resolve/unresolve/delete flag functionality ✅
+- [x] Stats dashboard showing flags by reason ✅
 
 ### Session 9: Polish & Testing
 - [ ] End-to-end testing
@@ -158,6 +160,9 @@ Migrate MTO practice questions to Firebase Firestore, implement automated explan
 | `client/src/pages/MTOAdminPage.tsx` | Created | MTO Admin page with Dashboard and Questions tabs | Session 6 |
 | `client/src/App.tsx` | Modified | Added /admin/mto route with super admin protection | Session 6 |
 | `client/src/components/layout/Sidebar.tsx` | Modified | Added MTO Admin sidebar entry for super admins | Session 6 |
+| `client/src/apps/physiology-mto/services/flagService.ts` | Created | Flag CRUD service with resolve/unresolve functionality | Session 8 |
+| `client/src/apps/physiology-mto/components/QuestionCard.tsx` | Modified | Added flag button with reason selection dropdown | Session 8 |
+| `client/src/pages/MTOAdminPage.tsx` | Modified | Added Flags tab with review queue and stats | Session 8 |
 
 ## Firebase Collections Schema
 
