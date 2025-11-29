@@ -7,28 +7,28 @@ const topic34QuickReview = {
   topicNumber: 34,
   learningObjectives: {
     'lo-1': {
-      title: 'Explain and give the units of the followings: shear stress, shear rate, viscosity. Give Newton\'s law of viscosity, and define Newtonian and non-Newtonian fluids.',
+      title: 'Explain and give the units of the followings: shear stress, shear rate, viscosity. Give Newton\'s law of viscosity, and >>define Newtonian<< and non-Newtonian >>fluids.<<',
       isCritical: true,
       blocks: [
         {
           type: 'header',
-          text: 'Fundamental Rheological Concepts',
+          text: 'Fundamental Hemorheology Concepts',
           critical: true
         },
         {
           type: 'table',
-          headers: ['Term', 'Definition', 'Formula', 'Units'],
+          headers: ['Term', 'Definition', 'Units'],
           rows: [
-            ['Shear stress (τ)', 'Tangential force making fluid layers glide per unit area', 'τ = F/A', 'N/m² or Pa'],
-            ['Shear rate (γ)', 'Velocity gradient across fluid layers', 'γ = dv/dx', '1/s or s⁻¹'],
-            ['Viscosity (η)', 'Fluid resistance to flow under shear stress', 'η = τ/γ', 'Pa·s (SI) or Poise (CGS)']
+            ['Shear stress (τ)', 'Tangential force making layers glide', 'N/m² or Pa'],
+            ['Shear rate (γ)', 'Velocity gradient: dv/dx', '1/s or s⁻¹'],
+            ['Viscosity (η)', 'Resistance to flow: η = τ/γ', 'Pa·s or Poise']
           ],
           critical: true
         },
         {
           type: 'formula',
-          formula: 'τ = η · γ',
-          explanation: 'Newton\'s law of viscosity: shear stress is directly proportional to shear rate',
+          formula: 'τ = η × γ',
+          explanation: 'Newton\'s law of viscosity: Shear stress is proportional to shear rate, with viscosity as the coefficient',
           critical: true
         },
         {
@@ -36,68 +36,119 @@ const topic34QuickReview = {
           left: {
             title: 'Newtonian Fluids',
             items: [
-              'Constant viscosity regardless of shear rate',
-              'Linear relationship: τ ∝ γ',
-              'Examples: water, air, simple oils'
+              'Constant viscosity',
+              'Linear τ vs γ relationship',
+              'Examples: water, air, oils',
+              'Viscosity independent of shear'
             ]
           },
           right: {
             title: 'Non-Newtonian Fluids',
             items: [
-              'Viscosity changes with shear rate',
-              'Non-linear relationship between τ and γ',
-              'Examples: blood (shear-thinning), ketchup'
+              'Viscosity changes with shear',
+              'Non-linear τ vs γ relationship',
+              'Examples: blood, ketchup',
+              'Blood is shear-thinning'
             ]
           },
           critical: true
         },
         {
           type: 'keypoint',
-          text: 'Viscosity is inversely proportional to temperature: higher temperature decreases viscosity',
+          text: 'Blood is non-Newtonian: viscosity decreases with increasing shear rate. Conversion: 1 Pa·s = 0.1 Poise',
           critical: true
         },
         {
-          type: 'keypoint',
-          text: 'Blood is a non-Newtonian fluid with variable viscosity',
-          critical: true
+          type: 'clinical',
+          text: 'Viscosity is inversely proportional to temperature - hypothermia increases blood viscosity'
         }
       ]
     },
     'lo-2': {
-      title: 'The anomalous viscosity of blood: which factors affect blood viscosity? (hematocrit, shear thinning and the Fåhræus-Lindqvist effect)',
+      title: 'The anomalous viscosity of blood: >>which factors affect blood viscosity?<< (hematocrit, shear thinning and the Fåhræus-Lindqvist effect)',
       isCritical: true,
       blocks: [
         {
           type: 'header',
-          text: 'Factors Affecting Blood Viscosity',
+          text: 'Anomalous Viscosity of Blood',
           critical: true
         },
         {
-          type: 'keypoint',
-          text: 'Blood is a non-Newtonian fluid: viscosity changes with shear rate and vessel geometry (anomalous viscosity)',
-          critical: true
+          type: 'paragraph',
+          text: 'Blood is non-Newtonian with anomalous viscosity: viscosity changes with shear rate and vessel geometry. Plasma is Newtonian (protein-dependent), but whole blood exhibits unique rheological features.'
         },
         {
           type: 'list',
           intro: 'Three main factors affect blood viscosity:',
           items: [
-            'Hematocrit: ↑ hematocrit → ↑ viscosity (more RBCs)',
-            'Shear thinning: ↑ shear rate → ↓ viscosity (dispersed RBCs)',
-            'Fåhræus-Lindqvist effect: ↓ vessel diameter (<300 μm) → ↓ apparent viscosity'
+            'Hematocrit - cell concentration',
+            'Shear thinning - rate-dependent behavior',
+            'Fåhræus-Lindqvist effect - vessel size influence'
           ],
           critical: true
         },
         {
-          type: 'clinical',
-          text: 'Polycythemia (high hematocrit) increases viscosity, raising vascular resistance and cardiac workload'
+          type: 'header',
+          text: 'Factor 1: Hematocrit',
+          critical: true
         },
         {
-          type: 'clinical',
-          text: 'Anemia (low hematocrit) reduces viscosity, facilitating blood flow but reducing oxygen-carrying capacity'
+          type: 'paragraph',
+          text: 'Increasing hematocrit increases viscosity due to more red blood cells. Higher hematocrit means more cells creating friction.'
+        },
+        {
+          type: 'comparison',
+          left: {
+            title: 'Polycythemia (↑ Hct)',
+            items: [
+              'Elevated RBC count',
+              'Increased viscosity',
+              'Higher vascular resistance',
+              'Increased cardiac workload'
+            ]
+          },
+          right: {
+            title: 'Anemia (↓ Hct)',
+            items: [
+              'Reduced RBC count',
+              'Decreased viscosity',
+              'Lower vascular resistance',
+              'Easier blood flow'
+            ]
+          },
+          critical: true
+        },
+        {
+          type: 'header',
+          text: 'Factor 2: Shear Thinning',
+          critical: true
+        },
+        {
+          type: 'steps',
+          intro: 'How shear rate affects viscosity:',
+          items: [
+            'Low shear rates → RBCs form rouleaux aggregates',
+            'Aggregates increase internal friction',
+            'High viscosity in slow flow',
+            'High shear rates → aggregates disperse',
+            'Cells align with flow direction',
+            'Reduced viscosity in fast flow'
+          ],
+          critical: true
+        },
+        {
+          type: 'header',
+          text: 'Factor 3: Fåhræus-Lindqvist Effect',
+          critical: true
+        },
+        {
+          type: 'paragraph',
+          text: 'Decreasing vessel diameter below 300 μm reduces apparent viscosity. RBCs migrate centrally, creating cell-free plasma layer near walls that acts as lubricant.',
+          critical: true
         },
         {
           type: 'keypoint',
-          text: 'RBC membrane deformability (non-elastic fluidity) explains blood\'s unique rheological features',
+          text: 'These anomalous features are explained by RBC membrane\'s non-elastic deformability (fluidity)',
           critical: true
         }
       ]
@@ -108,35 +159,64 @@ const topic34QuickReview = {
       blocks: [
         {
           type: 'header',
-          text: 'Shear Thinning Mechanisms'
+          text: 'Shear Thinning: Blood\'s Unique Property'
         },
         {
           type: 'paragraph',
-          text: 'Shear thinning: blood viscosity decreases with increasing shear rate, ensuring efficient flow through vessels of all sizes.'
+          text: 'Shear thinning: apparent viscosity decreases with increasing shear rate, ensuring efficient flow through vessels of all sizes'
+        },
+        {
+          type: 'list',
+          intro: 'Two mechanisms explain shear thinning:',
+          items: [
+            'Dispersion of RBC aggregates - breaking up rouleaux',
+            'Red blood cell adaptations - deformation and alignment'
+          ]
+        },
+        {
+          type: 'header',
+          text: 'Mechanism 1: Dispersion of RBC Aggregates'
         },
         {
           type: 'steps',
-          intro: 'Mechanism 1: Dispersion of RBC aggregates',
+          intro: 'At low shear rates (stasis/venous flow):',
           items: [
-            'Low shear (venous flow): RBCs form rouleaux (money roll structures) mediated by fibrinogen',
-            'Rouleaux increase internal friction and viscosity',
-            'High shear (arterioles): plasma flow forces disrupt rouleaux',
-            'Individual RBCs disperse, reducing friction and viscosity'
+            'RBCs form rouleaux (money roll structures)',
+            'Aggregation mediated by fibrinogen and globulins',
+            'Aggregates create internal friction',
+            'Blood viscosity increases significantly'
           ]
         },
         {
           type: 'steps',
-          intro: 'Mechanism 2: RBC adaptations',
+          intro: 'At high shear rates (arterial/capillary flow):',
           items: [
-            'Axial migration: RBCs move to vessel center, leaving cell-free plasma layer near walls (lubricant effect)',
-            'Deformability: RBCs elongate and align with flow direction at high shear',
-            'Capillary flow: RBCs squeeze through in single file with perfect paraboloid velocity profile',
-            'Shape change: flexible biconcave shape and spectrin cytoskeleton allow adaptation'
+            'Plasma flow forces disrupt rouleaux',
+            'Individual RBCs separate and disperse',
+            'Intercellular friction decreases',
+            'Blood viscosity drops significantly'
+          ]
+        },
+        {
+          type: 'header',
+          text: 'Mechanism 2: Red Blood Cell Adaptations'
+        },
+        {
+          type: 'list',
+          intro: 'RBCs adapt through three processes:',
+          items: [
+            'Axial migration: RBCs move to vessel center at higher shear, leaving cell-free plasma layer near walls as lubricant',
+            'Deformability: Flexible biconcave shape allows elongation and alignment with flow at high shear rates',
+            'Capillary adaptation: In narrow capillaries, cells squeeze through in single file with perfect paraboloid velocity profile'
           ]
         },
         {
           type: 'keypoint',
-          text: 'Shear thinning maintains flow at high velocities while reducing energy expenditure'
+          text: 'Shear thinning helps maintain flow at high velocities and reduces cardiac energy expenditure'
+        },
+        {
+          type: 'clinical',
+          text: 'Reduced RBC deformability (sickle cell, spherocytosis) impairs shear thinning and microcirculation'
         }
       ]
     },
@@ -150,40 +230,46 @@ const topic34QuickReview = {
         },
         {
           type: 'paragraph',
-          text: 'Structural viscosity: viscosity due to RBC interactions and rouleaux formation, depends on plasma protein ratio.'
+          text: 'Structural viscosity: Blood viscosity arising from RBC interactions and rouleaux formation, heavily influenced by plasma protein composition'
         },
         {
           type: 'comparison',
           left: {
-            title: 'Globulins & Fibrinogen',
+            title: 'Globulins & Fibrinogen (Pro-aggregation)',
             items: [
               'Promote RBC aggregation',
               'Bridge adjacent RBCs',
               'Create attractive forces',
-              '↑ concentration → ↑ rouleaux → ↑ viscosity'
+              'Increase rouleaux formation',
+              'Raise structural viscosity'
             ]
           },
           right: {
-            title: 'Albumin',
+            title: 'Albumin (Anti-aggregation)',
             items: [
-              'Has anti-aggregatory effect',
-              'Coats RBC surfaces',
-              'Reduces RBC interactions',
-              '↑ concentration → ↓ rouleaux → ↓ viscosity'
+              'Prevent RBC aggregation',
+              'Coat RBC surfaces',
+              'Reduce cell interactions',
+              'Decrease rouleaux formation',
+              'Lower structural viscosity'
             ]
           }
         },
         {
-          type: 'list',
-          intro: 'Albumin-to-Globulin (A/G) ratio effects:',
-          items: [
-            'High A/G ratio: albumin predominates → reduced aggregation → lower viscosity → better flow',
-            'Low A/G ratio: globulins dominate → increased aggregation → higher viscosity (especially at low shear)'
+          type: 'table',
+          headers: ['A/G Ratio', 'Effect on Aggregation', 'Viscosity'],
+          rows: [
+            ['High A/G', 'Albumin predominates → less aggregation', 'Lower viscosity'],
+            ['Low A/G', 'Globulins dominate → more aggregation', 'Higher viscosity']
           ]
         },
         {
+          type: 'keypoint',
+          text: 'The albumin-to-globulin ratio is the key determinant of structural viscosity, especially at low shear rates'
+        },
+        {
           type: 'clinical',
-          text: 'Reversible RBC aggregation is the basis of erythrocyte sedimentation rate (ESR), which increases when A/G ratio decreases'
+          text: 'RBC sedimentation rate (ESR) increases when plasma A/G ratio decreases - this reversible aggregation is the basis of ESR testing'
         }
       ]
     },
@@ -193,52 +279,80 @@ const topic34QuickReview = {
       blocks: [
         {
           type: 'header',
-          text: 'RBC Flow Adaptations'
+          text: 'RBC Flow Adaptations: Dynamic Optimization'
+        },
+        {
+          type: 'paragraph',
+          text: 'RBCs dynamically adapt to blood flow conditions, optimizing circulation efficiency and minimizing resistance in both large vessels and microcirculation'
         },
         {
           type: 'list',
-          intro: 'Three dynamic adaptations optimize circulation:',
+          intro: 'Three key adaptations:',
           items: [
-            'Axial migration: RBCs move toward vessel center',
-            'Orientation: RBCs align parallel to flow direction',
-            'Shape changes: RBCs deform to fit varying vessel diameters'
+            'Axial migration - central positioning',
+            'Orientation - alignment with flow',
+            'Shape changes - deformation for passage'
           ]
         },
         {
-          type: 'steps',
-          intro: 'Axial Migration mechanism:',
-          items: [
-            'Shear gradients create lateral forces in laminar flow',
-            'Higher shear stress near walls pushes RBCs centrally',
-            'Cell-free plasma layer forms near vessel walls',
-            'Plasma layer acts as lubricant, reducing friction and viscosity',
-            'Most important in small arterioles and capillaries'
-          ]
+          type: 'header',
+          text: 'Adaptation 1: Axial Migration'
         },
         {
           type: 'steps',
-          intro: 'Orientation mechanism:',
+          intro: 'How RBCs position themselves:',
           items: [
-            'In high-shear environments (arteries), RBCs rotate',
-            'Biconcave shape aligns parallel to flow direction',
+            'Lateral forces from shear gradients in laminar flow',
+            'Higher shear stress near vessel walls',
+            'RBCs pushed toward vessel center',
+            'Cell-free plasma layer forms near walls',
+            'Plasma layer acts as lubricant'
+          ]
+        },
+        {
+          type: 'keypoint',
+          text: 'Axial migration reduces friction between RBCs and vessel walls, lowering blood viscosity and improving flow efficiency'
+        },
+        {
+          type: 'header',
+          text: 'Adaptation 2: Orientation'
+        },
+        {
+          type: 'paragraph',
+          text: 'In high-shear environments (arteries, arterioles), RBCs rotate and align their biconcave shape parallel to flow direction'
+        },
+        {
+          type: 'list',
+          intro: 'Benefits of alignment:',
+          items: [
             'Minimizes flow resistance and turbulence',
-            'Reduces cardiac energy expenditure',
-            'Ensures smooth laminar flow'
+            'Reduces energy expenditure by heart',
+            'Ensures smooth laminar flow',
+            'Disrupted orientation increases vascular resistance'
           ]
         },
         {
+          type: 'header',
+          text: 'Adaptation 3: Shape Changes'
+        },
+        {
+          type: 'paragraph',
+          text: 'RBCs are highly deformable due to biconcave shape and spectrin cytoskeleton (lipid bilayer structure)'
+        },
+        {
           type: 'steps',
-          intro: 'Shape Change mechanism:',
+          intro: 'Deformability in action:',
           items: [
-            'Flexible biconcave shape + spectrin cytoskeleton',
-            'In capillaries (<7-8 μm): RBCs deform into elongated shapes',
-            'Ensures continuous flow and oxygen delivery',
-            'Impaired in sickle cell disease and spherocytosis'
+            'Capillaries smaller than RBC diameter (7-8 μm)',
+            'RBCs elongate into paraboloid shapes',
+            'Cells pass through in single file',
+            'Perfect fluid droplet adaptation',
+            'Ensures continuous oxygen delivery'
           ]
         },
         {
           type: 'clinical',
-          text: 'Reduced RBC deformability (sickle cell disease, spherocytosis) impairs microcirculation and oxygen delivery'
+          text: 'Reduced deformability in sickle cell disease or spherocytosis impairs microcirculation, causing tissue ischemia and pain crises'
         }
       ]
     },
@@ -248,44 +362,81 @@ const topic34QuickReview = {
       blocks: [
         {
           type: 'header',
-          text: 'Fåhræus-Lindqvist Effect'
-        },
-        {
-          type: 'keypoint',
-          text: 'In microvessels (<300 μm diameter), apparent blood viscosity DECREASES as vessel diameter decreases'
+          text: 'The Fåhræus-Lindqvist Effect'
         },
         {
           type: 'paragraph',
-          text: 'Fåhræus-Lindqvist effect: reduction of apparent viscosity in vessels 10-300 μm diameter, discovered by Robert Fåhræus and Johan Lindqvist in 1931.'
+          text: 'In microvessels below 300 μm diameter, apparent blood viscosity DECREASES as vessel diameter decreases - counterintuitive but physiologically crucial'
+        },
+        {
+          type: 'keypoint',
+          text: 'Fåhræus-Lindqvist effect: Reduction of apparent blood viscosity in vessels 10-300 μm diameter. Discovered 1931 by Swedish researchers.'
+        },
+        {
+          type: 'table',
+          headers: ['Vessel Diameter', 'Viscosity Effect'],
+          rows: [
+            ['> 300 μm', 'Normal whole blood viscosity'],
+            ['10-300 μm', 'Progressive viscosity decrease'],
+            ['7-10 μm', 'Approaches plasma viscosity'],
+            ['< 10 μm', 'May slightly increase (deformation energy)']
+          ]
+        },
+        {
+          type: 'list',
+          intro: 'Three mechanisms explain this effect:',
+          items: [
+            'Axial migration and plasma skimming',
+            'Reduced hematocrit (Fåhræus effect)',
+            'RBC deformability and alignment'
+          ]
+        },
+        {
+          type: 'header',
+          text: 'Mechanism 1: Axial Migration & Plasma Skimming'
         },
         {
           type: 'steps',
-          intro: 'Three mechanisms explain this effect:',
+          intro: 'More important in larger microvessels (30-300 μm):',
           items: [
-            'Mechanism 1: Axial migration + plasma skimming (30-300 μm vessels)',
-            '→ RBCs migrate to vessel center (higher velocity, lower shear stress)',
-            '→ Cell-free plasma layer forms near walls (lower velocity)',
-            '→ Effective hematocrit decreases → viscosity decreases',
-            'Mechanism 2: Reduced hematocrit (Fåhræus effect)',
-            '→ Lower RBC concentration in small vessels',
-            '→ Further reduces viscosity',
-            'Mechanism 3: RBC deformability + alignment',
-            '→ RBCs deform to pass through vessels <7-8 μm',
-            '→ Single-file flow in capillaries with paraboloid velocity profile',
-            '→ Reduces flow resistance'
+            'RBCs migrate to vessel center (high velocity, low shear)',
+            'Cell-free plasma layer forms at walls (low velocity)',
+            'Effective hematocrit decreases locally',
+            'Plasma layer acts as lubricant',
+            'Overall viscosity decreases'
+          ]
+        },
+        {
+          type: 'header',
+          text: 'Mechanism 2: Reduced Hematocrit'
+        },
+        {
+          type: 'paragraph',
+          text: 'The Fåhræus effect: Hematocrit in small vessels is lower than in large vessels due to cell-free plasma layers. Lower RBC concentration further reduces viscosity.'
+        },
+        {
+          type: 'header',
+          text: 'Mechanism 3: RBC Deformability & Alignment'
+        },
+        {
+          type: 'steps',
+          intro: 'Critical in smallest vessels:',
+          items: [
+            'RBCs highly flexible (biconcave shape)',
+            'Deform to pass vessels < 7-8 μm diameter',
+            'Align in single-file streams',
+            'Perfect paraboloid velocity profile',
+            'Minimizes cell-to-cell interactions',
+            'Reduces flow resistance'
           ]
         },
         {
           type: 'keypoint',
-          text: 'At 7-10 μm diameter, blood viscosity approaches plasma viscosity'
-        },
-        {
-          type: 'paragraph',
-          text: 'Limit: In capillaries <10 μm, viscosity may slightly increase due to energy required for RBC deformation and rigid WBCs.'
+          text: 'Effect minimizes resistance in microcirculation, ensuring efficient tissue perfusion and oxygen delivery'
         },
         {
           type: 'clinical',
-          text: 'This effect minimizes resistance ensuring efficient perfusion and oxygen delivery. Impaired in sickle cell anemia → increased viscosity → poor microcirculation.'
+          text: 'Impairment in sickle cell anemia: rigid cells cannot deform, leading to increased microvessel viscosity, vascular occlusion, and tissue damage'
         }
       ]
     }
