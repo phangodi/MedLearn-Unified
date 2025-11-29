@@ -432,6 +432,30 @@ function generateCardBackContent(lo: LearningObjective, topic: Topic): string {
     html += formatCO2Transport(rawContent)
   } else if (/reference values?/i.test(loTitle)) {
     html += formatReferenceValuesContent(rawContent)
+  }
+  // ===== TOPIC 33: HEMODYNAMICS =====
+  // NOTE: Order matters! More specific patterns must come BEFORE more general ones
+  else if (/systemic.*pulmonary.*circulation|pulmonary.*systemic|serially connected/i.test(loTitle)) {
+    // LO-4: Must check before Ohm's law since this LO also mentions Ohm's law
+    html += formatCirculationComparison(rawContent)
+  } else if (/define resistance and conductance|resistance.*conductance.*series.*parallel/i.test(loTitle)) {
+    // LO-5: Must check before flow/velocity since this LO mentions "flow" at the end
+    html += formatResistanceConductance(rawContent)
+  } else if (/define.*compare.*flow.*velocity|flow and velocity.*concept.*unit|velocity of flow/i.test(loTitle)) {
+    // LO-1: Flow vs Velocity comparison
+    html += formatFlowVelocity(rawContent)
+  } else if (/bernoulli|total energy.*(flowing|blood)/i.test(loTitle)) {
+    // LO-2: Bernoulli's law
+    html += formatBernoulliLaw(rawContent)
+  } else if (/pressure gradient.*flow.*resistance.*ohm|ohm.?s law.*calculate/i.test(loTitle)) {
+    // LO-3: Ohm's law (be more specific to avoid matching LO-4)
+    html += formatOhmsLaw(rawContent)
+  } else if (/hagen.?poiseuille|hydraulic resistance/i.test(loTitle)) {
+    // LO-6: Hagen-Poiseuille
+    html += formatHagenPoiseuille(rawContent)
+  } else if (/laminar.*turbulent|turbulent.*laminar|reynolds/i.test(loTitle)) {
+    // LO-7: Laminar vs Turbulent
+    html += formatLaminarTurbulent(rawContent)
   } else {
     // Default: intelligent generic formatting
     html += formatGenericContent(rawContent, loTitle)
@@ -1318,6 +1342,380 @@ function formatCO2Transport(content: string): string {
 </div>`
 }
 
+// ============================================================================
+// TOPIC 33: HEMODYNAMICS FORMATTERS
+// ============================================================================
+
+/**
+ * Format Flow vs Velocity comparison (LO-1)
+ */
+function formatFlowVelocity(content: string): string {
+  return `
+<div style="display: grid; gap: 16px;">
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+    <div style="background: #eff6ff; border-radius: 8px; padding: 14px;">
+      <div style="color: #2563eb; font-weight: 700; font-size: 1rem; margin-bottom: 8px; text-align: center;">FLOW (Q)</div>
+      <div style="line-height: 1.6; font-size: 0.95rem;">
+        <strong>Definition:</strong> Volume of fluid passing through a cross-section per unit time<br><br>
+        <strong>Units:</strong> L/min, m³/s<br><br>
+        <strong>Key:</strong> Equals <span style="color: #dc2626; font-weight: 600;">cardiac output</span> (~5 L/min at rest)
+      </div>
+    </div>
+
+    <div style="background: #fef2f2; border-radius: 8px; padding: 14px;">
+      <div style="color: #dc2626; font-weight: 700; font-size: 1rem; margin-bottom: 8px; text-align: center;">VELOCITY (v)</div>
+      <div style="line-height: 1.6; font-size: 0.95rem;">
+        <strong>Definition:</strong> Speed at which fluid particles move through a cross-section<br><br>
+        <strong>Units:</strong> m/s, cm/s<br><br>
+        <strong>Key:</strong> Varies <span style="color: #2563eb; font-weight: 600;">inversely</span> with cross-sectional area
+      </div>
+    </div>
+  </div>
+
+  <div style="background: #f0fdf4; border-radius: 8px; padding: 12px 14px;">
+    <div style="color: #166534; font-weight: 700; margin-bottom: 6px; text-align: center;">Continuity Equation</div>
+    <div style="text-align: center; font-size: 1.1rem; font-weight: 600;">Q = v × A</div>
+    <div style="text-align: center; font-size: 0.85rem; color: #6b7280; margin-top: 4px;">Flow = Velocity × Cross-sectional Area</div>
+  </div>
+
+  <div>
+    <div style="color: #1e3a5f; font-weight: 700; font-size: 0.95rem; margin-bottom: 8px;">Vessel Comparison</div>
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+      <thead><tr style="background: #f3f4f6;">
+        <th style="padding: 8px; text-align: left; border: 1px solid #e5e7eb;">Vessel</th>
+        <th style="padding: 8px; text-align: center; border: 1px solid #e5e7eb;">Cross-sectional Area</th>
+        <th style="padding: 8px; text-align: center; border: 1px solid #e5e7eb;">Velocity</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding: 8px; border: 1px solid #e5e7eb;"><strong>Aorta</strong></td>
+            <td style="padding: 8px; text-align: center; border: 1px solid #e5e7eb;">~5.3 cm²</td>
+            <td style="padding: 8px; text-align: center; border: 1px solid #e5e7eb;"><span style="color: #dc2626; font-weight: 600;">20–30 cm/s</span> (HIGH)</td></tr>
+        <tr><td style="padding: 8px; border: 1px solid #e5e7eb;"><strong>Capillaries</strong></td>
+            <td style="padding: 8px; text-align: center; border: 1px solid #e5e7eb;">~3500 cm²</td>
+            <td style="padding: 8px; text-align: center; border: 1px solid #e5e7eb;"><span style="color: #2563eb; font-weight: 600;">0.02–0.1 cm/s</span> (LOW)</td></tr>
+      </tbody>
+    </table>
+    <div style="font-size: 0.85rem; color: #6b7280; margin-top: 6px; text-align: center;">
+      Same flow throughout → slow velocity in capillaries allows gas exchange
+    </div>
+  </div>
+
+</div>`
+}
+
+/**
+ * Format Bernoulli's Law - 3 energy components (LO-2)
+ */
+function formatBernoulliLaw(content: string): string {
+  return `
+<div style="background: #f0fdf4; border-radius: 8px; padding: 12px 14px; margin-bottom: 16px;">
+  <div style="color: #166534; font-weight: 600; margin-bottom: 4px;">Core Principle</div>
+  <div><strong>Conservation of total energy</strong> in flowing blood — total energy remains constant but proportions change</div>
+</div>
+
+<div style="background: #1e3a5f; color: white; border-radius: 8px; padding: 12px; margin-bottom: 16px; text-align: center;">
+  <div style="font-size: 1.1rem; font-weight: 600;">P + ½ρv² + ρgh = constant</div>
+  <div style="font-size: 0.8rem; opacity: 0.85; margin-top: 4px;">ρ = blood density (~1060 kg/m³) | g = gravity (~9.8 m/s²) | h = height</div>
+</div>
+
+<div style="display: grid; gap: 12px;">
+
+  <div style="background: #eff6ff; border-left: 4px solid #2563eb; padding: 12px 14px; border-radius: 0 8px 8px 0;">
+    <div style="color: #2563eb; font-weight: 700; margin-bottom: 4px;">1. Pressure Energy (P)</div>
+    <div style="font-size: 0.95rem; line-height: 1.5;">
+      Potential energy stored due to fluid <strong>pressure</strong><br>
+      <span style="font-size: 0.85rem; color: #6b7280;">Units: Pa or mmHg | Drives blood flow, overcomes resistance</span>
+    </div>
+  </div>
+
+  <div style="background: #fef2f2; border-left: 4px solid #dc2626; padding: 12px 14px; border-radius: 0 8px 8px 0;">
+    <div style="color: #dc2626; font-weight: 700; margin-bottom: 4px;">2. Kinetic Energy (½ρv²)</div>
+    <div style="font-size: 0.95rem; line-height: 1.5;">
+      Energy due to blood <strong>motion</strong> (velocity)<br>
+      <span style="font-size: 0.85rem; color: #6b7280;">Higher in narrow vessels | Formula: KE = ½mv²</span>
+    </div>
+  </div>
+
+  <div style="background: #f0fdf4; border-left: 4px solid #059669; padding: 12px 14px; border-radius: 0 8px 8px 0;">
+    <div style="color: #059669; font-weight: 700; margin-bottom: 4px;">3. Gravitational Potential Energy (ρgh)</div>
+    <div style="font-size: 0.95rem; line-height: 1.5;">
+      Energy due to blood <strong>position</strong> in gravitational field<br>
+      <span style="font-size: 0.85rem; color: #6b7280;">Blood in head has more PE | Formula: PE = mgh</span>
+    </div>
+  </div>
+
+</div>
+
+<div style="margin-top: 14px; padding: 10px 12px; background: #fefce8; border-radius: 6px;">
+  <strong>Clinical:</strong> In stenotic valves → <span style="color: #dc2626;">↑ velocity</span> causes <span style="color: #2563eb;">↓ pressure</span> → murmurs
+</div>`
+}
+
+/**
+ * Format Ohm's Law for circulation (LO-3)
+ */
+function formatOhmsLaw(content: string): string {
+  return `
+<div style="background: #1e3a5f; color: white; border-radius: 8px; padding: 14px; margin-bottom: 16px; text-align: center;">
+  <div style="font-size: 0.85rem; opacity: 0.85; margin-bottom: 4px;">The Major Law of Hemodynamics</div>
+  <div style="font-size: 1.3rem; font-weight: 700;">Q = ΔP / R</div>
+  <div style="font-size: 0.85rem; margin-top: 6px;">Flow = Pressure Gradient ÷ Resistance</div>
+</div>
+
+<div style="display: grid; gap: 14px;">
+
+  <div>
+    <div style="color: #2563eb; font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; border-bottom: 2px solid #dbeafe; padding-bottom: 4px;">Flow (Q)</div>
+    <div style="padding-left: 12px; line-height: 1.6;">
+      Volume of blood per unit time<br>
+      <span style="color: #059669; font-weight: 600;">Units: L/min or mL/min</span>
+    </div>
+  </div>
+
+  <div>
+    <div style="color: #2563eb; font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; border-bottom: 2px solid #dbeafe; padding-bottom: 4px;">Pressure Gradient (ΔP)</div>
+    <div style="padding-left: 12px; line-height: 1.6;">
+      Difference between arterial and venous pressure<br>
+      <span style="color: #059669; font-weight: 600;">Units: mmHg</span> | <strong>Driving force</strong> for blood flow
+    </div>
+  </div>
+
+  <div>
+    <div style="color: #2563eb; font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; border-bottom: 2px solid #dbeafe; padding-bottom: 4px;">Resistance (R)</div>
+    <div style="padding-left: 12px; line-height: 1.6;">
+      Opposition to flow (vessel radius⁴, viscosity, length)<br>
+      <span style="color: #059669; font-weight: 600;">Units: mmHg·min/L</span> | Radius is <span style="color: #dc2626; font-weight: 600;">most important</span> (1/r⁴)
+    </div>
+  </div>
+
+</div>
+
+<div style="margin-top: 16px; background: #f0fdf4; border-radius: 8px; padding: 12px 14px;">
+  <div style="color: #166534; font-weight: 700; margin-bottom: 8px;">Three Rearrangements</div>
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; text-align: center;">
+    <div style="background: white; padding: 8px; border-radius: 6px;">
+      <div style="font-weight: 600;">Q = ΔP/R</div>
+      <div style="font-size: 0.8rem; color: #6b7280;">Calculate Flow</div>
+    </div>
+    <div style="background: white; padding: 8px; border-radius: 6px;">
+      <div style="font-weight: 600;">ΔP = Q × R</div>
+      <div style="font-size: 0.8rem; color: #6b7280;">Calculate Pressure</div>
+    </div>
+    <div style="background: white; padding: 8px; border-radius: 6px;">
+      <div style="font-weight: 600;">R = ΔP/Q</div>
+      <div style="font-size: 0.8rem; color: #6b7280;">Calculate Resistance</div>
+    </div>
+  </div>
+</div>`
+}
+
+/**
+ * Format Systemic vs Pulmonary Circulation comparison (LO-4)
+ */
+function formatCirculationComparison(content: string): string {
+  return `
+<div style="background: #f0fdf4; border-radius: 8px; padding: 12px 14px; margin-bottom: 16px;">
+  <div style="color: #166534; font-weight: 600; margin-bottom: 4px;">Serial Connection</div>
+  <div>Blood flows: RV → <strong>Pulmonary</strong> → LA → LV → <strong>Systemic</strong> → RA</div>
+  <div style="font-size: 0.9rem; margin-top: 4px;"><span style="color: #dc2626; font-weight: 600;">CO must be equal</span> in both circuits (~5–6 L/min)</div>
+</div>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+
+  <div style="background: #fef2f2; border-radius: 8px; padding: 14px;">
+    <div style="color: #dc2626; font-weight: 700; font-size: 1rem; margin-bottom: 10px; text-align: center;">SYSTEMIC</div>
+    <div style="line-height: 1.7; font-size: 0.95rem;">
+      <strong>Function:</strong> O₂ to body tissues<br><br>
+      <strong>Pressure:</strong> <span style="color: #dc2626; font-weight: 600;">HIGH</span><br><br>
+      <strong>Resistance:</strong> <span style="color: #dc2626; font-weight: 600;">HIGH</span><br>
+      TPR ≈ 16.5 mmHg·min/L<br><br>
+      <strong>Gradient:</strong> ~92 mmHg<br>
+      <span style="font-size: 0.85rem;">(P<sub>aorta</sub> − P<sub>RA</sub>)</span>
+    </div>
+  </div>
+
+  <div style="background: #eff6ff; border-radius: 8px; padding: 14px;">
+    <div style="color: #2563eb; font-weight: 700; font-size: 1rem; margin-bottom: 10px; text-align: center;">PULMONARY</div>
+    <div style="line-height: 1.7; font-size: 0.95rem;">
+      <strong>Function:</strong> Gas exchange in lungs<br><br>
+      <strong>Pressure:</strong> <span style="color: #2563eb; font-weight: 600;">LOW</span><br><br>
+      <strong>Resistance:</strong> <span style="color: #2563eb; font-weight: 600;">LOW</span><br>
+      PVR ≈ 1.5 mmHg·min/L<br><br>
+      <strong>Gradient:</strong> ~10 mmHg<br>
+      <span style="font-size: 0.85rem;">(P<sub>PA</sub> − P<sub>LA</sub>)</span>
+    </div>
+  </div>
+
+</div>
+
+<div style="margin-top: 14px; background: #1e3a5f; color: white; border-radius: 8px; padding: 12px; text-align: center;">
+  <div style="font-size: 0.9rem; margin-bottom: 4px;">Ohm's Law Applied</div>
+  <div style="font-size: 0.95rem;">CO<sub>systemic</sub> = (P<sub>aorta</sub> − P<sub>RA</sub>) / TPR</div>
+  <div style="font-size: 0.95rem;">CO<sub>pulmonary</sub> = (P<sub>PA</sub> − P<sub>LA</sub>) / PVR</div>
+</div>`
+}
+
+/**
+ * Format Resistance vs Conductance, Series vs Parallel (LO-5)
+ */
+function formatResistanceConductance(content: string): string {
+  return `
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px;">
+  <div style="background: #fef2f2; border-radius: 8px; padding: 14px;">
+    <div style="color: #dc2626; font-weight: 700; font-size: 1rem; margin-bottom: 8px; text-align: center;">RESISTANCE (R)</div>
+    <div style="line-height: 1.6; font-size: 0.95rem;">
+      <strong>Definition:</strong> Opposition to blood flow<br><br>
+      <strong>Units:</strong> mmHg·min/L<br><br>
+      <strong>Determined by:</strong><br>
+      • Radius (most important)<br>
+      • Viscosity<br>
+      • Length
+    </div>
+  </div>
+
+  <div style="background: #eff6ff; border-radius: 8px; padding: 14px;">
+    <div style="color: #2563eb; font-weight: 700; font-size: 1rem; margin-bottom: 8px; text-align: center;">CONDUCTANCE (C)</div>
+    <div style="line-height: 1.6; font-size: 0.95rem;">
+      <strong>Definition:</strong> Ease of blood flow<br><br>
+      <strong>Formula:</strong> <span style="font-weight: 600;">C = 1/R</span><br><br>
+      <strong>Units:</strong> L/min·mmHg<br><br>
+      <span style="font-size: 0.85rem; color: #6b7280;">Reciprocal of resistance</span>
+    </div>
+  </div>
+</div>
+
+<div style="display: grid; gap: 12px;">
+
+  <div style="background: #f0fdf4; border-left: 4px solid #059669; padding: 12px 14px; border-radius: 0 8px 8px 0;">
+    <div style="color: #059669; font-weight: 700; margin-bottom: 6px;">Resistances in SERIES</div>
+    <div style="font-size: 0.95rem; line-height: 1.5;">
+      Connected end-to-end, blood flows sequentially<br>
+      <strong>R<sub>total</sub> = R₁ + R₂ + R₃</strong><br>
+      <span style="color: #dc2626;">→ ↑ Total resistance, ↓ Flow</span><br>
+      <span style="font-size: 0.85rem; color: #6b7280;">Example: Arteries → arterioles → capillaries within an organ</span>
+    </div>
+  </div>
+
+  <div style="background: #fefce8; border-left: 4px solid #ca8a04; padding: 12px 14px; border-radius: 0 8px 8px 0;">
+    <div style="color: #ca8a04; font-weight: 700; margin-bottom: 6px;">Resistances in PARALLEL</div>
+    <div style="font-size: 0.95rem; line-height: 1.5;">
+      Multiple pathways, blood flow splits<br>
+      <strong>1/R<sub>total</sub> = 1/R₁ + 1/R₂ + 1/R₃</strong><br>
+      <span style="color: #059669;">→ ↓ Total resistance, ↑ Flow</span><br>
+      <span style="font-size: 0.85rem; color: #6b7280;">Example: Organ circulations (brain, kidneys, GI) arranged in parallel</span>
+    </div>
+  </div>
+
+</div>`
+}
+
+/**
+ * Format Hagen-Poiseuille's Law and deviations (LO-6)
+ */
+function formatHagenPoiseuille(content: string): string {
+  return `
+<div style="background: #1e3a5f; color: white; border-radius: 8px; padding: 14px; margin-bottom: 16px; text-align: center;">
+  <div style="font-size: 0.85rem; opacity: 0.85; margin-bottom: 4px;">Hagen-Poiseuille's Law</div>
+  <div style="font-size: 1.2rem; font-weight: 700;">R = 8ηL / πr⁴</div>
+  <div style="font-size: 0.85rem; margin-top: 6px;">η = viscosity | L = length | r = radius</div>
+</div>
+
+<div style="display: grid; gap: 12px; margin-bottom: 16px;">
+
+  <div>
+    <div style="color: #2563eb; font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; border-bottom: 2px solid #dbeafe; padding-bottom: 4px;">Four Factors Determining Resistance</div>
+    <div style="padding-left: 12px; line-height: 1.6;">
+      • <strong>Viscosity (η):</strong> Directly proportional<br>
+      • <strong>Length (L):</strong> Directly proportional<br>
+      • <strong>Radius (r):</strong> <span style="color: #dc2626; font-weight: 600;">Inversely proportional to 4th power</span> (MOST IMPORTANT)<br>
+      <span style="font-size: 0.9rem; color: #6b7280; margin-left: 16px;">→ Doubling radius ↓ resistance by factor of 16</span>
+    </div>
+  </div>
+
+</div>
+
+<div style="color: #dc2626; font-weight: 700; font-size: 0.95rem; margin-bottom: 10px;">Five Deviations in Circulatory System:</div>
+
+<div style="display: grid; gap: 8px;">
+  <div style="padding: 10px 12px; background: #fef2f2; border-radius: 6px; font-size: 0.95rem;">
+    <strong>1. Non-Newtonian fluid:</strong> Blood viscosity changes with shear rate (↓ at high shear, ↑ at low shear)
+  </div>
+  <div style="padding: 10px 12px; background: #fefce8; border-radius: 6px; font-size: 0.95rem;">
+    <strong>2. Pulsatile flow:</strong> Rhythmic heart contractions, not steady flow
+  </div>
+  <div style="padding: 10px 12px; background: #f0fdf4; border-radius: 6px; font-size: 0.95rem;">
+    <strong>3. Vessel elasticity:</strong> Blood vessels expand/contract, not rigid tubes
+  </div>
+  <div style="padding: 10px 12px; background: #eff6ff; border-radius: 6px; font-size: 0.95rem;">
+    <strong>4. Branching geometry:</strong> Not straight cylinders — causes flow pattern changes
+  </div>
+  <div style="padding: 10px 12px; background: #f3e8ff; border-radius: 6px; font-size: 0.95rem;">
+    <strong>5. Turbulent flow:</strong> Can occur in large vessels at high velocities
+  </div>
+</div>`
+}
+
+/**
+ * Format Laminar vs Turbulent flow, Reynolds number (LO-7)
+ */
+function formatLaminarTurbulent(content: string): string {
+  return `
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px;">
+
+  <div style="background: #f0fdf4; border-radius: 8px; padding: 14px;">
+    <div style="color: #059669; font-weight: 700; font-size: 1rem; margin-bottom: 8px; text-align: center;">LAMINAR FLOW</div>
+    <div style="line-height: 1.6; font-size: 0.95rem;">
+      <strong>Definition:</strong> Smooth, orderly, layered flow<br><br>
+      <strong>Profile:</strong> Parabolic velocity<br>
+      (fastest at center)<br><br>
+      <strong>Properties:</strong><br>
+      • Quiet, energy-efficient<br>
+      • Normal in small vessels
+    </div>
+  </div>
+
+  <div style="background: #fef2f2; border-radius: 8px; padding: 14px;">
+    <div style="color: #dc2626; font-weight: 700; font-size: 1rem; margin-bottom: 8px; text-align: center;">TURBULENT FLOW</div>
+    <div style="line-height: 1.6; font-size: 0.95rem;">
+      <strong>Definition:</strong> Chaotic, disordered with eddies<br><br>
+      <strong>Profile:</strong> Random mixing<br><br>
+      <strong>Properties:</strong><br>
+      • ↑ Energy loss<br>
+      • <span style="color: #dc2626; font-weight: 600;">Produces sounds</span>
+    </div>
+  </div>
+
+</div>
+
+<div style="background: #1e3a5f; color: white; border-radius: 8px; padding: 12px; margin-bottom: 16px; text-align: center;">
+  <div style="font-size: 0.85rem; opacity: 0.85;">Reynolds Number</div>
+  <div style="font-size: 1.1rem; font-weight: 600; margin: 4px 0;">Re = (d × v × ρ) / η</div>
+  <div style="font-size: 0.85rem;">d = diameter | v = velocity | ρ = density | η = viscosity</div>
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-top: 10px; font-size: 0.85rem;">
+    <div style="background: rgba(255,255,255,0.15); padding: 6px; border-radius: 4px;"><span style="color: #86efac;">Re < 2000</span><br>Laminar</div>
+    <div style="background: rgba(255,255,255,0.15); padding: 6px; border-radius: 4px;"><span style="color: #fde047;">2000–3000</span><br>Transitional</div>
+    <div style="background: rgba(255,255,255,0.15); padding: 6px; border-radius: 4px;"><span style="color: #fca5a5;">Re > 3000</span><br>Turbulent</div>
+  </div>
+</div>
+
+<div style="color: #dc2626; font-weight: 700; font-size: 0.95rem; margin-bottom: 8px;">Six Factors Shifting to Turbulence:</div>
+<ol style="margin: 0 0 0 20px; padding: 0; line-height: 1.7; font-size: 0.95rem;">
+  <li>↑ Flow velocity</li>
+  <li>Large vessel diameter</li>
+  <li>↓ Blood viscosity (anemia)</li>
+  <li>Irregular vessel geometry (plaques, stenosis)</li>
+  <li>High pressure gradients</li>
+  <li>Vessel branching/curvature</li>
+</ol>
+
+<div style="margin-top: 14px; padding: 10px 12px; background: #fefce8; border-radius: 6px;">
+  <strong>Audible Events:</strong><br>
+  <strong>Murmurs</strong> = turbulent flow across heart valves<br>
+  <strong>Bruits</strong> = turbulent flow in arteries (stenosis, plaques)
+</div>`
+}
+
 /**
  * Generic intelligent formatter for other content
  */
@@ -1408,6 +1806,14 @@ function generateTitleFromLO(loTitle: string): string {
     [/blood sedimentation|ESR/i, 'Erythrocyte Sedimentation Rate (ESR)'],
     [/membrane.+red blood|RBC.+membrane/i, 'Red Blood Cell Membrane Structure'],
     [/parameters?.+red blood|RBC.+count.*size/i, 'RBC Parameters'],
+    // Topic 33: Hemodynamics
+    [/flow.*(velocity|cross.?sectional)|velocity.*(flow|cross.?sectional)|define.*(flow|velocity)/i, 'Flow vs Velocity in Blood Circulation'],
+    [/bernoulli|total energy.*(flowing|blood)/i, 'Bernoulli\'s Law: Blood Flow Energy'],
+    [/ohm.?s law|pressure gradient.*flow.*resistance/i, 'Ohm\'s Law for Hemodynamics'],
+    [/systemic.*pulmonary|pulmonary.*systemic|serially connected/i, 'Systemic vs Pulmonary Circulation'],
+    [/resistance.*conductance|conductance.*resistance/i, 'Resistance & Conductance: Series vs Parallel'],
+    [/hagen.?poiseuille|hydraulic resistance/i, 'Hagen-Poiseuille\'s Law & Deviations'],
+    [/laminar.*turbulent|turbulent.*laminar|reynolds/i, 'Laminar vs Turbulent Flow'],
   ]
 
   for (const [pattern, title] of topicPatterns) {

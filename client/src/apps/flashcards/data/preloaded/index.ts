@@ -12,6 +12,9 @@ import { Timestamp } from 'firebase/firestore'
 // Import all preloaded deck JSON files
 import physiologyTopic9 from './physiology/physio-topic-9.json'
 import physiologyTopic29 from './physiology/physio-topic-29.json'
+import physiologyTopic33 from './physiology/physio-topic-33.json'
+import physiologyTopic34 from './physiology/physio-topic-34.json'
+import physiologyTopic35 from './physiology/physio-topic-35.json'
 
 /**
  * Structure of a preloaded deck JSON file
@@ -101,6 +104,9 @@ function getSubjectIcon(subject: string): string {
 export const preloadedDecks: Deck[] = [
   convertPreloadedDeckToDecks(physiologyTopic9 as PreloadedDeckJSON),
   convertPreloadedDeckToDecks(physiologyTopic29 as PreloadedDeckJSON),
+  convertPreloadedDeckToDecks(physiologyTopic33 as PreloadedDeckJSON),
+  convertPreloadedDeckToDecks(physiologyTopic34 as PreloadedDeckJSON),
+  convertPreloadedDeckToDecks(physiologyTopic35 as PreloadedDeckJSON),
 ]
 
 /**
@@ -122,7 +128,7 @@ export function getPreloadedDecksBySubject(subject: string): Deck[] {
  */
 export function getPreloadedCards(deckId: string) {
   // Find the original JSON data for the deck
-  const allPreloadedDecks = [physiologyTopic9, physiologyTopic29]
+  const allPreloadedDecks = [physiologyTopic9, physiologyTopic29, physiologyTopic33, physiologyTopic34, physiologyTopic35]
   const deckData = allPreloadedDecks.find(
     (deck) => (deck as PreloadedDeckJSON).id === deckId
   ) as PreloadedDeckJSON | undefined

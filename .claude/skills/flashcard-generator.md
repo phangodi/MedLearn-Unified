@@ -1,232 +1,197 @@
-# Flashcard Deck Generator Skill
+# Flashcard Generator Skill
 
-Generate beautifully-styled flashcard decks from Physiology topic data with intelligent content-aware formatting, professor-level organization, and proper styling for light/dark mode.
+Generate professor-quality flashcard decks from physiology topic files. Each card should look like a beautifully designed lecture slide that helps students learn and retain medical concepts.
 
-## How to Use
+## Your Role
 
-This skill helps you generate flashcard decks from the Physiology topic files. Use natural language commands like:
+You are a world-class medical educator creating lecture materials. For each Learning Objective, you must:
+1. **Understand** what the content is teaching
+2. **Decide** the best visual presentation for that specific content
+3. **Create** styled HTML that makes the information memorable and clear
 
-- "Generate flashcard deck for topic 29"
-- "Generate MCQ3 deck with topics 33-40"
-- "Create a deck with topics 41, 42, 43"
-- "Add topics 45-52 to the MCQ4 deck"
-
-## Commands
-
-### Generate Single Topic Deck
-```bash
-cd client && npx ts-node --esm scripts/generate-flashcard-deck.ts --topics <NUM>
-```
-
-Example:
-```bash
-cd client && npx ts-node --esm scripts/generate-flashcard-deck.ts --topics 29
-```
-
-### Generate Multi-Topic Deck (Range)
-```bash
-cd client && npx ts-node --esm scripts/generate-flashcard-deck.ts --topics <START>-<END> --name "<NAME>" --id "<ID>"
-```
-
-Example:
-```bash
-cd client && npx ts-node --esm scripts/generate-flashcard-deck.ts --topics 33-40 --name "MCQ3: Respiration & Blood" --id "mcq3"
-```
-
-### Generate Multi-Topic Deck (Specific Topics)
-```bash
-cd client && npx ts-node --esm scripts/generate-flashcard-deck.ts --topics <N1>,<N2>,<N3> --name "<NAME>" --id "<ID>"
-```
-
-Example:
-```bash
-cd client && npx ts-node --esm scripts/generate-flashcard-deck.ts --topics 29,30,31 --name "Blood Gases" --id "blood-gases"
-```
-
-## Arguments
-
-| Argument | Description | Example |
-|----------|-------------|---------|
-| `--topics` | Topic numbers (single, range, or comma-separated) | `29`, `33-40`, `29,30,31` |
-| `--id` | Deck ID (optional, auto-generated if not provided) | `mcq3`, `blood-gases` |
-| `--name` | Deck display name (optional, auto-generated if not provided) | `"MCQ3: Respiration"` |
-| `--description` | Deck description (optional) | `"Study deck for..."` |
-
-## Output Location
-
-Generated decks are saved to:
-```
-client/src/apps/flashcards/data/preloaded/physiology/<deck-id>.json
-```
-
-## After Generating a New Deck
-
-1. **Update the index** - Add the new deck import to `client/src/apps/flashcards/data/preloaded/index.ts`:
-   ```typescript
-   import newDeck from './physiology/<deck-id>.json'
-
-   // Add to preloadedDecks array
-   export const preloadedDecks: Deck[] = [
-     convertPreloadedDeckToDecks(existingDeck as PreloadedDeckJSON),
-     convertPreloadedDeckToDecks(newDeck as PreloadedDeckJSON),
-   ]
-
-   // Add to getPreloadedCards allPreloadedDecks array
-   const allPreloadedDecks = [existingDeck, newDeck]
-   ```
-
-2. **Test the deck** - Run `npm run dev` and navigate to Flashcards to verify the deck appears and cards render correctly in both light and dark mode.
+Think like a professor making slides - every topic is different, every LO needs individual attention.
 
 ---
 
-## Card Design Philosophy
+## Design Principles
 
-### CRITICAL: Professor-Level Organization
+### Color Palette
 
-The generator uses **content-aware intelligent formatting** - NOT just bullet points. Each learning objective type has a specialized formatter that organizes content for **quick review**, not reading.
+Use colors with semantic meaning:
 
-**Key Principles:**
-1. **Understand the content** - Analyze what the LO is asking and organize accordingly
-2. **Visual hierarchy** - Use colored headers, cards, and sections to separate concepts
-3. **Meaningful colors** - Blue for key values, red for critical terms, green for normal values
-4. **Side-by-side comparisons** - For contrasting concepts (tissues vs lungs, types of anemia)
-5. **No wall of bullets** - Everything should have logical groupings
+| Color | Hex Values | When to Use |
+|-------|------------|-------------|
+| **Navy** | `#1e3a5f`, `#2d4a6f` | Card headers, authority, main banners |
+| **Blue** | `#2563eb`, `#3b82f6`, `#dbeafe`, `#eff6ff` | Key terms, definitions, one side of comparisons |
+| **Red** | `#dc2626`, `#fef2f2` | Critical concepts, warnings, other side of comparisons |
+| **Green** | `#059669`, `#166534`, `#f0fdf4` | Positive values, normal states, correct answers |
+| **Yellow** | `#ca8a04`, `#fefce8` | Clinical notes, middle states, important callouts |
+| **Purple** | `#7c3aed`, `#f3e8ff` | Special terms, unique concepts, processes |
+| **Gray** | `#6b7280`, `#f3f4f6`, `#e5e7eb` | Secondary text, borders, table backgrounds |
 
-### Specialized Formatters
+### Typography
 
-The script in `client/scripts/generate-flashcard-deck.ts` contains these specialized formatters:
+- **Headers**: 1.1rem, font-weight 700
+- **Body text**: 0.95rem, line-height 1.5-1.6
+- **Captions/units**: 0.85rem, color #6b7280
+- **Formula text**: 1.1-1.3rem, font-weight 600-700
 
-| LO Type | Formatter | Design |
-|---------|-----------|--------|
-| RBC Parameters (count, size, shape) | `formatRBCParameters()` | Grid with blue headers: Count, Size, Shape, Lifespan, Production |
-| Types of Anemia | `formatAnemiaTypes()` | 3 color-coded cards: Red (Microcytic), Yellow (Normocytic), Blue (Macrocytic) |
-| ESR/Sedimentation | `formatESR()` | Sections: Definition, Mechanism, Method, Normal Values, Clinical |
-| Haldane Effect | `formatHaldaneEffect()` | Side-by-side: IN TISSUES (red) vs IN LUNGS (blue) |
-| Chloride Shift | `formatChlorideShift()` | Side-by-side comparison + key transporter box |
-| Price-Jones Curve | `formatPriceJones()` | Definition + 3-column visual (← LEFT / NORMAL / RIGHT →) |
-| Osmotic Resistance | `formatOsmoticResistance()` | Sections with values and clinical changes |
-| MCH/MCHC/MCV | `formatRBCIndices()` | 3 separate colored cards with What, Normal, Formula |
-| Organelle Fate | `formatOrganelleFate()` | Intro box + 3 numbered reason cards |
-| RBC Membrane | `formatRBCMembrane()` | Sections with protein grid (Cytoskeletal vs Transmembrane) |
-| Carbonic Anhydrase | `formatCarbonicAnhydrase()` | Enzyme card with speed, location, significance |
-| CO2 Transport | `formatCO2Transport()` | 3 mechanism cards with percentages |
-| Reference Values | `formatReferenceValuesContent()` | Table format with arterial vs venous comparison |
-| Generic | `formatGenericContent()` | Intro box + left-bordered detail lines |
+### Spacing
 
-### Color Scheme
-
-| Color | Hex | Usage |
-|-------|-----|-------|
-| **Blue headers** | `#2563eb` | Section titles, headers |
-| **Red** | `#dc2626` | Critical concepts, important terms |
-| **Green** | `#059669` | Normal values, numbers |
-| **Purple** | `#7c3aed` | Processes (erythropoiesis, rouleaux formation) |
-| **Yellow/Amber** | `#ca8a04` | Middle categories (normocytic) |
-| **Gray** | `#6b7280` | Supplementary info, smaller text |
-
-### Card Structure
-
-**Front Side:**
-- Navy gradient header (`#1e3a5f`) with "LEARNING OBJECTIVE" label
-- Exact learning objective text (unchanged from source)
-
-**Back Side:**
-- Navy gradient header with derived descriptive title
-- Content organized by specialized formatter
-- Colored sections, cards, or grids based on content type
+- **Card padding**: 14-16px
+- **Element gaps**: 12-16px
+- **Border radius**: 6-8px for elements, 12px for cards
+- **Left border accent**: 4px solid [color]
 
 ---
 
-## Adding New Specialized Formatters
+## Layout Decision Framework
 
-When you encounter a new type of LO that doesn't format well:
+Before creating each card, ask yourself these questions about the LO content:
 
-1. **Identify the pattern** - What type of content is it? (comparison, list of values, process, etc.)
+### Question 1: Is this comparing two things?
+**Examples:** Newtonian vs Non-Newtonian, Systemic vs Pulmonary, High vs Low
 
-2. **Add detection** in `generateCardBackContent()`:
-   ```typescript
-   if (/your pattern/i.test(loTitle)) {
-     html += formatYourNewType(rawContent)
-   }
-   ```
+**Use:** Side-by-side grid layout
+- Two columns with contrasting background colors
+- One side blue-tinted, other side red-tinted
+- Same structure in each column for easy comparison
 
-3. **Create the formatter** - Follow existing patterns:
-   ```typescript
-   function formatYourNewType(content: string): string {
-     return `
-     <div style="...">
-       <!-- Organized content here -->
-     </div>`
-   }
-   ```
+### Question 2: Is there a key formula or equation?
+**Examples:** Q = ΔP/R, P + ½ρv² + ρgh = constant
 
-4. **Add title mapping** in `generateTitleFromLO()`:
-   ```typescript
-   [/your pattern/i, 'Descriptive Title'],
-   ```
+**Use:** Formula banner
+- Navy background, white text
+- Centered, larger font
+- Variables explained below in smaller text
 
-5. **Test** - Generate the deck and verify in browser
+### Question 3: Are there 3+ distinct mechanisms, factors, or steps?
+**Examples:** "Three factors affect...", "Five mechanisms..."
 
----
+**Use:** Numbered cards with left border accent
+- Each mechanism gets its own card
+- Left border in alternating colors (green, blue, purple, yellow)
+- Clear numbering
+- Title in color, explanation in body text
 
-## Consistency Guidelines for Future Development
+### Question 4: Are there multiple terms with definitions and units?
+**Examples:** Shear stress (τ), Shear rate (γ), Viscosity (η)
 
-### When generating new topic decks:
+**Use:** Definition grid
+- Blue header with underline for each term
+- Definition indented below
+- Units highlighted in green
 
-1. **Check if specialized formatter exists** - Look at the LO titles and see if they match existing formatters
+### Question 5: Is there a reference table or multi-attribute comparison?
+**Examples:** Vessel diameters and velocities, ESR reference values
 
-2. **If no formatter exists** - The generic formatter will be used, which creates:
-   - Gray intro box with first sentence
-   - Left-bordered detail lines for remaining sentences
+**Use:** HTML table
+- Header row with gray background
+- Clean borders
+- Centered values with units
+- Color highlighting for high/low values
 
-3. **For complex LOs** - Consider adding a new specialized formatter following the patterns above
+### Question 6: Is there a clinical correlation or practical application?
+**Examples:** "In sickle cell disease...", "Clinically significant because..."
 
-### When asked to "generate flashcards for topic X":
+**Use:** Yellow callout box
+- Yellow background (#fefce8)
+- Bold "Clinical:" prefix
+- Concise practical point
 
-1. Run the generation command
-2. Check the output in browser
-3. If any cards look like "wall of bullets", identify the LO type
-4. Add a specialized formatter if needed
-5. Regenerate
+### Question 7: Is there a sequence or flow?
+**Examples:** RV → Pulmonary → LA → LV → Systemic → RA
 
-### Replicating Results:
-
-To ensure consistent, high-quality output:
-1. **Always use the script** - Don't manually create JSON
-2. **Check specialized formatters** - If content doesn't look right, a new formatter may be needed
-3. **Follow the color scheme** - Blue headers, green values, red critical terms
-4. **Avoid generic bullets** - Every card type should have logical visual organization
-
----
-
-## Available Topics
-
-Topics 1-51 are available in `client/src/apps/physiology/data/Topics/`:
-- Topic 1: Principles of Control Theory
-- Topic 9: Red Blood Cells (RBC Parameters, Anemia, ESR, etc.)
-- Topic 10: Erythropoiesis
-- Topic 29: Carbon-dioxide Transport in Blood
-- Topic 33-40: Respiration topics
-- etc.
+**Use:** Flow visualization
+- Arrow symbols (→) between steps
+- Optional: green box for the pathway
 
 ---
 
-## Troubleshooting
+## Card Structure
 
-### Script Not Found
-Ensure you're in the `client` directory:
-```bash
-cd /Users/peti/Documents/GitHub/MedLearn-Unified/client
+### Front (Question Side)
+
+Always use this header structure:
+```html
+<div style="background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%); color: #ffffff; padding: 16px 20px; border-radius: 12px; margin: -8px -8px 16px -8px;">
+  <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.85; margin-bottom: 10px; font-weight: 500;">Learning Objective</div>
+  <div style="font-size: 1.05rem; font-weight: 600; line-height: 1.5;">[LO TITLE - cleaned of >> markers]</div>
+</div>
 ```
 
-### Topic Not Found
-Check the topic file exists:
-```bash
-ls client/src/apps/physiology/data/Topics/topic<NUM>.js
+### Back (Answer Side)
+
+Start with a title banner, then add content sections:
+```html
+<div style="background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%); color: #ffffff; padding: 14px 18px; border-radius: 12px; margin: -8px -8px 16px -8px;">
+  <div style="font-size: 1.1rem; font-weight: 700;">[DESCRIPTIVE TITLE]</div>
+</div>
+[CONTENT SECTIONS BASED ON LAYOUT DECISIONS]
 ```
 
-### Cards look like "wall of bullets"
-The LO type doesn't have a specialized formatter. Add one following the patterns in this document.
+---
 
-### Parsing Errors
-The script handles most topic formats, but complex nested structures may require manual adjustment.
+## JSON Structure (Required Format)
+
+```json
+{
+  "id": "preloaded-physio-topic-[N]",
+  "name": "Topic [N]: [Title from topic file]",
+  "description": "Flashcards for Physiology Topic [N]",
+  "subject": "physiology",
+  "topicIds": [[N]],
+  "version": "2.0.0",
+  "cards": [
+    {
+      "id": "topic[N]-lo-[M]",
+      "front": { "text": "[HTML]" },
+      "back": { "text": "[HTML]" },
+      "tags": ["[topic-keyword]", "[subtopic]", "high-yield" if isCritical]
+    }
+  ]
+}
+```
+
+---
+
+## Agent Instructions
+
+When invoked with "Generate flashcard deck for Topic X":
+
+1. **Read this skill file** to understand design principles
+
+2. **Read the topic file** at:
+   `client/src/apps/physiology/data/Topics/topic[X].js`
+
+3. **For each Learning Objective:**
+   - Clean the title (remove `>>` and `<<` markers)
+   - Analyze the content (keyPoints, officialDefinitions, examAnswer)
+   - Ask yourself the layout decision questions
+   - Generate appropriate HTML for front and back
+   - Add tags based on topic title and isCritical flag
+
+4. **Create the JSON file** at:
+   `client/src/apps/flashcards/data/preloaded/physiology/physio-topic-[X].json`
+
+5. **Update index.ts** at:
+   `client/src/apps/flashcards/data/preloaded/index.ts`
+   - Add import: `import physiologyTopic[X] from './physiology/physio-topic-[X].json'`
+   - Add to preloadedDecks array: `convertPreloadedDeckToDecks(physiologyTopic[X] as PreloadedDeckJSON),`
+   - Add to allPreloadedDecks in getPreloadedCards(): `physiologyTopic[X]`
+
+6. **Report completion** with summary of cards created
+
+---
+
+## Quality Standards
+
+Every card must:
+- Be visually beautiful and professional
+- Present information in the most learnable way for that specific content
+- Use color semantically (not decoratively)
+- Have clean, readable typography
+- Include all critical information from the LO
+- Be self-contained (understandable without other cards)
+
+Remember: You are the professor. Each LO deserves your individual attention and creative decision-making about how best to teach it.
