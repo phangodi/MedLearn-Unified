@@ -67,6 +67,51 @@ Typical structure:
 2. Core content blocks (2-4 blocks)
 3. `keypoint` or `clinical` - Summary/significance
 
+### 4. CRITICAL: Recognize Multiple Mechanisms/Factors/Types
+
+**When the content mentions "X mechanisms", "X factors", "X types", etc., you MUST create SEPARATE sections for each one.**
+
+❌ **WRONG** - All mechanisms in one list:
+```javascript
+{ type: 'steps', intro: 'Three mechanisms:', items: [
+  'Mechanism 1: description...',
+  '→ detail of mechanism 1',
+  '→ more details',
+  'Mechanism 2: description...',
+  '→ detail of mechanism 2',
+  'Mechanism 3: description...'
+]}
+```
+
+✅ **CORRECT** - Each mechanism gets its own section:
+```javascript
+{ type: 'list', intro: 'Three mechanisms affect this:', items: [
+  'Mechanism 1: brief summary',
+  'Mechanism 2: brief summary',
+  'Mechanism 3: brief summary'
+]},
+{ type: 'steps', intro: 'Mechanism 1 - Axial Migration:', items: [
+  'Step 1...',
+  'Step 2...'
+]},
+{ type: 'steps', intro: 'Mechanism 2 - Reduced Hematocrit:', items: [
+  'Step 1...',
+  'Step 2...'
+]},
+{ type: 'steps', intro: 'Mechanism 3 - RBC Deformability:', items: [
+  'Step 1...',
+  'Step 2...'
+]}
+```
+
+**Pattern Recognition:**
+- "Three mechanisms explain..." → Create 3 separate sections
+- "Five factors affect..." → Create 5 separate sections
+- "Two types of..." → Use comparison block OR two separate sections
+- "Four stages of..." → Could be one `steps` block if truly sequential
+
+**Ask yourself**: Are these items truly sequential steps in ONE process? Or are they PARALLEL concepts that should be separated?
+
 ---
 
 ## Output File Structure

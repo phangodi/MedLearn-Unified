@@ -80,15 +80,35 @@ The physiology app uses CSS Modules with these conventions:
 
 - [x] Create feature/quick-review branch
 - [x] Create this documentation file
-- [x] Create QuickReviewContent.jsx renderer
+- [x] Create QuickReviewContent.jsx renderer (10 block types)
 - [x] Add CSS styles to App.module.css
-- [x] Test with hardcoded sample data (Topic 9, LOs 1-4)
+- [x] Create index.js for dynamic loading
+- [x] Update TopicPage for dynamic Quick Review loading
 - [x] Create quick-review-generator.md skill
 - [x] Add UI toggle in Navigation.jsx (3 options: Formatted, Compact, Quick Review)
 - [x] Update ContentModeContext (answerFormat state)
-- [x] Generate sample content for Topic 9
+- [x] Generate Topic 9 (all 8 LOs)
+- [x] Generate Topic 10 (all 5 LOs)
+- [x] Generate Topics 33, 34, 35
+- [x] Fix skill: multiple mechanisms must be SEPARATED (not combined lists)
+- [x] Regenerate Topic 34 with improved structure
+- [x] Commit save point: 92ed663
 - [ ] Add flashcard deck integration (Phase 4)
-- [ ] Generate content for remaining topics (Phase 5)
+- [ ] Generate content for remaining topics
+
+## Current State (Nov 29, 2025)
+
+**Branch:** `feature/quick-review`
+**Save point commit:** `92ed663`
+**Working topics:** 9, 10, 33, 34, 35
+
+## Key Files
+- `components/QuickReviewContent.jsx` - Renderer
+- `data/QuickReview/index.js` - Dynamic loader
+- `.claude/skills/quick-review-generator.md` - Generation skill
+
+## To Generate More Topics
+Say: "Generate Quick Review content for Topic X"
 
 ## Command to Generate Content
 
