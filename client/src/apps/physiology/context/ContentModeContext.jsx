@@ -25,7 +25,10 @@ export const ContentModeProvider = ({ children }) => {
     if (savedFormat) return savedFormat;
     // Migrate from old boolean setting
     const oldPref = localStorage.getItem('useFormattedAnswers');
-    return oldPref === 'false' ? 'compact' : 'formatted';
+    if (oldPref === 'false') return 'compact';
+    if (oldPref === 'true') return 'formatted';
+    // Default to quickReview for new users
+    return 'quickReview';
   });
 
   // Save to localStorage whenever mode changes
