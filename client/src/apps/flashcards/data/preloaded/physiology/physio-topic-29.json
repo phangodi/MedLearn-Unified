@@ -1,0 +1,94 @@
+{
+  "id": "preloaded-physio-topic-29",
+  "name": "CO₂ Transport in Blood",
+  "description": "Flashcards for Physiology topics 29",
+  "subject": "physiology",
+  "topicIds": [
+    29
+  ],
+  "version": "2.0.0",
+  "cards": [
+    {
+      "id": "topic29-lo-1",
+      "front": {
+        "text": "<div style=\"background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%); color: #ffffff; padding: 16px 20px; border-radius: 12px; margin: -8px -8px 16px -8px;\">\n  <div style=\"font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.85; margin-bottom: 10px; font-weight: 500;\">Learning Objective</div>\n  <div style=\"font-size: 1.05rem; font-weight: 600; line-height: 1.5;\">Describe the CO2 transport mechanisms in blood and the percentage contribution of these mechanisms to transport: (1. physically dissolved, 2. chemically dissolved as bicarbonate anions, and 3. hemoglobin-bound with carbamino bonds)</div>\n</div>"
+      },
+      "back": {
+        "text": "<div style=\"background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%); color: #ffffff; padding: 14px 18px; border-radius: 12px; margin: -8px -8px 16px -8px;\">\n  <div style=\"font-size: 1.1rem; font-weight: 700;\">CO₂ Transport Mechanisms in Blood</div>\n</div>\n<div style=\"font-size: 0.95rem; line-height: 1.5; margin-bottom: 12px;\">\n  Carbon dioxide is transported in blood by <strong>three mechanisms</strong>:\n</div>\n\n<div style=\"display: grid; gap: 14px;\">\n\n  <div style=\"background: #f0fdf4; border-left: 4px solid #059669; padding: 12px 14px; border-radius: 0 8px 8px 0;\">\n    <div style=\"color: #059669; font-weight: 700; font-size: 1rem; margin-bottom: 6px;\">1. Physically Dissolved CO₂ <span style=\"color: #2563eb;\">(5–10%)</span></div>\n    <div style=\"font-size: 0.95rem; line-height: 1.5;\">\n      CO₂ dissolves directly in <strong>blood plasma</strong><br>\n      <span style=\"font-size: 0.85rem; color: #6b7280;\">Proportional to partial pressure — maintains diffusion gradient</span>\n    </div>\n  </div>\n\n  <div style=\"background: #eff6ff; border-left: 4px solid #2563eb; padding: 12px 14px; border-radius: 0 8px 8px 0;\">\n    <div style=\"color: #2563eb; font-weight: 700; font-size: 1rem; margin-bottom: 6px;\">2. Bicarbonate Ions (HCO₃⁻) <span style=\"color: #dc2626;\">(60–70%)</span></div>\n    <div style=\"font-size: 0.95rem; line-height: 1.5;\">\n      In RBCs: CO₂ + H₂O → <strong>carbonic acid</strong> → HCO₃⁻ + H⁺<br>\n      <span style=\"font-size: 0.85rem;\">Catalyzed by <strong>carbonic anhydrase</strong> | HCO₃⁻ exits via Band 3</span>\n    </div>\n  </div>\n\n  <div style=\"background: #fef2f2; border-left: 4px solid #dc2626; padding: 12px 14px; border-radius: 0 8px 8px 0;\">\n    <div style=\"color: #dc2626; font-weight: 700; font-size: 1rem; margin-bottom: 6px;\">3. Carbaminohemoglobin <span style=\"color: #2563eb;\">(20–30%)</span></div>\n    <div style=\"font-size: 0.95rem; line-height: 1.5;\">\n      CO₂ binds to <strong>terminal amino groups</strong> of Hb <em>(not heme)</em><br>\n      <span style=\"font-size: 0.85rem; color: #6b7280;\">Binding favored when Hb is deoxygenated (Haldane effect)</span>\n    </div>\n  </div>\n\n</div>"
+      },
+      "tags": [
+        "carbondioxide",
+        "transport",
+        "blood",
+        "high-yield",
+        "co2-transport",
+        "bicarbonate",
+        "hemoglobin"
+      ]
+    },
+    {
+      "id": "topic29-lo-2",
+      "front": {
+        "text": "<div style=\"background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%); color: #ffffff; padding: 16px 20px; border-radius: 12px; margin: -8px -8px 16px -8px;\">\n  <div style=\"font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.85; margin-bottom: 10px; font-weight: 500;\">Learning Objective</div>\n  <div style=\"font-size: 1.05rem; font-weight: 600; line-height: 1.5;\">Name the critical enzyme required for CO2-transport, and its cellular location.</div>\n</div>"
+      },
+      "back": {
+        "text": "<div style=\"background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%); color: #ffffff; padding: 14px 18px; border-radius: 12px; margin: -8px -8px 16px -8px;\">\n  <div style=\"font-size: 1.1rem; font-weight: 700;\">Critical enzyme required for CO2-transport, and...</div>\n</div><div style=\"background: #f8fafc; border-radius: 8px; padding: 12px 14px; margin-bottom: 14px; line-height: 1.6;\">\n  The critical enzyme required for carbon dioxide transport is <strong>carbonic anhydrase</strong>.\n</div><div style=\"display: grid; gap: 8px;\"><div style=\"padding-left: 12px; line-height: 1.5; border-left: 3px solid #e2e8f0;\">\n  It is primarily located in <strong>red blood cells</strong> where it catalyzes rapid conversion of CO₂ and water to carbonic acid, which dissociates into <strong>bicarbonate</strong> ions and hydrogen ions.\n</div><div style=\"padding-left: 12px; line-height: 1.5; border-left: 3px solid #e2e8f0;\">\n  This speeds the reaction approximately <span style=\"color: #2563eb; font-weight: 600;\">10,000-fold</span>.\n</div><div style=\"padding-left: 12px; line-height: 1.5; border-left: 3px solid #e2e8f0;\">\n  <strong>Carbonic anhydrase</strong> is also found in renal tubules and various epithelial cells where it regulates pH and <strong>bicarbonate</strong> handling.\n</div></div>"
+      },
+      "tags": [
+        "carbondioxide",
+        "transport",
+        "blood",
+        "high-yield"
+      ]
+    },
+    {
+      "id": "topic29-lo-3",
+      "front": {
+        "text": "<div style=\"background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%); color: #ffffff; padding: 16px 20px; border-radius: 12px; margin: -8px -8px 16px -8px;\">\n  <div style=\"font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.85; margin-bottom: 10px; font-weight: 500;\">Learning Objective</div>\n  <div style=\"font-size: 1.05rem; font-weight: 600; line-height: 1.5;\">Explain the importance of chloride-shift (Hamburger-shift) in the blood CO2-transport.</div>\n</div>"
+      },
+      "back": {
+        "text": "<div style=\"background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%); color: #ffffff; padding: 14px 18px; border-radius: 12px; margin: -8px -8px 16px -8px;\">\n  <div style=\"font-size: 1.1rem; font-weight: 700;\">The Chloride Shift (Hamburger Shift)</div>\n</div>\n<div style=\"background: #f0fdf4; border-radius: 8px; padding: 12px 14px; margin-bottom: 16px;\">\n  <div style=\"color: #166534; font-weight: 600; margin-bottom: 4px;\">Purpose</div>\n  <div>Maintain <span style=\"color: #059669; font-weight: 600;\">electrical neutrality</span> during CO₂ transport while enabling continuous HCO₃⁻ production</div>\n</div>\n\n<div style=\"display: grid; grid-template-columns: 1fr 1fr; gap: 12px;\">\n\n  <div style=\"background: #fef2f2; border-radius: 8px; padding: 14px;\">\n    <div style=\"color: #dc2626; font-weight: 700; font-size: 1rem; margin-bottom: 10px; text-align: center;\">IN TISSUES</div>\n    <div style=\"line-height: 1.7; font-size: 0.95rem;\">\n      1. CO₂ enters RBC<br>\n      2. <strong>Carbonic anhydrase</strong> → HCO₃⁻ + H⁺<br>\n      3. <span style=\"color: #dc2626; font-weight: 600;\">HCO₃⁻ exits</span> via <strong>Band 3</strong><br>\n      4. <span style=\"color: #2563eb; font-weight: 600;\">Cl⁻ enters</span> to balance charge\n    </div>\n  </div>\n\n  <div style=\"background: #eff6ff; border-radius: 8px; padding: 14px;\">\n    <div style=\"color: #2563eb; font-weight: 700; font-size: 1rem; margin-bottom: 10px; text-align: center;\">IN LUNGS</div>\n    <div style=\"line-height: 1.7; font-size: 0.95rem;\">\n      1. <span style=\"color: #2563eb; font-weight: 600;\">HCO₃⁻ re-enters</span> RBC<br>\n      2. <span style=\"color: #dc2626; font-weight: 600;\">Cl⁻ exits</span> to balance<br>\n      3. HCO₃⁻ → CO₂ + H₂O<br>\n      4. CO₂ exhaled into alveoli\n    </div>\n  </div>\n\n</div>\n\n<div style=\"margin-top: 14px; padding: 10px 12px; background: #fefce8; border-radius: 6px;\">\n  <strong>Key transporter:</strong> <span style=\"color: #7c3aed; font-weight: 600;\">Band 3 protein</span> (anion exchanger) — exchanges HCO₃⁻ for Cl⁻\n</div>"
+      },
+      "tags": [
+        "carbondioxide",
+        "transport",
+        "blood",
+        "high-yield"
+      ]
+    },
+    {
+      "id": "topic29-lo-4",
+      "front": {
+        "text": "<div style=\"background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%); color: #ffffff; padding: 16px 20px; border-radius: 12px; margin: -8px -8px 16px -8px;\">\n  <div style=\"font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.85; margin-bottom: 10px; font-weight: 500;\">Learning Objective</div>\n  <div style=\"font-size: 1.05rem; font-weight: 600; line-height: 1.5;\">Give the reference values for the dissolved CO2 concentration as well as the plasma bicarbonate levels both in arterial and in mixed venous blood.</div>\n</div>"
+      },
+      "back": {
+        "text": "<div style=\"background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%); color: #ffffff; padding: 14px 18px; border-radius: 12px; margin: -8px -8px 16px -8px;\">\n  <div style=\"font-size: 1.1rem; font-weight: 700;\">CO₂ & Bicarbonate Reference Values</div>\n</div>\n<div style=\"margin-top: 12px; margin-bottom: 12px;\">\n  <div style=\"color: #b91c1c; font-weight: 700; font-size: 1rem; margin-bottom: 8px; text-decoration: underline;\">CO₂ Concentration</div>\n  <ul style=\"margin: 0 0 0 8px; padding-left: 16px; list-style-type: disc;\">\n    <li style=\"margin-bottom: 5px; line-height: 1.5;\"><strong>Arterial blood:</strong> 480 ml/L</li>\n    <li style=\"margin-bottom: 5px; line-height: 1.5;\"><strong>Mixed venous blood:</strong> 520 ml/L</li>\n  </ul>\n</div>\n<div style=\"margin-top: 16px; margin-bottom: 12px;\">\n  <div style=\"color: #b91c1c; font-weight: 700; font-size: 1rem; margin-bottom: 8px; text-decoration: underline;\">Plasma Bicarbonate (HCO₃⁻) Concentration</div>\n  <ul style=\"margin: 0 0 0 8px; padding-left: 16px; list-style-type: disc;\">\n    <li style=\"margin-bottom: 5px; line-height: 1.5;\"><strong>Arterial blood:</strong> 24 mM</li>\n    <li style=\"margin-bottom: 5px; line-height: 1.5;\"><strong>Mixed venous blood:</strong> 27 mM</li>\n  </ul>\n</div>\n<div style=\"margin-top: 16px; margin-bottom: 12px;\">\n  <div style=\"font-weight: 600; margin-bottom: 6px;\">Clinical Significance</div>\n  <p style=\"line-height: 1.5;\"><strong>Venous blood has higher CO₂ and bicarbonate</strong> because:</p>\n  <ul style=\"margin: 4px 0 0 8px; padding-left: 16px; list-style-type: disc;\">\n    <li style=\"margin-bottom: 4px;\">CO₂ is continuously <strong>picked up from metabolizing tissues</strong></li>\n    <li style=\"margin-bottom: 4px;\">Tissues release CO₂ as a waste product of cellular respiration</li>\n    <li style=\"margin-bottom: 4px;\">Blood transports CO₂ from tissues to lungs for elimination</li>\n  </ul>\n</div>\n<div style=\"margin-top: 20px;\">\n  <div style=\"font-weight: 600; margin-bottom: 8px;\">Summary Table</div>\n  <table style=\"width: 100%; border-collapse: collapse; font-size: 0.9rem;\">\n    <thead><tr style=\"background: #f3f4f6;\"><th style=\"padding: 8px; text-align: left; border: 1px solid #e5e7eb; font-weight: 600;\">Parameter</th><th style=\"padding: 8px; text-align: left; border: 1px solid #e5e7eb; font-weight: 600;\">Arterial Blood</th><th style=\"padding: 8px; text-align: left; border: 1px solid #e5e7eb; font-weight: 600;\">Mixed Venous Blood</th></tr></thead>\n    <tbody>\n      <tr><td style=\"padding: 8px; border: 1px solid #e5e7eb;\"><strong>CO₂ concentration</strong></td><td style=\"padding: 8px; border: 1px solid #e5e7eb;\">480 ml/L</td><td style=\"padding: 8px; border: 1px solid #e5e7eb;\">520 ml/L</td></tr>\n      <tr><td style=\"padding: 8px; border: 1px solid #e5e7eb;\"><strong>Bicarbonate (HCO₃⁻)</strong></td><td style=\"padding: 8px; border: 1px solid #e5e7eb;\">24 mM</td><td style=\"padding: 8px; border: 1px solid #e5e7eb;\">27 mM</td></tr>\n      <tr><td style=\"padding: 8px; border: 1px solid #e5e7eb;\"><strong>Difference</strong></td><td style=\"padding: 8px; border: 1px solid #e5e7eb;\">AVDCO₂ = -40 ml/L</td><td style=\"padding: 8px; border: 1px solid #e5e7eb;\"></td></tr>\n    </tbody>\n  </table>\n</div>"
+      },
+      "tags": [
+        "carbondioxide",
+        "transport",
+        "blood",
+        "high-yield",
+        "bicarbonate",
+        "reference-values"
+      ]
+    },
+    {
+      "id": "topic29-lo-5",
+      "front": {
+        "text": "<div style=\"background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%); color: #ffffff; padding: 16px 20px; border-radius: 12px; margin: -8px -8px 16px -8px;\">\n  <div style=\"font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.85; margin-bottom: 10px; font-weight: 500;\">Learning Objective</div>\n  <div style=\"font-size: 1.05rem; font-weight: 600; line-height: 1.5;\">Explain the effect of hemoglobin oxygen dissociation on the uptake of CO2 (the Haldane effect).</div>\n</div>"
+      },
+      "back": {
+        "text": "<div style=\"background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%); color: #ffffff; padding: 14px 18px; border-radius: 12px; margin: -8px -8px 16px -8px;\">\n  <div style=\"font-size: 1.1rem; font-weight: 700;\">The Haldane Effect</div>\n</div>\n<div style=\"background: #f0fdf4; border-radius: 8px; padding: 12px 14px; margin-bottom: 16px;\">\n  <div style=\"color: #166534; font-weight: 600; margin-bottom: 4px;\">Core Concept</div>\n  <div>Oxygenation state of <strong>hemoglobin</strong> affects its ability to bind <span style=\"color: #2563eb; font-weight: 600;\">CO₂</span> and <span style=\"color: #2563eb; font-weight: 600;\">H⁺</span></div>\n</div>\n\n<div style=\"display: grid; grid-template-columns: 1fr 1fr; gap: 12px;\">\n\n  <div style=\"background: #fef2f2; border-radius: 8px; padding: 14px;\">\n    <div style=\"color: #dc2626; font-weight: 700; font-size: 1rem; margin-bottom: 10px; text-align: center;\">IN TISSUES</div>\n    <div style=\"text-align: center; font-size: 0.85rem; color: #6b7280; margin-bottom: 10px;\">(O₂ released)</div>\n    <div style=\"line-height: 1.6;\">\n      <strong>Deoxy-Hb</strong> has <span style=\"color: #dc2626; font-weight: 600;\">↑ affinity</span> for CO₂ and H⁺<br><br>\n      → Forms <strong>carbaminohemoglobin</strong><br>\n      → Buffers H⁺ ions<br>\n      → <span style=\"color: #dc2626;\">Promotes CO₂ uptake</span>\n    </div>\n  </div>\n\n  <div style=\"background: #eff6ff; border-radius: 8px; padding: 14px;\">\n    <div style=\"color: #2563eb; font-weight: 700; font-size: 1rem; margin-bottom: 10px; text-align: center;\">IN LUNGS</div>\n    <div style=\"text-align: center; font-size: 0.85rem; color: #6b7280; margin-bottom: 10px;\">(O₂ bound)</div>\n    <div style=\"line-height: 1.6;\">\n      <strong>Oxy-Hb</strong> has <span style=\"color: #2563eb; font-weight: 600;\">↓ affinity</span> for CO₂ and H⁺<br><br>\n      → Conformational change<br>\n      → Releases CO₂<br>\n      → <span style=\"color: #2563eb;\">H⁺ converts HCO₃⁻ → CO₂</span>\n    </div>\n  </div>\n\n</div>"
+      },
+      "tags": [
+        "carbondioxide",
+        "transport",
+        "blood",
+        "high-yield",
+        "haldane-effect",
+        "hemoglobin"
+      ]
+    }
+  ]
+}

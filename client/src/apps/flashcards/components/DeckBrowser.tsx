@@ -23,6 +23,7 @@ import {
   Heart,
   Zap,
   Upload,
+  Download,
 } from 'lucide-react'
 import { useFlashcards } from '../hooks'
 import { useAuth } from '@/contexts/AuthContext'
@@ -31,6 +32,7 @@ import { cn } from '@/lib/utils'
 import type { Deck } from '../types/flashcard'
 import { getPreloadedDecksWithStats } from '../data/preloaded'
 import { ImportModal } from './ImportModal'
+import { ExportModal } from './ExportModal'
 
 type SortOption = 'name' | 'dueCount' | 'lastStudied' | 'created'
 
@@ -85,6 +87,7 @@ export function DeckBrowser() {
   const [showCreateModal, setShowCreateModal] = useState(false)
   const [showImportModal, setShowImportModal] = useState(false)
   const [showOptionsMenu, setShowOptionsMenu] = useState<string | null>(null)
+  const [exportingDeck, setExportingDeck] = useState<Deck | null>(null)
 
   // Create deck form state
   const [deckName, setDeckName] = useState('')
@@ -407,6 +410,7 @@ export function DeckBrowser() {
                   onEdit={() => navigate(`/flashcards/deck/${deck.id}`)}
                   onDelete={() => handleDeleteDeck(deck.id)}
                   onCopy={() => handleCopyDeck(deck.id)}
+                  onExport={() => setExportingDeck(deck)}
                   onClick={() => navigate(`/flashcards/deck/${deck.id}`)}
                   onAddCards={() => navigate(`/flashcards/deck/${deck.id}?addCard=true`)}
                   formatLastStudied={formatLastStudied}
@@ -445,6 +449,7 @@ export function DeckBrowser() {
                   onEdit={() => navigate(`/flashcards/deck/${deck.id}`)}
                   onDelete={() => handleDeleteDeck(deck.id)}
                   onCopy={() => handleCopyDeck(deck.id)}
+                  onExport={() => setExportingDeck(deck)}
                   onClick={() => navigate(`/flashcards/deck/${deck.id}`)}
                   onAddCards={() => navigate(`/flashcards/deck/${deck.id}?addCard=true`)}
                   formatLastStudied={formatLastStudied}
@@ -505,6 +510,16 @@ export function DeckBrowser() {
           />
         )}
       </AnimatePresence>
+
+      {/* Export Modal */}
+      <AnimatePresence>
+        {exportingDeck && (
+          <ExportModal
+            deck={exportingDeck}
+            onClose={() => setExportingDeck(null)}
+          />
+        )}
+      </AnimatePresence>
     </div>
   )
 }
@@ -517,6 +532,7 @@ interface DeckCardProps {
   onEdit: () => void
   onDelete: () => void
   onCopy: () => void
+  onExport: () => void
   onClick: () => void
   onAddCards: () => void
   formatLastStudied: (deck: Deck) => string
@@ -532,6 +548,7 @@ function DeckCard({
   onEdit,
   onDelete,
   onCopy,
+  onExport,
   onClick,
   onAddCards,
   formatLastStudied,
@@ -620,6 +637,17 @@ function DeckCard({
                   >
                     <Edit className="w-4 h-4" />
                     {isPreloaded ? 'View Cards' : 'Edit'}
+                  </button>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      onExport()
+                      setShowOptionsMenu(null)
+                    }}
+                    className="w-full flex items-center gap-2 px-3 py-2 text-sm hover:bg-muted transition-colors text-left"
+                  >
+                    <Download className="w-4 h-4" />
+                    Export to Anki
                   </button>
                   {!isPreloaded && (
                     <button

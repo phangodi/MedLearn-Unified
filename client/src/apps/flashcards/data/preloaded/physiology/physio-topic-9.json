@@ -1,0 +1,134 @@
+{
+  "id": "preloaded-physio-topic-9",
+  "name": "Red Blood Cells",
+  "description": "Flashcards for Physiology topics 9",
+  "subject": "physiology",
+  "topicIds": [
+    9
+  ],
+  "version": "2.0.0",
+  "cards": [
+    {
+      "id": "topic9-lo-1",
+      "front": {
+        "text": "<div style=\"background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%); color: #ffffff; padding: 16px 20px; border-radius: 12px; margin: -8px -8px 16px -8px;\">\n  <div style=\"font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.85; margin-bottom: 10px; font-weight: 500;\">Learning Objective</div>\n  <div style=\"font-size: 1.05rem; font-weight: 600; line-height: 1.5;\">Describe the following parameters of the red blood cells: count, size, shape, life span.</div>\n</div>"
+      },
+      "back": {
+        "text": "<div style=\"background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%); color: #ffffff; padding: 14px 18px; border-radius: 12px; margin: -8px -8px 16px -8px;\">\n  <div style=\"font-size: 1.1rem; font-weight: 700;\">RBC Parameters</div>\n</div>\n<div style=\"display: grid; gap: 16px;\">\n\n  <div>\n    <div style=\"color: #2563eb; font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; border-bottom: 2px solid #dbeafe; padding-bottom: 4px;\">Count</div>\n    <div style=\"padding-left: 12px; line-height: 1.6;\">\n      <span style=\"color: #059669; font-weight: 600;\">4.3–5.2 million/μL</span><br>\n      <span style=\"font-size: 0.9rem; color: #6b7280;\">Males: 5.2M | Females: 4.7M per mm³</span>\n    </div>\n  </div>\n\n  <div>\n    <div style=\"color: #2563eb; font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; border-bottom: 2px solid #dbeafe; padding-bottom: 4px;\">Size</div>\n    <div style=\"padding-left: 12px; line-height: 1.6;\">\n      <strong>Diameter:</strong> 7–8 μm<br>\n      <strong>Thickness:</strong> 2.5 μm (edge) → 1 μm (center)<br>\n      <strong>Volume:</strong> <span style=\"color: #059669; font-weight: 600;\">90–95 fL</span>\n    </div>\n  </div>\n\n  <div>\n    <div style=\"color: #2563eb; font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; border-bottom: 2px solid #dbeafe; padding-bottom: 4px;\">Shape</div>\n    <div style=\"padding-left: 12px; line-height: 1.6;\">\n      <span style=\"color: #dc2626; font-weight: 600;\">Biconcave disc</span><br>\n      <span style=\"font-size: 0.9rem;\">→ ↑ Surface area for gas exchange<br>\n      → Highly deformable through capillaries</span>\n    </div>\n  </div>\n\n  <div>\n    <div style=\"color: #2563eb; font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; border-bottom: 2px solid #dbeafe; padding-bottom: 4px;\">Lifespan</div>\n    <div style=\"padding-left: 12px; line-height: 1.6;\">\n      <span style=\"color: #059669; font-weight: 600;\">~120 days</span> → recycled in <strong>spleen</strong>\n    </div>\n  </div>\n\n  <div>\n    <div style=\"color: #2563eb; font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; border-bottom: 2px solid #dbeafe; padding-bottom: 4px;\">Production</div>\n    <div style=\"padding-left: 12px; line-height: 1.6;\">\n      <strong>Bone marrow</strong> → <span style=\"color: #7c3aed;\">erythropoiesis</span><br>\n      <span style=\"font-size: 0.9rem;\">Stimulated by: <strong>erythropoietin</strong> (kidneys → hypoxia)</span>\n    </div>\n  </div>\n\n</div>"
+      },
+      "tags": [
+        "general",
+        "features",
+        "blood",
+        "cells"
+      ]
+    },
+    {
+      "id": "topic9-lo-2",
+      "front": {
+        "text": "<div style=\"background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%); color: #ffffff; padding: 16px 20px; border-radius: 12px; margin: -8px -8px 16px -8px;\">\n  <div style=\"font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.85; margin-bottom: 10px; font-weight: 500;\">Learning Objective</div>\n  <div style=\"font-size: 1.05rem; font-weight: 600; line-height: 1.5;\">What is the fate of the cell organelles in mature red blood cells?</div>\n</div>"
+      },
+      "back": {
+        "text": "<div style=\"background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%); color: #ffffff; padding: 14px 18px; border-radius: 12px; margin: -8px -8px 16px -8px;\">\n  <div style=\"font-size: 1.1rem; font-weight: 700;\">Organelle Loss in Mature RBCs</div>\n</div>\n<div style=\"background: #f0fdf4; border-radius: 8px; padding: 12px 14px; margin-bottom: 16px;\">\n  <div style=\"line-height: 1.6;\">\n    During maturation in <strong>bone marrow</strong>, RBCs lose <span style=\"color: #059669; font-weight: 600;\">all organelles</span>: nucleus, mitochondria, ER, Golgi, ribosomes → become flexible, Hb-filled discs\n  </div>\n</div>\n\n<div style=\"color: #1e3a5f; font-weight: 700; font-size: 0.95rem; margin-bottom: 12px;\">Three Reasons for Organelle Loss:</div>\n\n<div style=\"display: grid; gap: 12px;\">\n\n  <div style=\"background: #eff6ff; border-left: 4px solid #2563eb; padding: 12px 14px; border-radius: 0 8px 8px 0;\">\n    <div style=\"color: #2563eb; font-weight: 700; margin-bottom: 4px;\">1. Maximize Hemoglobin Space</div>\n    <div style=\"font-size: 0.95rem;\">Without organelles → more room for <strong>hemoglobin</strong> → <span style=\"color: #059669; font-weight: 600;\">carry more O₂</span></div>\n  </div>\n\n  <div style=\"background: #fef2f2; border-left: 4px solid #dc2626; padding: 12px 14px; border-radius: 0 8px 8px 0;\">\n    <div style=\"color: #dc2626; font-weight: 700; margin-bottom: 4px;\">2. Increase Flexibility</div>\n    <div style=\"font-size: 0.95rem;\">No rigid nucleus → <span style=\"color: #dc2626; font-weight: 600;\">soft & bendable</span> → squeeze through tiny capillaries</div>\n  </div>\n\n  <div style=\"background: #f0fdf4; border-left: 4px solid #059669; padding: 12px 14px; border-radius: 0 8px 8px 0;\">\n    <div style=\"color: #059669; font-weight: 700; margin-bottom: 4px;\">3. Preserve O₂ for Tissues</div>\n    <div style=\"font-size: 0.95rem;\">No mitochondria → use <strong>anaerobic glycolysis</strong> → <span style=\"color: #059669; font-weight: 600;\">don't consume the O₂ they carry</span></div>\n  </div>\n\n</div>"
+      },
+      "tags": [
+        "general",
+        "features",
+        "blood",
+        "cells"
+      ]
+    },
+    {
+      "id": "topic9-lo-3",
+      "front": {
+        "text": "<div style=\"background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%); color: #ffffff; padding: 16px 20px; border-radius: 12px; margin: -8px -8px 16px -8px;\">\n  <div style=\"font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.85; margin-bottom: 10px; font-weight: 500;\">Learning Objective</div>\n  <div style=\"font-size: 1.05rem; font-weight: 600; line-height: 1.5;\">Define the following terms and give the formula of their calculation: MCH, MCHC, MCV.</div>\n</div>"
+      },
+      "back": {
+        "text": "<div style=\"background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%); color: #ffffff; padding: 14px 18px; border-radius: 12px; margin: -8px -8px 16px -8px;\">\n  <div style=\"font-size: 1.1rem; font-weight: 700;\">Red Blood Cell Indices (MCH, MCHC, MCV)</div>\n</div>\n<div style=\"display: grid; gap: 16px;\">\n\n  <div style=\"background: #eff6ff; border-radius: 8px; padding: 14px;\">\n    <div style=\"color: #2563eb; font-weight: 700; font-size: 1rem; margin-bottom: 8px;\">MCV — Mean Corpuscular Volume</div>\n    <div style=\"line-height: 1.6;\">\n      <strong>What:</strong> Average <span style=\"color: #2563eb; font-weight: 600;\">size</span> of one RBC<br>\n      <strong>Normal:</strong> <span style=\"color: #059669; font-weight: 600;\">94 fL</span><br>\n      <strong>Formula:</strong> (Hct % × 10) ÷ RBC count (millions/μL)<br>\n      <span style=\"font-size: 0.85rem; color: #6b7280;\">↓ = microcytic | ↑ = macrocytic</span>\n    </div>\n  </div>\n\n  <div style=\"background: #fef2f2; border-radius: 8px; padding: 14px;\">\n    <div style=\"color: #dc2626; font-weight: 700; font-size: 1rem; margin-bottom: 8px;\">MCH — Mean Corpuscular Hemoglobin</div>\n    <div style=\"line-height: 1.6;\">\n      <strong>What:</strong> Average <span style=\"color: #dc2626; font-weight: 600;\">amount of Hb</span> per RBC<br>\n      <strong>Normal:</strong> <span style=\"color: #059669; font-weight: 600;\">29 pg</span><br>\n      <strong>Formula:</strong> (Hb g/dL × 10) ÷ RBC count (millions/μL)<br>\n      <span style=\"font-size: 0.85rem; color: #6b7280;\">↓ = iron deficiency | ↑ = macrocytic anemia</span>\n    </div>\n  </div>\n\n  <div style=\"background: #fefce8; border-radius: 8px; padding: 14px;\">\n    <div style=\"color: #ca8a04; font-weight: 700; font-size: 1rem; margin-bottom: 8px;\">MCHC — Mean Corpuscular Hb Concentration</div>\n    <div style=\"line-height: 1.6;\">\n      <strong>What:</strong> Average <span style=\"color: #ca8a04; font-weight: 600;\">concentration of Hb</span> in packed RBCs<br>\n      <strong>Normal:</strong> <span style=\"color: #059669; font-weight: 600;\">333 g/L</span><br>\n      <strong>Formula:</strong> (Hb g/dL × 100) ÷ Hct %<br>\n      <span style=\"font-size: 0.85rem; color: #6b7280;\">↓ = hypochromic (iron def) | ↑ = hereditary spherocytosis</span>\n    </div>\n  </div>\n\n</div>"
+      },
+      "tags": [
+        "general",
+        "features",
+        "blood",
+        "cells",
+        "high-yield"
+      ]
+    },
+    {
+      "id": "topic9-lo-4",
+      "front": {
+        "text": "<div style=\"background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%); color: #ffffff; padding: 16px 20px; border-radius: 12px; margin: -8px -8px 16px -8px;\">\n  <div style=\"font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.85; margin-bottom: 10px; font-weight: 500;\">Learning Objective</div>\n  <div style=\"font-size: 1.05rem; font-weight: 600; line-height: 1.5;\">Describe the Price-Jones curve.</div>\n</div>"
+      },
+      "back": {
+        "text": "<div style=\"background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%); color: #ffffff; padding: 14px 18px; border-radius: 12px; margin: -8px -8px 16px -8px;\">\n  <div style=\"font-size: 1.1rem; font-weight: 700;\">The Price-Jones Curve</div>\n</div>\n<div style=\"background: #f0fdf4; border-radius: 8px; padding: 12px 14px; margin-bottom: 16px;\">\n  <div style=\"color: #166534; font-weight: 600; margin-bottom: 4px;\">Definition</div>\n  <div>Graph showing <span style=\"color: #059669; font-weight: 600;\">distribution of RBC diameters</span> in a blood sample — used to assess <strong>anisocytosis</strong> (size variation)</div>\n</div>\n\n<div style=\"display: grid; gap: 12px;\">\n  <div>\n    <div style=\"color: #2563eb; font-weight: 700; font-size: 0.95rem; margin-bottom: 6px;\">Axes</div>\n    <div style=\"padding-left: 12px;\">\n      <strong>X-axis:</strong> RBC diameter (μm)<br>\n      <strong>Y-axis:</strong> Frequency/number of cells\n    </div>\n  </div>\n\n  <div>\n    <div style=\"color: #2563eb; font-weight: 700; font-size: 0.95rem; margin-bottom: 6px;\">Normal Curve</div>\n    <div style=\"padding-left: 12px;\">\n      <span style=\"color: #059669; font-weight: 600;\">Bell-shaped</span> — peak at <strong>7–8 μm</strong> (normal RBC size)\n    </div>\n  </div>\n</div>\n\n<div style=\"margin-top: 16px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; text-align: center;\">\n  <div style=\"background: #fef2f2; padding: 10px; border-radius: 6px;\">\n    <div style=\"color: #dc2626; font-weight: 700; font-size: 0.85rem;\">← SHIFT LEFT</div>\n    <div style=\"font-size: 0.85rem; margin-top: 4px;\"><strong>Microcytic</strong><br>(iron deficiency)</div>\n  </div>\n  <div style=\"background: #f0fdf4; padding: 10px; border-radius: 6px;\">\n    <div style=\"color: #059669; font-weight: 700; font-size: 0.85rem;\">NORMAL</div>\n    <div style=\"font-size: 0.85rem; margin-top: 4px;\"><strong>7–8 μm</strong><br>peak</div>\n  </div>\n  <div style=\"background: #eff6ff; padding: 10px; border-radius: 6px;\">\n    <div style=\"color: #2563eb; font-weight: 700; font-size: 0.85rem;\">SHIFT RIGHT →</div>\n    <div style=\"font-size: 0.85rem; margin-top: 4px;\"><strong>Macrocytic</strong><br>(B12/folate def)</div>\n  </div>\n</div>"
+      },
+      "tags": [
+        "general",
+        "features",
+        "blood",
+        "cells"
+      ]
+    },
+    {
+      "id": "topic9-lo-5",
+      "front": {
+        "text": "<div style=\"background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%); color: #ffffff; padding: 16px 20px; border-radius: 12px; margin: -8px -8px 16px -8px;\">\n  <div style=\"font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.85; margin-bottom: 10px; font-weight: 500;\">Learning Objective</div>\n  <div style=\"font-size: 1.05rem; font-weight: 600; line-height: 1.5;\">Enlist and describe the types of anemias and explain their mechanism.</div>\n</div>"
+      },
+      "back": {
+        "text": "<div style=\"background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%); color: #ffffff; padding: 14px 18px; border-radius: 12px; margin: -8px -8px 16px -8px;\">\n  <div style=\"font-size: 1.1rem; font-weight: 700;\">Types and Mechanisms of Anemia</div>\n</div>\n<div style=\"font-size: 0.95rem; line-height: 1.5; margin-bottom: 8px;\">\n  Anemia = deficiency in <strong>RBCs</strong> or <strong>hemoglobin</strong> → reduced O₂ transport\n</div>\n\n<div style=\"display: grid; gap: 18px; margin-top: 12px;\">\n\n  <div style=\"background: #fef2f2; border-left: 4px solid #dc2626; padding: 12px 14px; border-radius: 0 8px 8px 0;\">\n    <div style=\"color: #dc2626; font-weight: 700; font-size: 1rem; margin-bottom: 8px;\">MICROCYTIC <span style=\"font-weight: 500; font-size: 0.85rem;\">(MCV < 80 fL)</span></div>\n    <div style=\"margin-bottom: 6px;\"><strong>Mechanism:</strong> Impaired hemoglobin synthesis</div>\n    <div><strong>Causes:</strong></div>\n    <ul style=\"margin: 4px 0 0 16px; padding: 0;\">\n      <li><span style=\"color: #dc2626; font-weight: 600;\">Iron deficiency</span> — most common (diet, blood loss, malabsorption)</li>\n      <li><strong>Thalassemia</strong> — genetic defect in Hb production</li>\n    </ul>\n  </div>\n\n  <div style=\"background: #fefce8; border-left: 4px solid #ca8a04; padding: 12px 14px; border-radius: 0 8px 8px 0;\">\n    <div style=\"color: #ca8a04; font-weight: 700; font-size: 1rem; margin-bottom: 8px;\">NORMOCYTIC <span style=\"font-weight: 500; font-size: 0.85rem;\">(MCV 80–100 fL)</span></div>\n    <div style=\"margin-bottom: 6px;\"><strong>Mechanism:</strong> ↓ production, ↑ destruction, or blood loss</div>\n    <div><strong>Causes:</strong></div>\n    <ul style=\"margin: 4px 0 0 16px; padding: 0;\">\n      <li><strong>Chronic disease</strong> — cytokines interfere with iron/erythropoiesis</li>\n      <li><span style=\"color: #ca8a04; font-weight: 600;\">Hemolytic anemia</span> — ↑ RBC destruction (autoimmune, sickle cell)</li>\n      <li><strong>Acute blood loss</strong> — trauma, surgery</li>\n    </ul>\n  </div>\n\n  <div style=\"background: #eff6ff; border-left: 4px solid #2563eb; padding: 12px 14px; border-radius: 0 8px 8px 0;\">\n    <div style=\"color: #2563eb; font-weight: 700; font-size: 1rem; margin-bottom: 8px;\">MACROCYTIC <span style=\"font-weight: 500; font-size: 0.85rem;\">(MCV > 100 fL)</span></div>\n    <div style=\"margin-bottom: 6px;\"><strong>Mechanism:</strong> Defective DNA synthesis → delayed division → larger cells</div>\n    <div><strong>Causes:</strong></div>\n    <ul style=\"margin: 4px 0 0 16px; padding: 0;\">\n      <li><span style=\"color: #2563eb; font-weight: 600;\">Vitamin B12 deficiency</span> (pernicious anemia)</li>\n      <li><strong>Folate deficiency</strong></li>\n    </ul>\n  </div>\n\n</div>"
+      },
+      "tags": [
+        "general",
+        "features",
+        "blood",
+        "cells"
+      ]
+    },
+    {
+      "id": "topic9-lo-6",
+      "front": {
+        "text": "<div style=\"background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%); color: #ffffff; padding: 16px 20px; border-radius: 12px; margin: -8px -8px 16px -8px;\">\n  <div style=\"font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.85; margin-bottom: 10px; font-weight: 500;\">Learning Objective</div>\n  <div style=\"font-size: 1.05rem; font-weight: 600; line-height: 1.5;\">Characterize the osmotic resistance of the red blood cells.</div>\n</div>"
+      },
+      "back": {
+        "text": "<div style=\"background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%); color: #ffffff; padding: 14px 18px; border-radius: 12px; margin: -8px -8px 16px -8px;\">\n  <div style=\"font-size: 1.1rem; font-weight: 700;\">Osmotic Resistance of RBCs</div>\n</div>\n<div style=\"background: #f0fdf4; border-radius: 8px; padding: 12px 14px; margin-bottom: 16px;\">\n  <div style=\"color: #166534; font-weight: 600; margin-bottom: 4px;\">Definition</div>\n  <div>Ability of RBCs to <span style=\"color: #059669; font-weight: 600;\">resist hemolysis</span> (bursting) when placed in hypotonic solutions</div>\n</div>\n\n<div style=\"display: grid; gap: 14px;\">\n\n  <div>\n    <div style=\"color: #2563eb; font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; border-bottom: 2px solid #dbeafe; padding-bottom: 4px;\">Mechanism</div>\n    <div style=\"padding-left: 12px; line-height: 1.6;\">\n      Hypotonic solution → <strong>water enters RBC</strong> (osmosis) → cell swells<br>\n      If too dilute → membrane ruptures → <span style=\"color: #dc2626; font-weight: 600;\">hemolysis</span>\n    </div>\n  </div>\n\n  <div>\n    <div style=\"color: #2563eb; font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; border-bottom: 2px solid #dbeafe; padding-bottom: 4px;\">Normal Values (NaCl %)</div>\n    <div style=\"padding-left: 12px; line-height: 1.6;\">\n      <strong>Initial hemolysis:</strong> <span style=\"color: #059669; font-weight: 600;\">0.44–0.45%</span><br>\n      <strong>Complete hemolysis:</strong> <span style=\"color: #dc2626; font-weight: 600;\">0.30%</span>\n    </div>\n  </div>\n\n  <div>\n    <div style=\"color: #2563eb; font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; border-bottom: 2px solid #dbeafe; padding-bottom: 4px;\">Key Structural Proteins</div>\n    <div style=\"padding-left: 12px; line-height: 1.6;\">\n      <span style=\"color: #7c3aed; font-weight: 600;\">Spectrin</span> (α & β), <span style=\"color: #7c3aed; font-weight: 600;\">Ankyrin</span>, <span style=\"color: #7c3aed; font-weight: 600;\">Band 3</span> — maintain biconcave shape & membrane integrity\n    </div>\n  </div>\n\n  <div>\n    <div style=\"color: #2563eb; font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; border-bottom: 2px solid #dbeafe; padding-bottom: 4px;\">Clinical Changes</div>\n    <div style=\"padding-left: 12px; line-height: 1.6;\">\n      <span style=\"color: #dc2626; font-weight: 600;\">↓ Resistance</span> (more fragile): Old RBCs, anemia, <strong>hereditary spherocytosis</strong>\n    </div>\n  </div>\n\n</div>"
+      },
+      "tags": [
+        "general",
+        "features",
+        "blood",
+        "cells"
+      ]
+    },
+    {
+      "id": "topic9-lo-7",
+      "front": {
+        "text": "<div style=\"background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%); color: #ffffff; padding: 16px 20px; border-radius: 12px; margin: -8px -8px 16px -8px;\">\n  <div style=\"font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.85; margin-bottom: 10px; font-weight: 500;\">Learning Objective</div>\n  <div style=\"font-size: 1.05rem; font-weight: 600; line-height: 1.5;\">Describe the mechanism of blood sedimentation, the method of its measurement, significance and normal value.</div>\n</div>"
+      },
+      "back": {
+        "text": "<div style=\"background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%); color: #ffffff; padding: 14px 18px; border-radius: 12px; margin: -8px -8px 16px -8px;\">\n  <div style=\"font-size: 1.1rem; font-weight: 700;\">Erythrocyte Sedimentation Rate (ESR)</div>\n</div>\n<div style=\"display: grid; gap: 16px;\">\n\n  <div>\n    <div style=\"color: #2563eb; font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; border-bottom: 2px solid #dbeafe; padding-bottom: 4px;\">Definition</div>\n    <div style=\"padding-left: 12px; line-height: 1.6;\">\n      Test measuring how quickly <strong>RBCs settle</strong> in a vertical tube over <span style=\"color: #059669; font-weight: 600;\">1 hour</span>\n    </div>\n  </div>\n\n  <div>\n    <div style=\"color: #2563eb; font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; border-bottom: 2px solid #dbeafe; padding-bottom: 4px;\">Mechanism</div>\n    <div style=\"padding-left: 12px; line-height: 1.6;\">\n      <span style=\"color: #7c3aed; font-weight: 600;\">Rouleaux formation</span> = RBC stacking<br>\n      <span style=\"font-size: 0.9rem;\">• <strong>Acute-phase reactants</strong> (fibrinogen) coat RBCs<br>\n      • ↓ <strong>Zeta potential</strong> (negative surface charge)<br>\n      • ↑ Aggregation → heavier stacks → faster settling</span>\n    </div>\n  </div>\n\n  <div>\n    <div style=\"color: #2563eb; font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; border-bottom: 2px solid #dbeafe; padding-bottom: 4px;\">Method: Westergren</div>\n    <div style=\"padding-left: 12px; line-height: 1.6;\">\n      <strong>Venous blood</strong> + <strong>sodium citrate</strong> → marked tube → measure settling (mm) after 1 hr\n    </div>\n  </div>\n\n  <div>\n    <div style=\"color: #2563eb; font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; border-bottom: 2px solid #dbeafe; padding-bottom: 4px;\">Normal Values</div>\n    <div style=\"padding-left: 12px; line-height: 1.6;\">\n      <span style=\"color: #059669; font-weight: 600;\">< 20 mm/hr</span> (typically 3–10 mm/hr)<br>\n      <span style=\"font-size: 0.9rem; color: #6b7280;\">Higher in women</span>\n    </div>\n  </div>\n\n  <div>\n    <div style=\"color: #2563eb; font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; border-bottom: 2px solid #dbeafe; padding-bottom: 4px;\">Clinical Significance</div>\n    <div style=\"padding-left: 12px; line-height: 1.6;\">\n      <span style=\"color: #dc2626; font-weight: 600;\">↑ ESR:</span> Inflammation, infection, RA, SLE, TB, cancer, pregnancy<br>\n      <span style=\"color: #2563eb; font-weight: 600;\">↓ ESR:</span> Sickle cell, polycythemia, extreme leukocytosis\n    </div>\n  </div>\n\n</div>"
+      },
+      "tags": [
+        "general",
+        "features",
+        "blood",
+        "cells",
+        "high-yield"
+      ]
+    },
+    {
+      "id": "topic9-lo-8",
+      "front": {
+        "text": "<div style=\"background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%); color: #ffffff; padding: 16px 20px; border-radius: 12px; margin: -8px -8px 16px -8px;\">\n  <div style=\"font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.85; margin-bottom: 10px; font-weight: 500;\">Learning Objective</div>\n  <div style=\"font-size: 1.05rem; font-weight: 600; line-height: 1.5;\">Describe the membrane of the red blood cells. Enlist three important membrane proteins.</div>\n</div>"
+      },
+      "back": {
+        "text": "<div style=\"background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%); color: #ffffff; padding: 14px 18px; border-radius: 12px; margin: -8px -8px 16px -8px;\">\n  <div style=\"font-size: 1.1rem; font-weight: 700;\">Red Blood Cell Membrane Structure</div>\n</div>\n<div style=\"display: grid; gap: 14px;\">\n\n  <div>\n    <div style=\"color: #2563eb; font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; border-bottom: 2px solid #dbeafe; padding-bottom: 4px;\">Basic Structure</div>\n    <div style=\"padding-left: 12px; line-height: 1.6;\">\n      <span style=\"color: #7c3aed; font-weight: 600;\">Phospholipid bilayer</span> with embedded proteins<br>\n      Outer surface: <strong>Glycocalyx</strong> (glycoproteins/glycolipids)\n    </div>\n  </div>\n\n  <div>\n    <div style=\"color: #2563eb; font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; border-bottom: 2px solid #dbeafe; padding-bottom: 4px;\">Key Proteins</div>\n    <div style=\"display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding-left: 12px;\">\n      <div>\n        <div style=\"font-weight: 600; color: #dc2626;\">Cytoskeletal:</div>\n        <div style=\"font-size: 0.9rem;\">• Spectrin (α & β)<br>• Ankyrin<br>• Actin</div>\n      </div>\n      <div>\n        <div style=\"font-weight: 600; color: #059669;\">Transmembrane:</div>\n        <div style=\"font-size: 0.9rem;\">• Band 3 (anion exchanger)<br>• Glycophorin<br>• GLUT1 (glucose)</div>\n      </div>\n    </div>\n  </div>\n\n  <div>\n    <div style=\"color: #2563eb; font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; border-bottom: 2px solid #dbeafe; padding-bottom: 4px;\">Functions</div>\n    <div style=\"padding-left: 12px; line-height: 1.6;\">\n      • Maintain <strong>biconcave shape</strong><br>\n      • Enable <span style=\"color: #059669; font-weight: 600;\">deformability</span> through capillaries<br>\n      • Support gas exchange & nutrient transport\n    </div>\n  </div>\n\n</div>"
+      },
+      "tags": [
+        "general",
+        "features",
+        "blood",
+        "cells"
+      ]
+    }
+  ]
+}

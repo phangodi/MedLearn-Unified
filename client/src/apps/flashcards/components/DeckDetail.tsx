@@ -25,6 +25,7 @@ import {
 } from 'lucide-react'
 import { useFlashcards } from '../hooks'
 import { CardEditor } from './CardEditor'
+import { ExportModal } from './ExportModal'
 import { Button } from '@/components/ui/Button'
 import { State, type FlashCard } from '../types/flashcard'
 import { createNewCard } from '../services/fsrsService'
@@ -96,6 +97,7 @@ export function DeckDetail() {
   })
   const [showDeckDeleteConfirm, setShowDeckDeleteConfirm] = useState(false)
   const [isSavingSettings, setIsSavingSettings] = useState(false)
+  const [showExportModal, setShowExportModal] = useState(false)
 
   // Load deck and cards
   useEffect(() => {
@@ -1132,11 +1134,23 @@ export function DeckDetail() {
 
                   <Button
                     variant="outline"
+                    onClick={() => {
+                      setShowSettings(false)
+                      setShowExportModal(true)
+                    }}
+                    className="w-full"
+                  >
+                    <Download className="w-4 h-4 mr-2" />
+                    Export to Anki (.apkg)
+                  </Button>
+
+                  <Button
+                    variant="outline"
                     onClick={handleExportDeck}
                     className="w-full"
                   >
                     <Download className="w-4 h-4 mr-2" />
-                    Export Deck as JSON
+                    Export as JSON
                   </Button>
 
                   {!showDeckDeleteConfirm ? (
@@ -1202,6 +1216,17 @@ export function DeckDetail() {
               </div>
             </motion.div>
           </div>
+        )}
+      </AnimatePresence>
+
+      {/* Export Modal */}
+      <AnimatePresence>
+        {showExportModal && currentDeck && (
+          <ExportModal
+            deck={currentDeck}
+            cards={cards}
+            onClose={() => setShowExportModal(false)}
+          />
         )}
       </AnimatePresence>
     </div>

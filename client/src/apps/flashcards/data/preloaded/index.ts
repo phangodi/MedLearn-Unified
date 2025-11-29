@@ -10,7 +10,8 @@ import { DEFAULT_DECK_SETTINGS } from '../../types/flashcard'
 import { Timestamp } from 'firebase/firestore'
 
 // Import all preloaded deck JSON files
-import physiologyTopic29 from './physiology/topic-29-respiration-gas-transport.json'
+import physiologyTopic9 from './physiology/physio-topic-9.json'
+import physiologyTopic29 from './physiology/physio-topic-29.json'
 
 /**
  * Structure of a preloaded deck JSON file
@@ -20,7 +21,8 @@ interface PreloadedDeckJSON {
   name: string
   description: string
   subject: string
-  topicId?: number
+  topicId?: number        // Legacy single topic
+  topicIds?: number[]     // New multi-topic support
   version: string
   cards: Array<{
     id: string
@@ -42,6 +44,11 @@ interface PreloadedDeckJSON {
 function convertPreloadedDeckToDecks(preloadedDeck: PreloadedDeckJSON): Deck {
   const now = Timestamp.now()
 
+  // Support both legacy topicId and new topicIds array
+  const topicString = preloadedDeck.topicIds
+    ? preloadedDeck.topicIds.join(', ')
+    : preloadedDeck.topicId?.toString()
+
   return {
     id: preloadedDeck.id,
     userId: '', // Empty for preloaded decks (available to all users)
@@ -58,7 +65,7 @@ function convertPreloadedDeckToDecks(preloadedDeck: PreloadedDeckJSON): Deck {
     updatedAt: now,
     isPreloaded: true,
     sourceSubject: preloadedDeck.subject,
-    sourceTopic: preloadedDeck.topicId?.toString(),
+    sourceTopic: topicString,
   }
 }
 
@@ -92,6 +99,7 @@ function getSubjectIcon(subject: string): string {
  * All preloaded decks as Deck objects
  */
 export const preloadedDecks: Deck[] = [
+  convertPreloadedDeckToDecks(physiologyTopic9 as PreloadedDeckJSON),
   convertPreloadedDeckToDecks(physiologyTopic29 as PreloadedDeckJSON),
 ]
 
@@ -114,7 +122,7 @@ export function getPreloadedDecksBySubject(subject: string): Deck[] {
  */
 export function getPreloadedCards(deckId: string) {
   // Find the original JSON data for the deck
-  const allPreloadedDecks = [physiologyTopic29]
+  const allPreloadedDecks = [physiologyTopic9, physiologyTopic29]
   const deckData = allPreloadedDecks.find(
     (deck) => (deck as PreloadedDeckJSON).id === deckId
   ) as PreloadedDeckJSON | undefined
