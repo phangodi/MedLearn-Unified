@@ -144,9 +144,14 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
 
   const tools = [
     { name: 'AI Exam Prep', icon: Sparkles, path: '/ai-prep' },
-    { name: 'Flashcards', icon: Layers, path: '/flashcards' },
+    { name: 'Flashcards', icon: Layers, path: '/flashcards', superAdminOnly: true },
     { name: 'Community', icon: Users, path: '/community' },
   ]
+
+  // Filter tools based on user role
+  const visibleTools = tools.filter(tool =>
+    !tool.superAdminOnly || userProfile?.role === 'superadmin'
+  )
 
   // Navigation content
   const navigationContent = useMemo(() => (
@@ -340,7 +345,7 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
                 <NotificationSidebarItem isCollapsed={false} onOpenChange={setNotificationsOpen} />
 
                 {/* Other tools */}
-                {tools.map((tool) => {
+                {visibleTools.map((tool) => {
                   const Icon = tool.icon
                   const isActive = location.pathname === tool.path
                   return (
@@ -366,7 +371,7 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
             <NotificationSidebarItem isCollapsed={true} onOpenChange={setNotificationsOpen} />
 
             {/* Other tools */}
-            {tools.map((tool) => {
+            {visibleTools.map((tool) => {
               const Icon = tool.icon
               const isActive = location.pathname === tool.path
               return (
@@ -384,7 +389,7 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
         )}
       </div>
     </nav>
-  ), [location.pathname, expandedSections, isCollapsed, navigate])
+  ), [location.pathname, expandedSections, isCollapsed, navigate, visibleTools])
 
   const SidebarContent = () => (
     <>

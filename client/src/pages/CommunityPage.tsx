@@ -25,7 +25,6 @@ import {
   Pin,
   Loader2,
   AlertCircle,
-  GraduationCap,
   Trash2,
   Eye
 } from 'lucide-react'
@@ -377,10 +376,6 @@ export function CommunityPage() {
     return 'other'
   }
 
-  const getAttachmentFileType = (attachment: Attachment): 'pdf' | 'image' | 'video' | 'other' => {
-    return attachment.type
-  }
-
   const getFileIcon = (type: string) => {
     switch (type) {
       case 'pdf':
@@ -394,7 +389,7 @@ export function CommunityPage() {
     }
   }
 
-  const getFileColor = (type: string) => {
+  const getFileColor = (_type: string) => {
     // Professional gray theme for all file types
     return 'bg-card dark:bg-card text-muted-foreground border-border dark:border-border'
   }
@@ -424,19 +419,19 @@ export function CommunityPage() {
 
     if (selectedFiles.length > 0) {
       try {
-        attachments = await Promise.all(
-          selectedFiles.map(async (file) => {
+        const uploadResults = await Promise.all(
+          selectedFiles.map(async (file): Promise<Attachment | null> => {
             try {
               // Create a unique filename with timestamp
               const timestamp = Date.now()
               const filename = `${timestamp}_${file.name}`
-              const storageRef = ref(storage, `attachments/${filename}`)
+              const storageRefPath = ref(storage, `attachments/${filename}`)
 
               // Upload the file
-              await uploadBytes(storageRef, file)
+              await uploadBytes(storageRefPath, file)
 
               // Get the download URL
-              const url = await getDownloadURL(storageRef)
+              const url = await getDownloadURL(storageRefPath)
 
               return {
                 type: getFileType(file) as 'pdf' | 'image' | 'video' | 'other',
@@ -456,7 +451,7 @@ export function CommunityPage() {
           })
         )
         // Filter out null values (failed uploads)
-        attachments = attachments.filter(a => a !== null) as Attachment[]
+        attachments = uploadResults.filter((a): a is Attachment => a !== null)
       } catch (error) {
         console.error('File upload error:', error)
         fileUploadFailed = true
@@ -503,16 +498,6 @@ export function CommunityPage() {
 
   const handleToggleBookmark = async (postId: string) => {
     await toggleBookmark(postId)
-  }
-
-  const handleTogglePin = async (postId: string) => {
-    await togglePin(postId)
-  }
-
-  const handleDeletePost = async (postId: string) => {
-    if (confirm('Are you sure you want to delete this post?')) {
-      await deletePost(postId)
-    }
   }
 
   const handleToggleExpand = (postId: string) => {
@@ -1149,11 +1134,7 @@ export function CommunityPage() {
               {sortedPosts.map((post, index) => {
                 const isLiked = currentUser ? post.likedBy.includes(currentUser.id) : false
                 const isBookmarked = currentUser ? post.bookmarkedBy.includes(currentUser.id) : false
-                const isUserAdmin = currentUser?.isAdmin || false
                 const isExpanded = expandedPosts.has(post.id)
-                const contentPreview = post.content.length > 150
-                  ? post.content.slice(0, 150) + '...'
-                  : post.content
 
                 return (
                   <motion.div

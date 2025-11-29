@@ -38,7 +38,7 @@ export function MTOHomePage() {
   // Dynamic question counts from Firebase
   const [topicCounts, setTopicCounts] = useState<Record<number, number>>({});
   const [mcqCounts, setMcqCounts] = useState<Record<string, number>>({});
-  const [countsLoading, setCountsLoading] = useState(true);
+  const [_countsLoading, setCountsLoading] = useState(true);
 
   // Load question counts from Firebase on mount
   useEffect(() => {

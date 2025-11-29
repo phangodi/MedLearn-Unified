@@ -74,5 +74,9 @@ if (validateConfig()) {
   console.warn('Firebase not initialized. Please configure environment variables.')
 }
 
-export { app, auth, db, storage }
+// Export with type assertion - app won't work without Firebase anyway
+const dbExport = db as Firestore
+const authExport = auth as Auth
+const storageExport = storage as FirebaseStorage
+export { app, authExport as auth, dbExport as db, storageExport as storage }
 export default app

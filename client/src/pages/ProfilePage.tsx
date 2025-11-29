@@ -10,7 +10,6 @@ import {
   FileText,
   Bookmark,
   CheckCircle2,
-  ThumbsUp,
   Eye
 } from 'lucide-react'
 import { useCommunityStore } from '@/store/communityStore'
@@ -26,16 +25,15 @@ import type { Post } from '@/types/community'
 import type { PrivacySettings as PrivacySettingsType } from '@/types/community'
 import { useAuth } from '@/contexts/AuthContext'
 import { generateMedicalPseudonym } from '@/lib/anonymousNames'
-import { doc, updateDoc, deleteDoc, collection, query, where, getDocs, writeBatch } from 'firebase/firestore'
+import { doc, updateDoc, collection, query, where, getDocs, writeBatch } from 'firebase/firestore'
 import { db, auth as firebaseAuth } from '@/firebase/config'
 import { deleteUser } from 'firebase/auth'
 
 export function ProfilePage() {
   const navigate = useNavigate()
   const { userProfile, loading: authLoading, signOut, updateUserProfile } = useAuth()
-  const { posts, comments, currentUser, setCurrentUser, fetchPosts, fetchComments, toggleLike, toggleBookmark, updatePrivacySettings } = useCommunityStore()
+  const { posts, comments, currentUser, setCurrentUser, fetchPosts, toggleLike, toggleBookmark, updatePrivacySettings } = useCommunityStore()
   const [activeTab, setActiveTab] = useState<'posts' | 'activity' | 'privacy'>('posts')
-  const [composeOpen, setComposeOpen] = useState(false)
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
   // Initialize user from auth

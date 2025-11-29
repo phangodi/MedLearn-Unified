@@ -32,7 +32,6 @@ import type { QuestionExplanation } from '../types/firebase';
 // ============================================================================
 
 const COLLECTION_NAME = 'questionExplanations';
-const QUESTIONS_COLLECTION = 'mtoQuestions';
 
 // Cache TTL in milliseconds (5 minutes)
 const CACHE_TTL = 5 * 60 * 1000;
@@ -224,7 +223,7 @@ export async function getQuestionsNeedingReview(): Promise<QuestionExplanation[]
 export async function saveExplanation(
   questionId: string,
   explanation: Omit<QuestionExplanation, 'questionId' | 'generatedAt'>,
-  userId: string
+  _userId: string
 ): Promise<boolean> {
   if (!db) {
     console.error('[ExplanationsService] Firestore not initialized');
@@ -256,7 +255,7 @@ export async function saveExplanation(
 /**
  * Mark an explanation as reviewed
  */
-export async function markAsReviewed(questionId: string, userId: string): Promise<boolean> {
+export async function markAsReviewed(questionId: string, _userId: string): Promise<boolean> {
   if (!db) {
     console.error('[ExplanationsService] Firestore not initialized');
     return false;
@@ -285,7 +284,7 @@ export async function markAsReviewed(questionId: string, userId: string): Promis
 export async function flagForReview(
   questionId: string,
   reason: string,
-  userId: string
+  _userId: string
 ): Promise<boolean> {
   if (!db) {
     console.error('[ExplanationsService] Firestore not initialized');
@@ -340,7 +339,7 @@ export async function batchSaveExplanations(
     questionId: string;
     explanation: Omit<QuestionExplanation, 'questionId' | 'generatedAt'>;
   }>,
-  userId: string
+  _userId: string
 ): Promise<{ success: number; failed: number }> {
   if (!db) {
     console.error('[ExplanationsService] Firestore not initialized');

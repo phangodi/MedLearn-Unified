@@ -11,7 +11,7 @@
  */
 
 import JSZip from 'jszip'
-import initSqlJs, { Database } from 'sql.js'
+import initSqlJs, { type Database } from 'sql.js'
 import { decompress } from 'fzstd'
 import type { CardContent, CardImage } from '../types/flashcard'
 import { uploadCardImage } from './storageService'
@@ -203,7 +203,7 @@ async function checkIfStubDatabase(dbData: Uint8Array): Promise<boolean> {
 /**
  * Parse the media mapping file (handles both JSON and Protobuf/zstd formats)
  */
-async function parseMediaMapping(zip: JSZip, formatVersion: FormatVersion): Promise<Record<string, string>> {
+async function parseMediaMapping(zip: JSZip, _formatVersion: FormatVersion): Promise<Record<string, string>> {
   const mediaFile = zip.file('media')
   if (!mediaFile) {
     console.log('[Anki Import] No media mapping file found in ZIP')
@@ -272,7 +272,6 @@ function parseDecompressedMediaMapping(data: Uint8Array): Record<string, string>
     // Look for length-prefixed strings (wire type 2)
     const tag = data[i]
     const wireType = tag & 0x07
-    const fieldNumber = tag >> 3
 
     if (wireType === 2 && i + 1 < data.length) { // Length-delimited
       i++
@@ -383,61 +382,6 @@ async function buildMediaMappingFromZip(zip: JSZip): Promise<Record<string, stri
   console.log(`[Anki Import] Total media mapping entries: ${Object.keys(mapping).length}`)
   return mapping
 }
-
-/**
- * Detect file extension from magic bytes
- */
-function detectFileExtension(header: Uint8Array): string {
-  if (header.length < 4) return '.bin'
-
-  // JPEG: FF D8 FF
-  if (header[0] === 0xFF && header[1] === 0xD8 && header[2] === 0xFF) {
-    return '.jpg'
-  }
-
-  // PNG: 89 50 4E 47
-  if (header[0] === 0x89 && header[1] === 0x50 && header[2] === 0x4E && header[3] === 0x47) {
-    return '.png'
-  }
-
-  // GIF: 47 49 46
-  if (header[0] === 0x47 && header[1] === 0x49 && header[2] === 0x46) {
-    return '.gif'
-  }
-
-  // WebP: RIFF....WEBP
-  if (header[0] === 0x52 && header[1] === 0x49 && header[2] === 0x46 && header[3] === 0x46) {
-    if (header.length >= 12 && header[8] === 0x57 && header[9] === 0x45 && header[10] === 0x42 && header[11] === 0x50) {
-      return '.webp'
-    }
-  }
-
-  // MP3: FF FB or ID3
-  if ((header[0] === 0xFF && (header[1] & 0xE0) === 0xE0) ||
-      (header[0] === 0x49 && header[1] === 0x44 && header[2] === 0x33)) {
-    return '.mp3'
-  }
-
-  // MP4/M4A: ....ftyp
-  if (header[4] === 0x66 && header[5] === 0x74 && header[6] === 0x79 && header[7] === 0x70) {
-    return '.mp4'
-  }
-
-  // OGG: OggS
-  if (header[0] === 0x4F && header[1] === 0x67 && header[2] === 0x67 && header[3] === 0x53) {
-    return '.ogg'
-  }
-
-  // WAV: RIFF....WAVE
-  if (header[0] === 0x52 && header[1] === 0x49 && header[2] === 0x46 && header[3] === 0x46) {
-    if (header.length >= 12 && header[8] === 0x57 && header[9] === 0x41 && header[10] === 0x56 && header[11] === 0x45) {
-      return '.wav'
-    }
-  }
-
-  return '.bin'
-}
-
 /**
  * Extract media files from ZIP (handles zstd compressed media in latest format)
  */
@@ -483,7 +427,7 @@ async function extractMediaFiles(
 
       // Determine MIME type from extension or magic bytes
       const mimeType = getMimeType(originalName, blobData)
-      const blob = new Blob([blobData], { type: mimeType })
+      const blob = new Blob([blobData as BlobPart], { type: mimeType })
 
       // Store by original name (for when media mapping works correctly)
       media.set(originalName, blob)
@@ -644,7 +588,7 @@ function getModels(db: Database): Map<number, AnkiModel> {
       const notetypesResult = db.exec('SELECT id, name, config FROM notetypes')
       if (notetypesResult.length > 0) {
         for (const row of notetypesResult[0].values) {
-          const [id, name, config] = row as [number, string, Uint8Array | null]
+          const [id, name, _config] = row as [number, string, Uint8Array | null]
           // In v18, config is a protobuf blob - we'll use basic detection for cloze
           // Cloze notetypes typically have "Cloze" in the name
           const isCloze = name.toLowerCase().includes('cloze')

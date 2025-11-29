@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState, useCallback } from 'react'
-import { collection, query, orderBy, onSnapshot, doc, Timestamp, where } from 'firebase/firestore'
+import { collection, query, orderBy, onSnapshot, doc } from 'firebase/firestore'
 import { db } from '@/firebase/config'
 import type {
   Notification,
@@ -52,7 +52,6 @@ export function NotificationProvider({ children }: { children: React.ReactNode }
 
   // Real-time listener for announcements
   useEffect(() => {
-    const now = Timestamp.now()
     const announcementsQuery = query(
       collection(db, 'announcements'),
       orderBy('createdAt', 'desc')

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
-import { applyActionCode, verifyPasswordResetCode, confirmPasswordReset } from 'firebase/auth'
+import { applyActionCode } from 'firebase/auth'
 import { auth } from '@/firebase/config'
 import { Button } from '@/components/ui/Button'
 import { motion } from 'framer-motion'

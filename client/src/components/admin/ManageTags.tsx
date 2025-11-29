@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { collection, doc, getDoc, setDoc } from 'firebase/firestore'
+import { doc, getDoc, setDoc } from 'firebase/firestore'
 import { db } from '@/firebase/config'
 import { Button } from '@/components/ui/Button'
 import { Plus, Tag, Trash2, RefreshCw, Check, X } from 'lucide-react'

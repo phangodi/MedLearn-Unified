@@ -1,4 +1,4 @@
-import { useState, FormEvent } from 'react'
+import { useState, type FormEvent } from 'react'
 import { collection, addDoc, doc, setDoc, Timestamp } from 'firebase/firestore'
 import { db } from '@/firebase/config'
 import { Sidebar } from '@/components/layout/Sidebar'
@@ -12,10 +12,12 @@ import { Users } from 'lucide-react'
 
 export function AdminNotificationsPage() {
   const [activeTab, setActiveTab] = useState<'announcement' | 'dashboard' | 'manage' | 'tags' | 'users'>('announcement')
+  const [sidebarOpen, setSidebarOpen] = useState(false)
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
 
   return (
     <div className="min-h-screen bg-background flex">
-      <Sidebar />
+      <Sidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} isCollapsed={sidebarCollapsed} setIsCollapsed={setSidebarCollapsed} />
       <main className="flex-1 overflow-auto">
         <div className="max-w-4xl mx-auto p-6">
           {/* Header */}

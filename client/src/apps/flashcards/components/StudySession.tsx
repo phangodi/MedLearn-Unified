@@ -26,7 +26,6 @@ import { useFlashcards } from '../hooks/useFlashcards'
 import { useFlashcardStore } from '@/store/flashcardStore'
 import { Button } from '@/components/ui/Button'
 import { Rating } from '../types/flashcard'
-import { getSchedulingInfo } from '../services/fsrsService'
 
 export function StudySession() {
   const { deckId } = useParams<{ deckId: string }>()
@@ -107,12 +106,6 @@ export function StudySession() {
   useEffect(() => {
     setIsFlipped(session.showAnswer)
   }, [session.showAnswer])
-
-  // Get scheduling info for current card
-  const schedulingInfo = useMemo(() => {
-    if (!session.currentCard) return null
-    return getSchedulingInfo(session.currentCard.fsrs)
-  }, [session.currentCard])
 
   // Handle exit
   const handleExit = async () => {

@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react'
-import { collection, getDocs, doc, deleteDoc, updateDoc } from 'firebase/firestore'
+import { collection, getDocs } from 'firebase/firestore'
 import { db } from '@/firebase/config'
 import { Sidebar } from '@/components/layout/Sidebar'
 import { Button } from '@/components/ui/Button'
@@ -18,8 +18,6 @@ import {
   Trash2,
   RefreshCw,
   AlertTriangle,
-  Eye,
-  EyeOff,
   Flag,
   CheckSquare
 } from 'lucide-react'
@@ -29,7 +27,6 @@ import {
   unresolveFlag,
   deleteFlag,
   getFlagStats,
-  type FlagReason
 } from '@/apps/physiology-mto/services/flagService'
 import { useAuth } from '@/contexts/AuthContext'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -1224,9 +1221,9 @@ function FlagsTab() {
         const questionsMap = new Map<string, MTOQuestion>()
         questionsSnapshot.docs.forEach(doc => {
           const data = doc.data() as MTOQuestion
-          questionsMap.set(doc.id, { id: doc.id, ...data })
+          questionsMap.set(doc.id, { ...data, id: doc.id })
           if (data.legacyId) {
-            questionsMap.set(data.legacyId, { id: doc.id, ...data })
+            questionsMap.set(data.legacyId, { ...data, id: doc.id })
           }
         })
 

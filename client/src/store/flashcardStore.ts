@@ -56,6 +56,7 @@ interface PreloadedCardProgress {
     difficulty: number
     elapsed_days: number
     scheduled_days: number
+    learning_steps: number
     reps: number
     lapses: number
     state: number
@@ -99,6 +100,7 @@ function savePreloadedCardProgress(
         difficulty: fsrs.difficulty,
         elapsed_days: fsrs.elapsed_days,
         scheduled_days: fsrs.scheduled_days,
+        learning_steps: fsrs.learning_steps,
         reps: fsrs.reps,
         lapses: fsrs.lapses,
         state: fsrs.state,
@@ -147,6 +149,7 @@ function restoreCardProgress(stored: PreloadedCardProgress): {
       difficulty: stored.fsrs.difficulty,
       elapsed_days: stored.fsrs.elapsed_days,
       scheduled_days: stored.fsrs.scheduled_days,
+      learning_steps: stored.fsrs.learning_steps || 0,
       reps: stored.fsrs.reps,
       lapses: stored.fsrs.lapses,
       state: stored.fsrs.state,
@@ -582,6 +585,7 @@ export const useFlashcardStore = create<FlashcardState>((set, get) => ({
               difficulty: newCardFSRS.difficulty,
               elapsed_days: newCardFSRS.elapsed_days,
               scheduled_days: newCardFSRS.scheduled_days,
+              learning_steps: newCardFSRS.learning_steps,
               reps: newCardFSRS.reps,
               lapses: newCardFSRS.lapses,
               state: newCardFSRS.state,
@@ -863,6 +867,7 @@ export const useFlashcardStore = create<FlashcardState>((set, get) => ({
           difficulty: updatedFSRS.difficulty,
           elapsed_days: updatedFSRS.elapsed_days,
           scheduled_days: updatedFSRS.scheduled_days,
+          learning_steps: updatedFSRS.learning_steps,
           reps: updatedFSRS.reps,
           lapses: updatedFSRS.lapses,
           state: updatedFSRS.state,

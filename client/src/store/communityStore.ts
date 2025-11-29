@@ -20,7 +20,6 @@ import {
 } from 'firebase/firestore'
 import { db } from '@/lib/firebase'
 import type { Post, Comment, UserProfile, Attachment, PrivacySettings } from '@/types/community'
-import { getAvatarForPseudonym } from '@/lib/anonymousNames'
 
 interface CommunityState {
   // State
@@ -47,7 +46,7 @@ interface CommunityState {
 }
 
 // Helper function to get role display with year if privacy settings allow
-const getRoleDisplay = (user: UserProfile, isAnonymous: boolean): string => {
+const getRoleDisplay = (user: UserProfile, _isAnonymous: boolean): string => {
   // If user has enabled showYear and has a year set, show graduation cap + year number
   if (user.year && user.privacySettings?.showYear) {
     return `🎓 ${user.year}`

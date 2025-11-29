@@ -15,7 +15,7 @@ interface AccountSecurityProps {
   userId: string
 }
 
-export function AccountSecurity({ email, authProvider, userId }: AccountSecurityProps) {
+export function AccountSecurity({ email, authProvider, userId: _userId }: AccountSecurityProps) {
   const [showChangePassword, setShowChangePassword] = useState(false)
 
   // Change Password states

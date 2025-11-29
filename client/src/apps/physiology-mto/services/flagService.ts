@@ -15,7 +15,6 @@ import {
   deleteDoc,
   query,
   where,
-  orderBy,
   Timestamp,
   arrayUnion,
   increment,

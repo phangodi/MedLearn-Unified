@@ -276,8 +276,6 @@ export function convertLegacyToMTOQuestion(
   legacyQuestion: LegacyQuestion,
   userId: string = 'system'
 ): Omit<MTOQuestion, 'createdAt' | 'updatedAt'> {
-  const now = Timestamp.now();
-
   return {
     text: legacyQuestion.text,
     textNormalized: normalizeText(legacyQuestion.text),

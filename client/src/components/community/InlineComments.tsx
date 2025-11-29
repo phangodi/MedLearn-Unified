@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Send, Heart, Award, Clock, Loader2, MessageSquare, ChevronDown, ChevronUp, Bookmark, Trash2, MoreHorizontal } from 'lucide-react'
+import { Send, Heart, Award, Loader2, MessageSquare, ChevronDown, ChevronUp, Bookmark, Trash2, MoreHorizontal } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { useCommunityStore } from '@/store/communityStore'
 import { formatTimestamp } from '@/lib/dateUtils'

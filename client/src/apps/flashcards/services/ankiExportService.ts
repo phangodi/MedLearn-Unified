@@ -11,7 +11,7 @@
  */
 
 import JSZip from 'jszip'
-import initSqlJs, { Database } from 'sql.js'
+import initSqlJs, { type Database } from 'sql.js'
 import { ref, getBlob } from 'firebase/storage'
 import { storage } from '@/firebase/config'
 import type { Deck, FlashCard } from '../types/flashcard'

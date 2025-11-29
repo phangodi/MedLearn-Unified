@@ -29,7 +29,7 @@ export function QuestionCard({
   const [showExplanation, setShowExplanation] = useState(false);
   const [showFlagMenu, setShowFlagMenu] = useState(false);
   const [flagStatus, setFlagStatus] = useState<'idle' | 'loading' | 'success' | 'already-flagged'>('idle');
-  const [userHasFlagged, setUserHasFlagged] = useState(false);
+  const [_userHasFlagged, setUserHasFlagged] = useState(false);
   const fetchedForQuestion = useRef<string | null>(null);
   const flagCheckRef = useRef<string | null>(null);
   const isMultipleChoice = question.correctAnswerCount > 1;

@@ -17,13 +17,9 @@ import {
   getDocs,
   getDoc,
   doc,
-  orderBy,
-  limit,
-  QueryConstraint,
-  Timestamp,
 } from 'firebase/firestore';
 import { db } from '@/firebase/config';
-import type { Question, QuestionMetadata } from '../../physiology/data/questions/types';
+import type { Question } from '../../physiology/data/questions/types';
 import type { MTOQuestion, QuestionExplanation, SystemStats } from '../types/firebase';
 
 // ============================================================================
