@@ -2,8 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useContentMode } from '../context';
 import { useFlipCards } from '../hooks';
-import { FormattedExamAnswer, MiniAudioPlayer } from '../components';
+import { FormattedExamAnswer, MiniAudioPlayer, QuickReviewContent } from '../components';
 import styles from '../App.module.css';
+
+// Import Quick Review data index for dynamic loading
+import { getQuickReviewContent } from '../data/QuickReview';
 
 /**
  * TopicPage Component - Detailed view of a single topic
@@ -11,7 +14,7 @@ import styles from '../App.module.css';
 const TopicPage = ({ topics }) => {
   const { topicId } = useParams();
   const topic = topics.find(t => t.id === topicId);
-  const { contentMode, useFormattedAnswers } = useContentMode();
+  const { contentMode, useFormattedAnswers, answerFormat } = useContentMode();
   const { flippedCards, toggleCard, isFlipped, resetCards } = useFlipCards(topicId);
   const [compactLineSpacing, setCompactLineSpacing] = useState(false);
 
@@ -160,7 +163,7 @@ const TopicPage = ({ topics }) => {
               {lo.examAnswer && (
                 <React.Fragment>
                   <div className={styles.sectionLabel} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px', marginBottom: lo.audioUrl ? '0' : undefined }}>
-                    <span>🎯 Oral Exam Answer</span>
+                    <span>{answerFormat === 'quickReview' ? '📝 Quick Review' : '🎯 Oral Exam Answer'}</span>
                     {/* Audio Player - Inline with section label */}
                     {lo.audioUrl && (
                       <MiniAudioPlayer
@@ -171,12 +174,40 @@ const TopicPage = ({ topics }) => {
                     )}
                   </div>
 
-                  <FormattedExamAnswer
-                    examAnswer={lo.examAnswer}
-                    className={styles.examAnswer}
-                    useFormatting={useFormattedAnswers}
-                    compactLineSpacing={compactLineSpacing}
-                  />
+                  {answerFormat === 'quickReview' ? (
+                    // Quick Review format
+                    (() => {
+                      const quickReviewData = getQuickReviewContent(topicId, lo.id);
+                      if (quickReviewData) {
+                        return (
+                          <QuickReviewContent
+                            content={quickReviewData}
+                            className={styles.examAnswer}
+                          />
+                        );
+                      }
+                      // Fallback to formatted answer if no Quick Review data
+                      return (
+                        <div className={styles.examAnswer} style={{ color: '#6b7280', fontStyle: 'italic' }}>
+                          Quick Review content not yet available for this Learning Objective.
+                          <FormattedExamAnswer
+                            examAnswer={lo.examAnswer}
+                            className={styles.examAnswer}
+                            useFormatting={true}
+                            compactLineSpacing={compactLineSpacing}
+                          />
+                        </div>
+                      );
+                    })()
+                  ) : (
+                    // Formatted or Compact format
+                    <FormattedExamAnswer
+                      examAnswer={lo.examAnswer}
+                      className={styles.examAnswer}
+                      useFormatting={answerFormat === 'formatted'}
+                      compactLineSpacing={compactLineSpacing}
+                    />
+                  )}
                 </React.Fragment>
               )}
             </div>

@@ -18,6 +18,16 @@ export const ContentModeProvider = ({ children }) => {
     return savedPref === null ? true : savedPref === 'true';
   });
 
+  // Answer format: 'formatted', 'compact', or 'quickReview'
+  // answerFormat replaces useFormattedAnswers but we keep both for backwards compatibility
+  const [answerFormat, setAnswerFormat] = useState(() => {
+    const savedFormat = localStorage.getItem('answerFormat');
+    if (savedFormat) return savedFormat;
+    // Migrate from old boolean setting
+    const oldPref = localStorage.getItem('useFormattedAnswers');
+    return oldPref === 'false' ? 'compact' : 'formatted';
+  });
+
   // Save to localStorage whenever mode changes
   useEffect(() => {
     localStorage.setItem('contentMode', contentMode);
@@ -27,6 +37,12 @@ export const ContentModeProvider = ({ children }) => {
     localStorage.setItem('useFormattedAnswers', useFormattedAnswers);
   }, [useFormattedAnswers]);
 
+  useEffect(() => {
+    localStorage.setItem('answerFormat', answerFormat);
+    // Keep useFormattedAnswers in sync for backwards compatibility
+    setUseFormattedAnswers(answerFormat === 'formatted');
+  }, [answerFormat]);
+
   const toggleContentMode = (mode) => {
     setContentMode(mode);
   };
@@ -35,12 +51,18 @@ export const ContentModeProvider = ({ children }) => {
     setUseFormattedAnswers(!useFormattedAnswers);
   };
 
+  const setAnswerFormatMode = (format) => {
+    setAnswerFormat(format);
+  };
+
   return (
-    <ContentModeContext.Provider value={{ 
-      contentMode, 
+    <ContentModeContext.Provider value={{
+      contentMode,
       toggleContentMode,
       useFormattedAnswers,
-      toggleFormattedAnswers
+      toggleFormattedAnswers,
+      answerFormat,
+      setAnswerFormatMode
     }}>
       {children}
     </ContentModeContext.Provider>

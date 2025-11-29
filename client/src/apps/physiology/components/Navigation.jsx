@@ -10,7 +10,7 @@ import styles from '../App.module.css';
 const Navigation = ({ topics = [] }) => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { contentMode, toggleContentMode, useFormattedAnswers, toggleFormattedAnswers } = useContentMode();
+  const { contentMode, toggleContentMode, answerFormat, setAnswerFormatMode } = useContentMode();
   const { selectedMcqFilter } = useMcqFilter();
   const [mobileMenuOpen, toggleMobileMenu, setMobileMenuOpen] = useToggle(false);
   const [customizeOptionsOpen, toggleCustomizeOptions, setCustomizeOptionsOpen] = useToggle(false);
@@ -170,18 +170,24 @@ const Navigation = ({ topics = [] }) => {
 
               <div className={styles.customizeSection}>
                 <label>Oral Exam Answer Format</label>
-                <div className={styles.contentToggle}>
+                <div className={`${styles.contentToggle} ${styles.contentToggleThree}`}>
                   <button
-                    className={useFormattedAnswers ? styles.active : ''}
-                    onClick={toggleFormattedAnswers}
+                    className={answerFormat === 'formatted' ? styles.active : ''}
+                    onClick={() => setAnswerFormatMode('formatted')}
                   >
                     Formatted
                   </button>
                   <button
-                    className={!useFormattedAnswers ? styles.active : ''}
-                    onClick={toggleFormattedAnswers}
+                    className={answerFormat === 'compact' ? styles.active : ''}
+                    onClick={() => setAnswerFormatMode('compact')}
                   >
                     Compact
+                  </button>
+                  <button
+                    className={answerFormat === 'quickReview' ? styles.active : ''}
+                    onClick={() => setAnswerFormatMode('quickReview')}
+                  >
+                    Quick Review
                   </button>
                 </div>
               </div>
