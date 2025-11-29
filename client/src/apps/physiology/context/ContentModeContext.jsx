@@ -5,10 +5,9 @@ const ContentModeContext = createContext();
 export const ContentModeProvider = ({ children }) => {
   // Get initial mode from localStorage or default to 'hideDetails'
   // Modes: 'keyPoints', 'definitions', 'hideDetails'
+  // V2 key resets all users to hideDetails default (Nov 2025)
   const [contentMode, setContentMode] = useState(() => {
-    const savedMode = localStorage.getItem('contentMode');
-    // Clean up old setting
-    localStorage.removeItem('showSupplementaryContent');
+    const savedMode = localStorage.getItem('contentModeV2');
     return savedMode || 'hideDetails';
   });
 
@@ -27,7 +26,7 @@ export const ContentModeProvider = ({ children }) => {
 
   // Save to localStorage whenever mode changes
   useEffect(() => {
-    localStorage.setItem('contentMode', contentMode);
+    localStorage.setItem('contentModeV2', contentMode);
   }, [contentMode]);
 
   useEffect(() => {
