@@ -19,16 +19,10 @@ export const ContentModeProvider = ({ children }) => {
   });
 
   // Answer format: 'formatted', 'compact', or 'quickReview'
-  // answerFormat replaces useFormattedAnswers but we keep both for backwards compatibility
+  // V2 key resets all users to quickReview default (Nov 2025)
   const [answerFormat, setAnswerFormat] = useState(() => {
-    const savedFormat = localStorage.getItem('answerFormat');
-    if (savedFormat) return savedFormat;
-    // Migrate from old boolean setting
-    const oldPref = localStorage.getItem('useFormattedAnswers');
-    if (oldPref === 'false') return 'compact';
-    if (oldPref === 'true') return 'formatted';
-    // Default to quickReview for new users
-    return 'quickReview';
+    const savedFormat = localStorage.getItem('answerFormatV2');
+    return savedFormat || 'quickReview';
   });
 
   // Save to localStorage whenever mode changes
@@ -41,7 +35,7 @@ export const ContentModeProvider = ({ children }) => {
   }, [useFormattedAnswers]);
 
   useEffect(() => {
-    localStorage.setItem('answerFormat', answerFormat);
+    localStorage.setItem('answerFormatV2', answerFormat);
     // Keep useFormattedAnswers in sync for backwards compatibility
     setUseFormattedAnswers(answerFormat === 'formatted');
   }, [answerFormat]);
