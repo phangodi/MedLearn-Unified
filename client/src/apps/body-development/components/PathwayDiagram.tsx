@@ -85,11 +85,34 @@ function parsePathwayDiagram(text: string): PathwayData {
     }
 
     // Parse regular nodes
+    // First check for inline horizontal sequences (A → B → C)
+    if (line.includes('→') && !line.includes('↓')) {
+      const sequenceItems = line
+        .split('→')
+        .map(s => s.trim())
+        .filter(s => s)
+
+      if (sequenceItems.length > 1) {
+        // Treat as a sequence - each item is a separate node
+        sequenceItems.forEach((item) => {
+          nodes.push({
+            id: `node-${nodes.length}`,
+            label: item,
+            type: 'regular',
+            level,
+            column: undefined
+          })
+          level++
+        })
+        continue
+      }
+    }
+
     // Check if multiple items on same line (parallel branches)
     const parallelItems = line
       .split(/\s{2,}/) // Split by 2+ spaces
       .map(s => s.trim())
-      .filter(s => s && s !== '↓' && !s.includes('→'))
+      .filter(s => s && s !== '↓')
 
     if (parallelItems.length > 1) {
       // Multiple nodes on same line = parallel branches
@@ -502,20 +525,15 @@ export function PathwayDiagram({ diagram, title, className = '' }: PathwayDiagra
       >
         <div className="flex items-center gap-3">
           <div className="
-            w-10 h-10 rounded-lg
-            bg-gradient-to-br from-rose-500 to-pink-600
-            flex items-center justify-center
-            shadow-lg group-hover:shadow-xl
-            transition-shadow duration-300
-          ">
-            <span className="text-white text-xl">🧬</span>
-          </div>
+            w-2 h-8 rounded-full
+            bg-gradient-to-b from-rose-500 to-pink-600
+          " />
           <div className="text-left">
-            <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-100">
+            <h3 className="text-base font-semibold text-slate-800 dark:text-slate-100">
               {title || 'Signaling Pathway'}
             </h3>
-            <p className="text-sm text-slate-600 dark:text-slate-400">
-              {isExpanded ? 'Click to collapse' : 'Click to view interactive pathway'}
+            <p className="text-xs text-slate-500 dark:text-slate-400">
+              {isExpanded ? 'Click to collapse' : 'Click to expand'}
             </p>
           </div>
         </div>
@@ -613,30 +631,24 @@ export function PathwayDiagram({ diagram, title, className = '' }: PathwayDiagra
                 </div>
               </div>
 
-              {/* Legend */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8 }}
-                className="mt-8 flex flex-wrap items-center justify-center gap-6 px-4"
-              >
-                <div className="flex items-center gap-2">
-                  <div className="w-12 h-0.5 bg-gradient-to-r from-rose-500 to-pink-600" />
-                  <span className="text-sm text-slate-600 dark:text-slate-400">Activation</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-12 h-0.5 border-t-2 border-dashed border-red-500" />
-                  <span className="text-sm text-slate-600 dark:text-slate-400">Inhibition</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-6 h-6 rounded bg-gradient-to-br from-rose-500/20 to-pink-600/20 border border-rose-300/30" />
-                  <span className="text-sm text-slate-600 dark:text-slate-400">Step</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-6 h-6 rounded bg-gradient-to-br from-red-500/20 to-red-600/20 border-2 border-red-500/30" />
-                  <span className="text-sm text-slate-600 dark:text-slate-400">Inhibitor</span>
-                </div>
-              </motion.div>
+              {/* Legend - only show if there are inhibitors */}
+              {nodes.some(n => n.type === 'inhibitor') && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.8 }}
+                  className="mt-8 flex flex-wrap items-center justify-center gap-6 px-4"
+                >
+                  <div className="flex items-center gap-2">
+                    <div className="w-10 h-0.5 bg-gradient-to-r from-rose-500 to-pink-600" />
+                    <span className="text-xs text-slate-500 dark:text-slate-400">Activation</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-10 h-0.5 border-t-2 border-dashed border-red-500" />
+                    <span className="text-xs text-slate-500 dark:text-slate-400">Inhibition</span>
+                  </div>
+                </motion.div>
+              )}
             </div>
           </motion.div>
         )}
