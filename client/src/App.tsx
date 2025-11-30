@@ -26,6 +26,7 @@ import { AdminNotificationsPage } from './pages/AdminNotificationsPage'
 import { MTOAdminPage } from './pages/MTOAdminPage'
 import { AIExamPrepPage } from './pages/AIExamPrepPage'
 import { FlashcardsPage } from './pages/FlashcardsPage'
+import { BodyDevelopmentPage } from './pages/BodyDevelopmentPage'
 
 function App() {
   return (
@@ -108,6 +109,7 @@ function App() {
             <Route path="/sociology/exam2/chapter/:id" element={<ProtectedRoute><SociologyExam2ChapterPage /></ProtectedRoute>} />
             <Route path="/anatomy" element={<ProtectedRoute><AnatomyPage /></ProtectedRoute>} />
             <Route path="/anatomy/cns" element={<ProtectedRoute><AnatomyCNSPage /></ProtectedRoute>} />
+            <Route path="/electives/body-development/*" element={<ProtectedRoute><BodyDevelopmentPage /></ProtectedRoute>} />
             <Route path="/" element={<Navigate to="/dashboard" replace />} />
             <Route path="*" element={<Navigate to="/dashboard" replace />} />
           </Routes>

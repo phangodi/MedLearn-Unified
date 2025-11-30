@@ -18,7 +18,9 @@ import {
   Sun,
   Bell,
   FileQuestion,
-  Layers
+  Layers,
+  Dna,
+  GraduationCap
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { Logo } from '@/components/ui/Logo'
@@ -39,7 +41,7 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
   const location = useLocation()
   const { userProfile, signOut } = useAuth()
   const { theme, toggleTheme } = useTheme()
-  const [expandedSections, setExpandedSections] = useState<string[]>(['subjects', 'tools'])
+  const [expandedSections, setExpandedSections] = useState<string[]>(['subjects', 'electives', 'tools'])
   const [showExpandTooltip, setShowExpandTooltip] = useState(false)
   const [notificationsOpen, setNotificationsOpen] = useState(false)
   const [settingsOpen, setSettingsOpen] = useState(false)
@@ -140,6 +142,10 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
     { name: 'Histology', icon: Microscope, path: '/histology' },
     { name: 'Sociology', icon: Users, path: '/sociology' },
     { name: 'Anatomy', icon: User, path: '/anatomy' },
+  ]
+
+  const electives = [
+    { name: 'Body Development', icon: Dna, path: '/electives/body-development' },
   ]
 
   const tools = [
@@ -310,7 +316,78 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
         )}
       </div>
 
-      {/* Divider between Subjects and Tools */}
+      {/* Divider between Subjects and Electives */}
+      {isCollapsed && (
+        <div className="my-3 mx-auto w-8 h-px bg-border/50" />
+      )}
+
+      {/* Electives Section */}
+      <div className="pt-4">
+        {!isCollapsed && (
+          <button
+            onClick={() => toggleSection('electives')}
+            className="sidebar-header w-full flex items-center justify-between px-3 py-2 rounded-lg dark:hover:bg-gray-800/40 transition-colors text-left"
+          >
+            <span className="text-xs uppercase tracking-wider">Electives</span>
+            {expandedSections.includes('electives') ? (
+              <ChevronDown className="sidebar-icon w-4 h-4" />
+            ) : (
+              <ChevronRight className="sidebar-icon w-4 h-4" />
+            )}
+          </button>
+        )}
+
+        <AnimatePresence initial={false}>
+          {expandedSections.includes('electives') && !isCollapsed && (
+            <motion.div
+              initial={false}
+              animate={{ height: 'auto', opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="overflow-hidden"
+            >
+              <div className="space-y-1 pt-1">
+                {electives.map((elective) => {
+                  const Icon = elective.icon
+                  const isActive = location.pathname.startsWith(elective.path)
+                  return (
+                    <button
+                      key={elective.name}
+                      onClick={() => navigate(elective.path)}
+                      className={`sidebar-item ${isActive ? 'active' : ''} w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg text-left`}
+                    >
+                      <Icon className="sidebar-icon w-4.5 h-4.5" />
+                      <span className="text-sm">{elective.name}</span>
+                    </button>
+                  )
+                })}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Collapsed view - show icons only */}
+        {isCollapsed && (
+          <div className="space-y-1 pt-1">
+            {electives.map((elective) => {
+              const Icon = elective.icon
+              const isActive = location.pathname.startsWith(elective.path)
+              return (
+                <button
+                  key={elective.name}
+                  onClick={() => navigate(elective.path)}
+                  className={`sidebar-item ${isActive ? 'active' : ''} w-full flex items-center justify-center px-3 py-2 rounded-lg`}
+                  title={elective.name}
+                >
+                  <Icon className="sidebar-icon w-5 h-5" />
+                </button>
+              )
+            })}
+          </div>
+        )}
+      </div>
+
+      {/* Divider between Electives and Tools */}
       {isCollapsed && (
         <div className="my-3 mx-auto w-8 h-px bg-border/50" />
       )}
