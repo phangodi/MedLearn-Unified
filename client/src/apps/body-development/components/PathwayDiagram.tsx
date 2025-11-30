@@ -631,7 +631,7 @@ export function PathwayDiagram({ diagram, title, className = '' }: PathwayDiagra
                 </div>
               </div>
 
-              {/* Legend - only show if there are inhibitors */}
+              {/* Legend - show all 4 items when there are inhibitors */}
               {nodes.some(n => n.type === 'inhibitor') && (
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -646,6 +646,14 @@ export function PathwayDiagram({ diagram, title, className = '' }: PathwayDiagra
                   <div className="flex items-center gap-2">
                     <div className="w-10 h-0.5 border-t-2 border-dashed border-red-500" />
                     <span className="text-xs text-slate-500 dark:text-slate-400">Inhibition</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-5 h-5 rounded bg-gradient-to-br from-rose-500/20 to-pink-600/20 border border-rose-300/30" />
+                    <span className="text-xs text-slate-500 dark:text-slate-400">Step</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-5 h-5 rounded bg-gradient-to-br from-red-500/20 to-red-600/20 border-2 border-red-500/30" />
+                    <span className="text-xs text-slate-500 dark:text-slate-400">Inhibitor</span>
                   </div>
                 </motion.div>
               )}
