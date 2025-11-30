@@ -13,7 +13,7 @@ This approach guarantees consistent styling and eliminates HTML rendering bugs.
 ## Block Types Reference
 
 ```javascript
-// Supported block types:
+// Supported block types - USE EXACT PROPERTY NAMES:
 { type: 'header', text: 'Section Title', critical: false }
 { type: 'paragraph', text: 'Content text', critical: false }
 { type: 'keypoint', text: 'Important highlighted point', critical: true }
@@ -24,6 +24,11 @@ This approach guarantees consistent styling and eliminates HTML rendering bugs.
 { type: 'table', headers: ['Col1', 'Col2'], rows: [['a', 'b'], ['c', 'd']] }
 { type: 'clinical', text: 'Clinical relevance note' }
 ```
+
+**⚠️ CRITICAL: Use exact property names!**
+- Use `text:` NOT `content:` for header, paragraph, keypoint, clinical
+- Use `intro:` NOT `title:` for list and steps blocks
+- Comparison must have `left:` and `right:` objects, each with `title:` and `items:`
 
 ### Block Styling (handled by CSS)
 
