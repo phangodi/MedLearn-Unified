@@ -1,14 +1,11 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, Save, Plus, Trash2, AlertCircle, Image as ImageIcon } from 'lucide-react'
 import { useFlashcards } from '../hooks'
-import { RichTextEditor } from './RichTextEditor'
+import { WYSIWYGEditor, type Editor } from './editor/WYSIWYGEditor'
+import { MathModal } from './editor/MathModal'
 import { ImageUploader } from './ImageUploader'
-import ReactMarkdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
-import remarkMath from 'remark-math'
-import rehypeKatex from 'rehype-katex'
-import rehypeRaw from 'rehype-raw'
+import { marked } from 'marked'
 import 'katex/dist/katex.min.css'
 
 interface CardEditorProps {
@@ -20,6 +17,49 @@ interface CardEditorProps {
 
 type EditingSide = 'front' | 'back'
 
+/**
+ * Convert markdown to HTML for old cards that only have markdown text
+ * This allows the WYSIWYG editor to properly render existing markdown content
+ */
+const markdownToHtml = (markdown: string): string => {
+  if (!markdown) return ''
+
+  try {
+    // Configure marked for GFM (GitHub Flavored Markdown) with tables, line breaks
+    marked.setOptions({
+      gfm: true,
+      breaks: true,
+    })
+
+    // Convert markdown to HTML synchronously
+    const html = marked.parse(markdown, { async: false }) as string
+    return html
+  } catch (error) {
+    console.error('Failed to convert markdown to HTML:', error)
+    // Return original markdown if conversion fails
+    return markdown
+  }
+}
+
+/**
+ * Get initial content for the editor, handling both HTML and markdown cards
+ */
+const getInitialContent = (cardContent: { text: string; html?: string } | undefined): string => {
+  if (!cardContent) return ''
+
+  // If HTML exists, use it directly (already formatted for WYSIWYG)
+  if (cardContent.html) {
+    return cardContent.html
+  }
+
+  // If only markdown text exists, convert it to HTML for the editor
+  if (cardContent.text) {
+    return markdownToHtml(cardContent.text)
+  }
+
+  return ''
+}
+
 export function CardEditor({ deckId, cardId, onClose, onSave }: CardEditorProps) {
   const { cards, createCard, updateCard, deleteCard, userId } = useFlashcards()
   const isEditMode = !!cardId
@@ -28,13 +68,34 @@ export function CardEditor({ deckId, cardId, onClose, onSave }: CardEditorProps)
   // Generate temporary ID for new cards (for organizing uploaded images)
   const tempCardId = useMemo(() => cardId || `temp-${Date.now()}`, [cardId])
 
-  // Form state
-  const [frontContent, setFrontContent] = useState(existingCard?.front.text || '')
-  const [backContent, setBackContent] = useState(existingCard?.back.text || '')
+  // Form state - convert markdown to HTML if needed for proper WYSIWYG rendering
+  const [frontContent, setFrontContent] = useState(
+    getInitialContent(existingCard?.front)
+  )
+  const [backContent, setBackContent] = useState(
+    getInitialContent(existingCard?.back)
+  )
   const [tags, setTags] = useState<string[]>(existingCard?.tags || [])
   const [tagInput, setTagInput] = useState('')
   const [editingSide, setEditingSide] = useState<EditingSide>('front')
   const [showImageUploader, setShowImageUploader] = useState(false)
+
+  // Math modal state
+  const [mathModalState, setMathModalState] = useState<{
+    isOpen: boolean
+    latex: string
+    isBlock: boolean
+    onSave: (latex: string) => void
+  }>({
+    isOpen: false,
+    latex: '',
+    isBlock: false,
+    onSave: () => {}
+  })
+
+  // Editor refs for inserting content
+  const frontEditorRef = useRef<Editor | null>(null)
+  const backEditorRef = useRef<Editor | null>(null)
 
   // UI state
   const [isSaving, setIsSaving] = useState(false)
@@ -44,9 +105,11 @@ export function CardEditor({ deckId, cardId, onClose, onSave }: CardEditorProps)
 
   // Track unsaved changes
   useEffect(() => {
+    const existingFrontContent = getInitialContent(existingCard?.front)
+    const existingBackContent = getInitialContent(existingCard?.back)
     const hasChanges =
-      frontContent !== (existingCard?.front.text || '') ||
-      backContent !== (existingCard?.back.text || '') ||
+      frontContent !== existingFrontContent ||
+      backContent !== existingBackContent ||
       JSON.stringify(tags) !== JSON.stringify(existingCard?.tags || [])
     setHasUnsavedChanges(hasChanges)
   }, [frontContent, backContent, tags, existingCard])
@@ -64,6 +127,12 @@ export function CardEditor({ deckId, cardId, onClose, onSave }: CardEditorProps)
     return () => window.removeEventListener('beforeunload', handleBeforeUnload)
   }, [hasUnsavedChanges])
 
+  // Check if HTML content contains empty image placeholders
+  const hasEmptyPlaceholders = (html: string): boolean => {
+    // Check for image placeholder nodes in HTML
+    return html.includes('data-type="image-placeholder"')
+  }
+
   // Validation
   const validateCard = (): string | null => {
     if (!frontContent.trim()) {
@@ -73,6 +142,20 @@ export function CardEditor({ deckId, cardId, onClose, onSave }: CardEditorProps)
       return 'Back content is required'
     }
     return null
+  }
+
+  // Check for placeholders before saving
+  const checkPlaceholders = (): boolean => {
+    const frontHasPlaceholders = hasEmptyPlaceholders(frontContent)
+    const backHasPlaceholders = hasEmptyPlaceholders(backContent)
+
+    if (frontHasPlaceholders || backHasPlaceholders) {
+      const confirmed = window.confirm(
+        'This card has empty image placeholders. Images won\'t appear when studying.\n\nSave anyway?'
+      )
+      return confirmed
+    }
+    return true
   }
 
   // Save card
@@ -85,23 +168,28 @@ export function CardEditor({ deckId, cardId, onClose, onSave }: CardEditorProps)
       return
     }
 
+    // Warn about empty placeholders
+    if (!checkPlaceholders()) {
+      return
+    }
+
     setIsSaving(true)
 
     try {
       if (isEditMode && cardId) {
-        // Update existing card
+        // Update existing card - save both text and html for backwards compatibility
         await updateCard(cardId, {
-          front: { text: frontContent },
-          back: { text: backContent },
+          front: { text: frontContent, html: frontContent } as any,
+          back: { text: backContent, html: backContent } as any,
           tags
         })
       } else {
-        // Create new card
+        // Create new card - save both text and html for backwards compatibility
         await createCard({
           deckId,
           userId: userId!,
-          front: { text: frontContent },
-          back: { text: backContent },
+          front: { text: frontContent, html: frontContent } as any,
+          back: { text: backContent, html: backContent } as any,
           tags
         })
       }
@@ -170,17 +258,40 @@ export function CardEditor({ deckId, cardId, onClose, onSave }: CardEditorProps)
   }
 
   // Handle image upload completion
-  const handleImageUpload = (_url: string, markdown: string) => {
-    if (editingSide === 'front') {
-      setFrontContent(prev => prev + '\n\n' + markdown)
-    } else {
-      setBackContent(prev => prev + '\n\n' + markdown)
+  const handleImageUpload = (url: string, _markdown: string) => {
+    // Insert image at cursor position
+    const editor = editingSide === 'front' ? frontEditorRef.current : backEditorRef.current
+    if (editor) {
+      editor.chain().focus().setImage({ src: url, alt: 'Uploaded image' }).run()
     }
     setShowImageUploader(false)
   }
 
-  const currentContent = editingSide === 'front' ? frontContent : backContent
-  const setCurrentContent = editingSide === 'front' ? setFrontContent : setBackContent
+  // Handle math editing (when clicking on existing math)
+  const handleMathEdit = (latex: string, isBlock: boolean, onSave: (newLatex: string) => void) => {
+    setMathModalState({
+      isOpen: true,
+      latex,
+      isBlock,
+      onSave
+    })
+  }
+
+  // Handle inserting new math from toolbar
+  const handleMathClick = () => {
+    const editor = editingSide === 'front' ? frontEditorRef.current : backEditorRef.current
+    setMathModalState({
+      isOpen: true,
+      latex: '',
+      isBlock: false,
+      onSave: (latex: string) => {
+        if (editor && latex) {
+          // Insert as inline math wrapped in $ delimiters
+          editor.chain().focus().insertContent(`$${latex}$`).run()
+        }
+      }
+    })
+  }
 
   return (
     <div
@@ -212,7 +323,7 @@ export function CardEditor({ deckId, cardId, onClose, onSave }: CardEditorProps)
               {isEditMode ? 'Edit Flashcard' : 'Create New Flashcard'}
             </h2>
             <p className="text-sm text-muted-foreground mt-1">
-              Use markdown to format your content with images, LaTeX math, and more
+              Use the rich text editor to format your content with images, LaTeX math, and more
             </p>
           </div>
 
@@ -283,110 +394,71 @@ export function CardEditor({ deckId, cardId, onClose, onSave }: CardEditorProps)
             </button>
           </div>
 
-          {/* Split view: Editor and Preview */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {/* Editor panel */}
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <h3 className="text-lg font-semibold text-foreground">Editor</h3>
-                <button
-                  onClick={() => setShowImageUploader(!showImageUploader)}
-                  className={`
-                    flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium
-                    transition-all duration-200
-                    ${showImageUploader
-                      ? 'bg-primary text-primary-foreground'
-                      : 'bg-muted text-muted-foreground hover:bg-muted/80'
-                    }
-                  `}
-                >
-                  <ImageIcon className="w-4 h-4" />
-                  Upload Image
-                </button>
-              </div>
-
-              {/* Image uploader */}
-              <AnimatePresence>
-                {showImageUploader && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    className="overflow-hidden"
-                  >
-                    <ImageUploader
-                      cardId={tempCardId}
-                      onUploadComplete={handleImageUpload}
-                      onError={(err) => setError(err)}
-                    />
-                  </motion.div>
-                )}
-              </AnimatePresence>
-
-              {/* Rich text editor */}
-              <RichTextEditor
-                value={currentContent}
-                onChange={setCurrentContent}
-                placeholder={`Enter ${editingSide === 'front' ? 'question' : 'answer'} content using markdown...
-
-Example:
-## What is photosynthesis?
-
-Use **bold** and *italic* for emphasis.
-
-Add LaTeX equations: $$E = mc^2$$
-
-Insert images: ![description](url)`}
-                onImageClick={() => setShowImageUploader(true)}
-              />
+          {/* Editor section */}
+          <div className="space-y-4">
+            {/* Upload Image button */}
+            <div className="flex items-center justify-end">
+              <button
+                onClick={() => setShowImageUploader(!showImageUploader)}
+                className={`
+                  flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium
+                  transition-all duration-200
+                  ${showImageUploader
+                    ? 'bg-primary text-primary-foreground'
+                    : 'bg-muted text-muted-foreground hover:bg-muted/80'
+                  }
+                `}
+              >
+                <ImageIcon className="w-4 h-4" />
+                Upload Image
+              </button>
             </div>
 
-            {/* Preview panel */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-foreground">Preview</h3>
+            {/* Image uploader */}
+            <AnimatePresence>
+              {showImageUploader && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  className="overflow-hidden"
+                >
+                  <ImageUploader
+                    cardId={tempCardId}
+                    onUploadComplete={handleImageUpload}
+                    onError={(err) => setError(err)}
+                  />
+                </motion.div>
+              )}
+            </AnimatePresence>
 
-              <div className="min-h-[200px] p-6 rounded-lg border border-border bg-muted/30">
-                {currentContent.trim() ? (
-                  <div className="prose prose-sm dark:prose-invert max-w-none">
-                    <ReactMarkdown
-                      remarkPlugins={[remarkGfm, remarkMath]}
-                      rehypePlugins={[rehypeKatex, rehypeRaw]}
-                      components={{
-                        img: ({ node, ...props }) => (
-                          <img
-                            {...props}
-                            className="rounded-lg max-w-full h-auto"
-                            loading="lazy"
-                            onError={(e) => {
-                              // Show placeholder on error
-                              const target = e.target as HTMLImageElement
-                              target.style.display = 'none'
-                              const placeholder = document.createElement('div')
-                              placeholder.className = 'flex items-center justify-center p-4 bg-muted rounded-lg text-muted-foreground text-sm'
-                              placeholder.textContent = `Image failed to load: ${props.alt || 'Unknown'}`
-                              target.parentNode?.insertBefore(placeholder, target)
-                            }}
-                          />
-                        ),
-                        code: ({ node, className, ...props }) => {
-                          const isInline = !className?.includes('language-')
-                          return isInline ? (
-                            <code className="bg-muted px-1.5 py-0.5 rounded text-sm" {...props} />
-                          ) : (
-                            <code className="block bg-muted p-4 rounded-lg text-sm overflow-x-auto" {...props} />
-                          )
-                        }
-                      }}
-                    >
-                      {currentContent}
-                    </ReactMarkdown>
-                  </div>
-                ) : (
-                  <div className="flex items-center justify-center h-full text-muted-foreground">
-                    <p className="text-sm">Preview will appear here as you type...</p>
-                  </div>
-                )}
-              </div>
+            {/* WYSIWYG Editor */}
+            <div className="w-full">
+              {editingSide === 'front' ? (
+                <WYSIWYGEditor
+                  content={frontContent}
+                  onChange={(html) => setFrontContent(html)}
+                  onMathEdit={handleMathEdit}
+                  onEditorReady={(editor) => { frontEditorRef.current = editor }}
+                  onImageClick={() => setShowImageUploader(true)}
+                  onMathClick={handleMathClick}
+                  cardId={tempCardId}
+                  placeholder="Enter question content..."
+                  minHeight="300px"
+                />
+              ) : (
+                <WYSIWYGEditor
+                  content={backContent}
+                  onChange={(html) => setBackContent(html)}
+                  onMathEdit={handleMathEdit}
+                  onEditorReady={(editor) => { backEditorRef.current = editor }}
+                  onImageClick={() => setShowImageUploader(true)}
+                  onMathClick={handleMathClick}
+                  cardId={tempCardId}
+                  placeholder="Enter answer content..."
+                  minHeight="300px"
+                />
+              )}
             </div>
           </div>
 
@@ -554,6 +626,15 @@ Insert images: ![description](url)`}
           </div>
         </div>
       </motion.div>
+
+      {/* Math Modal */}
+      <MathModal
+        isOpen={mathModalState.isOpen}
+        onClose={() => setMathModalState({ ...mathModalState, isOpen: false })}
+        initialLatex={mathModalState.latex}
+        onSave={mathModalState.onSave}
+        isBlock={mathModalState.isBlock}
+      />
     </div>
   )
 }

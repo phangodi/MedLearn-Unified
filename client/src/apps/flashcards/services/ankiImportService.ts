@@ -945,6 +945,7 @@ export async function uploadMediaAndCreateCards(
 
 /**
  * Replace media references in content with Firebase URLs
+ * Returns CardContent with both text and html fields for proper rendering
  */
 function replaceMediaRefs(
   content: string,
@@ -986,11 +987,14 @@ function replaceMediaRefs(
     }
   }
 
+  // Anki cards contain HTML content, so we store in both text and html fields
+  // text: for backwards compatibility and fallback
+  // html: for proper HTML rendering in study session
   // Only include images field if there are actual images (Firestore doesn't accept undefined)
   if (images.length > 0) {
-    return { text, images }
+    return { text, html: text, images }
   }
-  return { text }
+  return { text, html: text }
 }
 
 /**

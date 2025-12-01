@@ -28,11 +28,13 @@ export interface CardImage {
 
 /**
  * Content structure for card front or back
- * Supports markdown text and optional images
+ * Supports both markdown text and rich HTML content with optional images
  */
 export interface CardContent {
-  /** Markdown-formatted text content */
+  /** Markdown-formatted text content (legacy, still supported) */
   text: string
+  /** HTML-formatted content from WYSIWYG editor (preferred for rich formatting) */
+  html?: string
   /** Optional array of images */
   images?: CardImage[]
 }

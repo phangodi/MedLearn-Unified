@@ -544,6 +544,7 @@ export function StudySession() {
 interface CardSideProps {
   content: {
     text: string
+    html?: string
     images?: { id: string; url: string; alt?: string }[]
   }
   label: string
@@ -551,10 +552,14 @@ interface CardSideProps {
 }
 
 function CardSide({ content, label, onImageClick }: CardSideProps) {
+  // Prefer HTML content if available, otherwise fall back to text (markdown)
+  const hasHtml = content.html && content.html.trim().length > 0
+  const displayContent = hasHtml ? content.html! : content.text
+
   // Sanitize HTML content with DOMPurify for security
   // Allows safe HTML tags (formatting, images) while removing dangerous content
   const sanitizedContent = useMemo(() => {
-    return DOMPurify.sanitize(content.text, {
+    return DOMPurify.sanitize(displayContent, {
       ALLOWED_TAGS: ['b', 'i', 'u', 'strong', 'em', 'p', 'br', 'div', 'span',
                      'ul', 'ol', 'li', 'img', 'table', 'tr', 'td', 'th', 'thead', 'tbody',
                      'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'sub', 'sup', 'blockquote',
@@ -563,7 +568,7 @@ function CardSide({ content, label, onImageClick }: CardSideProps) {
                      'color', 'size', 'face'],
       ALLOW_DATA_ATTR: false,
     })
-  }, [content.text])
+  }, [displayContent])
 
   return (
     <div className="bg-card border-2 border-border rounded-2xl p-6 sm:p-8 shadow-lg h-full flex flex-col">
@@ -574,12 +579,18 @@ function CardSide({ content, label, onImageClick }: CardSideProps) {
       <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-muted-foreground/20 scrollbar-track-transparent">
         {/* HTML/Markdown Content - sanitized for security */}
         <div className="prose prose-sm sm:prose dark:prose-invert max-w-none card-content">
-          <ReactMarkdown
-            remarkPlugins={[remarkGfm, remarkMath]}
-            rehypePlugins={[rehypeKatex, rehypeRaw]}
-          >
-            {sanitizedContent}
-          </ReactMarkdown>
+          {hasHtml ? (
+            // Render raw HTML (sanitized) for WYSIWYG content
+            <div dangerouslySetInnerHTML={{ __html: sanitizedContent }} />
+          ) : (
+            // Render markdown for text-only content
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm, remarkMath]}
+              rehypePlugins={[rehypeKatex, rehypeRaw]}
+            >
+              {sanitizedContent}
+            </ReactMarkdown>
+          )}
         </div>
 
         {/* Additional images stored separately (for tracking) */}
