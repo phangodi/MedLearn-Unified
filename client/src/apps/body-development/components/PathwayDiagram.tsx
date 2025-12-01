@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronDown, ChevronUp } from 'lucide-react'
 
 // Node type detection
-type NodeType = 'regular' | 'branch-point' | 'merge-point' | 'inhibitor'
+type NodeType = 'regular' | 'branch-point' | 'merge-point' | 'inhibitor' | 'section-header'
 
 interface PathwayNode {
   id: string
@@ -42,11 +42,95 @@ function parsePathwayDiagram(text: string): PathwayData {
   let isBranching = false
   let branchColumns = 1
 
+  // Pre-process: combine related lines and handle special patterns
+  const processedLines: string[] = []
+  let inOutcomeSection = false  // Track if we're collecting outcome lines after ↓
+  let lastSequenceIndex = -1
+  let lastNonConnectorIndex = -1  // Track last regular line for bullet combining
+
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i].trim()
 
+    // Skip empty lines
+    if (!line) continue
+
+    // Check if this line ends with : (potential section header or label with bullets)
+    const endsWithColon = line.endsWith(':') && !line.includes('→')
+
+    // Look ahead to see if next content line is a bullet
+    let nextContentLine = ''
+    for (let j = i + 1; j < lines.length; j++) {
+      const nextLine = lines[j].trim()
+      if (nextLine && nextLine !== '↓' && nextLine !== '|') {
+        nextContentLine = nextLine
+        break
+      }
+    }
+
+    // It's a section header ONLY if it ends with : AND next content is NOT a bullet
+    // (If next content is a bullet, this is a label for a list, not a section divider)
+    const isSectionHeader = endsWithColon && !nextContentLine.startsWith('•')
+
+    // Check if this is a down arrow - start outcome collection
+    if (line === '↓' || line === '|') {
+      inOutcomeSection = true
+      processedLines.push(line)
+      continue
+    }
+
+    // If this is a bullet item, combine with previous non-connector line
+    if (line.startsWith('•')) {
+      if (lastNonConnectorIndex >= 0) {
+        processedLines[lastNonConnectorIndex] = processedLines[lastNonConnectorIndex] + '\n' + line
+      }
+      continue
+    }
+
+    // If we're in outcome section and this line doesn't have →, it's an outcome
+    // Combine with the last sequence node
+    if (inOutcomeSection && !line.includes('→') && !isSectionHeader && lastSequenceIndex >= 0) {
+      // This is an outcome line - append to the last sequence
+      processedLines[lastSequenceIndex] = processedLines[lastSequenceIndex] + '\n• ' + line
+      // Stay in outcome section to collect more outcomes
+      continue
+    }
+
+    // Any other line type ends the outcome section
+    inOutcomeSection = false
+
+    // If this contains →, it's a sequence - remember its index
+    if (line.includes('→')) {
+      lastSequenceIndex = processedLines.length
+    }
+
+    // Section headers become special markers (prefixed)
+    if (isSectionHeader) {
+      processedLines.push('§HEADER§' + line)
+    } else {
+      processedLines.push(line)
+      lastNonConnectorIndex = processedLines.length - 1
+    }
+  }
+
+  for (let i = 0; i < processedLines.length; i++) {
+    let line = processedLines[i].trim()
+
     // Skip pure connector lines (just arrows)
     if (line === '↓' || line === '|') {
+      continue
+    }
+
+    // Handle section headers (marked with §HEADER§ prefix)
+    if (line.startsWith('§HEADER§')) {
+      const headerText = line.replace('§HEADER§', '')
+      nodes.push({
+        id: `header-${nodes.length}`,
+        label: headerText,
+        type: 'section-header',
+        level,
+        column: undefined
+      })
+      level++
       continue
     }
 
@@ -159,6 +243,11 @@ function parsePathwayDiagram(text: string): PathwayData {
   for (let i = 0; i < nodes.length; i++) {
     const node = nodes[i]
 
+    // Section headers don't connect to anything - they are visual dividers
+    if (node.type === 'section-header') {
+      continue
+    }
+
     if (node.type === 'inhibitor') {
       // Find target node
       const targetNode = nodes.find(n =>
@@ -175,9 +264,9 @@ function parsePathwayDiagram(text: string): PathwayData {
       continue
     }
 
-    // Find next level nodes
+    // Find next level nodes (excluding section headers - they break the flow)
     const nextLevelNodes = nodes.filter(n =>
-      n.level === node.level + 1 && n.type !== 'inhibitor'
+      n.level === node.level + 1 && n.type !== 'inhibitor' && n.type !== 'section-header'
     )
 
     if (nextLevelNodes.length === 0) continue
@@ -229,13 +318,41 @@ function parsePathwayDiagram(text: string): PathwayData {
 function PathwayNode({
   node,
   index,
+  stepNumber,
   isHighlighted
 }: {
   node: PathwayNode
   index: number
+  stepNumber?: number // Step number for display (excludes section headers and inhibitors)
   isHighlighted: boolean
 }) {
   const isInhibitor = node.type === 'inhibitor'
+  const isSectionHeader = node.type === 'section-header'
+  const hasBulletItems = node.label.includes('\n') && node.label.includes('•')
+
+  // Section headers get special full-width styling
+  if (isSectionHeader) {
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: index * 0.08, type: 'spring', stiffness: 200, damping: 20 }}
+        className="w-full max-w-md"
+      >
+        <div className="
+          relative rounded-lg px-6 py-3
+          bg-gradient-to-r from-slate-100 via-slate-50 to-slate-100
+          dark:from-slate-800 dark:via-slate-700 dark:to-slate-800
+          border-2 border-slate-300 dark:border-slate-600
+          shadow-md
+        ">
+          <p className="text-center font-bold text-slate-700 dark:text-slate-200">
+            {node.label}
+          </p>
+        </div>
+      </motion.div>
+    )
+  }
 
   return (
     <motion.div
@@ -254,7 +371,7 @@ function PathwayNode({
       }}
       className={`
         relative group
-        ${isInhibitor ? 'w-32' : 'w-48'}
+        ${isInhibitor ? 'w-32' : hasBulletItems ? 'w-64' : 'w-48'}
       `}
     >
       {/* Gradient glow effect */}
@@ -287,7 +404,7 @@ function PathwayNode({
             shadow-lg
             group-hover:scale-110 transition-transform duration-200
           ">
-            {index + 1}
+            {stepNumber ?? (index + 1)}
           </div>
         )}
 
@@ -305,15 +422,48 @@ function PathwayNode({
 
         {/* Node content */}
         <div className="text-center">
-          <p className={`
-            font-medium leading-tight
-            ${isInhibitor
-              ? 'text-sm text-red-700 dark:text-red-400'
-              : 'text-slate-800 dark:text-slate-100'
-            }
-          `}>
-            {node.label}
-          </p>
+          {/* Check if label contains bullet items (multi-line with •) */}
+          {node.label.includes('\n') && node.label.includes('•') ? (
+            <div className="text-left">
+              {/* Header line */}
+              <p className={`
+                font-semibold leading-tight mb-2
+                ${isInhibitor
+                  ? 'text-sm text-red-700 dark:text-red-400'
+                  : 'text-slate-800 dark:text-slate-100'
+                }
+              `}>
+                {node.label.split('\n')[0]}
+              </p>
+              {/* Bullet items */}
+              <ul className="space-y-1">
+                {node.label.split('\n').slice(1).map((item, idx) => (
+                  <li
+                    key={idx}
+                    className={`
+                      text-sm leading-tight
+                      ${isInhibitor
+                        ? 'text-red-600 dark:text-red-400'
+                        : 'text-slate-700 dark:text-slate-200'
+                      }
+                    `}
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : (
+            <p className={`
+              font-medium leading-tight
+              ${isInhibitor
+                ? 'text-sm text-red-700 dark:text-red-400'
+                : 'text-slate-800 dark:text-slate-100'
+              }
+            `}>
+              {node.label}
+            </p>
+          )}
 
           {/* Type indicator */}
           {node.type === 'branch-point' && (
@@ -489,6 +639,13 @@ function ConnectionLines({
   )
 }
 
+// Interface for a pathway section (nodes between section headers)
+interface PathwaySection {
+  header: PathwayNode | null
+  nodes: PathwayNode[]
+  stepNumbers: Map<string, number>
+}
+
 export function PathwayDiagram({ diagram, title, className = '' }: PathwayDiagramProps) {
   const [isExpanded, setIsExpanded] = useState(false)
   const [highlightedNode, setHighlightedNode] = useState<string | null>(null)
@@ -497,7 +654,51 @@ export function PathwayDiagram({ diagram, title, className = '' }: PathwayDiagra
   const pathwayData = parsePathwayDiagram(diagram)
   const { nodes, connections } = pathwayData
 
-  // Group nodes by level and column for layout
+  // Group nodes into sections (separated by section headers)
+  const sections: PathwaySection[] = []
+  let currentSection: PathwaySection = { header: null, nodes: [], stepNumbers: new Map() }
+
+  nodes.forEach(node => {
+    if (node.type === 'section-header') {
+      // If we have nodes in current section, push it and start new one
+      if (currentSection.nodes.length > 0 || currentSection.header) {
+        sections.push(currentSection)
+      }
+      currentSection = { header: node, nodes: [], stepNumbers: new Map() }
+    } else {
+      currentSection.nodes.push(node)
+    }
+  })
+  // Push the last section
+  if (currentSection.nodes.length > 0 || currentSection.header) {
+    sections.push(currentSection)
+  }
+
+  // Calculate step numbers for each section independently
+  sections.forEach(section => {
+    let stepCounter = 1
+    section.nodes.forEach(node => {
+      if (node.type !== 'inhibitor') {
+        section.stepNumbers.set(node.id, stepCounter++)
+      }
+    })
+  })
+
+  // Check if we have parallel pathways (multiple sections with headers)
+  const isParallelMode = sections.length >= 2 && sections.every(s => s.header !== null)
+
+  // For non-parallel mode, use the old logic
+  const stepNumbers = new Map<string, number>()
+  if (!isParallelMode) {
+    let stepCounter = 1
+    nodes.forEach(node => {
+      if (node.type !== 'section-header' && node.type !== 'inhibitor') {
+        stepNumbers.set(node.id, stepCounter++)
+      }
+    })
+  }
+
+  // Group nodes by level and column for layout (used in non-parallel mode)
   const levels = nodes.reduce((acc, node) => {
     if (!acc[node.level]) acc[node.level] = []
     acc[node.level].push(node)
@@ -561,75 +762,144 @@ export function PathwayDiagram({ diagram, title, className = '' }: PathwayDiagra
             className="overflow-hidden"
           >
             <div className="pt-8 pb-4">
-              {/* Diagram container with SVG overlay */}
-              <div
-                ref={containerRef}
-                className="relative min-h-[600px] w-full px-4"
-              >
-                {/* Connection lines (background layer) */}
-                <ConnectionLines
-                  nodes={nodes}
-                  connections={connections}
-                  containerRef={containerRef}
-                />
-
-                {/* Nodes (foreground layer) */}
-                <div className="relative z-10 flex flex-col items-center gap-12">
-                  {Object.entries(levels)
-                    .sort(([a], [b]) => Number(a) - Number(b))
-                    .map(([levelNum, levelNodes]) => {
-                      const level = Number(levelNum)
-                      const hasMultipleColumns = levelNodes.some(n => n.column !== undefined && n.column >= 0)
-                      const inhibitors = levelNodes.filter(n => n.type === 'inhibitor')
-                      const regularNodes = levelNodes.filter(n => n.type !== 'inhibitor')
-
-                      return (
-                        <div
-                          key={level}
-                          className="flex items-center justify-center gap-8 w-full"
+              {/* Parallel pathways mode - render sections side by side */}
+              {isParallelMode ? (
+                <div className="flex flex-col lg:flex-row gap-8 lg:gap-4 justify-center px-4">
+                  {sections.map((section, sectionIndex) => (
+                    <div
+                      key={sectionIndex}
+                      className="flex-1 max-w-md"
+                    >
+                      {/* Section header */}
+                      {section.header && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: sectionIndex * 0.1 }}
+                          className="mb-6"
                         >
-                          {/* Inhibitors (left side) */}
-                          {inhibitors.length > 0 && (
-                            <div className="flex flex-col gap-4 mr-8">
-                              {inhibitors.map((node) => (
-                                <div key={node.id} data-node-id={node.id}>
-                                  <PathwayNode
-                                    node={node}
-                                    index={nodes.indexOf(node)}
-                                    isHighlighted={highlightedNode === node.id}
-                                  />
-                                </div>
-                              ))}
-                            </div>
-                          )}
-
-                          {/* Regular nodes */}
                           <div className={`
-                            flex items-center gap-8
-                            ${hasMultipleColumns ? 'justify-center' : 'justify-center'}
+                            rounded-lg px-4 py-3 text-center
+                            ${sectionIndex === 0
+                              ? 'bg-gradient-to-r from-emerald-100 to-teal-100 dark:from-emerald-900/30 dark:to-teal-900/30 border-2 border-emerald-300 dark:border-emerald-600'
+                              : 'bg-gradient-to-r from-rose-100 to-red-100 dark:from-rose-900/30 dark:to-red-900/30 border-2 border-rose-300 dark:border-rose-600'
+                            }
                           `}>
-                            {regularNodes
-                              .sort((a, b) => (a.column ?? 0) - (b.column ?? 0))
-                              .map((node) => (
-                                <div
-                                  key={node.id}
-                                  data-node-id={node.id}
-                                  onMouseEnter={() => setHighlightedNode(node.id)}
-                                  onMouseLeave={() => setHighlightedNode(null)}
-                                >
-                                  <PathwayNode
-                                    node={node}
-                                    index={nodes.indexOf(node)}
-                                    isHighlighted={highlightedNode === node.id}
-                                  />
-                                </div>
-                              ))}
+                            <p className={`font-bold text-sm ${sectionIndex === 0 ? 'text-emerald-700 dark:text-emerald-300' : 'text-rose-700 dark:text-rose-300'}`}>
+                              {section.header.label}
+                            </p>
                           </div>
-                        </div>
-                      )
-                    })}
+                        </motion.div>
+                      )}
+
+                      {/* Section nodes - vertical flow with animations and connectors */}
+                      <div className="flex flex-col items-center">
+                        {section.nodes.map((node, nodeIndex) => (
+                          <div key={node.id} className="flex flex-col items-center">
+                            {/* Connector dot from previous node */}
+                            {nodeIndex > 0 && (
+                              <motion.div
+                                initial={{ opacity: 0, scale: 0 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ delay: (nodeIndex + sectionIndex * 10) * 0.08 + 0.1 }}
+                                className="flex flex-col items-center py-2"
+                              >
+                                <div className="w-0.5 h-4 bg-gradient-to-b from-rose-400 to-rose-500" />
+                                <div className="w-2 h-2 rounded-full bg-rose-500 shadow-sm" />
+                                <div className="w-0.5 h-4 bg-gradient-to-b from-rose-500 to-rose-400" />
+                              </motion.div>
+                            )}
+                            <div
+                              data-node-id={node.id}
+                              onMouseEnter={() => setHighlightedNode(node.id)}
+                              onMouseLeave={() => setHighlightedNode(null)}
+                            >
+                              <PathwayNode
+                                node={node}
+                                index={nodeIndex + (sectionIndex * 10)}
+                                stepNumber={section.stepNumbers.get(node.id)}
+                                isHighlighted={highlightedNode === node.id}
+                              />
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              </div>
+              ) : (
+                /* Non-parallel mode - original vertical layout */
+                <div
+                  ref={containerRef}
+                  className="relative min-h-[600px] w-full px-4"
+                >
+                  {/* Connection lines (background layer) */}
+                  <ConnectionLines
+                    nodes={nodes}
+                    connections={connections}
+                    containerRef={containerRef}
+                  />
+
+                  {/* Nodes (foreground layer) */}
+                  <div className="relative z-10 flex flex-col items-center gap-12">
+                    {Object.entries(levels)
+                      .sort(([a], [b]) => Number(a) - Number(b))
+                      .map(([levelNum, levelNodes]) => {
+                        const level = Number(levelNum)
+                        const hasMultipleColumns = levelNodes.some(n => n.column !== undefined && n.column >= 0)
+                        const inhibitors = levelNodes.filter(n => n.type === 'inhibitor')
+                        const regularNodes = levelNodes.filter(n => n.type !== 'inhibitor')
+
+                        return (
+                          <div
+                            key={level}
+                            className="flex items-center justify-center gap-8 w-full"
+                          >
+                            {/* Inhibitors (left side) */}
+                            {inhibitors.length > 0 && (
+                              <div className="flex flex-col gap-4 mr-8">
+                                {inhibitors.map((node) => (
+                                  <div key={node.id} data-node-id={node.id}>
+                                    <PathwayNode
+                                      node={node}
+                                      index={nodes.indexOf(node)}
+                                      stepNumber={stepNumbers.get(node.id)}
+                                      isHighlighted={highlightedNode === node.id}
+                                    />
+                                  </div>
+                                ))}
+                              </div>
+                            )}
+
+                            {/* Regular nodes */}
+                            <div className={`
+                              flex items-center gap-8
+                              ${hasMultipleColumns ? 'justify-center' : 'justify-center'}
+                            `}>
+                              {regularNodes
+                                .sort((a, b) => (a.column ?? 0) - (b.column ?? 0))
+                                .map((node) => (
+                                  <div
+                                    key={node.id}
+                                    data-node-id={node.id}
+                                    onMouseEnter={() => setHighlightedNode(node.id)}
+                                    onMouseLeave={() => setHighlightedNode(null)}
+                                  >
+                                    <PathwayNode
+                                      node={node}
+                                      index={nodes.indexOf(node)}
+                                      stepNumber={stepNumbers.get(node.id)}
+                                      isHighlighted={highlightedNode === node.id}
+                                    />
+                                  </div>
+                                ))}
+                            </div>
+                          </div>
+                        )
+                      })}
+                  </div>
+                </div>
+              )}
 
               {/* Legend - show all 4 items when there are inhibitors */}
               {nodes.some(n => n.type === 'inhibitor') && (
