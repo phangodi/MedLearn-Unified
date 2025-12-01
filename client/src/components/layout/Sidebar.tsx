@@ -19,8 +19,7 @@ import {
   Bell,
   FileQuestion,
   Layers,
-  Dna,
-  GraduationCap
+  Dna
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { Logo } from '@/components/ui/Logo'

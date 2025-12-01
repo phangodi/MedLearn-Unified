@@ -340,7 +340,7 @@ function ConnectionLines({
 }: {
   nodes: PathwayNode[]
   connections: Connection[]
-  containerRef: React.RefObject<HTMLDivElement>
+  containerRef: React.RefObject<HTMLDivElement | null>
 }) {
   const [positions, setPositions] = useState<Map<string, { x: number; y: number }>>(new Map())
 

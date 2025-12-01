@@ -4,8 +4,14 @@ export interface EssaySection {
   content?: string
   subsections?: {
     title: string
+    content?: string
     bullets?: string[]
     numbered?: string[]
+    table?: {
+      headers: string[]
+      rows: string[][]
+    }
+    diagram?: string
   }[]
   bullets?: string[]
   numbered?: string[]
