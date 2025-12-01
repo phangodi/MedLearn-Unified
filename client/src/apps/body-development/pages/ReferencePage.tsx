@@ -1,17 +1,14 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import { Sidebar } from '@/components/layout/Sidebar'
-import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import { Button } from '@/components/ui/Button'
 import {
-  LogOut,
   ArrowLeft,
   Table as TableIcon,
   BookText,
   Search,
 } from 'lucide-react'
-import { useAuth } from '@/contexts/AuthContext'
 
 // Summary Tables Data (From All 22 Essay Questions)
 const summaryTables = [
@@ -324,22 +321,14 @@ const abbreviations = [
 
 export function ReferencePage() {
   const navigate = useNavigate()
-  const { signOut } = useAuth()
   const [sidebarOpen, setSidebarOpen] = useState(false)
-  const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
+  // Initialize as collapsed - no animation needed
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(() => {
+    localStorage.setItem('sidebarCollapsed', 'true')
+    return true
+  })
   const [activeTab, setActiveTab] = useState<'tables' | 'abbreviations'>('tables')
   const [searchQuery, setSearchQuery] = useState('')
-
-  // Auto-COLLAPSE sidebar on body development pages (more room for content)
-  useEffect(() => {
-    setSidebarCollapsed(true)
-    localStorage.setItem('sidebarCollapsed', 'true')
-  }, [])
-
-  const handleLogout = async () => {
-    await signOut()
-    navigate('/login')
-  }
 
   const handleBack = () => {
     navigate('/electives/body-development')
@@ -371,37 +360,54 @@ export function ReferencePage() {
 
   return (
     <div className="min-h-screen bg-background flex">
-      {/* Medium Intensity Aurora Gradient Background */}
+      {/* Aurora Gradient Background - balanced intensity */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
         <motion.div
           animate={{
-            opacity: [0.25, 0.4, 0.25],
-            scale: [1, 1.08, 1],
+            opacity: [0.5, 0.75, 0.5],
+            scale: [1, 1.15, 1],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
+          className="absolute -top-1/2 -left-1/4 w-[900px] h-[900px] rounded-full
+                     bg-gradient-to-br from-rose-300/55 via-pink-300/40 to-transparent
+                     dark:from-rose-500/45 dark:via-pink-500/28 dark:to-transparent
+                     blur-3xl"
+        />
+        <motion.div
+          animate={{
+            opacity: [0.4, 0.6, 0.4],
+            scale: [1.1, 1, 1.1],
           }}
           transition={{
             duration: 10,
             repeat: Infinity,
             ease: 'easeInOut',
+            delay: 1,
           }}
-          className="absolute -top-1/3 -left-1/4 w-[700px] h-[700px] rounded-full
-                     bg-gradient-to-br from-rose-300/35 via-pink-300/22 to-transparent
-                     dark:from-rose-500/25 dark:via-pink-500/15 dark:to-transparent
+          className="absolute -bottom-1/2 -right-1/4 w-[1000px] h-[1000px] rounded-full
+                     bg-gradient-to-tl from-rose-400/50 via-pink-400/35 to-transparent
+                     dark:from-rose-600/38 dark:via-pink-600/25 dark:to-transparent
                      blur-3xl"
         />
         <motion.div
           animate={{
-            opacity: [0.2, 0.35, 0.2],
-            scale: [1.05, 1, 1.05],
+            opacity: [0.45, 0.65, 0.45],
+            x: [0, 50, 0],
+            y: [0, -30, 0],
           }}
           transition={{
             duration: 12,
             repeat: Infinity,
             ease: 'easeInOut',
-            delay: 1,
+            delay: 2,
           }}
-          className="absolute -bottom-1/3 -right-1/4 w-[800px] h-[800px] rounded-full
-                     bg-gradient-to-tl from-rose-400/32 via-pink-400/18 to-transparent
-                     dark:from-rose-600/20 dark:via-pink-600/12 dark:to-transparent
+          className="absolute top-1/3 right-1/3 w-[700px] h-[700px] rounded-full
+                     bg-gradient-to-br from-pink-300/45 via-rose-300/35 to-transparent
+                     dark:from-pink-500/35 dark:via-rose-500/25 dark:to-transparent
                      blur-3xl"
         />
       </div>
@@ -409,27 +415,15 @@ export function ReferencePage() {
       <Sidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} isCollapsed={sidebarCollapsed} setIsCollapsed={setSidebarCollapsed} />
 
       <div className="flex-1 flex flex-col relative z-10">
-        {/* Header */}
-        <header className="sticky top-0 z-30 bg-card/95 backdrop-blur-sm border-b border-border/50 h-[60px]">
-          <div className="px-6 lg:px-10 h-full flex items-center justify-between">
-            {/* Back Button */}
-            <Button variant="ghost" size="sm" onClick={handleBack}>
-              <ArrowLeft className="w-4 h-4 mr-1.5" />
-              <span className="hidden sm:inline text-sm">Back to Hub</span>
-            </Button>
-
-            <div className="flex items-center gap-1.5">
-              <ThemeToggle />
-              <Button variant="ghost" size="sm" onClick={handleLogout}>
-                <LogOut className="w-4 h-4 mr-1.5" />
-                <span className="hidden sm:inline text-sm">Logout</span>
-              </Button>
-            </div>
-          </div>
-        </header>
-
         {/* Main Content */}
         <main className="flex-1 w-full mx-auto px-6 lg:px-10 py-8 relative z-10 max-w-7xl">
+          {/* Back Button */}
+          <div className="mb-6">
+            <Button variant="ghost" size="sm" onClick={handleBack}>
+              <ArrowLeft className="w-4 h-4 mr-1.5" />
+              Back to Hub
+            </Button>
+          </div>
           {/* Page Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}

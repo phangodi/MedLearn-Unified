@@ -1,11 +1,9 @@
-import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { useState, useEffect, useRef } from 'react'
+import { motion } from 'framer-motion'
 import { useParams, useNavigate } from 'react-router-dom'
 import { Sidebar } from '@/components/layout/Sidebar'
-import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import { Button } from '@/components/ui/Button'
 import {
-  LogOut,
   ArrowLeft,
   ChevronLeft,
   ChevronRight,
@@ -14,25 +12,26 @@ import {
   List,
   ChevronDown,
 } from 'lucide-react'
-import { useAuth } from '@/contexts/AuthContext'
 import { PathwayDiagram } from '../components/PathwayDiagram'
 import { essays } from '../data/essays'
 
 export function EssayPage() {
   const { essayId } = useParams<{ essayId: string }>()
   const navigate = useNavigate()
-  const { signOut } = useAuth()
   const [sidebarOpen, setSidebarOpen] = useState(false)
-  const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
+  // Initialize from localStorage so sidebar doesn't animate on mount
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(() => {
+    return localStorage.getItem('sidebarCollapsed') === 'true'
+  })
   const [showTableOfContents, setShowTableOfContents] = useState(false)
-
-  // Auto-COLLAPSE sidebar on body development pages (more room for content)
-  useEffect(() => {
-    setSidebarCollapsed(true)
-    localStorage.setItem('sidebarCollapsed', 'true')
-  }, [])
+  const topRef = useRef<HTMLDivElement>(null)
 
   const essay = essays[Number(essayId)]
+
+  // Scroll to top when essayId changes
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [essayId])
 
   // If essay not found, redirect to hub
   useEffect(() => {
@@ -40,11 +39,6 @@ export function EssayPage() {
       navigate('/electives/body-development')
     }
   }, [essay, navigate])
-
-  const handleLogout = async () => {
-    await signOut()
-    navigate('/login')
-  }
 
   const handleBack = () => {
     navigate('/electives/body-development')
@@ -54,7 +48,6 @@ export function EssayPage() {
     const prevId = Number(essayId) - 1
     if (prevId >= 1) {
       navigate(`/electives/body-development/essay/${prevId}`)
-      window.scrollTo({ top: 0, behavior: 'smooth' })
     }
   }
 
@@ -62,7 +55,6 @@ export function EssayPage() {
     const nextId = Number(essayId) + 1
     if (nextId <= 22) {
       navigate(`/electives/body-development/essay/${nextId}`)
-      window.scrollTo({ top: 0, behavior: 'smooth' })
     }
   }
 
@@ -89,37 +81,54 @@ export function EssayPage() {
 
   return (
     <div className="min-h-screen bg-background flex">
-      {/* Medium Intensity Aurora Gradient Background */}
+      {/* Aurora Gradient Background - balanced intensity */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
         <motion.div
           animate={{
-            opacity: [0.25, 0.4, 0.25],
-            scale: [1, 1.08, 1],
+            opacity: [0.5, 0.75, 0.5],
+            scale: [1, 1.15, 1],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
+          className="absolute -top-1/2 -left-1/4 w-[900px] h-[900px] rounded-full
+                     bg-gradient-to-br from-rose-300/55 via-pink-300/40 to-transparent
+                     dark:from-rose-500/45 dark:via-pink-500/28 dark:to-transparent
+                     blur-3xl"
+        />
+        <motion.div
+          animate={{
+            opacity: [0.4, 0.6, 0.4],
+            scale: [1.1, 1, 1.1],
           }}
           transition={{
             duration: 10,
             repeat: Infinity,
             ease: 'easeInOut',
+            delay: 1,
           }}
-          className="absolute -top-1/3 -left-1/4 w-[700px] h-[700px] rounded-full
-                     bg-gradient-to-br from-rose-300/35 via-pink-300/22 to-transparent
-                     dark:from-rose-500/25 dark:via-pink-500/15 dark:to-transparent
+          className="absolute -bottom-1/2 -right-1/4 w-[1000px] h-[1000px] rounded-full
+                     bg-gradient-to-tl from-rose-400/50 via-pink-400/35 to-transparent
+                     dark:from-rose-600/38 dark:via-pink-600/25 dark:to-transparent
                      blur-3xl"
         />
         <motion.div
           animate={{
-            opacity: [0.2, 0.35, 0.2],
-            scale: [1.05, 1, 1.05],
+            opacity: [0.45, 0.65, 0.45],
+            x: [0, 50, 0],
+            y: [0, -30, 0],
           }}
           transition={{
             duration: 12,
             repeat: Infinity,
             ease: 'easeInOut',
-            delay: 1,
+            delay: 2,
           }}
-          className="absolute -bottom-1/3 -right-1/4 w-[800px] h-[800px] rounded-full
-                     bg-gradient-to-tl from-rose-400/32 via-pink-400/18 to-transparent
-                     dark:from-rose-600/20 dark:via-pink-600/12 dark:to-transparent
+          className="absolute top-1/3 right-1/3 w-[700px] h-[700px] rounded-full
+                     bg-gradient-to-br from-pink-300/45 via-rose-300/35 to-transparent
+                     dark:from-pink-500/35 dark:via-rose-500/25 dark:to-transparent
                      blur-3xl"
         />
       </div>
@@ -127,33 +136,21 @@ export function EssayPage() {
       <Sidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} isCollapsed={sidebarCollapsed} setIsCollapsed={setSidebarCollapsed} />
 
       <div className="flex-1 flex flex-col relative z-10">
-        {/* Header */}
-        <header className="sticky top-0 z-30 bg-card/95 backdrop-blur-sm border-b border-border/50 h-[60px]">
-          <div className="px-6 lg:px-10 h-full flex items-center justify-between">
-            {/* Back Button */}
-            <Button variant="ghost" size="sm" onClick={handleBack}>
-              <ArrowLeft className="w-4 h-4 mr-1.5" />
-              <span className="hidden sm:inline text-sm">Back to Hub</span>
-            </Button>
-
-            <div className="flex items-center gap-1.5">
-              <ThemeToggle />
-              <Button variant="ghost" size="sm" onClick={handleLogout}>
-                <LogOut className="w-4 h-4 mr-1.5" />
-                <span className="hidden sm:inline text-sm">Logout</span>
-              </Button>
-            </div>
-          </div>
-        </header>
-
         {/* Main Content */}
         <main className="flex-1 w-full mx-auto px-6 lg:px-10 py-8 relative z-10 max-w-5xl">
+          {/* Scroll anchor - focusable to prevent scroll issues */}
+          <div ref={topRef} tabIndex={-1} style={{ outline: 'none' }} />
+
+          {/* Back Button */}
+          <div className="mb-6">
+            <Button variant="ghost" size="sm" onClick={handleBack}>
+              <ArrowLeft className="w-4 h-4 mr-1.5" />
+              Back to Hub
+            </Button>
+          </div>
+
           {/* Essay Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="mb-8"
-          >
+          <div className="mb-8">
             {/* Category Badge + Question Number */}
             <div className="flex items-center gap-3 mb-4">
               <span className="px-3 py-1.5 text-xs font-semibold rounded-full
@@ -183,15 +180,10 @@ export function EssayPage() {
               <BookOpen className="w-4 h-4 text-rose-500" />
               <span>Reference: {essay.reference}</span>
             </div>
-          </motion.div>
+          </div>
 
           {/* Table of Contents Toggle (Mobile) */}
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="mb-6 lg:hidden"
-          >
+          <div className="mb-6 lg:hidden">
             <button
               onClick={() => setShowTableOfContents(!showTableOfContents)}
               className="w-full flex items-center justify-between px-4 py-3 rounded-lg
@@ -209,39 +201,26 @@ export function EssayPage() {
               />
             </button>
 
-            <AnimatePresence>
-              {showTableOfContents && (
-                <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: 'auto', opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.2 }}
-                  className="overflow-hidden"
-                >
-                  <div className="mt-2 p-4 rounded-lg bg-card border border-border/50">
-                    {essay.sections.map((section, index) => (
-                      <button
-                        key={index}
-                        onClick={() => scrollToSection(index)}
-                        className="block w-full text-left px-3 py-2 rounded-md text-sm
-                                   hover:bg-rose-50 dark:hover:bg-rose-950/20
-                                   hover:text-rose-600 dark:hover:text-rose-400
-                                   transition-colors duration-200"
-                      >
-                        {section.title}
-                      </button>
-                    ))}
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </motion.div>
+            {showTableOfContents && (
+              <div className="mt-2 p-4 rounded-lg bg-card border border-border/50">
+                {essay.sections.map((section, index) => (
+                  <button
+                    key={index}
+                    onClick={() => scrollToSection(index)}
+                    className="block w-full text-left px-3 py-2 rounded-md text-sm
+                               hover:bg-rose-50 dark:hover:bg-rose-950/20
+                               hover:text-rose-600 dark:hover:text-rose-400
+                               transition-colors duration-200"
+                  >
+                    {section.title}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
 
           {/* Essay Content Card */}
-          <motion.article
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
+          <article
             className="bg-white dark:bg-[#1A1F3A] rounded-xl shadow-lg border border-border/50 p-8 lg:p-12 mb-8"
           >
             {essay.sections.map((section, index) => (
@@ -261,11 +240,18 @@ export function EssayPage() {
                     dangerouslySetInnerHTML={{
                       __html: section.content
                         .replace(/\*\*(.*?)\*\*/g, '<strong class="text-rose-600 dark:text-rose-400">$1</strong>')
+                        .replace(/\*([^*]+)\*/g, '<em>$1</em>')
+                        .replace(/\n\n(\d+)\. /g, '<br/><br/>$1. ')
+                        .replace(/\n\n• /g, '<br/><br/>• ')
                         .replace(/\n\n/g, '<br/><br/>')
-                        .replace(/• /g, '<br/>• ')
+                        .replace(/\n(\d+)\. /g, '<br/>$1. ')
+                        .replace(/\n• /g, '<br/>• ')
                     }}
                   />
                 )}
+
+                {/* Diagram - placed before subsections as visual introduction */}
+                {section.diagram && <PathwayDiagram diagram={section.diagram} />}
 
                 {/* Subsections */}
                 {section.subsections?.map((subsection, subIndex) => (
@@ -276,18 +262,35 @@ export function EssayPage() {
 
                     {/* Bullet List */}
                     {subsection.bullets && (
-                      <ul className="space-y-2 ml-6">
-                        {subsection.bullets.map((bullet, bulletIndex) => (
-                          <li
-                            key={bulletIndex}
-                            className="text-base lg:text-lg leading-relaxed text-foreground/90
-                                       relative before:content-['•'] before:absolute before:-left-6
-                                       before:text-rose-500 before:font-bold before:text-xl"
-                          >
-                            <span dangerouslySetInnerHTML={{ __html: bullet.replace(/\*\*(.*?)\*\*/g, '<strong class="text-rose-600 dark:text-rose-400">$1</strong>') }} />
-                          </li>
-                        ))}
-                      </ul>
+                      <div className="space-y-2">
+                        {subsection.bullets.map((bullet, bulletIndex) => {
+                          // Check if this is a label (starts with **Label**: and has no content after)
+                          const isLabel = /^\*\*[^*]+\*\*:?\s*$/.test(bullet)
+
+                          if (isLabel) {
+                            // Render as a styled label without bullet
+                            return (
+                              <p
+                                key={bulletIndex}
+                                className="text-base lg:text-lg font-semibold text-rose-600 dark:text-rose-400 mt-4 first:mt-0"
+                                dangerouslySetInnerHTML={{ __html: bullet.replace(/\*\*(.*?)\*\*/g, '$1') }}
+                              />
+                            )
+                          }
+
+                          // Render as regular bullet
+                          return (
+                            <p
+                              key={bulletIndex}
+                              className="text-base lg:text-lg leading-relaxed text-foreground/90
+                                         relative ml-6 before:content-['•'] before:absolute before:-left-6
+                                         before:text-rose-500 before:font-bold before:text-xl"
+                            >
+                              <span dangerouslySetInnerHTML={{ __html: bullet.replace(/\*\*(.*?)\*\*/g, '<strong class="text-rose-600 dark:text-rose-400">$1</strong>') }} />
+                            </p>
+                          )
+                        })}
+                      </div>
                     )}
 
                     {/* Numbered List */}
@@ -305,6 +308,53 @@ export function EssayPage() {
                     )}
                   </div>
                 ))}
+
+                {/* Section-level Bullets (for non-clinical sections) */}
+                {section.type !== 'clinical' && section.bullets && (
+                  <div className="space-y-2 mt-4">
+                    {section.bullets.map((bullet, bulletIndex) => {
+                      // Check if this is a label (starts with **Label**: and has no content after)
+                      const isLabel = /^\*\*[^*]+\*\*:?\s*$/.test(bullet)
+
+                      if (isLabel) {
+                        // Render as a styled label without bullet
+                        return (
+                          <p
+                            key={bulletIndex}
+                            className="text-base lg:text-lg font-semibold text-rose-600 dark:text-rose-400 mt-4 first:mt-0"
+                            dangerouslySetInnerHTML={{ __html: bullet.replace(/\*\*(.*?)\*\*/g, '$1') }}
+                          />
+                        )
+                      }
+
+                      // Render as regular bullet
+                      return (
+                        <p
+                          key={bulletIndex}
+                          className="text-base lg:text-lg leading-relaxed text-foreground/90
+                                     relative ml-6 before:content-['•'] before:absolute before:-left-6
+                                     before:text-rose-500 before:font-bold before:text-xl"
+                        >
+                          <span dangerouslySetInnerHTML={{ __html: bullet.replace(/\*\*(.*?)\*\*/g, '<strong class="text-rose-600 dark:text-rose-400">$1</strong>') }} />
+                        </p>
+                      )
+                    })}
+                  </div>
+                )}
+
+                {/* Section-level Numbered List (for non-clinical sections) */}
+                {section.type !== 'clinical' && section.numbered && (
+                  <ol className="space-y-2 ml-6 mt-4 list-decimal list-outside">
+                    {section.numbered.map((item, itemIndex) => (
+                      <li
+                        key={itemIndex}
+                        className="text-base lg:text-lg leading-relaxed text-foreground/90 pl-2"
+                      >
+                        <span dangerouslySetInnerHTML={{ __html: item.replace(/\*\*(.*?)\*\*/g, '<strong class="text-rose-600 dark:text-rose-400">$1</strong>') }} />
+                      </li>
+                    ))}
+                  </ol>
+                )}
 
                 {/* Table */}
                 {section.table && (
@@ -350,35 +400,60 @@ export function EssayPage() {
                   </div>
                 )}
 
-                {/* Diagram */}
-                {section.diagram && <PathwayDiagram diagram={section.diagram} />}
-
                 {/* Clinical Bullets (with styling) */}
                 {section.type === 'clinical' && section.bullets && (
                   <div className="mt-4 p-6 rounded-lg bg-rose-50 dark:bg-rose-950/20 border-l-4 border-rose-500">
-                    <ul className="space-y-3">
-                      {section.bullets.map((bullet, bulletIndex) => (
+                    <div className="space-y-3">
+                      {section.bullets.map((bullet, bulletIndex) => {
+                        // Check if this is a label (starts with **Label**: and has no content after)
+                        const isLabel = /^\*\*[^*]+\*\*:?\s*$/.test(bullet)
+
+                        if (isLabel) {
+                          return (
+                            <p
+                              key={bulletIndex}
+                              className="text-base lg:text-lg font-semibold text-rose-600 dark:text-rose-400 mt-4 first:mt-0"
+                              dangerouslySetInnerHTML={{ __html: bullet.replace(/\*\*(.*?)\*\*/g, '$1') }}
+                            />
+                          )
+                        }
+
+                        return (
+                          <p
+                            key={bulletIndex}
+                            className="text-base lg:text-lg leading-relaxed text-foreground/90
+                                       relative pl-6 before:content-['▸'] before:absolute before:left-0
+                                       before:text-rose-500 before:font-bold before:text-xl"
+                          >
+                            <span dangerouslySetInnerHTML={{ __html: bullet.replace(/\*\*(.*?)\*\*/g, '<strong class="text-rose-600 dark:text-rose-400">$1</strong>') }} />
+                          </p>
+                        )
+                      })}
+                    </div>
+                  </div>
+                )}
+
+                {/* Clinical Numbered List (with styling) */}
+                {section.type === 'clinical' && section.numbered && (
+                  <div className="mt-4 p-6 rounded-lg bg-rose-50 dark:bg-rose-950/20 border-l-4 border-rose-500">
+                    <ol className="space-y-3 list-decimal list-inside">
+                      {section.numbered.map((item, itemIndex) => (
                         <li
-                          key={bulletIndex}
-                          className="text-base lg:text-lg leading-relaxed text-foreground/90
-                                     relative pl-6 before:content-['▸'] before:absolute before:left-0
-                                     before:text-rose-500 before:font-bold before:text-xl"
+                          key={itemIndex}
+                          className="text-base lg:text-lg leading-relaxed text-foreground/90 marker:text-rose-500 marker:font-bold"
                         >
-                          <span dangerouslySetInnerHTML={{ __html: bullet.replace(/\*\*(.*?)\*\*/g, '<strong class="text-rose-600 dark:text-rose-400">$1</strong>') }} />
+                          <span dangerouslySetInnerHTML={{ __html: item.replace(/\*\*(.*?)\*\*/g, '<strong class="text-rose-600 dark:text-rose-400">$1</strong>') }} />
                         </li>
                       ))}
-                    </ul>
+                    </ol>
                   </div>
                 )}
               </section>
             ))}
-          </motion.article>
+          </article>
 
-          {/* Navigation Footer */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
+          {/* Navigation Footer - no animation to prevent scroll issues */}
+          <div
             className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8"
           >
             {/* Previous Button */}
@@ -419,7 +494,7 @@ export function EssayPage() {
               Next Essay
               <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
             </Button>
-          </motion.div>
+          </div>
         </main>
       </div>
     </div>

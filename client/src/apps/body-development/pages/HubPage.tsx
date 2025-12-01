@@ -1,12 +1,9 @@
-import { useState, useEffect } from 'react'
+import { useState, useLayoutEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import { Sidebar } from '@/components/layout/Sidebar'
-import { ThemeToggle } from '@/components/ui/ThemeToggle'
-import { Button } from '@/components/ui/Button'
 import { EssayCard } from '../components/EssayCard'
-import { LogOut, Dna, FileText, ChevronRight } from 'lucide-react'
-import { useAuth } from '@/contexts/AuthContext'
+import { Dna, FileText, ChevronRight } from 'lucide-react'
 
 // Essay data - expandable to full 22 questions
 const essays = [
@@ -36,20 +33,20 @@ const essays = [
 
 export function HubPage() {
   const navigate = useNavigate()
-  const { signOut } = useAuth()
   const [sidebarOpen, setSidebarOpen] = useState(false)
-  const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
-
-  // Auto-COLLAPSE sidebar on body development pages (more room for content)
-  useEffect(() => {
-    setSidebarCollapsed(true)
+  // Initialize from localStorage - sidebar should already be collapsed, no animation needed
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(() => {
+    // Set to true and save to localStorage (collapsed by default for body development)
     localStorage.setItem('sidebarCollapsed', 'true')
-  }, [])
+    return true
+  })
 
-  const handleLogout = async () => {
-    await signOut()
-    navigate('/login')
-  }
+  // Scroll to top on mount
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+    document.documentElement.scrollTop = 0
+    document.body.scrollTop = 0
+  }, [])
 
   const handleEssayClick = (essayId: number) => {
     navigate(`/electives/body-development/essay/${essayId}`)
@@ -117,19 +114,6 @@ export function HubPage() {
       <Sidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} isCollapsed={sidebarCollapsed} setIsCollapsed={setSidebarCollapsed} />
 
       <div className="flex-1 flex flex-col relative z-10">
-        {/* Header */}
-        <header className="sticky top-0 z-30 bg-card/95 backdrop-blur-sm border-b border-border/50 h-[60px]">
-          <div className="px-6 lg:px-10 h-full flex items-center justify-end">
-            <div className="flex items-center gap-1.5">
-              <ThemeToggle />
-              <Button variant="ghost" size="sm" onClick={handleLogout}>
-                <LogOut className="w-4 h-4 mr-1.5" />
-                <span className="hidden sm:inline text-sm">Logout</span>
-              </Button>
-            </div>
-          </div>
-        </header>
-
         {/* Main Content */}
         <main className="flex-1 w-full mx-auto px-6 lg:px-10 py-8 relative z-10 max-w-7xl">
           {/* Page Header */}
