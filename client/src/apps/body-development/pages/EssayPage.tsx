@@ -260,20 +260,58 @@ export function EssayPage() {
                       {subsection.title}
                     </h3>
 
+                    {/* Subsection Content (paragraphs with bold labels - NO bullets) */}
+                    {subsection.content && (
+                      <div
+                        className="text-base lg:text-lg leading-relaxed text-foreground/90 mb-4"
+                        dangerouslySetInnerHTML={{
+                          __html: subsection.content
+                            .replace(/\*\*(.*?)\*\*/g, '<strong class="text-rose-600 dark:text-rose-400">$1</strong>')
+                            .replace(/\n\n/g, '<br/><br/>')
+                        }}
+                      />
+                    )}
+
                     {/* Bullet List */}
                     {subsection.bullets && (
                       <div className="space-y-2">
                         {subsection.bullets.map((bullet, bulletIndex) => {
-                          // Check if this is a label (starts with **Label**: and has no content after)
-                          const isLabel = /^\*\*[^*]+\*\*:?\s*$/.test(bullet)
+                          // Check if this is a standalone label (just **Label**: with no content)
+                          const isStandaloneLabel = /^\*\*[^*]+\*\*:?\s*$/.test(bullet)
+                          // Check if this starts with **Label**: (paragraph with bold label, no bullet)
+                          const isLabeledParagraph = /^\*\*[^*]+\*\*:/.test(bullet) && !isStandaloneLabel
+                          // Check if this is an intro sentence (ends with : but doesn't start with **)
+                          const isIntroSentence = !bullet.startsWith('**') && bullet.trim().endsWith(':')
 
-                          if (isLabel) {
-                            // Render as a styled label without bullet
+                          if (isStandaloneLabel) {
+                            // Render as a styled section header without bullet
+                            return (
+                              <h4
+                                key={bulletIndex}
+                                className="text-lg lg:text-xl font-semibold text-rose-600 dark:text-rose-400 mt-5 first:mt-0"
+                                dangerouslySetInnerHTML={{ __html: bullet.replace(/\*\*(.*?)\*\*/g, '$1') }}
+                              />
+                            )
+                          }
+
+                          if (isLabeledParagraph) {
+                            // Render as paragraph with bold label (NO bullet)
                             return (
                               <p
                                 key={bulletIndex}
-                                className="text-base lg:text-lg font-semibold text-rose-600 dark:text-rose-400 mt-4 first:mt-0"
-                                dangerouslySetInnerHTML={{ __html: bullet.replace(/\*\*(.*?)\*\*/g, '$1') }}
+                                className="text-base lg:text-lg leading-relaxed text-foreground/90"
+                                dangerouslySetInnerHTML={{ __html: bullet.replace(/\*\*(.*?)\*\*/g, '<strong class="text-rose-600 dark:text-rose-400">$1</strong>') }}
+                              />
+                            )
+                          }
+
+                          if (isIntroSentence) {
+                            // Render as intro paragraph (NO bullet)
+                            return (
+                              <p
+                                key={bulletIndex}
+                                className="text-base lg:text-lg leading-relaxed text-foreground/90"
+                                dangerouslySetInnerHTML={{ __html: bullet.replace(/\*\*(.*?)\*\*/g, '<strong class="text-rose-600 dark:text-rose-400">$1</strong>') }}
                               />
                             )
                           }
@@ -313,16 +351,42 @@ export function EssayPage() {
                 {section.type !== 'clinical' && section.bullets && (
                   <div className="space-y-2 mt-4">
                     {section.bullets.map((bullet, bulletIndex) => {
-                      // Check if this is a label (starts with **Label**: and has no content after)
-                      const isLabel = /^\*\*[^*]+\*\*:?\s*$/.test(bullet)
+                      // Check if this is a standalone label (just **Label**: with no content)
+                      const isStandaloneLabel = /^\*\*[^*]+\*\*:?\s*$/.test(bullet)
+                      // Check if this starts with **Label**: (paragraph with bold label, no bullet)
+                      const isLabeledParagraph = /^\*\*[^*]+\*\*:/.test(bullet) && !isStandaloneLabel
+                      // Check if this is an intro sentence (ends with : but doesn't start with **)
+                      const isIntroSentence = !bullet.startsWith('**') && bullet.trim().endsWith(':')
 
-                      if (isLabel) {
-                        // Render as a styled label without bullet
+                      if (isStandaloneLabel) {
+                        // Render as a styled section header without bullet
+                        return (
+                          <h4
+                            key={bulletIndex}
+                            className="text-lg lg:text-xl font-semibold text-rose-600 dark:text-rose-400 mt-5 first:mt-0"
+                            dangerouslySetInnerHTML={{ __html: bullet.replace(/\*\*(.*?)\*\*/g, '$1') }}
+                          />
+                        )
+                      }
+
+                      if (isLabeledParagraph) {
+                        // Render as paragraph with bold label (NO bullet)
                         return (
                           <p
                             key={bulletIndex}
-                            className="text-base lg:text-lg font-semibold text-rose-600 dark:text-rose-400 mt-4 first:mt-0"
-                            dangerouslySetInnerHTML={{ __html: bullet.replace(/\*\*(.*?)\*\*/g, '$1') }}
+                            className="text-base lg:text-lg leading-relaxed text-foreground/90"
+                            dangerouslySetInnerHTML={{ __html: bullet.replace(/\*\*(.*?)\*\*/g, '<strong class="text-rose-600 dark:text-rose-400">$1</strong>') }}
+                          />
+                        )
+                      }
+
+                      if (isIntroSentence) {
+                        // Render as intro paragraph (NO bullet)
+                        return (
+                          <p
+                            key={bulletIndex}
+                            className="text-base lg:text-lg leading-relaxed text-foreground/90"
+                            dangerouslySetInnerHTML={{ __html: bullet.replace(/\*\*(.*?)\*\*/g, '<strong class="text-rose-600 dark:text-rose-400">$1</strong>') }}
                           />
                         )
                       }
@@ -405,15 +469,39 @@ export function EssayPage() {
                   <div className="mt-4 p-6 rounded-lg bg-rose-50 dark:bg-rose-950/20 border-l-4 border-rose-500">
                     <div className="space-y-3">
                       {section.bullets.map((bullet, bulletIndex) => {
-                        // Check if this is a label (starts with **Label**: and has no content after)
-                        const isLabel = /^\*\*[^*]+\*\*:?\s*$/.test(bullet)
+                        // Check if this is a standalone label (just **Label**: with no content)
+                        const isStandaloneLabel = /^\*\*[^*]+\*\*:?\s*$/.test(bullet)
+                        // Check if this starts with **Label**: (paragraph with bold label, no bullet)
+                        const isLabeledParagraph = /^\*\*[^*]+\*\*:/.test(bullet) && !isStandaloneLabel
+                        // Check if this is an intro sentence (ends with : but doesn't start with **)
+                        const isIntroSentence = !bullet.startsWith('**') && bullet.trim().endsWith(':')
 
-                        if (isLabel) {
+                        if (isStandaloneLabel) {
+                          return (
+                            <h4
+                              key={bulletIndex}
+                              className="text-lg lg:text-xl font-semibold text-rose-600 dark:text-rose-400 mt-5 first:mt-0"
+                              dangerouslySetInnerHTML={{ __html: bullet.replace(/\*\*(.*?)\*\*/g, '$1') }}
+                            />
+                          )
+                        }
+
+                        if (isLabeledParagraph) {
                           return (
                             <p
                               key={bulletIndex}
-                              className="text-base lg:text-lg font-semibold text-rose-600 dark:text-rose-400 mt-4 first:mt-0"
-                              dangerouslySetInnerHTML={{ __html: bullet.replace(/\*\*(.*?)\*\*/g, '$1') }}
+                              className="text-base lg:text-lg leading-relaxed text-foreground/90"
+                              dangerouslySetInnerHTML={{ __html: bullet.replace(/\*\*(.*?)\*\*/g, '<strong class="text-rose-600 dark:text-rose-400">$1</strong>') }}
+                            />
+                          )
+                        }
+
+                        if (isIntroSentence) {
+                          return (
+                            <p
+                              key={bulletIndex}
+                              className="text-base lg:text-lg leading-relaxed text-foreground/90"
+                              dangerouslySetInnerHTML={{ __html: bullet.replace(/\*\*(.*?)\*\*/g, '<strong class="text-rose-600 dark:text-rose-400">$1</strong>') }}
                             />
                           )
                         }
