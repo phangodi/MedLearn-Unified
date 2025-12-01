@@ -3503,11 +3503,15 @@ Excessive TGFβ Signaling
             title: '2. Pluripotent Stem Cells',
             bullets: [
               '**Definition**: Cells capable of giving rise to all of the various cell types of the body but unable to create tissues outside the embryo (such as the amnion, chorion, and other components of the placenta)',
-              '**Key Characteristics**:',
+              '**Important Note**: Embryonic stem cells are pluripotent, NOT totipotent',
+            ],
+          },
+          {
+            title: 'Key Characteristics of Pluripotent Stem Cells',
+            bullets: [
               'Pluripotency may persist even after prolonged culture',
               'Progeny of a single cell can generate derivatives of all three embryonic germ layers (ectoderm, mesoderm, endoderm)',
               'Generate a teratoma after injection into an immunosuppressed mouse',
-              '**Important Note**: Embryonic stem cells are pluripotent, NOT totipotent',
             ],
           },
           {
@@ -3533,44 +3537,59 @@ Excessive TGFβ Signaling
             title: 'Embryonic Stem Cells (ESCs)',
             bullets: [
               '**Source**: Primitive (undifferentiated) cells derived from the inner cell mass (ICM) of a 5-day preimplantation embryo (blastocyst stage)',
-              '**Characteristics**:',
+              '**Teratoma Test**: Used to verify whether putative stem cells can establish a human embryonic stem cell line. The result is positive if the teratoma contains cells characteristic of all three germ layers (ecto-, meso-, and endoderm), determined using molecular and morphological markers',
+            ],
+          },
+          {
+            title: 'Characteristics of Embryonic Stem Cells',
+            bullets: [
               'Capable of dividing without differentiating for a prolonged period in culture',
               'Known to develop into cells and tissues of all three primary germ layers',
               'Pluripotent (not totipotent)',
               'Can form teratomas when injected into immunosuppressed mice',
-              '**Teratoma Test**: Used to verify whether putative stem cells can establish a human embryonic stem cell line. The result is positive if the teratoma contains cells characteristic of all three germ layers (ecto-, meso-, and endoderm), determined using molecular and morphological markers',
             ],
           },
           {
             title: 'Somatic (Adult) Stem Cells (ASCs)',
             bullets: [
               '**Definition**: Relatively rare, undifferentiated cells found in many organs and differentiated tissues',
-              '**Characteristics**:',
+              '**Types Isolated**: Hematopoietic stem cells, Mammary stem cells, Mesenchymal stem cells, Endothelial stem cells, Neural stem cells, Olfactory stem cells, Neural crest stem cells, Testicular stem cells',
+            ],
+          },
+          {
+            title: 'Characteristics of Somatic Stem Cells',
+            bullets: [
               'Limited capacity for self-renewal (in laboratory conditions)',
               'Limited capacity for differentiation',
               'Differentiation capacity usually restricted to cell types in the organ of origin',
               'May differentiate into other cell types in small proportions',
-              '**Types Isolated**: Hematopoietic stem cells, Mammary stem cells, Mesenchymal stem cells, Endothelial stem cells, Neural stem cells, Olfactory stem cells, Neural crest stem cells, Testicular stem cells',
             ],
           },
           {
             title: 'Mesenchymal Stem Cells (MSCs)',
             bullets: [
               '**Source**: Cells from immature embryonic connective tissue',
-              '**Differentiation Potential**: Can give rise to:',
+            ],
+          },
+          {
+            title: 'Differentiation Potential of MSCs',
+            bullets: [
               'Chondrocytes (cartilage-forming cells)',
               'Osteoblasts (bone-forming cells)',
               'Adipocytes (fat cells)',
             ],
           },
           {
-            title: 'Umbilical Cord Blood Stem Cells',
+            title: 'Umbilical Cord Blood Stem Cells - Characteristics',
             bullets: [
-              '**Characteristics**:',
               'Hematopoietic (can produce all blood cells in the body)',
               'Collected from umbilical cord blood at birth',
               'Currently used to replace damaged bone marrow function',
-              '**Clinical Applications**:',
+            ],
+          },
+          {
+            title: 'Umbilical Cord Blood Stem Cells - Clinical Applications',
+            bullets: [
               'Patients who have undergone chemotherapy for cancer',
               'Other blood-related disorders',
             ],
@@ -3579,7 +3598,11 @@ Excessive TGFβ Signaling
             title: 'Induced Pluripotent Stem Cells (iPSCs)',
             bullets: [
               '**Definition**: Reprogrammed somatic (adult) cells that have entered an embryonic stem cell-like state by being forced to express factors important for maintaining "stemness"',
-              '**Discovery**:',
+            ],
+          },
+          {
+            title: 'Discovery of iPSCs',
+            bullets: [
               'Mouse iPSCs first reported in 2006 (Takahashi and Yamanaka)',
               'Human iPSCs first reported in late 2007 (Takahashi et al. and Yu et al.)',
             ],
@@ -3597,11 +3620,15 @@ Excessive TGFβ Signaling
             ['Current', 'Expression of microRNAs from plasmids', 'Lower tumorigenicity'],
           ],
         },
-        bullets: [
-          '**Key Properties**:',
-          'Express stem cell markers',
-          'Form tumors containing cells from all three germ layers',
-          'Can contribute to many different tissues when injected into mouse blastocysts',
+        subsections: [
+          {
+            title: 'Key Properties of iPSCs',
+            bullets: [
+              'Express stem cell markers',
+              'Form tumors containing cells from all three germ layers',
+              'Can contribute to many different tissues when injected into mouse blastocysts',
+            ],
+          },
         ],
       },
       {
@@ -3623,7 +3650,6 @@ Excessive TGFβ Signaling
           {
             title: 'Currently Used Treatments',
             bullets: [
-              'Blood-forming stem cells (hematopoietic stem cells) from bone marrow have been used for decades to treat:',
               'Leukemias and lymphomas',
               'Multiple myeloma',
               'Severe aplastic anemia and other marrow failure states',
@@ -3634,7 +3660,6 @@ Excessive TGFβ Signaling
           {
             title: 'Experimental Applications',
             bullets: [
-              'Cardiac muscle regeneration experiments have shown:',
               'Stem cells injected into circulation or directly into damaged myocardium can improve cardiac function',
               'Can lead to formation of new capillaries',
               'Mechanism of improvement remains controversial',
