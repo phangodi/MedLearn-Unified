@@ -1,9 +1,9 @@
 import { useState, useLayoutEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import { Sidebar } from '@/components/layout/Sidebar'
 import { EssayCard } from '../components/EssayCard'
-import { Dna, FileText, ChevronRight, Sparkles } from 'lucide-react'
+import { Dna, FileText, ChevronRight } from 'lucide-react'
 
 // Essay data - all 22 questions
 const essays = [
@@ -31,13 +31,9 @@ const essays = [
   { id: 22, title: 'VHL Syndrome', subtitle: 'Von Hippel-Lindau Molecular Background', category: 'Genetic Disorders' },
 ]
 
-// Category names with counts (all using rose/pink colors)
-const categoryNames = ['All Topics', 'Embryology', 'Molecular Biology', 'Cell Biology', 'Genetic Disorders', 'Oncology']
-
 export function HubPage() {
   const navigate = useNavigate()
   const [sidebarOpen, setSidebarOpen] = useState(false)
-  const [selectedCategory, setSelectedCategory] = useState('All Topics')
 
   // Initialize from localStorage - sidebar should already be collapsed, no animation needed
   const [sidebarCollapsed, setSidebarCollapsed] = useState(() => {
@@ -59,17 +55,6 @@ export function HubPage() {
 
   const handleReferenceClick = () => {
     navigate('/electives/body-development/reference')
-  }
-
-  // Filter essays based on selected category
-  const filteredEssays = selectedCategory === 'All Topics'
-    ? essays
-    : essays.filter(essay => essay.category === selectedCategory)
-
-  // Get count for a category
-  const getCategoryCount = (cat: string) => {
-    if (cat === 'All Topics') return essays.length
-    return essays.filter(e => e.category === cat).length
   }
 
   return (
@@ -246,81 +231,20 @@ export function HubPage() {
             </motion.button>
           </motion.div>
 
-          {/* Category Filter Bar - All Rose/Pink Colors */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-            className="mb-10"
-          >
-            <div className="flex flex-wrap gap-3 justify-center max-w-5xl mx-auto">
-              {categoryNames.map((category, index) => {
-                const isSelected = selectedCategory === category
-                const count = getCategoryCount(category)
-
-                return (
-                  <motion.button
-                    key={category}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.7 + index * 0.05 }}
-                    onClick={() => setSelectedCategory(category)}
-                    className={`
-                      group relative overflow-hidden px-5 py-3 rounded-xl font-semibold text-sm
-                      border-2 transition-all duration-300
-                      hover:scale-105 active:scale-95
-                      ${isSelected
-                        ? 'bg-rose-500/10 dark:bg-rose-500/20 border-rose-500/30 text-rose-600 dark:text-rose-400 shadow-lg'
-                        : 'bg-card/50 border-border/50 text-muted-foreground hover:bg-card hover:border-rose-300/50 dark:hover:border-rose-700/50 backdrop-blur-sm'
-                      }
-                    `}
-                  >
-                    {/* Gradient overlay on hover */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-rose-500 to-pink-500 opacity-0
-                      group-hover:opacity-10 transition-opacity duration-300" />
-
-                    <div className="relative flex items-center gap-2">
-                      {category === 'All Topics' && <Sparkles className="w-4 h-4" />}
-                      <span>{category}</span>
-                      <span className={`
-                        ml-1 px-2 py-0.5 rounded-full text-xs font-bold
-                        ${isSelected
-                          ? 'bg-rose-500/20 dark:bg-rose-400/20'
-                          : 'bg-muted/50'
-                        }
-                      `}>
-                        {count}
-                      </span>
-                    </div>
-                  </motion.button>
-                )
-              })}
-            </div>
-          </motion.div>
-
-          {/* Essay Cards Grid with AnimatePresence for smooth filtering */}
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={selectedCategory}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto w-full"
-            >
-              {filteredEssays.map((essay, index) => (
-                <EssayCard
-                  key={essay.id}
-                  id={essay.id}
-                  title={essay.title}
-                  subtitle={essay.subtitle}
-                  category={essay.category}
-                  onClick={() => handleEssayClick(essay.id)}
-                  index={index}
-                />
-              ))}
-            </motion.div>
-          </AnimatePresence>
+          {/* Essay Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto w-full">
+            {essays.map((essay, index) => (
+              <EssayCard
+                key={essay.id}
+                id={essay.id}
+                title={essay.title}
+                subtitle={essay.subtitle}
+                category={essay.category}
+                onClick={() => handleEssayClick(essay.id)}
+                index={index}
+              />
+            ))}
+          </div>
 
           {/* Stats Footer */}
           <motion.div
@@ -345,7 +269,7 @@ export function HubPage() {
               <div className="text-center">
                 <div className="text-3xl font-bold bg-gradient-to-r from-rose-600 to-pink-600
                               dark:from-rose-400 dark:to-pink-400 bg-clip-text text-transparent">
-                  5
+                  7
                 </div>
                 <div className="text-xs text-muted-foreground font-medium mt-1">
                   Categories
