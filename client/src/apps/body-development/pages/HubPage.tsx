@@ -250,35 +250,6 @@ export function HubPage() {
                   <span className="relative">Reference: Summary Tables & Abbreviations</span>
                   <ChevronRight className="relative w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </motion.button>
-
-                {/* Floating Decorative Elements Around Button */}
-                <motion.div
-                  animate={{
-                    y: [0, -8, 0],
-                    opacity: [0.4, 0.7, 0.4],
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  className="absolute bottom-0 left-1/4 w-2 h-2 rounded-full
-                             bg-rose-400 dark:bg-rose-500"
-                />
-                <motion.div
-                  animate={{
-                    y: [0, -10, 0],
-                    opacity: [0.4, 0.7, 0.4],
-                  }}
-                  transition={{
-                    duration: 3.5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: 0.5,
-                  }}
-                  className="absolute bottom-4 right-1/4 w-3 h-3 rounded-full
-                             bg-pink-400 dark:bg-pink-500"
-                />
               </div>
             </div>
 
