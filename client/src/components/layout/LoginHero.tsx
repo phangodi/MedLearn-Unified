@@ -51,17 +51,23 @@ export function LoginHero() {
     >
       {/* Enhanced background with more visual interest in light mode */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Light mode: Subtle mesh gradient effect using overlapping radials */}
-        <div className="absolute -top-1/4 -left-1/4 w-[80%] h-[80%] bg-gradient-radial from-primary/10 via-primary/5 to-transparent dark:from-primary/20 dark:via-primary/10 rounded-full blur-3xl" />
-        <div className="absolute top-1/4 right-0 w-[50%] h-[50%] bg-gradient-radial from-secondary/8 to-transparent dark:from-secondary/15 rounded-full blur-3xl" />
-        <div className="absolute -bottom-1/4 -right-1/4 w-[60%] h-[60%] bg-gradient-radial from-violet-500/6 to-transparent dark:from-violet-500/12 rounded-full blur-3xl" />
+        {/* Light mode: Stronger mesh gradient effect using overlapping radials */}
+        <div className="absolute -top-1/4 -left-1/4 w-[80%] h-[80%] bg-gradient-radial from-primary/15 via-primary/8 to-transparent dark:from-primary/20 dark:via-primary/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 right-0 w-[50%] h-[50%] bg-gradient-radial from-secondary/12 to-transparent dark:from-secondary/15 rounded-full blur-3xl" />
+        <div className="absolute -bottom-1/4 -right-1/4 w-[60%] h-[60%] bg-gradient-radial from-violet-500/10 to-transparent dark:from-violet-500/12 rounded-full blur-3xl" />
 
-        {/* Light mode accent: subtle diagonal gradient stripe */}
-        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-primary/[0.02] to-secondary/[0.03] dark:via-primary/[0.05] dark:to-secondary/[0.05]" />
+        {/* Additional center glow for light mode depth */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] h-[70%] bg-gradient-radial from-cyan-400/8 to-transparent dark:from-cyan-400/5 rounded-full blur-3xl" />
 
-        {/* Subtle grid pattern for light mode depth */}
+        {/* Light mode accent: stronger diagonal gradient sweep */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.04] via-transparent to-secondary/[0.05] dark:from-primary/[0.03] dark:via-transparent dark:to-secondary/[0.05]" />
+
+        {/* Subtle top-to-bottom gradient for depth layering */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/[0.02] to-transparent dark:via-transparent" />
+
+        {/* Subtle dot pattern for light mode depth - slightly more visible */}
         <div
-          className="absolute inset-0 opacity-[0.015] dark:opacity-[0.03]"
+          className="absolute inset-0 opacity-[0.025] dark:opacity-[0.03]"
           style={{
             backgroundImage: `radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)`,
             backgroundSize: '32px 32px'
@@ -95,7 +101,8 @@ export function LoginHero() {
           className="text-lg text-muted-foreground mb-8 leading-relaxed"
         >
           AI-prepared exam materials across multiple subjects.
-          <span className="text-foreground/70 dark:text-foreground/60 font-medium"> By students, for students.</span>
+          <br />
+          <span className="text-foreground/80 dark:text-foreground/60 font-medium">Zero prep time. Maximum retention.</span>
         </motion.p>
 
         {/* Subject list - stacked cards with color accents */}
@@ -122,7 +129,7 @@ export function LoginHero() {
                 {/* Subject name with left border accent */}
                 <div className="relative flex items-center gap-2 px-3 py-1.5">
                   <div className={`w-0.5 h-4 rounded-full bg-gradient-to-b ${subject.color}`} />
-                  <span className="text-sm font-medium text-foreground/75 dark:text-foreground/70 group-hover:text-foreground transition-colors duration-200">
+                  <span className="text-sm font-medium text-foreground/85 dark:text-foreground/70 group-hover:text-foreground transition-colors duration-200">
                     {subject.name}
                   </span>
                 </div>

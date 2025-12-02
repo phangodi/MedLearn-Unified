@@ -424,7 +424,7 @@ export function AuthPage() {
                     {/* Email/Password Form */}
                     <motion.form
                       onSubmit={handleEmailAuth}
-                      className="space-y-4"
+                      className="space-y-5"
                       variants={formVariants}
                       initial="hidden"
                       animate="visible"
