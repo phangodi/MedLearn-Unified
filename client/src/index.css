@@ -459,3 +459,71 @@
 .card-content a:hover {
   opacity: 0.8;
 }
+
+/* ================================
+   WYSIWYG Editor (ProseMirror) Styles
+   ================================ */
+
+/* Editor container styles */
+.wysiwyg-content .ProseMirror {
+  padding: 1rem;
+  min-height: 200px;
+  outline: none;
+}
+
+/* Placeholder text */
+.wysiwyg-content .ProseMirror p.is-editor-empty:first-child::before {
+  color: hsl(var(--muted-foreground));
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+/* List styles - ensure bullets/numbers don't overlap floated elements */
+.wysiwyg-content .ProseMirror ul,
+.wysiwyg-content .ProseMirror ol {
+  overflow: hidden; /* Creates new block formatting context */
+  padding-left: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.wysiwyg-content .ProseMirror li {
+  margin: 0.25rem 0;
+  /* Use inside positioning to prevent markers from overlapping floated images */
+  list-style-position: inside;
+}
+
+/* Add slight indent for visual balance with inside markers */
+.wysiwyg-content .ProseMirror li > * {
+  display: inline;
+}
+
+/* Headings */
+.wysiwyg-content .ProseMirror h1,
+.wysiwyg-content .ProseMirror h2,
+.wysiwyg-content .ProseMirror h3 {
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.wysiwyg-content .ProseMirror h1 { font-size: 1.5rem; }
+.wysiwyg-content .ProseMirror h2 { font-size: 1.25rem; }
+.wysiwyg-content .ProseMirror h3 { font-size: 1.125rem; }
+
+/* Clear floats after images */
+.wysiwyg-content .ProseMirror .image-wrapper + p,
+.wysiwyg-content .ProseMirror .image-placeholder-wrapper + p {
+  /* Don't automatically clear - let text flow */
+}
+
+/* Clear floats before new headings */
+.wysiwyg-content .ProseMirror .image-wrapper + h1,
+.wysiwyg-content .ProseMirror .image-wrapper + h2,
+.wysiwyg-content .ProseMirror .image-wrapper + h3,
+.wysiwyg-content .ProseMirror .image-placeholder-wrapper + h1,
+.wysiwyg-content .ProseMirror .image-placeholder-wrapper + h2,
+.wysiwyg-content .ProseMirror .image-placeholder-wrapper + h3 {
+  clear: both;
+}

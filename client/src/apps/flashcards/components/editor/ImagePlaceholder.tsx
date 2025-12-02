@@ -2,7 +2,15 @@ import { Node, mergeAttributes } from '@tiptap/core'
 import type { RawCommands } from '@tiptap/core'
 import { ReactNodeViewRenderer, NodeViewWrapper } from '@tiptap/react'
 import type { NodeViewProps } from '@tiptap/react'
-import { Image as ImageIcon, Upload, Loader2, GripVertical, AlignLeft, AlignCenter, AlignRight } from 'lucide-react'
+import { Image as ImageIcon, Upload, Loader2, GripVertical, AlignLeft, AlignCenter, AlignRight, MoveHorizontal } from 'lucide-react'
+
+// Margin presets for quick adjustment
+const MARGIN_PRESETS = [
+  { label: '0', value: 0 },
+  { label: 'S', value: 8 },
+  { label: 'M', value: 16 },
+  { label: 'L', value: 24 }
+]
 import { useRef, useState, useCallback, useEffect } from 'react'
 import { useDropzone } from 'react-dropzone'
 import { uploadCardImage, validateImage } from '../../services/storageService'
@@ -36,7 +44,15 @@ function PlaceholderComponent({ node, updateAttributes, selected, extension, edi
   const [currentSize, setCurrentSize] = useState({ width: 0, height: 0 })
   const startPos = useRef({ x: 0, y: 0, width: 0, height: 0 })
 
-  const { width = 300, height = 200, align = 'center' } = node.attrs
+  // Drag-to-align state
+  const [isDraggingForAlign, setIsDraggingForAlign] = useState(false)
+  const [hoverZone, setHoverZone] = useState<'left' | 'center' | 'right' | null>(null)
+
+  // Minimum dimensions to prevent unusable collapsed placeholders
+  const MIN_WIDTH = 150
+  const MIN_HEIGHT = 120
+
+  const { width = 300, height = 200, align = 'center', margin = 16 } = node.attrs
 
   // Handle file drop/select
   const onDrop = useCallback(async (acceptedFiles: File[]) => {
@@ -171,9 +187,9 @@ function PlaceholderComponent({ node, updateAttributes, selected, extension, edi
           break
       }
 
-      // Set minimum dimensions
-      newWidth = Math.max(100, newWidth)
-      newHeight = Math.max(80, newHeight)
+      // Set minimum dimensions to prevent unusable collapsed placeholders
+      newWidth = Math.max(MIN_WIDTH, newWidth)
+      newHeight = Math.max(MIN_HEIGHT, newHeight)
 
       // Update current size for tooltip
       setCurrentSize({ width: Math.round(newWidth), height: Math.round(newHeight) })
@@ -187,8 +203,14 @@ function PlaceholderComponent({ node, updateAttributes, selected, extension, edi
       setCurrentHandle(null)
 
       if (containerRef.current) {
-        const finalWidth = parseInt(containerRef.current.style.width)
-        const finalHeight = parseInt(containerRef.current.style.height)
+        // Parse and enforce minimum dimensions before saving
+        const parsedWidth = parseInt(containerRef.current.style.width)
+        const parsedHeight = parseInt(containerRef.current.style.height)
+
+        // Use MIN dimensions if parsing fails (NaN) or value is below minimum
+        const finalWidth = Math.max(MIN_WIDTH, isNaN(parsedWidth) ? MIN_WIDTH : parsedWidth)
+        const finalHeight = Math.max(MIN_HEIGHT, isNaN(parsedHeight) ? MIN_HEIGHT : parsedHeight)
+
         updateAttributes({ width: finalWidth, height: finalHeight })
 
         containerRef.current.style.width = ''
@@ -205,12 +227,17 @@ function PlaceholderComponent({ node, updateAttributes, selected, extension, edi
     }
   }, [isResizing, currentHandle, updateAttributes])
 
-  // Container styles based on alignment
+  // Container styles based on alignment and user-defined margin
   const getContainerStyles = (): React.CSSProperties => {
+    // Enforce minimum dimensions - handle undefined, null, 0, or small values
+    const effectiveWidth = Math.max(MIN_WIDTH, width || MIN_WIDTH)
+    const effectiveHeight = Math.max(MIN_HEIGHT, height || MIN_HEIGHT)
+    const marginPx = `${margin || 16}px`
+
     const baseStyles: React.CSSProperties = {
       position: 'relative',
-      width: `${width}px`,
-      height: `${height}px`,
+      width: `${effectiveWidth}px`,
+      height: `${effectiveHeight}px`,
       userSelect: 'none'
     }
 
@@ -219,16 +246,16 @@ function PlaceholderComponent({ node, updateAttributes, selected, extension, edi
         return {
           ...baseStyles,
           float: 'left',
-          marginRight: '1rem',
-          marginBottom: '0.5rem',
+          marginRight: marginPx,
+          marginBottom: marginPx,
           clear: 'left'
         }
       case 'right':
         return {
           ...baseStyles,
           float: 'right',
-          marginLeft: '1rem',
-          marginBottom: '0.5rem',
+          marginLeft: marginPx,
+          marginBottom: marginPx,
           clear: 'right'
         }
       case 'center':
@@ -238,7 +265,7 @@ function PlaceholderComponent({ node, updateAttributes, selected, extension, edi
           display: 'block',
           marginLeft: 'auto',
           marginRight: 'auto',
-          marginBottom: '1rem',
+          marginBottom: marginPx,
           clear: 'both'
         }
     }
@@ -392,13 +419,28 @@ function PlaceholderComponent({ node, updateAttributes, selected, extension, edi
               boxShadow: '0 2px 12px rgba(0,0,0,0.3)'
             }}
           >
-            {/* Drag handle */}
+            {/* Drag handle - drag horizontally to change alignment */}
             <div
               draggable={true}
-              data-drag-handle=""
               className="cursor-grab active:cursor-grabbing flex items-center gap-1 px-2 py-1 hover:bg-white/20 rounded transition-colors"
-              title="Drag to move"
+              title="Drag to align left/center/right"
               onMouseDown={(e) => e.stopPropagation()}
+              onDragStart={(e) => {
+                setIsDraggingForAlign(true)
+                // Set drag image to be semi-transparent
+                if (containerRef.current) {
+                  e.dataTransfer.setDragImage(containerRef.current, 0, 0)
+                }
+                e.dataTransfer.effectAllowed = 'move'
+              }}
+              onDragEnd={() => {
+                // Apply alignment based on hover zone
+                if (hoverZone) {
+                  updateAttributes({ align: hoverZone })
+                }
+                setIsDraggingForAlign(false)
+                setHoverZone(null)
+              }}
             >
               <GripVertical className="w-4 h-4 text-white" />
             </div>
@@ -443,6 +485,29 @@ function PlaceholderComponent({ node, updateAttributes, selected, extension, edi
             >
               <AlignRight className="w-4 h-4 text-white" />
             </button>
+
+            {/* Separator */}
+            <div className="w-px h-5 bg-white/30" />
+
+            {/* Margin controls */}
+            <div className="flex items-center gap-0.5">
+              <MoveHorizontal className="w-3 h-3 text-white/70 mr-0.5" />
+              {MARGIN_PRESETS.map((preset) => (
+                <button
+                  key={preset.label}
+                  type="button"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    e.stopPropagation()
+                    updateAttributes({ margin: preset.value })
+                  }}
+                  className={`w-5 h-5 rounded text-[9px] font-medium transition-colors ${margin === preset.value ? 'bg-white/30 text-white' : 'hover:bg-white/20 text-white/70'}`}
+                  title={`${preset.value}px gap`}
+                >
+                  {preset.label}
+                </button>
+              ))}
+            </div>
           </div>
         )}
 
@@ -472,6 +537,89 @@ function PlaceholderComponent({ node, updateAttributes, selected, extension, edi
             }}
           >
             {currentSize.width} × {currentSize.height}
+          </div>
+        )}
+
+        {/* Alignment drop zones - appear when dragging to align */}
+        {isDraggingForAlign && (
+          <div
+            className="fixed inset-0 z-[9998] flex items-stretch gap-2 p-4 bg-black/20 backdrop-blur-[2px]"
+            style={{ pointerEvents: 'auto' }}
+          >
+            {/* Left zone */}
+            <div
+              className={`flex-1 flex items-center justify-center rounded-xl border-2 border-dashed transition-all ${
+                hoverZone === 'left'
+                  ? 'bg-primary/30 border-primary scale-[1.02]'
+                  : 'bg-white/10 border-white/40 hover:bg-white/20'
+              }`}
+              onDragOver={(e) => {
+                e.preventDefault()
+                setHoverZone('left')
+              }}
+              onDragLeave={() => setHoverZone(null)}
+              onDrop={(e) => {
+                e.preventDefault()
+                updateAttributes({ align: 'left' })
+                setIsDraggingForAlign(false)
+                setHoverZone(null)
+              }}
+            >
+              <div className="text-center">
+                <AlignLeft className={`w-10 h-10 mx-auto mb-2 ${hoverZone === 'left' ? 'text-primary' : 'text-white/70'}`} />
+                <span className={`text-lg font-semibold ${hoverZone === 'left' ? 'text-primary' : 'text-white/70'}`}>Left</span>
+              </div>
+            </div>
+
+            {/* Center zone */}
+            <div
+              className={`flex-1 flex items-center justify-center rounded-xl border-2 border-dashed transition-all ${
+                hoverZone === 'center'
+                  ? 'bg-primary/30 border-primary scale-[1.02]'
+                  : 'bg-white/10 border-white/40 hover:bg-white/20'
+              }`}
+              onDragOver={(e) => {
+                e.preventDefault()
+                setHoverZone('center')
+              }}
+              onDragLeave={() => setHoverZone(null)}
+              onDrop={(e) => {
+                e.preventDefault()
+                updateAttributes({ align: 'center' })
+                setIsDraggingForAlign(false)
+                setHoverZone(null)
+              }}
+            >
+              <div className="text-center">
+                <AlignCenter className={`w-10 h-10 mx-auto mb-2 ${hoverZone === 'center' ? 'text-primary' : 'text-white/70'}`} />
+                <span className={`text-lg font-semibold ${hoverZone === 'center' ? 'text-primary' : 'text-white/70'}`}>Center</span>
+              </div>
+            </div>
+
+            {/* Right zone */}
+            <div
+              className={`flex-1 flex items-center justify-center rounded-xl border-2 border-dashed transition-all ${
+                hoverZone === 'right'
+                  ? 'bg-primary/30 border-primary scale-[1.02]'
+                  : 'bg-white/10 border-white/40 hover:bg-white/20'
+              }`}
+              onDragOver={(e) => {
+                e.preventDefault()
+                setHoverZone('right')
+              }}
+              onDragLeave={() => setHoverZone(null)}
+              onDrop={(e) => {
+                e.preventDefault()
+                updateAttributes({ align: 'right' })
+                setIsDraggingForAlign(false)
+                setHoverZone(null)
+              }}
+            >
+              <div className="text-center">
+                <AlignRight className={`w-10 h-10 mx-auto mb-2 ${hoverZone === 'right' ? 'text-primary' : 'text-white/70'}`} />
+                <span className={`text-lg font-semibold ${hoverZone === 'right' ? 'text-primary' : 'text-white/70'}`}>Right</span>
+              </div>
+            </div>
           </div>
         )}
       </div>
@@ -520,6 +668,16 @@ export const ImagePlaceholder = Node.create<ImagePlaceholderOptions>({
         parseHTML: (element) => element.getAttribute('data-align') || 'center',
         renderHTML: (attributes) => {
           return { 'data-align': attributes.align || 'center' }
+        }
+      },
+      margin: {
+        default: 16,
+        parseHTML: (element) => {
+          const margin = element.getAttribute('data-margin')
+          return margin ? parseInt(margin) : 16
+        },
+        renderHTML: (attributes) => {
+          return { 'data-margin': attributes.margin || 16 }
         }
       }
     }

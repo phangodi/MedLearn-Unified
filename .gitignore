@@ -18,3 +18,6 @@ client/public/Audio/
 # Firebase Admin SDK credentials (NEVER commit these!)
 firebase-admin-key.json
 *-firebase-adminsdk-*.json
+
+# Playwright MCP screenshots/artifacts
+.playwright-mcp/

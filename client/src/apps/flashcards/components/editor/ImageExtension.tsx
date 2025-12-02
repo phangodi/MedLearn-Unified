@@ -29,6 +29,10 @@ function ImageComponent({ node, updateAttributes, selected }: NodeViewProps) {
   const startPos = useRef({ x: 0, y: 0, width: 0, height: 0 })
   const aspectRatio = useRef(1)
 
+  // Minimum dimensions to prevent unusable collapsed images
+  const MIN_WIDTH = 100
+  const MIN_HEIGHT = 80
+
   const { src, alt, title, width, align = 'center', margin = 16 } = node.attrs
 
   // Calculate and store aspect ratio on image load
@@ -111,11 +115,9 @@ function ImageComponent({ node, updateAttributes, selected }: NodeViewProps) {
           break
       }
 
-      // Set minimum width
-      const minWidth = 50
-      const minHeight = 50
-      newWidth = Math.max(minWidth, newWidth)
-      newHeight = Math.max(minHeight, newHeight)
+      // Enforce minimum dimensions
+      newWidth = Math.max(MIN_WIDTH, newWidth)
+      newHeight = Math.max(MIN_HEIGHT, newHeight)
 
       // Update current size for tooltip
       setCurrentSize({ width: Math.round(newWidth), height: Math.round(newHeight) })
@@ -131,7 +133,9 @@ function ImageComponent({ node, updateAttributes, selected }: NodeViewProps) {
 
       // Apply final width to node attributes
       if (containerRef.current) {
-        const finalWidth = parseInt(containerRef.current.style.width)
+        const parsedWidth = parseInt(containerRef.current.style.width)
+        // Enforce minimum - use MIN_WIDTH if parsing fails or value is below minimum
+        const finalWidth = Math.max(MIN_WIDTH, isNaN(parsedWidth) ? MIN_WIDTH : parsedWidth)
         updateAttributes({ width: finalWidth })
 
         // Reset inline styles
@@ -149,17 +153,20 @@ function ImageComponent({ node, updateAttributes, selected }: NodeViewProps) {
     }
   }, [isResizing, currentHandle, updateAttributes])
 
-  // Container styles based on alignment and margin
+  // Container styles based on alignment and user-defined margin
   const getContainerStyles = (): React.CSSProperties => {
+    // Enforce minimum width if width is set
+    const effectiveWidth = width ? Math.max(MIN_WIDTH, width) : null
+
     const baseStyles: React.CSSProperties = {
       position: 'relative',
       display: 'inline-block',
       maxWidth: '100%',
-      width: width ? `${width}px` : 'auto',
+      width: effectiveWidth ? `${effectiveWidth}px` : 'auto',
       userSelect: 'none'
     }
 
-    const marginPx = `${margin}px`
+    const marginPx = `${margin || 16}px`
 
     switch (align) {
       case 'left':
