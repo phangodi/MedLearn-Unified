@@ -33,7 +33,7 @@
 
 @layer base {
   :root {
-    /* Medical Blue Theme */
+    /* Medical Blue Theme - Light Mode */
     --background: 0 0% 100%;
     --foreground: 222 47% 11%;
 
@@ -133,6 +133,11 @@
 
   .glass-dark {
     @apply bg-black/10 backdrop-blur-lg border border-white/10;
+  }
+
+  /* Radial gradient utility for ambient effects */
+  .bg-gradient-radial {
+    background: radial-gradient(circle at center, var(--tw-gradient-stops));
   }
 
   /* Dark mode: selected sidebar items should not have a chip background,

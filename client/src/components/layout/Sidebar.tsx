@@ -42,6 +42,7 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
   const { theme, toggleTheme } = useTheme()
   const [expandedSections, setExpandedSections] = useState<string[]>(['subjects', 'electives', 'tools'])
   const [showExpandTooltip, setShowExpandTooltip] = useState(false)
+  const [isHoveringDragArea, setIsHoveringDragArea] = useState(false)
   const [notificationsOpen, setNotificationsOpen] = useState(false)
   const [settingsOpen, setSettingsOpen] = useState(false)
   const [settingsPosition, setSettingsPosition] = useState<{
@@ -715,8 +716,14 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
       {!notificationsOpen && !settingsOpen && (
         <motion.div
           className="hidden lg:flex absolute top-0 bottom-0 -right-3 w-6 items-center justify-center cursor-col-resize z-20 group"
-          onMouseEnter={() => setShowExpandTooltip(true)}
-          onMouseLeave={() => setShowExpandTooltip(false)}
+          onMouseEnter={() => {
+            setIsHoveringDragArea(true)
+            setShowExpandTooltip(true)
+          }}
+          onMouseLeave={() => {
+            setIsHoveringDragArea(false)
+            setShowExpandTooltip(false)
+          }}
           onClick={() => setIsCollapsed(!isCollapsed)}
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
@@ -747,7 +754,7 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
 
         {/* Simple integrated tab (appears on hover) - COLLAPSE left, EXPAND right */}
         <AnimatePresence>
-          {showExpandTooltip && (
+          {showExpandTooltip && isHoveringDragArea && (
             <motion.div
               initial={{ opacity: 0, x: isCollapsed ? 10 : -10 }}
               animate={{ opacity: 1, x: 0 }}
@@ -801,7 +808,7 @@ export function Sidebar({ isOpen, setIsOpen, isCollapsed, setIsCollapsed }: Side
       <motion.aside
         animate={{ width: isCollapsed ? 80 : 288 }}
         transition={{ duration: 0.3, ease: 'easeInOut' }}
-        className="hidden lg:flex lg:flex-col bg-card border-r border-border/50 z-40 relative h-screen sticky top-0"
+        className="hidden lg:flex lg:flex-col bg-card border-r border-border/50 z-40 relative h-screen sticky top-0 overflow-visible"
       >
         <SidebarContent />
       </motion.aside>
