@@ -89,11 +89,50 @@ For each parsed question, create a JSON object:
 }
 ```
 
-### Step 4: Save to Database
+### Step 4: Save to Firebase
 
-1. Save questions to: `client/src/apps/physiology/data/questions/by-test-id/{testId}.json`
-2. Update the master index at: `client/src/apps/physiology/data/questions/index.json`
-3. Regenerate topic indexes if needed
+Import questions directly to Firestore `mtoQuestions` collection:
+
+```typescript
+// For each question, create a document with:
+{
+  text: "Question text",
+  textNormalized: "question text normalized for deduplication",
+  correctAnswerCount: 2,
+  options: [{ letter: "a", text: "..." }, ...],
+  correctAnswers: ["a", "c"],
+  topics: [46, 48],
+  mcqs: ["mcq-3"],  // Auto-derived from topics
+  status: "active",
+  legacyId: "q-{testId}-{questionNum}",  // CRITICAL for explanations
+  contentHash: "hash for deduplication",
+  matchedBy: "learning-objectives",
+  matchConfidence: 1.0,
+  matchReason: "Topic X: 'specific learning objective text'",
+  createdAt: Timestamp.now(),
+  createdBy: "import-script",
+  updatedAt: Timestamp.now(),
+  updatedBy: "import-script"
+}
+```
+
+Use the migration script:
+```bash
+# Dry run (test without writing):
+npx ts-node --esm client/scripts/migrate-questions-to-firebase.ts --dry-run
+
+# Live run:
+npx ts-node --esm client/scripts/migrate-questions-to-firebase.ts
+
+# Skip existing duplicates:
+npx ts-node --esm client/scripts/migrate-questions-to-firebase.ts --skip-duplicates
+```
+
+**CRITICAL:** The `legacyId` field must be set correctly as this links to explanations in `questionExplanations` collection.
+
+### Step 4B: JSON Backup (Optional)
+
+For backup, also save to: `client/src/apps/physiology/data/questions/by-test-id/{testId}.json`
 
 ### Step 5: Report Results
 
