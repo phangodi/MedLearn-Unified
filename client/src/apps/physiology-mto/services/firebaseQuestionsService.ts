@@ -332,6 +332,15 @@ export async function getSystemStats(): Promise<SystemStats | null> {
 }
 
 /**
+ * Get available test IDs from Firebase
+ * Used for "By Test" filter dropdown
+ */
+export async function getAvailableTestIds(): Promise<string[]> {
+  const stats = await getSystemStats();
+  return stats?.testIds || [];
+}
+
+/**
  * Get question count for a topic (from cached stats or query)
  */
 export async function getTopicQuestionCount(topicNumber: number): Promise<number> {

@@ -13,6 +13,7 @@ import indexData from '../../physiology/data/questions/index.json';
 // Import question files
 import test0313014645 from '../../physiology/data/questions/by-test-id/0313014645.json';
 import test0313014645B from '../../physiology/data/questions/by-test-id/0313014645-B.json';
+import test05561187 from '../../physiology/data/questions/by-test-id/05561187.json';
 import test4525102917 from '../../physiology/data/questions/by-test-id/4525102917.json';
 import test1526033148 from '../../physiology/data/questions/by-test-id/1526033148.json';
 import test3221027349 from '../../physiology/data/questions/by-test-id/3221027349.json';
@@ -164,6 +165,7 @@ export const topicTitles: { [key: number]: string } = {
 const testDataMap: Record<string, TestQuestions> = {
   '0313014645': test0313014645 as TestQuestions,
   '0313014645-B': test0313014645B as TestQuestions,
+  '05561187': test05561187 as TestQuestions,
   '4525102917': test4525102917 as TestQuestions,
   '1526033148': test1526033148 as TestQuestions,
   '3221027349': test3221027349 as TestQuestions,

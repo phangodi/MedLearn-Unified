@@ -167,6 +167,7 @@ export interface SystemStats {
   totalFlags: number;
   unresolvedFlags: number;
   lastUpdated: Timestamp;
+  testIds?: string[];  // Available test IDs for "By Test" filtering
 }
 
 // ============================================================================

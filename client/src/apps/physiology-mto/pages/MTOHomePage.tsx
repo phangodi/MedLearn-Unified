@@ -4,9 +4,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronRight, Check, Play, BookOpen, FileText, ClipboardList, Flag, Loader2 } from 'lucide-react';
 import { useTest } from '../context/TestContext';
 // Static definitions from local service
-import { mcqFilters, getTopicsGroupedByMcq, getAvailableTestIds } from '../services/questionsService';
-// Dynamic counts from Firebase service
-import { getAllQuestions } from '../services/firebaseQuestionsService';
+import { mcqFilters, getTopicsGroupedByMcq } from '../services/questionsService';
+// Dynamic data from Firebase service
+import { getAllQuestions, getAvailableTestIds } from '../services/firebaseQuestionsService';
 import { getBookmarkedQuestionIds } from '../services/bookmarkService';
 import { useAuth } from '@/contexts/AuthContext';
 import type { FilterMode } from '../../physiology/data/questions/types';

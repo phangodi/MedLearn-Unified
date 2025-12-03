@@ -91,47 +91,56 @@ For each parsed question, create a JSON object:
 
 ### Step 4: Save to Firebase
 
-Import questions directly to Firestore `mtoQuestions` collection:
+**Step 4A: Create JSON file first**
 
-```typescript
-// For each question, create a document with:
+Save questions to: `client/src/apps/physiology/data/questions/by-test-id/{testId}.json`
+
+```json
 {
-  text: "Question text",
-  textNormalized: "question text normalized for deduplication",
-  correctAnswerCount: 2,
-  options: [{ letter: "a", text: "..." }, ...],
-  correctAnswers: ["a", "c"],
-  topics: [46, 48],
-  mcqs: ["mcq-3"],  // Auto-derived from topics
-  status: "active",
-  legacyId: "q-{testId}-{questionNum}",  // CRITICAL for explanations
-  contentHash: "hash for deduplication",
-  matchedBy: "learning-objectives",
-  matchConfidence: 1.0,
-  matchReason: "Topic X: 'specific learning objective text'",
-  createdAt: Timestamp.now(),
-  createdBy: "import-script",
-  updatedAt: Timestamp.now(),
-  updatedBy: "import-script"
+  "testId": "{testId}",
+  "examName": "Physiology MTO3 - {description}",
+  "importedAt": "{ISO timestamp}",
+  "questions": [
+    {
+      "id": "q-{testId}-{questionNum}",
+      "testId": "{testId}",
+      "questionNumber": {N},
+      "text": "{Question text}",
+      "correctAnswerCount": {X},
+      "options": [{ "letter": "a", "text": "..." }, ...],
+      "correctAnswers": ["a", "c"],
+      "topics": [46, 48],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "{ISO timestamp}",
+        "matchedBy": "manual",
+        "matchConfidence": 0.9,
+        "matchReason": "Topic X: 'specific learning objective text'"
+      }
+    }
+  ]
 }
 ```
 
-Use the migration script:
+**Step 4B: Import to Firebase**
+
+Use the single-test import script:
 ```bash
 # Dry run (test without writing):
-npx ts-node --esm client/scripts/migrate-questions-to-firebase.ts --dry-run
+npx ts-node --esm client/scripts/import-single-test.ts --file {testId} --dry-run
 
-# Live run (ALWAYS use this - imports ALL questions):
-npx ts-node --esm client/scripts/migrate-questions-to-firebase.ts
+# Live run:
+npx ts-node --esm client/scripts/import-single-test.ts --file {testId}
 ```
 
-**IMPORTANT:** NEVER use --skip-duplicates! Deduplication happens at query time, not import time. Test ID mode must show ALL questions from that test.
+**What the script does automatically:**
+1. Imports all questions to Firestore `mtoQuestions` collection
+2. Adds `testId` to Firebase `systemStats/current.testIds` array
+3. **NO Netlify deploy needed** - test appears immediately in "By Test" filter
+
+**IMPORTANT:** Import ALL questions, even duplicates. The script uses content hash to detect duplicates - if a question already exists, import it anyway so it appears in the new test. Deduplication only happens when filtering by Topic or MCQ, NOT when filtering by Test ID.
 
 **CRITICAL:** The `legacyId` field must be set correctly as this links to explanations in `questionExplanations` collection.
-
-### Step 4B: JSON Backup (Optional)
-
-For backup, also save to: `client/src/apps/physiology/data/questions/by-test-id/{testId}.json`
 
 ### Step 5: Report Results
 

@@ -1,0 +1,417 @@
+{
+  "testId": "05561187",
+  "examName": "Physiology MTO3 - Cardiovascular Pages 76-78",
+  "importedAt": "2025-12-03T12:00:00Z",
+  "questions": [
+    {
+      "id": "q-05561187-1",
+      "testId": "05561187",
+      "questionNumber": 1,
+      "text": "TRUE statements concerning NO:",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "stored in vesicles of the endothelial cells, the mechanism of its release is exocytosis in response to elevations in intracellular Ca2+ levels" },
+        { "letter": "b", "text": "the most important autocrine signalling molecule of the smooth muscle cells" },
+        { "letter": "c", "text": "is produced exclusively in endothelial cells" },
+        { "letter": "d", "text": "it has an unpaired electrone, so it is a free radical" },
+        { "letter": "e", "text": "its receptor is an intracellular enzyme that is activated by NO" },
+        { "letter": "f", "text": "has key role in promoting platelet aggregation" }
+      ],
+      "correctAnswers": ["d", "e"],
+      "topics": [46],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T12:00:00Z",
+        "matchedBy": "manual",
+        "matchConfidence": 0.9,
+        "matchReason": "Topic 46 covers NO biosynthesis and actions on vascular smooth muscle"
+      }
+    },
+    {
+      "id": "q-05561187-2",
+      "testId": "05561187",
+      "questionNumber": 2,
+      "text": "Substances that strongly enhance capillary permeability include",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "histamine" },
+        { "letter": "b", "text": "adenosine" },
+        { "letter": "c", "text": "bradykinin" },
+        { "letter": "d", "text": "CO2" },
+        { "letter": "e", "text": "endothelin" },
+        { "letter": "f", "text": "NO" }
+      ],
+      "correctAnswers": ["a", "c"],
+      "topics": [43, 46],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T12:00:00Z",
+        "matchedBy": "manual",
+        "matchConfidence": 0.9,
+        "matchReason": "Topic 43 covers capillary permeability; Topic 46 covers histamine and bradykinin in inflammatory hyperemia"
+      }
+    },
+    {
+      "id": "q-05561187-4",
+      "testId": "05561187",
+      "questionNumber": 4,
+      "text": "Which systemic hemodynamic parameter changes the LEAST under physiological conditions?",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "cardiac output" },
+        { "letter": "b", "text": "mean arterial blood pressure" },
+        { "letter": "c", "text": "heart rate" },
+        { "letter": "d", "text": "total peripheral resistance" }
+      ],
+      "correctAnswers": ["b"],
+      "topics": [42, 47],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T12:00:00Z",
+        "matchedBy": "manual",
+        "matchConfidence": 0.9,
+        "matchReason": "Topic 42 covers arterial blood pressure; Topic 47 covers neural regulation maintaining BP stability"
+      }
+    },
+    {
+      "id": "q-05561187-5",
+      "testId": "05561187",
+      "questionNumber": 5,
+      "text": "Which circulatory reflex operates at physiologic arterial blood pressure values in a healthy individual?",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "the peripheral chemoreceptor pressor reflex" },
+        { "letter": "b", "text": "the central chemoreceptor depressor reflex" },
+        { "letter": "c", "text": "the carotid sinus baroreceptor reflex" },
+        { "letter": "d", "text": "the Cushing reflex" }
+      ],
+      "correctAnswers": ["c"],
+      "topics": [48],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T12:00:00Z",
+        "matchedBy": "manual",
+        "matchConfidence": 0.95,
+        "matchReason": "Topic 48 covers baroreceptor reflex and short-term BP control"
+      }
+    },
+    {
+      "id": "q-05561187-6",
+      "testId": "05561187",
+      "questionNumber": 6,
+      "text": "Considerable basal tone is characteristic of the resistance vessels of the following organs, EXCEPT:",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "heart" },
+        { "letter": "b", "text": "kidney" },
+        { "letter": "c", "text": "skin" },
+        { "letter": "d", "text": "brain" }
+      ],
+      "correctAnswers": ["c"],
+      "topics": [46],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T12:00:00Z",
+        "matchedBy": "manual",
+        "matchConfidence": 0.9,
+        "matchReason": "Topic 46 covers autoregulation and basal tone in different organs"
+      }
+    },
+    {
+      "id": "q-05561187-7",
+      "testId": "05561187",
+      "questionNumber": 7,
+      "text": "The pulse pressure",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "increases if the compliance of the blood vessel increases" },
+        { "letter": "b", "text": "is the difference between the systolic and the diastolic arterial pressures" },
+        { "letter": "c", "text": "is always present in the capillaries" },
+        { "letter": "d", "text": "declines in the arterioles" }
+      ],
+      "correctAnswers": ["b", "d"],
+      "topics": [42],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T12:00:00Z",
+        "matchedBy": "manual",
+        "matchConfidence": 0.95,
+        "matchReason": "Topic 42 covers pulse pressure definition and propagation"
+      }
+    },
+    {
+      "id": "q-05561187-8",
+      "testId": "05561187",
+      "questionNumber": 8,
+      "text": "The basal tone of the arterioles",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "the cerebral vessels do not have it" },
+        { "letter": "b", "text": "is identical in the different organs" },
+        { "letter": "c", "text": "can be determined after the denervation of the vessels" },
+        { "letter": "d", "text": "is the same as the neurogenic tone" }
+      ],
+      "correctAnswers": ["c"],
+      "topics": [46],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T12:00:00Z",
+        "matchedBy": "manual",
+        "matchConfidence": 0.9,
+        "matchReason": "Topic 46 covers myogenic tone and local blood flow regulation"
+      }
+    },
+    {
+      "id": "q-05561187-11",
+      "testId": "05561187",
+      "questionNumber": 11,
+      "text": "The value of the mean pressure in the pulmonal artery is",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "8 mmHg" },
+        { "letter": "b", "text": "15 mmHg" },
+        { "letter": "c", "text": "100 mmHg" },
+        { "letter": "d", "text": "25 mmHg" },
+        { "letter": "e", "text": "60 mmHg" }
+      ],
+      "correctAnswers": ["b"],
+      "topics": [50],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T12:00:00Z",
+        "matchedBy": "manual",
+        "matchConfidence": 0.95,
+        "matchReason": "Topic 50 covers pulmonary circulation blood pressure values"
+      }
+    },
+    {
+      "id": "q-05561187-12",
+      "testId": "05561187",
+      "questionNumber": 12,
+      "text": "In the left ventricle, the blood flow in the subendocardium:",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "blood flow is equal in the subendocardium during the cardiac cycle" },
+        { "letter": "b", "text": "the subendocardium is avascular, has no blood flow, this tissue is supplied by the blood within the heart chambers" },
+        { "letter": "c", "text": "is much larger during the systole than during the diastole" },
+        { "letter": "d", "text": "is much larger during the diastole than during the systole" }
+      ],
+      "correctAnswers": ["d"],
+      "topics": [51],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T12:00:00Z",
+        "matchedBy": "manual",
+        "matchConfidence": 0.95,
+        "matchReason": "Topic 51 covers coronary circulation and subendocardial blood flow"
+      }
+    },
+    {
+      "id": "q-05561187-13",
+      "testId": "05561187",
+      "questionNumber": 13,
+      "text": "The total lymph flow in adult humans is approximately:",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "1-2 microliter/min" },
+        { "letter": "b", "text": "1-2 microliter/sec" },
+        { "letter": "c", "text": "1-2 microliter/hour" },
+        { "letter": "d", "text": "1-2 ml/sec" },
+        { "letter": "e", "text": "1-2 ml/hour" },
+        { "letter": "f", "text": "1-2 ml/min" }
+      ],
+      "correctAnswers": ["f"],
+      "topics": [44],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T12:00:00Z",
+        "matchedBy": "manual",
+        "matchConfidence": 0.9,
+        "matchReason": "Topic 44 covers lymphatic circulation and flow rates"
+      }
+    },
+    {
+      "id": "q-05561187-14",
+      "testId": "05561187",
+      "questionNumber": 14,
+      "text": "The major function of lymphatics is",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "to deliver lipid soluble nutrients to the tissues" },
+        { "letter": "b", "text": "to deliver proteins for the tissues" },
+        { "letter": "c", "text": "to deliver lymphocytes to the tissues" },
+        { "letter": "d", "text": "to remove proteins from the interstitial fluid" },
+        { "letter": "e", "text": "to remove lactic acid and other metabolites from the tissues" }
+      ],
+      "correctAnswers": ["d"],
+      "topics": [44],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T12:00:00Z",
+        "matchedBy": "manual",
+        "matchConfidence": 0.95,
+        "matchReason": "Topic 44 covers critical functions of lymphatic system including protein clearance"
+      }
+    },
+    {
+      "id": "q-05561187-16",
+      "testId": "05561187",
+      "questionNumber": 16,
+      "text": "Total peripheral resistance is increased by",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "Bezold-Jarish reflex" },
+        { "letter": "b", "text": "activation of the carotid sinus baroreceptors" },
+        { "letter": "c", "text": "inhibition of the parasympathetic activity" },
+        { "letter": "d", "text": "stimulation of the beta-2-adrenergic receptors" },
+        { "letter": "e", "text": "stimulation of the arterial chemoreceptors" },
+        { "letter": "f", "text": "immersion of the limb into ice-cold water (cold-pressor test)" }
+      ],
+      "correctAnswers": ["e", "f"],
+      "topics": [47, 48],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T12:00:00Z",
+        "matchedBy": "manual",
+        "matchConfidence": 0.9,
+        "matchReason": "Topics 47-48 cover neural regulation of TPR and chemoreceptor responses"
+      }
+    },
+    {
+      "id": "q-05561187-17",
+      "testId": "05561187",
+      "questionNumber": 17,
+      "text": "The hydraulic resistance of rigid cylindrical tubes is",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "inversely proportional to r4 (fourth power of the tube radius)" },
+        { "letter": "b", "text": "inversely proportional to the pressure gradient" },
+        { "letter": "c", "text": "inversely proportional to viscosity" },
+        { "letter": "d", "text": "inversely proportional to flow" },
+        { "letter": "e", "text": "inversely proportional to the length of the tube" }
+      ],
+      "correctAnswers": ["a", "d"],
+      "topics": [41],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T12:00:00Z",
+        "matchedBy": "manual",
+        "matchConfidence": 0.95,
+        "matchReason": "Topic 41 covers hemodynamics and Poiseuille's law"
+      }
+    },
+    {
+      "id": "q-05561187-18",
+      "testId": "05561187",
+      "questionNumber": 18,
+      "text": "Local hypoxia elicits vasoconstriction in the resistance vessels of",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "the coronary circulation" },
+        { "letter": "b", "text": "the cerebral circulation" },
+        { "letter": "c", "text": "the skeletal muscle circulation" },
+        { "letter": "d", "text": "the pulmonary circulation" }
+      ],
+      "correctAnswers": ["d"],
+      "topics": [50],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T12:00:00Z",
+        "matchedBy": "manual",
+        "matchConfidence": 0.95,
+        "matchReason": "Topic 50 covers pulmonary hypoxic vasoconstriction (Euler-Liljestrand reflex)"
+      }
+    },
+    {
+      "id": "q-05561187-19",
+      "testId": "05561187",
+      "questionNumber": 19,
+      "text": "The beat by beat matching of stroke volume to venous return in the left and right ventricles are due to",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "the negative dromotropic effect of the left vagal nerve" },
+        { "letter": "b", "text": "the positive inotropic effect of the sympathetic cardiac nerves" },
+        { "letter": "c", "text": "the Frank-Starling's regulatory mechanism of cardiac contraction force" },
+        { "letter": "d", "text": "extracardial mechanisms" },
+        { "letter": "e", "text": "the negative inotropic effect of the vagal nerves" }
+      ],
+      "correctAnswers": ["c"],
+      "topics": [35, 40],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T12:00:00Z",
+        "matchedBy": "manual",
+        "matchConfidence": 0.95,
+        "matchReason": "Topics 35 and 40 cover Frank-Starling mechanism and cardiac output regulation"
+      }
+    },
+    {
+      "id": "q-05561187-20",
+      "testId": "05561187",
+      "questionNumber": 20,
+      "text": "The chemoreceptors responsible for the central nervous system ischemic response are located in",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "the carotis sinus" },
+        { "letter": "b", "text": "the ventral medulla" },
+        { "letter": "c", "text": "the adrenal medulla" },
+        { "letter": "d", "text": "the right atrium" },
+        { "letter": "e", "text": "the carotid bodies" }
+      ],
+      "correctAnswers": ["b"],
+      "topics": [48],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T12:00:00Z",
+        "matchedBy": "manual",
+        "matchConfidence": 0.9,
+        "matchReason": "Topic 48 covers CNS ischemic response and chemoreceptors"
+      }
+    },
+    {
+      "id": "q-05561187-22",
+      "testId": "05561187",
+      "questionNumber": 22,
+      "text": "Which one does NOT influence venous capacity in the leg?",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "sympathetic innervation" },
+        { "letter": "b", "text": "posture" },
+        { "letter": "c", "text": "contraction of the precapillary sphincters" },
+        { "letter": "d", "text": "parasympathetic innervation" },
+        { "letter": "e", "text": "function of the right ventricle" }
+      ],
+      "correctAnswers": ["d"],
+      "topics": [45],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T12:00:00Z",
+        "matchedBy": "manual",
+        "matchConfidence": 0.95,
+        "matchReason": "Topic 45 covers venous circulation and sympathetic innervation of veins"
+      }
+    },
+    {
+      "id": "q-05561187-24",
+      "testId": "05561187",
+      "questionNumber": 24,
+      "text": "Which portion of the vascular system has the highest compliance?",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "muscular arteries" },
+        { "letter": "b", "text": "capillaries" },
+        { "letter": "c", "text": "veins" },
+        { "letter": "d", "text": "elastic arteries" }
+      ],
+      "correctAnswers": ["c"],
+      "topics": [42, 45],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T12:00:00Z",
+        "matchedBy": "manual",
+        "matchConfidence": 0.9,
+        "matchReason": "Topics 42 and 45 cover vascular compliance in arteries and veins"
+      }
+    }
+  ]
+}
