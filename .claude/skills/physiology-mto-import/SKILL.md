@@ -1,3 +1,15 @@
+---
+name: physiology-mto-import
+description: "Import MTO questions from markdown files to Firebase. Parses questions, matches to learning objectives for topic assignment, and migrates to Firestore. Use with 'import questions from [path]' or 'add MTO questions'."
+allowed-tools:
+  - Read
+  - Grep
+  - Glob
+  - Bash
+  - Write
+  - Edit
+---
+
 # Physiology MTO Question Import Skill
 
 Import and categorize MCQ questions from markdown files into the physiology question database.
