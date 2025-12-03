@@ -1,5 +1,5 @@
 import { motion, useMotionValue, useTransform } from 'framer-motion'
-import { Brain, Microscope, User, Users, Activity, ArrowRight, Sparkles } from 'lucide-react'
+import { Brain, Microscope, User, Users, Activity, ArrowRight } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '@/contexts/AuthContext'
 

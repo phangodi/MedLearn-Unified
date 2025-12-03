@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Sidebar } from '@/components/layout/Sidebar'
 import { BorderFrame } from '@/components/layout/BorderFrame'
-import { Particles } from '@/components/ui/Particles'
 import { HeroSection } from '@/components/layout/HeroSection'
 import { DashboardMessageCard } from '@/components/notifications/DashboardMessageCard'
 import { ThemeToggle } from '@/components/ui/ThemeToggle'

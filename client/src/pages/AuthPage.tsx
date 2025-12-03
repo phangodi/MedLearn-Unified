@@ -77,7 +77,7 @@ const fieldVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      type: 'spring',
+      type: 'spring' as const,
       stiffness: 100,
       damping: 15,
     },
@@ -296,7 +296,7 @@ export function AuthPage() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{
                   duration: 0.6,
-                  type: 'spring',
+                  type: 'spring' as const,
                   stiffness: 100,
                   damping: 15,
                 }}
@@ -315,7 +315,7 @@ export function AuthPage() {
                       animate={{ scale: 1 }}
                       transition={{
                         delay: 0.2,
-                        type: 'spring',
+                        type: 'spring' as const,
                         stiffness: 200,
                         damping: 15,
                       }}
