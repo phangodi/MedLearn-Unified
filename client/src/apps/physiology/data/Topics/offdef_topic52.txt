@@ -1,0 +1,68 @@
+// Topic 52: Glomerular filtration: the factors determining the volume and composition of filtrate
+// officialDefinitions extracted from official lecture PDFs
+
+// **LO-1** (Topic-52) - Structures of the glomerular tuft
+officialDefinitions: [
+  'Afferent Arteriole: a small artery entering the glomerulus. Supplies blood to the glomerular capillaries. Wider diameter compared to the efferent arteriole, ensuring higher hydrostatic pressure in the glomerular capillaries for filtration.',
+  'Efferent Arteriole: a small artery exiting the glomerulus. Drains blood from the glomerulus and leads to the peritubular capillaries or vasa recta. Narrower diameter than the afferent arteriole, maintaining sufficient pressure within the glomerular capillaries to sustain filtration.',
+  'Glomerular Capillary Network: a compact tuft of interconnected, fenestrated capillary loops of blood vessels. Acts as the primary filtration barrier, allowing water and small solutes to pass into Bowman\'s capsule while retaining large proteins and cells. Lined by fenestrated endothelial cells (50-100 nm pores) that facilitate filtration. Supported structurally and functionally by the mesangium.',
+  'Mesangium: comprised of mesangial cells (specialized contractile and phagocytic cells) and their extracellular matrix. Located at the center of glomerulus between and within capillary loops. Provides structural support for the glomerular capillaries. Regulates blood flow through contraction. Removes trapped residues and immune complexes via phagocytosis. Contains many myofilaments and has gap junctions that connect it with juxtaglomerular cells.',
+  'Bowman\'s Capsule (Glomerular Capsule): hollow sphere composed of epithelial cells. Parietal Layer: composed of simple squamous epithelium forming the outer wall. Visceral Layer: made of podocytes that extend foot processes to form filtration slits. Capsular Space: lies between the two layers and collects filtrate from the glomerular capillaries. Function: collects filtrate generated in the glomerular capillaries and directs it into the proximal tubule.',
+  'Juxtaglomerular Apparatus (JGA): a specialized structure located at the vascular pole of the glomerulus, formed by the afferent arteriole, efferent arteriole, and distal tubule.',
+  'Juxtaglomerular (Granular) Cells: modified smooth muscle cells in the wall of the afferent arteriole. Synthesizes and secretes renin in response to: reduced arterial pressure, low sodium levels detected by the macula densa, and sympathetic stimulation via β1-adrenergic receptors.',
+  'Macula Densa: specialized epithelial cells in the distal convoluted tubule. Monitors sodium concentration in the tubular fluid. Signals the juxtaglomerular cells to release renin during low sodium conditions.',
+  'Extraglomerular Mesangial Cells (Lacis Cells): situated between the macula densa and juxtaglomerular cells. May facilitate communication between the macula densa and juxtaglomerular cells.',
+],
+
+// **LO-2** (Topic-52) - Three layers of glomerular filtration barrier
+officialDefinitions: [
+  'Structure of the glomerular membrane: 1. capillary endothel, 2. basal membrane, 3. epithel cells (podocytes).',
+  'Permeability of glomerular membrane: 1. pores between fenestrated endothel cells (50-100 nm), 2. pores between podocytes (25 nm), 3. hydrated collagen and protoglycane channels of the basal membrane (3-5 nm).',
+  'Fenestrated Capillary Endothelium: composed of endothelial cells with large fenestrations (~70-100 nm in diameter). These fenestrations are too small to allow blood cells to pass but allow water and solutes to pass freely. Barrier to: Red Blood Cells (due to fenestrations smaller than cellular diameter). Allows free filtration of water, sodium (Na⁺), inulin, and small solutes.',
+  'Glomerular Basement Membrane (GBM): a thick, trilaminar layer made of type IV collagen, laminin, nidogen, and heparan sulfate proteoglycans. Divided into: Lamina rara interna (adjacent to the capillary endothelium, has heparin sulfate), Lamina densa (the central dense layer, made of Type IV collagen and laminins), Lamina rara externa (adjacent to the podocyte layer, also has heparin sulfate). The GBM is negatively charged due to heparan sulfate, which repels negatively charged molecules such as albumin. Barrier to: Albumin (negatively charged molecules are repelled) and larger macromolecules.',
+  'Visceral Layer of Bowman\'s Capsule (Podocytes): composed of highly specialized epithelial cells called podocytes with an unusual octopus-like structure. Podocytes extend primary processes that give rise to foot processes (pedicels), which interdigitate with adjacent podocytes to form filtration slits (~25-60 nm wide). Filtration slits are spanned by a thin, proteinaceous slit diaphragm, containing proteins such as nephrin and podocin. Barrier to: Proteins such as albumin and other macromolecules.',
+  'Filtration Selectivity Table - Water (molecular weight 18): freely filtered through all three layers due to its small size. Sodium (Na⁺): freely filtered through all three layers due to its small size and lack of charge barrier. Inulin (molecular weight 5500, filterability 0.98): freely filtered as a small, neutral molecule. Albumin (molecular weight 69000, filterability 0.01): impeded by both GBM (negative charge repulsion) and slit diaphragm (size exclusion). Red Blood Cells: impeded by fenestrated capillary endothelium due to their large cellular diameter.',
+  'Glomerular filtrate is protein-free and phospholipid-free blood plasma. Substances that can pass through: Electrolytes (HCO3⁻, Na⁺, K⁺, Cl⁻, Ca²⁺, Mg²⁺, H2O) - despite the negative charge on some of these electrolytes, they\'re very small; hence, they will get freely filtered. Non-negatively charged low-molecular weight molecules (glucose, amino acids, lipids, urea, creatinine, vitamins).',
+],
+
+// **LO-3** (Topic-52) - GFR, RPF, FF definitions and reference values
+officialDefinitions: [
+  'Glomerular Filtration Rate (GFR): the rate at which plasma is filtered across the glomerular filtration barrier into Bowman\'s capsule. Plasma volume being filtered out of the glomerulus into the Bowman\'s capsule every minute. Reference Value: 100-130 ml/min (120-125 ml/min), equating to approximately 180 litres per day. Inulin clearance: 120-130 ml/min. Creatinine clearance: 90-150 ml/min.',
+  'Renal Plasma Flow (RPF): quantifies the amount of plasma delivered to the kidneys per minute, which contributes to both filtration and renal metabolic needs. It is a component of renal blood flow, excluding the red blood cell fraction (hematocrit). Reference Value: 660 ml/min (480-800 ml/min), based on a normal renal blood flow of approximately 1.1-1.3 litres/min and a hematocrit of 40%.',
+  'Renal Blood Flow (RBF): 1300 ml/min (870-1540 ml/min). RBF = RPF ÷ (1 - Hematocrit).',
+  'Filtration Fraction (FF): represents the proportion of plasma flowing through the kidneys that is filtered into the nephrons. Reflects the efficiency of the glomerular filtration process. Formula: FF = GFR/RPF. Reference Value: ~0.2 (20%), indicating that 20% of renal plasma flow is filtered into Bowman\'s capsule.',
+],
+
+// **LO-4** (Topic-52) - Net filtration force calculation
+officialDefinitions: [
+  'Effective filtration pressure (Peff) - Starling-principle: Peff = (PC - PB) - (πC - πB). P = hydrostatic pressure, PC = glomerular capillary pressure, PB = pressure in Bowman-capsule, π = oncotic pressure, πC = oncotic pressure in glomerular capillary, πB = oncotic pressure in Bowman-capsule.',
+  'GFR = Kf × Peff. GFR = Kf[(PC - PB) - (πC - πB)]. GFR = Kf[55 mmHg - 15 mmHg - 30 mmHg] = Kf × 10 mmHg.',
+  'Net Filtration Pressure (NFP) components: Glomerular Hydrostatic Pressure (GHP): force that pushes plasma out of the glomerular capsule into the Bowman\'s space. Directly dependent on systolic blood pressure. Average value: 55-60 mmHg. Colloid Osmotic Pressure (COP): exerted by plasma proteins like albumin. Keeps water in the blood. Average value: 30-32 mmHg. Capsular Hydrostatic Pressure: due to the pressure build-up in the Bowman\'s capsule. Average value: 15-18 mmHg. Capsular Osmotic Pressure: as long as the filtration membrane is intact, there should be no proteins in the Bowman\'s capsule. Average value: 0 mmHg.',
+  'Net filtration force should be approximately 10 mmHg. Example calculation: NFF = (60 - 18) - (32 - 0) = 42 - 32 = 10 mmHg.',
+  'Changes in Net Filtration Force Along the Glomerular Capillary: Hydrostatic Pressure (Pᴳᶜ): remains relatively constant (~60 mmHg) along the capillary due to the high resistance in the efferent arteriole. This stability ensures a continuous driving force for filtration. Colloid Osmotic Pressure (πᴳᶜ): as fluid is filtered out of the glomerulus, the remaining plasma becomes more concentrated, causing πᴳᶜ to progressively increase. πᴳᶜ increases from ~32 mmHg at the afferent end to ~36 mmHg at the efferent end, opposing filtration.',
+  'Net Filtration Force along capillary: At the afferent end: NFF = (60 - 18) - (32 - 0) = 10 mmHg. At the efferent end: NFF = (60 - 18) - (36 - 0) = 6 mmHg. As blood flows along the glomerular capillary, the net filtration force decreases due to the rise in πᴳᶜ, while Pᴳᶜ remains steady.',
+],
+
+// **LO-5** (Topic-52) - Filtration coefficient
+officialDefinitions: [
+  'Factors determining filtration: 1. properties of glomerular membrane (extension, permeability), 2. effective filtration pressure, 3. properties of filtrating substances (molecular weight, molecular shape, electrostatic factors).',
+  'Filtration Coefficient (Kf): a measure of the permeability and surface area of the glomerular capillary membrane available for filtration. Determines how effectively plasma can be filtered through the glomerular filtration barrier. Kf = Hydraulic conductivity × Surface area of the glomerular capillaries. Units: mL/min/mmHg. GFR = Kf × NFP. Any fluctuations in either the Net Filtration Pressure (NFP) or Filtration Coefficient (Kf) directly affects GFR.',
+  'Surface Area of Glomerular Capillaries: the larger the surface area available for filtration, the greater the Kf. Surface area is modulated by mesangial cell contraction or relaxation. Relaxation of mesangial cells → Increased surface area → Higher Kf. Contraction of mesangial cells → Reduced surface area → Lower Kf.',
+  'Permeability of the Filtration Barrier: the permeability of the glomerular filtration barrier (capillary endothelium, basement membrane, and podocyte slit diaphragms) determines how easily fluid and solutes pass through. Increased permeability (e.g., glomerulonephritis) → Higher Kf, potential proteinuria. Decreased permeability (e.g., thickened basement membrane in diabetes) → Lower Kf.',
+  'Role of Kf in determining GFR: High Kf → Greater filtration area and permeability → Increased GFR. Low Kf → Reduced filtration area or permeability → Decreased GFR.',
+],
+
+// **Reference Values** (Topic-52) - Critical values
+officialDefinitions: [
+  'GFR: 120-125 ml/min (100-130 ml/min).',
+  'RPF: 660 ml/min (480-800 ml/min).',
+  'FF: 0.2 (20%).',
+  'RBF: 1300 ml/min (870-1540 ml/min).',
+  'Glomerular Hydrostatic Pressure: 55-60 mmHg.',
+  'Bowman\'s Capsule Hydrostatic Pressure: 15-18 mmHg.',
+  'Glomerular Capillary Oncotic Pressure: 30-32 mmHg (afferent end) to 36 mmHg (efferent end).',
+  'Bowman\'s Capsule Oncotic Pressure: 0 mmHg.',
+  'Net Filtration Pressure: approximately 10 mmHg.',
+  'Urine production: 650-3500 ml/day, 0.5-20 ml/min.',
+  'Urine osmolality: 70-1200 mOsm/L.',
+],

@@ -1,0 +1,78 @@
+// **Topic 53: Renal blood flow. The regulation of GFR and RBF**
+// Official Definitions extracted from University of Szeged lecture PDFs
+
+// **LO-1** (Topic-53)
+// Describe in sequence the blood vessels through which blood flows when passing from the renal artery to the renal vein
+officialDefinitions: [
+  'Blood supply sequence: renal artery, lobar artery, interlobar artery, arcuate artery, interlobular arteries (cortical radiate arteries), afferent arteriole, glomerular capillaries, efferent arteriole, vasa recta, peritubular capillaries.',
+  'Renal Artery: branches off the abdominal aorta and supplies blood to the kidney. Segmental Arteries: large branches of the renal artery that enter the kidney. Interlobar Arteries: branch from the segmental arteries and run through the renal columns between the renal pyramids.',
+  'Arcuate Arteries: branch from the interlobar arteries and arch along the boundary between the renal cortex and medulla. Interlobular (Cortical Radiate) Arteries: arise from the arcuate arteries and extend into the renal cortex.',
+  'Afferent Arterioles: branch from the interlobular arteries and supply blood to the glomeruli. Glomerular Capillaries: form the glomerulus, where filtration occurs. Plasma is filtered into Bowman\'s capsule, forming the initial filtrate (primary urine). Efferent Arterioles: drain blood from the glomerular capillaries and regulate blood pressure within the glomerulus.',
+  'Cortical Nephrons (85% of Nephrons): Peritubular Capillaries emerge from efferent arterioles, surround the proximal and distal convoluted tubules in the cortex, and function in the reabsorption and secretion of solutes and water.',
+  'Juxtamedullary Nephrons (15% of Nephrons): Vasa Recta are specialized capillaries that arise from the efferent arterioles of juxtamedullary nephrons, extend into the medulla alongside the loops of Henle, and function in maintaining the medullary osmotic gradient and water reabsorption.',
+  'Venous Return: Interlobular (Cortical Radiate) Veins drain blood from the peritubular capillaries and vasa recta. Arcuate Veins collect blood from the interlobular veins and run parallel to the arcuate arteries. Interlobar Veins drain blood from the arcuate veins and run through the renal columns. Renal Vein collects blood from the interlobar veins and returns it to the inferior vena cava.',
+],
+
+// **LO-2** (Topic-53) - CRITICAL
+// Define renal blood flow (RBF), give its normal value and its contribution to the cardiac output at rest
+officialDefinitions: [
+  'Renal Blood Flow (RBF): the total volume of blood delivered to the kidneys per minute. This blood flow is essential for glomerular filtration, which is the first step in urine formation, and for maintaining overall fluid, electrolyte, and acid-base homeostasis.',
+  'Normal Value: RBF = 1320 mL/min, which corresponds to approximately 20-23% of the resting cardiac output (typically ~5 L/min in an average adult). This makes the kidneys one of the most highly perfused organs relative to their size.',
+  'RBF = RPF / (1 - Hematocrit). PAH-Clearance equals RPF at 660 ml/min, thus RBF is about 1320 ml/min.',
+  'Normalized renal blood flow: 420 ml/min/100g of renal tissue. For comparison: cardiac muscle 84 ml/min/100g, skeletal muscle 2.7 ml/min/100g, brain 54 ml/min/100g.',
+  'Regional Distribution of Renal Blood Flow: Renal Cortex receives 90-95% of RBF to supply the glomeruli for filtration. Renal Medulla receives only 5-10% of RBF to prevent excessive washout of the osmotic gradient required for urine concentration.',
+  'Determinants of RBF: Renal Perfusion Pressure (the difference between renal artery and renal vein pressures) and Renal Vascular Resistance (the sum of resistance in the afferent arterioles, efferent arterioles, and interlobular arteries, controlled by sympathetic nervous system, hormonal factors, and local intrarenal autoregulation).',
+],
+
+// **LO-3** (Topic-53)
+// Compare blood flow to, and oxygen consumption by, the kidneys with that of skeletal muscle and cardiac muscle. Describe the renal structure where anaerobic conditions prevail.
+officialDefinitions: [
+  'Kidneys: Blood Flow 1320 mL/min (approximately 20-23% of cardiac output at rest). Oxygen Consumption 6 mL O₂/min (around 7% of total body oxygen consumption). The high blood flow is mainly for filtration, not metabolic activity. Oxygen extraction ratio is low (~10-15%), as oxygen is primarily used for active sodium transport in the renal tubules.',
+  'Skeletal Muscle: Blood Flow 750 mL/min (about 15-20% of cardiac output at rest). Normalized blood flow: 2.7 ml/min/100g. Oxygen Consumption 54 mL O₂/min at rest, with substantial increase during exercise. Moderate oxygen extraction ratio at rest (~25-30%), which rises significantly during exercise.',
+  'Cardiac Muscle: Blood Flow 250 mL/min (approximately 5% of cardiac output). Normalized blood flow: 84 ml/min/100g. Oxygen Consumption 30 mL O₂/min. Very high oxygen extraction ratio (~60-70%) due to constant metabolic demand for contraction. The heart cannot significantly increase oxygen extraction, so increased demand is met by increasing blood flow.',
+  'Anaerobic Conditions - Renal Medulla: Oxygen tension is significantly lower than in the renal cortex. The countercurrent exchange system in the vasa recta limits oxygen delivery to the medulla to preserve the osmotic gradient. Oxygen consumption in the medulla is high due to active sodium transport in the thick ascending limb of the loop of Henle. This region operates under near-anaerobic conditions, making it more susceptible to ischemic injury.',
+  'Renal Cortex: Well-oxygenated, as it receives the majority of renal blood flow. Primary site of glomerular filtration and tubular reabsorption, with high metabolic activity supported by aerobic conditions.',
+],
+
+// **LO-4** (Topic-53)
+// Describe the effect of change in the resistance of the afferent arteriole on GFR and RBF, and RPF
+officialDefinitions: [
+  'Increased Afferent Arteriole Resistance (Vasoconstriction): GFR Decreases - vasoconstriction reduces blood flow into the glomerular capillaries, lowering glomerular hydrostatic pressure, which directly reduces the filtration rate. RBF Decreases - higher resistance at the afferent arteriole reduces total blood flow through the kidneys. RPF Decreases - as RBF decreases, plasma flow through the glomerulus is proportionally reduced.',
+  'Decreased Afferent Arteriole Resistance (Vasodilation): GFR Increases - vasodilation allows more blood to flow into the glomerular capillaries, raising glomerular hydrostatic pressure and increasing the filtration rate. RBF Increases - lower resistance at the afferent arteriole increases blood flow into the glomerulus. RPF Increases - as RBF increases, plasma flow through the glomerulus also increases.',
+  'Key relationship: Afferent arteriole resistance changes cause parallel changes in GFR, RBF, and RPF - all three parameters move in the same direction. Vasoconstriction decreases all three; vasodilation increases all three.',
+  'Increased Efferent Arteriolar Resistance: Initially increases glomerular capillary hydrostatic pressure (Pᴳᶜ), enhancing net filtration force and GFR. However, excessive resistance can reduce renal plasma flow (RPF), eventually lowering GFR.',
+],
+
+// **LO-5** (Topic-53) - CRITICAL
+// Describe the autoregulation range of RBF/RPF/GFR. Describe the role of tubuloglomerular feedback, local vasoactive metabolites, and myogenic response (Bayliss effect)
+officialDefinitions: [
+  'Autoregulation Range: The kidneys autoregulate RBF and GFR within a systemic arterial pressure range of 80-180 mmHg. Below 80 mmHg, autoregulation fails, resulting in reduced RBF, RPF, and GFR. Above 180 mmHg, the protective mechanisms against high pressure are overwhelmed, potentially causing renal injury.',
+  'Renal autoregulation mechanisms: Bayliss-effect (myogenic response), Local vasoactive metabolites, Tubuloglomerular feedback. These maintain RBF and GFR fairly constant between mean arterial pressure values of 80-180 mmHg.',
+  'Myogenic Response (Bayliss Effect): An intrinsic mechanism of vascular smooth muscle in the afferent arteriole that responds to changes in arterial pressure. Increased MAP causes stretch of arteriole walls, activates mechanosensitive ion channels, causing Ca²⁺ influx into smooth muscle cells, leading to vasoconstriction. Decreased MAP causes reduced stretch, closure of mechanosensitive ion channels, smooth muscle relaxation, and vasodilation.',
+  'Tubuloglomerular Feedback (TGF): A local autoregulatory mechanism that maintains stable GFR by adjusting afferent arteriole diameter in response to NaCl concentration in the distal tubule. Macula densa cells use NKCC2 cotransporters to detect tubular NaCl levels.',
+  'TGF Mechanism - High GFR: ↑GFR → ↑tubular flow rate → ↑NaCl at macula densa → Macula densa cells release ATP and adenosine → Adenosine acts on A1 receptors causing afferent arteriole vasoconstriction → ↓RBF and GFR (negative feedback).',
+  'TGF Mechanism - Low GFR: ↓GFR → ↓NaCl at macula densa → Decreased adenosine/ATP release → Enhanced release of prostaglandins (PGE₂, PGI₂) and NO → Triggers afferent arteriole dilation and stimulates renin release from juxtaglomerular cells → Helps restore RBF and GFR.',
+  'Local Vasoactive Metabolites - Paracrine Angiotensin II: Produced in response to low BP or Na⁺ via renin-angiotensin system. Preferentially constricts efferent arteriole, maintains GFR during low perfusion pressure, fine-tunes GFR without severely reducing filtration.',
+  'Local Vasoactive Metabolites - Prostaglandins (PGE₂, PGI₂): Released locally in the kidney, especially under stress (e.g., ischemia, SNS activation). Dilate afferent arterioles, counteract vasoconstriction (e.g., from Ang II or norepinephrine), preserve RBF and GFR during stress.',
+],
+
+// **LO-6** (Topic-53)
+// Describe the effect of low hydrostatic and high colloid osmotic pressures in peritubular capillaries on net proximal tubular fluid reabsorption
+officialDefinitions: [
+  'Low Hydrostatic Pressure in Peritubular Capillaries: Blood exits the glomerulus through the efferent arteriole, which is narrower than the afferent arteriole. This narrowing causes a pressure drop to ~8-12 mmHg. Low pressure reduces the force pushing fluid out of the capillaries, favoring reabsorption of water and solutes (like sodium, chloride) from the interstitial fluid into the capillaries.',
+  'High Colloid Osmotic Pressure in Peritubular Capillaries: During filtration at the glomerulus, plasma water leaves, but plasma proteins stay behind. This increases the protein concentration in the capillaries downstream. The high protein concentration creates a strong osmotic pull (about 30-35 mmHg), which pulls water and solutes into the capillaries from the surrounding interstitial space.',
+  'Combined Effect on Net Reabsorption: Together, these forces create a net reabsorptive pressure of ~+20 mmHg. This drives reabsorption of about 65-70% of filtered water and solutes from the proximal tubule. Solutes include sodium, chloride, glucose, amino acids, and others.',
+  'Glomerulotubular Balance: The intrinsic mechanism by which the proximal tubule adjusts its reabsorption of water and solutes to match the filtered load from the glomerulus. More filtration → more plasma water lost → proteins stay behind → raises oncotic pressure (π) in peritubular capillaries → creates strong suction force, pulling fluid back from the tubule into the capillaries.',
+  'Starling Forces in Peritubular Capillaries: Low hydrostatic pressure (~8-12 mmHg) combined with high oncotic pressure (~30-35 mmHg) favors fluid reabsorption rather than filtration, which is the opposite of the glomerular capillaries where high hydrostatic pressure (~60 mmHg) drives filtration.',
+],
+
+// **REFERENCE VALUES** (Topic-53) - CRITICAL
+referenceValues: [
+  'Autoregulation range: 80-180 mmHg',
+  'RBF: 1320 ml/min',
+  'RBF is 20-23% of resting cardiac output',
+  'Normalized renal blood flow: 420 ml/min/100g',
+  'Normalized cardiac muscle blood flow: 84 ml/min/100g',
+  'Normalized skeletal muscle blood flow: 2.7 ml/min/100g',
+  'Normalized brain blood flow: 54 ml/min/100g',
+],

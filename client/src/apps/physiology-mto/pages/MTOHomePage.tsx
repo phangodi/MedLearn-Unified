@@ -51,11 +51,18 @@ export function MTOHomePage() {
         const newTopicCounts: Record<number, number> = {};
         const newMcqCounts: Record<string, number> = {};
 
-        // Count questions per topic
+        // Count unique questions per topic (deduplicated by contentHash)
+        const topicQuestionSets: Record<number, Set<string>> = {};
         for (const question of allQuestions) {
           for (const topicNum of question.topics) {
-            newTopicCounts[topicNum] = (newTopicCounts[topicNum] || 0) + 1;
+            if (!topicQuestionSets[topicNum]) {
+              topicQuestionSets[topicNum] = new Set();
+            }
+            topicQuestionSets[topicNum].add(question.contentHash || question.id);
           }
+        }
+        for (const [topicNum, questionSet] of Object.entries(topicQuestionSets)) {
+          newTopicCounts[Number(topicNum)] = questionSet.size;
         }
 
         // Count unique questions per MCQ (deduplicated)

@@ -1,0 +1,69 @@
+// Topic 55: Tubular reabsorption and secretion. Renal clearance.
+// Source Verification: Extracted from renal12025.pdf, renal22025.pdf, Notes_5458pdf.pdf, Notes_5254.pdf, Notes_5258pdf.pdf, learning_objectives_physiology.pdf
+
+// **LO-1** (Topic-55) - CRITICAL
+// Define tubular reabsorption and secretion
+officialDefinitions: [
+  'Tubular Reabsorption: the process by which substances are transported from the filtrate in the renal tubules back into the blood in the peritubular capillaries or vasa recta. Purpose: ensures the recovery of essential substances such as water, glucose, amino acids, and ions (e.g., sodium, potassium, and chloride) that are needed to maintain homeostasis. Mechanisms: passive transport (diffusion and osmosis) and active transport (sodium-potassium ATPase pumps, co-transporters such as sodium-glucose co-transporter). Site: occurs throughout the nephron but predominantly in the proximal convoluted tubule (bulk reabsorption), the loop of Henle, and the distal convoluted tubule/collecting duct for fine-tuning.',
+  'Tubular Secretion: the transfer of substances from the blood in the peritubular capillaries or vasa recta into the filtrate in the renal tubules. Purpose: helps in the elimination of waste products, toxins, and excess ions (e.g., hydrogen, potassium, and ammonium) to regulate pH and maintain electrolyte balance. Mechanisms: active transport (e.g., secretion of hydrogen ions) and passive diffusion. Site: primarily occurs in the distal convoluted tubule and collecting ducts, though some secretion occurs in the proximal tubule.',
+  'About 99% of filtered water and more than 90% of the filtered substances will be resorbed. Additionally some substances will be secreted.',
+  'Absorption: transport from some lumenal compartment back into blood. The fluid transported is either isotonic, or hypertonic to plasma. Secretion: transport from blood into a given lumenal compartment.',
+],
+
+// **LO-2** (Topic-55)
+// Calculate the filtered load, excretion rate, and net tubular reabsorption/secretion
+officialDefinitions: [
+  'Filtered Load (FL): the amount of a substance filtered into the Bowman\'s space per minute. Formula: Filtered Load (FL) = GFR × Plasma Concentration (Px). Where FL is in mg/min or mmol/min, GFR is glomerular filtration rate in mL/min, and Px is plasma concentration of substance in mg/mL or mmol/mL.',
+  'Excretion Rate (ER): the amount of a substance excreted in the urine per minute. Formula: Excretion Rate (ER) = Urine Concentration (Ux) × Urine Flow Rate (V). Where ER is in mg/min or mmol/min, Ux is urine concentration of substance in mg/mL or mmol/mL, and V is urine flow rate in mL/min.',
+  'Net Tubular Reabsorption or Secretion: Formula: Net Reabsorption or Secretion = FL - ER. Interpretation: If FL > ER, net tubular reabsorption is occurring. If FL < ER, net tubular secretion is occurring.',
+  'Example: Given plasma concentration = 3 mg/mL, urine concentration = 10 mg/mL, GFR = 125 mL/min, urine flow rate = 2 mL/min. Filtered Load = 125 × 3 = 375 mg/min. Excretion Rate = 10 × 2 = 20 mg/min. Net Reabsorption = 375 - 20 = 355 mg/min.',
+],
+
+// **LO-3** (Topic-55) - CRITICAL
+// Explain the clearance principle and use clearance equation for GFR, RPF, and RBF
+officialDefinitions: [
+  'Clearance principle: Clearance is the amount of plasma that is cleared of a substance during one minute (or one sec). It is a virtual plasma volume characteristic to a substance in question.',
+  'Clearance Equation: C = U × V / P. Where C is clearance (mL/min), U is urine concentration of substance, V is urine flow rate (mL/min), P is plasma concentration of substance.',
+  'Significance of Clearance: characterization of kidney function, estimation of characteristic parameters of the kidney, characterization of the fate of particular substances in the kidney.',
+  'GFR (Glomerular Filtration Rate): the amount of plasma filtered by the glomeruli per minute. Use substances that are freely filtered at the glomerulus and are neither reabsorbed nor secreted by the tubules. Inulin: the gold standard for measuring GFR because it is filtered but not reabsorbed, secreted, or metabolized. Creatinine: commonly used in clinical practice as an estimate of GFR, freely filtered and only minimally secreted. Formula: GFR = (Urine concentration of inulin × Urine flow rate) ÷ Plasma concentration of inulin.',
+  'RPF (Renal Plasma Flow): the amount of plasma flowing through the kidneys per minute. PAH (para-aminohippuric acid): freely filtered and almost entirely secreted by the renal tubules, meaning virtually all PAH entering the kidneys is excreted in the urine. PAH-Clearance equals the renal plasma flow (RPF). Formula: RPF = (Urine concentration of PAH × Urine flow rate) ÷ Plasma concentration of PAH.',
+  'RBF (Renal Blood Flow): the total blood flow through the kidneys, including both plasma and red blood cells. Formula: RBF = RPF / (1 - Hematocrit). Thus the RBF is about 1320 ml/min.',
+],
+
+// **LO-4** (Topic-55) - CRITICAL
+// Reference values and inulin vs creatinine clearance
+officialDefinitions: [
+  'Inulin Clearance: Reference Value: 120-130 mL/min (equivalent to GFR). The clearance of inulin is the most accurate measure of GFR because inulin is freely filtered at the glomerulus and is neither reabsorbed nor secreted by the renal tubules. Advantages: the gold standard for measuring GFR because it is neither reabsorbed, secreted, nor metabolized. Disadvantages: requires intravenous infusion of inulin, making it impractical for routine clinical use.',
+  'Creatinine Clearance: Reference Value: 90-150 mL/min (approximation of GFR). Creatinine clearance is widely used clinically to estimate GFR. Although creatinine is freely filtered, a small amount is secreted by the renal tubules, leading to a slight overestimation of GFR. Advantages: endogenously produced by muscle metabolism, making it convenient and widely used in clinical settings; requires only blood and urine samples to calculate GFR. Disadvantages: slightly overestimates GFR because creatinine is secreted by the renal tubules (up to 10-20% error); plasma creatinine levels can be affected by factors like muscle mass, diet, and age.',
+  'PAH Clearance: Reference Value: 600-700 mL/min (equivalent to effective RPF). PAH is freely filtered and completely secreted into the tubules, meaning that almost all PAH entering the kidney is excreted. PAH-Clearance = RPF.',
+  'Glucose Clearance: Reference Value: 0 mL/min (normal physiological condition). Under normal conditions, glucose is completely reabsorbed in the proximal tubule, so no glucose appears in the urine, resulting in zero clearance.',
+  'Reference values from learning objectives: inulin clearance = GFR, plasma creatinine: 50-150 μM, endogenous creatinine clearance: 90-150 ml/min, PAH-clearance = RPF.',
+  'Normal values: GFR = 100-130 ml/min, RPF = 660 ml/min (480-800 ml/min), RBF = 1300 ml/min (870-1540 ml/min).',
+],
+
+// **LO-5** (Topic-55)
+// Effect of GFR reduction on plasma creatinine concentration
+officialDefinitions: [
+  'Inverse Relationship Between GFR and Plasma Creatinine: Plasma creatinine concentration is inversely related to the glomerular filtration rate (GFR). As GFR decreases, the kidneys filter less creatinine, causing its accumulation in the blood, leading to a rise in plasma creatinine levels.',
+  'Normal GFR and Plasma Creatinine Levels: Under normal conditions: GFR = ~100 mL/min, plasma creatinine concentration = ~1 mg/dL. The balance between creatinine production (by muscle metabolism) and excretion maintains steady plasma levels.',
+  'GFR Reduction and Plasma Creatinine: Mild GFR reduction: when GFR decreases slightly (e.g., from 100 to 50 mL/min), plasma creatinine doubles (~2 mg/dL). This demonstrates how sensitive plasma creatinine is to small changes in GFR. Severe GFR reduction: in advanced kidney dysfunction (e.g., GFR <20 mL/min), plasma creatinine increases exponentially due to a drastic reduction in creatinine clearance.',
+  'The function shows a hyperbolic relationship: at normal GFR (~100 mL/min), creatinine is ~1 mg/dL; at 50% GFR reduction, creatinine doubles; at severe GFR reduction (<20 mL/min), creatinine rises exponentially.',
+],
+
+// **LO-6** (Topic-55) - CRITICAL
+// Clearance of freely filtered substances based on reabsorption/secretion
+officialDefinitions: [
+  'Clearance range: C = 0 - 660 ml/min. 0 < C < GFR: filtered and partially reabsorbed. GFR < C < RPF: filtered and partially secreted.',
+  'Fully Reabsorbed Substance (Glucose-type reabsorption): Clearance = 0, because the kidneys do not excrete the substance. When a substance is freely filtered at the glomerulus and completely reabsorbed in the tubules, none of it appears in the urine. Example: Glucose (under normal conditions, all filtered glucose is reabsorbed in the proximal tubule).',
+  'Partially Reabsorbed Substance: Clearance = 0 < Cl < GFR, because the partial reabsorption reduces its clearance below the glomerular filtration rate (GFR). If a substance is only partly reabsorbed after filtration, some of it is excreted in the urine. Example: Urea (approximately 50% of filtered urea is reabsorbed, so its clearance is about 50% of GFR).',
+  'Net Tubular Secretion (PAH-type transport): Clearance = GFR < Cl ≤ RPF, because secretion adds to the amount excreted in the urine. If a substance is freely filtered and also secreted by the tubules, its clearance exceeds GFR. When secretion is maximal, clearance approaches renal plasma flow (RPF). Example: Para-aminohippuric acid (PAH) - PAH is freely filtered and almost completely secreted, so its clearance reflects RPF.',
+],
+
+// **Reference Values** (Topic-55) - CRITICAL
+officialDefinitions: [
+  'Inulin clearance = GFR (120-130 ml/min).',
+  'Plasma creatinine: 50-150 μM.',
+  'Endogenous creatinine clearance: 90-150 ml/min.',
+  'PAH-clearance = RPF (600-660 ml/min).',
+  'Glucose clearance: 0 ml/min (normal conditions).',
+],
