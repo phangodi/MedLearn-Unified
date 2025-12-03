@@ -121,12 +121,11 @@ Use the migration script:
 # Dry run (test without writing):
 npx ts-node --esm client/scripts/migrate-questions-to-firebase.ts --dry-run
 
-# Live run:
+# Live run (ALWAYS use this - imports ALL questions):
 npx ts-node --esm client/scripts/migrate-questions-to-firebase.ts
-
-# Skip existing duplicates:
-npx ts-node --esm client/scripts/migrate-questions-to-firebase.ts --skip-duplicates
 ```
+
+**IMPORTANT:** NEVER use --skip-duplicates! Deduplication happens at query time, not import time. Test ID mode must show ALL questions from that test.
 
 **CRITICAL:** The `legacyId` field must be set correctly as this links to explanations in `questionExplanations` collection.
 
