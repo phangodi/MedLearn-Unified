@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useEffect, useState, useCallback } from 'react'
 import { collection, query, orderBy, onSnapshot, doc } from 'firebase/firestore'
 import { db } from '@/firebase/config'
+import { useAuth } from '@/contexts/AuthContext'
 import type {
   Notification,
   DashboardMessage,
@@ -33,6 +34,7 @@ const NotificationContext = createContext<NotificationContextType | undefined>(u
 const DISMISSED_KEY = 'medlearn_dismissed_notifications'
 
 export function NotificationProvider({ children }: { children: React.ReactNode }) {
+  const { user } = useAuth()
   const [notifications, setNotifications] = useState<Notification[]>([])
   const [dashboardMessage, setDashboardMessage] = useState<DashboardMessage | null>(null)
   const [currentTarget, setCurrentTarget] = useState<NotificationTarget>('global')
@@ -50,8 +52,14 @@ export function NotificationProvider({ children }: { children: React.ReactNode }
     localStorage.setItem(DISMISSED_KEY, JSON.stringify([...dismissedIds]))
   }, [dismissedIds])
 
-  // Real-time listener for announcements
+  // Real-time listener for announcements (only when authenticated)
   useEffect(() => {
+    // Don't set up listener if user isn't authenticated
+    if (!user) {
+      setNotifications([])
+      return
+    }
+
     const announcementsQuery = query(
       collection(db, 'announcements'),
       orderBy('createdAt', 'desc')
@@ -103,10 +111,16 @@ export function NotificationProvider({ children }: { children: React.ReactNode }
     )
 
     return () => unsubscribe()
-  }, [currentTarget, dismissedIds])
+  }, [user, currentTarget, dismissedIds])
 
-  // Real-time listener for dashboard message
+  // Real-time listener for dashboard message (only when authenticated)
   useEffect(() => {
+    // Don't set up listener if user isn't authenticated
+    if (!user) {
+      setDashboardMessage(null)
+      return
+    }
+
     const messageDoc = doc(db, 'dashboardMessage', 'current')
 
     const unsubscribe = onSnapshot(
@@ -135,7 +149,7 @@ export function NotificationProvider({ children }: { children: React.ReactNode }
     )
 
     return () => unsubscribe()
-  }, [])
+  }, [user])
 
   const markAsRead = useCallback((notificationId: string) => {
     setNotifications((prev) =>
