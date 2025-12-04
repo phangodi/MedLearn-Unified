@@ -1,0 +1,242 @@
+{
+  "explanations": [
+    {
+      "questionId": "q-50111725-4",
+      "correctLetters": ["c", "d"],
+      "summary": "During urination, the internal urethral sphincter relaxes via decreased sympathetic tone, while the external sphincter relaxes under voluntary control.",
+      "whyCorrect": {
+        "c": "The internal urethral sphincter is controlled by sympathetic innervation. During micturition, sympathetic tone decreases, allowing the smooth muscle sphincter to relax.",
+        "d": "The external urethral sphincter is skeletal muscle under voluntary (somatic) control via the pudendal nerve. Voluntary relaxation initiates urination."
+      },
+      "whyIncorrect": {
+        "a": "Parasympathetic activity INCREASES during urination (detrusor contraction), not decreases. Also, the external sphincter is not controlled by parasympathetic nerves.",
+        "b": "The internal sphincter is smooth muscle controlled by the autonomic nervous system - it cannot be voluntarily relaxed. It relaxes due to decreased sympathetic tone."
+      },
+      "topicReference": "Topic 50: ECF volume regulation / Micturition",
+      "sourceTopics": [50],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-50111725-5",
+      "correctLetters": ["a", "e", "f"],
+      "summary": "Endothelins, angiotensin II, and ADH (vasopressin) are all vasoconstrictor peptides that raise blood pressure.",
+      "whyCorrect": {
+        "a": "Endothelins (especially ET-1) are the most potent known vasoconstrictors, released from endothelial cells and acting on smooth muscle ET-A receptors.",
+        "e": "Angiotensin II is a powerful vasoconstrictor peptide that acts on AT1 receptors in vascular smooth muscle.",
+        "f": "ADH (vasopressin) causes vasoconstriction via V1 receptors on vascular smooth muscle, in addition to its antidiuretic effects via V2 receptors."
+      },
+      "whyIncorrect": {
+        "b": "Adenosine is a vasoDILATOR (not a peptide). It causes vasodilation in most vascular beds, especially coronary and cerebral.",
+        "c": "Kallikrein is an enzyme that produces kinins (bradykinin), which are vasoDILATORS, not vasoconstrictors.",
+        "d": "ANH (atrial natriuretic hormone/peptide) is a vasoDILATOR and promotes natriuresis - it opposes the actions of angiotensin II."
+      },
+      "topicReference": "Topic 44: Long-term blood pressure regulation",
+      "sourceTopics": [44],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-50111725-6",
+      "correctLetters": ["b"],
+      "summary": "The thick ascending limb actively reabsorbs NaCl without water, creating the medullary osmotic gradient essential for urine concentration.",
+      "whyCorrect": {
+        "b": "The thick ascending limb is IMPERMEABLE to water but actively transports Na+, K+, and Cl- (via NKCC2). This 'single effect' drives the countercurrent multiplier, creating medullary hyperosmolarity."
+      },
+      "whyIncorrect": {
+        "a": "Na+ is reabsorbed throughout the nephron: ~65% in proximal tubule, ~25% in loop of Henle, and the rest in distal segments. Not exclusive to thick ascending limb.",
+        "c": "Vasopressin-sensitive water reabsorption occurs in the COLLECTING DUCT (via AQP2 channels), not the thick ascending limb which is impermeable to water.",
+        "d": "Aldosterone acts on the DISTAL TUBULE and COLLECTING DUCT (principal cells), not the thick ascending limb.",
+        "e": "PTH-stimulated Ca2+ reabsorption occurs primarily in the DISTAL CONVOLUTED TUBULE, not the thick ascending limb."
+      },
+      "topicReference": "Topic 48: Renal concentration and dilution mechanisms",
+      "sourceTopics": [48],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-50111725-7",
+      "correctLetters": ["a"],
+      "summary": "Inulin excretion is directly proportional to plasma concentration because inulin is freely filtered and neither reabsorbed nor secreted.",
+      "whyCorrect": {
+        "a": "Inulin is the gold standard for GFR measurement because it's freely filtered, not reabsorbed, and not secreted. Excretion = GFR × [plasma inulin], which is a linear relationship."
+      },
+      "whyIncorrect": {
+        "b": "Non-linear relationships occur with substances that have saturable transport mechanisms. Inulin has no tubular handling.",
+        "c": "Inversely proportional would mean excretion decreases as plasma concentration increases - the opposite of what happens with inulin.",
+        "d": "Logarithmic relationships don't apply to inulin handling. The relationship is simply linear.",
+        "e": "Transport maximum (Tm) applies to substances with carrier-mediated reabsorption (glucose) or secretion (PAH). Inulin has no tubular transport."
+      },
+      "topicReference": "Topic 45: Renal blood flow and GFR",
+      "sourceTopics": [45],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-50111725-8",
+      "correctLetters": ["b", "d"],
+      "summary": "All glomeruli (including juxtamedullary nephrons) and all proximal tubules are located exclusively in the renal cortex.",
+      "whyCorrect": {
+        "b": "ALL glomeruli are located in the cortex, including those of juxtamedullary nephrons. 'Juxtamedullary' refers to their position near the corticomedullary junction, but the glomeruli are still cortical.",
+        "d": "Proximal tubules (both convoluted and straight portions) are entirely within the cortex. They never extend into the medulla."
+      },
+      "whyIncorrect": {
+        "a": "Vasa recta descend into the MEDULLA alongside the loops of Henle. They are essential for maintaining the medullary osmotic gradient.",
+        "c": "Collecting tubules/ducts traverse BOTH cortex and medulla, extending from cortical collecting ducts down through the medulla to the papillary ducts.",
+        "e": "Loops of Henle extend into the MEDULLA. Juxtamedullary nephrons have long loops that reach deep into the inner medulla."
+      },
+      "topicReference": "Topic 45: Renal blood flow and GFR",
+      "sourceTopics": [45],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-50111725-14",
+      "correctLetters": ["c", "d"],
+      "summary": "Capillary hydrostatic pressure promotes filtration, while interstitial hydrostatic pressure can promote either filtration or absorption depending on its sign.",
+      "whyCorrect": {
+        "c": "Intracapillary hydrostatic pressure (Pc) pushes fluid OUT of the capillary into the interstitium - this is the main driving force for filtration.",
+        "d": "Interstitial hydrostatic pressure (Pi) is normally slightly negative (-3 mmHg), which promotes filtration. If positive (edema), it would oppose filtration and promote absorption."
+      },
+      "whyIncorrect": {
+        "a": "Intracapillary colloid osmotic pressure (plasma oncotic pressure, ~28 mmHg) pulls fluid INTO the capillary - it promotes ABSORPTION, not filtration.",
+        "b": "Interstitial colloid osmotic pressure pulls fluid OUT of capillaries into the interstitium - it promotes FILTRATION, not absorption."
+      },
+      "topicReference": "Topic 39: Capillaries and transcapillary exchange",
+      "sourceTopics": [39],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-50111725-23",
+      "correctLetters": ["a", "b"],
+      "summary": "Cosm = (Uosm × V) / Posm = (100 × 12) / 300 = 4 mL/min. CH2O = V - Cosm = 12 - 4 = 8 mL/min (dilute urine = positive free water clearance).",
+      "whyCorrect": {
+        "a": "Osmolar clearance = (Urine osmolarity × Urine flow) / Plasma osmolarity = (100 × 12) / 300 = 1200/300 = 4 mL/min.",
+        "b": "Free water clearance = Urine flow - Osmolar clearance = 12 - 4 = 8 mL/min. Positive value indicates the kidney is excreting free water (dilute urine)."
+      },
+      "whyIncorrect": {
+        "c": "Negative free water clearance (-3 mL/min) would occur with concentrated urine (Uosm > Posm). Here urine is dilute (100 < 300), so CH2O is positive.",
+        "d": "3 mL/min is incorrect - the calculation gives CH2O = 12 - 4 = 8 mL/min.",
+        "e": "Osmolar clearance is 4 mL/min, not 3 mL/min. Cosm = (100 × 12) / 300 = 4."
+      },
+      "topicReference": "Topic 48-49: Renal concentration/dilution and ECF osmolarity",
+      "sourceTopics": [48, 49],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-50111725-26",
+      "correctLetters": ["e"],
+      "summary": "Local blood flow is primarily regulated by the metabolic activity of the tissue, which produces vasodilator metabolites matching flow to demand.",
+      "whyCorrect": {
+        "e": "Metabolic regulation is the dominant mechanism for local blood flow control. Active tissues produce vasodilators (adenosine, CO2, H+, K+, decreased O2) that increase flow proportionally to metabolic need."
+      },
+      "whyIncorrect": {
+        "a": "Arteriovenous pressure difference affects flow but is relatively constant. Local regulation occurs primarily through changes in arteriolar resistance.",
+        "b": "Circulating neurotransmitters (hormones like epinephrine) affect systemic vascular resistance but are not the primary LOCAL regulators.",
+        "c": "Cardiac output determines total systemic flow but not the distribution of flow to individual organs - that's determined locally.",
+        "d": "Local neurotransmitters (sympathetic/parasympathetic) contribute to vascular tone but metabolic factors dominate local regulation in most tissues."
+      },
+      "topicReference": "Topic 41: Microcirculation",
+      "sourceTopics": [41],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-50111725-34",
+      "correctLetters": ["a"],
+      "summary": "Amino acids are completely reabsorbed in the proximal tubule via Na+-coupled secondary active transport.",
+      "whyCorrect": {
+        "a": "Amino acids are reabsorbed almost entirely (>99%) in the proximal tubule by Na+-dependent co-transporters on the apical membrane, similar to glucose reabsorption."
+      },
+      "whyIncorrect": {
+        "b": "The thick ascending limb reabsorbs NaCl (via NKCC2), not amino acids. It's involved in concentrating urine, not organic solute reabsorption.",
+        "c": "The distal tubule fine-tunes Na+, K+, Ca2+, and H+ balance but does not reabsorb amino acids.",
+        "d": "The collecting duct regulates water (ADH), Na+ (aldosterone), and H+/K+ balance. Amino acid reabsorption is complete before filtrate reaches here.",
+        "e": "Amino acids are reabsorbed ONLY in the proximal tubule. There is no significant amino acid transport in the distal tubule."
+      },
+      "topicReference": "Topic 46: Tubular reabsorption",
+      "sourceTopics": [46],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-50111725-35",
+      "correctLetters": ["c", "d"],
+      "summary": "Skeletal muscle arteriolar vasodilation occurs via beta-2 adrenergic receptors (epinephrine) and muscarinic receptors (endothelium-dependent NO release).",
+      "whyCorrect": {
+        "c": "Muscarinic (M3) receptors on endothelial cells stimulate NO release, causing vasodilation. Some species have direct sympathetic cholinergic vasodilator fibers to skeletal muscle.",
+        "d": "Beta-2 adrenergic receptors on vascular smooth muscle cause vasodilation via cAMP. Circulating epinephrine activates these receptors, dilating skeletal muscle vessels during exercise/stress."
+      },
+      "whyIncorrect": {
+        "a": "Nicotinic receptors are found at neuromuscular junctions and autonomic ganglia, not on vascular smooth muscle. They don't directly affect vessel diameter.",
+        "b": "Alpha-1 receptors cause vasoconstriction, not vasodilation. They are the main sympathetic vasoconstrictor receptors on blood vessels.",
+        "e": "Beta-1 receptors are primarily in the heart (increase HR and contractility). They play minimal role in vascular smooth muscle tone."
+      },
+      "topicReference": "Topic 41: Microcirculation",
+      "sourceTopics": [41],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-50111725-38",
+      "correctLetters": ["d", "e"],
+      "summary": "RAS activation stimulates aldosterone secretion (Na+ retention) and decreases urine output through enhanced Na+ and water reabsorption.",
+      "whyCorrect": {
+        "d": "Angiotensin II is the primary stimulus for aldosterone release from the adrenal zona glomerulosa. Aldosterone increases Na+ reabsorption in the distal nephron.",
+        "e": "RAS activation promotes Na+ and water retention through multiple mechanisms: direct AngII effects on proximal tubule, aldosterone effects on collecting duct, and ADH stimulation - all DECREASE urine output."
+      },
+      "whyIncorrect": {
+        "a": "RAS activation INCREASES blood pressure through vasoconstriction (AngII) and volume expansion (aldosterone), not decreases it.",
+        "b": "RAS DECREASES urine output by promoting Na+ and water retention, not increases it.",
+        "c": "Angiotensin II STIMULATES thirst (via the subfornical organ), increasing fluid intake - not suppressing it."
+      },
+      "topicReference": "Topic 44/50: Long-term BP regulation and ECF volume",
+      "sourceTopics": [44, 50],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-50111725-44",
+      "correctLetters": ["f"],
+      "summary": "Pulmonary artery systolic pressure is approximately 24 mmHg - the pulmonary circulation is a low-pressure system.",
+      "whyCorrect": {
+        "f": "Normal pulmonary artery pressures are approximately 24/9 mmHg (systolic/diastolic) with a mean of ~14 mmHg. This is about 1/5 of systemic arterial pressure."
+      },
+      "whyIncorrect": {
+        "a": "35 mmHg would indicate pulmonary hypertension. Normal PA systolic is ~24 mmHg.",
+        "b": "120 mmHg is the normal SYSTEMIC (aortic) systolic pressure, not pulmonary.",
+        "c": "80 mmHg is the normal systemic diastolic pressure. PA systolic is much lower (~24 mmHg).",
+        "d": "50 mmHg would represent significant pulmonary hypertension.",
+        "e": "0-6 mmHg is the range for central venous pressure (right atrial pressure), not pulmonary artery systolic."
+      },
+      "topicReference": "Topic 26: Pulmonary circulation",
+      "sourceTopics": [26],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-50111725-48",
+      "correctLetters": ["c"],
+      "summary": "Long-term blood pressure is determined by renal regulation of body fluid volume through pressure diuresis and hormonal control of Na+ balance.",
+      "whyCorrect": {
+        "c": "The kidney is the dominant long-term BP regulator. Pressure diuresis/natriuresis and hormonal systems (RAS, aldosterone, ANP, ADH) adjust blood volume over hours to days, setting the long-term BP level."
+      },
+      "whyIncorrect": {
+        "a": "The Cushing reflex is an emergency response to increased intracranial pressure - it's not involved in routine long-term BP regulation.",
+        "b": "Direct vasoconstrictor effects of AVP and AngII affect SHORT-TERM resistance. Long-term BP depends on volume regulation, not sustained vasoconstriction.",
+        "d": "Baroreceptor reflexes reset within 1-2 days and regulate SHORT-TERM BP variations. They cannot set the long-term BP level.",
+        "e": "Chemoreceptor reflexes respond to blood gas changes (O2, CO2, pH) and primarily regulate respiration, not long-term BP."
+      },
+      "topicReference": "Topic 44: Long-term blood pressure regulation",
+      "sourceTopics": [44],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-50111725-49",
+      "correctLetters": ["c"],
+      "summary": "Veins act as blood reservoirs because of their large volume capacity - they hold about 60-70% of total blood volume.",
+      "whyCorrect": {
+        "c": "The venous system holds ~65% of total blood volume due to its high compliance and large total capacity. This makes veins ideal capacitance vessels that can mobilize blood when needed."
+      },
+      "whyIncorrect": {
+        "a": "Veins ARE highly distensible (compliant) - this contributes to their reservoir function, not detracts from it.",
+        "b": "Low oxygen saturation is irrelevant to the reservoir function. The ability to store blood depends on volume capacity, not oxygen content.",
+        "d": "Vein walls DO contain smooth muscle, which allows venoconstriction to mobilize stored blood. Absence of muscle would prevent active mobilization.",
+        "e": "Superficial location of some veins is irrelevant to their reservoir capacity. Both superficial and deep veins contribute to blood storage."
+      },
+      "topicReference": "Topic 40: Venous system",
+      "sourceTopics": [40],
+      "needsReview": false
+    }
+  ]
+}

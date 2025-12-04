@@ -1,0 +1,329 @@
+{
+  "testId": "50111725",
+  "examName": "Physiology MTO3 - Pages 87-90 (Cardiovascular & Renal)",
+  "importedAt": "2025-12-03T12:00:00.000Z",
+  "questions": [
+    {
+      "id": "q-50111725-4",
+      "testId": "50111725",
+      "questionNumber": 4,
+      "text": "During urination:",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "parasympathetic tone decreases on the outer urethral sphincter" },
+        { "letter": "b", "text": "the inner urethral sphincter voluntarily relaxes" },
+        { "letter": "c", "text": "sympathetic tone decreases on the inner urethral sphincter" },
+        { "letter": "d", "text": "the outer urethral sphincter voluntarily relaxes" }
+      ],
+      "correctAnswers": ["c", "d"],
+      "topics": [50],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T12:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.85,
+        "matchReason": "Topic 50 (ECF volume regulation): Micturition involves autonomic control of bladder sphincters. During urination, sympathetic tone decreases (relaxing internal sphincter) and external sphincter relaxes under voluntary control."
+      }
+    },
+    {
+      "id": "q-50111725-5",
+      "testId": "50111725",
+      "questionNumber": 5,
+      "text": "Which of the following substances are vasoconstrictor peptides?",
+      "correctAnswerCount": 3,
+      "options": [
+        { "letter": "a", "text": "endothelins" },
+        { "letter": "b", "text": "adenosine" },
+        { "letter": "c", "text": "kallikrein" },
+        { "letter": "d", "text": "ANH" },
+        { "letter": "e", "text": "angiotensin II" },
+        { "letter": "f", "text": "ADH" }
+      ],
+      "correctAnswers": ["a", "e", "f"],
+      "topics": [44],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T12:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Topic 44 (Long-term BP regulation): 'Describe the effects of angiotensin II, vasopressin (ADH), and atrial natriuretic hormone on arterial blood pressure: direct vascular and indirect renal mechanisms.' Endothelins, AngII, and ADH are potent vasoconstrictors."
+      }
+    },
+    {
+      "id": "q-50111725-6",
+      "testId": "50111725",
+      "questionNumber": 6,
+      "text": "The importance of the thick segment of the loop of Henle is as follows:",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "it is the exclusive site of Na-reabsorption" },
+        { "letter": "b", "text": "it has a major role in the development of medullary hyperosmolarity" },
+        { "letter": "c", "text": "this is the site of the vasopressin-sensitive water-reabsorption" },
+        { "letter": "d", "text": "this is the action site of aldosterone" },
+        { "letter": "e", "text": "this is the site of the PTH-stimulated Ca-reabsorption" }
+      ],
+      "correctAnswers": ["b"],
+      "topics": [48],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T12:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Topic 48 (Renal concentration/dilution): 'Explain the countercurrent multiplier mechanism of the loop of Henle...the role of the thick ascending limb in producing medullary hyperosmotic gradient.' The thick ascending limb actively reabsorbs NaCl without water."
+      }
+    },
+    {
+      "id": "q-50111725-7",
+      "testId": "50111725",
+      "questionNumber": 7,
+      "text": "The relationship between the quantity of inulin excreted and the plasma inulin concentration is:",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "linear" },
+        { "letter": "b", "text": "non-linear" },
+        { "letter": "c", "text": "inversely proportional" },
+        { "letter": "d", "text": "logarithmic" },
+        { "letter": "e", "text": "exhibits a transport maximum" }
+      ],
+      "correctAnswers": ["a"],
+      "topics": [45],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T12:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Topic 45 (Renal blood flow, GFR): 'Use inulin clearance to determine GFR.' Inulin is freely filtered and neither reabsorbed nor secreted, so excretion = GFR × plasma concentration (linear relationship)."
+      }
+    },
+    {
+      "id": "q-50111725-8",
+      "testId": "50111725",
+      "questionNumber": 8,
+      "text": "These parts of the nephron are situated ONLY in the renal cortex:",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "vasa recta" },
+        { "letter": "b", "text": "glomeruli of juxtamedullary nephrons" },
+        { "letter": "c", "text": "the collecting tubules" },
+        { "letter": "d", "text": "the proximal tubuli" },
+        { "letter": "e", "text": "loop of Henle" }
+      ],
+      "correctAnswers": ["b", "d"],
+      "topics": [45],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T12:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.90,
+        "matchReason": "Topic 45 (Renal blood flow, GFR): 'Identify structures of the glomerular tuft...' and describes cortical vs juxtamedullary nephrons. ALL glomeruli (including juxtamedullary) are in the cortex, as are proximal tubules."
+      }
+    },
+    {
+      "id": "q-50111725-14",
+      "testId": "50111725",
+      "questionNumber": 14,
+      "text": "The forces included in the Starling-equilibrium act as follows:",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "intracapillary colloid osmotic pressure promotes filtration" },
+        { "letter": "b", "text": "interstitial colloid osmotic pressure promotes absorption" },
+        { "letter": "c", "text": "intracapillary hydrostatic pressure promotes filtration" },
+        { "letter": "d", "text": "interstitial hydrostatic pressure promotes filtration or absorption depending whether it is positive or negative" }
+      ],
+      "correctAnswers": ["c", "d"],
+      "topics": [39],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T12:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Topic 39 (Capillaries, transcapillary exchange): 'Define the Starling equation and discuss how each component influences fluid movement across the capillary wall.' Capillary hydrostatic pressure promotes filtration; interstitial hydrostatic pressure can be negative or positive."
+      }
+    },
+    {
+      "id": "q-50111725-23",
+      "testId": "50111725",
+      "questionNumber": 23,
+      "text": "The patient produces 12 ml urine each minute. The plasma osmotic concentration is 300 milliosmol/l, the urine osmotic concentrations is 100 milliosmol/L. Which of the following statements are true?",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "the patient's osmotic clearance is 4 ml/min" },
+        { "letter": "b", "text": "the patient's free water clearance is 8 ml/min" },
+        { "letter": "c", "text": "the patient's free water clearance is -3 ml/min" },
+        { "letter": "d", "text": "the patient's free water clearance is 3 ml/min" },
+        { "letter": "e", "text": "the patient's osmotic clearance is 3 ml/min" }
+      ],
+      "correctAnswers": ["a", "b"],
+      "topics": [48, 49],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T12:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Topics 48-49 (Renal concentration/dilution, ECF osmolarity): 'Given urine and plasma osmolarities and urine volume, calculate osmolar and free water clearance.' Cosm = (100×12)/300 = 4 ml/min; CH2O = 12 - 4 = 8 ml/min"
+      }
+    },
+    {
+      "id": "q-50111725-26",
+      "testId": "50111725",
+      "questionNumber": 26,
+      "text": "Which of the following factors is the most important to blood flow regulation at the local level?",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "arteriovenous pressure difference" },
+        { "letter": "b", "text": "circulating neurotransmitters" },
+        { "letter": "c", "text": "cardiac output" },
+        { "letter": "d", "text": "local neurotransmitters" },
+        { "letter": "e", "text": "metabolic activity of the organ or tissue" }
+      ],
+      "correctAnswers": ["e"],
+      "topics": [41],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T12:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Topic 41 (Microcirculation): 'Describe how the theory of metabolic regulation of blood flow accounts for active hyperemia...role of PO2, PCO2, pH, adenosine.' Local metabolic activity is the primary mechanism for local blood flow autoregulation."
+      }
+    },
+    {
+      "id": "q-50111725-34",
+      "testId": "50111725",
+      "questionNumber": 34,
+      "text": "Where are the amino acids reabsorbed in the kidney?",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "only in the proximal tubule" },
+        { "letter": "b", "text": "only in the thick segment of the loop of Henle" },
+        { "letter": "c", "text": "only in the distal tubule" },
+        { "letter": "d", "text": "only in the collecting duct" },
+        { "letter": "e", "text": "in the proximal and distal tubules" }
+      ],
+      "correctAnswers": ["a"],
+      "topics": [46],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T12:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Topic 46 (Tubular reabsorption): Learning objectives mention 'organic solutes reabsorbed with glucose-type reabsorption (monosaccharides, amino acids, ketone bodies)' - these are reabsorbed in the proximal tubule via Na+-coupled secondary active transport."
+      }
+    },
+    {
+      "id": "q-50111725-35",
+      "testId": "50111725",
+      "questionNumber": 35,
+      "text": "Vasodilation can be induced in the skeletal muscle arterioles by the activation of:",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "nicotinic cholinergic receptors" },
+        { "letter": "b", "text": "alpha-1 adrenergic receptors" },
+        { "letter": "c", "text": "muscarinic cholinergic receptors" },
+        { "letter": "d", "text": "beta-2 adrenergic receptors" },
+        { "letter": "e", "text": "beta-1 adrenergic receptors" }
+      ],
+      "correctAnswers": ["c", "d"],
+      "topics": [41],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T12:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.90,
+        "matchReason": "Topic 41 (Microcirculation): Relates to local control of skeletal muscle blood flow. Beta-2 receptors cause vasodilation in skeletal muscle arterioles (circulating epinephrine); muscarinic receptors can cause endothelium-dependent vasodilation via NO release."
+      }
+    },
+    {
+      "id": "q-50111725-38",
+      "testId": "50111725",
+      "questionNumber": 38,
+      "text": "The stimulation of the renin-angiotensin system:",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "can decrease mean arterial blood pressure" },
+        { "letter": "b", "text": "can increase the renal urine output" },
+        { "letter": "c", "text": "can suppress fluid intake" },
+        { "letter": "d", "text": "can elevate aldosterone secretion" },
+        { "letter": "e", "text": "can decrease the renal urine output" }
+      ],
+      "correctAnswers": ["d", "e"],
+      "topics": [44, 50],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T12:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Topics 44, 50 (Long-term BP regulation, ECF volume regulation): 'Diagram the activation of the RAS...Describe the effects of angiotensin II...identify the major mineralocorticoid hormone.' AngII stimulates aldosterone release and promotes Na+/water retention (decreased urine output)."
+      }
+    },
+    {
+      "id": "q-50111725-44",
+      "testId": "50111725",
+      "questionNumber": 44,
+      "text": "What is the systolic pressure measured in the pulmonary artery?",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "35 mm Hg" },
+        { "letter": "b", "text": "120 mm Hg" },
+        { "letter": "c", "text": "80 mm Hg" },
+        { "letter": "d", "text": "50 mm Hg" },
+        { "letter": "e", "text": "0-6 mm Hg" },
+        { "letter": "f", "text": "24 mm Hg" }
+      ],
+      "correctAnswers": ["f"],
+      "topics": [26],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T12:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 1.0,
+        "matchReason": "Topic 26 (Pulmonary circulation, gas exchange): Reference values state 'pulmonary artery systolic/diastolic/mean pressure: 24/9/14 mmHg'. The pulmonary circulation is a low-pressure system."
+      }
+    },
+    {
+      "id": "q-50111725-48",
+      "testId": "50111725",
+      "questionNumber": 48,
+      "text": "Mean arterial blood pressure is MOST determined in the long term by:",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "the Cushing reflex" },
+        { "letter": "b", "text": "total peripheral resistance regulated by the direct vasoconstrictor effects of arginin-vasopressin and angiotensin II" },
+        { "letter": "c", "text": "renal volume regulation through pressure diuresis and hormonal regulation" },
+        { "letter": "d", "text": "the baroreceptor reflex" },
+        { "letter": "e", "text": "the peripheral chemoreceptor reflex" }
+      ],
+      "correctAnswers": ["c"],
+      "topics": [44],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T12:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Topic 44 (Long-term BP regulation): 'Contrast the significance of the renal regulation of extracellular volume and blood volume and the baroreceptor reflex...describe pressure diuresis.' Renal mechanisms dominate long-term BP control."
+      }
+    },
+    {
+      "id": "q-50111725-49",
+      "testId": "50111725",
+      "questionNumber": 49,
+      "text": "The venous system can act as a reservoir for peripheral blood chiefly because of the:",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "lack of distensibility of the venous wall" },
+        { "letter": "b", "text": "low oxygen saturation in the venous system" },
+        { "letter": "c", "text": "large volume capacity of the venous system" },
+        { "letter": "d", "text": "absence of smooth muscle fibers in the venous wall" },
+        { "letter": "e", "text": "superficial location of the veins" }
+      ],
+      "correctAnswers": ["c"],
+      "topics": [40],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T12:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Topic 40 (Venous system): 'Characterize the veins...why the volume of the venous system increases significantly.' Veins hold ~60-70% of total blood volume due to high compliance and large capacity."
+      }
+    }
+  ]
+}

@@ -1,0 +1,284 @@
+{
+  "explanations": [
+    {
+      "questionId": "q-mto3AA_84-86-1",
+      "correctLetters": ["a", "b"],
+      "summary": "Vasopressin (ADH) acts on V1 receptors in vascular smooth muscle to cause vasoconstriction via the IP3/Ca2+ pathway, not the cAMP pathway.",
+      "whyCorrect": {
+        "a": "V1 receptors are coupled to Gq proteins, activating phospholipase C and the IP3/DAG pathway, which leads to vasoconstriction.",
+        "b": "The IP3 pathway releases Ca2+ from the sarcoplasmic reticulum, increasing intracellular Ca2+ concentration and causing smooth muscle contraction."
+      },
+      "whyIncorrect": {
+        "c": "V1 receptors use the IP3/Ca2+ pathway, NOT cAMP. V2 receptors (in kidney collecting ducts) use cAMP for water reabsorption.",
+        "d": "Vasopressin causes vasoconstriction, which INCREASES total peripheral resistance, not decreases it."
+      },
+      "topicReference": "Topic 43: Short-term blood pressure regulation",
+      "sourceTopics": [43],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_84-86-2",
+      "correctLetters": ["a", "d", "e"],
+      "summary": "Parasympathetic vasodilation is mediated by VIP, acetylcholine (via NO release from endothelium), and NO itself as a co-transmitter.",
+      "whyCorrect": {
+        "a": "VIP (vasoactive intestinal polypeptide) is a co-transmitter released from parasympathetic nerve endings that causes vasodilation.",
+        "d": "Acetylcholine activates muscarinic receptors on endothelial cells, stimulating NO release and causing vasodilation.",
+        "e": "Nitric oxide (NO) can be released directly from some parasympathetic nerve endings as a non-adrenergic non-cholinergic (NANC) transmitter."
+      },
+      "whyIncorrect": {
+        "b": "Prostacyclin (PGI2) is released from endothelial cells, not from nerve endings. It's a paracrine vasodilator.",
+        "c": "Neuropeptide Y (NPY) is released from SYMPATHETIC nerve endings and is a vasoconstrictor, not a parasympathetic vasodilator.",
+        "f": "Adrenaline is released from the adrenal medulla, not from parasympathetic nerve endings."
+      },
+      "topicReference": "Topic 33: General hemodynamics / Topic 43: BP regulation",
+      "sourceTopics": [33, 43],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_84-86-3",
+      "correctLetters": ["a"],
+      "summary": "Using the Fick principle: CO = O2 consumption / (arterial O2 - venous O2) = 2000 / (200 - 100) = 20 L/min.",
+      "whyCorrect": {
+        "a": "Fick principle: CO = VO2 / (CaO2 - CvO2). Convert mL/100mL to mL/L: arterial = 200 mL/L, venous = 100 mL/L. CO = 2000 / (200-100) = 2000/100 = 20 L/min."
+      },
+      "whyIncorrect": {
+        "b": "25 L/min would require an a-v O2 difference of 80 mL/L (2000/25 = 80), but the given difference is 100 mL/L.",
+        "c": "10 L/min would require an a-v O2 difference of 200 mL/L (2000/10 = 200), but the given difference is 100 mL/L.",
+        "d": "5 L/min is the normal resting cardiac output but doesn't match the calculation. 5 L/min would require a-v difference of 400 mL/L."
+      },
+      "topicReference": "Topic 37: Cardiac output",
+      "sourceTopics": [37],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_84-86-5",
+      "correctLetters": ["a", "d"],
+      "summary": "Peripheral chemoreceptors are primarily O2 sensors (not CO2 sensors like central chemoreceptors) and also respond to reduced blood flow (stagnant hypoxia).",
+      "whyCorrect": {
+        "a": "Carotid and aortic body chemoreceptors are primarily sensitive to hypoxia (low PO2). They respond when PO2 falls below ~60 mmHg.",
+        "d": "Slowed circulation causes local hypoxia and hypercapnia at the chemoreceptor site, stimulating the receptors even if arterial blood gases are normal."
+      },
+      "whyIncorrect": {
+        "b": "Central chemoreceptors (in the medulla) are the primary sensors for CO2/H+. Peripheral chemoreceptors respond to CO2 but are PRIMARILY sensitive to hypoxia.",
+        "c": "Hypoxia causes hypertension (pressor response), not hypotension. The chemoreceptor reflex increases sympathetic activity and BP."
+      },
+      "topicReference": "Topic 43: Short-term blood pressure regulation",
+      "sourceTopics": [43],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_84-86-6",
+      "correctLetters": ["c"],
+      "summary": "Pulse pressure = SV/Compliance. Decreased arterial compliance (stiffer arteries) increases pulse pressure for any given stroke volume.",
+      "whyCorrect": {
+        "c": "Pulse pressure is inversely related to compliance. Stiffer arteries (as in aging or arteriosclerosis) have lower compliance and higher pulse pressure."
+      },
+      "whyIncorrect": {
+        "a": "Decreased arterial blood volume would decrease both systolic and diastolic pressure, with variable effect on pulse pressure.",
+        "b": "Increased heart rate reduces diastolic filling time, decreasing stroke volume and thus pulse pressure.",
+        "d": "Decreased stroke volume directly decreases pulse pressure (PP is proportional to SV)."
+      },
+      "topicReference": "Topic 34: Arterial blood pressure",
+      "sourceTopics": [34],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_84-86-7",
+      "correctLetters": ["a"],
+      "summary": "Vasoconstriction is mediated by the IP3/DAG/Ca2+ pathway, while cGMP and cAMP mediate vasodilation.",
+      "whyCorrect": {
+        "a": "Vasoconstrictors (norepinephrine, angiotensin II, endothelin) activate Gq-coupled receptors, stimulating phospholipase C to produce IP3, which releases Ca2+ and causes contraction."
+      },
+      "whyIncorrect": {
+        "b": "cGMP causes vasodilation, not constriction. NO activates guanylyl cyclase to produce cGMP, leading to smooth muscle relaxation.",
+        "c": "cAMP causes vasodilation in vascular smooth muscle by activating PKA, which reduces intracellular Ca2+ and causes relaxation.",
+        "d": "PGE2 is generally a vasodilator (though effects vary by receptor subtype and vascular bed). It's not a second messenger but a prostaglandin."
+      },
+      "topicReference": "Topic 33: General hemodynamics",
+      "sourceTopics": [33],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_84-86-8",
+      "correctLetters": ["c"],
+      "summary": "Plasma colloid osmotic (oncotic) pressure is the main force pulling fluid back into capillaries at the venous end.",
+      "whyCorrect": {
+        "c": "Plasma proteins (mainly albumin) create oncotic pressure (~25-28 mmHg) that draws fluid into capillaries, especially at the venous end where hydrostatic pressure is low."
+      },
+      "whyIncorrect": {
+        "a": "Interstitial colloid osmotic pressure opposes reabsorption by pulling fluid OUT of capillaries into the interstitium.",
+        "b": "Interstitial hydrostatic pressure is normally slightly negative and actually favors filtration, not reabsorption.",
+        "d": "Intracapillary hydrostatic pressure pushes fluid OUT (filtration), not in. It's the major force for filtration, not reabsorption."
+      },
+      "topicReference": "Topic 39/41: Capillaries and microcirculation",
+      "sourceTopics": [39, 41],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_84-86-11",
+      "correctLetters": ["b"],
+      "summary": "Veins have the highest compliance (distensibility) of all blood vessels due to their thin walls and large capacity.",
+      "whyCorrect": {
+        "b": "Veins are highly compliant (20-24x more than arteries). Their thin walls allow large volume changes with small pressure changes, enabling them to act as capacitance vessels."
+      },
+      "whyIncorrect": {
+        "a": "Arteries have thick muscular walls and lower compliance than veins, designed to withstand high pressures.",
+        "c": "Arteriosclerotic arteries have even LOWER compliance due to stiffening and calcification of the arterial wall.",
+        "d": "The aorta has relatively low compliance compared to veins, though it has some elasticity for the Windkessel effect."
+      },
+      "topicReference": "Topic 33/40: Hemodynamics and venous system",
+      "sourceTopics": [33, 40],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_84-86-12",
+      "correctLetters": ["b", "c"],
+      "summary": "Left coronary flow is primarily regulated by myocardial oxygen demand and occurs mainly during diastole when the myocardium is relaxed.",
+      "whyCorrect": {
+        "b": "Coronary blood flow is tightly coupled to myocardial O2 consumption through local metabolic vasodilators (adenosine, K+, CO2, H+).",
+        "c": "During systole, the contracting left ventricle compresses intramural vessels. Flow occurs predominantly during diastole when the muscle relaxes."
+      },
+      "whyIncorrect": {
+        "a": "Coronary blood flow is only about 4-5% of cardiac output at rest, not 10%.",
+        "d": "Coronary perfusion pressure (aortic diastolic pressure minus ventricular end-diastolic pressure) is a key determinant of coronary flow."
+      },
+      "topicReference": "Topic 33: General hemodynamics (coronary circulation)",
+      "sourceTopics": [33],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_84-86-13",
+      "correctLetters": ["a"],
+      "summary": "Venous pressure is lower than capillary pressure as blood flows from high to low pressure through the circulation.",
+      "whyCorrect": {
+        "a": "Blood flows from capillaries (15-35 mmHg at arterial end, 10-15 mmHg at venous end) to veins (~10 mmHg in small veins, approaching 0 in central veins)."
+      },
+      "whyIncorrect": {
+        "b": "Vein walls DO contain smooth muscle, though less than arteries. This allows venoconstriction in response to sympathetic stimulation.",
+        "c": "Flow velocity is HIGHER in veins than capillaries. Capillaries have the largest total cross-sectional area and therefore the slowest velocity.",
+        "d": "Venous valves prevent backflow but do not actively contract. They are passive structures that open and close based on pressure gradients."
+      },
+      "topicReference": "Topic 40: Venous system",
+      "sourceTopics": [40],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_84-86-14",
+      "correctLetters": ["a", "d"],
+      "summary": "Precapillary sphincters regulate capillary perfusion and are located between metarterioles and true capillaries. At rest, many capillaries are closed.",
+      "whyCorrect": {
+        "a": "Precapillary sphincters are rings of smooth muscle at the origin of true capillaries from metarterioles, controlling which capillaries receive blood flow.",
+        "d": "At rest, only 25-30% of capillaries are open. This intermittent perfusion (vasomotion) is controlled by local metabolic factors."
+      },
+      "whyIncorrect": {
+        "b": "Capillaries have NO smooth muscle and cannot constrict. Sympathetic activity affects arterioles and precapillary sphincters, not capillaries themselves.",
+        "c": "Arteriolar dilation INCREASES capillary pressure by transmitting more of the arterial pressure downstream."
+      },
+      "topicReference": "Topic 41: Microcirculation",
+      "sourceTopics": [41],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_84-86-16",
+      "correctLetters": ["a", "b", "c", "e"],
+      "summary": "Depressor reflexes (lowering BP) are triggered by stretch of various cardiovascular structures and by chemosensitive vagal afferents.",
+      "whyCorrect": {
+        "a": "Pulmonary artery stretch activates baroreceptors in the pulmonary artery, triggering a depressor reflex.",
+        "b": "Chemosensitive vagal afferents (C-fibers) in the heart and lungs can trigger the Bezold-Jarisch reflex, causing bradycardia and hypotension.",
+        "c": "Carotid sinus stretch activates baroreceptors, triggering the classic arterial baroreceptor reflex (depressor response).",
+        "e": "Left ventricular stretch activates mechanoreceptors that trigger cardiopulmonary reflexes, reducing sympathetic output."
+      },
+      "whyIncorrect": {
+        "d": "Arterial hypoxia activates chemoreceptors which trigger a PRESSOR response (increased BP and sympathetic activity), not depressor.",
+        "f": "Increased intracranial pressure triggers the Cushing reflex, which is a PRESSOR response (hypertension + bradycardia)."
+      },
+      "topicReference": "Topic 43: Short-term blood pressure regulation",
+      "sourceTopics": [43],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_84-86-18",
+      "correctLetters": ["c"],
+      "summary": "Skin blood flow is primarily regulated by sympathetic vasoconstrictor tone for thermoregulation, not by local metabolism.",
+      "whyCorrect": {
+        "c": "Unlike most organs, skin blood flow is controlled predominantly by sympathetic vasomotor nerves. This allows thermoregulatory control independent of local metabolic needs."
+      },
+      "whyIncorrect": {
+        "a": "Local metabolism has minimal effect on skin blood flow. Skin is not a metabolically demanding tissue.",
+        "b": "Autoregulation is weak in skin compared to brain, kidney, and heart where it's critical for maintaining organ function.",
+        "d": "Basal myogenic activity contributes to vascular tone but is not the primary regulator of skin blood flow.",
+        "e": "Skin vessels receive minimal parasympathetic innervation. Vasodilation in skin occurs by withdrawal of sympathetic tone, not parasympathetic activation."
+      },
+      "topicReference": "Topic 33: General hemodynamics (special circulations)",
+      "sourceTopics": [33],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_84-86-20",
+      "correctLetters": ["a", "b", "e"],
+      "summary": "The pulmonary circulation is a low-pressure, low-resistance system with the same cardiac output as the systemic circulation.",
+      "whyCorrect": {
+        "a": "Pulmonary arterial pressure (~15 mmHg mean) minus venous pressure (~5 mmHg) gives ~10 mmHg gradient vs. ~90 mmHg in systemic circulation.",
+        "b": "Mean pulmonary arterial pressure (~15 mmHg) is much lower than systemic mean arterial pressure (~95 mmHg).",
+        "e": "Pulmonary vascular resistance is only about 1/10th of systemic resistance, allowing the same flow at lower pressures."
+      },
+      "whyIncorrect": {
+        "c": "Pulmonary venous pressure (~5 mmHg, or LA pressure) is actually HIGHER than systemic central venous pressure (~0-5 mmHg).",
+        "d": "Cardiac output is EQUAL in both circulations. The right and left ventricles pump the same volume per minute."
+      },
+      "topicReference": "Topic 33: General hemodynamics",
+      "sourceTopics": [33],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_84-86-22",
+      "correctLetters": ["c"],
+      "summary": "Cerebral blood flow is primarily regulated by arterial PCO2 through its effect on extracellular pH around cerebral vessels.",
+      "whyCorrect": {
+        "c": "CO2 crosses the blood-brain barrier readily and affects pH of brain extracellular fluid. Hypercapnia causes vasodilation; hypocapnia causes vasoconstriction."
+      },
+      "whyIncorrect": {
+        "a": "Cerebral vessels have limited vasodilator innervation and neural control plays a minor role in CBF regulation.",
+        "b": "Sympathetic innervation has minimal effect on cerebral blood flow due to strong autoregulation and metabolic control.",
+        "d": "The Bezold-Jarisch reflex affects heart rate and blood pressure but is not a major regulator of cerebral blood flow."
+      },
+      "topicReference": "Topic 33: General hemodynamics (cerebral circulation)",
+      "sourceTopics": [33],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_84-86-23",
+      "correctLetters": ["a", "b", "d"],
+      "summary": "Arterioles are resistance vessels with the greatest pressure drop, highest resistance, and contain only a small fraction of blood volume.",
+      "whyCorrect": {
+        "a": "Arterioles provide about 50% of total peripheral resistance due to their small diameter and smooth muscle control.",
+        "b": "The greatest pressure drop (~50-60 mmHg) occurs across arterioles, from ~80 mmHg to ~30 mmHg at the capillary entrance.",
+        "d": "Arterioles contain only about 2-5% of total blood volume. Most blood is in the venous system (~65%)."
+      },
+      "whyIncorrect": {
+        "c": "Capillaries have the LOWEST velocity due to their enormous total cross-sectional area. Velocity is highest in the aorta.",
+        "e": "Veins have the greatest compliance. Arterioles have thick muscular walls with low compliance."
+      },
+      "topicReference": "Topic 33/41: Hemodynamics and microcirculation",
+      "sourceTopics": [33, 41],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_84-86-24",
+      "correctLetters": ["a"],
+      "summary": "In humans, the skin contains the largest blood reservoir due to its extensive venous plexuses and sympathetic control.",
+      "whyCorrect": {
+        "a": "The skin's extensive subpapillary venous plexus can hold large blood volumes. Sympathetic venoconstriction can mobilize this blood when needed."
+      },
+      "whyIncorrect": {
+        "b": "The liver is an important reservoir but smaller than skin in humans. It's more significant in some animals.",
+        "c": "The spleen is the major blood reservoir in dogs and horses but plays a minor role in humans (it's not a sinusoidal spleen).",
+        "d": "Bone marrow is not a significant blood reservoir.",
+        "e": "Skeletal muscles contain blood but are not considered a major blood reservoir compared to skin."
+      },
+      "topicReference": "Topic 40: Venous system",
+      "sourceTopics": [40],
+      "needsReview": false
+    }
+  ]
+}

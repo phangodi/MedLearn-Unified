@@ -28,6 +28,7 @@ const COLLECTION_NAME = 'mtoQuestions';
 // Parse command line arguments
 const args = process.argv.slice(2);
 const DRY_RUN = args.includes('--dry-run');
+const SKIP_DUPLICATES = args.includes('--skip-duplicates');
 const fileArgIndex = args.findIndex(a => a === '--file');
 const FILE_NAME = fileArgIndex >= 0 ? args[fileArgIndex + 1] : null;
 
@@ -117,6 +118,7 @@ async function main() {
   // Check for duplicates and import
   let imported = 0;
   let skipped = 0;
+  let duplicatesImported = 0;
 
   for (const q of questions) {
     const contentHash = generateContentHash(q.text, q.options);
@@ -127,11 +129,13 @@ async function main() {
       .limit(1)
       .get();
 
-    if (!existing.empty) {
+    if (!existing.empty && SKIP_DUPLICATES) {
       console.log(`   ⊘ Skipped duplicate: ${q.id}`);
       skipped++;
       continue;
     }
+
+    const isDuplicate = !existing.empty;
 
     const now = Timestamp.now();
     const mtoQuestion = {
@@ -156,11 +160,14 @@ async function main() {
     };
 
     if (DRY_RUN) {
-      console.log(`   [DRY RUN] Would import: ${q.id}`);
+      const suffix = isDuplicate ? ' (duplicate content, new test entry)' : '';
+      console.log(`   [DRY RUN] Would import: ${q.id}${suffix}`);
     } else {
       await db.collection(COLLECTION_NAME).add(mtoQuestion);
-      console.log(`   ✅ Imported: ${q.id}`);
+      const suffix = isDuplicate ? ' (duplicate content, new test entry)' : '';
+      console.log(`   ✅ Imported: ${q.id}${suffix}`);
     }
+    if (isDuplicate) duplicatesImported++;
     imported++;
   }
 
@@ -183,7 +190,13 @@ async function main() {
   console.log(`   Test ID:           ${testId}`);
   console.log(`   Total Questions:   ${questions.length}`);
   console.log(`   Imported:          ${imported}`);
-  console.log(`   Skipped (dupes):   ${skipped}\n`);
+  if (duplicatesImported > 0) {
+    console.log(`   Duplicates Added:  ${duplicatesImported} (same content, new test entry)`);
+  }
+  if (skipped > 0) {
+    console.log(`   Skipped (dupes):   ${skipped}`);
+  }
+  console.log('');
 
   if (DRY_RUN) {
     console.log('✅ DRY RUN COMPLETE - No data was written\n');

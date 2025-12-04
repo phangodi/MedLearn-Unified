@@ -1,0 +1,394 @@
+{
+  "testId": "mto3AA_84-86",
+  "metadata": {
+    "sources": ["mto3,AA.pdf - Pages 84-86"],
+    "importedAt": "2025-12-03T00:00:00.000Z",
+    "totalQuestions": 17,
+    "topics": [33, 34, 37, 39, 40, 41, 43],
+    "mcqs": ["mcq-3"]
+  },
+  "questions": [
+    {
+      "id": "q-mto3AA_84-86-1",
+      "testId": "mto3AA_84-86",
+      "questionNumber": 1,
+      "text": "Vasopressin in the circulation (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "elicits vasoconstriction via V1 receptors" },
+        { "letter": "b", "text": "elevates intracellular Ca concentration in the vascular smooth muscle" },
+        { "letter": "c", "text": "stimulates cAMP via V1 receptors" },
+        { "letter": "d", "text": "decreases the total peripheral resistance" }
+      ],
+      "correctAnswers": ["a", "b"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.9,
+        "matchReason": "Vasopressin/ADH effects on vascular tone - Topic 43: Short-term BP regulation"
+      }
+    },
+    {
+      "id": "q-mto3AA_84-86-2",
+      "testId": "mto3AA_84-86",
+      "questionNumber": 2,
+      "text": "3 major vasodilator substances can be released from parasympathetic nerve endings. These are: (M)",
+      "correctAnswerCount": 3,
+      "options": [
+        { "letter": "a", "text": "vasoactive intestinal polypeptide (VIP)" },
+        { "letter": "b", "text": "prostacyclin (PGI2)" },
+        { "letter": "c", "text": "neuropeptide Y (NPY)" },
+        { "letter": "d", "text": "acethyl-choline" },
+        { "letter": "e", "text": "nitric oxide (NO)" },
+        { "letter": "f", "text": "adrenaline" }
+      ],
+      "correctAnswers": ["a", "d", "e"],
+      "topics": [33, 43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.9,
+        "matchReason": "Parasympathetic vasodilators - Topics 33/43: Hemodynamics and BP regulation"
+      }
+    },
+    {
+      "id": "q-mto3AA_84-86-3",
+      "testId": "mto3AA_84-86",
+      "questionNumber": 3,
+      "text": "Determine the cardiac output! Oxygen consumption: 2000mL/min, arterial oxygen concentration: 20mL/100mL, venous oxygen concentration: 10 mL/100mL (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "20 L/min" },
+        { "letter": "b", "text": "25 L/min" },
+        { "letter": "c", "text": "10 L/min" },
+        { "letter": "d", "text": "5 L/min" }
+      ],
+      "correctAnswers": ["a"],
+      "topics": [37],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Fick principle cardiac output calculation - Topic 37: Cardiac output"
+      }
+    },
+    {
+      "id": "q-mto3AA_84-86-5",
+      "testId": "mto3AA_84-86",
+      "questionNumber": 5,
+      "text": "Chemoreceptors of carotid and aortic bodies: (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "they are primarily sensitive to hypoxia (lack of O2)" },
+        { "letter": "b", "text": "they are primarily sensitive to hypercapnia (increased pCO2)" },
+        { "letter": "c", "text": "experimental hypoxia results in hypotension (regulated by reflexes)" },
+        { "letter": "d", "text": "they are also stimulated if the circulation is slowed down" }
+      ],
+      "correctAnswers": ["a", "d"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.9,
+        "matchReason": "Chemoreceptor reflexes - Topic 43: Short-term BP regulation"
+      }
+    },
+    {
+      "id": "q-mto3AA_84-86-6",
+      "testId": "mto3AA_84-86",
+      "questionNumber": 6,
+      "text": "Increases in arterial pulse pressure may be caused by (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "decreases in arterial blood volume" },
+        { "letter": "b", "text": "increases in heart rate" },
+        { "letter": "c", "text": "decreases in arterial compliance" },
+        { "letter": "d", "text": "decreases in stroke volume" }
+      ],
+      "correctAnswers": ["c"],
+      "topics": [34],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Pulse pressure determinants - Topic 34: Arterial blood pressure"
+      }
+    },
+    {
+      "id": "q-mto3AA_84-86-7",
+      "testId": "mto3AA_84-86",
+      "questionNumber": 7,
+      "text": "Which of the following second messenger systems is implicated in the mediation of vasoconstriction? (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "stimulation of IP3" },
+        { "letter": "b", "text": "stimulation of cGMP" },
+        { "letter": "c", "text": "stimulation of cAMP" },
+        { "letter": "d", "text": "PGE2" }
+      ],
+      "correctAnswers": ["a"],
+      "topics": [33],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.9,
+        "matchReason": "Vascular smooth muscle signaling - Topic 33: General hemodynamics"
+      }
+    },
+    {
+      "id": "q-mto3AA_84-86-8",
+      "testId": "mto3AA_84-86",
+      "questionNumber": 8,
+      "text": "The major Starling-force for reabsorption: (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "interstitial colloid osmotic pressure" },
+        { "letter": "b", "text": "interstitial hydrostatic pressure" },
+        { "letter": "c", "text": "plasma colloid osmotic pressure" },
+        { "letter": "d", "text": "intracapillary hydrostatic pressure" }
+      ],
+      "correctAnswers": ["c"],
+      "topics": [39, 41],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Starling forces in capillary exchange - Topics 39/41: Capillaries and microcirculation"
+      }
+    },
+    {
+      "id": "q-mto3AA_84-86-11",
+      "testId": "mto3AA_84-86",
+      "questionNumber": 11,
+      "text": "Which one of the following 10 cm long structures has the highest compliance? (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "a healthy femoral artery" },
+        { "letter": "b", "text": "a healthy femoral vein" },
+        { "letter": "c", "text": "an arteriosclerotic femoral artery" },
+        { "letter": "d", "text": "an abdominal aorta" }
+      ],
+      "correctAnswers": ["b"],
+      "topics": [33, 40],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Vascular compliance comparison - Topics 33/40: Hemodynamics and venous system"
+      }
+    },
+    {
+      "id": "q-mto3AA_84-86-12",
+      "testId": "mto3AA_84-86",
+      "questionNumber": 12,
+      "text": "Left coronary artery blood flow (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "accounts for about 10% of the cardiac output" },
+        { "letter": "b", "text": "is regulated mainly by myocardial O2 consumption" },
+        { "letter": "c", "text": "is greatest during diastole" },
+        { "letter": "d", "text": "does not depend on arterial blood pressure" }
+      ],
+      "correctAnswers": ["b", "c"],
+      "topics": [33],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.85,
+        "matchReason": "Coronary blood flow characteristics - Topic 33: General hemodynamics (coronary circulation)"
+      }
+    },
+    {
+      "id": "q-mto3AA_84-86-13",
+      "testId": "mto3AA_84-86",
+      "questionNumber": 13,
+      "text": "In the systemic veins: (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "blood pressure is lower than in the capillaries" },
+        { "letter": "b", "text": "the wall does not contain smooth muscle elements" },
+        { "letter": "c", "text": "flow velocity is lower than in the capillaries" },
+        { "letter": "d", "text": "valves control the diameter via contraction" }
+      ],
+      "correctAnswers": ["a"],
+      "topics": [40],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Venous system characteristics - Topic 40: Venous system"
+      }
+    },
+    {
+      "id": "q-mto3AA_84-86-14",
+      "testId": "mto3AA_84-86",
+      "questionNumber": 14,
+      "text": "With regard to the microcirculation (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "precapillary sphincters are between metarterioles and capillaries" },
+        { "letter": "b", "text": "increased sympathetic activity tends to constrict the capillaries" },
+        { "letter": "c", "text": "dilation of arterioles decreases the pressure in the capillaries" },
+        { "letter": "d", "text": "during periods of rest, not all the capillaries are open" }
+      ],
+      "correctAnswers": ["a", "d"],
+      "topics": [41],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Microcirculation structure and function - Topic 41: Microcirculation"
+      }
+    },
+    {
+      "id": "q-mto3AA_84-86-16",
+      "testId": "mto3AA_84-86",
+      "questionNumber": 16,
+      "text": "Depressor reflex can be elicited by (M)",
+      "correctAnswerCount": 4,
+      "options": [
+        { "letter": "a", "text": "stretching the pulmonary artery" },
+        { "letter": "b", "text": "stimulating chemosensitive vagal afferents in the lungs and the heart" },
+        { "letter": "c", "text": "stretching the carotis sinus" },
+        { "letter": "d", "text": "arterial hypoxia" },
+        { "letter": "e", "text": "stretching the left ventricle" },
+        { "letter": "f", "text": "increasing the intracranial pressure" }
+      ],
+      "correctAnswers": ["a", "b", "c", "e"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Cardiovascular reflexes - Topic 43: Short-term BP regulation"
+      }
+    },
+    {
+      "id": "q-mto3AA_84-86-18",
+      "testId": "mto3AA_84-86",
+      "questionNumber": 18,
+      "text": "Which of the following is the most important factor regulating skin blood flow (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "local tissue metabolism" },
+        { "letter": "b", "text": "autoregulation" },
+        { "letter": "c", "text": "sympathetic vasomotor tone" },
+        { "letter": "d", "text": "basal myogenic activity" },
+        { "letter": "e", "text": "parasympathetic innervation" }
+      ],
+      "correctAnswers": ["c"],
+      "topics": [33],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.85,
+        "matchReason": "Skin blood flow regulation - Topic 33: General hemodynamics (special circulations)"
+      }
+    },
+    {
+      "id": "q-mto3AA_84-86-20",
+      "testId": "mto3AA_84-86",
+      "questionNumber": 20,
+      "text": "The values of which of the following parameters are smaller in the pulmonary circulation than in the systemic circulation (M)",
+      "correctAnswerCount": 3,
+      "options": [
+        { "letter": "a", "text": "the pressure gradient between the arterial and the venous parts" },
+        { "letter": "b", "text": "mean arterial pressure" },
+        { "letter": "c", "text": "venous pressure" },
+        { "letter": "d", "text": "cardiac output" },
+        { "letter": "e", "text": "total resistance" }
+      ],
+      "correctAnswers": ["a", "b", "e"],
+      "topics": [33],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.9,
+        "matchReason": "Pulmonary vs systemic circulation comparison - Topic 33: General hemodynamics"
+      }
+    },
+    {
+      "id": "q-mto3AA_84-86-22",
+      "testId": "mto3AA_84-86",
+      "questionNumber": 22,
+      "text": "Which of the following factors have greatest influence on cerebral blood flow? (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "vasodilator fibers" },
+        { "letter": "b", "text": "sympathetic tone" },
+        { "letter": "c", "text": "pCO2 level" },
+        { "letter": "d", "text": "Bezold-Jarisch reflex" }
+      ],
+      "correctAnswers": ["c"],
+      "topics": [33],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.85,
+        "matchReason": "Cerebral blood flow regulation - Topic 33: General hemodynamics (special circulations)"
+      }
+    },
+    {
+      "id": "q-mto3AA_84-86-23",
+      "testId": "mto3AA_84-86",
+      "questionNumber": 23,
+      "text": "Arterioles are characterized by: (M)",
+      "correctAnswerCount": 3,
+      "options": [
+        { "letter": "a", "text": "the greatest resistance to flow in the systemic circulation" },
+        { "letter": "b", "text": "the greatest pressure drop" },
+        { "letter": "c", "text": "the highest velocity of blood flow" },
+        { "letter": "d", "text": "the lowest fraction of blood volume" },
+        { "letter": "e", "text": "the greatest compliance" }
+      ],
+      "correctAnswers": ["a", "b", "d"],
+      "topics": [33, 41],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Arteriole characteristics - Topics 33/41: Hemodynamics and microcirculation"
+      }
+    },
+    {
+      "id": "q-mto3AA_84-86-24",
+      "testId": "mto3AA_84-86",
+      "questionNumber": 24,
+      "text": "The MOST important blood reservoir in man is: (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "skin" },
+        { "letter": "b", "text": "liver" },
+        { "letter": "c", "text": "spleen" },
+        { "letter": "d", "text": "bone marrow" },
+        { "letter": "e", "text": "skeletal muscles" }
+      ],
+      "correctAnswers": ["a"],
+      "topics": [40],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-03T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.9,
+        "matchReason": "Blood reservoir function - Topic 40: Venous system"
+      }
+    }
+  ]
+}

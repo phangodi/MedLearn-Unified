@@ -1,0 +1,308 @@
+{
+  "testId": "05561187",
+  "generatedAt": "2025-12-03T16:30:00Z",
+  "explanations": [
+    {
+      "questionId": "q-05561187-1",
+      "correctLetters": ["d", "e"],
+      "summary": "NO is a free radical gas produced on demand (not stored) that activates soluble guanylyl cyclase intracellularly.",
+      "whyCorrect": {
+        "d": "NO has an unpaired electron making it a free radical, which contributes to its short half-life (~5 seconds).",
+        "e": "NO activates soluble guanylyl cyclase (sGC), an intracellular enzyme that produces cGMP to cause vasodilation."
+      },
+      "whyIncorrect": {
+        "a": "NO is NOT stored in vesicles - it's synthesized on demand by NOS and diffuses freely across membranes.",
+        "b": "NO is a paracrine (not autocrine) molecule - produced by endothelium, acts on adjacent smooth muscle.",
+        "c": "NO is also produced by neurons (nNOS), macrophages (iNOS), and other cells - not exclusively endothelium.",
+        "f": "NO INHIBITS platelet aggregation - it prevents thrombosis, not promotes it."
+      },
+      "topicReference": "Topic 46: Blood Flow Regulation",
+      "sourceTopics": [46],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-05561187-2",
+      "correctLetters": ["a", "c"],
+      "summary": "Histamine and bradykinin are inflammatory mediators that increase capillary permeability by causing endothelial cell contraction and gap formation.",
+      "whyCorrect": {
+        "a": "Histamine causes endothelial cell contraction, creating gaps between cells that increase permeability - key mediator of acute inflammation.",
+        "c": "Bradykinin similarly increases capillary permeability and is a potent inflammatory mediator released from kininogen."
+      },
+      "whyIncorrect": {
+        "b": "Adenosine causes vasodilation but does NOT significantly affect capillary permeability.",
+        "d": "CO2 causes local vasodilation through pH changes but doesn't increase capillary permeability.",
+        "e": "Endothelin is a potent vasoconstrictor - it doesn't increase capillary permeability.",
+        "f": "NO causes vasodilation but does NOT increase capillary permeability - it actually helps maintain endothelial integrity."
+      },
+      "topicReference": "Topic 43: Capillary Exchange; Topic 46: Inflammatory Hyperemia",
+      "sourceTopics": [43, 46],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-05561187-4",
+      "correctLetters": ["b"],
+      "summary": "Mean arterial pressure is the most tightly regulated hemodynamic parameter, maintained within narrow limits by baroreceptor reflexes.",
+      "whyCorrect": {
+        "b": "MAP is homeostatically regulated within ~90-100 mmHg. The baroreceptor reflex constantly adjusts CO and TPR to maintain stable MAP despite varying demands."
+      },
+      "whyIncorrect": {
+        "a": "Cardiac output varies dramatically (5 L/min at rest to 25+ L/min during exercise) - highly variable.",
+        "c": "Heart rate changes substantially (60-180+ bpm) with activity, emotions, and reflexes.",
+        "d": "TPR changes significantly to redistribute blood flow to active organs and regulate MAP."
+      },
+      "topicReference": "Topic 42: Arterial Blood Pressure; Topic 47: Neural Regulation",
+      "sourceTopics": [42, 47],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-05561187-5",
+      "correctLetters": ["c"],
+      "summary": "The carotid sinus baroreceptor reflex operates continuously at normal blood pressures to maintain hemodynamic stability.",
+      "whyCorrect": {
+        "c": "Carotid sinus baroreceptors are tonically active at normal BP (80-150 mmHg range), continuously modulating sympathetic and parasympathetic outflow."
+      },
+      "whyIncorrect": {
+        "a": "Peripheral chemoreceptors primarily respond to hypoxia (PaO2 <60 mmHg) - not active at normal oxygen levels.",
+        "b": "Central chemoreceptors respond to CO2/pH changes but are not a circulatory 'depressor' reflex - they cause pressor responses.",
+        "d": "Cushing reflex only occurs during severe brain ischemia (elevated ICP) - an emergency response, not physiological."
+      },
+      "topicReference": "Topic 48: Short-term Blood Pressure Control",
+      "sourceTopics": [48],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-05561187-6",
+      "correctLetters": ["c"],
+      "summary": "Skin vessels have minimal basal tone and rely primarily on sympathetic neurogenic tone for blood flow regulation.",
+      "whyCorrect": {
+        "c": "Skin has very LOW basal (myogenic) tone - its vessels are primarily controlled by sympathetic nerves for thermoregulation, not autoregulation."
+      },
+      "whyIncorrect": {
+        "a": "Heart has strong basal tone and excellent autoregulation to maintain coronary flow across varying perfusion pressures.",
+        "b": "Kidney has substantial basal tone with strong autoregulation to maintain stable GFR despite BP changes.",
+        "d": "Brain has considerable basal tone with robust autoregulation to protect cerebral perfusion (50-150 mmHg range)."
+      },
+      "topicReference": "Topic 46: Autoregulation and Vascular Tone",
+      "sourceTopics": [46],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-05561187-7",
+      "correctLetters": ["b", "d"],
+      "summary": "Pulse pressure is the difference between systolic and diastolic pressures, and it diminishes as blood flows through arterioles due to resistance.",
+      "whyCorrect": {
+        "b": "Pulse pressure = systolic - diastolic pressure (e.g., 120 - 80 = 40 mmHg). This is the definition.",
+        "d": "Pulse pressure declines in arterioles because the high resistance dampens pulsatile flow, converting it to more steady flow."
+      },
+      "whyIncorrect": {
+        "a": "DECREASED compliance (stiffer vessels) INCREASES pulse pressure - as in elderly patients with arteriosclerosis.",
+        "c": "Capillaries have NO pulse pressure - the pulsatile component is completely dampened by arteriolar resistance."
+      },
+      "topicReference": "Topic 42: Arterial Blood Pressure and Pulse Pressure",
+      "sourceTopics": [42],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-05561187-8",
+      "correctLetters": ["c"],
+      "summary": "Basal tone is the intrinsic myogenic tone that remains after removing all neural and humoral influences - measured after denervation.",
+      "whyCorrect": {
+        "c": "Basal tone can only be determined after denervation, which removes the neurogenic component. What remains is the intrinsic myogenic tone."
+      },
+      "whyIncorrect": {
+        "a": "Cerebral vessels DO have basal tone - they have excellent myogenic autoregulation.",
+        "b": "Basal tone varies significantly between organs - brain, heart, kidney have high basal tone; skin has low basal tone.",
+        "d": "Basal tone ≠ neurogenic tone. Resting tone = basal (myogenic) + neurogenic. They are distinct components."
+      },
+      "topicReference": "Topic 46: Vascular Tone Components",
+      "sourceTopics": [46],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-05561187-11",
+      "correctLetters": ["b"],
+      "summary": "Mean pulmonary artery pressure is approximately 15 mmHg (range 10-20), much lower than systemic circulation.",
+      "whyCorrect": {
+        "b": "Mean PAP ≈ 15 mmHg (normal range 10-20 mmHg). Pulmonary circulation is a low-pressure, low-resistance system."
+      },
+      "whyIncorrect": {
+        "a": "8 mmHg is too low - this is closer to pulmonary capillary wedge pressure or left atrial pressure.",
+        "c": "100 mmHg is the mean systemic arterial pressure - way too high for pulmonary circulation.",
+        "d": "25 mmHg is the systolic pulmonary artery pressure, not the mean.",
+        "e": "60 mmHg would indicate severe pulmonary hypertension."
+      },
+      "topicReference": "Topic 50: Pulmonary Circulation",
+      "sourceTopics": [50],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-05561187-12",
+      "correctLetters": ["d"],
+      "summary": "Subendocardial blood flow occurs predominantly during diastole because systolic compression occludes intramural vessels.",
+      "whyCorrect": {
+        "d": "During systole, ventricular contraction compresses subendocardial vessels (extravascular compression), so blood flow occurs mainly during diastole when the muscle relaxes."
+      },
+      "whyIncorrect": {
+        "a": "Blood flow is NOT equal - it's predominantly diastolic due to systolic compression.",
+        "b": "The subendocardium IS vascularized by coronary arteries penetrating from epicardium - it's not avascular.",
+        "c": "The opposite is true - subendocardial flow is REDUCED during systole due to mechanical compression."
+      },
+      "topicReference": "Topic 51: Coronary Circulation",
+      "sourceTopics": [51],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-05561187-13",
+      "correctLetters": ["f"],
+      "summary": "Total lymph flow in adults is approximately 1-2 ml/min (or 2-4 liters/day), returning filtered fluid and proteins to circulation.",
+      "whyCorrect": {
+        "f": "Lymph flow ≈ 1-2 ml/min (about 2-4 L/day). This returns approximately 10% of capillary filtrate back to the circulation."
+      },
+      "whyIncorrect": {
+        "a": "1-2 µL/min is far too low - this would be negligible.",
+        "b": "1-2 µL/sec = 60-120 µL/min - still too low.",
+        "c": "1-2 µL/hour is extremely low - practically no flow.",
+        "d": "1-2 ml/sec = 60-120 ml/min - too high, this would exceed capillary filtration.",
+        "e": "1-2 ml/hour is too low - only 24-48 ml/day."
+      },
+      "topicReference": "Topic 44: Lymphatic System",
+      "sourceTopics": [44],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-05561187-14",
+      "correctLetters": ["d"],
+      "summary": "The critical function of lymphatics is removing proteins from interstitial fluid - proteins cannot return through capillaries.",
+      "whyCorrect": {
+        "d": "Proteins that leak from capillaries cannot return through the capillary wall. Lymphatics are the ONLY route for protein return to circulation, preventing edema."
+      },
+      "whyIncorrect": {
+        "a": "Lymphatics transport absorbed lipids FROM intestine TO circulation, not to tissues generally.",
+        "b": "Proteins are delivered to tissues via blood capillaries, not lymphatics.",
+        "c": "Lymphocytes travel through lymphatics but delivering them is not the PRIMARY function.",
+        "e": "Metabolites like lactate return via venous blood, not lymphatics."
+      },
+      "topicReference": "Topic 44: Lymphatic System Functions",
+      "sourceTopics": [44],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-05561187-16",
+      "correctLetters": ["e", "f"],
+      "summary": "Arterial chemoreceptor stimulation and the cold pressor test both increase sympathetic outflow, causing vasoconstriction and increased TPR.",
+      "whyCorrect": {
+        "e": "Chemoreceptor stimulation (hypoxia, hypercapnia) triggers sympathetic activation causing widespread vasoconstriction and increased TPR.",
+        "f": "Cold pressor test (ice water immersion) activates cutaneous pain/cold receptors → sympathetic discharge → vasoconstriction → increased TPR."
+      },
+      "whyIncorrect": {
+        "a": "Bezold-Jarisch reflex causes bradycardia, hypotension, and DECREASED TPR (a depressor reflex).",
+        "b": "Baroreceptor activation inhibits sympathetic outflow → vasodilation → DECREASED TPR.",
+        "c": "Parasympathetic inhibition affects heart rate but has minimal effect on TPR (veins/arterioles lack significant parasympathetic innervation).",
+        "d": "β2-receptor stimulation causes vasodilation → DECREASED TPR (e.g., in skeletal muscle)."
+      },
+      "topicReference": "Topic 47-48: Neural Regulation and Reflexes",
+      "sourceTopics": [47, 48],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-05561187-17",
+      "correctLetters": ["a", "d"],
+      "summary": "According to Poiseuille's law, resistance is inversely proportional to r⁴ and can be expressed as inversely proportional to flow (R = ΔP/Q).",
+      "whyCorrect": {
+        "a": "Poiseuille: R = 8ηL/πr⁴. Resistance is inversely proportional to the fourth power of radius - small changes in radius dramatically affect resistance.",
+        "d": "R = ΔP/Q, therefore R is inversely proportional to flow when pressure gradient is constant."
+      },
+      "whyIncorrect": {
+        "b": "Resistance is independent of pressure gradient - R = 8ηL/πr⁴ contains no pressure term.",
+        "c": "Resistance is DIRECTLY proportional to viscosity (η is in the numerator).",
+        "e": "Resistance is DIRECTLY proportional to length (L is in the numerator)."
+      },
+      "topicReference": "Topic 41: Hemodynamics and Poiseuille's Law",
+      "sourceTopics": [41],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-05561187-18",
+      "correctLetters": ["d"],
+      "summary": "Hypoxic pulmonary vasoconstriction (Euler-Liljestrand reflex) is unique to the lungs - hypoxia causes vasoconstriction to optimize V/Q matching.",
+      "whyCorrect": {
+        "d": "Pulmonary vessels uniquely CONSTRICT in response to hypoxia (HPV). This diverts blood away from poorly ventilated alveoli to optimize gas exchange."
+      },
+      "whyIncorrect": {
+        "a": "Coronary vessels DILATE in response to hypoxia - metabolic vasodilation to increase oxygen delivery.",
+        "b": "Cerebral vessels DILATE in response to hypoxia - to maintain brain oxygen supply.",
+        "c": "Skeletal muscle vessels DILATE in response to hypoxia - metabolic hyperemia during exercise."
+      },
+      "topicReference": "Topic 50: Pulmonary Circulation - HPV",
+      "sourceTopics": [50],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-05561187-19",
+      "correctLetters": ["c"],
+      "summary": "The Frank-Starling mechanism ensures beat-to-beat matching of stroke volume to venous return through length-dependent changes in contractility.",
+      "whyCorrect": {
+        "c": "Frank-Starling law: increased preload (venous return) stretches cardiac muscle → increased force of contraction → matched stroke volume. This is intrinsic and beat-by-beat."
+      },
+      "whyIncorrect": {
+        "a": "Vagal negative dromotropic effect slows conduction - doesn't match SV to venous return.",
+        "b": "Sympathetic positive inotropy is slower (seconds) and not beat-by-beat matching.",
+        "d": "Extracardiac mechanisms (hormones, reflexes) are slower and don't provide beat-by-beat matching.",
+        "e": "Vagal negative inotropy (atria only) doesn't match ventricular output to venous return."
+      },
+      "topicReference": "Topic 35 & 40: Frank-Starling Mechanism",
+      "sourceTopics": [35, 40],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-05561187-20",
+      "correctLetters": ["b"],
+      "summary": "The CNS ischemic response (Cushing reflex) is triggered by chemosensitive neurons in the ventral medulla responding to local hypoxia/hypercapnia.",
+      "whyCorrect": {
+        "b": "Central chemoreceptors in the ventral medulla detect brain ischemia (↑CO2, ↓pH, ↓O2) and trigger massive sympathetic discharge - the CNS ischemic response."
+      },
+      "whyIncorrect": {
+        "a": "Carotid sinus contains baroreceptors (pressure sensors), not chemoreceptors for ischemic response.",
+        "c": "Adrenal medulla releases catecholamines but is not a chemoreceptor location.",
+        "d": "Right atrium contains volume receptors, not chemoreceptors.",
+        "e": "Carotid bodies are peripheral chemoreceptors for arterial blood gases - separate from CNS ischemic response."
+      },
+      "topicReference": "Topic 48: CNS Ischemic Response",
+      "sourceTopics": [48],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-05561187-22",
+      "correctLetters": ["d"],
+      "summary": "Veins lack significant parasympathetic innervation - venous capacity is controlled by sympathetic nerves, posture, and other factors.",
+      "whyCorrect": {
+        "d": "Veins have NO significant parasympathetic innervation. Venous tone is controlled almost exclusively by sympathetic nerves."
+      },
+      "whyIncorrect": {
+        "a": "Sympathetic nerves directly innervate veins and cause venoconstriction, affecting capacity.",
+        "b": "Posture dramatically affects venous capacity through hydrostatic pressure effects.",
+        "c": "Precapillary sphincter contraction affects upstream pressure and venous filling.",
+        "e": "Right ventricular function affects venous pressure and thus venous volume/capacity."
+      },
+      "topicReference": "Topic 45: Venous Circulation",
+      "sourceTopics": [45],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-05561187-24",
+      "correctLetters": ["c"],
+      "summary": "Veins have the highest compliance (ΔV/ΔP), holding ~70% of blood volume and serving as capacitance vessels.",
+      "whyCorrect": {
+        "c": "Veins have compliance ~20x higher than arteries. They're thin-walled, distensible capacitance vessels holding 60-70% of blood volume."
+      },
+      "whyIncorrect": {
+        "a": "Muscular arteries have thick walls with smooth muscle - relatively low compliance.",
+        "b": "Capillaries have very low compliance - minimal volume change with pressure.",
+        "d": "Elastic arteries (aorta) have moderate compliance for Windkessel function but far less than veins."
+      },
+      "topicReference": "Topic 42 & 45: Vascular Compliance",
+      "sourceTopics": [42, 45],
+      "needsReview": false
+    }
+  ]
+}

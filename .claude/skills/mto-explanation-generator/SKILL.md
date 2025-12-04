@@ -106,18 +106,42 @@ Each explanation MUST follow this exact structure:
 ### Step 1: Identify Questions to Process
 
 When user says:
+- **"Generate explanations for all questions without explanations"** → See workflow below
+- "Generate explanations for test XXXXXXXX" → Process all questions in that test file
 - "Generate explanations for topic 41" → Process all questions with topic 41
 - "Explain questions for MCQ-3" → Process all MCQ-3 questions
 - "Generate explanations for question [ID]" → Process specific question
 
+**Test files location:** `client/src/apps/physiology/data/questions/by-test-id/XXXXXXXX.json`
+
+#### Finding Questions Without Explanations
+
+1. Get all question IDs from test files:
+   ```bash
+   ls client/src/apps/physiology/data/questions/by-test-id/
+   ```
+   Read each JSON file to collect all question IDs.
+
+2. Get existing explanation IDs from explanation files:
+   ```bash
+   ls client/src/apps/physiology-mto/data/explanations/
+   ```
+   Read each JSON file to collect all `questionId` values that have been explained.
+
+3. Find the difference - questions that have no explanation yet.
+
+4. Process those questions (generate explanations, save, import to Firebase).
+
 ### Step 2: Read Topic Source Material
 
-For each topic involved, read the topic JS file:
+**EFFICIENCY NOTE:** Do NOT read entire topic JS files. Use your medical/physiology knowledge directly. The topic files contain standard physiology content that you already know. Only use targeted grep if you need a very specific University of Szeged reference value.
+
+If you genuinely need to verify something specific:
 ```bash
-Read client/src/apps/physiology/data/Topics/topic{number}.js
+Grep for the specific term in client/src/apps/physiology/data/Topics/topic{number}.js
 ```
 
-Extract:
+Extract only what's needed:
 - `officialDefinitions` - authoritative definitions
 - `keyPoints` - important facts
 - `examAnswer.raw` - what students should know
@@ -161,20 +185,30 @@ Generate a JSON file that can be imported to Firestore:
 }
 ```
 
-Save to: `client/src/apps/physiology-mto/data/explanations/topic{number}-explanations.json`
+Save to: `client/src/apps/physiology-mto/data/explanations/test-XXXXXXXX-explanations.json` (for test-based) or `topic{number}-explanations.json` (for topic-based)
+
+### Step 6: Auto-Import to Firebase
+
+**IMPORTANT:** Immediately after saving the JSON file, run the import script:
+
+```bash
+cd /Users/peti/Documents/GitHub/MedLearn-Unified && npx ts-node --esm client/scripts/import-explanations.ts --file <filename>
+```
+
+Report the final summary including import results.
 
 ---
 
 ## EXAMPLE SESSION
 
-**User:** "Generate explanations for topic 41"
+**User:** "Generate explanations for test 05561187"
 
 **You:**
-1. Read topic41.js to understand the microcirculation content
-2. Query questions with topic 41 (from existing JSON or Firestore)
-3. For each question, generate explanation
-4. Output JSON file with all explanations
-5. Report summary: "Generated 37 explanations for Topic 41. 35 complete, 2 marked for review."
+1. Read the test file to get all questions
+2. For each question, generate explanation using your medical knowledge
+3. Save JSON file with all explanations
+4. Run import script to push to Firebase
+5. Report summary: "Generated 18 explanations for test 05561187. Imported to Firebase: 18. Marked for review: 0."
 
 ---
 
@@ -239,16 +273,25 @@ npx ts-node client/scripts/import-explanations.ts --file topic41-explanations.js
 
 ## COMMANDS
 
+**Generate for all missing (most common):**
+```
+"Generate explanations for all questions without explanations"
+```
+→ Queries Firebase for questions missing explanations, generates them, and imports automatically.
+
+**Generate for test:**
+```
+"Generate explanations for test 05561187"
+```
+
 **Generate for topic:**
 ```
 "Generate explanations for topic 41"
-"Process topic 45 explanations"
 ```
 
 **Generate for MCQ:**
 ```
 "Generate explanations for MCQ-3"
-"Explain all MCQ-3 questions"
 ```
 
 **Generate for specific questions:**
