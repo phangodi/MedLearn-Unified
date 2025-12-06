@@ -38,3 +38,11 @@
   # Disable automatic deploy previews for pull requests
   # All previews must be manually triggered
   publish = "dist"
+
+# Cache headers for static assets
+# Audio files are cached for 30 days to reduce bandwidth consumption
+# Users who already cached files keep them; new requests get the header
+[[headers]]
+  for = "/Audio/*.mp3"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
