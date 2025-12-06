@@ -1,0 +1,168 @@
+{
+  "explanations": [
+    {
+      "questionId": "q-mto3AA_79-83-13",
+      "correctLetters": ["b"],
+      "summary": "Vasopressin (ADH) causes vasoconstriction through V1 receptors on vascular smooth muscle, while V2 receptors in the kidney mediate water reabsorption.",
+      "whyCorrect": {
+        "b": "V1 receptors (specifically V1a) are located on vascular smooth muscle cells. When activated by vasopressin, they trigger phospholipase C signaling, increasing intracellular calcium and causing vasoconstriction."
+      },
+      "whyIncorrect": {
+        "a": "Beta-1 receptors respond to catecholamines (epinephrine, norepinephrine) and are primarily in the heart, not involved in vasopressin signaling.",
+        "c": "Alpha-1 receptors mediate vasoconstriction in response to norepinephrine, not vasopressin. Different ligand, different receptor.",
+        "d": "V2 receptors are located in the renal collecting duct and mediate the antidiuretic effect of vasopressin (aquaporin-2 insertion), not vasoconstriction."
+      },
+      "topicReference": "Topic 43: Short-term blood pressure regulation",
+      "sourceTopics": [43],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_79-83-15",
+      "correctLetters": ["d", "e"],
+      "summary": "The Bainbridge reflex is a tachycardic response to increased venous return, initiated by stretch receptors in the right atrium.",
+      "whyCorrect": {
+        "d": "The Bainbridge reflex increases heart rate in response to increased venous return. When blood volume in the right atrium increases, stretch receptors trigger a reflex tachycardia to help accommodate the increased venous return.",
+        "e": "The reflex originates from low-pressure baroreceptors (stretch receptors) located in the right atrium and great veins. These detect increased filling pressure."
+      },
+      "whyIncorrect": {
+        "a": "Veratridine activates the Bezold-Jarisch reflex (a depressor reflex with bradycardia, hypotension, apnea), not the Bainbridge reflex.",
+        "b": "The Bainbridge reflex is a pressor/tachycardic reflex that increases heart rate, not a depressor reflex.",
+        "c": "The reflex originates from the right atrium, not the pulmonary arteries. Pulmonary artery stretch affects other reflexes."
+      },
+      "topicReference": "Topic 43: Short-term blood pressure regulation",
+      "sourceTopics": [43],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_79-83-20",
+      "correctLetters": ["a", "b"],
+      "summary": "Cerebral blood flow is primarily regulated by local metabolic factors: pCO2 and pH. The brain has minimal sympathetic control.",
+      "whyCorrect": {
+        "a": "Blood pH is a major regulator of cerebral blood flow. Decreased pH (acidosis) causes vasodilation, increasing blood flow. This is part of metabolic autoregulation.",
+        "b": "pCO2 is the most potent regulator of cerebral blood flow. Hypercapnia causes cerebral vasodilation (via H+ from CO2 hydration), while hypocapnia causes vasoconstriction."
+      },
+      "whyIncorrect": {
+        "c": "The Bezold-Jarisch reflex is a cardiac reflex (bradycardia, hypotension) triggered by ventricular receptors; it does not specifically regulate cerebral circulation.",
+        "d": "Sympathetic tone has minimal effect on cerebral blood flow. Cerebral vessels are relatively insensitive to sympathetic innervation compared to other vascular beds.",
+        "e": "The brain does not have significant vasodilator fiber innervation. Cerebral blood flow is primarily controlled by local metabolic factors, not neural vasodilator mechanisms."
+      },
+      "topicReference": "Topic 41: The microcirculation",
+      "sourceTopics": [41],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_79-83-33",
+      "correctLetters": ["a", "d"],
+      "summary": "D-glucose and L-amino acids (like L-alanine) are absorbed via Na+-dependent secondary active transport using SGLT and amino acid cotransporters.",
+      "whyCorrect": {
+        "a": "D-glucose is absorbed via SGLT1/SGLT2 (sodium-glucose linked transporters), which are Na+-dependent secondary active transporters. The Na+ gradient (established by Na+-K+-ATPase) drives glucose uptake.",
+        "d": "L-alanine and other amino acids are absorbed via various Na+-dependent amino acid cotransporters. The Na+ gradient provides the energy for concentrative amino acid uptake."
+      },
+      "whyIncorrect": {
+        "b": "D-fructose is absorbed by facilitated diffusion via GLUT5, which is Na+-independent. It does not use secondary active transport.",
+        "c": "Bile salts in the intestine are absorbed via the Na+-bile acid cotransporter (ASBT), which IS Na+-dependent. However, in renal context, bile salts are not significantly filtered or reabsorbed. This may be a tricky option depending on context."
+      },
+      "topicReference": "Topics 3/46: Active transport, Tubular reabsorption",
+      "sourceTopics": [3, 46],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_79-83-40",
+      "correctLetters": ["c"],
+      "summary": "Normal daily urine output is approximately 1-2.5 liters (1000-2500 mL), varying with fluid intake and other factors.",
+      "whyCorrect": {
+        "c": "Normal daily urine production ranges from approximately 1000 mL to 2500 mL (average ~1.5 L). This varies based on fluid intake, climate, and activity level."
+      },
+      "whyIncorrect": {
+        "a": "250-1000 mL would indicate oliguria (reduced urine output), suggesting dehydration or renal impairment.",
+        "b": ">3000 mL would indicate polyuria, which occurs in conditions like diabetes insipidus, diabetes mellitus, or excessive fluid intake.",
+        "d": "50-250 mL would represent severe oliguria or near-anuria, indicating significant renal failure or severe dehydration."
+      },
+      "topicReference": "Topic 48: Renal concentration and dilution",
+      "sourceTopics": [48],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_79-83-44",
+      "correctLetters": ["d"],
+      "summary": "Tubuloglomerular feedback (TGF) is a mechanism where the macula densa senses NaCl concentration in tubular fluid and adjusts GFR accordingly.",
+      "whyCorrect": {
+        "d": "Tubuloglomerular feedback describes how the macula densa cells sense NaCl concentration in the distal tubule. High NaCl triggers afferent arteriolar constriction, reducing GFR. Low NaCl causes afferent dilation and renin release, increasing GFR."
+      },
+      "whyIncorrect": {
+        "a": "This describes glomerulotubular balance (increased filtration leads to increased proximal reabsorption), not tubuloglomerular feedback. TGF works in the opposite direction.",
+        "b": "TGF involves the renin-angiotensin system (not 'angiogenesis'), but this option misdescribes the mechanism. TGF is primarily a local feedback at the JGA.",
+        "c": "This describes osmoregulation of ADH release by osmoreceptors, not tubuloglomerular feedback which is about NaCl sensing and GFR regulation."
+      },
+      "topicReference": "Topic 45: Renal blood flow, glomerular filtration",
+      "sourceTopics": [45],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_79-83-45",
+      "correctLetters": ["a", "b", "c"],
+      "summary": "The glomerular filtration barrier consists of three layers: fenestrated endothelium, glomerular basement membrane (GBM), and podocyte foot processes.",
+      "whyCorrect": {
+        "a": "Fenestrated endothelial cells line the glomerular capillaries. Their fenestrations (~70-100 nm) allow passage of water and small solutes but retain blood cells.",
+        "b": "Podocytes are specialized epithelial cells whose interdigitating foot processes form filtration slits covered by slit diaphragms, the final barrier to protein filtration.",
+        "c": "The glomerular basement membrane (basal membrane) lies between the endothelium and podocytes. Its negative charge and structure help prevent protein filtration."
+      },
+      "whyIncorrect": {
+        "d": "The macula densa is not part of the glomerular capillary wall. It is a specialized region of the distal tubule that contacts the afferent arteriole as part of the JGA."
+      },
+      "topicReference": "Topic 45: Renal blood flow, glomerular filtration",
+      "sourceTopics": [45],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_79-83-46",
+      "correctLetters": ["b", "f"],
+      "summary": "ANP is released in response to atrial stretch (hypervolemia) and inhibits the renin-angiotensin-aldosterone system to promote natriuresis.",
+      "whyCorrect": {
+        "b": "ANP inhibits renin secretion from juxtaglomerular cells, thereby reducing angiotensin II and aldosterone production. This contributes to its natriuretic and hypotensive effects.",
+        "f": "ANP is released from atrial myocytes in response to atrial wall stretch caused by hypervolemia (volume expansion). This is the primary stimulus for ANP release."
+      },
+      "whyIncorrect": {
+        "a": "ANP decreases total peripheral resistance through vasodilation, not increases it.",
+        "c": "ANP causes vasodilation of the afferent arteriole (increasing GFR), not vasoconstriction of the renal artery.",
+        "d": "ANP is released in response to hypervolemia (volume expansion), not hypovolemia. Hypovolemia would suppress ANP release.",
+        "e": "ANP inhibits aldosterone secretion, not stimulates it. This contributes to increased sodium excretion."
+      },
+      "topicReference": "Topics 44/50: Long-term BP regulation, ECF volume",
+      "sourceTopics": [44, 50],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_79-83-47",
+      "correctLetters": ["b"],
+      "summary": "The thick ascending limb (TAL) is impermeable to water while actively reabsorbing NaCl, making it the 'diluting segment' of the nephron.",
+      "whyCorrect": {
+        "b": "The thick ascending limb is impermeable to water (lacks aquaporins). It actively reabsorbs Na+, K+, and Cl- via NKCC2 without water following, diluting the tubular fluid and contributing to the medullary concentration gradient."
+      },
+      "whyIncorrect": {
+        "a": "The tubular fluid becomes hypo-osmotic (diluted) in the TAL, not hyperosmotic, because solutes are removed but water cannot follow.",
+        "c": "There is no water reabsorption in the TAL because it is water-impermeable. Large water reabsorption occurs in the proximal tubule and (ADH-dependent) collecting duct.",
+        "d": "Aldosterone-sensitive Na+ reabsorption occurs in the distal convoluted tubule and collecting duct (via ENaC), not in the thick ascending limb (which uses NKCC2)."
+      },
+      "topicReference": "Topic 46: Tubular reabsorption",
+      "sourceTopics": [46],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_79-83-48",
+      "correctLetters": ["a", "b", "c"],
+      "summary": "Na+-K+-ATPase inhibition disrupts the Na+ gradient needed for secondary active transport of glucose, galactose, and amino acids.",
+      "whyCorrect": {
+        "a": "L-alanine reabsorption depends on Na+-coupled amino acid transporters. Inhibiting Na+-K+-ATPase dissipates the Na+ gradient, preventing amino acid uptake.",
+        "b": "D-glucose reabsorption via SGLT2/SGLT1 requires the Na+ gradient. Without Na+-K+-ATPase activity, the gradient collapses and glucose cannot be reabsorbed.",
+        "c": "D-galactose, like glucose, is reabsorbed by SGLT1 (Na+-glucose/galactose cotransporter). It depends on the Na+ gradient maintained by Na+-K+-ATPase."
+      },
+      "whyIncorrect": {
+        "d": "Urea is reabsorbed by passive diffusion and facilitated diffusion (UT transporters) driven by concentration gradients, not by Na+-dependent secondary active transport. Inhibiting Na+-K+-ATPase would not directly affect urea reabsorption."
+      },
+      "topicReference": "Topic 46: Tubular reabsorption",
+      "sourceTopics": [46],
+      "needsReview": false
+    }
+  ]
+}

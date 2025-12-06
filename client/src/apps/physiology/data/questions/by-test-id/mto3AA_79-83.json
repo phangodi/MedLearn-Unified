@@ -1,0 +1,236 @@
+{
+  "testId": "mto3AA_79-83",
+  "metadata": {
+    "sources": ["mto3,AA.pdf - Pages 79-83 (2006-2007 2nd MTO Practice)"],
+    "importedAt": "2025-12-04T00:00:00.000Z",
+    "totalQuestions": 10,
+    "topics": [3, 41, 43, 44, 45, 46, 50],
+    "mcqs": ["mcq-3"]
+  },
+  "questions": [
+    {
+      "id": "q-mto3AA_79-83-13",
+      "testId": "mto3AA_79-83",
+      "questionNumber": 13,
+      "text": "The receptors mediating vasoconstriction in response to vasopressin are (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "beta1 receptors" },
+        { "letter": "b", "text": "V1 receptors" },
+        { "letter": "c", "text": "alpha1 receptors" },
+        { "letter": "d", "text": "V2 receptors" }
+      ],
+      "correctAnswers": ["b"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "V1 receptors mediate vasopressin vasoconstriction - Topic 43: Short-term BP regulation"
+      }
+    },
+    {
+      "id": "q-mto3AA_79-83-15",
+      "testId": "mto3AA_79-83",
+      "questionNumber": 15,
+      "text": "The Bainbridge reflex (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "can be elicited by administering veratridine" },
+        { "letter": "b", "text": "is a depressor reflex" },
+        { "letter": "c", "text": "is elicited by stretching of the pulmonary arteries" },
+        { "letter": "d", "text": "increases heart rate in response to enhanced venous return" },
+        { "letter": "e", "text": "originates from the right atrial baroreceptors" }
+      ],
+      "correctAnswers": ["d", "e"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Bainbridge reflex: atrial stretch → increased HR - Topic 43: Short-term BP regulation"
+      }
+    },
+    {
+      "id": "q-mto3AA_79-83-20",
+      "testId": "mto3AA_79-83",
+      "questionNumber": 20,
+      "text": "Which of the following factors regulate the brain circulation? (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "blood pH" },
+        { "letter": "b", "text": "pCO2 level" },
+        { "letter": "c", "text": "Bezold-Jarisch reflex" },
+        { "letter": "d", "text": "sympathetic tone" },
+        { "letter": "e", "text": "vasodilator fibres" }
+      ],
+      "correctAnswers": ["a", "b"],
+      "topics": [41],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Cerebral blood flow regulated by pH and pCO2 (metabolic autoregulation) - Topic 41: Microcirculation"
+      }
+    },
+    {
+      "id": "q-mto3AA_79-83-33",
+      "testId": "mto3AA_79-83",
+      "questionNumber": 33,
+      "text": "Which of the following is absorbed by Na-dependent secondary active transport? (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "D-glucose" },
+        { "letter": "b", "text": "D-fructose" },
+        { "letter": "c", "text": "bile salts" },
+        { "letter": "d", "text": "L-alanine" }
+      ],
+      "correctAnswers": ["a", "d"],
+      "topics": [3, 46],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "SGLT (glucose) and amino acid transporters use Na+ gradient - Topics 3/46: Active transport, Tubular reabsorption"
+      }
+    },
+    {
+      "id": "q-mto3AA_79-83-40",
+      "testId": "mto3AA_79-83",
+      "questionNumber": 40,
+      "text": "Daily urine production is (approximately) (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "250ml - 1000ml" },
+        { "letter": "b", "text": ">3000ml" },
+        { "letter": "c", "text": "1000ml-2500ml" },
+        { "letter": "d", "text": "50ml-250ml" }
+      ],
+      "correctAnswers": ["c"],
+      "topics": [48],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.9,
+        "matchReason": "Normal daily urine output ~1-2.5L - Topic 48: Renal concentration/dilution"
+      }
+    },
+    {
+      "id": "q-mto3AA_79-83-44",
+      "testId": "mto3AA_79-83",
+      "questionNumber": 44,
+      "text": "The tubuloglomerular feedback (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "predicts that increased glomerular filtration is followed by increased reabsorption in the proximal tubulus" },
+        { "letter": "b", "text": "is mediated by the renin-angiogenesis system" },
+        { "letter": "c", "text": "describes the release of vasopressin as the function of plasma osmolarity" },
+        { "letter": "d", "text": "is the regulation of GFR as the function of the NaCl loading of the macula densa" }
+      ],
+      "correctAnswers": ["d"],
+      "topics": [45],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "TGF: macula densa senses NaCl, regulates GFR - Topic 45: Renal blood flow, glomerular filtration"
+      }
+    },
+    {
+      "id": "q-mto3AA_79-83-45",
+      "testId": "mto3AA_79-83",
+      "questionNumber": 45,
+      "text": "Layers of the glomerular capillaries (M)",
+      "correctAnswerCount": 3,
+      "options": [
+        { "letter": "a", "text": "endothelial cells" },
+        { "letter": "b", "text": "podocytes" },
+        { "letter": "c", "text": "basal membrane" },
+        { "letter": "d", "text": "macula densa" }
+      ],
+      "correctAnswers": ["a", "b", "c"],
+      "topics": [45],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Filtration barrier: endothelium, GBM, podocytes - Topic 45: Renal blood flow, glomerular filtration"
+      }
+    },
+    {
+      "id": "q-mto3AA_79-83-46",
+      "testId": "mto3AA_79-83",
+      "questionNumber": 46,
+      "text": "The atrial natriuretic peptide (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "elicits an increase in the total peripheral resistance" },
+        { "letter": "b", "text": "inhibits renin secretion" },
+        { "letter": "c", "text": "causes vasoconstriction in the a. renalis" },
+        { "letter": "d", "text": "is released in response to hypovolemia" },
+        { "letter": "e", "text": "stimulates aldosterone secretion" },
+        { "letter": "f", "text": "is released in response to hypervolemia" }
+      ],
+      "correctAnswers": ["b", "f"],
+      "topics": [44, 50],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "ANP released by atrial stretch, inhibits RAAS - Topics 44/50: Long-term BP regulation, ECF volume"
+      }
+    },
+    {
+      "id": "q-mto3AA_79-83-47",
+      "testId": "mto3AA_79-83",
+      "questionNumber": 47,
+      "text": "What is characteristic of the thick segment of the loop of Henle? (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "the tubular fluid becomes hyperosmotic" },
+        { "letter": "b", "text": "the membrane is not permeable to water" },
+        { "letter": "c", "text": "large water reabsorption" },
+        { "letter": "d", "text": "Na reabsorption stimulated by aldosterone" }
+      ],
+      "correctAnswers": ["b"],
+      "topics": [46],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "TAL is water-impermeable (diluting segment) - Topic 46: Tubular reabsorption"
+      }
+    },
+    {
+      "id": "q-mto3AA_79-83-48",
+      "testId": "mto3AA_79-83",
+      "questionNumber": 48,
+      "text": "Inhibition of Na-K ATPase would decrease active renal reabsorption of which of the following? (M)",
+      "correctAnswerCount": 3,
+      "options": [
+        { "letter": "a", "text": "L-alanine" },
+        { "letter": "b", "text": "D-glucose" },
+        { "letter": "c", "text": "D-galactose" },
+        { "letter": "d", "text": "urea" }
+      ],
+      "correctAnswers": ["a", "b", "c"],
+      "topics": [46],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Na-K ATPase powers secondary active transport of sugars/amino acids - Topic 46: Tubular reabsorption"
+      }
+    }
+  ]
+}

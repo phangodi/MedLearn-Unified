@@ -1,0 +1,395 @@
+{
+  "testId": "mto3AA_94",
+  "metadata": {
+    "sources": ["mto3,AA.pdf - Page 94"],
+    "importedAt": "2025-12-04T00:00:00.000Z",
+    "totalQuestions": 17,
+    "topics": [8, 30, 33, 34, 39, 40, 41, 43, 45, 46, 47],
+    "mcqs": ["mcq-3"]
+  },
+  "questions": [
+    {
+      "id": "q-mto3AA_94-8",
+      "testId": "mto3AA_94",
+      "questionNumber": 8,
+      "text": "What would decrease the hydrostatic (blood) pressure in the leg veins? (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "pregnancy" },
+        { "letter": "b", "text": "exercise of the leg muscles" },
+        { "letter": "c", "text": "increase in right atrial pressure" },
+        { "letter": "d", "text": "presence of ascitic fluid in the abdomen" }
+      ],
+      "correctAnswers": ["b"],
+      "topics": [40],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Muscle pump reduces venous pressure - Topic 40: Venous system"
+      }
+    },
+    {
+      "id": "q-mto3AA_94-13",
+      "testId": "mto3AA_94",
+      "questionNumber": 13,
+      "text": "Which substance has the highest physiological blood plasma concentration? (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "uric acid" },
+        { "letter": "b", "text": "urea" },
+        { "letter": "c", "text": "creatine" },
+        { "letter": "d", "text": "creatinine" }
+      ],
+      "correctAnswers": ["b"],
+      "topics": [8],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.9,
+        "matchReason": "Plasma composition and concentrations - Topic 8: Fluid compartments, blood plasma"
+      }
+    },
+    {
+      "id": "q-mto3AA_94-14",
+      "testId": "mto3AA_94",
+      "questionNumber": 14,
+      "text": "Based upon the Laplace's law, the segment of the circulatory system where rupture due to high wall tension is most likely to occur is: (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "arterioles" },
+        { "letter": "b", "text": "capillaries" },
+        { "letter": "c", "text": "large arteries" },
+        { "letter": "d", "text": "large veins" },
+        { "letter": "e", "text": "small veins" }
+      ],
+      "correctAnswers": ["c"],
+      "topics": [33],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Laplace's law: Wall tension = P x R - Topic 33: General circulatory hemodynamics"
+      }
+    },
+    {
+      "id": "q-mto3AA_94-15",
+      "testId": "mto3AA_94",
+      "questionNumber": 15,
+      "text": "Regarding the structural organization of kidney nephrons, the macula densa cells of the distal tubule are in close proximity of the following blood vessels associated with the same nephron: (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "Vasa recta" },
+        { "letter": "b", "text": "Glomerular capillaries" },
+        { "letter": "c", "text": "Afferent arteriole" },
+        { "letter": "d", "text": "Peritubular capillaries" },
+        { "letter": "e", "text": "Efferent arteriole" }
+      ],
+      "correctAnswers": ["c"],
+      "topics": [45],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Macula densa contacts afferent arteriole in JGA - Topic 45: Renal blood flow, glomerular filtration"
+      }
+    },
+    {
+      "id": "q-mto3AA_94-18",
+      "testId": "mto3AA_94",
+      "questionNumber": 18,
+      "text": "Vasodilation can be induced in the skeletal muscle arterioles by the activation of: (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "alpha-1 adrenergic receptors" },
+        { "letter": "b", "text": "beta-1 adrenergic receptors" },
+        { "letter": "c", "text": "beta-2 adrenergic receptors" },
+        { "letter": "d", "text": "nicotinic cholinergic receptors" },
+        { "letter": "e", "text": "muscarinic cholinergic receptors" }
+      ],
+      "correctAnswers": ["c", "e"],
+      "topics": [41],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Beta-2 and muscarinic receptors cause vasodilation - Topic 41: Microcirculation"
+      }
+    },
+    {
+      "id": "q-mto3AA_94-21",
+      "testId": "mto3AA_94",
+      "questionNumber": 21,
+      "text": "Which of the following segments of the circulatory system has the highest velocity of blood flow? (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "arteries" },
+        { "letter": "b", "text": "venules" },
+        { "letter": "c", "text": "aorta" },
+        { "letter": "d", "text": "veins" },
+        { "letter": "e", "text": "capillaries" }
+      ],
+      "correctAnswers": ["c"],
+      "topics": [33],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Velocity = Flow/Area; aorta has smallest cross-section - Topic 33: General circulatory hemodynamics"
+      }
+    },
+    {
+      "id": "q-mto3AA_94-23",
+      "testId": "mto3AA_94",
+      "questionNumber": 23,
+      "text": "What percentage of plasma glucose entering the glomerular capillary is filtered in the glomeruli? (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "glucose is not filtered" },
+        { "letter": "b", "text": "20 %" },
+        { "letter": "c", "text": "50 %" },
+        { "letter": "d", "text": "100 %" }
+      ],
+      "correctAnswers": ["b"],
+      "topics": [45],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Filtration fraction ~20% (GFR/RPF) - Topic 45: Renal blood flow, glomerular filtration"
+      }
+    },
+    {
+      "id": "q-mto3AA_94-24",
+      "testId": "mto3AA_94",
+      "questionNumber": 24,
+      "text": "The normal value of the pulmonary compliance is: (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "10-20 L/cmH2O" },
+        { "letter": "b", "text": "0.04-0.08 L/cmH2O" },
+        { "letter": "c", "text": "0.8-1.6 L/cmH2O" },
+        { "letter": "d", "text": "0.15-0.25 L/cmH2O" },
+        { "letter": "e", "text": "3-6 L/cmH2O" }
+      ],
+      "correctAnswers": ["d"],
+      "topics": [30],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Lung compliance ~0.2 L/cmH2O - Topic 30: Airway resistance, lung compliance"
+      }
+    },
+    {
+      "id": "q-mto3AA_94-26",
+      "testId": "mto3AA_94",
+      "questionNumber": 26,
+      "text": "Beta-2 adrenergic receptors may mediate: (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "anticipatory vasodilation in skeletal muscles prior to exercise" },
+        { "letter": "b", "text": "contraction of arterioles in response to adrenaline" },
+        { "letter": "c", "text": "dilation of arterioles in response to adrenaline" },
+        { "letter": "d", "text": "dilation of arterioles in response to ANH" },
+        { "letter": "e", "text": "contraction of arterioles in response to angiotensin" }
+      ],
+      "correctAnswers": ["c"],
+      "topics": [41],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Beta-2 mediates adrenaline-induced vasodilation - Topic 41: Microcirculation"
+      }
+    },
+    {
+      "id": "q-mto3AA_94-27",
+      "testId": "mto3AA_94",
+      "questionNumber": 27,
+      "text": "Which tubular segment expresses the Na+-K+-2Cl- cotransporter? (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "thick segment of the loop of Henle" },
+        { "letter": "b", "text": "collecting duct" },
+        { "letter": "c", "text": "proximal tubule" },
+        { "letter": "d", "text": "distal tubule" }
+      ],
+      "correctAnswers": ["a"],
+      "topics": [46],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "NKCC2 in thick ascending limb - Topic 46: Tubular reabsorption"
+      }
+    },
+    {
+      "id": "q-mto3AA_94-30",
+      "testId": "mto3AA_94",
+      "questionNumber": 30,
+      "text": "What would tend to increase a person's pulse pressure? (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "hemorrhage" },
+        { "letter": "b", "text": "increased stroke volume" },
+        { "letter": "c", "text": "decreased venous return" },
+        { "letter": "d", "text": "increased arterial compliance" }
+      ],
+      "correctAnswers": ["b"],
+      "topics": [34],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "PP = SV/Compliance; increased SV increases PP - Topic 34: Arterial blood pressure"
+      }
+    },
+    {
+      "id": "q-mto3AA_94-34",
+      "testId": "mto3AA_94",
+      "questionNumber": 34,
+      "text": "The autonomic nervous system can reduce total peripheral resistance by: (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "increasing the parasympathetic vasomotor tone" },
+        { "letter": "b", "text": "decreasing the parasympathetic vasomotor tone" },
+        { "letter": "c", "text": "increasing the sympathetic vasomotor tone" },
+        { "letter": "d", "text": "decreasing the sympathetic vasomotor tone" }
+      ],
+      "correctAnswers": ["d"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Decreased sympathetic tone causes vasodilation - Topic 43: Short-term BP regulation"
+      }
+    },
+    {
+      "id": "q-mto3AA_94-35",
+      "testId": "mto3AA_94",
+      "questionNumber": 35,
+      "text": "What is the clearance of substance X, if X is freely filtrated, there is no reabsorption and in addition to the filtrated amount, the same amount is secreted by the tubular system? (GFR= 120 ml/min) (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "60 ml/min" },
+        { "letter": "b", "text": "120 ml/min" },
+        { "letter": "c", "text": "30 ml/min" },
+        { "letter": "d", "text": "240 ml/min" }
+      ],
+      "correctAnswers": ["d"],
+      "topics": [47],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Clearance = GFR + secretion = 120 + 120 = 240 ml/min - Topic 47: Tubular secretion"
+      }
+    },
+    {
+      "id": "q-mto3AA_94-37",
+      "testId": "mto3AA_94",
+      "questionNumber": 37,
+      "text": "Development of edema is NOT promoted by: (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "decreased plasma colloid osmotic pressure" },
+        { "letter": "b", "text": "increased venous pressure" },
+        { "letter": "c", "text": "increased capillary permeability" },
+        { "letter": "d", "text": "hyperglycemia (>10 mmol/L plasma glucose level level)" },
+        { "letter": "e", "text": "hypoalbuminemia (lower than normal plasma albumin concentration)" }
+      ],
+      "correctAnswers": ["d"],
+      "topics": [39],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Starling forces and edema formation - Topic 39: Capillaries, transcapillary exchange"
+      }
+    },
+    {
+      "id": "q-mto3AA_94-43",
+      "testId": "mto3AA_94",
+      "questionNumber": 43,
+      "text": "The forces included in the Starling-equilibrium act as follows: (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "interstitial hydrostatic pressure promotes filtration or absorption depending whether it is positive or negative" },
+        { "letter": "b", "text": "intracapillary hydrostatic pressure promotes filtration" },
+        { "letter": "c", "text": "intracapillary colloid osmotic pressure promotes filtration" },
+        { "letter": "d", "text": "interstitial colloid osmotic pressure promotes absorption" }
+      ],
+      "correctAnswers": ["a", "b"],
+      "topics": [39],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Starling forces: Pc promotes filtration, Pi varies - Topic 39: Capillaries, transcapillary exchange"
+      }
+    },
+    {
+      "id": "q-mto3AA_94-44",
+      "testId": "mto3AA_94",
+      "questionNumber": 44,
+      "text": "It is characteristic of renal glucose handling under normal, physiological conditions that: (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "the clearance for glucose is 120 ml/min" },
+        { "letter": "b", "text": "the clearance for glucose is zero" },
+        { "letter": "c", "text": "glucose is secreted in the proximal tubules" },
+        { "letter": "d", "text": "glucose transport is linked to protein reabsorption" },
+        { "letter": "e", "text": "glucose is secreted in the distal tubules" },
+        { "letter": "f", "text": "glucose is freely filtered in the glomeruli" }
+      ],
+      "correctAnswers": ["b", "f"],
+      "topics": [46],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Glucose freely filtered, completely reabsorbed (clearance=0) - Topic 46: Tubular reabsorption"
+      }
+    },
+    {
+      "id": "q-mto3AA_94-46",
+      "testId": "mto3AA_94",
+      "questionNumber": 46,
+      "text": "At which plasma glucose concentration does the glucose appear in the urine (renal threshold)? (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "11-13 mmol/L" },
+        { "letter": "b", "text": "there is never glucose in the urine" },
+        { "letter": "c", "text": "22-25 mmol/L" },
+        { "letter": "d", "text": "5-6 mmol/L" }
+      ],
+      "correctAnswers": ["a"],
+      "topics": [46],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Renal glucose threshold ~10-11 mmol/L - Topic 46: Tubular reabsorption"
+      }
+    }
+  ]
+}

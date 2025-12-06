@@ -1,0 +1,461 @@
+{
+  "testId": "36830213",
+  "metadata": {
+    "sources": ["mto3,AA.pdf - Pages 91-93 (exam pages 2-4)"],
+    "importedAt": "2025-12-04T00:00:00.000Z",
+    "totalQuestions": 22,
+    "topics": [25, 26, 37, 39, 40, 41, 43, 45, 46, 47, 48, 51],
+    "mcqs": ["mcq-3"]
+  },
+  "questions": [
+    {
+      "id": "q-36830213-19",
+      "testId": "36830213",
+      "questionNumber": 19,
+      "text": "Determine the cardiac output! Oxygen consumption: 2000mL/min, arterial oxygen concentration: 20mL/100mL, venous oxygen concentration: 10 mL/100mL (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "10 L/min" },
+        { "letter": "b", "text": "5 L/min" },
+        { "letter": "c", "text": "25 L/min" },
+        { "letter": "d", "text": "20 L/min" }
+      ],
+      "correctAnswers": ["d"],
+      "topics": [37],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Fick principle: CO = VO2/(CaO2-CvO2) = 2000/(200-100) = 20 L/min - Topic 37: Cardiac output"
+      }
+    },
+    {
+      "id": "q-36830213-20",
+      "testId": "36830213",
+      "questionNumber": 20,
+      "text": "Renal blood flow is about 20% of the resting cardiac output. Which of the following statements is true concerning renal vascular resistance? (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "renal vascular resistance does not contribute to total peripheral resistance" },
+        { "letter": "b", "text": "renal vascular resistance is about 20% of total peripheral resistance" },
+        { "letter": "c", "text": "renal vascular resistance is about 80% of total peripheral resistance" },
+        { "letter": "d", "text": "renal vascular resistance is about 500% of total peripheral resistance" }
+      ],
+      "correctAnswers": ["b"],
+      "topics": [45],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.9,
+        "matchReason": "Renal blood flow and vascular resistance - Topic 45: Renal blood flow, glomerular filtration"
+      }
+    },
+    {
+      "id": "q-36830213-21",
+      "testId": "36830213",
+      "questionNumber": 21,
+      "text": "The Fahraeus-Lindquist effect: (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "blood viscosity decreases with increasing shear rate" },
+        { "letter": "b", "text": "blood viscosity decreases in small tubes corresponding with vessel sizes in the microcirculation" },
+        { "letter": "c", "text": "blood viscosity decreases with decreasing hematocrit" },
+        { "letter": "d", "text": "blood viscosity decreases with increasing body temperature" }
+      ],
+      "correctAnswers": ["b"],
+      "topics": [41],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Fahraeus-Lindquist effect describes decreased apparent viscosity in vessels <300um - Topic 41: Microcirculation"
+      }
+    },
+    {
+      "id": "q-36830213-22",
+      "testId": "36830213",
+      "questionNumber": 22,
+      "text": "The venous pulse: (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "is a damped arterial pulse" },
+        { "letter": "b", "text": "is a result of pressure changes in the heart propagated to neighboring veins" },
+        { "letter": "c", "text": "is diminished in cardiac failure" },
+        { "letter": "d", "text": "is produced by rhythmic contractions of the smooth muscles of the veins that is the main force helping the cardiac filling" }
+      ],
+      "correctAnswers": ["b"],
+      "topics": [40],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.9,
+        "matchReason": "Jugular venous pulse reflects right atrial pressure changes - Topic 40: Venous system"
+      }
+    },
+    {
+      "id": "q-36830213-23",
+      "testId": "36830213",
+      "questionNumber": 23,
+      "text": "Blood flow in the terminal vasculature of systemic circulation: (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "increases with local hypoxia" },
+        { "letter": "b", "text": "increases with increasing local pH" },
+        { "letter": "c", "text": "the diameter of the capillaries is importantly modified by nervous stimulation" },
+        { "letter": "d", "text": "increases with increasing local CO2 concentration" }
+      ],
+      "correctAnswers": ["a", "d"],
+      "topics": [41],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Local metabolic autoregulation (hypoxia, CO2) - Topic 41: Microcirculation"
+      }
+    },
+    {
+      "id": "q-36830213-24",
+      "testId": "36830213",
+      "questionNumber": 24,
+      "text": "Mediators which cause vasodilatation: (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "CGRP" },
+        { "letter": "b", "text": "TXA2" },
+        { "letter": "c", "text": "5-HT" },
+        { "letter": "d", "text": "Endothelin-1" },
+        { "letter": "e", "text": "VIP" }
+      ],
+      "correctAnswers": ["a", "e"],
+      "topics": [41],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.9,
+        "matchReason": "CGRP and VIP are vasodilators; TXA2, 5-HT, ET-1 are vasoconstrictors - Topic 41: Microcirculation"
+      }
+    },
+    {
+      "id": "q-36830213-25",
+      "testId": "36830213",
+      "questionNumber": 25,
+      "text": "Net capillary filtration increases, if: (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "blood hemoglobin concentration decreases" },
+        { "letter": "b", "text": "plasma albumin concentration selectively increases" },
+        { "letter": "c", "text": "microvascular permeability increases" },
+        { "letter": "d", "text": "plasma protein concentration decreases" },
+        { "letter": "e", "text": "the activity of muscle pump increases" }
+      ],
+      "correctAnswers": ["c", "d"],
+      "topics": [39],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Starling equation: increased Kf and decreased oncotic pressure increase filtration - Topic 39: Capillaries, transcapillary exchange"
+      }
+    },
+    {
+      "id": "q-36830213-26",
+      "testId": "36830213",
+      "questionNumber": 26,
+      "text": "The most effective factor enhancing venous return is (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "exspiration" },
+        { "letter": "b", "text": "muscle pump" },
+        { "letter": "c", "text": "positive intraabdominal pressure" },
+        { "letter": "d", "text": "negative hydrostatic pressure in the veins above the heart" }
+      ],
+      "correctAnswers": ["b"],
+      "topics": [40],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.9,
+        "matchReason": "Skeletal muscle pump is the most powerful mechanism for venous return - Topic 40: Venous system"
+      }
+    },
+    {
+      "id": "q-36830213-28",
+      "testId": "36830213",
+      "questionNumber": 28,
+      "text": "Local hypoxia elicits vasoconstriction in the resistance vessels of (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "the cerebral circulation" },
+        { "letter": "b", "text": "the skeletal muscle circulation" },
+        { "letter": "c", "text": "the pulmonary circulation" },
+        { "letter": "d", "text": "the coronary circulation" }
+      ],
+      "correctAnswers": ["c"],
+      "topics": [26],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Hypoxic pulmonary vasoconstriction (HPV) is unique to lungs - Topic 26: Pulmonary circulation, gas exchange"
+      }
+    },
+    {
+      "id": "q-36830213-29",
+      "testId": "36830213",
+      "questionNumber": 29,
+      "text": "The baroreceptors: (M)",
+      "correctAnswerCount": 3,
+      "options": [
+        { "letter": "a", "text": "when activated, they stimulate the bulbar cardioinhibitory area" },
+        { "letter": "b", "text": "are stretch receptors" },
+        { "letter": "c", "text": "are situated in the carotid and aortic bodies" },
+        { "letter": "d", "text": "are innervated with afferent fibers projecting to the nucleus of the solitary tract" },
+        { "letter": "e", "text": "are found exclusively in the high pressure-part of the circulatory system" }
+      ],
+      "correctAnswers": ["a", "b", "d"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Baroreceptors are mechanoreceptors projecting to NTS - Topic 43: Short-term BP regulation"
+      }
+    },
+    {
+      "id": "q-36830213-30",
+      "testId": "36830213",
+      "questionNumber": 30,
+      "text": "The intrapleural pressure rises above the atmospheric pressure: (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "during normal inspiration" },
+        { "letter": "b", "text": "it is always higher than the atmospheric pressure" },
+        { "letter": "c", "text": "during normal expiration" },
+        { "letter": "d", "text": "during the Valsalva's maneuver" },
+        { "letter": "e", "text": "during the Mueller's maneuver" }
+      ],
+      "correctAnswers": ["d"],
+      "topics": [25],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Valsalva maneuver increases intrathoracic pressure above atmospheric - Topic 25: Mechanics of breathing"
+      }
+    },
+    {
+      "id": "q-36830213-34",
+      "testId": "36830213",
+      "questionNumber": 34,
+      "text": "Which of the following cells belong to JGA? (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "the podocytes of the Bowman capsule" },
+        { "letter": "b", "text": "intraglomerular mesangial cells" },
+        { "letter": "c", "text": "the external epithelial cells of the Bowman capsule" },
+        { "letter": "d", "text": "cells of the macula densa" },
+        { "letter": "e", "text": "smooth muscle cells of the efferent arteriole" },
+        { "letter": "f", "text": "(myoepithelial) granular cells of the afferent arteriole" }
+      ],
+      "correctAnswers": ["d", "f"],
+      "topics": [45],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "JGA: macula densa + juxtaglomerular cells of afferent arteriole - Topic 45: Renal blood flow, glomerular filtration"
+      }
+    },
+    {
+      "id": "q-36830213-35",
+      "testId": "36830213",
+      "questionNumber": 35,
+      "text": "The patient produces 1 ml urine each minute. The plasma osmotic concentration is 300 milliosmol/l, the urine osmotic concentrations is 900 milliosmol/L. Which of the following statements are true? (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "the patient's free water clearance is 0 ml/min" },
+        { "letter": "b", "text": "the patient's free water clearance is 3 ml/min" },
+        { "letter": "c", "text": "the patient's free water clearance is -2 ml/min" },
+        { "letter": "d", "text": "the patient's osmotic clearance is 3 ml/min" },
+        { "letter": "e", "text": "the patient's osmotic clearance is 0.33 ml/min" }
+      ],
+      "correctAnswers": ["c", "d"],
+      "topics": [48],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Cosm = (Uosm x V)/Posm = 3 ml/min; CH2O = V - Cosm = -2 ml/min - Topic 48: Renal concentration/dilution"
+      }
+    },
+    {
+      "id": "q-36830213-36",
+      "testId": "36830213",
+      "questionNumber": 36,
+      "text": "The correct definition of GFR is as follows (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "the quantity of blood filtered through the glomerular capillaries each minute in all nephrons of both kidneys" },
+        { "letter": "b", "text": "the quantity of glomerular filtrate formed each minute in all nephrons of both kidneys" },
+        { "letter": "c", "text": "the quantity of blood filtered in a nephron in a minute" },
+        { "letter": "d", "text": "the fraction of the blood flow that becomes filtrate each min" }
+      ],
+      "correctAnswers": ["b"],
+      "topics": [45],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "GFR is volume of plasma filtrate per unit time - Topic 45: Renal blood flow, glomerular filtration"
+      }
+    },
+    {
+      "id": "q-36830213-37",
+      "testId": "36830213",
+      "questionNumber": 37,
+      "text": "The effect of ADH is (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "increase the permeability of the peritubular capillaries" },
+        { "letter": "b", "text": "regulate the filtration slits" },
+        { "letter": "c", "text": "increase the water permeability of the proximal tubules" },
+        { "letter": "d", "text": "increase the water permeability of the collecting tubules" },
+        { "letter": "e", "text": "increase the capillary permeability in the glomerulus" }
+      ],
+      "correctAnswers": ["d"],
+      "topics": [48],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "ADH inserts AQP2 channels in collecting duct - Topic 48: Renal concentration/dilution"
+      }
+    },
+    {
+      "id": "q-36830213-38",
+      "testId": "36830213",
+      "questionNumber": 38,
+      "text": "What happens to K+ in the kidney? (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "filtration, secretion and reabsorption" },
+        { "letter": "b", "text": "filtration only" },
+        { "letter": "c", "text": "filtration and reabsorption" },
+        { "letter": "d", "text": "filtration and secretion" }
+      ],
+      "correctAnswers": ["a"],
+      "topics": [47],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "K+ is filtered, reabsorbed in PCT/loop, secreted in CD - Topic 47: Tubular secretion"
+      }
+    },
+    {
+      "id": "q-36830213-39",
+      "testId": "36830213",
+      "questionNumber": 39,
+      "text": "The plasma glucose concentration when glucose first appears in the urine is (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "between 15 and 20 mmol/L" },
+        { "letter": "b", "text": "above 20-22 mmol/L" },
+        { "letter": "c", "text": "between 10 and 12 mmol/L" },
+        { "letter": "d", "text": "between 6 and 8 mmol/L" }
+      ],
+      "correctAnswers": ["c"],
+      "topics": [46],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Renal glucose threshold ~10-11 mmol/L when SGLT2 saturates - Topic 46: Tubular reabsorption"
+      }
+    },
+    {
+      "id": "q-36830213-40",
+      "testId": "36830213",
+      "questionNumber": 40,
+      "text": "The preganglionic neuronal cell bodies controlling the detrusor muscle of the bladder are located in the (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "lumbar spinal cord" },
+        { "letter": "b", "text": "hypothalamus" },
+        { "letter": "c", "text": "medulla oblongata" },
+        { "letter": "d", "text": "sacral spinal cord" }
+      ],
+      "correctAnswers": ["d"],
+      "topics": [],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "needs-review",
+        "matchConfidence": 0.5,
+        "matchReason": "Bladder physiology not in implemented topics. PSNS preganglionic neurons S2-S4."
+      }
+    },
+    {
+      "id": "q-36830213-41",
+      "testId": "36830213",
+      "questionNumber": 41,
+      "text": "The intercalated cells in the collecting duct of the kidneys (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "determine the final pH of the urine" },
+        { "letter": "b", "text": "are supporting cells in between the principal cells" },
+        { "letter": "c", "text": "are important for the reabsorption of water" },
+        { "letter": "d", "text": "are important for the reabsorption of urea" },
+        { "letter": "e", "text": "are involved in aldosterone-sensitive Na-reabsorption" }
+      ],
+      "correctAnswers": ["a"],
+      "topics": [51],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Type A/B intercalated cells regulate final urine pH - Topic 51: Acid-base balance"
+      }
+    },
+    {
+      "id": "q-36830213-49",
+      "testId": "36830213",
+      "questionNumber": 49,
+      "text": "The method to determine basal metabolic rate by measuring oxygen consumption is called: (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "spirometry" },
+        { "letter": "b", "text": "oxymetry" },
+        { "letter": "c", "text": "indirect calorimetry" },
+        { "letter": "d", "text": "whole-body plethysmograph" }
+      ],
+      "correctAnswers": ["c"],
+      "topics": [],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "needs-review",
+        "matchConfidence": 0.5,
+        "matchReason": "Metabolism/BMR not in implemented topics. Indirect calorimetry measures O2 consumption."
+      }
+    }
+  ]
+}

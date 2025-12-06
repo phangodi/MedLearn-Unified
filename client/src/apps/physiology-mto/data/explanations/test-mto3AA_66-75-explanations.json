@@ -1,0 +1,413 @@
+{
+  "explanations": [
+    {
+      "questionId": "q-mto3AA_66-75-15",
+      "correctLetters": ["b", "e"],
+      "summary": "Skeletal muscle vasodilation during exercise involves local metabolites (K+, adenosine) and sympathetic cholinergic vasodilator fibers.",
+      "whyCorrect": {
+        "b": "During exercise, active muscle releases K+ and adenosine as metabolic byproducts. These act locally to cause vasodilation, matching blood flow to metabolic demand (functional hyperemia).",
+        "e": "Sympathetic cholinergic vasodilator fibers innervate skeletal muscle arterioles in some species (including humans). They release acetylcholine, causing vasodilation in anticipation of and during exercise."
+      },
+      "whyIncorrect": {
+        "a": "Angiotensin II is a vasoconstrictor that would decrease muscle blood flow, not increase it during exercise.",
+        "c": "While prostaglandins can cause vasodilation, they are not considered a primary mechanism for exercise-induced muscle hyperemia.",
+        "d": "Beta-1 receptors are primarily cardiac (increasing HR and contractility); they do not mediate skeletal muscle vasodilation.",
+        "f": "Parasympathetic vasodilator neurons do not significantly innervate skeletal muscle vasculature. The parasympathetic system primarily affects specific organs (heart, GI tract, etc.)."
+      },
+      "topicReference": "Topic 41: The microcirculation",
+      "sourceTopics": [41],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_66-75-18",
+      "correctLetters": ["b", "c"],
+      "summary": "Increased cAMP in vascular smooth muscle causes relaxation (vasodilation), and beta-2 receptor activation increases cAMP via Gs-adenylyl cyclase.",
+      "whyCorrect": {
+        "b": "Increased intracellular cAMP in vascular smooth muscle activates protein kinase A, which phosphorylates proteins that promote smooth muscle relaxation, causing vasodilation.",
+        "c": "Beta-2 adrenergic receptors are coupled to Gs proteins. When activated, they stimulate adenylyl cyclase, increasing cAMP production in smooth muscle cells."
+      },
+      "whyIncorrect": {
+        "a": "Increased cAMP causes vasodilation, not vasoconstriction. Vasoconstriction is mediated by increased intracellular calcium, not cAMP.",
+        "d": "Alpha-1 receptors are coupled to Gq proteins and phospholipase C, increasing intracellular calcium and causing vasoconstriction. They do not increase cAMP."
+      },
+      "topicReference": "Topic 41: The microcirculation",
+      "sourceTopics": [41],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_66-75-20",
+      "correctLetters": ["a", "d", "g"],
+      "summary": "Sympathetic activation causes muscle vasodilation (via cholinergic fibers), venoconstriction (alpha receptors), and vasodilation through cholinergic neurons.",
+      "whyCorrect": {
+        "a": "Working muscles receive vasodilation during sympathetic activation through beta-2 receptors (circulating adrenaline) and sympathetic cholinergic fibers, despite overall vasoconstriction elsewhere.",
+        "d": "Veins have alpha-adrenergic receptors. Sympathetic activation causes venoconstriction, reducing venous capacitance and increasing venous return.",
+        "g": "Sympathetic cholinergic vasodilator fibers (releasing ACh) innervate skeletal muscle arterioles and cause vasodilation during the alerting response and exercise."
+      },
+      "whyIncorrect": {
+        "b": "Pial (cerebral) arteries are minimally affected by sympathetic innervation. Cerebral blood flow is primarily regulated by local metabolic factors (CO2, pH).",
+        "c": "Penile erection requires parasympathetic activation (vasodilation via NO). Sympathetic activation causes vasoconstriction and detumescence.",
+        "e": "Sympathetic activation causes bronchodilation (beta-2 receptors), not bronchoconstriction. Bronchoconstriction is parasympathetic (muscarinic).",
+        "f": "Blood vessels have minimal parasympathetic innervation except in specific areas (e.g., genitals, salivary glands). There's no widespread sympathetic inhibition of parasympathetic vascular innervation."
+      },
+      "topicReference": "Topic 43: Short-term blood pressure regulation",
+      "sourceTopics": [43],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_66-75-23",
+      "correctLetters": ["c", "d"],
+      "summary": "MAP equals perfusion pressure for organs. In standing position, arterial pressure in the foot increases by ~80 mmHg due to hydrostatic column.",
+      "whyCorrect": {
+        "c": "Mean arterial pressure (MAP) is equivalent to perfusion pressure - the pressure difference driving blood flow through organ vascular beds (MAP minus venous pressure).",
+        "d": "When standing, a hydrostatic column of blood (~80 mmHg for foot level) adds to arterial pressure. MAP in foot increases from ~100 mmHg (supine) to ~180 mmHg (standing)."
+      },
+      "whyIncorrect": {
+        "a": "MAP is DIRECTLY proportional to cardiac output and peripheral resistance (MAP = CO × TPR), not indirectly proportional.",
+        "b": "MAP ≈ diastolic pressure + 1/3 pulse pressure, NOT systolic + 1/3 PP. This option has the formula inverted."
+      },
+      "topicReference": "Topic 34: Arterial blood pressure",
+      "sourceTopics": [34],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_66-75-24",
+      "correctLetters": ["c"],
+      "summary": "In humans, the skin (cutaneous venous plexuses) is the most important blood reservoir due to its large capacity and ability to mobilize blood via sympathetic vasoconstriction.",
+      "whyCorrect": {
+        "c": "The skin, particularly the extensive subpapillary venous plexuses, serves as the most important blood reservoir in humans. Sympathetic activation can shift significant blood volume from skin to central circulation."
+      },
+      "whyIncorrect": {
+        "a": "The spleen is an important blood reservoir in some animals (dogs, horses) but has minimal reservoir function in humans due to its small size and limited contractile ability.",
+        "b": "The liver contains significant blood volume but is not as effective as skin in mobilizing blood to the central circulation.",
+        "d": "Bone marrow is not a significant blood reservoir.",
+        "e": "Skeletal muscle contains blood but does not function as a mobilizable reservoir like skin."
+      },
+      "topicReference": "Topic 40: The venous system",
+      "sourceTopics": [40],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_66-75-25",
+      "correctLetters": ["a", "f"],
+      "summary": "Capillary resistance is lower than arteriolar resistance due to parallel arrangement. In laminar flow, highest velocity is in the axial stream.",
+      "whyCorrect": {
+        "a": "Despite individual capillaries being narrow, the massive parallel arrangement of the capillary bed results in lower total resistance than the arteriolar bed, which is the major site of vascular resistance.",
+        "f": "In laminar flow, velocity follows a parabolic profile with highest velocity in the center (axial stream) and zero velocity at the vessel wall."
+      },
+      "whyIncorrect": {
+        "b": "The venous system, not the aorta, has the greatest compliance. Veins are highly distensible and can accommodate large volume changes.",
+        "c": "Velocity does not decrease continuously; it decreases from aorta to capillaries (minimum) then increases again in veins as cross-sectional area decreases.",
+        "d": "The venous system (not capillaries) contains the largest fraction of blood volume (~60-70%). Capillaries hold only about 5% of blood volume.",
+        "e": "High viscosity decreases (not increases) tendency to turbulent flow. Reynolds number = (velocity × diameter × density) / viscosity."
+      },
+      "topicReference": "Topic 33: General circulatory hemodynamics",
+      "sourceTopics": [33],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_66-75-28",
+      "correctLetters": ["c", "d"],
+      "summary": "The endothelium produces vasodilators including nitric oxide (NO) and prostacyclin (PGI2).",
+      "whyCorrect": {
+        "c": "Nitric oxide (NO) is synthesized by endothelial NO synthase (eNOS) and is a potent vasodilator that activates guanylyl cyclase in smooth muscle, increasing cGMP.",
+        "d": "Prostacyclin (PGI2) is produced by endothelial cyclooxygenase and causes vasodilation by increasing cAMP in vascular smooth muscle. It also inhibits platelet aggregation."
+      },
+      "whyIncorrect": {
+        "a": "Endothelin (ET-1) is produced by endothelium but is a potent vasoconstrictor, not a vasodilator.",
+        "b": "Angiotensin II is a powerful vasoconstrictor produced systemically (via ACE), not an endothelial vasodilator.",
+        "e": "Adrenaline is produced by the adrenal medulla, not by endothelium. It is not an endothelial product."
+      },
+      "topicReference": "Topic 41: The microcirculation",
+      "sourceTopics": [41],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_66-75-29",
+      "correctLetters": ["c"],
+      "summary": "Basal tone is the intrinsic vascular tone that remains after denervation, independent of neural input.",
+      "whyCorrect": {
+        "c": "Basal tone is the inherent tone of blood vessels that exists independent of neural input. It can be measured after complete denervation of vessels, as it depends on myogenic activity and endothelial factors."
+      },
+      "whyIncorrect": {
+        "a": "Basal tone is distinct from neurogenic tone. Neurogenic tone is maintained by sympathetic nerve activity; basal tone persists after denervation.",
+        "b": "Cerebral vessels do have basal tone. In fact, cerebral circulation is primarily regulated by basal/metabolic factors rather than neural control.",
+        "d": "Basal tone varies between different organs and vascular beds; it is not identical throughout the body."
+      },
+      "topicReference": "Topic 41: The microcirculation",
+      "sourceTopics": [41],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_66-75-30",
+      "correctLetters": ["a", "b", "c"],
+      "summary": "The arterial pressure pulse travels at ~5 m/sec, is produced by ventricular ejection, and is palpable at the wrist shortly after.",
+      "whyCorrect": {
+        "a": "The pressure pulse wave propagates at approximately 4-6 m/sec in the aorta, faster in peripheral arteries (~8-12 m/sec in smaller arteries).",
+        "b": "The pressure pulse is generated when the left ventricle ejects blood into the aorta, causing aortic wall distension that propagates as a pressure wave.",
+        "c": "The pulse is palpable at the radial artery (wrist) about 0.1-0.15 seconds after ventricular ejection, reflecting the pulse wave travel time."
+      },
+      "whyIncorrect": {
+        "d": "Pulse wave velocity (~5 m/sec) is much faster than arterial blood flow velocity (~0.3 m/sec average). They are fundamentally different phenomena."
+      },
+      "topicReference": "Topic 34: Arterial blood pressure",
+      "sourceTopics": [34],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_66-75-31",
+      "correctLetters": ["a"],
+      "summary": "The skeletal muscle pump is the most effective mechanism for enhancing venous return, especially from the lower extremities.",
+      "whyCorrect": {
+        "a": "The muscle pump (rhythmic skeletal muscle contraction compressing veins with competent valves) is the most powerful mechanism for promoting venous return, particularly important during exercise and upright posture."
+      },
+      "whyIncorrect": {
+        "b": "Inspiration enhances venous return by decreasing intrathoracic pressure, but is less effective than the muscle pump.",
+        "c": "Negative hydrostatic pressure above the heart assists venous return passively but is not the most effective factor.",
+        "d": "Positive intraabdominal pressure can actually impede venous return by compressing the IVC."
+      },
+      "topicReference": "Topic 40: The venous system",
+      "sourceTopics": [40],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_66-75-32",
+      "correctLetters": ["b", "c", "g"],
+      "summary": "TPR decreases when sympathetic tone is inhibited, baroreceptors are stimulated, or the depressor area is activated.",
+      "whyCorrect": {
+        "b": "Inhibition of sympathetic tone reduces vasoconstrictor output to arterioles, causing vasodilation and decreased TPR.",
+        "c": "Stimulation of carotid sinus baroreceptors (by increased BP) activates the depressor reflex, inhibiting sympathetic outflow and decreasing TPR.",
+        "g": "The depressor area (caudal ventrolateral medulla) inhibits the pressor area and sympathetic outflow, causing vasodilation and decreased TPR."
+      },
+      "whyIncorrect": {
+        "a": "Parasympathetic stimulation has minimal direct effect on most systemic blood vessels; it doesn't significantly reduce TPR.",
+        "d": "Chemoreceptor stimulation (by hypoxia/hypercapnia) generally activates the sympathetic system, increasing TPR.",
+        "e": "The axon reflex causes local vasodilation but doesn't significantly affect total peripheral resistance.",
+        "f": "Renin-angiotensin system activation produces angiotensin II, a powerful vasoconstrictor that increases TPR.",
+        "h": "Pressor area activation increases sympathetic outflow and TPR, not decreases it."
+      },
+      "topicReference": "Topic 43: Short-term blood pressure regulation",
+      "sourceTopics": [43],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_66-75-33",
+      "correctLetters": ["b", "d"],
+      "summary": "The Fahraeus-Lindquist effect shows viscosity decreases in small vessels. High viscosity decreases tendency to turbulent flow (lower Reynolds number).",
+      "whyCorrect": {
+        "b": "The Fahraeus-Lindquist effect describes the decrease in apparent blood viscosity in vessels smaller than ~300 micrometers due to axial streaming of RBCs and the cell-free plasma layer.",
+        "d": "High viscosity decreases the Reynolds number (Re = ρvd/η), reducing the tendency for turbulent flow. Viscosity is in the denominator."
+      },
+      "whyIncorrect": {
+        "a": "Hematocrit (RBC concentration) is the major determinant of blood viscosity, not plasma proteins. Plasma proteins contribute but are secondary.",
+        "c": "Viscosity decreases (not increases) at high flow velocities due to shear-thinning behavior of blood (non-Newtonian fluid).",
+        "e": "Shear stress = viscosity × shear rate. Shear stress increases (not decreases) with viscosity."
+      },
+      "topicReference": "Topics 33/41: Hemodynamics, Microcirculation",
+      "sourceTopics": [33, 41],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_66-75-34",
+      "correctLetters": ["c", "e"],
+      "summary": "Cerebral blood flow is primarily regulated by local metabolic factors: pCO2 and blood pH.",
+      "whyCorrect": {
+        "c": "pCO2 is the most potent regulator of cerebral blood flow. Hypercapnia causes cerebral vasodilation; hypocapnia causes vasoconstriction.",
+        "e": "Blood pH directly affects cerebral vascular tone. Acidosis causes vasodilation, alkalosis causes vasoconstriction. This is closely linked to CO2 effects."
+      },
+      "whyIncorrect": {
+        "a": "The Bezold-Jarisch reflex is a cardiac reflex causing bradycardia and hypotension; it does not specifically regulate cerebral circulation.",
+        "b": "Sympathetic tone has minimal effect on cerebral blood flow. Cerebral vessels are relatively insensitive to sympathetic innervation.",
+        "d": "The brain lacks significant vasodilator fiber innervation. Cerebral blood flow is controlled by local metabolic factors, not neural vasodilators."
+      },
+      "topicReference": "Topic 41: The microcirculation",
+      "sourceTopics": [41],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_66-75-35",
+      "correctLetters": ["c", "e"],
+      "summary": "Basal tone is most significant in brain and coronary vessels, where metabolic autoregulation dominates over neural control.",
+      "whyCorrect": {
+        "c": "Cerebral vessels have prominent basal tone and minimal sympathetic control. Blood flow is regulated primarily by metabolic factors acting on this basal tone.",
+        "e": "Coronary arteries have significant basal tone and are primarily regulated by metabolic factors (adenosine, hypoxia). Neural control is secondary."
+      },
+      "whyIncorrect": {
+        "a": "Skin blood flow is primarily controlled by sympathetic innervation (neurogenic tone) for thermoregulation, not basal tone.",
+        "b": "Renal blood flow involves both neurogenic tone and autoregulation mechanisms (myogenic, TGF), but neurogenic control is significant.",
+        "d": "Hepatic blood flow is influenced by splanchnic sympathetic innervation.",
+        "f": "Skeletal muscle has significant neurogenic tone (sympathetic) in addition to metabolic regulation during exercise."
+      },
+      "topicReference": "Topic 41: The microcirculation",
+      "sourceTopics": [41],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_66-75-36",
+      "correctLetters": ["b"],
+      "summary": "Basal tone is influenced by myogenic response (pressure-dependent) and endothelial factors (NO, endothelin), not by neural input.",
+      "whyCorrect": {
+        "b": "Basal vascular tone is maintained by two main factors: (1) myogenic response - smooth muscle contraction in response to stretch, and (2) endothelial factors - balance of NO (vasodilator) and endothelin (vasoconstrictor)."
+      },
+      "whyIncorrect": {
+        "a": "Continuous sympathetic discharge maintains neurogenic tone, not basal tone. Basal tone persists after denervation.",
+        "c": "TPR is determined by both basal tone AND neurogenic tone combined, not basal tone alone.",
+        "d": "Skin is primarily regulated by neurogenic (sympathetic) tone for thermoregulation, not strongly influenced by basal tone."
+      },
+      "topicReference": "Topic 41: The microcirculation",
+      "sourceTopics": [41],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_66-75-37",
+      "correctLetters": ["a", "b"],
+      "summary": "The pressor area provides tonic stimulation to heart and vessels. The depressor area acts on heart and inhibits the pressor area.",
+      "whyCorrect": {
+        "a": "The pressor area (rostral ventrolateral medulla, RVLM) provides continuous sympathetic tone to the heart (increasing HR, contractility) and blood vessels (maintaining vasoconstriction).",
+        "b": "The depressor area (caudal ventrolateral medulla, CVLM) has direct vagal connections to the heart (slowing HR) and inhibits the pressor area, reducing sympathetic outflow."
+      },
+      "whyIncorrect": {
+        "c": "The Bezold-Jarisch reflex involves ventricular chemoreceptors but causes bradycardia (not tachycardia), hypotension, and apnea.",
+        "d": "The Bainbridge reflex involves right atrial stretch receptors (not ventricular chemoreceptors) and causes tachycardia in response to increased venous return.",
+        "e": "Baroreceptor activity decreases (not increases) when blood pressure drops. Low BP means less stretch, less baroreceptor firing."
+      },
+      "topicReference": "Topic 43: Short-term blood pressure regulation",
+      "sourceTopics": [43],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_66-75-38",
+      "correctLetters": ["a", "d"],
+      "summary": "Baroreceptors inhibit sympathetic activity and stimulate depressor center; chemoreceptors activate sympathetic activity and stimulate pressor center.",
+      "whyCorrect": {
+        "a": "Baroreceptor activation (by high BP) inhibits sympathetic activity, causing vasodilation. Chemoreceptor activation (by hypoxia/hypercapnia) stimulates sympathetic activity, causing vasoconstriction.",
+        "d": "Baroreceptor activation stimulates the depressor center (CVLM), while chemoreceptor activation stimulates the pressor center (RVLM), producing opposite cardiovascular effects."
+      },
+      "whyIncorrect": {
+        "b": "This is reversed. Baroreceptors are active in the normal BP range; chemoreceptors become important during extreme hypotension (ischemic response) and hypoxia.",
+        "c": "Both carotid baroreceptors and chemoreceptors have glossopharyngeal nerve afferents. Aortic receptors use vagal afferents. The afferent pattern is not cleanly divided as stated."
+      },
+      "topicReference": "Topic 43: Short-term blood pressure regulation",
+      "sourceTopics": [43],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_66-75-39",
+      "correctLetters": ["c"],
+      "summary": "In carotid body glomus cells, O2-sensitive potassium channels maintain the resting membrane potential and close during hypoxia.",
+      "whyCorrect": {
+        "c": "Carotid body glomus cells contain O2-sensitive K+ channels (TASK channels and others) that maintain resting potential. Hypoxia closes these channels, causing depolarization and neurotransmitter release."
+      },
+      "whyIncorrect": {
+        "a": "During exercise, sympathetic activation increases HR and contractility, but TPR actually decreases in exercising muscle (metabolic vasodilation) while increasing elsewhere. The net effect on MAP depends on the balance.",
+        "b": "During exercise, TPR typically decreases overall (due to muscle vasodilation), while cardiac output increases greatly. This allows large increases in muscle blood flow.",
+        "d": "Medullary chemosensitive areas activate the pressor area (RVLM) in the medulla, not the depressor area, and not in the pons.",
+        "e": "Since one statement (c) is correct, 'none of them are correct' is wrong."
+      },
+      "topicReference": "Topic 43: Short-term blood pressure regulation",
+      "sourceTopics": [43],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_66-75-40",
+      "correctLetters": ["a", "c", "d", "e", "f"],
+      "summary": "Venous return is promoted by increased filling pressure, inspiration, lying position, alpha-receptor activation (venoconstriction), and head-standing (gravity).",
+      "whyCorrect": {
+        "a": "Increased mean systemic filling pressure (the pressure when flow is zero) increases the pressure gradient driving venous return.",
+        "c": "Inspiration decreases intrathoracic pressure, increasing the pressure gradient from peripheral veins to the right atrium.",
+        "d": "Lying position eliminates the gravitational column opposing venous return from lower extremities, improving venous return.",
+        "e": "Alpha-adrenergic receptor activation causes venoconstriction, decreasing venous capacitance and increasing central venous pressure.",
+        "f": "Head-standing uses gravity to assist venous return from the lower body (now above the heart) to the heart."
+      },
+      "whyIncorrect": {
+        "b": "Static work (isometric contraction) compresses veins continuously without the pumping action of rhythmic contraction. This can impede venous return by trapping blood in the muscle."
+      },
+      "topicReference": "Topic 40: The venous system",
+      "sourceTopics": [40],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_66-75-43",
+      "correctLetters": ["b"],
+      "summary": "PAH (para-aminohippuric acid) has the highest clearance because it is both filtered and actively secreted, approaching renal plasma flow.",
+      "whyCorrect": {
+        "b": "PAH is freely filtered and almost completely secreted by the proximal tubule. Its clearance (~625 mL/min) approximates renal plasma flow, the highest possible clearance."
+      },
+      "whyIncorrect": {
+        "a": "Glucose clearance is zero under normal conditions because all filtered glucose is reabsorbed.",
+        "c": "Inulin clearance equals GFR (~125 mL/min) - lower than PAH clearance because inulin is only filtered, not secreted.",
+        "d": "Potassium undergoes filtration, reabsorption, and secretion. Its clearance varies but is much less than PAH.",
+        "e": "Mannitol is filtered but not reabsorbed or secreted; its clearance approximates GFR, similar to inulin, less than PAH."
+      },
+      "topicReference": "Topic 47: Tubular secretion",
+      "sourceTopics": [47],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_66-75-44",
+      "correctLetters": ["d"],
+      "summary": "Clearance order: glucose (0, completely reabsorbed) < urea (partially reabsorbed) < inulin (GFR marker) < PAH (secreted, ~RPF).",
+      "whyCorrect": {
+        "d": "Correct order: C_glucose = 0 (complete reabsorption) < C_urea (~50-60 mL/min, partial reabsorption) < C_inulin = GFR (~125 mL/min) < C_PAH (~625 mL/min, filtered + secreted)."
+      },
+      "whyIncorrect": {
+        "a": "Incorrect order - PAH should have highest clearance, not between glucose and urea.",
+        "b": "Incorrect order - glucose should have lowest clearance (zero), not highest.",
+        "c": "Close but wrong - urea clearance is less than inulin, not greater (urea is partially reabsorbed).",
+        "e": "Incorrect order - glucose clearance is zero (lowest), and PAH is highest."
+      },
+      "topicReference": "Topics 45-47: Renal blood flow, reabsorption, secretion",
+      "sourceTopics": [45, 46, 47],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_66-75-45",
+      "correctLetters": ["c"],
+      "summary": "The thick ascending limb actively transports Na+ (via NKCC2) but is almost impermeable to water and urea.",
+      "whyCorrect": {
+        "c": "The thick ascending limb (TAL) has active Na+/K+/2Cl- cotransport (NKCC2) for significant sodium reabsorption. It is impermeable to both water and urea, which is essential for generating the medullary concentration gradient."
+      },
+      "whyIncorrect": {
+        "a": "About 65% of reabsorption occurs in the proximal tubule, not the loop of Henle. The loop reabsorbs about 25% of filtered Na+.",
+        "b": "Sodium moves DOWN its concentration gradient from tubular lumen into epithelial cells (apical entry), then is actively pumped OUT at the basolateral membrane against a gradient.",
+        "d": "Na+ transport in the distal tubule and collecting duct requires aldosterone (via ENaC), not ADH. ADH affects water permeability, not Na+ transport directly."
+      },
+      "topicReference": "Topic 46: Tubular reabsorption",
+      "sourceTopics": [46],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_66-75-46",
+      "correctLetters": ["a"],
+      "summary": "The active step in tubular Na+ reabsorption is the Na+-K+-ATPase on the basolateral membrane, pumping Na+ into the interstitium.",
+      "whyCorrect": {
+        "a": "The Na+-K+-ATPase on the basolateral membrane actively pumps Na+ from the epithelial cell into the interstitial space against its concentration gradient. This is the primary active transport step in Na+ reabsorption."
+      },
+      "whyIncorrect": {
+        "b": "Na+ enters the cell DOWN its concentration gradient (lumen → cell), not against it. The low intracellular Na+ is maintained by basolateral Na+-K+-ATPase.",
+        "c": "The tubular fluid is typically slightly positive relative to the peritubular fluid, not negatively charged in a way that drives Na+ movement.",
+        "d": "Na+-K+-ATPase is a pump, not a carrier protein. Carrier proteins for Na+ (cotransporters, exchangers) are on the apical membrane.",
+        "e": "There is no continuous Na+ gradient from filtrate to interstitium; Na+ must be pumped actively at the basolateral membrane.",
+        "f": "Hydrostatic pressure differences do not drive Na+ reabsorption; it's an active transport process."
+      },
+      "topicReference": "Topic 46: Tubular reabsorption",
+      "sourceTopics": [46],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_66-75-47",
+      "correctLetters": ["c"],
+      "summary": "Na+ enters tubular epithelial cells DOWN (not against) the electrochemical gradient. The gradient is maintained by basolateral Na+-K+-ATPase.",
+      "whyCorrect": {
+        "c": "This statement is NOT correct. Na+ uptake from the tubular lumen into the epithelial cell occurs DOWN the electrochemical gradient (favorable), not against it. The Na+-K+-ATPase maintains low intracellular Na+, creating this favorable gradient."
+      },
+      "whyIncorrect": {
+        "a": "This IS correct - the basolateral Na+-K+-ATPase is the active component, pumping Na+ out of the cell.",
+        "b": "This IS correct - there is a concentration gradient favoring Na+ entry from lumen into the cell.",
+        "d": "This IS correct - Na+ transport from lumen uses carrier proteins (SGLT, NHE, NCC, NKCC, ENaC) on the apical membrane."
+      },
+      "topicReference": "Topic 46: Tubular reabsorption",
+      "sourceTopics": [46],
+      "needsReview": false
+    }
+  ]
+}

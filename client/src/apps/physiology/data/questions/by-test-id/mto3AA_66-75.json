@@ -1,0 +1,565 @@
+{
+  "testId": "mto3AA_66-75",
+  "metadata": {
+    "sources": ["mto3,AA.pdf - Pages 66-75"],
+    "importedAt": "2025-12-04T00:00:00.000Z",
+    "totalQuestions": 24,
+    "topics": [33, 34, 40, 41, 43, 45, 46, 47],
+    "mcqs": ["mcq-3"]
+  },
+  "questions": [
+    {
+      "id": "q-mto3AA_66-75-15",
+      "testId": "mto3AA_66-75",
+      "questionNumber": 15,
+      "text": "The mechanisms involved in increased skeletal muscle blood flow during exercise may include (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "increased angiotensin secretion" },
+        { "letter": "b", "text": "local release of K+ and adenosine" },
+        { "letter": "c", "text": "local production of prostaglandins" },
+        { "letter": "d", "text": "beta-1 receptor activation" },
+        { "letter": "e", "text": "activation of cholinergic sympathetic fibers" },
+        { "letter": "f", "text": "activation of parasympathetic vasodilator neurons" }
+      ],
+      "correctAnswers": ["b", "e"],
+      "topics": [41],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Skeletal muscle blood flow regulation - Topic 41: Microcirculation"
+      }
+    },
+    {
+      "id": "q-mto3AA_66-75-18",
+      "testId": "mto3AA_66-75",
+      "questionNumber": 18,
+      "text": "Increases the level of cAMP in intracellular space of smooth muscle (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "leads to vasoconstriction" },
+        { "letter": "b", "text": "leads to vasodilation" },
+        { "letter": "c", "text": "results from excitation of beta-2 receptor" },
+        { "letter": "d", "text": "results from excitation of alpha-1 receptor" }
+      ],
+      "correctAnswers": ["b", "c"],
+      "topics": [41],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "cAMP/beta-2 receptor vasodilation - Topic 41: Microcirculation"
+      }
+    },
+    {
+      "id": "q-mto3AA_66-75-20",
+      "testId": "mto3AA_66-75",
+      "questionNumber": 20,
+      "text": "Sympathetic activation elicits (M)",
+      "correctAnswerCount": 3,
+      "options": [
+        { "letter": "a", "text": "vasodilatation in the working muscles" },
+        { "letter": "b", "text": "vasodilatation of the pial arteries" },
+        { "letter": "c", "text": "vasodilatation of the arteries of the penis" },
+        { "letter": "d", "text": "contraction of the veins" },
+        { "letter": "e", "text": "contraction of the bronchial muscles" },
+        { "letter": "f", "text": "inhibition of parasympathetic innervations of blood vessels" },
+        { "letter": "g", "text": "vasodilatation through the cholinergic neuron" }
+      ],
+      "correctAnswers": ["a", "d", "g"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Sympathetic effects on vasculature - Topic 43: Short-term BP regulation"
+      }
+    },
+    {
+      "id": "q-mto3AA_66-75-23",
+      "testId": "mto3AA_66-75",
+      "questionNumber": 23,
+      "text": "The mean arterial pressure (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "is indirectly proportional to cardiac output and peripheral resistance" },
+        { "letter": "b", "text": "is approximately equal to the systolic pressure plus one-third of the pulse pressure" },
+        { "letter": "c", "text": "is same as perfusion pressure" },
+        { "letter": "d", "text": "in a large artery in the foot will change from about 100 mmHg to about 180 mmHg when a recumbent person stands up" }
+      ],
+      "correctAnswers": ["c", "d"],
+      "topics": [34],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Mean arterial pressure concepts - Topic 34: Arterial blood pressure"
+      }
+    },
+    {
+      "id": "q-mto3AA_66-75-24",
+      "testId": "mto3AA_66-75",
+      "questionNumber": 24,
+      "text": "The MOST important blood reservoir in man is (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "spleen" },
+        { "letter": "b", "text": "liver" },
+        { "letter": "c", "text": "skin" },
+        { "letter": "d", "text": "bone marrow" },
+        { "letter": "e", "text": "skeletal muscle" }
+      ],
+      "correctAnswers": ["c"],
+      "topics": [40],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.9,
+        "matchReason": "Blood reservoirs - Topic 40: Venous system"
+      }
+    },
+    {
+      "id": "q-mto3AA_66-75-25",
+      "testId": "mto3AA_66-75",
+      "questionNumber": 25,
+      "text": "Which of the following statements are correct? (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "the resistance to flow is smaller in the capillary bed than in the arteriolar bed" },
+        { "letter": "b", "text": "the aorta is the segment of the circulatory system which has the greatest compliance" },
+        { "letter": "c", "text": "velocity decreases continuously from the aorta to the right atrium" },
+        { "letter": "d", "text": "due to the large cross sectional area, the capillary bed contains the largest fraction of blood volume" },
+        { "letter": "e", "text": "the tendency for the occurrence of turbulent flow increases when viscosity increases" },
+        { "letter": "f", "text": "in a laminar flow, the highest velocities are measured in the axial stream" }
+      ],
+      "correctAnswers": ["a", "f"],
+      "topics": [33],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Hemodynamic principles - Topic 33: General circulatory hemodynamics"
+      }
+    },
+    {
+      "id": "q-mto3AA_66-75-28",
+      "testId": "mto3AA_66-75",
+      "questionNumber": 28,
+      "text": "Vasodilator substances produced by the endothelium: (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "endothelin (ET)" },
+        { "letter": "b", "text": "angiotensin II (AT2)" },
+        { "letter": "c", "text": "nitric oxide (NO)" },
+        { "letter": "d", "text": "prostacyclin (PGI2)" },
+        { "letter": "e", "text": "adrenaline" }
+      ],
+      "correctAnswers": ["c", "d"],
+      "topics": [41],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Endothelial vasodilators (NO, PGI2) - Topic 41: Microcirculation"
+      }
+    },
+    {
+      "id": "q-mto3AA_66-75-29",
+      "testId": "mto3AA_66-75",
+      "questionNumber": 29,
+      "text": "The basal tone of the vessels (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "is the same as the neurogen tone" },
+        { "letter": "b", "text": "the cerebral vessels do not have it" },
+        { "letter": "c", "text": "can be measured after the denervation of the vessels" },
+        { "letter": "d", "text": "is identical in the different organs" }
+      ],
+      "correctAnswers": ["c"],
+      "topics": [41],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.9,
+        "matchReason": "Basal vascular tone - Topic 41: Microcirculation"
+      }
+    },
+    {
+      "id": "q-mto3AA_66-75-30",
+      "testId": "mto3AA_66-75",
+      "questionNumber": 30,
+      "text": "The pressure pulse in the systemic arteries (M)",
+      "correctAnswerCount": 3,
+      "options": [
+        { "letter": "a", "text": "propagates at about 5 m/sec" },
+        { "letter": "b", "text": "is produced by the ejection of blood into the aorta" },
+        { "letter": "c", "text": "is palpable at the wrist shortly after ventricular ejection" },
+        { "letter": "d", "text": "has the same velocity as arterial blood flow" }
+      ],
+      "correctAnswers": ["a", "b", "c"],
+      "topics": [34],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Arterial pressure pulse propagation - Topic 34: Arterial blood pressure"
+      }
+    },
+    {
+      "id": "q-mto3AA_66-75-31",
+      "testId": "mto3AA_66-75",
+      "questionNumber": 31,
+      "text": "The most effective factor enhancing venous return is (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "muscle pump" },
+        { "letter": "b", "text": "inspiration" },
+        { "letter": "c", "text": "negative hydrostatic pressure in the veins above the heart" },
+        { "letter": "d", "text": "positive intraabdominal pressure" }
+      ],
+      "correctAnswers": ["a"],
+      "topics": [40],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Muscle pump for venous return - Topic 40: Venous system"
+      }
+    },
+    {
+      "id": "q-mto3AA_66-75-32",
+      "testId": "mto3AA_66-75",
+      "questionNumber": 32,
+      "text": "Total peripheral resistance is decreased by (M)",
+      "correctAnswerCount": 3,
+      "options": [
+        { "letter": "a", "text": "parasympathetic stimulation" },
+        { "letter": "b", "text": "inhibition of sympathetic tone" },
+        { "letter": "c", "text": "stimulation of the carotid sinus baroreceptors" },
+        { "letter": "d", "text": "stimulation of the arterial chemoreceptors" },
+        { "letter": "e", "text": "axon reflex" },
+        { "letter": "f", "text": "activation of the rennin-angiotensin system" },
+        { "letter": "g", "text": "activation of depressor area" },
+        { "letter": "h", "text": "activation of presser area" }
+      ],
+      "correctAnswers": ["b", "c", "g"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "TPR regulation via autonomic control - Topic 43: Short-term BP regulation"
+      }
+    },
+    {
+      "id": "q-mto3AA_66-75-33",
+      "testId": "mto3AA_66-75",
+      "questionNumber": 33,
+      "text": "Which of the following statements are correct? (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "plasma protein concentration is the major factor determining the viscosity of blood" },
+        { "letter": "b", "text": "the Fahreus-Lindquist effect shows that viscosity decreases in small vessels" },
+        { "letter": "c", "text": "viscosity increases at high flow velocities" },
+        { "letter": "d", "text": "high viscosity decreases the tendency to turbulent flow" },
+        { "letter": "e", "text": "shear stress (shear force) on wall decreases with viscosity" }
+      ],
+      "correctAnswers": ["b", "d"],
+      "topics": [33, 41],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Blood viscosity and Fahraeus-Lindquist - Topics 33/41: Hemodynamics, Microcirculation"
+      }
+    },
+    {
+      "id": "q-mto3AA_66-75-34",
+      "testId": "mto3AA_66-75",
+      "questionNumber": 34,
+      "text": "Which of the following factors regulate the brain circulation? (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "Bezold-Jarisch reflex" },
+        { "letter": "b", "text": "sympathetic tone" },
+        { "letter": "c", "text": "PCO2 level" },
+        { "letter": "d", "text": "vasodilator fibers" },
+        { "letter": "e", "text": "blood pH" }
+      ],
+      "correctAnswers": ["c", "e"],
+      "topics": [41],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Cerebral blood flow regulation (pCO2, pH) - Topic 41: Microcirculation"
+      }
+    },
+    {
+      "id": "q-mto3AA_66-75-35",
+      "testId": "mto3AA_66-75",
+      "questionNumber": 35,
+      "text": "Basal tone is the most significant regulation at (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "skin" },
+        { "letter": "b", "text": "kidney" },
+        { "letter": "c", "text": "brain" },
+        { "letter": "d", "text": "liver" },
+        { "letter": "e", "text": "coronary artery" },
+        { "letter": "f", "text": "skeletal muscle" }
+      ],
+      "correctAnswers": ["c", "e"],
+      "topics": [41],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.9,
+        "matchReason": "Basal tone significance in brain/coronary - Topic 41: Microcirculation"
+      }
+    },
+    {
+      "id": "q-mto3AA_66-75-36",
+      "testId": "mto3AA_66-75",
+      "questionNumber": 36,
+      "text": "Which statement is correct for BASAL TONE? (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "Tone is maintained by continuous sympathetic discharge" },
+        { "letter": "b", "text": "Tone is influenced by myogenic and endothelial factor" },
+        { "letter": "c", "text": "Tone determine TPR" },
+        { "letter": "d", "text": "skin is influenced by basal tone strongly" }
+      ],
+      "correctAnswers": ["b"],
+      "topics": [41],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Basal tone: myogenic + endothelial factors - Topic 41: Microcirculation"
+      }
+    },
+    {
+      "id": "q-mto3AA_66-75-37",
+      "testId": "mto3AA_66-75",
+      "questionNumber": 37,
+      "text": "Which statement are correct (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "Pressor area is responsible for tonic stimulation of heart and vessel" },
+        { "letter": "b", "text": "Depressor area act to heart directly and inhibit pressor area" },
+        { "letter": "c", "text": "Bezold-Jarisch reflex is that stimulation of left ventricle chemoreceptor results in tachycardia" },
+        { "letter": "d", "text": "Bainbridge reflex is that stimulation left ventricle chemoreceptor results in tachycardia" },
+        { "letter": "e", "text": "activity of baroreceptor increases in response to drop in blood pressure" }
+      ],
+      "correctAnswers": ["a", "b"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Pressor/depressor areas in medulla - Topic 43: Short-term BP regulation"
+      }
+    },
+    {
+      "id": "q-mto3AA_66-75-38",
+      "testId": "mto3AA_66-75",
+      "questionNumber": 38,
+      "text": "The differences in the baroreceptor and chemoreceptor vasomotor reflexes are as follows (M)",
+      "correctAnswerCount": 2,
+      "options": [
+        { "letter": "a", "text": "baroreceptor reflexes are mediated by an inhibition of sympathetic activity whereas chemoreceptor reflexes involve an activation of sympathetic activity" },
+        { "letter": "b", "text": "chemoreceptor reflexes are active in the normal range of blood pressure whereas baroreceptor reflexes are activated in response to extreme hypotension" },
+        { "letter": "c", "text": "the glossopharyngeal nerve is the afferent for baroreceptor reflexes, whereas the vagal nerve is the afferent for the chemoreceptor reflexes" },
+        { "letter": "d", "text": "activation of baroreceptors stimulates the depressor center whereas the activation of the chemoreceptors stimulates the pressor center" }
+      ],
+      "correctAnswers": ["a", "d"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Baroreceptor vs chemoreceptor reflexes - Topic 43: Short-term BP regulation"
+      }
+    },
+    {
+      "id": "q-mto3AA_66-75-39",
+      "testId": "mto3AA_66-75",
+      "questionNumber": 39,
+      "text": "Which statement is correct? (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "During physical exercise, sympathetic tone increasing results from increased in systolic and mean arterial pressure" },
+        { "letter": "b", "text": "During physical exercise, increased in sympathetic tone lead to increase TPR and cardiac output" },
+        { "letter": "c", "text": "At glomus caroticum O2 sensitive potassium channels maintain resting potential" },
+        { "letter": "d", "text": "stimulation of medullary chemosensitive areas activates depressor area in pons" },
+        { "letter": "e", "text": "none of them are correct" }
+      ],
+      "correctAnswers": ["c"],
+      "topics": [43],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.9,
+        "matchReason": "Carotid body O2-sensitive K channels - Topic 43: Short-term BP regulation"
+      }
+    },
+    {
+      "id": "q-mto3AA_66-75-40",
+      "testId": "mto3AA_66-75",
+      "questionNumber": 40,
+      "text": "Venous return is promoted by (M)",
+      "correctAnswerCount": 5,
+      "options": [
+        { "letter": "a", "text": "increased mean systemic filling pressure" },
+        { "letter": "b", "text": "static work" },
+        { "letter": "c", "text": "inspiration" },
+        { "letter": "d", "text": "lying position" },
+        { "letter": "e", "text": "stimulation of alpha-adrenergic receptors" },
+        { "letter": "f", "text": "head-standing" }
+      ],
+      "correctAnswers": ["a", "c", "d", "e", "f"],
+      "topics": [40],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.9,
+        "matchReason": "Factors promoting venous return - Topic 40: Venous system"
+      }
+    },
+    {
+      "id": "q-mto3AA_66-75-43",
+      "testId": "mto3AA_66-75",
+      "questionNumber": 43,
+      "text": "Which of the following substances has the highest clearance (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "glucose" },
+        { "letter": "b", "text": "PAH" },
+        { "letter": "c", "text": "inulin" },
+        { "letter": "d", "text": "potassium" },
+        { "letter": "e", "text": "mannitol" }
+      ],
+      "correctAnswers": ["b"],
+      "topics": [47],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "PAH has highest clearance (secreted) - Topic 47: Tubular secretion"
+      }
+    },
+    {
+      "id": "q-mto3AA_66-75-44",
+      "testId": "mto3AA_66-75",
+      "questionNumber": 44,
+      "text": "Find the correct order of relative clearances for glucose, PAH, urea, and inulin (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "C_glucose < C_PAH < C_urea < C_inulin" },
+        { "letter": "b", "text": "C_PAH < C_urea < C_inulin < C_glucose" },
+        { "letter": "c", "text": "C_glucose < C_inulin < C_urea < C_PAH" },
+        { "letter": "d", "text": "C_glucose < C_urea < C_inulin < C_PAH" },
+        { "letter": "e", "text": "C_inulin < C_glucose < C_PAH < C_urea" }
+      ],
+      "correctAnswers": ["d"],
+      "topics": [45, 46, 47],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Clearance order: glucose(0) < urea < inulin(GFR) < PAH(RPF) - Topics 45-47"
+      }
+    },
+    {
+      "id": "q-mto3AA_66-75-45",
+      "testId": "mto3AA_66-75",
+      "questionNumber": 45,
+      "text": "The absorptive capabilities of the different tubular segments vary as follows (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "about 65% of all reabsorption that occurs in the tubular system takes part in the loop of Henle" },
+        { "letter": "b", "text": "sodium is transported downhill along the concentration gradient from the proximal tubules into the interstitial fluid" },
+        { "letter": "c", "text": "the thick segment of the loop of Henle shows a marked transport of sodium but it is almost impermeable to urea" },
+        { "letter": "d", "text": "the active sodium transport in the distal tubules and collecting duct epithelium requires ADH" }
+      ],
+      "correctAnswers": ["c"],
+      "topics": [46],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "TAL Na transport, urea impermeability - Topic 46: Tubular reabsorption"
+      }
+    },
+    {
+      "id": "q-mto3AA_66-75-46",
+      "testId": "mto3AA_66-75",
+      "questionNumber": 46,
+      "text": "Which of the following mechanisms is involved in the tubular Na+ reabsorption? (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "active discharge of Na+ from the epithelial cells into the interstitial space" },
+        { "letter": "b", "text": "transport of Na+ against a concentration gradient from the tubular lumen into the epithelial cells" },
+        { "letter": "c", "text": "a negative charge of the intratubular fluid" },
+        { "letter": "d", "text": "carrier proteins for Na+ in the basal membrane of the epithelial cells" },
+        { "letter": "e", "text": "a concentration gradient for Na+ from the glomerular filtrate towards the interstitial fluid" },
+        { "letter": "f", "text": "intratubular hydrostatic pressure is higher than the interstitial hydrostatic pressure" }
+      ],
+      "correctAnswers": ["a"],
+      "topics": [46],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Na-K ATPase on basolateral membrane - Topic 46: Tubular reabsorption"
+      }
+    },
+    {
+      "id": "q-mto3AA_66-75-47",
+      "testId": "mto3AA_66-75",
+      "questionNumber": 47,
+      "text": "Which of the following statements is NOT correct? In the kidney (S)",
+      "correctAnswerCount": 1,
+      "options": [
+        { "letter": "a", "text": "the discharge of Na+ from the tubular epithelial cells into the interstitial space is the active component of the tubular Na+ transport" },
+        { "letter": "b", "text": "there is a concentration gradient for Na+ from the lumen of the tubule into the epithelial cell" },
+        { "letter": "c", "text": "Na+ uptake from the tubular lumen into the epithelial cell occurs against an electrochemical gradient" },
+        { "letter": "d", "text": "Na+ transport from the lumen into the epithelial cell uses carrier proteins" }
+      ],
+      "correctAnswers": ["c"],
+      "topics": [46],
+      "mcqs": ["mcq-3"],
+      "metadata": {
+        "importedAt": "2025-12-04T00:00:00.000Z",
+        "matchedBy": "ai-verified",
+        "matchConfidence": 0.95,
+        "matchReason": "Na enters cell DOWN electrochemical gradient - Topic 46: Tubular reabsorption"
+      }
+    }
+  ]
+}

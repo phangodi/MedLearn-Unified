@@ -1,0 +1,335 @@
+{
+  "explanations": [
+    {
+      "questionId": "q-36830213-19",
+      "correctLetters": ["d"],
+      "summary": "Fick principle calculation: CO = VO2 / (CaO2 - CvO2) = 2000 / (200-100) = 20 L/min.",
+      "whyCorrect": {
+        "d": "Using the Fick principle: CO = VO2 / arteriovenous O2 difference. VO2 = 2000 mL/min, CaO2 = 200 mL/L, CvO2 = 100 mL/L. CO = 2000 / (200-100) = 2000/100 = 20 L/min."
+      },
+      "whyIncorrect": {
+        "a": "10 L/min would result from incorrectly doubling the AV difference or halving oxygen consumption in the calculation.",
+        "b": "5 L/min is the normal resting cardiac output, but this calculation with the given values yields 20 L/min.",
+        "c": "25 L/min would require different values; the correct calculation with given data yields 20 L/min."
+      },
+      "topicReference": "Topic 37: Cardiac output",
+      "sourceTopics": [37],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-36830213-20",
+      "correctLetters": ["b"],
+      "summary": "Renal vascular resistance is proportional to its share of blood flow. Since kidneys receive ~20% of CO, they contribute ~20% of total peripheral resistance.",
+      "whyCorrect": {
+        "b": "In parallel circulation, if renal blood flow is 20% of cardiac output, then renal vascular resistance contributes approximately 20% to total peripheral resistance. This follows from the parallel resistance relationship."
+      },
+      "whyIncorrect": {
+        "a": "All vascular beds contribute to total peripheral resistance in parallel; the kidneys are no exception.",
+        "c": "80% would mean kidneys receive only a small fraction of blood flow, which contradicts the 20% stated in the question.",
+        "d": "500% is impossible - no single organ can contribute more than 100% of total peripheral resistance."
+      },
+      "topicReference": "Topic 45: Renal blood flow, glomerular filtration",
+      "sourceTopics": [45],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-36830213-21",
+      "correctLetters": ["b"],
+      "summary": "The Fahraeus-Lindquist effect describes decreased apparent blood viscosity in vessels smaller than ~300 micrometers due to axial streaming of RBCs.",
+      "whyCorrect": {
+        "b": "The Fahraeus-Lindquist effect specifically refers to the decrease in apparent blood viscosity that occurs in small diameter tubes (vessels <300 micrometers) due to axial accumulation of red blood cells and a cell-free plasma layer near the vessel wall."
+      },
+      "whyIncorrect": {
+        "a": "Decreased viscosity with increasing shear rate describes shear-thinning (non-Newtonian) behavior of blood, not the Fahraeus-Lindquist effect.",
+        "c": "Decreased viscosity with decreasing hematocrit is a general property of blood, not the specific Fahraeus-Lindquist effect.",
+        "d": "Temperature effects on viscosity are a general physical property, not the Fahraeus-Lindquist effect which is specific to small vessel diameter."
+      },
+      "topicReference": "Topic 41: The microcirculation",
+      "sourceTopics": [41],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-36830213-22",
+      "correctLetters": ["b"],
+      "summary": "The venous pulse (jugular venous pulse) reflects pressure changes transmitted from the right atrium during the cardiac cycle.",
+      "whyCorrect": {
+        "b": "The venous pulse, particularly visible in the jugular veins, is caused by pressure changes in the right atrium propagating retrograde into the great veins. The a, c, and v waves correspond to atrial contraction, tricuspid bulging, and venous filling respectively."
+      },
+      "whyIncorrect": {
+        "a": "The venous pulse is not a damped arterial pulse; it has a completely different waveform with distinct components (a, c, v waves) reflecting atrial events.",
+        "c": "The venous pulse is actually increased/more prominent in cardiac failure, especially right heart failure, due to elevated venous pressures.",
+        "d": "Veins have minimal smooth muscle and do not rhythmically contract. Venous return is aided by skeletal muscle pump, respiratory pump, and cardiac suction, not venous contractions."
+      },
+      "topicReference": "Topic 40: The venous system",
+      "sourceTopics": [40],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-36830213-23",
+      "correctLetters": ["a", "d"],
+      "summary": "Local metabolic factors (hypoxia, increased CO2, decreased pH) cause vasodilation in systemic circulation to match blood flow to tissue metabolic needs.",
+      "whyCorrect": {
+        "a": "Local hypoxia causes vasodilation in systemic tissues (except lungs) as part of metabolic autoregulation, increasing blood flow to oxygen-deprived areas.",
+        "d": "Increased local CO2 concentration causes vasodilation through direct effects on vascular smooth muscle and local pH changes, increasing blood flow to metabolically active tissues."
+      },
+      "whyIncorrect": {
+        "b": "Increasing local pH (less acidic) would indicate decreased metabolic activity; decreased pH (more acidic) causes vasodilation. This option has the pH change backwards.",
+        "c": "Capillaries lack smooth muscle and cannot change diameter. Their blood flow is regulated by upstream arterioles and precapillary sphincters, not by nervous stimulation of capillaries themselves."
+      },
+      "topicReference": "Topic 41: The microcirculation",
+      "sourceTopics": [41],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-36830213-24",
+      "correctLetters": ["a", "e"],
+      "summary": "CGRP (calcitonin gene-related peptide) and VIP (vasoactive intestinal peptide) are potent vasodilators; the others are vasoconstrictors.",
+      "whyCorrect": {
+        "a": "CGRP (calcitonin gene-related peptide) is one of the most potent vasodilators known, released from sensory nerve endings and causing pronounced vasodilation.",
+        "e": "VIP (vasoactive intestinal peptide) is a vasodilator that relaxes vascular smooth muscle through cAMP-mediated mechanisms."
+      },
+      "whyIncorrect": {
+        "b": "TXA2 (thromboxane A2) is a potent vasoconstrictor released from platelets during hemostasis.",
+        "c": "5-HT (serotonin) is primarily a vasoconstrictor in most vascular beds (though it can cause vasodilation in some tissues via endothelial NO release).",
+        "d": "Endothelin-1 is the most potent endogenous vasoconstrictor known, produced by endothelial cells."
+      },
+      "topicReference": "Topic 41: The microcirculation",
+      "sourceTopics": [41],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-36830213-25",
+      "correctLetters": ["c", "d"],
+      "summary": "Capillary filtration increases when permeability rises (increased Kf) or plasma oncotic pressure falls (decreased proteins).",
+      "whyCorrect": {
+        "c": "Increased microvascular permeability increases the filtration coefficient (Kf), directly increasing net filtration according to the Starling equation.",
+        "d": "Decreased plasma protein concentration reduces plasma oncotic pressure, shifting the Starling forces toward increased filtration."
+      },
+      "whyIncorrect": {
+        "a": "Hemoglobin concentration does not affect plasma oncotic pressure. Oncotic pressure is determined by plasma proteins (mainly albumin), not hemoglobin inside RBCs.",
+        "b": "Increased plasma albumin would increase oncotic pressure, which would decrease (not increase) net filtration.",
+        "e": "Increased muscle pump activity promotes venous return and decreases capillary hydrostatic pressure, which would decrease filtration."
+      },
+      "topicReference": "Topic 39: Capillaries, transcapillary exchange",
+      "sourceTopics": [39],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-36830213-26",
+      "correctLetters": ["b"],
+      "summary": "The skeletal muscle pump is the most powerful mechanism for enhancing venous return, especially from the lower extremities.",
+      "whyCorrect": {
+        "b": "The muscle pump (skeletal muscle contraction compressing veins with competent valves) is the most effective factor enhancing venous return, particularly important during exercise and for overcoming gravity in upright posture."
+      },
+      "whyIncorrect": {
+        "a": "Expiration actually decreases the thoracoabdominal pressure gradient, transiently reducing venous return (inspiration enhances it).",
+        "c": "Positive intraabdominal pressure compresses the inferior vena cava and can actually impede venous return.",
+        "d": "While negative hydrostatic pressure above the heart can assist venous return, it's not the most effective factor compared to the muscle pump."
+      },
+      "topicReference": "Topic 40: The venous system",
+      "sourceTopics": [40],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-36830213-28",
+      "correctLetters": ["c"],
+      "summary": "Hypoxic pulmonary vasoconstriction (HPV) is unique to the lungs - all other circulations vasodilate in response to hypoxia.",
+      "whyCorrect": {
+        "c": "The pulmonary circulation uniquely responds to local hypoxia with vasoconstriction (hypoxic pulmonary vasoconstriction, HPV). This diverts blood away from poorly ventilated alveoli to optimize V/Q matching."
+      },
+      "whyIncorrect": {
+        "a": "Cerebral circulation vasodilates in response to hypoxia to maintain oxygen delivery to brain tissue.",
+        "b": "Skeletal muscle circulation vasodilates in response to hypoxia as part of metabolic autoregulation.",
+        "d": "Coronary circulation vasodilates powerfully in response to hypoxia to increase oxygen delivery to the myocardium."
+      },
+      "topicReference": "Topic 26: Pulmonary circulation, gas exchange",
+      "sourceTopics": [26],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-36830213-29",
+      "correctLetters": ["a", "b", "d"],
+      "summary": "Baroreceptors are stretch receptors in arterial walls that activate the cardioinhibitory center via afferents to the nucleus tractus solitarius.",
+      "whyCorrect": {
+        "a": "When activated by increased arterial pressure, baroreceptors stimulate the cardioinhibitory center (nucleus ambiguus/vagal nuclei), increasing parasympathetic output and slowing heart rate.",
+        "b": "Baroreceptors are mechanoreceptors/stretch receptors that respond to vessel wall distension caused by blood pressure.",
+        "d": "Baroreceptor afferents project to the nucleus tractus solitarius (NTS) in the medulla, the primary integration center for cardiovascular reflexes."
+      },
+      "whyIncorrect": {
+        "c": "Baroreceptors are in the carotid sinus and aortic arch, not the carotid and aortic bodies. The bodies contain chemoreceptors, not baroreceptors.",
+        "e": "Baroreceptors exist in both high-pressure (arterial) and low-pressure (cardiopulmonary/atrial) parts of the circulation."
+      },
+      "topicReference": "Topic 43: Short-term blood pressure regulation",
+      "sourceTopics": [43],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-36830213-30",
+      "correctLetters": ["d"],
+      "summary": "The Valsalva maneuver (forced expiration against closed glottis) raises intrathoracic and intrapleural pressure above atmospheric.",
+      "whyCorrect": {
+        "d": "During the Valsalva maneuver (forceful expiration against a closed glottis), intrathoracic pressure rises markedly above atmospheric pressure (can exceed +40 mmHg)."
+      },
+      "whyIncorrect": {
+        "a": "During normal inspiration, intrapleural pressure becomes more negative (typically -6 to -8 cmH2O), not positive.",
+        "b": "Intrapleural pressure is normally always subatmospheric (negative) due to the elastic recoil of the lung and chest wall.",
+        "c": "During normal expiration, intrapleural pressure rises but remains subatmospheric (around -3 to -5 cmH2O).",
+        "e": "Mueller's maneuver (forceful inspiration against closed glottis) makes intrapleural pressure even more negative, not positive."
+      },
+      "topicReference": "Topic 25: Mechanics of breathing",
+      "sourceTopics": [25],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-36830213-34",
+      "correctLetters": ["d", "f"],
+      "summary": "The JGA consists of macula densa cells (specialized DCT cells) and juxtaglomerular (granular) cells in the afferent arteriole wall.",
+      "whyCorrect": {
+        "d": "The macula densa is a specialized group of cells in the distal convoluted tubule that senses tubular fluid composition and is a key component of the JGA.",
+        "f": "Juxtaglomerular (granular/myoepithelial) cells in the afferent arteriole wall contain renin granules and are the renin-secreting component of the JGA."
+      },
+      "whyIncorrect": {
+        "a": "Podocytes are part of the glomerular filtration barrier, not the JGA.",
+        "b": "Intraglomerular mesangial cells are within the glomerulus and regulate filtration surface area, but are not part of the JGA proper (extraglomerular mesangial cells may be considered part of JGA).",
+        "c": "Parietal epithelial cells of Bowman's capsule form the outer layer of the capsule and are not part of the JGA.",
+        "e": "Efferent arteriole smooth muscle cells are not part of the JGA; the juxtaglomerular cells are specifically in the afferent arteriole."
+      },
+      "topicReference": "Topic 45: Renal blood flow, glomerular filtration",
+      "sourceTopics": [45],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-36830213-35",
+      "correctLetters": ["c", "d"],
+      "summary": "Cosm = (Uosm x V)/Posm = (900 x 1)/300 = 3 mL/min. CH2O = V - Cosm = 1 - 3 = -2 mL/min (negative = water retention).",
+      "whyCorrect": {
+        "c": "Free water clearance CH2O = V - Cosm = 1 - 3 = -2 mL/min. The negative value indicates the kidney is retaining free water (concentrating urine).",
+        "d": "Osmolar clearance Cosm = (Uosm x V)/Posm = (900 x 1)/300 = 3 mL/min."
+      },
+      "whyIncorrect": {
+        "a": "Free water clearance of 0 would mean urine is isosmotic with plasma; here urine is hypertonic (900 > 300), so CH2O is negative.",
+        "b": "Free water clearance of +3 mL/min would indicate excretion of free water (dilute urine), but this patient has concentrated urine.",
+        "e": "Osmolar clearance of 0.33 mL/min would result from inverting the formula; the correct calculation gives 3 mL/min."
+      },
+      "topicReference": "Topic 48: Renal concentration and dilution",
+      "sourceTopics": [48],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-36830213-36",
+      "correctLetters": ["b"],
+      "summary": "GFR is defined as the volume of glomerular filtrate formed per unit time in all nephrons of both kidneys.",
+      "whyCorrect": {
+        "b": "GFR (glomerular filtration rate) is correctly defined as the total volume of plasma ultrafiltrate formed per minute by all functioning nephrons in both kidneys (normally ~125 mL/min or ~180 L/day)."
+      },
+      "whyIncorrect": {
+        "a": "GFR measures filtrate volume, not blood volume. Blood is not filtered; plasma is filtered to form the ultrafiltrate.",
+        "c": "This describes single nephron GFR (SNGFR), not the total GFR which encompasses all nephrons in both kidneys.",
+        "d": "This describes the filtration fraction (FF = GFR/RPF), not the GFR itself."
+      },
+      "topicReference": "Topic 45: Renal blood flow, glomerular filtration",
+      "sourceTopics": [45],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-36830213-37",
+      "correctLetters": ["d"],
+      "summary": "ADH (vasopressin) increases water permeability of the collecting duct by inserting aquaporin-2 channels into the apical membrane.",
+      "whyCorrect": {
+        "d": "ADH acts on V2 receptors in collecting duct principal cells, triggering insertion of aquaporin-2 (AQP2) water channels into the apical membrane, allowing water reabsorption down the osmotic gradient."
+      },
+      "whyIncorrect": {
+        "a": "ADH does not affect peritubular capillary permeability; it acts on tubular epithelial cells.",
+        "b": "Filtration slits are structural components of podocytes; ADH does not regulate them.",
+        "c": "Proximal tubule water permeability is constitutively high (via AQP1) and is not regulated by ADH.",
+        "e": "Glomerular capillary permeability is determined by the filtration barrier structure, not regulated by ADH."
+      },
+      "topicReference": "Topic 48: Renal concentration and dilution",
+      "sourceTopics": [48],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-36830213-38",
+      "correctLetters": ["a"],
+      "summary": "K+ undergoes all three processes: filtration at glomerulus, reabsorption in PCT and loop, and secretion in collecting duct.",
+      "whyCorrect": {
+        "a": "Potassium is freely filtered at the glomerulus, ~90% reabsorbed in the proximal tubule and loop of Henle, then secreted in the collecting duct (principal cells) under aldosterone regulation. All three processes occur."
+      },
+      "whyIncorrect": {
+        "b": "K+ is not only filtered; significant reabsorption occurs in the proximal nephron and secretion in the distal nephron.",
+        "c": "K+ undergoes secretion as well as filtration and reabsorption; secretion in the collecting duct is the main regulated step.",
+        "d": "K+ also undergoes significant reabsorption (about 90% of filtered K+), not just filtration and secretion."
+      },
+      "topicReference": "Topic 47: Tubular secretion",
+      "sourceTopics": [47],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-36830213-39",
+      "correctLetters": ["c"],
+      "summary": "The renal threshold for glucose is approximately 10-11 mmol/L, when SGLT2 transporters begin to saturate and glucose appears in urine.",
+      "whyCorrect": {
+        "c": "The renal threshold for glucose (when glucosuria begins) is approximately 10-11 mmol/L (180-200 mg/dL). At this plasma concentration, SGLT2 transporters in the proximal tubule begin to saturate."
+      },
+      "whyIncorrect": {
+        "a": "15-20 mmol/L exceeds the threshold; glucosuria would already be present at lower concentrations.",
+        "b": "Above 20-22 mmol/L represents Tm (transport maximum) saturation, not the threshold when glucose first appears.",
+        "d": "6-8 mmol/L is within normal fasting glucose range; glucose should not appear in urine at these concentrations."
+      },
+      "topicReference": "Topic 46: Tubular reabsorption",
+      "sourceTopics": [46],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-36830213-40",
+      "correctLetters": ["d"],
+      "summary": "Parasympathetic preganglionic neurons controlling bladder detrusor muscle are located in the sacral spinal cord (S2-S4).",
+      "whyCorrect": {
+        "d": "The preganglionic parasympathetic neurons that innervate the detrusor muscle via the pelvic nerve are located in the sacral spinal cord segments S2-S4 (sacral micturition center)."
+      },
+      "whyIncorrect": {
+        "a": "The lumbar spinal cord contains sympathetic preganglionic neurons (L1-L2) that innervate the internal urethral sphincter, not the detrusor.",
+        "b": "The hypothalamus contains higher centers (pontine micturition center coordination), but preganglionic neurons are in the spinal cord.",
+        "c": "The medulla oblongata does not contain the preganglionic neurons for bladder control; these are in the sacral cord."
+      },
+      "topicReference": "Topic: Bladder physiology (autonomic control)",
+      "sourceTopics": [],
+      "needsReview": true,
+      "reviewReason": "Question topic not assigned to any implemented topic. Standard ANS knowledge applied."
+    },
+    {
+      "questionId": "q-36830213-41",
+      "correctLetters": ["a"],
+      "summary": "Intercalated cells (Type A and B) in the collecting duct regulate acid-base balance and determine final urine pH through H+ secretion and HCO3- handling.",
+      "whyCorrect": {
+        "a": "Intercalated cells in the collecting duct are responsible for fine-tuning acid-base balance. Type A cells secrete H+ (acidify urine), Type B cells secrete HCO3- (alkalinize urine). They determine the final pH of urine."
+      },
+      "whyIncorrect": {
+        "b": "Intercalated cells are not merely structural support; they have specific functional roles in acid-base regulation.",
+        "c": "Water reabsorption in the collecting duct is handled by principal cells (via AQP2 under ADH control), not intercalated cells.",
+        "d": "Urea reabsorption occurs via UT transporters in the inner medullary collecting duct, primarily in principal cells and medullary interstitium.",
+        "e": "Aldosterone-sensitive Na+ reabsorption occurs in principal cells (via ENaC), not intercalated cells."
+      },
+      "topicReference": "Topic 51: Acid-base balance",
+      "sourceTopics": [51],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-36830213-49",
+      "correctLetters": ["c"],
+      "summary": "Indirect calorimetry measures metabolic rate by quantifying oxygen consumption (and CO2 production), based on the relationship between O2 use and energy expenditure.",
+      "whyCorrect": {
+        "c": "Indirect calorimetry determines energy expenditure by measuring oxygen consumption (and often CO2 production). It is 'indirect' because it calculates heat production from gas exchange rather than measuring heat directly."
+      },
+      "whyIncorrect": {
+        "a": "Spirometry measures lung volumes and airflow rates but does not specifically quantify oxygen consumption for metabolic rate.",
+        "b": "Oximetry (pulse oximetry) measures blood oxygen saturation, not oxygen consumption.",
+        "d": "Whole-body plethysmography measures lung volumes (especially airway resistance and thoracic gas volume), not metabolic rate."
+      },
+      "topicReference": "Topic: Metabolism and BMR",
+      "sourceTopics": [],
+      "needsReview": true,
+      "reviewReason": "Question topic not assigned to any implemented topic. Standard metabolic physiology knowledge applied."
+    }
+  ]
+}

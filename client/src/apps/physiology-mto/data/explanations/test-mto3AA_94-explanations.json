@@ -1,0 +1,285 @@
+{
+  "explanations": [
+    {
+      "questionId": "q-mto3AA_94-8",
+      "correctLetters": ["b"],
+      "summary": "The skeletal muscle pump reduces venous hydrostatic pressure in the legs by compressing veins and propelling blood toward the heart.",
+      "whyCorrect": {
+        "b": "Exercise of leg muscles activates the skeletal muscle pump, which compresses the deep veins and propels blood centrally. With competent valves preventing backflow, this significantly reduces venous hydrostatic pressure in the legs."
+      },
+      "whyIncorrect": {
+        "a": "Pregnancy increases venous pressure in the legs due to compression of the inferior vena cava by the gravid uterus, impeding venous return.",
+        "c": "Increased right atrial pressure impedes venous return, causing blood to back up and increasing venous pressure in the legs.",
+        "d": "Ascitic fluid increases intra-abdominal pressure, compressing the IVC and impeding venous return, thereby increasing leg venous pressure."
+      },
+      "topicReference": "Topic 40: The venous system",
+      "sourceTopics": [40],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_94-13",
+      "correctLetters": ["b"],
+      "summary": "Urea has the highest plasma concentration among these substances, typically 2.5-7.5 mmol/L (15-45 mg/dL).",
+      "whyCorrect": {
+        "b": "Urea (blood urea nitrogen, BUN) has a normal plasma concentration of 2.5-7.5 mmol/L (15-45 mg/dL), which is significantly higher than the other listed nitrogenous waste products."
+      },
+      "whyIncorrect": {
+        "a": "Uric acid has a normal plasma concentration of approximately 0.15-0.45 mmol/L (2.5-7.5 mg/dL), much lower than urea.",
+        "c": "Creatine has a normal plasma concentration of approximately 15-60 micromol/L, lower than urea.",
+        "d": "Creatinine has a normal plasma concentration of 60-120 micromol/L (0.7-1.3 mg/dL), substantially lower than urea."
+      },
+      "topicReference": "Topic 8: Fluid compartments, blood plasma",
+      "sourceTopics": [8],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_94-14",
+      "correctLetters": ["c"],
+      "summary": "According to Laplace's law (T = P × r), large arteries have the highest wall tension due to their large radius and high pressure.",
+      "whyCorrect": {
+        "c": "Large arteries have both high intraluminal pressure and large radius. By Laplace's law (wall tension = pressure × radius), they experience the highest wall tension, making them most susceptible to rupture (e.g., aortic aneurysm)."
+      },
+      "whyIncorrect": {
+        "a": "Arterioles have high pressure but very small radius, resulting in lower wall tension despite high pressure.",
+        "b": "Capillaries have tiny radius (4-8 micrometers), so despite their thin walls, wall tension is extremely low.",
+        "d": "Large veins have low pressure (~5 mmHg), so despite larger radius, wall tension is low.",
+        "e": "Small veins have both low pressure and small radius, resulting in minimal wall tension."
+      },
+      "topicReference": "Topic 33: General circulatory hemodynamics",
+      "sourceTopics": [33],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_94-15",
+      "correctLetters": ["c"],
+      "summary": "The macula densa is in direct contact with the afferent arteriole as part of the juxtaglomerular apparatus (JGA).",
+      "whyCorrect": {
+        "c": "The macula densa, located at the junction of the thick ascending limb and distal convoluted tubule, is positioned adjacent to the afferent arteriole. This anatomical arrangement forms the JGA and enables tubuloglomerular feedback."
+      },
+      "whyIncorrect": {
+        "a": "Vasa recta are straight vessels in the medulla supplying the loop of Henle, not in contact with the macula densa.",
+        "b": "Glomerular capillaries are within Bowman's capsule; the macula densa contacts the arterioles at the vascular pole, not the capillaries themselves.",
+        "d": "Peritubular capillaries surround the tubules but are not specifically in contact with the macula densa in the JGA.",
+        "e": "While the efferent arteriole is nearby, the macula densa specifically contacts the afferent arteriole where juxtaglomerular cells are located."
+      },
+      "topicReference": "Topic 45: Renal blood flow, glomerular filtration",
+      "sourceTopics": [45],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_94-18",
+      "correctLetters": ["c", "e"],
+      "summary": "Beta-2 adrenergic and muscarinic cholinergic receptors both mediate vasodilation in skeletal muscle arterioles.",
+      "whyCorrect": {
+        "c": "Beta-2 adrenergic receptors on vascular smooth muscle mediate vasodilation through cAMP-dependent relaxation. Circulating adrenaline activates these receptors in skeletal muscle.",
+        "e": "Muscarinic cholinergic receptors (M3) on endothelial cells stimulate NO release, causing vasodilation. Sympathetic cholinergic vasodilator fibers innervate skeletal muscle arterioles in some species."
+      },
+      "whyIncorrect": {
+        "a": "Alpha-1 adrenergic receptors cause vasoconstriction, not vasodilation, through calcium-dependent smooth muscle contraction.",
+        "b": "Beta-1 adrenergic receptors are primarily in the heart (increasing HR and contractility); they do not mediate significant vascular effects.",
+        "d": "Nicotinic cholinergic receptors are at autonomic ganglia and neuromuscular junctions, not on vascular smooth muscle or endothelium."
+      },
+      "topicReference": "Topic 41: The microcirculation",
+      "sourceTopics": [41],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_94-21",
+      "correctLetters": ["c"],
+      "summary": "Blood velocity is highest in the aorta because velocity = flow/cross-sectional area, and the aorta has the smallest total cross-sectional area.",
+      "whyCorrect": {
+        "c": "The aorta has the smallest total cross-sectional area in the circulation (~2.5 cm²). Since velocity = flow/area and cardiac output is constant, velocity is highest where cross-sectional area is smallest."
+      },
+      "whyIncorrect": {
+        "a": "Arteries have greater combined cross-sectional area than the aorta due to branching, so velocity is lower.",
+        "b": "Venules have enormous combined cross-sectional area; blood velocity is very slow.",
+        "d": "Veins have large total cross-sectional area; velocity is moderate but lower than in the aorta.",
+        "e": "Capillaries have the largest total cross-sectional area (~3000 cm²), so blood velocity is slowest (<1 mm/sec), allowing time for exchange."
+      },
+      "topicReference": "Topic 33: General circulatory hemodynamics",
+      "sourceTopics": [33],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_94-23",
+      "correctLetters": ["b"],
+      "summary": "About 20% of plasma entering the glomerulus is filtered (filtration fraction = GFR/RPF ≈ 0.2), so 20% of plasma glucose is filtered.",
+      "whyCorrect": {
+        "b": "The filtration fraction (GFR/renal plasma flow) is approximately 20%. Since glucose is freely filtered (not protein-bound), 20% of the plasma glucose entering the glomerular capillary is filtered into Bowman's capsule."
+      },
+      "whyIncorrect": {
+        "a": "Glucose is freely filtered; it is a small molecule that passes easily through the glomerular filtration barrier.",
+        "c": "50% would require a filtration fraction of 0.5, which is pathologically high. Normal FF is ~0.2.",
+        "d": "100% filtration would mean all plasma is filtered, which is impossible. Only about 20% of plasma volume becomes filtrate."
+      },
+      "topicReference": "Topic 45: Renal blood flow, glomerular filtration",
+      "sourceTopics": [45],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_94-24",
+      "correctLetters": ["d"],
+      "summary": "Normal lung compliance is approximately 0.2 L/cmH2O (range 0.15-0.25 L/cmH2O).",
+      "whyCorrect": {
+        "d": "Normal pulmonary (lung) compliance is approximately 0.2 L/cmH2O, meaning for each 1 cmH2O change in transpulmonary pressure, lung volume changes by about 200 mL."
+      },
+      "whyIncorrect": {
+        "a": "10-20 L/cmH2O is far too high; this would represent an impossibly compliant lung.",
+        "b": "0.04-0.08 L/cmH2O represents severely reduced compliance, as seen in conditions like pulmonary fibrosis or ARDS.",
+        "c": "0.8-1.6 L/cmH2O is too high and would indicate abnormally compliant lungs (e.g., emphysema).",
+        "e": "3-6 L/cmH2O is unrealistically high for lung compliance."
+      },
+      "topicReference": "Topic 30: Airway resistance, lung compliance",
+      "sourceTopics": [30],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_94-26",
+      "correctLetters": ["c"],
+      "summary": "Beta-2 receptors mediate arteriolar dilation in response to circulating adrenaline (epinephrine).",
+      "whyCorrect": {
+        "c": "Beta-2 adrenergic receptors on vascular smooth muscle are activated by circulating adrenaline, causing vasodilation through cAMP-mediated relaxation. This is particularly important in skeletal muscle and coronary vessels."
+      },
+      "whyIncorrect": {
+        "a": "Anticipatory vasodilation before exercise involves sympathetic cholinergic fibers (releasing ACh), not beta-2 receptors directly.",
+        "b": "Contraction of arterioles is mediated by alpha-1 receptors, not beta-2. Adrenaline at beta-2 receptors causes dilation.",
+        "d": "ANH (atrial natriuretic hormone) acts via cGMP pathways through guanylyl cyclase receptors, not beta-2 adrenergic receptors.",
+        "e": "Angiotensin II causes vasoconstriction via AT1 receptors, not beta-2 receptors."
+      },
+      "topicReference": "Topic 41: The microcirculation",
+      "sourceTopics": [41],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_94-27",
+      "correctLetters": ["a"],
+      "summary": "The Na+-K+-2Cl- cotransporter (NKCC2) is located in the thick ascending limb of the loop of Henle.",
+      "whyCorrect": {
+        "a": "The NKCC2 (Na+-K+-2Cl- cotransporter) is expressed on the apical membrane of thick ascending limb cells. It is the target of loop diuretics (furosemide) and is crucial for generating the medullary concentration gradient."
+      },
+      "whyIncorrect": {
+        "b": "The collecting duct has ENaC (epithelial sodium channel) for Na+ reabsorption, not NKCC2.",
+        "c": "The proximal tubule uses Na+/H+ exchangers, Na+-glucose cotransporters (SGLT2), and other mechanisms, not NKCC2.",
+        "d": "The distal tubule (DCT) expresses the Na+-Cl- cotransporter (NCC), not NKCC2. NCC is the target of thiazide diuretics."
+      },
+      "topicReference": "Topic 46: Tubular reabsorption",
+      "sourceTopics": [46],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_94-30",
+      "correctLetters": ["b"],
+      "summary": "Pulse pressure = stroke volume / arterial compliance. Increased stroke volume directly increases pulse pressure.",
+      "whyCorrect": {
+        "b": "Pulse pressure (systolic minus diastolic pressure) is directly proportional to stroke volume and inversely proportional to arterial compliance. Increased stroke volume ejects more blood into the aorta, raising systolic pressure and pulse pressure."
+      },
+      "whyIncorrect": {
+        "a": "Hemorrhage decreases blood volume and stroke volume, which would decrease pulse pressure.",
+        "c": "Decreased venous return reduces preload and stroke volume (Frank-Starling), decreasing pulse pressure.",
+        "d": "Increased arterial compliance allows the arteries to expand more easily, which decreases pulse pressure for a given stroke volume."
+      },
+      "topicReference": "Topic 34: Arterial blood pressure",
+      "sourceTopics": [34],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_94-34",
+      "correctLetters": ["d"],
+      "summary": "Decreasing sympathetic vasomotor tone reduces vasoconstriction, thereby reducing total peripheral resistance.",
+      "whyCorrect": {
+        "d": "Sympathetic vasoconstrictor tone maintains arterial resistance. Decreasing this tone causes vasodilation of arterioles, reducing total peripheral resistance. This is the primary mechanism by which the ANS reduces TPR."
+      },
+      "whyIncorrect": {
+        "a": "The parasympathetic system has minimal direct effect on most systemic blood vessels. There is no significant 'parasympathetic vasomotor tone' to increase.",
+        "b": "Decreasing parasympathetic vasomotor tone is not a meaningful concept - the parasympathetic system doesn't maintain vascular tone.",
+        "c": "Increasing sympathetic vasomotor tone would cause vasoconstriction, increasing TPR, not decreasing it."
+      },
+      "topicReference": "Topic 43: Short-term blood pressure regulation",
+      "sourceTopics": [43],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_94-35",
+      "correctLetters": ["d"],
+      "summary": "If a substance is freely filtered and secreted (with secretion equal to filtration), clearance = GFR + secretion = 120 + 120 = 240 mL/min.",
+      "whyCorrect": {
+        "d": "Clearance represents total removal from plasma. If substance X is freely filtered (120 mL/min worth) and an equal amount is secreted (another 120 mL/min worth), total clearance = 120 + 120 = 240 mL/min. This exceeds GFR because of tubular secretion."
+      },
+      "whyIncorrect": {
+        "a": "60 mL/min would indicate net reabsorption, not secretion.",
+        "b": "120 mL/min equals GFR, which would only occur if there were no secretion (filtration only).",
+        "c": "30 mL/min would indicate substantial reabsorption, contradicting the stated conditions."
+      },
+      "topicReference": "Topic 47: Tubular secretion",
+      "sourceTopics": [47],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_94-37",
+      "correctLetters": ["d"],
+      "summary": "Hyperglycemia does not affect Starling forces significantly and does not promote edema formation.",
+      "whyCorrect": {
+        "d": "Glucose is a small molecule that freely crosses capillary walls and does not exert significant oncotic pressure. Hyperglycemia does not alter the Starling forces that govern fluid filtration, so it does not directly promote edema."
+      },
+      "whyIncorrect": {
+        "a": "Decreased plasma colloid osmotic pressure reduces the force opposing filtration, promoting edema.",
+        "b": "Increased venous pressure raises capillary hydrostatic pressure, increasing filtration and promoting edema.",
+        "c": "Increased capillary permeability increases the filtration coefficient and allows protein leakage, reducing oncotic pressure gradient and promoting edema.",
+        "e": "Hypoalbuminemia directly reduces plasma oncotic pressure, promoting fluid filtration and edema."
+      },
+      "topicReference": "Topic 39: Capillaries, transcapillary exchange",
+      "sourceTopics": [39],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_94-43",
+      "correctLetters": ["a", "b"],
+      "summary": "Intracapillary hydrostatic pressure (Pc) promotes filtration; interstitial hydrostatic pressure (Pi) can promote either depending on whether it's positive or negative.",
+      "whyCorrect": {
+        "a": "Interstitial hydrostatic pressure (Pi) opposes filtration when positive but promotes filtration when negative (subatmospheric). In most tissues, Pi is slightly negative, actually favoring filtration.",
+        "b": "Intracapillary (capillary) hydrostatic pressure (Pc) always promotes filtration by pushing fluid out of the capillary into the interstitium."
+      },
+      "whyIncorrect": {
+        "c": "Intracapillary colloid osmotic pressure (plasma oncotic pressure, πc) opposes filtration by drawing fluid back into the capillary, not promoting filtration.",
+        "d": "Interstitial colloid osmotic pressure (πi) promotes filtration (draws fluid out), not absorption. It opposes the plasma oncotic pressure."
+      },
+      "topicReference": "Topic 39: Capillaries, transcapillary exchange",
+      "sourceTopics": [39],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_94-44",
+      "correctLetters": ["b", "f"],
+      "summary": "Glucose is freely filtered at the glomerulus but completely reabsorbed, resulting in zero clearance under normal conditions.",
+      "whyCorrect": {
+        "b": "Under normal physiological conditions, all filtered glucose is reabsorbed by SGLT2/SGLT1 transporters in the proximal tubule, so none appears in urine. Clearance = 0 mL/min.",
+        "f": "Glucose is a small, unbound molecule that freely passes through the glomerular filtration barrier. Its concentration in the filtrate equals its plasma concentration."
+      },
+      "whyIncorrect": {
+        "a": "Clearance of 120 mL/min would equal GFR, meaning no reabsorption. This occurs only when plasma glucose exceeds Tm.",
+        "c": "Glucose is not secreted; it is only filtered and reabsorbed.",
+        "d": "Glucose transport is linked to sodium (SGLT2 cotransporter), not protein reabsorption.",
+        "e": "Glucose is not secreted anywhere in the tubular system."
+      },
+      "topicReference": "Topic 46: Tubular reabsorption",
+      "sourceTopics": [46],
+      "needsReview": false
+    },
+    {
+      "questionId": "q-mto3AA_94-46",
+      "correctLetters": ["a"],
+      "summary": "The renal threshold for glucose is approximately 10-11 mmol/L (180-200 mg/dL), when SGLT2 begins to saturate.",
+      "whyCorrect": {
+        "a": "The renal threshold for glucose is approximately 10-11 mmol/L (some sources give 11-13 mmol/L). At this plasma concentration, SGLT2 transporters begin to saturate and glucose first appears in urine."
+      },
+      "whyIncorrect": {
+        "b": "Glucose does appear in urine when plasma concentration exceeds the renal threshold; this is called glucosuria.",
+        "c": "22-25 mmol/L exceeds the transport maximum (Tm); at this level, glucosuria would already be substantial. The threshold is lower.",
+        "d": "5-6 mmol/L is within normal fasting glucose range. All glucose is reabsorbed at this concentration."
+      },
+      "topicReference": "Topic 46: Tubular reabsorption",
+      "sourceTopics": [46],
+      "needsReview": false
+    }
+  ]
+}
