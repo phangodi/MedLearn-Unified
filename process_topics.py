@@ -4,7 +4,7 @@ import json
 
 # Configuration
 TOPICS_DIR = "/Users/peti/Documents/GitHub/MedLearn-Unified/client/src/apps/physiology/data/Topics"
-TOPICS_TO_PROCESS = [52, 53, 54, 55, 56, 57, 58]
+TOPICS_TO_PROCESS = [59, 60, 61, 62, 63]
 
 def fix_smart_quotes(text):
     """Replace smart quotes with straight quotes - ONLY for fixing syntax"""

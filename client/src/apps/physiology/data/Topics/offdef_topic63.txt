@@ -1,0 +1,67 @@
+```javascript
+// **LO-1** (Topic-63) — Functional divisions of the stomach concerning gastric motility patterns
+officialDefinitions: [
+  'Functional divisions: Based on gastric motility patterns, the stomach is functionally divided into two major regions: the orad region (proximal stomach) and the caudad region (distal stomach).',
+  'Proximal (orad) portion: includes the fundus and the proximal portion of the body. It is thin-walled and its primary function is to relax and accommodate large quantities of ingested food. The relaxation of this region occurs through a process called receptive relaxation, which is mediated by the vagus nerve and allows the stomach to expand without increasing intragastric pressure.',
+  'Distal (caudad) portion: includes the distal part of the body and the antrum. It has a thicker muscle wall, enabling it to generate stronger contractions necessary for mechanical digestion. Its main function is to mix food with gastric secretions, forming chyme, and to propel the chyme towards the small intestine in a regulated manner. These contractions are responsible for gastric peristalsis, which helps in both mixing and gastric emptying.',
+  'Empty distal stomach: exhibits MMC (Migrating Motor Complex). Filled distal stomach: exhibits PERISTALSIS.',
+  'Proximal stomach motility — During filling: receptive relaxation (mechanisms: vago-vagal reflex, local reflex, stress relaxation). During emptying: gradual tonic contraction. The proximal portion does not participate in peristalsis.',
+  'Muscle wall: the thickness of the muscle wall increases from the proximal stomach to the distal stomach. The innervation of the stomach includes extrinsic innervation by the autonomic nervous system and intrinsic innervation from the myenteric and submucosal plexuses.',
+],
+
+// **LO-2** (Topic-63) — Gastric motility in interdigestive periods: MMC (CRITICAL)
+officialDefinitions: [
+  'MMC definition: Periodic electrical and motor (peristaltic) activity in the EMPTY stomach–small intestine tract (interdigestive phase or starvation). 6–10 min active periods followed by approximately 1.5 hour long pause. The activity originates in the stomach and propagates to the end of the ileum.',
+  'MMC function: transport of undigestible remnants larger than 2 mm into the colon. Control: motilin.',
+  'MMC phases: Phase I – No spike potentials, no contractions (quiescent phase). Phase II – Irregular spike potentials and contractions (gradual increase in peristaltic activity). Phase III – Regular spike potentials and strong contractions (sweeps undigested material into the colon; controlled primarily by motilin).',
+  'Hunger contractions: occur when the stomach has been empty for several hours. They are rhythmic peristaltic contractions in the body of the stomach. These contractions can become strong enough to fuse, causing tetanic contractions lasting 2–3 minutes.',
+  'Hormonal regulation of MMC: Motilin, a peptide hormone released by the small intestine, triggers Phase III of the MMC. Its levels rise cyclically during fasting and fall once feeding begins. Ghrelin also plays a role in initiating MMC activity.',
+  'Neural regulation: the MMC is coordinated by the enteric nervous system (ENS) and modulated by the vagus nerve.',
+  'Physiological importance: clearing the stomach of residual food particles, mucus, and bacteria; preventing bacterial overgrowth in the stomach and small intestine; opening the pylorus to facilitate emptying of indigestible materials into the duodenum. The MMC stops immediately once food enters the stomach or small intestine.',
+],
+
+// **LO-3** (Topic-63) — Gastric filling: receptive relaxation of the proximal stomach
+officialDefinitions: [
+  'Receptive relaxation: the process by which the stomach accommodates incoming food while maintaining low intragastric pressure. Allows the stomach to expand without increasing intragastric pressure.',
+  'Long-loop (central/vago-vagal) reflex — Cephalic phase: Feeding (mechanical, taste, visual, olfactory stimuli) stimulates vagal efferents activating ENS neurons that INHIBIT smooth muscle contraction (using NO, VIP). Sensory information travels via vagal afferents to the nucleus tractus solitarius (NTS) in the medulla; the response is coordinated centrally and sent back via vagal efferents from the dorsal motor nucleus of the vagus (DMV).',
+  'Long-loop (central/vago-vagal) reflex — Gastric phase: Food in the stomach will activate somatosensory STRETCH receptors that deliver the signal to the brainstem evoking activation of the same parasympathetic nerves (long vago-vagal reflex). These three mechanisms (long reflex, local reflex, myogenic stress relaxation) are responsible for the gastric phase — MOST important!',
+  'Short-loop (local/ENS) reflex: ENS sensory neurons are activated that can also elicit LOCAL reflexes to dilate the stomach. When food enters the stomach, ENS sensory neurons detect distension and activate local enteric circuits, which stimulate local inhibitory motor neurons releasing NO and VIP, causing relaxation of the gastric smooth muscle. Also referred to as adaptive relaxation.',
+  'Myogenic stress relaxation: in response to stretch, myogenic stress relaxation can also be demonstrated as a third mechanism contributing to gastric accommodation.',
+  'Intestinal phase (least important): Hormones of the small intestine dilate proximal stomach to promote storage (to slow down emptying). Hormones mediating proximal gastric receptive relaxation include: GRP, VIP, Gastrin, Somatostatin, CCK, Glucagon, Secretin, Bombesin.',
+  'Proximal gastric basal tone: maintained by the vagus nerve (Cranial nerve X) and sympathetic inhibition. Proximal gastric contraction is stimulated by motilin.',
+],
+
+// **LO-4** (Topic-63) — Gastric emptying: peristaltic wave frequency, progression, and functions
+officialDefinitions: [
+  'Gastric emptying overview: stomach emptying is promoted by intense peristaltic contractions in the stomach antrum. The emptying of gastric contents into the duodenum takes about 3 hours. Most of the time, rhythmic stomach contractions are weak and function mainly to mix food with gastric secretions. For about 20% of the time, these contractions become intense, beginning in the mid-stomach and spreading through caudal parts, forming strong peristaltic ring-like contractions that cause stomach emptying.',
+  'Frequency and origin: the pacemaker region is located in the mid-body of the stomach (greater curvature). Peristaltic waves occur at a rate of 3 cycles/min (basic electrical rhythm, BER). The proximal portion of the stomach has NO BER; BER is present only in the distal parts.',
+  'Progression: peristaltic waves move distally toward the pylorus, increasing in amplitude and strength as they approach the antrum. The pyloric region contracts before the peristaltic wave reaches the pylorus. The pyloric canal serves as a "filter" allowing only small parts <2 mm to pass. Only 2–4 ml liquid chyme enters the duodenum in each cycle.',
+  'Mixing function: weak peristaltic waves mix food with gastric secretions forming chyme. The major function of the stomach is storage and grinding.',
+  'Grinding function: strong peristaltic waves in the antrum push chyme against the closed pyloric sphincter, causing retropulsion — chyme is pushed backward into the stomach for further breakdown into particles <2 mm.',
+  'Propulsion function: about 20% of the time, strong peristaltic contractions (the pyloric pump) begin in the mid-stomach and spread through the caudad stomach, generating high pressure (50–70 cm H₂O) and periodically pushing small amounts (2–4 ml) of chyme into the duodenum.',
+  'Regulation of gastric peristalsis: the frequency of slow waves in the caudad stomach is 3–5 per minute. Parasympathetic stimulation, gastrin, and motilin increase contraction strength and gastric motility. Sympathetic stimulation, secretin, and GIP decrease contraction strength, slowing gastric motility.',
+],
+
+// **LO-5** (Topic-63) — Physical and chemical sensing by stomach and duodenum to affect gastric emptying
+officialDefinitions: [
+  'Sensors: the stomach and especially the duodenum have mechanoreceptors and chemoreceptors that monitor: volume (distension) – sensed by stretch receptors; particle size – large particles delay emptying; osmolarity – hyperosmolar chyme slows emptying; pH – highly acidic chyme triggers inhibitory reflexes; nutrient composition – especially fats and amino acids trigger hormonal responses.',
+  'Gastric phase – promoting emptying (neural): distension of the gastric wall elicits local myenteric reflexes that increase pyloric pump activity. Neural control: stretch and contents of the stomach stimulate ENS neurons promoting gastric motility.',
+  'Gastric phase – promoting emptying (hormonal): digestive products of meat (mainly proteins) stimulate the release of gastrin, which enhances the pyloric pump activity. Gastrin also promotes motility.',
+  'Duodenal enterogastric inhibitory reflexes (neural): when excessive chyme enters the duodenum or if chyme is excessively acidic, hypertonic, contains too much fat/protein, or is irritating, enterogastric inhibitory reflexes are activated: (1) intrinsic ENS pathways – local reflexes in the duodenal wall slow gastric emptying; (2) sympathetic reflex pathways – signals transmitted to prevertebral sympathetic ganglia, which send inhibitory sympathetic signals to the stomach; (3) vagal reflexes to the brainstem – some signals travel via the vagus nerve to the medulla, reducing excitatory vagal stimulation to the stomach.',
+  'Cholecystokinin (CCK): secreted by the duodenal and jejunal mucosa (I cells) in response to fat and protein in the chyme. Inhibits gastric motility and tightens the pyloric sphincter. Slows gastric emptying to allow bile and pancreatic enzymes to properly emulsify fats.',
+  'Secretin: secreted (S cells) in response to acidic chyme (pH < 4.5). Inhibits gastric emptying by decreasing antral contractions and increasing pyloric sphincter tone. Stimulates pancreatic bicarbonate (HCO₃⁻) secretion to neutralize acidity.',
+  'Gastric Inhibitory Peptide (GIP): released from duodenum and jejunum (K cells) in response to fat and carbohydrates. Reduces gastric motility and stimulates insulin secretion. Has a weaker inhibitory effect compared to CCK and secretin.',
+  'Summary diagram — Gastric mechanisms PROMOTE EMPTYING: distention, protein, gastrin. Intestinal mechanisms INHIBIT EMPTYING — Neural: hyperosmosis, acid, distention, ileum; Humoral: CCK, secretin, GIP, neurotensin, protein, lipid, acid. Pyloric sphincter modulated by: intrinsic neurons (enkephalin, VIP), extrinsic: vagus, sympathicus.',
+],
+
+// **LO-6** (Topic-63) — Mechanism of vomiting (CRITICAL)
+officialDefinitions: [
+  'Vomiting (vomitus) definition: a complex brainstem protective reflex to empty the stomach and often proximal small intestinal contents. Multiple brainstem areas and spinal cord segments are involved. Forceful expulsion of stomach contents through the mouth.',
+  'Vomiting center and CTZ: the chemosensitive trigger zone (area postrema) has NO blood-brain barrier. The medullary center coordinates the vomiting reflex. The cerebellum also contributes. Stimuli from the CTZ (bloodborne toxins/drugs), from the GI tract, vestibular system (cerebellum), and higher brain centers all converge on the medullary vomiting center.',
+  'Evoking stimuli: GI tract irritation; visceral pain; kinetosis (motion sickness); drugs (e.g., apomorphine); visual, olfactory stimuli; emotion stimulation; pregnancy; irradiation; and others.',
+  'Nausea: symptoms preceding vomitus. During nausea: gastric motility slows, salivation increases, dizziness, sweating, and pallor may occur due to autonomic activation.',
+  'Reverse filling / retching phase: reverse filling of the stomach is caused by giant retrograde intestinal contractions. Müller maneuver (inspiratory effort with closed glottis) + opening of the LES and contraction of the abdominal muscles → content enters the esophagus. Glottis closes to prevent aspiration.',
+  'Expulsion phase: forceful expiration (Valsalva maneuver) and opening of the UES – EXPULSION – throwing up. The pharynx opens and the soft palate elevates to block the nasal cavity. Gastric contents are rapidly ejected through the esophagus and mouth.',
+  'Recovery: remnants delivered back to stomach by secondary peristalsis – a new cycle may start. Breathing resumes; residual nausea may persist.',
+],
+```

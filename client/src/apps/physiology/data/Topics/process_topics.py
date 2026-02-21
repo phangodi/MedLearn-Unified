@@ -41,7 +41,7 @@ def parse_official_definitions(txt_file_path):
             lo_content = sections[i + 1]
             
             # Extract the officialDefinitions array
-            match = re.search(r'officialDefinitions:\s*\[(.*?)\](?=\s*(?://|$))', lo_content, re.DOTALL)
+            match = re.search(r'officialDefinitions:\s*\[(.*?)\],?', lo_content, re.DOTALL)
             if match:
                 array_content = match.group(1)
                 

@@ -64,6 +64,11 @@ import topic55QuickReview from './topic55-quickreview';
 import topic56QuickReview from './topic56-quickreview';
 import topic57QuickReview from './topic57-quickreview';
 import topic58QuickReview from './topic58-quickreview';
+import topic59QuickReview from './topic59-quickreview';
+import topic60QuickReview from './topic60-quickreview';
+import topic61QuickReview from './topic61-quickreview';
+import topic62QuickReview from './topic62-quickreview';
+import topic63QuickReview from './topic63-quickreview';
 
 // Aggregate all Quick Review data by topic ID
 const quickReviewData = {
@@ -125,6 +130,11 @@ const quickReviewData = {
   'topic-56': topic56QuickReview,
   'topic-57': topic57QuickReview,
   'topic-58': topic58QuickReview,
+  'topic-59': topic59QuickReview,
+  'topic-60': topic60QuickReview,
+  'topic-61': topic61QuickReview,
+  'topic-62': topic62QuickReview,
+  'topic-63': topic63QuickReview,
 };
 
 /**
