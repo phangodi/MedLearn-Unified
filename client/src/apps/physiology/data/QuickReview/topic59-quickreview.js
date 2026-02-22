@@ -12,12 +12,11 @@ const topic59QuickReview = {
       blocks: [
         {
           type: 'header',
-          text: 'Four Major GIS Functions',
+          text: 'GIS Functions & Regional Control',
           critical: false
         },
         {
           type: 'list',
-          intro: 'Core functions of the gastrointestinal system:',
           items: [
             'Motility: coordinated skeletal + smooth muscle contractions — chewing, swallowing, peristalsis, segmentation',
             'Secretion: ~7–8 L/day of fluid — enzymes, bile, mucus, HCl from salivary glands, stomach, pancreas, intestine',
@@ -73,7 +72,7 @@ const topic59QuickReview = {
           type: 'list',
           intro: 'Three cell types in enteric ganglia:',
           items: [
-            'Intrinsic primary afferent neurons (IPANs): detect mechanical stretch and chemical stimuli from mucosa',
+            'IPANs (intrinsic primary afferent neurons): detect mechanical stretch and chemical stimuli from mucosa',
             'Interneurons: excitatory or inhibitory — integrate local signals between sensory and motor neurons',
             'Motor neurons: excitatory or inhibitory — control smooth muscle contraction/relaxation and glandular secretion'
           ],
@@ -120,7 +119,7 @@ const topic59QuickReview = {
         },
         {
           type: 'keypoint',
-          text: 'Key distinction: Parasympathetic fibers are PREganglionic (synapse on ENS neurons) — effects occur ONLY through ENS. Sympathetic fibers are POSTganglionic — effects occur MAINLY through ENS but also some direct action.',
+          text: 'Parasympathetic fibers are PREganglionic (synapse on ENS neurons) — effects occur ONLY through ENS. Sympathetic fibers are POSTganglionic — effects occur MAINLY through ENS but also some direct action.',
           critical: true
         },
         {
@@ -132,7 +131,7 @@ const topic59QuickReview = {
               'Pelvic splanchnic nerves → distal colon, rectum, anus',
               'Preganglionic ACh → nicotinic receptors on ENS',
               'Postganglionic: ACh (M3, excitatory) or VIP/GRP',
-              'Effect: ↑ motility, ↑ secretion, ↑ blood flow'
+              'Effect: ↑ motility, ↑ secretion, ↑ blood flow, sphincter relaxation'
             ]
           },
           right: {
@@ -141,20 +140,10 @@ const topic59QuickReview = {
               'Origin: T5–L2 spinal segments',
               'Synapse in celiac, sup/inf mesenteric ganglia',
               'Postganglionic NE release',
-              'α2 receptors on ENS neurons → indirect inhibition',
-              'α1 receptors → sphincter contraction, vasoconstriction'
+              'α2 on ENS neurons → indirect inhibition',
+              'α1 → sphincter contraction, vasoconstriction, ↓ motility, ↓ secretion'
             ]
           }
-        },
-        {
-          type: 'table',
-          headers: ['Parameter', 'Parasympathetic', 'Sympathetic'],
-          rows: [
-            ['Motility', '↑ Increased', '↓ Decreased'],
-            ['Secretion', '↑ Increased', '↓ Decreased'],
-            ['Sphincters', 'Relaxation', 'Contraction'],
-            ['Blood flow', '↑ Enhanced', '↓ Vasoconstriction']
-          ]
         },
         {
           type: 'clinical',
@@ -168,67 +157,34 @@ const topic59QuickReview = {
       blocks: [
         {
           type: 'header',
-          text: 'Three Types of GI Reflexes',
+          text: 'GI Reflex Types',
           critical: true
         },
         {
-          type: 'list',
-          intro: 'Overview of reflex types:',
-          items: [
-            'Local (intrinsic) reflexes — entirely within ENS',
-            'Short-loop reflexes — integrated in prevertebral sympathetic ganglia (outside CNS)',
-            'Long-loop reflexes — integrated in CNS (brainstem or spinal cord)'
+          type: 'table',
+          headers: ['', 'Local (Intrinsic)', 'Short-Loop', 'Long-Loop'],
+          rows: [
+            ['Integration site', 'Entirely within ENS', 'Prevertebral sympathetic ganglia', 'CNS (brainstem or spinal cord)'],
+            ['Afferent', 'ENS sensory neurons (IPANs)', 'Gut afferents to ganglia', 'Vagal, pelvic, or splanchnic nerves'],
+            ['Efferent', 'ENS motor neurons', 'Postganglionic sympathetic (NE)', 'Parasympathetic (ACh, VIP, GRP) or sympathetic (NE)'],
+            ['Key example', 'Peristaltic reflex', 'Ileogastric reflex (ileal distension → ↓ gastric motility)', 'Vagovagal reflex; defecation reflex']
           ],
           critical: true
         },
         {
-          type: 'header',
-          text: 'Local (Intrinsic) Reflexes',
-          critical: false
-        },
-        {
           type: 'steps',
-          intro: 'Peristaltic reflex arc — entirely within ENS:',
+          intro: 'Peristaltic reflex (local) — the prototypical ENS reflex:',
           items: [
-            'Mechanoreceptors/chemoreceptors/osmoreceptors detect luminal stimuli (stretch, pH, nutrients)',
+            'Mechanoreceptors/chemoreceptors detect luminal stimuli (stretch, pH, nutrients)',
             'Signals relay to ENS interneurons',
             'Excitatory motor neurons release ACh + substance P → contraction BEHIND bolus',
-            'Inhibitory motor neurons release NO + VIP → relaxation AHEAD of bolus',
-            'Result: coordinated peristalsis'
+            'Inhibitory motor neurons release NO + VIP → relaxation AHEAD of bolus'
           ],
           critical: false
         },
         {
-          type: 'header',
-          text: 'Short-Loop Reflexes',
-          critical: false
-        },
-        {
-          type: 'steps',
-          intro: 'Reflex arc exits gut wall but stays outside CNS:',
-          items: [
-            'Sensory neurons from gut wall send afferents to prevertebral sympathetic ganglia (celiac/mesenteric)',
-            'Integration occurs in the ganglion',
-            'Efferent sympathetic postganglionic fibers release NE → inhibition',
-            'Example: Ileogastric reflex — ileal distension → inhibits gastric motility'
-          ],
-          critical: false
-        },
-        {
-          type: 'header',
-          text: 'Long-Loop Reflexes',
-          critical: false
-        },
-        {
-          type: 'steps',
-          intro: 'Reflex arc involves the CNS:',
-          items: [
-            'Afferent signals via vagal, pelvic, or splanchnic nerves → brainstem or spinal cord',
-            'Central processing and integration',
-            'Efferent via parasympathetic (ACh, VIP, GRP) or sympathetic (NE) pathways',
-            'Example: Vagovagal reflex — stomach distension → NTS → vagal efferents → receptive relaxation (VIP, NO) + acid secretion (GRP)',
-            'Example: Defecation reflex — rectal distension → spinal cord → pelvic nerve → internal sphincter relaxation'
-          ],
+          type: 'paragraph',
+          text: 'Vagovagal reflex: stomach distension → vagal afferents → NTS → vagal efferents → receptive relaxation (VIP, NO) + acid secretion (GRP). Defecation reflex: rectal distension → spinal cord → pelvic nerve → internal sphincter relaxation.',
           critical: false
         },
         {
@@ -238,7 +194,7 @@ const topic59QuickReview = {
             ['ACh, Substance P', 'Excitatory — ↑ motility, ↑ secretion'],
             ['NO, VIP, ATP', 'Inhibitory — smooth muscle relaxation'],
             ['GRP', 'Stimulates gastric acid secretion (long-loop)'],
-            ['Norepinephrine', 'Sympathetic inhibition of ENS and vasoconstriction']
+            ['Norepinephrine', 'Sympathetic inhibition of ENS + vasoconstriction']
           ]
         }
       ]
@@ -273,14 +229,14 @@ const topic59QuickReview = {
           type: 'list',
           intro: 'Two major hormone families (by sequence homology):',
           items: [
-            'Gastrin family (gastrin, CCK): receptors use Gq → IP3/DAG pathway',
+            'Gastrin family (gastrin, CCK): receptors use Gq → IP₃/DAG pathway',
             'Secretin family (secretin, GIP, GLP-1, VIP): receptors use Gs → cAMP pathway'
           ],
           critical: false
         },
         {
           type: 'keypoint',
-          text: 'Mnemonic for cell types: "G-S-I-K-L-M" — G cells (gastrin), S cells (secretin), I cells (CCK), K cells (GIP), L cells (GLP-1), M cells (motilin). GIP and GLP-1 are both incretins — they stimulate insulin release.',
+          text: 'Cell type mnemonic: G-S-I-K-L-M. GIP and GLP-1 are both incretins — they stimulate insulin release in a glucose-dependent manner.',
           critical: true
         }
       ]
@@ -291,7 +247,7 @@ const topic59QuickReview = {
       blocks: [
         {
           type: 'header',
-          text: 'Luminal Sensing Mechanisms',
+          text: 'Luminal Sensing & Response Pathways',
           critical: false
         },
         {
@@ -310,38 +266,20 @@ const topic59QuickReview = {
             items: [
               'Nutrients (fats, proteins, carbohydrates)',
               'pH, osmolarity, bacterial products',
-              'Sensed by enteroendocrine cells (EECs)',
-              'Also: chemosensitive nerve endings, taste-like GPCRs on epithelium'
+              'Sensed by enteroendocrine cells (EECs) + taste-like GPCRs',
+              'Enterochromaffin cells → serotonin (5-HT) → activates IPANs'
             ]
           }
         },
         {
-          type: 'header',
-          text: 'Cellular (Local) Responses',
-          critical: false
-        },
-        {
-          type: 'list',
-          intro: 'Two local response pathways:',
-          items: [
-            'Enteroendocrine cells release hormones/paracrine signals: G cells → gastrin, I cells → CCK, S cells → secretin, L cells → GLP-1/PYY; enterochromaffin (EC) cells → serotonin (5-HT) activating IPANs',
-            'ENS coordinates short reflexes: regulates motility (peristalsis, segmentation), secretion (enzymes, HCO₃⁻, mucus), and local blood flow (VIP, NO)'
-          ],
-          critical: false
-        },
-        {
-          type: 'header',
-          text: 'Systemic Responses',
-          critical: false
-        },
-        {
-          type: 'list',
-          intro: 'Two systemic response pathways:',
-          items: [
-            'Neural: vagal and spinal afferents → brainstem NTS and hypothalamus → modulate satiety/hunger and autonomic GI output',
-            'Hormonal: enteroendocrine hormones reach distant organs — CCK → gallbladder/pancreas, secretin → pancreatic HCO₃⁻, motilin → MMC during fasting, GIP/GLP-1 → pancreatic β-cells (incretin effect)'
-          ],
-          critical: false
+          type: 'table',
+          headers: ['Response Level', 'Pathway', 'Examples'],
+          rows: [
+            ['Local (cellular)', 'EECs release hormones/paracrine signals', 'G cells → gastrin, I cells → CCK, S cells → secretin, L cells → GLP-1/PYY'],
+            ['Local (neural)', 'ENS coordinates short reflexes', 'Peristalsis, segmentation, secretion (enzymes, HCO₃⁻, mucus), blood flow (VIP, NO)'],
+            ['Systemic (neural)', 'Vagal/spinal afferents → brainstem NTS + hypothalamus', 'Satiety/hunger modulation, autonomic GI output'],
+            ['Systemic (hormonal)', 'Enteroendocrine hormones via bloodstream', 'CCK → gallbladder/pancreas, secretin → pancreatic HCO₃⁻, GIP/GLP-1 → β-cells (incretin)']
+          ]
         },
         {
           type: 'keypoint',

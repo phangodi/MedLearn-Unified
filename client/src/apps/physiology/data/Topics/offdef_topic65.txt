@@ -1,0 +1,71 @@
+// **LO-1** (Topic-65)
+officialDefinitions: [
+  'Pancreas juice components: Both the endocrine (insulin) and the exocrine pancreas perform vital functions. Secretion of exocrine pancreas juice: 1. Enzymes are necessary for digestion of all types of food. 2. Serous alkaline fluid providing appropriate pH for enzyme activity.',
+  'Aqueous (HCO₃⁻-rich) portion: functions to neutralize acidic chyme from the stomach, protecting the duodenal mucosa and providing an optimal pH for enzyme function.',
+  'Enzymatic portion: functions to digest carbohydrates, proteins, and lipids into absorbable molecules.',
+  'Acinar cells: located at the blind end of the branching duct system. Secrete digestive enzymes in zymogen (inactive) form, which are later activated in the duodenum. Enzyme secretion is stimulated by CCK (pancreozymine) and n. vagus. Enzymes secreted include: Proteolytic enzymes: trypsinogen, chymotrypsinogen, procarboxypeptidases, proelastase. Lipolytic enzymes: prophospholipase 2, lipase (procolipase), cholesterol esterase. Carbohydrate-digesting: pancreatic α-amylase. Nucleases: ribonuclease, deoxyribonuclease.',
+  'Ductal cells: line the pancreatic ducts. Secrete HCO₃⁻ (bicarbonate) and water to create an alkaline pancreatic juice, which neutralizes the acidic gastric contents entering the duodenum. Mechanism: HCO₃⁻ is exchanged for Cl⁻ at the apical membrane. The cystic fibrosis transmembrane conductance regulator (CFTR) plays a key role in Cl⁻ transport.',
+  'Centroacinar cells: found in the initial segment of the pancreatic ducts. Function as a transition between acinar and ductal cells. Primarily involved in the aqueous component secretion.',
+  'Enzyme secretion mechanism: Vesicular secretion (zymogen granules). All proteolytic and many lipolytic enzymes are present in inactive "pro-form".',
+  'Reference value: pancreatic juice production: 500–700 ml/day.',
+],
+
+// **LO-2** (Topic-65) ⚠️ CRITICAL
+officialDefinitions: [
+  'Digestive enzymes of the pancreas: Pancreatic enzymes digest carbohydrates, lipids, and proteins. Some are secreted in an active form, while others are secreted as inactive zymogens and require activation in the small intestine.',
+  'Carbohydrate digestion: Pancreatic Amylase (active form, secreted directly).',
+  'Lipid digestion: Pancreatic Lipase-Colipase. Phospholipase A₂. Cholesterol Ester Hydrolase.',
+  'Protein digestion (zymogens): Trypsinogen, Chymotrypsinogen, Proelastase, Procarboxypeptidase A/B — all secreted as inactive precursors.',
+  'Activation of pancreatic zymogens in the small intestine: When pancreatic enzymes are secreted, zymogens (inactive enzyme precursors) must be activated in the duodenum to prevent self-digestion of the pancreas.',
+  'Enteropeptidase (enterokinase) role: Enterokinase in the epithelial cells of the lumen — brush border enzyme — activates trypsinogen → trypsin. Enteropeptidase is secreted by the duodenal mucosa in response to chyme. Without enteropeptidase, trypsinogen cannot be activated, leading to severe digestive enzyme deficiencies.',
+  'Trypsin cascade: Activated trypsin acts as a proteolytic activator for other zymogens. Trypsin converts: Chymotrypsinogen → Chymotrypsin. Proelastase → Elastase. Procarboxypeptidase → Carboxypeptidase A/B. Procolipase → Colipase. Prophospholipase → Phospholipase. This cascade ensures all proteolytic enzymes are activated for efficient protein digestion.',
+  'Enzyme functions: Trypsin — endopeptidase that hydrolyzes internal peptide bonds, breaking down polypeptides into shorter peptides. Chymotrypsin — also an endopeptidase, preferentially cleaves aromatic amino acids. Elastase — breaks down elastin, a structural protein found in connective tissue. Carboxypeptidases A & B — exopeptidases that remove single amino acids from the C-terminal end of peptides.',
+],
+
+// **LO-3** (Topic-65)
+officialDefinitions: [
+  'Protein synthesis in the Rough Endoplasmic Reticulum (RER): Digestive enzymes are synthesized as inactive proenzymes (zymogens) on the RER of pancreatic acinar cells.',
+  'Processing in the Golgi Apparatus: Newly synthesized enzymes are transported to the Golgi complex, where they are modified and packed into condensing vacuoles.',
+  'Storage in Zymogen Granules: The enzymes are concentrated and stored in zymogen granules, which protect pancreatic tissue from premature enzyme activation.',
+  'Exocytosis of Zymogen Granules: When food enters the duodenum, hormones like CCK and secretin stimulate the pancreas. This signal mobilizes zymogen granules toward the apical membrane. The granules fuse with the plasma membrane, releasing their contents into the pancreatic duct, which drains into the duodenum.',
+  'Self-defense / protection from autodigestion — Packaging of many digestive proteins as zymogens: precursor proteins lack enzymatic activity. Selective sorting of secretory proteins and storage in zymogen granules: restricts the interaction of secretory proteins with other cellular compartments. Protease inhibitors in the zymogen granule: block the action of prematurely activated enzymes. Condensation of secretory proteins at low pH: limits the activity of active enzymes. Nondigestive proteases: degrade active enzymes.',
+  'Trypsin Inhibitor Production: Acinar cells co-secrete a trypsin inhibitor (pancreatic secretory trypsin inhibitor, PSTI), which prevents accidental trypsin activation inside the pancreas.',
+  'Fluid Flow and Pressure Gradients: A continuous fluid flow through the pancreatic ducts helps flush enzymes into the intestine, minimizing enzyme retention in the pancreas.',
+],
+
+// **LO-4** (Topic-65)
+officialDefinitions: [
+  'Pancreatic Bicarbonate Secretion: Bicarbonate (HCO₃⁻) secretion from pancreatic duct cells plays the primary role in neutralizing gastric acid. Secretin, released by the S cells of the duodenum in response to acidic chyme, stimulates the pancreas to increase bicarbonate secretion. The bicarbonate-rich pancreatic juice can reach concentrations as high as 145 mEq/L, a value about five times that of HCO₃⁻ in the plasma.',
+  'Biliary Bicarbonate Secretion: The liver secretes bile, which contains bicarbonate and contributes to further acid neutralization. Bile release is stimulated by secretin, similar to pancreatic secretion.',
+  'Duodenal Mucosal Secretions: Brunner\'s glands, located in the submucosa of the duodenum, secrete alkaline mucus rich in bicarbonate. This mucus protects the duodenal epithelium from acidic damage.',
+  'Hormonal Regulation of neutralization: Secretin (released in response to acid) stimulates the pancreas and bile ducts to secrete bicarbonate-rich fluid. Cholecystokinin (CCK) (released in response to fats and proteins) enhances pancreatic enzyme secretion but also promotes bile release, aiding in neutralization.',
+  'Result: Carbonic acid (H₂CO₃) dissociates into CO₂ and H₂O, which are harmless and easily excreted. Duodenal pH is maintained around 6.5–7.5 — optimal for enzyme activity and mucosal protection.',
+],
+
+// **LO-5** (Topic-65)
+officialDefinitions: [
+  'Overview: Although the enzymes of the pancreatic juice are secreted entirely by the acini of the pancreatic glands, the other two important components of pancreatic juice, HCO₃⁻ and water, are secreted mainly by the epithelial cells of the ductules and ducts that lead from the acini. When the pancreas is stimulated to secrete copious quantities of pancreatic juice, the HCO₃⁻ concentration can rise to as high as 145 mEq/L, a value about five times that of HCO₃⁻ in the plasma.',
+  'Step 1 — CO₂ and carbonic anhydrase: Carbon dioxide diffuses to the interior of the cell from the blood and, under the influence of carbonic anhydrase, combines with water to form carbonic acid (H₂CO₃). The carbonic acid dissociates into HCO₃⁻ and H⁺. Additional HCO₃⁻ enters the cell through the basolateral membrane by co-transport with Na⁺. The HCO₃⁻ is then exchanged for Cl⁻ by secondary active transport through the luminal border of the cell into the lumen of the duct. The Cl⁻ that enters the cell is recycled back into the lumen by special chloride channels (CFTR).',
+  'Step 2 — H⁺ and Na⁺ handling: The H⁺ formed by dissociation of carbonic acid inside the cell is exchanged for Na⁺ through the basolateral membrane of the cell by secondary active transport. Sodium ions also enter the cell by co-transport with HCO₃⁻ across the basolateral membrane. Sodium ions are then transported across the luminal border into the pancreatic duct lumen. The negative voltage of the lumen also pulls the positively charged Na⁺ across the tight junctions between the cells.',
+  'Step 3 — Osmosis and final juice formation: The overall movement of Na⁺ and HCO₃⁻ from the blood into the duct lumen creates an osmotic pressure gradient that causes osmosis of water also into the pancreatic duct, thus forming an almost completely isosmotic bicarbonate solution.',
+  'Stimulation: Secretin acts mainly on the ductal cells of the pancreas, promoting the secretion of HCO₃⁻ and water. The effects of secretin are potentiated by CCK and ACh.',
+],
+
+// **LO-6** (Topic-65) ⚠️ CRITICAL
+officialDefinitions: [
+  'Secretin release stimulus: Secretin is released from S cells in the duodenum in response to acidic chyme (H⁺ in the lumen of the intestine). S-cells release secretin in response to: increase in concentration of protons; increase in concentration of fats (fatty acids).',
+  'Secretin route and effect on pancreas: Secretin responds to acidic chyme → stimulates ductal epithelial cells to make bicarbonate. Secretin acts mainly on the ductal cells of the pancreas, promoting the secretion of HCO₃⁻ and water, which helps neutralize gastric acid in the duodenum. Secretin receptor belongs to the secretin family (Gs/cAMP pathway).',
+  'CCK release stimulus: Cholecystokinin (CCK) is released from I cells in the duodenal and jejunal mucosa when amino acids, small peptides, and fatty acids enter the small intestine. Released by enteroendocrine I-cells stimulated by high concentration of: fatty acids (fatty chyme), partially digested proteins (peptones), oligosaccharides (hyperosmolar chyme).',
+  'CCK route and effect on pancreas: CCK stimulate the acinar cells to release digestive enzymes. CCK bind to the receptors on the acinar cells and stimulate fusion of vesicles with cell membrane → release substances by exocytosis. CCK also relaxes the Sphincter of Oddi → ejection of the enzymes to the duodenum. CCK receptor belongs to the gastrin family (Gq/IP3/DAG pathway).',
+  'Route of regulatory peptides: Secretin and CCK are absorbed into the bloodstream from the duodenal mucosa, travel through the portal circulation, and act on their respective targets (ductal cells for secretin; acinar cells for CCK). The effects of Secretin are potentiated by CCK and ACh.',
+  'Phases of pancreatic secretion: Cephalic Phase — triggered by smell, taste, and conditioning; mediated by the vagus nerve; primarily enzymatic secretion (25% of maximum enzyme secretion). Gastric Phase — triggered by stomach distension; mediated by vagal-cholinergic pathway; 10–20% of maximum enzyme secretion. Intestinal Phase — accounts for 50–80% of maximum enzyme secretion; stimulates both enzymatic and aqueous secretions via CCK and Secretin.',
+],
+
+// **LO-7** (Topic-65)
+officialDefinitions: [
+  'Parasympathetic Nervous System (mainly via the vagus nerve): stimulates both exocrine and endocrine secretion. Mechanism: Acetylcholine (ACh) release → binds to muscarinic (M3) receptors. Effects: increases secretion of digestive enzymes (from acinar cells); increases bicarbonate secretion (from ductal cells); stimulates insulin release (from β-cells).',
+  'Sympathetic Nervous System (via splanchnic nerves): inhibits pancreatic secretion overall. Mechanism: Norepinephrine (NE) → activates α-adrenergic receptors. Effects: reduces blood flow to the pancreas; inhibits insulin secretion; stimulates glucagon release during hypoglycemia (via β-receptors).',
+  'Vago-Vagal Reflexes and Pancreatic Secretion: these reflexes involve both afferent (sensory) and efferent (motor) fibers of the vagus nerve. The vagovagal reflex is a long reflex — both the afferents and the (parasympathetic) efferents are found in the vagal nerve. How it works: stimuli in the stomach or duodenum (e.g., stretch, protein, acidity) → sensed by vagal afferents → signal sent to dorsal vagal complex in brainstem → efferent vagal fibers then stimulate: pancreatic enzyme secretion (via ACh and gastrin-releasing peptide), bicarbonate secretion, endocrine function (e.g., insulin).',
+  'Example of vago-vagal reflex: during the cephalic phase of digestion (before food reaches the stomach), thoughts, smell, or taste of food can trigger pancreatic enzyme release via a vago-vagal reflex.',
+  'Inhibitory control: Gastric inhibitory peptide (GIP) and somatostatin inhibit pancreatic secretion.',
+],

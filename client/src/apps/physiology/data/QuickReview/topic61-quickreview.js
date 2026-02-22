@@ -79,13 +79,8 @@ const topic61QuickReview = {
           }
         },
         {
-          type: 'header',
-          text: 'Hepatic Sinusoidal Capillaries',
-          critical: true
-        },
-        {
           type: 'list',
-          intro: 'Unique morphological and functional features:',
+          intro: 'Sinusoidal capillary features:',
           items: [
             'Discontinuous endothelium — highly fenestrated (pores ~100–150 nm), NO basement membrane → free macromolecule exchange',
             'Space of Disse (perisinusoidal space): plasma flows freely between endothelium and hepatocytes; contains stellate (Ito) cells that store vitamin A and regulate ECM',
@@ -95,23 +90,13 @@ const topic61QuickReview = {
           critical: true
         },
         {
-          type: 'steps',
-          intro: 'Microcirculation pathway:',
-          items: [
-            'Interlobular arteries/veins → perilobular arteries/veins',
-            'Blood enters sinusoids (portal + arterial blood mix)',
-            'Sinusoids → central vein → sublobular vein → hepatic vein → IVC'
-          ],
+          type: 'paragraph',
+          text: 'Microcirculation pathway: interlobular arteries/veins → perilobular vessels → sinusoids (portal + arterial blood mix) → central vein → sublobular vein → hepatic vein → IVC.',
           critical: false
         },
         {
-          type: 'header',
-          text: 'Ascites Development',
-          critical: true
-        },
-        {
           type: 'steps',
-          intro: 'How increased venous pressure leads to ascites:',
+          intro: 'Ascites — how ↑ venous pressure leads to fluid accumulation:',
           items: [
             '↑ Portal venous pressure (e.g., cirrhosis) → ↑ sinusoidal hydrostatic pressure',
             'Starling forces shift toward filtration → fluid pushed into interstitium',
@@ -149,11 +134,6 @@ const topic61QuickReview = {
         {
           type: 'paragraph',
           text: 'Water-soluble nutrients (glucose, amino acids) enter portal circulation → liver. Fats bypass portal system, entering lymphatics via lacteals → thoracic duct → systemic circulation.',
-          critical: false
-        },
-        {
-          type: 'header',
-          text: 'ANS Adaptation of Blood Flow to Secretion',
           critical: false
         },
         {

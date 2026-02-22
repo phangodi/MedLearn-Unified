@@ -82,8 +82,8 @@ const topic60QuickReview = {
           critical: true
         },
         {
-          type: 'steps',
-          intro: 'Pacemaker mechanism:',
+          type: 'list',
+          intro: 'Pacemaker properties:',
           items: [
             'Spontaneous cyclic depolarization and repolarization occur in ICCs',
             'Slow waves spread to adjacent smooth muscle via low-resistance gap junctions',
@@ -142,13 +142,8 @@ const topic60QuickReview = {
           critical: false
         },
         {
-          type: 'header',
-          text: 'Motor Patterns During Digestion',
-          critical: false
-        },
-        {
           type: 'list',
-          intro: 'Three major digestive motor patterns:',
+          intro: 'Motor patterns during digestion:',
           items: [
             'Peristalsis: contractile ring 2–3 cm behind bolus + relaxation ahead; propels contents toward anus; requires intact myenteric plexus',
             'Segmentation: circular muscle contracts at multiple points simultaneously; mixes chyme with enzymes/bile; does NOT propel — maximizes mucosal contact for absorption; dominant in small intestine',
@@ -326,20 +321,8 @@ const topic60QuickReview = {
           critical: false
         },
         {
-          type: 'header',
-          text: 'GI Pain from Abnormal Distension',
-          critical: false
-        },
-        {
-          type: 'steps',
-          intro: 'Pain pathway from excessive stretch:',
-          items: [
-            'Excessive gas/fluid/solid stretches gut wall → mechanoreceptors in submucosal & myenteric plexuses activated',
-            'Afferent C fibers transmit signals via two routes:',
-            'Vagal afferents → brainstem → nausea, bloating',
-            'Spinal afferents (via sympathetic nerves) → thoracolumbar cord → abdominal pain, cramping',
-            'Pain amplified by 5-HT (from EC cells), prostaglandins, bradykinin, substance P; chronic sensitization by TNF-α, IL-6 (as in IBS)'
-          ],
+          type: 'paragraph',
+          text: 'Excessive gas/fluid/solid stretches the gut wall → mechanoreceptors in submucosal & myenteric plexuses activate visceral C fiber afferents via two routes: vagal afferents → brainstem (nausea, bloating) and spinal afferents via sympathetic nerves → thoracolumbar cord (abdominal pain, cramping). Pain is amplified by 5-HT (from EC cells), prostaglandins, bradykinin, substance P; chronic sensitization by TNF-α, IL-6 (as in IBS).',
           critical: false
         },
         {

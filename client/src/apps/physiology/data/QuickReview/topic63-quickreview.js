@@ -12,12 +12,7 @@ const topic63QuickReview = {
       blocks: [
         {
           type: 'header',
-          text: 'Functional Divisions of the Stomach',
-          critical: true
-        },
-        {
-          type: 'paragraph',
-          text: 'The stomach is divided into two functional regions based on motility: the orad (proximal) and caudad (distal) regions, each with distinct muscle thickness and motor roles.',
+          text: 'Orad vs Caudad Gastric Motility',
           critical: true
         },
         {
@@ -25,8 +20,7 @@ const topic63QuickReview = {
           left: {
             title: 'Orad Region (Fundus + Proximal Body)',
             items: [
-              'Thin-walled',
-              'Primary function: STORAGE',
+              'Thin-walled → primary function: STORAGE',
               'Receptive relaxation — expands without ↑ intragastric pressure',
               'Does NOT participate in peristalsis',
               'During emptying: gradual tonic contraction pushes chyme distally'
@@ -35,17 +29,16 @@ const topic63QuickReview = {
           right: {
             title: 'Caudad Region (Distal Body + Antrum)',
             items: [
-              'Thick-walled muscle',
-              'Primary function: MIXING, GRINDING, EMPTYING',
+              'Thick-walled → MIXING, GRINDING, EMPTYING',
               'Generates strong peristaltic contractions',
               'ICCs in mid-body set BER at 3 cycles/min',
-              'Pyloric canal filters: only particles <2 mm pass; 2–4 ml chyme/cycle'
+              'Pyloric canal filters: only <2 mm particles pass; 2–4 ml chyme/cycle'
             ]
           }
         },
         {
           type: 'keypoint',
-          text: 'Pacemaker interstitial cells of Cajal in the mid-body generate the basic electrical rhythm (BER) at 3 cycles/min, driving peristaltic waves that increase in amplitude toward the pylorus.',
+          text: 'Pacemaker ICCs in the mid-body generate BER at 3 cycles/min, driving peristaltic waves that increase in amplitude toward the pylorus.',
           critical: true
         }
       ]
@@ -61,38 +54,26 @@ const topic63QuickReview = {
         },
         {
           type: 'paragraph',
-          text: 'The MMC is cyclical peristaltic activity in the stomach and small intestine during FASTING, repeating every 90–120 min. Function: "housekeeping" — clears residual food, mucus, dead cells, bacteria; prevents bacterial overgrowth; opens pylorus for indigestible material (>2 mm).',
+          text: 'Cyclical peristaltic activity in the stomach and small intestine during FASTING, repeating every 90–120 min. "Housekeeping" function: clears residual food, mucus, dead cells, bacteria; prevents bacterial overgrowth; opens pylorus for indigestible material (>2 mm).',
           critical: true
         },
         {
-          type: 'list',
-          intro: 'The MMC has three phases:',
-          items: [
-            'Phase I — Quiescence: no contractions',
-            'Phase II — Irregular: weak contractions gradually increasing',
-            'Phase III — Active sweep: strong regular peristaltic waves clear the lumen (MOST important phase)'
-          ],
-          critical: true
-        },
-        {
-          type: 'steps',
-          intro: 'Phase III — the active sweep:',
-          items: [
-            'Triggered primarily by motilin (from M cells in duodenum/jejunum)',
-            'Ghrelin also contributes to initiation',
-            'Strong peristaltic waves sweep from stomach through entire small intestine',
-            'Clears all luminal contents into the colon'
-          ],
-          critical: true
+          type: 'table',
+          headers: ['Phase', 'Activity', 'Key Feature'],
+          rows: [
+            ['Phase I', 'Quiescence', 'No contractions'],
+            ['Phase II', 'Irregular contractions', 'Gradually increasing intensity'],
+            ['Phase III', 'Strong regular peristaltic sweep', 'MOST important — triggered by motilin (M cells, duodenum/jejunum); ghrelin also contributes; clears lumen into colon']
+          ]
         },
         {
           type: 'paragraph',
-          text: 'Neural regulation: coordinated by ENS with vagal modulation. Hunger contractions occur after prolonged fasting — rhythmic peristaltic contractions in the body that can fuse into tetanic contractions lasting 2–3 min (hunger pangs).',
+          text: 'Coordinated by ENS with vagal modulation. Hunger contractions occur after prolonged fasting — rhythmic contractions in the body that can fuse into tetanic contractions lasting 2–3 min (hunger pangs).',
           critical: false
         },
         {
           type: 'keypoint',
-          text: 'The MMC is IMMEDIATELY abolished when food enters the stomach — digestive motility (peristalsis, segmentation) takes over.',
+          text: 'The MMC is IMMEDIATELY abolished when food enters the stomach — digestive motility takes over.',
           critical: true
         }
       ]
@@ -103,59 +84,26 @@ const topic63QuickReview = {
       blocks: [
         {
           type: 'header',
-          text: 'Receptive Relaxation of the Proximal Stomach',
+          text: 'Receptive Relaxation — Gastric Filling',
           critical: false
         },
         {
           type: 'paragraph',
-          text: 'Receptive relaxation allows the proximal stomach to expand and accommodate food without raising intragastric pressure. The final mediators are always the same: inhibitory enteric neurons releasing NO and VIP → smooth muscle relaxation. Three mechanisms achieve this:',
+          text: 'Allows the proximal stomach to expand and accommodate food without raising intragastric pressure. Final mediators are always the same: inhibitory enteric neurons releasing NO and VIP → smooth muscle relaxation.',
           critical: false
         },
         {
-          type: 'list',
-          intro: 'Three mechanisms of gastric accommodation:',
-          items: [
-            '1. Long-loop (central/vagovagal) reflex',
-            '2. Short-loop (local/ENS) reflex',
-            '3. Myogenic stress relaxation'
-          ],
-          critical: false
-        },
-        {
-          type: 'steps',
-          intro: '1. Long-loop (vagovagal) reflex:',
-          items: [
-            'Cephalic phase: feeding stimuli (taste, smell, sight) → vagal afferents → NTS in medulla',
-            'Efferent signals from dorsal motor nucleus of vagus (DMV) → ENS inhibitory neurons → NO + VIP release',
-            'Gastric phase: food in stomach activates stretch receptors → same vagovagal reflex pathway',
-            'Result: proximal stomach relaxes via centrally coordinated reflex'
-          ],
-          critical: false
-        },
-        {
-          type: 'steps',
-          intro: '2. Short-loop (local ENS) reflex — Adaptive relaxation:',
-          items: [
-            'Gastric distension activates ENS sensory neurons directly',
-            'Local enteric circuits stimulate inhibitory motor neurons',
-            'NO and VIP released → local smooth muscle relaxation',
-            'No CNS involvement required'
-          ],
-          critical: false
-        },
-        {
-          type: 'steps',
-          intro: '3. Myogenic stress relaxation:',
-          items: [
-            'Intrinsic property of smooth muscle',
-            'Sustained stretch → muscle relaxes passively',
-            'Contributes alongside neural reflexes during the gastric phase'
-          ],
-          critical: false
+          type: 'table',
+          headers: ['Mechanism', 'Trigger', 'Pathway', 'Phase(s)'],
+          rows: [
+            ['Long-loop (vagovagal)', 'Feeding stimuli (taste, smell, sight) or gastric stretch', 'Vagal afferents → NTS → DMV → ENS inhibitory neurons → NO + VIP', 'Cephalic + Gastric'],
+            ['Short-loop (local ENS)', 'Gastric distension', 'ENS sensory neurons → local circuits → inhibitory motor neurons → NO + VIP (no CNS)', 'Gastric'],
+            ['Myogenic stress relaxation', 'Sustained stretch', 'Intrinsic smooth muscle property → passive relaxation', 'Gastric']
+          ]
         },
         {
           type: 'keypoint',
-          text: 'All three mechanisms together form the GASTRIC PHASE response — the MOST important for accommodation. Intragastric pressure remains constant up to ~1.5 L.',
+          text: 'All three together form the GASTRIC PHASE response — the MOST important for accommodation. Intragastric pressure stays constant up to ~1.5 L.',
           critical: false
         }
       ]
@@ -166,48 +114,26 @@ const topic63QuickReview = {
       blocks: [
         {
           type: 'header',
-          text: 'Gastric Peristalsis — Frequency & Progression',
+          text: 'Gastric Peristalsis & Emptying',
           critical: false
         },
         {
           type: 'paragraph',
-          text: 'Peristaltic waves originate in the mid-body at 3 cycles/min (BER from ICCs). Waves travel distally, increasing in amplitude and force toward the antrum. The pyloric region contracts BEFORE the wave arrives, closing the canal. Only 2–4 ml liquid chyme enters the duodenum per cycle. Total gastric emptying: ~3 hours.',
+          text: 'Peristaltic waves originate in the mid-body at 3 cycles/min (BER from ICCs), travel distally with increasing amplitude toward the antrum. The pylorus contracts BEFORE the wave arrives. Only 2–4 ml liquid chyme enters the duodenum per cycle. Total emptying: ~3 hours.',
           critical: false
         },
         {
-          type: 'list',
-          intro: 'Gastric peristalsis serves three distinct functions:',
-          items: [
-            '1. Mixing',
-            '2. Grinding',
-            '3. Propulsion'
-          ],
-          critical: false
-        },
-        {
-          type: 'paragraph',
-          text: '1. Mixing: weak peristaltic waves combine food with gastric secretions (HCl, pepsin) to form chyme.',
-          critical: false
-        },
-        {
-          type: 'steps',
-          intro: '2. Grinding (retropulsion cycle):',
-          items: [
-            'Strong antral contractions push chyme against the nearly closed pylorus',
-            'Chyme is smashed and sheared against the pyloric wall',
-            'Retropulsion: most material is reflected backward into the body',
-            'Cycle repeats until particles are reduced to <2 mm'
-          ],
-          critical: false
-        },
-        {
-          type: 'paragraph',
-          text: '3. Propulsion: ~20% of the time, intense ring-like contractions (pyloric pump) sweep from mid-stomach through the caudad region, squirting small boluses of liquid chyme into the duodenum.',
-          critical: false
+          type: 'table',
+          headers: ['Function', 'Mechanism', 'Key Detail'],
+          rows: [
+            ['Mixing', 'Weak peristaltic waves blend food with HCl + pepsin', 'Forms chyme'],
+            ['Grinding', 'Strong antral contractions push chyme against closed pylorus → retropulsion', 'Reduces particles to <2 mm; cycle repeats until ground'],
+            ['Propulsion', 'Intense ring-like contractions (pyloric pump) from mid-stomach through caudad', '~20% of the time; squirts small boluses into duodenum']
+          ]
         },
         {
           type: 'keypoint',
-          text: 'Promoters of peristalsis: gastric distension, gastrin, parasympathetic (ACh), motilin. Inhibitors: secretin, CCK, GIP, sympathetic stimulation.',
+          text: 'Promoters: gastric distension, gastrin, ACh (parasympathetic), motilin. Inhibitors: secretin, CCK, GIP, sympathetic stimulation.',
           critical: false
         }
       ]
@@ -218,7 +144,7 @@ const topic63QuickReview = {
       blocks: [
         {
           type: 'header',
-          text: 'Regulation of Gastric Emptying Rate',
+          text: 'Sensing & Regulation of Gastric Emptying',
           critical: false
         },
         {
@@ -226,64 +152,30 @@ const topic63QuickReview = {
           left: {
             title: 'Gastric Sensing → PROMOTES Emptying',
             items: [
-              'Mechanoreceptors detect wall distension',
-              'Local ENS myenteric reflexes ↑ pyloric pump',
-              'Protein digestion products → gastrin release → ↑ motility'
+              'Wall distension → ENS myenteric reflexes ↑ pyloric pump',
+              'Protein digestion products → gastrin → ↑ motility'
             ]
           },
           right: {
             title: 'Duodenal Sensing → INHIBITS Emptying',
             items: [
-              'Mechanoreceptors: distension',
-              'Chemoreceptors: pH <3.5–4.0, fat, protein',
-              'Osmoreceptors: hyperosmolarity',
-              'All activate enterogastric inhibitory reflexes'
+              'Distension, acid (pH <3.5–4), hyperosmolarity, fat, protein',
+              'Enterogastric reflex via: ENS local, sympathetic (celiac ganglion), vago-vagal (brainstem)'
             ]
           }
         },
         {
-          type: 'list',
-          intro: 'Three enterogastric inhibitory reflex routes:',
-          items: [
-            '1. Local ENS pathways within the duodenal wall',
-            '2. Sympathetic reflex via prevertebral ganglia',
-            '3. Vagal reflex to brainstem'
-          ],
-          critical: false
-        },
-        {
-          type: 'steps',
-          intro: '1. CCK (I cells — fat & protein):',
-          items: [
-            'Released from duodenal/jejunal I cells in response to fat and protein',
-            'Inhibits gastric motility + tightens pyloric sphincter',
-            'Also stimulates bile and pancreatic enzyme secretion'
-          ],
-          critical: false
-        },
-        {
-          type: 'steps',
-          intro: '2. Secretin (S cells — acid):',
-          items: [
-            'Released when duodenal pH drops below 4.5',
-            'Inhibits antral contractions',
-            'Stimulates pancreatic HCO₃⁻ secretion to neutralize acid'
-          ],
-          critical: false
-        },
-        {
-          type: 'steps',
-          intro: '3. GIP (K cells — fat & carbohydrates):',
-          items: [
-            'Released from K cells in response to fat and carbohydrates',
-            'Weakest inhibitor of gastric emptying among the three',
-            'Also stimulates insulin secretion (incretin effect)'
-          ],
-          critical: false
+          type: 'table',
+          headers: ['Hormone', 'Source', 'Trigger', 'Gastric Effect', 'Other Action'],
+          rows: [
+            ['CCK', 'I cells', 'Fat, protein', '↓ Motility, ↑ pyloric tone', 'Stimulates bile + pancreatic enzymes'],
+            ['Secretin', 'S cells', 'Acid (pH <4.5)', '↓ Antral contractions', 'Stimulates pancreatic HCO₃⁻'],
+            ['GIP', 'K cells', 'Fat, carbohydrates', 'Mild ↓ emptying (weakest)', 'Stimulates insulin (incretin)']
+          ]
         },
         {
           type: 'keypoint',
-          text: 'Net result: gastric emptying rate is titrated to match the duodenum\'s capacity to digest and absorb chyme — a feedback loop between stomach and duodenum.',
+          text: 'Gastric emptying rate is titrated to match the duodenum\'s capacity to digest and absorb — a feedback loop between stomach and duodenum.',
           critical: false
         }
       ]
@@ -294,60 +186,28 @@ const topic63QuickReview = {
       blocks: [
         {
           type: 'header',
-          text: 'Vomiting (Emesis) — Mechanism & Stimuli',
+          text: 'Vomiting (Emesis)',
           critical: true
         },
         {
-          type: 'paragraph',
-          text: 'Vomiting is a complex brainstem protective reflex to forcibly expel stomach (and often proximal small intestinal) contents. The medullary vomiting center integrates all inputs and coordinates the motor response.',
-          critical: true
-        },
-        {
-          type: 'list',
-          intro: 'Four input sources converge on the medullary vomiting center:',
-          items: [
-            '1. Chemoreceptor trigger zone (CTZ / area postrema)',
-            '2. Cerebellum (vestibular input)',
-            '3. GI tract afferents (vagal + sympathetic)',
-            '4. Higher brain centers (cortex + limbic)'
-          ],
-          critical: true
-        },
-        {
-          type: 'paragraph',
-          text: '1. CTZ / Area postrema: located in the floor of the 4th ventricle; NO blood-brain barrier → directly samples blood for toxins, drugs, metabolic disturbances (uremia, DKA).',
-          critical: true
-        },
-        {
-          type: 'paragraph',
-          text: '2. Cerebellum: relays vestibular signals — mediates motion sickness (kinetosis).',
-          critical: false
-        },
-        {
-          type: 'paragraph',
-          text: '3. GI tract afferents: vagal and sympathetic afferents signal irritation, distension, inflammation from the GI tract.',
-          critical: false
-        },
-        {
-          type: 'paragraph',
-          text: '4. Higher brain centers: cortex and limbic system transmit pain, emotional distress, disgust, and visual/olfactory stimuli.',
-          critical: false
-        },
-        {
-          type: 'header',
-          text: 'Mechanism of Vomiting',
-          critical: true
+          type: 'table',
+          headers: ['Input Source', 'What It Detects'],
+          rows: [
+            ['CTZ / Area postrema (floor of 4th ventricle)', 'Blood-borne toxins, drugs, metabolic disturbances (uremia, DKA) — NO blood-brain barrier'],
+            ['Cerebellum (vestibular)', 'Motion sickness (kinetosis)'],
+            ['GI tract afferents (vagal + sympathetic)', 'Irritation, distension, inflammation'],
+            ['Higher brain centers (cortex + limbic)', 'Pain, emotion, disgust, visual/olfactory stimuli']
+          ]
         },
         {
           type: 'steps',
-          intro: 'Sequential mechanism:',
+          intro: 'Mechanism (sequential):',
           items: [
             'Nausea precedes vomiting (gastric motility slows, salivation ↑)',
-            'Giant RETROGRADE intestinal contractions cause reverse filling of the stomach',
-            'Müller maneuver: forced inspiration against closed glottis → negative intrathoracic pressure; LES opens + abdominal muscles contract → gastric contents enter esophagus',
-            'Valsalva maneuver: forced expiration + opening of UES → EXPULSION through the mouth',
-            'Glottis closes and soft palate elevates to protect airway and nasal cavity',
-            'Remnants may return to stomach via secondary peristalsis — a new cycle may begin'
+            'Giant RETROGRADE intestinal contractions → reverse filling of stomach',
+            'Müller maneuver: forced inspiration against closed glottis → LES opens + abdominal muscles contract → contents enter esophagus',
+            'Valsalva maneuver: forced expiration + UES opens → EXPULSION; glottis closes + soft palate elevates to protect airway',
+            'Remnants may return via secondary peristalsis — a new cycle may begin'
           ],
           critical: true
         },
@@ -355,12 +215,10 @@ const topic63QuickReview = {
           type: 'list',
           intro: 'Triggering stimuli:',
           items: [
-            'GI tract irritation (infections, food poisoning)',
-            'Visceral pain',
-            'Motion sickness (kinetosis)',
-            'Drugs/toxins (apomorphine, opioids, chemotherapy)',
+            'GI tract irritation (infections, food poisoning), visceral pain',
+            'Motion sickness, drugs/toxins (apomorphine, opioids, chemotherapy)',
             'Visual/olfactory stimuli, emotional distress',
-            'Pregnancy, irradiation, metabolic disorders (uremia, DKA), increased intracranial pressure'
+            'Pregnancy, irradiation, metabolic disorders (uremia, DKA), ↑ intracranial pressure'
           ],
           critical: false
         }

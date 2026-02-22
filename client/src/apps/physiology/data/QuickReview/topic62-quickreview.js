@@ -67,11 +67,6 @@ const topic62QuickReview = {
           ]
         },
         {
-          type: 'header',
-          text: 'Two-Stage Saliva Formation',
-          critical: false
-        },
-        {
           type: 'comparison',
           left: {
             title: 'Primary Saliva (Acinar)',
@@ -309,11 +304,6 @@ const topic62QuickReview = {
           }
         },
         {
-          type: 'header',
-          text: 'Sphincter Tone Mechanisms',
-          critical: false
-        },
-        {
           type: 'comparison',
           left: {
             title: 'UES (Cricopharyngeus — Striated)',
@@ -373,13 +363,8 @@ const topic62QuickReview = {
           }
         },
         {
-          type: 'header',
-          text: 'Clinical Definitions',
-          critical: true
-        },
-        {
           type: 'list',
-          intro: 'Three important clinical terms:',
+          intro: 'Clinical definitions:',
           items: [
             'Dysphagia: difficulty or discomfort in swallowing; caused by inflammation, stenosis, diverticulum, motility disorders, reflux, or medullary lesions',
             'Achalasia: LES fails to relax due to loss of inhibitory myenteric neurons (VIP/NO); impaired peristalsis + progressive esophageal dilation (megaesophagus); diagnosed by manometry (LES >40 mmHg)',
