@@ -1,0 +1,64 @@
+```javascript
+// **LO-1** (Topic-74)
+officialDefinitions: [
+  'Adrenal glands: 5 g each. Located superior to the kidneys.',
+  'Cortical zones (3): Zona glomerulosa (outermost, beneath connective tissue capsule): secretes Mineralocorticoids — principal hormone: Aldosterone. Zona fasciculata (middle, largest zone): secretes Glucocorticoids — principal hormone: Cortisol. Zona reticularis (innermost cortical zone): secretes Androgens — principal hormone: Dehydroepiandrosterone (DHEA).',
+  'Medulla (1 zone): inner zone of the adrenal gland; secretes catecholamines (adrenaline/epinephrine, noradrenaline/norepinephrine) from chromaffin cells. Paracrine effect of glucocorticoids on catecholamine secretion: cortisol (from the cortex) induces PNMT (phenylethanolamine n-methyltransferase), enabling conversion of noradrenalin to adrenalin in the medulla.',
+  'Innervation: Autonomic innervation — direct innervation and regulation of blood flow. Neurosecretion: hypothalamus, adrenal medulla. The medulla is innervated by preganglionic sympathetic fibers (acetylcholine — Sympathikus/ACh).',
+  'Adrenal cortex is vital for life!',
+],
+
+// **LO-2** (Topic-74)
+officialDefinitions: [
+  'Biosynthesis of steroid hormones: synthesis occurs in the smooth endoplasmic reticulum and mitochondria. Enzymes involved: Cytochrome P450 and Hydroxysteroid dehydrogenases. Cholesterol is the common precursor — derived from plasma LDL or from de novo synthesis.',
+  'Biosynthesis of glucocorticoids (zona fasciculata pathway): Cholesterol → (Desmolase) → Pregnenolone → (3-HSDH) → Progesterone → (17-OH-ase) → 17-OH-progesterone → (21-OH-ase) → 11-deoxycortisol → (11-OH-ase) → Cortisol.',
+  'Biosynthesis of mineralocorticoids (zona glomerulosa pathway): Cholesterol → (Desmolase) → Pregnenolone → (3-HSDH) → Progesterone → (21-OH-ase) → 11-deoxycorticosterone → (11-OH-ase) → Corticosterone → (18-OH-ase) → 18-OH-costicosterone → (18-HSDH) → Aldosterone.',
+  'Biosynthesis of androgens (zona reticularis pathway): Cholesterol → (Desmolase) → Pregnenolone → (17-OH-ase) → 17-OH-pregnenolone → (17,20-lyase) → DHEA (Dehydroepiandrosterone). DHEA can be sulfated to DHEAS, or converted via 17-HSDH → Androstanedione, then further to Testosterone → (aromatase) → Estradiol.',
+  'Effect of ACTH on biosynthesis of cortisol: ACTH binds its receptor (Gs-protein coupled) → adenylyl cyclase → cAMP → Protein Kinase A → activates StAR (steroidogenic acute regulatory protein — rate-limiting step) → cholesterol transport into mitochondria → cortisol biosynthesis proceeds. ACTH also stimulates LDL uptake and de novo cholesterol synthesis.',
+],
+
+// **LO-3** (Topic-74)
+officialDefinitions: [
+  'HPA (Hypothalamo-Pituitary-Adrenal) axis: Hypothalamus (parvocellular neurons) secretes CRH (Corticotropin-releasing hormone) and ADH (Antidiuretic hormone) → travel via hypothalamic-hypophyseal portal system → Adenohypophysis → ACTH secretion → Adrenal cortex → Cortisol → Effect.',
+  'Negative feedback loops: Cortisol exerts negative feedback at the level of the hypothalamus (inhibiting CRH) and at the level of the adenohypophysis (inhibiting ACTH secretion) — direct and indirect negative feedback loops. Short negative feedback: ACTH inhibits CRH at the hypothalamus.',
+  'Stressors activating the HPA axis: infection, exercise, stressors, cytokines (selective?). Secondary triggers for CRH/ACTH release: fever, hypoglycemia, long-term stress.',
+  'Circadian rhythm of cortisol secretion: cortisol and ACTH follow a circadian rhythm — peak in the morning (around 08:00), lowest during sleep (around midnight). Pulsatile secretion of both ACTH and cortisol throughout the day.',
+  'Corticotroph cells of the anterior pituitary: stimulated by CRH from the paraventricular nucleus (PVN) of the hypothalamus. They produce Pre-pro-opiomelanocortin (POMC) — a large precursor protein. POMC is cleaved into: ACTH (Adrenocorticotropic hormone), α-MSH, γ-MSH, β-lipotropin, γ-lipotropin, β-endorphin, CLIP, Met-Enkephalin. ACTH and α-MSH are both products of a single precursor (POMC).',
+  'POMC structure: Signal peptide (aa -26 to 1), N-terminal fragment (aa 1–76/79), ACTH (aa 112–150), β-lipotropin (aa 153–241). Further cleavage: ACTH → α-MSH (aa 112–124) + CLIP (aa 130–150); β-lipotropin → γ-lipotropin (aa 153–208) + β-endorphin (aa 208–211). N-terminal fragment → γ-MSH (aa 51–61); β-endorphin → β-MSH (aa 191–208) + Met-Enkephalin (aa 208–215).',
+],
+
+// **LO-4** (Topic-74)
+officialDefinitions: [
+  'Differential regulation — cortisol vs. aldosterone: Cortisol secretion is regulated primarily by ACTH (from the HPA axis); aldosterone secretion is regulated primarily by the renin-angiotensin-aldosterone system (RAAS), plasma K+, ACTH (minor), and plasma Na+.',
+  'Regulation of aldosterone secretion: Angiotensinogen → (renin, from juxtaglomerular apparatus) → Angiotensin I → (converting enzyme, lung) → Angiotensin II → (further conversion) → Angiotensin III. Angiotensin II and III stimulate zona glomerulosa → aldosterone. Stimuli for renin release: renal vascular baroreceptors (↓ pressure), macula densa (↓ Na+ delivery to distal tubule), β1-receptors (sympathetic activity, catecholamines). Direct stimuli for aldosterone: plasma K+ ↑, ACTH (minor), plasma Na+ ↓.',
+  'Trophic effect of ACTH on the adrenal cortex: ACTH maintains the structure and function (trophic effect) of the adrenal cortex — particularly the zona fasciculata and zona reticularis. Chronic ACTH stimulation → adrenal cortical hypertrophy. Absence of ACTH → adrenal cortical atrophy.',
+  'Significance for drug therapy: Long-term exogenous glucocorticoid treatment suppresses the HPA axis via negative feedback (↓ CRH, ↓ ACTH) → adrenal cortical atrophy due to loss of trophic ACTH stimulation. Abrupt withdrawal of glucocorticoid therapy → acute adrenocortical insufficiency (adrenal crisis), because the atrophied cortex cannot produce sufficient cortisol. Glucocorticoids must be tapered gradually.',
+  'Therapeutic use of glucocorticoids: pharmacological doses used for anti-inflammatory, anti-allergic, and immunosuppressive effects.',
+],
+
+// **LO-5** (Topic-74)
+officialDefinitions: [
+  'Cellular mechanism of action of adrenal cortical hormones (genomic): steroid hormones are lipophilic — they diffuse across the cell membrane and bind to intracellular (cytoplasmic or nuclear) receptors. GR (Glucocorticoid Receptor): binds glucocorticoids. MR (Mineralocorticoid Receptor): binds mineralocorticoids AND glucocorticoids. Hormone-receptor complex forms a dimer (Dimer aus Hormon-Rezeptor-Komplex), translocates to nucleus, binds HRE (Hormone Response Element) on DNA → transcription → translation → induced proteins → effects. Non-genomic (membrane receptor) effects also exist.',
+  'Transport of adrenocortical hormones: Aldosterone — Free: 40%, Albumin: 40%, CBG: 20%. Cortisol — Free: 10%, Albumin: 15%, CBG: 75%. Dehydroepiandrosterone — Free: 7%, Albumin: 90%, GBG: 3%. CBG = Corticosteroid-binding globulin (Transcortin). GBG = Gonadal steroid-binding globulin.',
+  'Hormone concentrations: Aldosterone: 0.2–0.8 nmol/l. Cortisol: 200–700 nmol/l. Despite having equal affinity for the MR, cortisol circulates at ~1000× higher concentration than aldosterone.',
+  'Pre-receptor specificity (mechanism of selective mineralocorticoid effect): The MR has equal affinity for cortisol and aldosterone. Selectivity is achieved by the enzyme 11β-hydroxysteroid dehydrogenase 2 (11-DH = 11β-HSD2), located in mineralocorticoid target tissues (kidney — distal tubule, colon, sweat glands, salivary glands, bronchi). 11β-HSD2 converts cortisol (active) → cortisone (inactive), thus protecting the MR from occupation by cortisol. This allows aldosterone (which is NOT inactivated by 11β-HSD2) to selectively activate MR in these tissues. Licorice (glycyrrhizin) inhibits the enzyme → cortisol can then occupy MR → mineralocorticoid effects of cortisol. Max. 100 milligrams glycyrrhizin per day!',
+],
+
+// **LO-6** (Topic-74)
+officialDefinitions: [
+  'Effects of glucocorticoids on carbohydrate, protein and fat metabolism (physiological/pharmacological effects): In muscle tissue — inhibition of protein synthesis, stimulation of muscle protein proteolysis → amino acids released into blood. In liver — amino acids used for gluconeogenesis → increased blood glucose concentration. In fat tissue — lipolysis stimulated → free fatty acids released; simultaneously lipogenesis promoted (especially with pharmacological doses/oversecretion) → redistribution of fat. In peripheral tissues — inhibition of glucose transport (insulin antagonism). Overall effect: increased blood glucose concentration (diabetogenic effect).',
+  'Energy metabolism: glucocorticoids are catabolic hormones that mobilize energy substrates (glucose, free fatty acids, amino acids) to support survival during stress.',
+  'Effects on the immune system: anti-inflammatory effect; anti-allergic effect; immunosuppression.',
+  'Effects on bone and connective tissue: bone — inhibition of osteoblast activity → osteoporosis. Connective tissue — inhibition of collagen synthesis. Muscle — proteolysis.',
+  'Effects on the gastrointestinal system: gastric mucosa — stimulation of HCl secretion (risk of gastric ulcer).',
+  'Effects on the CNS: modifies the excitability of neurons; affects emotions. Lipophilic — crosses the blood-brain barrier.',
+  'Effects during fetal life: acceleration of surfactant secretion in the lung (important for lung maturation).',
+  'Permissive action: glucocorticoids are required for catecholamines to exert their full effects (e.g., lipolytic effect, pressor response). Paracrine effect of glucocorticoids on catecholamine secretion — cortisol induces PNMT in the adrenal medulla (phenylethanolamine n-methyltransferase), enabling adrenalin synthesis.',
+],
+
+// **LO-7** (Topic-74)
+officialDefinitions: [
+  'Over-secretion of glucocorticoids — Cushing\'s syndrome: caused by prolonged increases in plasma glucocorticoids. Clinical features: Moon face, fat pads, pendulous abdomen, thin skin, striae (stretch marks), red cheeks, poor muscle development, poor wound healing. Additional: osteoporosis, gastric ulcer, acne and hirsutism (from excess androgens). Metabolic: increased blood glucose (steroid diabetes), muscle wasting, central obesity with peripheral fat redistribution.',
+  'Under-secretion of glucocorticoids — Addison\'s disease (adrenocortical insufficiency): causes include tuberculosis, cancer, autoimmune destruction of the adrenal cortex. Consequence: stress tolerance level is very low. Addisonian crisis: acute adrenocortical insufficiency, life-threatening condition precipitated by stress. Adrenal cortex is vital for life!',
+],
+```

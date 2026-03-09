@@ -1,0 +1,113 @@
+// ============================================================
+// TOPIC 73: Thyroid hormones: biosynthesis, regulation, effects
+// Primary source: 11_Thyroid_2026_ENG_Domoki.pdf (OCR)
+// Secondary source: Notes_6871.pdf, 9_Endocrine_system_introduction_2026_ENG_Dux.pdf
+// ============================================================
+
+// **LO-1** (Topic-73)
+// Describe the enteral absorption and the uptake of iodide in the thyroid gland
+officialDefinitions: [
+  'Iodine metabolism: ~0.5 mg consumed (RDA!!!), 0.4 mg absorbed. ~20% taken up by thyroid (NIS), most built into T4/T3. Inorganic I is excreted through the urine, small amounts of organified I through GIS.',
+  'Iodide trapping: secondary active transport by NIS. Basolateral membrane: Na+-I- symporter (NIS), Na+-K+ pump. Apical membrane: pendrin: I--Cl- antiporter (facilitated diffusion).',
+  'NIS inhibitors: Li+, perchlorate (ClO4-), thiocyanate (SCN-), nitrate (NO3-); pertechnate (99mTcO4-).',
+  'Trapping: TSH increases the activity of a Na/I cotransporter (NIS).',
+  'Iodine (I) Function: Essential for the production of thyroid hormones (T3 and T4), which regulate metabolism, growth, and development.',
+],
+
+// **LO-2** (Topic-73) CRITICAL
+// Identify the steps in the biosynthesis, storage, and secretion of T3 and T4
+officialDefinitions: [
+  'Overview of hormone synthesis: T4/T3 are synthesized in the TG EXTRAcellularly, in the colloid!!! Steps: 1. Iodide trapping (uptake). 2. Thyreoglobulin (TG) synthesis and secretion. 3. Organification of iodine and coupling. 4. Storage. 5. Endocytosis and proteolysis of TG, release of free T4/T3. 6. Deiodination of T4 to T3 or rT3 (in the thyroid and target cells). TSH-R activity stimulates all steps save the storage!',
+  'Follicle: lined with single layer of epithelium, height depends on activity (cubic shape on average). Apical membrane microvilli — large surface area — site of synthesis. Lumen: filled with "colloid", contains thyreoglobulin (TG). Parafollicular connective tissue: dense capillary network, C cells (clear cells), calcitonin.',
+  'Synthesis and iodination of thyreoglobulin (TG): 660 KD (!!) Tyr rich (~100 aa) glycoprotein consisting two equal-sized subunits. Secreted by exocytosis into the colloid. Iodination of TG takes place extracellularly at the luminal membrane of follicular cells in the colloid.',
+  '4 components of iodination reaction: 1. TG, 2. Iodide, 3. Thyreoperoxidase (TPO) a membrane bound enzyme (complex) and 4. dual-oxidase 2 (DUOX). Steps: 1. Iodide peroxidation (electron transport) produces reactive I radicals (needs H2O2 produced by DUOX). 2. Iodination: production of MIT and DIT from tyrosine residues of the TG.',
+  'The coupling reaction: iodothyronine formation. Transfer of iodophenol moiety from one iodotyrosine to the phenolic OH group of a second iodotyrosine residue. This step is also catalysed by the TPO. Production of TG bound T4, T3 and rT3. TG contains app. 100 Tyr; 20% is iodinated and only 4-8 participate in the iodo-thyronine synthesis.',
+  'TPO has pharmacological inhibitors: Thionamides (Propylthiouracil, Methimazole, Goitrin).',
+  'Release of T4/T3: TG uptake through pinocytosis ("colloid droplets"). Enzymatic proteolysis in phagolysosomes — liberation of T4/T3, MIT, and DIT into the cytoplasm. T4 will be in part converted to T3 by deiodinase (5\' deiodinase, typ. I.) enzyme (TSH sensitive). Both T4 and T3 pass the basolateral membrane with facilitated diffusion (MCT8). Recycling of iodine: MIT/DIT deiodination by the iodotyrosine-dehalogenase. Iodide and tyrosine will be available for de novo TG synthesis (MIT, DIT can not be used).',
+  'Thyroid hormones are stored in colloid.',
+  'The products of the follicles: T4 and T3: special amino acids. 3,5,3\'5\'-Tetraiodothyronine (thyroxine, or T4) — Prohormone. Outer ring deiodination (activation) by Deiodinases type 1 and 2 produces 3,5,3\'-Triiodothyronine (T3) — Active. Inner ring deiodination (inactivation) by Deiodinases type 3 produces 3,3\'5\'-Triiodothyronine (reverse T3) — Inactive.',
+],
+
+// **LO-3** (Topic-73) CRITICAL
+// Describe the function of the hypothalamus-anterior pituitary-thyroid gland axis, the negative feedback
+// regulation of T4/T3 secretion. Describe the trophic effect of TSH on the thyroid gland
+officialDefinitions: [
+  'TRH is a tripeptide, the TRH receptor is a metabotropic receptor coupled to IP3/Ca2+ signalling. The TRH and TSH gene is repressed by T3 LOCALLY produced from T4 by Type II 5\' deiodinase.',
+  'T3 inhibits TRH production in the hypothalamus; inhibits TSH production in the pituitary; induces a TRH degrading enzyme in the pituitary.',
+  'TSH belongs to the glycoprotein hormones, its receptor is a metabotropic receptor coupled to cAMP. Other hypothalamic hormones like dopamine and somatostatin can affect TSH.',
+  'TSH effects: All aspects of T4/T3 synthesis and release are stimulated. Trophic and cell proliferation effect. Vascularization via VEGF release. High TSH results in: GOITER (hypertrophy and hyperplasia).',
+  'Trapping: TSH increases the activity of a Na/I cotransporter (NIS).',
+  'TSH-R activity stimulates all steps of hormone synthesis save the storage!',
+  'The TRH and TSH gene is repressed by T3 LOCALLY produced from T4 by Type II 5\' deiodinase.',
+],
+
+// **LO-4** (Topic-73)
+// Describe the plasma transport proteins involved in blood transport of thyroid hormones.
+// Explain the importance of thyroid hormone binding in blood on free and total thyroid hormone levels
+officialDefinitions: [
+  'Transport in blood: T4>>T3 10:1 ratio in blood. 99.98% of circulating T4 and 99.5% T3 are protein-bound, 0.02 and 0.5% FREE in plasma (10-25 and 2-7 pmol/L).',
+  'LIVER is responsible for the production of thyroid binding globulin (TBG), transthyretin (TTS) and albumin.',
+  'Changes in TBG affect blood total hormone levels, but not free hormone levels. Large protein-bound fraction ensures even delivery.',
+  'Activation of hormones in peripheral tissues: Thyroid hormones: Thyroxine → Triiodothyronine. Transport of hormones in the circulation: Lipid-soluble hormones: free + protein-bound form. Transport proteins: prealbumin, albumin, globulins. Only free hormones are biologically active, but bound and free fractions are in equilibrium.',
+  'Thyroid hormones (T3 & T4) and steroid hormones circulate in the blood primarily bound to plasma proteins (e.g., albumin, thyroxine-binding globulin (TBG), corticosteroid-binding globulin (CBG)). Bound hormones are biologically inactive because they cannot cross the capillary walls to reach their target cells. Only the free, unbound fraction of the hormone is available to interact with target cell receptors and exert physiological effects.',
+  'Protein binding prolongs hormone half-life and slows down hormone degradation and elimination, ensuring long-lasting effects. Thyroid hormones (T3 & T4) have a longer half-life (1-6 days) due to extensive binding with plasma proteins.',
+  'Since bound hormones serve as a reservoir, they help maintain stable hormone levels and prevent fluctuations. When free hormone levels drop, more hormone dissociates from its binding protein to restore equilibrium, reducing the need for immediate hormone synthesis.',
+],
+
+// **LO-5** (Topic-73) CRITICAL
+// Understand the significance of the conversion of T4 to T3 in extra-thyroidal tissues,
+// give the name of the enzyme responsible for the conversion. Define intracrine effect
+officialDefinitions: [
+  'Metabolism of T4: peripheral production of T3: the last step of synthesis inside the target cells: INTRACRINE effect. Type 1: kidney, liver, skeletal muscle, thyroid. Type 2: brain, pituitary.',
+  'T4 will be in part converted to T3 by deiodinase (5\' deiodinase, typ. I.) enzyme (TSH sensitive).',
+  '5\'/3\' monodeiodinase activity removes the 5\' iodine, converting T4 to T3.',
+  'T4>>T3 10:1 ratio in blood BUT... T3>>T4 10:1 ratio at receptor binding!',
+  'Outer ring deiodination (activation) by Deiodinases type 1 and 2 produces 3,5,3\'-Triiodothyronine (T3) — Active. Inner ring deiodination (inactivation) by Deiodinases type 3 produces 3,3\'5\'-Triiodothyronine (reverse T3) — Inactive.',
+  'Intracrine effect (definition from Notes_6871): Intracrine hormones are hormones that act inside their cells, regulating intracellular events, without being secreted. The hormone is synthesized and acts intracellularly, influencing processes such as gene expression, metabolism, or cell survival. In the thyroid context: T3 is produced from T4 by deiodinase inside the target cell and acts locally at the nucleus without being secreted.',
+],
+
+// **LO-6** (Topic-73)
+// Describe the localization of thyroid hormone-receptors, the molecular mechanism of ligand-receptor interaction
+officialDefinitions: [
+  'Thyroid hormone receptor regulates gene expression. T3 and T4 enter the cell either by diffusion or by carrier-mediated transport.',
+  '99.5% is bound to TBG (thyroxin-binding globulin) [T3]; 99.98% is bound to TBG [T4].',
+  'Thyroid hormone receptor: Nuclear receptor. Intracellular receptors of lipid-soluble hormones: in the nucleus (thyroid hormones, calcitriol, estrogen).',
+  'Nuclear receptor for Thyroid Hormone (T3): located in the nucleus. T3 binds to the thyroid hormone receptor (THR) → receptor-ligand complex binds to Thyroid Response Elements (TRE) in the DNA → regulates transcription of target genes.',
+  'Genes regulated by thyroid hormone receptor include: Na-K pump, Gluconeogenic enzymes, Respiratory enzymes, Myosin heavy chain, Adrenergic receptors, and many others.',
+  'T4>>T3 10:1 ratio in blood BUT... T3>>T4 10:1 ratio at receptor binding! T3 is the active ligand at the receptor.',
+],
+
+// **LO-7** (Topic-73) CRITICAL
+// Describe the physiologic effects and mechanisms of action of thyroid hormones on energy metabolism,
+// carbohydrate, fat and protein metabolism
+officialDefinitions: [
+  'T3/T4 effects overview: Pleiotropic: effect in virtually all organs. Promotes metabolism to provide energy for growth, development, renewal (turnover), heat production. Normal levels required for the normal function of many other endocrine systems and the CNS as well.',
+  'T3/T4 effects: calorigenic effect. Increased thermogenesis, core temperature, basal metabolic rate, oxygen consumption. Plays a role in climatic cold adaptation. Mechanism: Increased ATPase activity (Na-K ATPase, other metabolic ATPases), increased thermogenin (UCP) expression (brown adipose tissue, skeletal muscle mitochondria), increased futile metabolic circuits (e.g., glycogenesis-glycogenolysis).',
+  'T3/T4 effects: carbohydrate metabolism. Increased intestinal glucose absorption (postprandial hyperglycemia). Increased hepatic glycogenesis, gluconeogenesis, hepatic and muscular glycogenolysis. Increased glucose oxidation. Increased metabolism of glucoseaminoglycans (GAG)-s (myxedema).',
+  'T3/T4 effects: protein metabolism. Increased protein turnover. Increased amino acid oxidation (catabolism). May result in negative protein balance.',
+  'T3/T4 effects: lipid metabolism. Increased lipolysis: brown and white adipose tissue (B3-rec.). Increased free fatty acid oxidation (skeletal muscle, liver) — increased lipogenesis too. Increased cholesterol biosynthesis (HMG-CoA reductase) and elimination (LDL receptors). Net effect: decreased serum cholesterol. Increased bilirubin and beta-carotin metabolism.',
+  'Thyroid hormones (T3, T4): Increase BMR. Hyperthyroidism raises BMR, while hypothyroidism lowers it.',
+],
+
+// **LO-8** (Topic-73)
+// Describe the effect of thyroid hormones on the cardiovascular system that enable the metabolic effects
+officialDefinitions: [
+  'T3/T4 effects: on cardiovascular system — direct and indirect effects. Increase the number and affinity of B-adrenergic receptors, and Gs proteins in the heart → HR↑, Contractility↑.',
+  'Increased a-myosin heavy chain (MHC) and sarcoplasmic Ca-ATPase (SERCA) expression → Contractility↑.',
+  'Increased metabolism and heat production of the body → TPR↓↓.',
+  'Cardiac output↑ = Stroke volume↑ * Heart rate↑. SABP↑, DABP↓, MABP~, PP↑↑.',
+],
+
+// **LO-9** (Topic-73)
+// Understand the causes and consequences of a) over-secretion and b) under-secretion of thyroid hormones.
+// Explain what conditions can cause an enlargement of the thyroid gland
+officialDefinitions: [
+  'Hypothyreosis vs Hyperthyreosis. Hypothyreosis: Cold intolerance, weight gain, bradycardia, cool/dry/yellowish skin, balding, obstipation, mental slowness, myxedema (husky voice), high cholesterol. Hyperthyreosis: Heat intolerance, weight loss, tachycardia, warm/wet/velvety skin, diarrhoea, nervousness, fatigue, decreased glucose tolerance.',
+  'Thyroid diseases I: Reduced thyroid hormone synthesis causes: genetic factors, iodine deficiency, toxins inhibiting NIS or TPO, autoimmune disease reducing hormone production, reduced TRH or TSH. Except last case, as free T4/T3 reduces, TSH will elevate and goiter/struma will develop. Cretinism — myxedema.',
+  'Thyroid diseases II: Increased thyroid hormone synthesis: autoimmune stimulation of TSH receptors (TSI), or pathologically high TRH and/or TSH. Goiter/struma will develop.',
+  'Goiter/enlargement causes: (1) ANY condition causing reduced T4/T3 (except pituitary/hypothalamic failure) → elevated TSH → trophic effect → goiter. (2) Autoimmune stimulation of TSH receptors (TSI) → goiter. (3) Pathologically high TRH and/or TSH → goiter. TSH trophic and cell proliferation effect, vascularization via VEGF release.',
+  'Graves-Basedow disease: Most common type. Autoimmunity against TSH receptors. Goiter/Struma. Exopthalmus (orbital TSH receptors). Pretibial myxedema. Tachycardia.',
+  'Cretinism: congenital hypothyreosis — dysproportional dwarfism, mental retardation. Substitution therapy can prevent it; every newborn is screened for TSH!',
+  'Plummer-therapy: High daily intake of Iodine (2-6 mg/day) can transiently suppress thyroid function: 1. TSH sensitivity decreases. 2. Decreased organification (Wolff-Chaikoff effect). 3. Decreased VEGF and vascularization. 4. NIS down-regulation — escape, after few weeks.',
+  'TSH effects: Trophic and cell proliferation effect. Vascularization via VEGF release. High TSH results in: GOITER (hypertrophy and hyperplasia).',
+],

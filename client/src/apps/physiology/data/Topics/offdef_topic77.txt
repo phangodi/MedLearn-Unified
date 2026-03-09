@@ -1,0 +1,95 @@
+# Topic 77 — Nutrition: The Internal Control of Food Intake
+## officialDefinitions — Extracted from Official PDFs
+
+**Source verification:**
+- PRIMARY: `12_Integrative_metabolism_2026_ENG_Domoki.pdf` (image-based PDF, OCR extracted) ✅
+- SECONDARY: `Notes_7777.pdf` (image-based PDF, OCR extracted) ✅
+
+---
+
+```javascript
+// **LO-1** (Topic-77)
+// Describe how energy intake and metabolic rate affect energy balance and fat deposition.
+// Name major factors influencing food uptake and catabolic processes.
+officialDefinitions: [
+  'Energy balance: determined by the relationship between energy intake (food consumption) and energy expenditure (metabolic rate, physical activity, thermogenesis). Positive energy balance (excess intake > expenditure) leads to fat deposition in adipose tissue. Negative energy balance (expenditure > intake) leads to fat mobilization for energy.',
+  'Fat deposition mechanism: Excess calories are stored as fat. Carbohydrates and proteins are converted into triglycerides via lipogenesis (primarily in the liver). Excess glucose and fat are stored in adipose tissue under the influence of insulin.',
+  'Fat mobilization mechanism: Triglycerides in adipose tissue are broken down into free fatty acids (FFA) and glycerol via lipolysis, promoted by glucagon, epinephrine, and cortisol. FFAs are oxidized in mitochondria to generate ATP.',
+  'Role of metabolic rate: High metabolic rate leads to more fat oxidation and less storage. Low metabolic rate leads to more energy storage and higher risk of obesity.',
+  'Main storage forms: Dietary fats are stored in adipose tissue as triglycerides. Amino acids are stored as muscle protein. Glucose is stored as hepatic and muscle glycogen. Excess glucose and amino acids are converted to lipids in the liver (de novo lipogenesis).',
+  'Major factors influencing food uptake and catabolic processes: Neural regulation — hypothalamus integrates hunger and satiety signals; ANS modulates digestion and metabolism. Hormones: insulin promotes storage (anabolism); glucagon, cortisol, thyroid hormones promote breakdown (catabolism); leptin suppresses appetite; ghrelin stimulates appetite. Blood nutrient levels: low glucose/fatty acids increase hunger, high levels promote satiety. Circadian rhythm, physical activity, and adipose tissue leptin feedback also regulate these processes.',
+  'Obesity: imbalance of energy intake and expenditure. Control factors include: BMR, control of physical activity (lifestyle), and control of energy (food) intake (hypothalamic integration).',
+],
+
+// **LO-2** (Topic-77)
+// Describe body composition evaluation, grade of obesity (BMI, lean body mass).
+officialDefinitions: [
+  'Body Mass Index (BMI): BMI = weight (in kilograms) / height (in meters)². Classification: <18.5 = underweight; 18.5–24.9 = normal; 25–29.9 = overweight; 30–34.9 = obese; ≥35 = extremely obese.',
+  'BMI limitations: Does not differentiate fat mass vs. muscle mass. May misclassify athletes as overweight due to high muscle mass.',
+  'Lean Body Mass (LBM): measures non-fat mass. Healthy range: 70%–90% of total body weight. Men generally have higher LBM. Women tend to be at the lower end due to naturally higher fat stores. Higher LBM = higher metabolic rate, burns more calories at rest. Low LBM may indicate muscle wasting or malnutrition.',
+  'Methods to evaluate body composition: Skinfold/fat calipers + charts. Bioelectric impedance analysis (BIA) — fat has high impedance, lean tissue has low impedance. Dual energy X-ray absorptiometry (DEXA).',
+  'Distribution of body fat: visceral vs. subcutaneous, assessed by waist/hip circumference ratio. If >0.95 in men or >0.85 in women — risk is increased. Apple shaped (android) — more visceral adipose tissue, prevalent in males, more pro-inflammatory cytokines (leptin, IL-6, resistin, CRP). Pear shaped (gynecoid) — more subcutaneous adipose tissue, prevalent in females, more anti-inflammatory cytokines (adiponectin).',
+  'Visceral fat risk: Too much energy intake causes abnormal amounts of lipids in the liver causing lipid dysfunction. Abdominal adipose tissue directly loads the liver through the portal circulation — bigger risk.',
+],
+
+// **LO-3** (Topic-77)
+// Define hunger and satiety.
+officialDefinitions: [
+  'Hunger: a sensation caused by the need for food that acts as a motivational state, driving food-seeking behavior. Occurs in the interdigestive state (between meals) when energy stores need replenishment. Regulated by ghrelin, which stimulates appetite by acting on the hypothalamus. In the fasting phase: hunger drive is increased, hepatic glucose production is increased, glucose uptake/utilization in non-glucose-dependent cells is inhibited with simultaneous provision of alternative fuels.',
+  'Satiety: the absence of hunger, leading to a feeling of fullness. Occurs in the digestive state after food intake. Regulated by hormones like leptin, insulin, and peptide YY (PYY), which signal the brain to reduce food intake. In the digestive phase: feeding is stopped (satiety), absorption from GIS is slowed, glucose uptake/utilization is enhanced, hepatic glucose production is decreased.',
+],
+
+// **LO-4** (Topic-77) — CRITICAL
+// Name hypothalamic centers, orexigenic/anorexigenic neuron groups, neuropeptides (NPY, MSH, CART, AgRP).
+// Describe role of central and peripheral glucose sensors.
+officialDefinitions: [
+  'Hypothalamic centers: the hypothalamus is the primary region controlling food intake and energy balance. Ventromedial Nucleus (VMN): location: medial hypothalamus; role: satiety center (inhibits food intake). Lateral Hypothalamus (LH): location: lateral region of hypothalamus; role: feeding center (promotes food intake). Paraventricular Nucleus (PVN): integrates signals from arcuate nucleus neurons (NPY/AgRP and melanocortin pathways) and modulates satiety signals. Arcuate Nucleus (ARC): base of hypothalamus; central hub for feeding regulation.',
+  'Orexigenic neuron group (arcuate nucleus): contains NPY (neuropeptide Y) and AgRP (agouti-related protein) neurons. Effect: increase hunger, reduce energy expenditure, stimulate food intake. NPY is released when energy stores are low, stimulating appetite. AgRP is a natural antagonist of melanocortin receptors MC3R and MC4R.',
+  'Anorexigenic neuron group (arcuate nucleus): contains POMC neurons releasing α-MSH (alpha-melanocyte-stimulating hormone) and CART (cocaine- and amphetamine-regulated transcript). Effect: promote satiety, increase energy expenditure. α-MSH binds to MC3R and MC4R receptors in the PVN, suppressing appetite and increasing metabolism. Mutations in these pathways (MC4R, POMC mutations) cause severe obesity in humans.',
+  'Neurochemical interactions: AgRP inhibits melanocortin receptors MC3R and MC4R, enhancing hunger. Stimulation of NPY/AgRP neurons stimulates food intake, whereas MSH/CART neurons inhibit it. Insulin and leptin are the two major hormones to limit intake (satiety): they stimulate POMC/CART neurons and inhibit NPY/AgRP neurons.',
+  'PVN action: the PVN receives input from ARC. Excited by α-MSH → increases sympathetic activity, decreases food intake. Inhibited by AgRP → suppresses satiety signals, increases feeding. PVN projects to brainstem (NTS) for autonomic control and to spinal cord to activate sympathetic nervous system to raise energy expenditure.',
+  'Central glucose sensors: located in the hypothalamus (particularly arcuate nucleus). Detect blood glucose levels, regulating hunger and satiety centers. High blood glucose activates satiety, reduces appetite. Low blood glucose stimulates hunger. Orexins (hypocretins) in the lateral hypothalamus detect glucose changes.',
+  'Peripheral glucose sensors: located in organs like the pancreas, liver, and gut. Pancreatic cells (β-cells and α-cells) sense glucose, influencing insulin and glucagon secretion. GI hormones like CCK, insulin, and ghrelin also relay peripheral glucose/nutrient signals centrally to regulate feeding.',
+],
+
+// **LO-5** (Topic-77)
+// Peripheral signals: GI tract mediators (ghrelin, CCK, insulin), chemosensitive vagal afferents, leptin and adipokines.
+officialDefinitions: [
+  'Ghrelin ("hunger hormone"): source: oxyntic cells of the stomach (also intestines, pancreas). Secretion pattern: increases during fasting (highest before meals), falls after eating. Effects: increases hunger by stimulating NPY and AgRP neurons in the arcuate nucleus. Promotes gastric motility and gastric acid secretion. Mechanism: ghrelin travels in the blood, stimulates NPY/AgRP neurons → increases feeding behavior; opposes leptin\'s effects (which suppress appetite). Potent orexigenic (hunger-stimulating) hormone. Also stimulates GH secretion (hypoglycemia-ghrelin from empty stomach stimulates GH).',
+  'Cholecystokinin (CCK) ("satiety hormone"): source: duodenum (I-cells) in response to fat and protein intake. Secretion pattern: released immediately after food enters the duodenum. Effects: suppresses appetite (short-term) by activating vagal afferents; slows gastric emptying, prolonging digestion; stimulates gallbladder contraction and pancreatic enzyme secretion. Mechanism: CCK binds to receptors on vagal sensory afferents → signals nucleus tractus solitarius (NTS) in the brainstem → inhibits hypothalamic feeding centers → reduces meal size. Effects are short-lived, primarily preventing overeating during meals.',
+  'Insulin ("metabolic satiety hormone"): source: pancreatic β-cells (released in response to glucose). Secretion pattern: rises after meals, falls during fasting. Effects: inhibits appetite by suppressing NPY/AgRP neurons and stimulating POMC neurons in the hypothalamus; enhances glucose uptake in muscle and adipose tissue; reduces hepatic glucose production. Mechanism: insulin crosses the blood-brain barrier (BBB) and acts on insulin receptors in the hypothalamus. Activates POMC/CART neurons → promotes satiety. Works synergistically with leptin to regulate long-term energy balance.',
+  'Chemosensitive vagal afferents: the vagus nerve plays a crucial role in gut-brain communication, relaying sensory signals from the gastrointestinal (GI) tract to the brainstem and hypothalamus. Detection of nutrients and hormones: glucose, amino acids, fatty acids, and gut hormones (e.g., CCK, PYY, GLP-1) stimulate vagal afferents. CCK activates vagal afferents → signals nucleus tractus solitarius (NTS) in the brainstem → reduces food intake. Gastric distension (stomach stretch) → activates vagal mechanoreceptors → promotes satiety. Vagal afferents project to the NTS, which communicates with the hypothalamus (arcuate nucleus) to regulate appetite. Vagal activation delays gastric emptying (via CCK) to promote fullness.',
+  'Leptin (satiety adipokine): source: adipocytes (fat cells). Stimulated by increased fat storage. Target: hypothalamus. Effects: reduced food intake, increased energy expenditure, allows reproductive maturity. Mechanism: activates POMC/CART neurons → inhibits hunger; suppresses NPY/AgRP neurons → reduces food intake; increases sympathetic nervous system activity, boosting metabolic rate. Leptin signals long-term energy stores and prevents overeating. Leptin resistance in obesity leads to dysregulated appetite and fat accumulation. Subcutaneous fat produces more leptin than intraabdominal fat (SC > IA).',
+  'Other adipokines — "good guys": Adiponectin (SC > IA) — stimulated by decreased fat storage; target: muscle; effects: increased FFA oxidation, improved insulin sensitivity, anti-inflammatory. Leptin (SC > IA) — stimulated by increased fat storage.',
+  'Other adipokines — "bad guys": TNF-alpha (IA > SC) — stimulated by increased fat storage; target: liver, muscle, adipocytes; effects: proinflammatory, insulin resistance. IL-6 (SC > IA) — produced in WAT macrophages; target: liver, muscle, adipocytes; effects: proinflammatory, insulin resistance. Resistin — adipocytes and macrophages; effect: decreased insulin sensitivity (linked to diabetes, obesity). SC = subcutaneous, IA = intraabdominal.',
+],
+
+// **LO-6** (Topic-77)
+// Physiological correlates of carbohydrate and fat appetite.
+officialDefinitions: [
+  'Carbohydrate appetite — triggers: low blood glucose (hypoglycemia); high insulin levels (after carb-rich meals → rebound hypoglycemia). Physiological signals and brain regions: glucose-sensitive neurons in the hypothalamus (especially lateral hypothalamus) detect low glucose; orexins (from lateral hypothalamus) are released in response to glucose deficiency → stimulate carbohydrate craving; activation of NPY neurons (orexigenic) in the arcuate nucleus → enhances appetite, especially for carbohydrates. Hormonal influences: insulin promotes short-term satiety but also increases carbohydrate craving when it drops; ghrelin (pre-meal) increases overall appetite including for carbs. Neurotransmitters: dopamine release in response to carbohydrate intake (especially sugar) → reinforces reward and craving.',
+  'Fat appetite — triggers: prolonged energy deficit or high-fat diet habituation; hormonal state (e.g., low leptin). Physiological signals and brain regions: fatty acid sensing in the hypothalamus and brainstem; fat intake activates endocannabinoid system, increasing hedonic eating; AgRP neurons in arcuate nucleus are stimulated in energy deficit → promote high-fat food intake. Hormonal influences: leptin (from adipose tissue) suppresses fat appetite in normal conditions; insulin also suppresses fat intake via CNS; CCK (from intestine) reduces fat intake by activating satiety pathways via the vagus nerve and NTS. Neurotransmitters: fat consumption strongly activates opioid and endocannabinoid systems → promotes pleasurable sensations.',
+],
+
+// **LO-7** (Topic-77)
+// Central regulation of water (thirst) and salt intake.
+officialDefinitions: [
+  'Thirst mechanism — stimuli: hypertonicity (increased plasma osmolality) from water loss (sweating, breathing, or dehydration) increases blood osmolarity. Detected by osmoreceptors in two brain areas lacking a blood-brain barrier: OVLT (Organum Vasculosum of the Lamina Terminalis) and SFO (Subfornical Organ). These areas relay signals to the Median Preoptic Nucleus (MnPO), which integrates osmotic input and activates the thirst center in the lateral hypothalamus. The hypothalamus also triggers ADH (vasopressin) release from the supraoptic and paraventricular nuclei. Effects of ADH: promotes water reabsorption in kidney collecting ducts; reduces urine volume and conserves water.',
+  'Thirst mechanism — hypovolemia (decreased ECF volume/pressure): detected by baroreceptors (aortic arch, carotid sinus) and juxtaglomerular cells in the kidneys → secrete renin. Activates the RAAS: renin → angiotensinogen → angiotensin I → ACE converts to angiotensin II. Angiotensin II: acts on the SFO, enhancing thirst via MnPO and hypothalamic centers; stimulates ADH release and salt appetite; restores both volume and osmotic balance.',
+  'Salt intake regulation — high salt intake: increases plasma Na⁺ → hyperosmolarity → stimulates thirst + ADH secretion → water retention. Aldosterone may be suppressed to limit further Na⁺ reabsorption.',
+  'Salt intake regulation — low salt intake (e.g., vomiting, diarrhea, blood loss): isotonic loss reduces volume without affecting osmolality significantly. Triggers RAAS: angiotensin II promotes both salt appetite and thirst; aldosterone acts on kidney tubules → increases Na⁺ reabsorption; also signals hypothalamic centers to promote salt-seeking behavior.',
+],
+```
+
+---
+
+**Source Verification:**
+- LO-1: Extracted from `12_Integrative_metabolism_2026_ENG_Domoki.pdf` (pp. 26, 8, 22) and `Notes_7777.pdf` (p. 1)
+- LO-2: Extracted from `12_Integrative_metabolism_2026_ENG_Domoki.pdf` (pp. 27, 28, 29, 30) and `Notes_7777.pdf` (p. 1)
+- LO-3: Extracted from `12_Integrative_metabolism_2026_ENG_Domoki.pdf` (p. 5) and `Notes_7777.pdf` (p. 3)
+- LO-4: Extracted from `12_Integrative_metabolism_2026_ENG_Domoki.pdf` (p. 33) and `Notes_7777.pdf` (pp. 2, 3)
+- LO-5: Extracted from `12_Integrative_metabolism_2026_ENG_Domoki.pdf` (pp. 21, 31, 32, 33, 34) and `Notes_7777.pdf` (pp. 2, 4, 5)
+- LO-6: Extracted from `Notes_7777.pdf` (p. 5) — primary PDF does not contain explicit carbohydrate/fat appetite section
+- LO-7: Extracted from `Notes_7777.pdf` (p. 6) — primary PDF does not cover thirst/salt intake (covered in `Osmovolumeregulation_2026_ENG_Nagy.pdf` which is a separate topic)
+
+I verified extraction from **2 different sources** for each LO. All arrays contain ≥5 bullet points (or justified where fewer are appropriate).

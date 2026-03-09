@@ -69,6 +69,13 @@ import topic67 from './topic67.js';
 import topic68 from './topic68.js';
 import topic69 from './topic69.js';
 import topic70 from './topic70.js';
+import topic71 from './topic71.js';
+import topic72 from './topic72.js';
+import topic73 from './topic73.js';
+import topic74 from './topic74.js';
+import topic75 from './topic75.js';
+import topic76 from './topic76.js';
+import topic77 from './topic77.js';
 
 // MCQ Filter Definitions
 export const mcqFilters = [
@@ -94,13 +101,13 @@ export const mcqFilters = [
     id: 'mcq-4',
     name: 'MCQ IV',
     description: 'Digestive and metabolic physiology',
-    topics: [59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76]
+    topics: [59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77]
   },
   {
     id: 'mcq-5',
     name: 'MCQ V',
     description: 'Endocrine physiology',
-    topics: [77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94]
+    topics: [78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94]
   },
   {
     id: 'mcq-6',
@@ -181,7 +188,14 @@ const topicsData = [
   topic67,
   topic68,
   topic69,
-  topic70
+  topic70,
+  topic71,
+  topic72,
+  topic73,
+  topic74,
+  topic75,
+  topic76,
+  topic77
 ];
 
 export default topicsData;

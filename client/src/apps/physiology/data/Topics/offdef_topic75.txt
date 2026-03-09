@@ -1,0 +1,75 @@
+```javascript
+// **LO-1** (Topic-75)
+officialDefinitions: [
+  'Endocrine cells: islets of Langerhans (Paul Langerhans; 1869). ~1-2 million islets, 2% of the total weight of pancreas.',
+  'α Cells produce glucagon. β Cells produce insulin. δ Cells produce somatostatin. PP (F) cells: pancreatic polypeptide.',
+  'Insulin (B-cell): peptide hormone. Insulin is synthesized as preproinsulin → proinsulin (A-chain + B-chain + C-chain). Insulin is released along with equimolar amounts of C-peptide. Concentration of C-peptide can be measured in the plasma. Its level provides an index of B cell function in patients receiving exogenous insulin.',
+  'Glucagon (A-cell): product of the α-cells: single chain polypeptide (29 AA; member of the secretin family).',
+  'Intercellular communication: paracrine communication. Gap junctions (electric coupling). GABA – glutamate decarboxylase (GAD).',
+  'Blood supply: arteries: system circulation - venous outflow: v. Portae (Liver!). Innervation: sympathetic and parasympathetic (n. X.) nerves. Blood flows from the center to the periphery.',
+],
+
+// **LO-2** (Topic-75)
+officialDefinitions: [
+  'Muscle: Uptake of glucose ↑. Glycogen synthesis ↑. Uptake of amino acids ↑. Release of amino acids ↓. Protein synthesis ↑. Proteolysis ↓. K uptake into the cells ↑.',
+  'Liver: Glycogen synthesis ↑. Glycogenolysis ↓. Gluconeogenesis ↓. Glucose output ↓. Protein synthesis ↑. Lipid synthesis ↑. Ketogenesis ↓.',
+  'Adipocytes: Uptake of glucose ↑. Lipid synthesis ↑. Lipolysis ↓. K uptake into the cells ↑.',
+  'Insulin receptor signaling: Insulin receptor is a tyrosine kinase receptor (2α + 2β subunits). Binding of insulin → activation of tyrosine kinase → phosphorylation of insulin receptor substrates (IRS) → glucose transport, protein synthesis, fat synthesis, glycogen synthesis, growth and gene expression.',
+  'Insulin-induced translocation of the GLUT-4 glucose transporter: GLUT-4 (Skeletal muscle, myocardium, adipocytes) – insulin dependent (!). GLUT-2: Pancreas B-cells, hepatocytes – low-affinity.',
+  'Blood nutrients: insulin lowers blood glucose, amino acids, and free fatty acids by promoting their uptake and storage in muscle, liver, and adipose tissue. Blood glucose level ↓ under insulin action.',
+],
+
+// **LO-3** (Topic-75)
+officialDefinitions: [
+  'Insulin secretion (mechanism): 1. Influx of glucose into the β-cell. 2. Oxidation of glucose. 3. Production of ATP. 4. Closure of ATP dependent K+-channels. 5. Depolarisation. 6. Opening of voltage gated Ca2+-channels. 7. Ca2+ influx. 8. Release of insulin.',
+  'Phases of insulin secretion during food uptake: Cephalic phase: neural control (n. X.): anticipation. Intestinal phase: incretin effect (GIT hormones - GIP etc.). Pancreatic phase: direct effect of increased plasma glucose and other metabolites. The first two phases protect us from the development of severe postprandial (after meal) hyperglycemia! (late dumping Sy. – gastrectomy).',
+  'Assessment of insulin secretion – C-peptide: Insulin is released along with equimolar amounts of C-peptide. Concentration of C-peptide can be measured in the plasma. Its level provides an index of B cell function in patients receiving exogenous insulin.',
+  'Assessment of insulin secretion / sensitivity – OGTT: Oral Glucose Tolerance Test (OGTT) with 75 g per os - 120 min: normal < 7.8 mM < impaired GT < 11.1 mM < diabetes. Fasting glucose level (FBG) – after 12 hours fasting: normal < 5.6 mM < impaired FG < 6.9 mM < diabetes.',
+  'Oral and iv. administration of insulin: different time-course profiles depending on route of administration.',
+],
+
+// **LO-4** (Topic-75)
+officialDefinitions: [
+  'Effect of glucose on the secretion of insulin: insulin secretion increases in a sigmoidal (dose-response) manner as plasma glucose concentration rises above ~100 mg/100 ml, reaching a plateau at high glucose concentrations (graph: x-axis Plasma glucose concentration mg/100 ml; y-axis Insulin secretion × normal).',
+  'Insulin secretion is enhanced by: High blood glucose level. Some amino acids (arg, leu, liz). Acetylcholine – (Psy nerves, n. X.). Incretin hormones (GIP, GLP-1). Insulin secretion is suppressed by: Somatostatin (D-cells). Adrenaline (α2-receptors). ATP dependent K-channel closed by ATP.',
+  'Phases of insulin secretion during food uptake: Cephalic phase: neural control (n. X.): anticipation. Intestinal phase: incretin effect (GIT hormones - GIP etc.). Pancreatic phase: direct effect of increased plasma glucose and other metabolites. The first two phases protect us from the development of severe postprandial (after meal) hyperglycemia! (late dumping Sy. – gastrectomy).',
+  'Incretin: GIT hormones (GIP, GLP-1) that enhance insulin secretion in a glucose-dependent manner. Released from the gastrointestinal tract in response to food (especially carbohydrates and fats). Incretin hormones stimulate insulin secretion only when plasma glucose is elevated (glucose-dependent insulinotropic effect).',
+  'Blood glucose regulation: Blood glucose level ↑ → stimulates insulin secretion → Blood glucose level ↓. Blood glucose level ↓ → stimulates glucagon secretion → Blood glucose level ↑.',
+],
+
+// **LO-5** (Topic-75)
+officialDefinitions: [
+  'The secretion is enhanced by: High blood glucose level. Some amino acids (arg, leu, liz). Acetylcholine – (Psy nerves, n. X.). Incretin hormones (GIP, GLP-1).',
+  'The secretion is suppressed by: Somatostatin (D-cells). Adrenaline (α2-receptors). ATP dependent K-channel closed by ATP.',
+  'Phases of insulin secretion during food uptake: Cephalic phase: neural control (n. X.): anticipation. Intestinal phase: incretin effect (GIT hormones - GIP etc.). Pancreatic phase: direct effect of increased plasma glucose and other metabolites.',
+  'Stimulation of secretion (from slide): ACh, CCK, AVP → Gq → PLC-β → DAG, IP3 → PKC → protein phosphorylation → [Ca2+]i ↑. PACP, Glucagon, GLP-1 → Gs → AC → cAMP → PKA → protein phosphorylation → [Ca2+]i ↑.',
+  'Regulation of hormone secretion in the pancreas: A Cell (Glucagon): stimulated by Amino acids, Catecholamines; inhibited by Glucose. B Cell (Insulin): stimulated by Glucose, GI hormones, Amino acids; inhibited by Catecholamines. D Cell (Somatostatin): stimulated by Glucose, Amino acids, FFA, GI hormones.',
+],
+
+// **LO-6** (Topic-75)
+officialDefinitions: [
+  'Glucagon: Product of the α-cells: single chain polypeptide (29 AA; member of the secretin family). Glucagon receptor: 7 transmembrane domain receptor - G-protein coupled - cAMP ↑. Function: prevention of hypoglycemia (interdigestive phase, fasting). Functional antagonist of insulin – but not the only "anti-insulin".',
+  'Regulation of glucagon secretion – Enhanced by: Plasma glucose ↓. Increased levels of amino acids. Sympathetic activity (noradrenalin). Growth hormone. Glucocorticoids (permissive action).',
+  'Regulation of glucagon secretion – Suppressed by: Plasma glucose ↑. Insulin. Somatostatin.',
+  'Effects of food on the secretion of glucagon: Carbohydrate rich nutrition: high insulin – low glucagon secretion (prevents from hyperglycaemia). Carbohydrate poor nutrition: lower insulin – higher glucagon (lack of glucose induced suppression, role of amino acids).',
+  'Regulation of blood glucose level: Blood glucose level ↑ → Insulin ↑ → Blood glucose level ↓ → Glucagon ↑ → Blood glucose level ↑. Hormones increasing blood glucose level: Glucagon, GH, Cortisol* (*permissive effect), Adrenaline, T3* (*permissive effect). Hormones decreasing blood glucose level: Insulin (IGF1, IGF2).',
+],
+
+// **LO-7** (Topic-75)
+officialDefinitions: [
+  'Liver (primary target organ): Glycogenolysis ↑. Gluconeogenesis ↑. Ketogenesis ↑. Glucose output ↑.',
+  'Adipocytes: Lipolysis ↑.',
+  'Muscle: Proteolysis ↑.',
+  'Glucagon receptor: 7 transmembrane domain receptor - G-protein coupled - cAMP ↑. Function: prevention of hypoglycemia (interdigestive phase, fasting). Functional antagonist of insulin – but not the only "anti-insulin".',
+  'Blood glucose level: Glucagon raises blood glucose level. Glucagon GH Cortisol* Adrenaline T3* → Blood glucose level ↑. (*Permissive effect).',
+],
+
+// **LO-8** (Topic-75)
+officialDefinitions: [
+  'Over-secretion of insulin (insulinoma): leads to hypoglycemia. Postprandial (postalimentary) hypoglycemia can be demonstrated on OGTT curve (plasma glucose falls below fasting level after glucose load; "no GIP" curve shown in slide).',
+  'Under-secretion of insulin / Diabetes mellitus: Evaluation of the fasting glucose level (FBG) – after 12 hours fasting: normal < 5.6 mM < impaired FG < 6.9 mM < diabetes. OGTT with 75 g per os - 120 min: normal < 7.8 mM < impaired GT < 11.1 mM < diabetes.',
+  'The oral glucose tolerance test: postprandial (postalimentary) hyperglycemia in diabetes mellitus – plasma glucose remains elevated throughout the 300 min observation period after glucose administration (contrast to normal subject where glucose returns to baseline).',
+  'J. v. Mering, O. Minkowsky (1890) – extirpation of pancreas – experimental diabetes mellitus. Historical basis linking pancreatic function to diabetes.',
+  'Hormones raising blood glucose: Glucagon, GH, Cortisol* (permissive effect), Adrenaline, T3* (permissive effect). Hormone lowering blood glucose: Insulin (IGF1, IGF2). Imbalance → dysglycemia → diabetes mellitus.',
+],
+```
