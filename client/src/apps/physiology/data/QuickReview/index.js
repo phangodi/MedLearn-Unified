@@ -83,6 +83,8 @@ import topic74QuickReview from './topic74-quickreview';
 import topic75QuickReview from './topic75-quickreview';
 import topic76QuickReview from './topic76-quickreview';
 import topic77QuickReview from './topic77-quickreview';
+import topic78QuickReview from './topic78-quickreview';
+import topic79QuickReview from './topic79-quickreview';
 
 // Aggregate all Quick Review data by topic ID
 const quickReviewData = {
@@ -163,6 +165,8 @@ const quickReviewData = {
   'topic-75': topic75QuickReview,
   'topic-76': topic76QuickReview,
   'topic-77': topic77QuickReview,
+  'topic-78': topic78QuickReview,
+  'topic-79': topic79QuickReview,
 };
 
 /**
