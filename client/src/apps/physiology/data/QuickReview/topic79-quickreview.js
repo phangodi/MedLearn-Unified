@@ -21,8 +21,19 @@ const topic79QuickReview = {
           critical: false
         },
         {
+          type: 'list',
+          intro: 'Na⁺ intake & major loss routes:',
+          items: [
+            'Dietary intake: 100–400 mmol/day (~5–30 g table salt); no physiological appetite mechanism regulates Na⁺ intake',
+            'Urine — PRIMARY regulated route: 100–400 mmol/day (kidneys adjust output to match intake)',
+            'Sweat — variable, activity-dependent (unregulated)',
+            'Feces — small amount (unregulated)'
+          ],
+          critical: false
+        },
+        {
           type: 'keypoint',
-          text: 'Dietary Na⁺ intake: 100–400 mmol/day (~5–30 g table salt). No physiological appetite mechanism regulates Na⁺ intake. Major loss routes: urine (primary, 100–400 mmol/day — regulated by kidneys), sweat (variable, activity-dependent), feces (small amount). ↑ ECF Na⁺ → water retention → ↑ blood volume/pressure; ↓ ECF Na⁺ → volume contraction.',
+          text: '↑ ECF Na⁺ → water retention by osmosis → ↑ ECF/blood volume + BP; ↓ ECF Na⁺ → volume contraction. Na⁺ balance is controlled exclusively through renal EXCRETION — intake is unregulated.',
           critical: false
         }
       ]

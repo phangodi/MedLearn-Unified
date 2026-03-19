@@ -78,6 +78,11 @@ import topic76 from './topic76.js';
 import topic77 from './topic77.js';
 import topic78 from './topic78.js';
 import topic79 from './topic79.js';
+import topic80 from './topic80.js';
+import topic81 from './topic81.js';
+import topic82 from './topic82.js';
+import topic83 from './topic83.js';
+import topic84 from './topic84.js';
 
 // MCQ Filter Definitions
 export const mcqFilters = [
@@ -199,7 +204,12 @@ const topicsData = [
   topic76,
   topic77,
   topic78,
-  topic79
+  topic79,
+  topic80,
+  topic81,
+  topic82,
+  topic83,
+  topic84
 ];
 
 export default topicsData;

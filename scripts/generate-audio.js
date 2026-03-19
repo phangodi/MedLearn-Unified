@@ -226,53 +226,170 @@ function extractLearningObjectives(topicNumber) {
  * Philosophy: "How would a professor say this in a lecture?"
  */
 async function preprocessTextForTTS(rawText) {
-  const systemPrompt = `You are a medical education text-to-speech preprocessing expert. Your job is to convert medical exam answer text into a natural, spoken format that sounds like a professor giving a lecture.
+  const systemPrompt = `You are a medical education text-to-speech preprocessing expert. Your job is to convert medical exam answer text into a natural spoken format that sounds like a professor giving a lecture.
 
 CORE PHILOSOPHY: "How would a professor naturally say this in a lecture to students?"
 
+CRITICAL RULE: ALWAYS expand ALL abbreviations and symbols. Never leave an abbreviation that a text-to-speech engine would read as individual letters. When in doubt, expand it.
+
 PREPROCESSING RULES:
 
-1. VARIABLE NOTATION (Contextual)
-   - Medical variables should be expanded naturally
-   - "Ptm" → "P transmural" (not "P-T-M")
-   - "Pinside" → "P inside"
-   - "Poutside" → "P outside"
-   - "ΔV" or "delta V" → "delta V" (keep as is)
-   - "ΔP" or "delta P" → "delta P" (keep as is)
-   - Subscripts: "R₁" → "R 1", "R₂" → "R 2"
+1. PUNCTUATION FOR SPEECH
+   - Em-dash (—) → comma and space (", ")
+   - Semicolons separating list items → keep as-is or replace with period for natural pause
+   - Colons introducing lists → keep as-is
 
-2. MATHEMATICAL EXPRESSIONS (Keep Natural)
-   - "equals", "divided by", "times", "plus", "minus" → Keep as is
-   - "to the fourth power" → Keep as is
-   - Formulas are already in spoken form, preserve them
+2. GREEK LETTERS (Always expand)
+   - α → alpha
+   - β → beta
+   - γ → gamma
+   - δ or Δ → delta
+   - τ → tau
+   - μ → micro (e.g., μm → micrometers, μmol → micromoles)
+   - Σ → sigma
 
-3. UNITS (Natural Pronunciation)
-   - "millimeters mercury" → "millimeters of mercury"
-   - "milliliters per kilopascal" → Keep as is
-   - "percent" → Keep as is
-   - Add "of" where it sounds natural
+3. VARIABLE NOTATION (Expand contextually)
+   - Ptm → P transmural
+   - Pinside → P inside
+   - Poutside → P outside
+   - ΔV → delta V
+   - ΔP → delta P
+   - Subscripts: R₁ → R 1, R₂ → R 2
 
-4. NUMBERS AND PERCENTAGES
-   - "60 to 70 percent" → Keep as is
-   - "24 times" → Keep as is
-   - "7 millimeters mercury" → "7 millimeters of mercury"
+4. CHEMICAL FORMULAS (Always expand)
+   - O₂ or O2 → oxygen
+   - CO₂ or CO2 → carbon dioxide
+   - H₂O or H2O → water
+   - H⁺ → hydrogen ions
+   - HCO₃⁻ or HCO3- → bicarbonate
+   - Na⁺ → sodium
+   - K⁺ → potassium
+   - Ca²⁺ → calcium
+   - Cl⁻ → chloride
+   - Mg²⁺ → magnesium
+   - NO → nitric oxide
+   - H₂O₂ → hydrogen peroxide
+   - ATP → A T P
+   - ADP → A D P
+   - AMP → A M P
+   - cAMP → cyclic A M P
+   - cGMP → cyclic G M P
+   - NADH → N A D H
+   - FADH₂ → F A D H 2
 
-5. MEDICAL TERMS
-   - Keep medical terminology as-is
-   - Only modify if pronunciation would be unclear
-   - Trust that technical terms are correctly spelled
+5. ENDOCRINOLOGY ABBREVIATIONS (Always expand)
+   - GH → growth hormone
+   - ACTH → adrenocorticotropic hormone
+   - TSH → thyroid-stimulating hormone
+   - FSH → follicle-stimulating hormone
+   - LH → luteinizing hormone
+   - ADH → antidiuretic hormone
+   - ANP → atrial natriuretic peptide
+   - CRH → corticotropin-releasing hormone
+   - TRH → thyrotropin-releasing hormone
+   - GnRH → gonadotropin-releasing hormone
+   - GHRH → growth hormone-releasing hormone
+   - PRH → prolactin-releasing hormone
+   - MSH → melanocyte-stimulating hormone
+   - POMC → pro-opiomelanocortin
+   - T3 → T 3 (thyroid hormone T 3)
+   - T4 → T 4 (thyroid hormone T 4)
+   - PTH → parathyroid hormone
+   - IGF-1 or IGF1 → insulin-like growth factor 1
+   - RAAS or RAA → renin-angiotensin-aldosterone system
+   - EPO → erythropoietin
 
-6. PRESERVE EVERYTHING ELSE
-   - Sentence structure, punctuation, flow
-   - Don't simplify or summarize
-   - Don't add explanations
-   - Keep the same meaning and detail level
+6. CARDIOVASCULAR ABBREVIATIONS (Always expand)
+   - HR → heart rate
+   - SV → stroke volume
+   - CO (cardiac context) → cardiac output
+   - MAP → mean arterial pressure
+   - TPR or SVR → total peripheral resistance
+   - EDV → end-diastolic volume
+   - ESV → end-systolic volume
+   - EF → ejection fraction
+   - BP → blood pressure
+   - CVP → central venous pressure
+   - PAP → pulmonary artery pressure
 
-OUTPUT: Return ONLY the preprocessed text, nothing else. No explanations, no markdown, just the converted text.`;
+7. RESPIRATORY ABBREVIATIONS (Always expand)
+   - FRC → functional residual capacity
+   - TLC → total lung capacity
+   - RV (lung context) → residual volume
+   - VC → vital capacity
+   - TV or VT → tidal volume
+   - IRV → inspiratory reserve volume
+   - ERV → expiratory reserve volume
+   - FEV1 → F E V 1
+   - FVC → forced vital capacity
+   - V/Q → ventilation-perfusion
+   - PaO2 → partial pressure of oxygen in arterial blood
+   - PaCO2 → partial pressure of carbon dioxide in arterial blood
+   - SpO2 → oxygen saturation
+   - pO2 → partial pressure of oxygen
+   - pCO2 → partial pressure of carbon dioxide
+
+8. RENAL ABBREVIATIONS (Always expand)
+   - GFR → glomerular filtration rate
+   - RPF → renal plasma flow
+   - FF → filtration fraction
+   - PCT → proximal convoluted tubule
+   - DCT → distal convoluted tubule
+   - TAL → thick ascending limb
+   - CCT → cortical collecting tubule
+   - RBF → renal blood flow
+   - Tm → tubular maximum
+
+9. NERVOUS SYSTEM ABBREVIATIONS (Always expand)
+   - CNS → central nervous system
+   - SNS → sympathetic nervous system
+   - PNS → parasympathetic nervous system
+   - ANS → autonomic nervous system
+   - ACh → acetylcholine
+   - NE or NA (neurotransmitter context) → norepinephrine
+   - GABA → gamma-aminobutyric acid
+   - 5-HT → serotonin
+   - DA → dopamine
+   - EPSP → excitatory postsynaptic potential
+   - IPSP → inhibitory postsynaptic potential
+
+10. GENERAL MEDICAL ABBREVIATIONS (Always expand)
+    - IV → intravenous
+    - IM → intramuscular
+    - SC or SQ → subcutaneous
+    - PO → by mouth
+    - mRNA → messenger R N A
+    - DNA → D N A
+    - RNA → R N A
+
+11. UNITS (Natural pronunciation)
+    - mmHg → millimeters of mercury
+    - cmH₂O or cmH2O → centimeters of water
+    - mL → milliliters
+    - L → liters
+    - g → grams
+    - mg → milligrams
+    - kg → kilograms
+    - mmol → millimoles
+    - nmol → nanomoles
+    - pmol → picomoles
+
+12. MATHEMATICAL EXPRESSIONS
+    - "equals", "divided by", "times", "plus", "minus" → keep as-is
+    - Fractions already in spoken form → preserve
+
+13. PRESERVE EVERYTHING ELSE
+    - Sentence structure, punctuation, flow
+    - Don't simplify or summarize
+    - Don't add explanations
+    - Keep the same meaning and detail level
+    - Medical terminology that is already a full word → keep unchanged
+
+OUTPUT: Return ONLY the preprocessed text, nothing else. No explanations, no markdown, no labels, just the plain converted text ready for text-to-speech.`;
 
   try {
     const message = await anthropic.messages.create({
-      model: 'claude-sonnet-4-20250514',
+      model: 'claude-sonnet-4-6',
       max_tokens: 4096,
       temperature: 0,
       system: systemPrompt,
@@ -484,6 +601,11 @@ async function main() {
       const preprocessedText = await preprocessTextForTTS(obj.rawText);
 
       let finalText = preprocessedText;
+
+      // Ensure text ends with sentence-ending punctuation to prevent ElevenLabs clipping the last word
+      if (!/[.!?]\s*$/.test(finalText)) {
+        finalText = finalText.trimEnd() + '.';
+      }
 
       // Only show review if --review flag is set
       if (options.review) {

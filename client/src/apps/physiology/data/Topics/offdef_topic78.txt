@@ -1,0 +1,94 @@
+```javascript
+// **LO-1** (Topic-78)
+officialDefinitions: [
+  'Water intake (Total: 2100-3400 mL/day): Fluid intake (drinking water & beverages): 1000-2000 mL/day. Water content of foodstuffs: 800-1000 mL/day. Oxidative (metabolic) water production: 300-400 mL/day.',
+  'Water output (Total: 2100-3400 mL/day): Insensible perspiration (skin & lungs): 800-1000 mL/day, occurs through skin diffusion and respiratory water loss. Sensible perspiration (sweating): 200 mL/day (highly variable, depends on activity and temperature). Stool (fecal loss): 100-200 mL/day. Urinary excretion: 1000-2000 mL/day.',
+  'Minimal urine output: 500-600 mL/day (required to excrete 650 mosmol solute/day).',
+  'Normal values: urine osmotic concentration 70-1200 mosmol/L. Urine specific gravity: 1001-1030 g/L (blood plasma 1012 g/L). Diuresis interpretation: <100 mL/day anuria; 100-600 mL/day oliguria; 600-2500 mL/day normal range; >2500 mL/day polyuria; in diabetes insipidus can reach 25 L/day. Minimal daily excreted osmotic activity: 650 mosmol.',
+  'Regulation of water intake: regulated by thirst mechanisms, including dryness of the mouth, angiotensin II, and hypothalamic osmoreceptors.',
+],
+
+// **LO-2** (Topic-78)
+officialDefinitions: [
+  'Net water loss → decrease in total body fluid volume and increase in osmolality: loss of free water concentrates solutes in the extracellular fluid (ECF), raising osmolality. Extracellular fluid volume decreases. Due to increased ECF osmolality, water moves out of cells, reducing intracellular volume.',
+  'Osmoreceptor activation in the hypothalamus: detects increased plasma osmolality. Stimulates thirst, encouraging water intake. Triggers antidiuretic hormone (ADH) secretion, increasing water reabsorption in the kidneys.',
+  'ADH (vasopressin) effects on urine production: increases water permeability of principal cells in the distal tubules and collecting ducts. Enhances water reabsorption, reducing urine volume. Leads to highly concentrated (hyperosmotic) urine.',
+  'Renal adjustments: urine osmolality increases due to water conservation. Urine volume decreases to prevent further water loss.',
+  'Consequences of net water loss: hypernatremia (high sodium concentration in plasma) — water loss without sodium loss leads to sodium concentration increase. Reduced blood volume (hypovolemia) → lowered blood pressure, increased heart rate and vasoconstriction. Potential cell shrinkage due to hyperosmotic extracellular fluid pulling water from cells.',
+  'Restoration to normal: water intake via thirst mechanism restores plasma volume and reduces osmolality. ADH secretion normalizes once osmolality stabilizes. Kidneys excrete excess solutes once water balance is restored.',
+],
+
+// **LO-3** (Topic-78)
+officialDefinitions: [
+  'Net NaCl loss → changes in ECF volume and osmolality: plasma osmolality decreases — sodium is the primary extracellular solute that determines plasma osmolality, so its loss reduces ECF solute concentration, leading to a hypo-osmotic state. Extracellular fluid volume decreases — sodium loss reduces ECF volume because water follows sodium due to osmotic balance, leading to hypovolemia (low blood volume). Intracellular fluid volume increases — since plasma osmolality is lower than intracellular osmolality, water moves into cells, resulting in cell swelling.',
+  'Inhibition of osmoreceptors in the hypothalamus: since plasma osmolality is lower than normal, osmoreceptors are suppressed. This reduces thirst, leading to decreased water intake.',
+  'Reduced ADH secretion: lower osmolality inhibits ADH release, leading to decreased water reabsorption in the kidneys. As a result, urine volume increases and urine becomes dilute (low osmolality).',
+  'Activation of renin-angiotensin-aldosterone system (RAAS): the loss of NaCl reduces blood pressure, which activates RAAS. Aldosterone increases Na⁺ reabsorption in the kidneys to restore sodium balance. Angiotensin II promotes vasoconstriction to maintain blood pressure.',
+  'Effects on urine production: urine volume increases (polyuria) due to decreased ADH. Urine osmolality decreases (dilute, hypo-osmotic urine) — since ADH is low, the kidneys reabsorb less water. Urine sodium content depends on cause: if due to diuretics, Addison\'s disease, or kidney disorders, urine may have high sodium; if due to diarrhea, vomiting, or sweating, kidneys conserve sodium and urine sodium may be low.',
+  'Long-term responses: increased sodium retention via aldosterone restores ECF osmolality. Persistent diuresis (high urine output) until sodium balance is restored.',
+],
+
+// **LO-4** (Topic-78) — CRITICAL
+officialDefinitions: [
+  'Localization of AVP-producing cells: arginine-vasopressin (AVP) is produced in the supraoptic nucleus (SON) (primary) and paraventricular nucleus (PVN) of the hypothalamus. These hypothalamic neurons produce AVP and transport it to the posterior pituitary gland for storage and secretion.',
+  'Synthesis in the hypothalamus: AVP is synthesized in the cell bodies of magnocellular neurons in the supraoptic and paraventricular nuclei. It is packaged into secretory granules (vesicles) along with neurophysin II, a carrier protein that aids in transport.',
+  'Axonal transport to posterior pituitary: the vesicles containing AVP travel down the axons of these neurons through the hypothalamo-hypophyseal tract. The axons terminate in the posterior pituitary (neurohypophysis), where AVP is stored in nerve terminals.',
+  'Stimulus-triggered release (neurosecretion): when the body needs to conserve water (e.g., during dehydration or increased plasma osmolality), osmotic and baroreceptor signals activate the magnocellular neurons. This triggers calcium (Ca²⁺) influx at the nerve terminals in the posterior pituitary, leading to exocytosis of AVP-containing vesicles.',
+  'Entry into the circulation: released AVP enters the capillary blood of the posterior pituitary and is carried into the systemic circulation. It travels to target organs, primarily the kidneys, where it acts on the collecting ducts to promote water reabsorption and maintain fluid balance.',
+],
+
+// **LO-5** (Topic-78) — CRITICAL
+officialDefinitions: [
+  'Stimuli increasing AVP secretion: high osmolarity of the blood (main trigger) — high solute concentration in plasma (especially Na⁺) stimulates osmoreceptors in the hypothalamus, which trigger AVP release to promote water retention in the kidneys. Hypovolemia — decreased blood volume (e.g., from hemorrhage, excessive sweating, or diarrhea) stimulates baroreceptors in the cardiovascular system; AVP secretion increases to retain water and maintain blood pressure.',
+  'Additional stimuli increasing AVP secretion: standing (venous stasis). Pain and exercise: sympathetic activation increases AVP secretion to prevent excess fluid loss. Nausea and vomiting strongly stimulate AVP release. Angiotensin II — low blood pressure causes angiotensin II to be secreted, which signals the hypothalamus to release ADH.',
+  'Stimuli inhibiting AVP secretion: low osmolarity (hypo-osmolarity). Increased blood volume (hypervolemia). Increased blood pressure. Lying in horizontal position. Alcohol consumption — inhibits AVP release, leading to increased urine output (diuresis). Atrial natriuretic factor (ANF) inhibits AVP production.',
+  'Control of water loss — regulation of AVP production: renin-angiotensin system stimulates AVP production. Atrial natriuretic hormone inhibits AVP production.',
+  'Osmolality threshold: osmolality >280 mosmol/kg stimulates thirst sensation (drinking drive) and AVP release via hypothalamic osmoreceptors.',
+],
+
+// **LO-6** (Topic-78) — CRITICAL
+officialDefinitions: [
+  'Target cells for vasopressin (AVP): principal cells (most important target) — found in the late distal tubule and collecting ducts of the nephron. AVP increases water permeability by stimulating the insertion of aquaporin-2 (AQP2) channels in the apical membrane, allowing water to be reabsorbed into the bloodstream, reducing urine volume.',
+  'Additional target cells: thick ascending limb of the loop of Henle — AVP increases the activity of the Na⁺-K⁺-2Cl⁻ cotransporter (NKCC2), enhancing countercurrent multiplication, which helps maintain the osmotic gradient necessary for urine concentration. Inner medullary collecting duct cells — AVP increases urea permeability, facilitating urea recycling and enhancing the cortico-papillary osmotic gradient.',
+  'Vasoconstrictor target cells: smooth muscle cells of systemic blood vessels express V1 receptors. ADH (V1/IP3-Ca²⁺ mechanism) → vasoconstriction — vessels decrease their perimeter, increasing peripheral resistance and blood pressure.',
+  'V3 receptor: located on ACTH-producing neurons of the anterior pituitary gland.',
+  'Why AVP is called antidiuretic hormone (ADH): water reabsorption from the collecting duct through aquaporin-2 water channels (V2/cAMP mechanism) — in the absence of ADH, the collecting duct is relatively impermeable to water and urea, and 10-15% of filtered water is excreted (max 26 liters/day), resulting in diabetes insipidus. In the presence of ADH, water permeability of the whole collecting duct and urea permeability of its papillary part is greatly increased, reducing urine output and concentrating urine.',
+],
+
+// **LO-7** (Topic-78)
+officialDefinitions: [
+  'Tubular segments where AVP increases permeability: water permeability — late distal tubule and collecting ducts (principal cells). Urea permeability — inner medullary collecting duct (IMCD), via urea transporters UT-A1 and UT-A3.',
+  'Cellular mechanism of AVP action (V2-receptor and aquaporins): AVP binds to V2 receptors on the basolateral membrane of principal cells in the collecting ducts. This activates adenylyl cyclase (via Gs protein), which converts ATP → cAMP. cAMP activates protein kinase A (PKA), which phosphorylates intracellular vesicles containing aquaporin-2 (AQP2). AQP2 vesicles fuse with the luminal (apical) membrane, increasing water permeability. Water is reabsorbed into the interstitial fluid and blood, concentrating the urine. Aquaporin type 3 and 4 are located on the basolateral cell membrane and are always open.',
+  'Urea transporter mechanism: in the inner medullary collecting duct, AVP increases the activity of urea transporters UT-A1 and UT-A3. Urea diffuses out of the collecting duct into the renal medullary interstitium, increasing the medullary osmotic gradient and enhancing water reabsorption. Urea re-enters the loop of Henle, recycling between the tubule and interstitium to reinforce the gradient.',
+  'Effects on urine concentration/dilution: in the absence of ADH, the osmolality of fluid leaving the collecting duct is 70 mosmol/kg (50 mosmol/kg urea and 20 mosmol/kg electrolyte). In the presence of ADH, urea permeability of the papillary part of the collecting duct is greatly increased and water permeability of the whole collecting duct is greatly increased — resulting in concentrated urine up to 1200 mosmol/kg. High AVP → increased AQP2 insertion & UT-A1/UT-A3 activation → urine becomes highly concentrated (hyperosmotic, low volume). Low AVP (overhydration, alcohol intake) → decreased AQP2 insertion & UT-A1/UT-A3 activation → urine becomes dilute (hypo-osmotic, high volume).',
+],
+
+// **LO-8** (Topic-78)
+officialDefinitions: [
+  'The medullary osmotic gradient (300-1200 mosmol/kg) is essential for urine concentrating ability. Consequence of disruption: without a hyperosmotic medulla, there is no osmotic force to pull water out of the tubule — even if AVP is secreted, water remains in the tubule, leading to dilute urine. Urine output remains excessive even when the body is dehydrated, mimicking diabetes insipidus. Maximum achievable urine osmolality drops to 300 mosmol/kg or less. Increased risk of dehydration and hypernatremia.',
+  'Factors influencing medullary gradient: length of Henle loops. Percentage of long-looped nephrons compared to short-looped ones. Urea. Flow through Henle-loop and collecting duct. Blood-flow through vasa recta. Prostaglandins (PGE2, PGD2).',
+  'The motor of urine concentration — loop of Henle: the ascending segment resorbs actively and passively Na and Cl, practically without water resorption. These transports decrease the osmolarity of the tubular fluid and increase the osmolarity in the renal medulla. Horizontal gradient: active Na⁺ reabsorption in the ascending thick segment of the loop of Henle. Vertical gradient (countercurrent): fluid movement in the descending and ascending segment of the Henle-loop.',
+  'Re-establishment of the medullary osmotic gradient — countercurrent multiplication: the thick ascending limb (TAL) actively reabsorbs Na⁺, K⁺, and Cl⁻ via the Na⁺-K⁺-2Cl⁻ cotransporter (NKCC2). Water remains in the tubule (impermeability to water in TAL), increasing the osmolarity of the surrounding medullary interstitium. This draws water out of the descending limb, increasing solute concentration in the loop and reinforcing the gradient.',
+  'Re-establishment — countercurrent exchange in vasa recta: the vasa recta (specialized capillaries) maintain the gradient by absorbing solutes from the interstitium in the descending vasa recta and returning solutes to the interstitium in the ascending vasa recta. This prevents washout of solutes (the loop form structure of vasa recta prevents dilution of renal medulla and does not allow quick transport of NaCl and urea).',
+  'Re-establishment — urea recycling: AVP stimulates urea transporters (UT-A1, UT-A3) in the collecting duct. Urea moves into the medullary interstitium, increasing its osmolarity. Urea re-enters the loop of Henle, recycling between the tubule and interstitium to reinforce the gradient.',
+  'Loop diuretics (e.g., furosemide) abolish the medullary gradient by blocking the Na⁺-K⁺-2Cl⁻ transporter in the loop of Henle, preventing salt accumulation in the medulla.',
+],
+
+// **LO-9** (Topic-78)
+officialDefinitions: [
+  'Clearance principle: clearance is the amount of plasma that is cleared of a substance during one minute. It is a virtual plasma volume characteristic to a substance in question.',
+  'Osmolar clearance formula: Cosm = (Uosm × V) / Posm. Where: Uosm = urine osmolarity (mOsm/L), Posm = plasma osmolarity (mOsm/L), V = urine flow rate (volume per minute or per day).',
+  'Free water clearance formula: CH₂O = V - Cosm. Equivalently: CH₂O = V(1 - Uosm/Posm).',
+  'Expected free water clearance interpretation: dilute urine (Uosm < Posm) → positive CH₂O value → kidneys excreting excess water. Concentrated urine (Uosm > Posm) → negative CH₂O value (TcH₂O) → kidneys conserving water (water retention). Iso-osmotic urine (Uosm = Posm) → CH₂O near zero → no net gain or loss of free water.',
+  'Example calculation: Uosm = 600 mOsm, Posm = 300 mOsm/L, V = 2 mL/min → Cosm = (600 × 2) / 300 = 4 mL/min → CH₂O = 2 - 4 = -2 mL/min (kidneys conserving water, concentrated urine).',
+],
+
+// **LO-10** (Topic-78)
+officialDefinitions: [
+  'Diabetes insipidus (DI): a condition where the body produces large amounts of dilute urine (polyuria) due to an inability to reabsorb water in the kidneys. In the absence of ADH or V2 ADH receptor, up to 10-15% of the filtered water will be excreted (max 26 liters/day).',
+  'Central diabetes insipidus: the problem lies in the hypothalamus or posterior pituitary, where ADH is not produced or released. Causes: severe trauma to the head damaging the hypothalamus/posterior pituitary, brain tumors, infections, or genetic conditions. Without ADH, the kidneys do not receive the signal to retain water, causing excessive water loss in urine. Symptoms: great water losses through the urine (polyuria), persisting feeling of thirst (polydipsia).',
+  'Nephrogenic diabetes insipidus: ADH is produced normally but the kidneys do not respond properly. Often due to genetic mutations (e.g., defective V2 receptors or aquaporins), chronic kidney disease, or drug toxicity (e.g., lithium). Since the kidneys are unresponsive to ADH, they fail to reabsorb water, leading to large amounts of dilute urine similar to central DI.',
+  'Polyuria in diabetes insipidus vs. osmotic diuresis: in DI, polyuria occurs due to pure water loss — urine is very dilute (low osmolarity, <300 mosmol/L) and there is no excess solute excretion. This leads to severe dehydration and hypernatremia (high blood sodium levels) because water is lost without solutes. In osmotic diuresis, excess solutes (such as glucose in uncontrolled diabetes mellitus, urea in kidney failure, or mannitol therapy) are present in the renal tubules — these solutes draw water into the urine through osmosis, leading to high urine volume but with high osmolarity (>300 mosmol/L), since solutes are being excreted along with water.',
+  'Inhibition of urine concentration (causes of disrupted concentrating ability): karboanhydrase inhibitors (acetazolamide), loop diuretics (inhibition of Na⁺,K⁺,2Cl⁻-symporters), thiazide (inhibition of Na⁺/Cl⁻ cotransporter), AT-II receptor antagonists (losartan), aldosterone antagonists (spironolactone), potassium deficit (inhibits the Na⁺,K⁺,2Cl⁻-symporter), hypercalcemia (decreasing the permeability of tight junctions; Ca²⁺-receptors inhibiting the Na⁺,K⁺,2Cl⁻-symporter), protein-poor nutrition, renal inflammation (vasodilatation), increase of blood pressure, osmotic diuresis, diabetes insipidus (renal, central).',
+],
+```

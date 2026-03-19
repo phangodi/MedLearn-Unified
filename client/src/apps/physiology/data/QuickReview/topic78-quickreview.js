@@ -36,8 +36,20 @@ const topic78QuickReview = {
           }
         },
         {
+          type: 'list',
+          intro: 'Urine output categories:',
+          items: [
+            'Anuria: <100 mL/day',
+            'Oliguria: 100–600 mL/day',
+            'Normal: 600–2500 mL/day',
+            'Polyuria: >2500 mL/day',
+            'Diabetes insipidus: up to 25 L/day'
+          ],
+          critical: false
+        },
+        {
           type: 'keypoint',
-          text: 'Minimum obligatory urine output: 500–600 mL/day (must excrete ≥650 mosmol solute/day; max urine concentration ~1200 mosmol/L). Urine osmolality range: 70–1200 mosmol/L. Diuresis categories: <100 mL/day = anuria; 100–600 = oliguria; 600–2500 = normal; >2500 = polyuria; DI can reach 25 L/day. Intake regulated by thirst (osmoreceptors, angiotensin II, oral dryness); loss regulated by AVP/ADH.',
+          text: 'Minimum obligatory urine output: 500–600 mL/day (must excrete ≥650 mosmol/day; max urine concentration ~1200 mosmol/L). Urine osmolality range: 70–1200 mosmol/L. Intake regulated by thirst (osmoreceptors, angiotensin II, oral dryness); loss regulated by AVP/ADH.',
           critical: false
         }
       ]
@@ -270,13 +282,15 @@ const topic78QuickReview = {
         },
         {
           type: 'formula',
-          expression: 'Cosm = (Uosm × V) / Posm',
-          description: 'Osmolar clearance: the virtual plasma volume completely cleared of all osmoles per unit time'
+          formula: 'Cosm = (Uosm × V) / Posm',
+          explanation: 'Osmolar clearance: virtual plasma volume cleared of all osmoles per unit time',
+          critical: false
         },
         {
           type: 'formula',
-          expression: 'CH₂O = V − Cosm = V × (1 − Uosm/Posm)',
-          description: 'Free water clearance: positive = kidneys excreting free water (dilute urine); negative = kidneys retaining free water (concentrated urine)'
+          formula: 'CH₂O = V − Cosm = V × (1 − Uosm/Posm)',
+          explanation: 'Free water clearance: positive (+) = dilute urine, kidneys excreting excess water; negative (−) = concentrated urine, kidneys retaining free water',
+          critical: false
         },
         {
           type: 'paragraph',

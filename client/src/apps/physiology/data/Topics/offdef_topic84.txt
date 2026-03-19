@@ -1,0 +1,106 @@
+```javascript
+// **LO-1** (Topic-84)
+officialDefinitions: [
+  'Immediate energy source (ATP, 1–2 s): ATP → ADP + Pi + energy (30–60 kJ/mol energy). ATP – Creatine-phosphate system: ADP + creatine-phosphate → ATP + creatine (catalyzed by creatine kinase); ATP + creatine → ADP + creatine-phosphate. Used up at the onset of every muscular activity. Fastest ATP production. Very limited capacity.',
+  'Anaerobic glycolysis in the cytosol (phosphagen system 1/2): ATP yield — 2 ATP per glucose, 3 ATP per glycogen. Advantages: rapid ATP production, independent of O₂. Disadvantage: lactate accumulation (metabolic acidosis), limited capacity. Net gain: 1 glucose → 2 pyruvate + 2 ATP (+2 NADH) + heat; 2 pyruvate + 2 NADH → 2 lactate + 2 NAD⁺.',
+  'Oxidation of carbohydrates (aerobic glycolysis): Glucose-derived ATP is the primary energy source for muscles, but limited (approximately 40 km run). Occurs in mitochondria. ATP yield: glucose oxidation ≈ 30–32 ATP. Steps: 1. Glycolysis (2 ATP + 2 NADH); 2. Citric acid cycle (2 ATP); 3. Oxidative phosphorylation (26–28 ATP). Slower ATP production. Very high capacity. Dominant during endurance exercise. Energy stores: liver glycogen 110 g / 451 kcal; muscle glycogen 500 g / 2050 kcal; glucose in body fluids 15 g / 62 kcal.',
+  'Oxidation of fats: acetyl-CoA produced from free fatty acids (FFAs) by β-oxidation → enters the citric acid cycle. Large proportion of energy is produced, but more O₂ is needed (uneconomical) and slow. ATP yield: fatty acids produce 129 ATP (e.g., palmitate). Energy stores: subcutaneous and visceral fat 7,800 g / 73,320 kcal; intramuscular fat 161 g / 1,513 kcal. Stock is practically unlimited.',
+  'Oxidation of proteins: minor energy source; some amino acids are used for gluconeogenesis. Urea excreted in the urine. Used during prolonged or extreme exertion.',
+  'Overview of energy sources in skeletal muscle (table): Creatine-phosphate (phosphagen system) — duration 2–30 sec, stored in skeletal muscle, quickly available without O₂, few ATP. Glycogen (anaerobic) — duration 10 sec–2 min, stored in skeletal muscle and liver, quickly available without O₂, limited stock, lactate is produced. Glycogen (aerobic) — duration minutes–hours, stored in skeletal muscle and liver, without lactate, glucose is fully utilized, slow use, oxygen must be delivered, stock is limited. Fats — duration hours, stored in skeletal muscle and subcutaneous fat, stock is practically unlimited, slow use.',
+  'Hormones affecting glucose metabolism during prolonged submaximal exercise: Catecholamines increase glycogenolysis, lipolysis, and cardiac output. Cortisol stimulates gluconeogenesis and mobilization of amino acids. Glucagon promotes gluconeogenesis and glycogenolysis. Plasma insulin level decreases (α2 receptor). Muscle glucose uptake increases (GLUT4). Plasma glucose slightly increases.',
+  'Effects of regular exercise on plasma glucose and insulin levels: Daily exercise decreases blood glucose and insulin responses to glucose ingestion. Glucose-uptake of skeletal muscle cells increases even without insulin (GLUT4). Insulin sensitivity of cells increases (insulin receptor up-regulation).',
+],
+
+// **LO-2** (Topic-84)
+officialDefinitions: [
+  'Classification of muscle fiber types (System 1): Type I = Slow Oxidative (SO). Type IIa = Fast Oxidative/Glycolytic (FOG). Type IIx = Fast Glycolytic (FG).',
+  'Oxidative capacity: Type I — High. Type IIa — Moderately high. Type IIx — Low. Glycolytic capacity: Type I — Low. Type IIa — High. Type IIx — Highest. Mitochondrial density: Type I — High. Type IIa — Moderate. Type IIx — Low.',
+  'Contraction speed: Type I — Slow (110 ms). Type IIa — Fast (50 ms). Type IIx — Fast (50 ms). Fatigue resistance: Type I — High. Type IIa — Moderate. Type IIx — Low. Functions: Type I — endurance activities. Type IIa — middle-distance activities. Type IIx — sprinting, power sports.',
+  'Additional fiber characteristics (from Notes): Myoglobin: Type I — High. Type IIa — High. Type IIx — Low. Red color: Type I — Dark. Type IIa — Dark. Type IIx — Pale. Capillary supply: Type I — Rich. Type IIa — Rich. Type IIx — Poor. Capillary density: Type I — High. Type IIa — Intermediate. Type IIx — Low.',
+  'Alkaline ATPase activity: Type I — Low. Type IIa — High. Type IIx — High. Acidic ATPase activity: Type I — High. Type IIa — Medium-high. Type IIx — Low. Twitch force: Type I — Small. Type IIa — Medium. Type IIx — Large. Z-line width: Type I — Intermediate. Type IIa — Wide. Type IIx — Narrow.',
+  'Motor Unit Type: Type I — Slow Oxidative (SO). Type IIa — Fast Oxidative/Glycolytic (FOG). Type IIx — Fast Glycolytic (FG). Oxidative enzyme capacity: Type I — High. Type IIa — Intermediate-high. Type IIx — Low. Glycogen content: Type I — Low. Type IIa — High. Type IIx — High.',
+],
+
+// **LO-3** (Topic-84)
+officialDefinitions: [
+  'Short, High-Intensity (0–30 sec): dominantly uses Creatine-phosphate (phosphagen system). Fastest ATP production; used up at the onset of every muscular activity. Very limited capacity.',
+  'Intermediate Duration, High Intensity (30 sec–2 min): primarily relies on anaerobic glycolysis (muscle glycogen breakdown, lactate accumulation). ATP yield: 2 ATP per glucose, 3 ATP per glycogen. Rapid ATP production, independent of O₂. Disadvantage: lactate accumulation (metabolic acidosis), limited capacity.',
+  'Moderate Intensity, Moderate Duration (~100 min): predominantly aerobic glycolysis, using glycogen reserves. Occurs in mitochondria. Slower ATP production, very high capacity, dominant during endurance exercise. No lactate accumulation.',
+  'Long-Duration, Low-to-Moderate Intensity (several hours): mainly fatty acid oxidation (aerobic). Large fuel reserve with slower energy provision. Acetyl-CoA produced from FFAs by β-oxidation → enters the citric acid cycle. More O₂ needed. Stock is practically unlimited.',
+  'Hormonal regulation with intensity and duration: Short intense exercise mainly elevates catecholamines for rapid energy mobilization. Prolonged exercise gradually increases cortisol, glucagon, growth hormone, and catecholamines to sustain glucose availability, mobilize fatty acids, and conserve glycogen stores. Insulin typically decreases during exercise to facilitate nutrient mobilization, while muscle glucose uptake (via GLUT4 transporters) increases independently of insulin due to muscular contractions.',
+],
+
+// **LO-4** (Topic-84)
+officialDefinitions: [
+  'Muscle fiber distribution has a genetic component. Typical proportions in untrained individuals: Type I ~50%; Type IIa ~30%; Type IIx ~20%.',
+  'Endurance athletes (e.g., marathon runners, cyclists): ~70–90% Type I fibers. Power athletes (e.g., sprinters, weightlifters): ~75% Type II fibers.',
+  'Training can promote metabolic adaptations and limited fiber type transitions (IIx → IIa). But genetic predisposition remains important!',
+  'Some people have considerably more fast-twitch than slow-twitch fibers; this factor could determine to some extent the athletic capabilities of different individuals. Athletic training has not been shown to change the relative proportions of fast-twitch and slow-twitch fibers.',
+  'The relative proportions of fast-twitch and slow-twitch fibers seem to be determined almost entirely by genetic inheritance, which in turn helps determine which area of athletics is most suited to each person: some people appear to be born to be marathoners, whereas others are born to be sprinters and jumpers.',
+],
+
+// **LO-5** (Topic-84)
+officialDefinitions: [
+  'Measurement of energy expenditure during exercise based on O₂ uptake (VO₂): O₂ delivery to skeletal muscle and muscle O₂ uptake are key determinants of athletic performance. Absolute VO₂ = the volume of O₂ consumed by the body per minute (mL/min). Relative VO₂ = O₂ consumption relative to body mass (mL/kg BW/min). Most common. VO₂max = maximal O₂ uptake during intense exercise (mL/min, mL/kg/min). It reflects the integrated capacity of the cardiovascular, respiratory, and muscular systems to deliver and use oxygen for aerobic energy production. Indicator of cardiorespiratory endurance and aerobic fitness. Important clinical marker: low VO₂max is associated with cardiovascular disease, metabolic syndrome, and increased mortality risk. Measure: 12-minute run for distance – Cooper Test (estimated); ergospirometry (= cardiopulmonary exercise test, accurate).',
+  'VO₂max values by population: Sedentary adults — 30–40 mL/kg/min. Recreationally active — 40–50 mL/kg/min. Well-trained athletes — 55–70 mL/kg/min. Elite endurance athletes — 70–85+ mL/kg/min. VO₂max gradually falls with age.',
+  'Which factor dominates VO₂max: Trained — O₂ delivery to the muscles (cardiac output). Untrained — muscle oxidative metabolism.',
+  'Muscle fatigue: loss of muscle power, which is reversible by rest. 1. Peripheral fatigue mechanisms: Depletion of energy delivery systems — ATP depletion: ADP/ATP ratio is high → ADP slows down cross-bridge cycling; creatine-phosphate depletion; glycogen depletion: decreased ATP synthesis. Accumulation of metabolic by-products (lactate, H⁺): elevation in extracellular [H⁺] directly inhibits actin-myosin cross-bridge, leading to a reduction in contractile force (strenuous exercise can reduce intramuscular pH as low as 6.8). Increase in muscle temperature: decrease in enzyme functions. Loss of body fluid (perspiration): decreased cardiac output. 2. Central fatigue: decreased motoneuron activation, neurotransmitter imbalance, decreased motivation.',
+  'Exhaustion: a more severe form of fatigue, where the person can no longer continue exercising, even if motivated. Often signals the physiological limit of endurance, requiring immediate cessation of effort.',
+  'Muscle pain and muscle soreness: Acute pain (= metabolic stress) — occurs during or immediately after high-intensity exercise. Edema. H⁺, K⁺, lactate increase in the extracellular space. Nociceptor activation. Delayed muscle soreness — microtraumas to muscle fibers → inflammation → edema → nociceptor activation. Structural damage is followed by repair and remodeling: stronger muscle fibers, adaptation to load, muscle hypertrophy (growth).',
+],
+
+// **LO-6** (Topic-84)
+officialDefinitions: [
+  'Heart rate: HRrest = 60–80 bpm → 45 bpm (world class endurance runner). HRmax = 185 bpm → 174 bpm (world class endurance runner).',
+  'Stroke volume: venoconstriction + respiratory pump → venous return ↑ (Frank-Starling) → stroke volume ↑. At rest: 70 mL → 100 mL (world class endurance runner). Max: 120 mL → 200 mL (world class endurance runner).',
+  'Cardiac output: 5 L/min → 30 L/min (+ chronotropy, + inotropy, venomotor tone ↑).',
+  'Blood pressure: maximal systolic pressure 200–250 mmHg. Extreme high BP: 480/350 mmHg (weightlifting, Valsalva maneuver). Arm exercise increases BP more than leg exercise.',
+  'Ventilation: minute ventilation (VE): rest ≈ 7 L/min; maximal exercise 100–200 L/min. Activation of inspiratory center by: central chemoreceptors; peripheral chemoreceptors (acidosis); muscle chemoreceptors; cortical coinnervation (muscle mechanoreceptors).',
+  'Lactate metabolism: normal 1 mmol/L (can rise up to 15 mmol/L). Depends on type of work (e.g., static — lack of O₂, mitochondrial capacity, and training status). Limit of sustained easy work (aerobic threshold): ~2 mmol/L. Aerobic and anaerobic transition: 2–4 mmol/L. Maximal steady state (anaerobic threshold): ~4 mmol/L (individual!); sustainable for 20–60 minutes depending on training. Skeletal muscle: lactate diffuses from Type II to Type I fibers — enough glycogen → oxidative metabolism (ATP); few glycogen → gluconeogenesis. Liver: gluconeogenesis (BUT: sympathetic tone increases → liver perfusion decreases → lactate breakdown decreases). Heart: lactate → pyruvate → CO₂ + H₂O + ATP + heat. In intensive sports/work, the lactate-removing function of the heart is very important!',
+  'Lactate threshold: the exercise intensity at which blood lactate begins to rise sharply. Typically occurs at 50–60% VO₂max in untrained individuals; 70–85% VO₂max in trained athletes.',
+],
+
+// **LO-7** (Topic-84)
+officialDefinitions: [
+  'Cardiovascular adaptations to training: physiological cardiac hypertrophy — bigger and stronger muscle mass. Increased SV. Increased CO. Reduced resting heart rate (below 60 bpm). Improved capillarization. More sustained work.',
+  'Respiratory adaptations to training: training increases lung diffusing capacity, respiratory muscle efficiency, and ventilatory capacity.',
+  'Skeletal muscle adaptations to training: training increases mitochondrial density, oxidative enzymes, capillary density, and glycogen storage. Endurance training shifts fibers toward oxidative metabolism.',
+  'What determines muscle O₂ uptake: Cardiovascular factors — cardiac output, blood flow distribution, hemoglobin concentration. Respiratory factors — pulmonary ventilation, lung diffusion capacity. Muscle factors — capillary density, mitochondrial number, oxidative enzyme activity, myoglobin content. Training enhances many of these parameters.',
+  'Comparison at rest — Heart rate: untrained 70–80 bpm vs. trained ~40–60 bpm (increased vagal tone and stroke volume). Stroke volume: untrained ~60–70 mL/beat vs. trained ~90–110 mL/beat (cardiac hypertrophy). Cardiac output at rest: similar (~5 L/min) in trained/untrained, but achieved through lower HR and higher SV in trained individuals.',
+  'Comparison during maximal exercise — Cardiac output: untrained ~20–25 L/min vs. trained ~30–40 L/min (increased stroke volume). VO₂max: untrained 30–40 mL/kg/min vs. trained up to 70–85 mL/kg/min. Max ventilation: untrained ~110 L/min vs. trained ~130 L/min vs. world class endurance runner ~190 L/min. Blood volume: untrained 4.7 L vs. trained 5.1 L vs. world class endurance runner 6 L.',
+  'Reference values (pretraining → posttraining → world class endurance runner): HRrest 75 → 65 → 45 bpm. HRmax 185 → 183 → 174 bpm. SVrest 60 → 70 → 100 mL. SVmax 120 → 140 → 200 mL. Systolic BP at rest 135 → 130 → 120 mmHg. Blood volume 4.7 → 5.1 → 6 L. Max ventilation 110 → 130 → 190 L/min. Max blood lactate 7.5 → 8.5 → 9 mmol/L. VO₂max 40 → 50 → 80 mL/bwkg/min.',
+],
+
+// **LO-8** (Topic-84)
+officialDefinitions: [
+  'Genetic factors: muscle fiber composition, maximal cardiac output, mitochondrial capacity. Muscle fiber distribution has a genetic component. Marathon runners typically have 93–99% type I fibers; sprinters have approximately 75% type II fibers, suited for explosive performance.',
+  'Training improves: metabolic efficiency, neuromuscular coordination, cardiovascular capacity. Systematic and sport-specific physical preparation enhances physiological attributes (VO₂max, mitochondrial density, capillary density), increases muscle glycogen and intramuscular triglycerides, and improves fatigue resistance and neuromuscular efficiency.',
+  'Physiological status — neuromuscular system: coordination of nerve-muscle interactions; efficiency of motor unit recruitment and muscle contraction strength. Cardiorespiratory system: high VO₂max (maximal oxygen consumption); increased cardiac output, stroke volume, blood volume, and lung ventilation in trained athletes; lower resting heart rate and increased maximal cardiac output; elevated lactate threshold and improved metabolic efficiency (economy).',
+  'Psychological factors — motivation: determination, mental toughness, willingness to endure training and competition stress. Tactics and strategy: effective decision-making, game intelligence, tactical execution under competitive conditions.',
+],
+
+// **LO-9** (Topic-84)
+officialDefinitions: [
+  'Nutrition is crucial for optimizing performance. CHs: at least 50% of the total caloric intake should be covered from CHs (5–13 g/kg). Good timing increases performance (carbohydrate and protein rich meal 2 hours before and after training). Proteins: 1.2–2.0 g/kg/day.',
+  'Hydration: dehydration as small as 2% body weight loss can impair performance. Drink before, during, and after exercise. Electrolyte supplementation may be necessary during prolonged activity.',
+  'Timing of food intake: 3–4 hours before exercise — balanced meal rich in carbs, some protein, and fluids. 30–60 minutes before — small, easily digestible snack or drink. During prolonged activity (>1 hour) — 30–60 grams of carbohydrates per hour with ~150–250 mL of fluid every 15–20 minutes. Post-exercise — nutrients should be consumed within 30–60 minutes to maximize recovery (glycogen resynthesis and muscle repair). After exercise, combining carbohydrates and proteins (ideally in a 3:1 or 4:1 ratio) promotes muscle glycogen resynthesis and tissue repair.',
+  'Fluid intake and electrolytes: sweat contains a large amount of sodium chloride. Exercise-associated hyponatremia (low plasma sodium) may result from drinking excessive hypotonic fluids (e.g., water or diluted sports drinks) without adequate salt intake, especially during prolonged exertion. Potassium loss is another concern during heavy sweating.',
+  'Ergogenic substances: performance-enhancing agents used to improve endurance, strength, or recovery. 1. Anabolic agents — e.g., steroids, growth hormone, selective androgen receptor modulators: increase muscle mass and repair. 2. Stimulants — e.g., caffeine, amphetamines, dopamine-related drugs: improve reaction time, alertness, and delay fatigue. 3. Blood boosters — e.g., erythropoietin (EPO): increase red blood cell count and oxygen delivery. 4. Painkillers — reduce discomfort and allow performance below usual pain thresholds. Some substances may enhance performance, but safety and anti-doping regulations must always be considered.',
+],
+```
+
+---
+
+## Source Verification
+
+| LO | Sources Used |
+|----|-------------|
+| LO-1 | Sportphys_MED_2026.pdf (energy sources slides, ATP/PCr system, anaerobic glycolysis, oxidative metabolism, hormones slide), Notes_8384.pdf |
+| LO-2 | Sportphys_MED_2026.pdf (classification table), Notes_8384.pdf (detailed fiber properties table) |
+| LO-3 | Sportphys_MED_2026.pdf (overview table, duration/intensity content), Notes_8384.pdf |
+| LO-4 | Sportphys_MED_2026.pdf (muscle fiber composition slide), Notes_8384.pdf |
+| LO-5 | Sportphys_MED_2026.pdf (VO₂max slide, VO₂max values slide, muscle fatigue slide, muscle pain slide), Notes_8384.pdf |
+| LO-6 | Sportphys_MED_2026.pdf (acute cardiorespiratory responses slides 1 & 2, lactate metabolism/threshold slide), Notes_8384.pdf |
+| LO-7 | Sportphys_MED_2026.pdf (adaptations to training slide, what determines muscle O₂ uptake slide), Notes_8384.pdf, reference values table |
+| LO-8 | Sportphys_MED_2026.pdf (determinants of sports performance slide), Notes_8384.pdf |
+| LO-9 | Sportphys_MED_2026.pdf (nutrition slide, ergogenic substances slide), Notes_8384.pdf |

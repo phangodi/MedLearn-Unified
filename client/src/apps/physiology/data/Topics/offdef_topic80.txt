@@ -1,0 +1,56 @@
+```javascript
+// **LO-1** (Topic-80)
+// Identify the normal range of dietary K⁺ intake and major routes of K⁺ loss from the body
+officialDefinitions: [
+  'K⁺ intake (dietary): Food/drinks: 50-100 mmol/day. Total intake: 50-100 mmol/day.',
+  'K⁺ excretion (routes of loss): Urine: 45-90 mmol/day. Stool, sweat: ~10 mmol/day. Total excretion: 50-100 mmol/day.',
+  'K⁺ absorption: Absorption from the gastrointestinal system (GIS) is NOT controlled. Absorbed K⁺ will be taken up into the intracellular (IC) space, from where it is continuously replenishing the extracellular (EC) K⁺ reduced by urine excretion.',
+  'K⁺ metabolism control: K⁺ metabolism is controlled through the regulation of EXCRETION.',
+  'Normal serum K⁺: normal serum K⁺ = 4 mmol/L (3.5–5.2 mmol/L). Hyperkalemia >5.5 mmol/L (>6.5 mmol/L). Hypokalemia <3.5 mmol/L.',
+],
+
+// **LO-2** (Topic-80)
+// Define the role of extracellular K⁺ in maintaining normal nerve, heart muscle and skeletal muscle function
+officialDefinitions: [
+  'Extracellular K⁺ and resting membrane potential (RMP): Changes in EC K⁺ concentration elicit symptoms that can be explained due to altered resting membrane potential (RMP). Affects chiefly EXCITABLE tissues.',
+  'Hyperkalemia effect: Hyperkalemia reduces E_K⁺. Both hyperkalemia and hypokalemia induce DEPOLARIZATION (hyperkalemia reduces K⁺ equilibrium potential; hypokalemia reduces K⁺- and/or elevates Na⁺ permeability).',
+  'Symptoms of hypo/hyperkalemia: Symptoms of hypo/hyperkalemia can be similar: life-threatening ARRHYTHMIAS, fatigue, muscle weakness, cramps, constipation, numbness/tingling.',
+  'Nernst equation relevance: E_K⁺ = −61 · log(K⁺_i / K⁺_o) mV. The resting membrane potential (RMP) of cardiac muscle fiber is directly dependent on the K⁺ gradient.',
+  'Tissue specificity: Changes in EC K⁺ concentration primarily affect excitable tissues: nerve cells (essential for neurotransmission), skeletal muscles (for contraction), and cardiac muscles (for coordinated heartbeats). The Na⁺/K⁺ ATPase pump actively transports 3 Na⁺ out and 2 K⁺ in, maintaining a high intracellular K⁺ concentration and a negative RMP.',
+],
+
+// **LO-3** (Topic-80)
+// Describe K⁺ distribution within the body, extrarenal K⁺ homeostasis, and the role insulin, epinephrine, and aldosterone play in the movement of K⁺ between intracellular and extracellular pools. Describe the K⁺ shift caused by acidosis
+officialDefinitions: [
+  'Total body K⁺ content and distribution: The body contains approximately 6.1 mol = 240 g K⁺. 98% of K⁺ are found INTRACELLULAR. Extracellular K⁺: 80 mmol = (4 mmol/L) × 20 L.',
+  'K⁺ absorption and IC uptake: K⁺ absorption occurs in the small intestine mainly by passive paracellular transport. Absorbed K⁺ stimulates INSULIN secretion; insulin in turn stimulates K⁺ uptake of target cells. In addition to insulin, T4/T3 and β-adrenergic agonists possess similar effects.',
+  'Role of insulin: Insulin stimulates K⁺ uptake into cells after a meal by increasing Na⁺-K⁺ ATPase activity. This prevents dangerous postprandial hyperkalemia.',
+  'Role of epinephrine (β-adrenergic agonists): β-adrenergic agonists stimulate K⁺ uptake into cells by activating β2-adrenergic receptors, which increase Na⁺-K⁺ ATPase activity. During exercise or stress, epinephrine prevents hyperkalemia by shifting K⁺ into cells.',
+  'Role of aldosterone: Aldosterone increases K⁺ excretion by stimulating Na⁺ reabsorption and K⁺ secretion in the distal nephron. Aldosterone controls gene expression (Na/K pump, ENaC, ROMK) by binding to the mineralocorticoid receptor (MR). Specificity is ensured by a unique pre-receptor mechanism, as the enzyme 11β-BHSDH inactivates cortisol. Total aldosterone deficiency causes lethal hyperkalemia.',
+  'K⁺ shift caused by acidosis: EC pH and K⁺ are inversely coupled to each other: acidosis ↔ hyperkalemia, alkalosis ↔ hypokalemia. Causes: EC-IC K⁺ shift (H⁺ enters cells in exchange for K⁺, leading to increased extracellular K⁺; H⁺ also inhibits Na⁺-K⁺ ATPase, further reducing K⁺ uptake into cells), and in the collecting duct H⁺ secretion is coupled to K⁺ reabsorption.',
+],
+
+// **LO-4** (Topic-80)
+// Calculate the normal filtered load of K⁺. Identify the tubular sites of K⁺ reabsorption and secretion
+officialDefinitions: [
+  'Filtered load of K⁺ calculation: K⁺ is freely filtered. Filtered amount = GFR × P_K = 180 L/day × 4 mmol/L = 720 mmol/day.',
+  'Proximal convoluted tubule (PCT): Reabsorbs ~65% of filtered K⁺. Passive transport, driven by Na⁺ and water reabsorption. Minimal secretion to lumen.',
+  'Thick ascending limb (TAL): Reabsorbs ~25% of the filtered amount. Na⁺-K⁺-2Cl⁻ cotransporter (NKCC2) mediates active K⁺ reabsorption.',
+  'Collecting duct (outer medullary segment): 90% of filtered amount (~650 mmol/day) is automatically reabsorbed until the distal nephron (65% PCT, 25% TAL). In the collecting duct segment of the outer medulla, tubular secretion of K⁺ greatly exceeding the filtered amount is possible, BUT further net absorption is also a possibility. Excreted amount can vary between 3–200% of filtered amount (~20–1400 mmol/day), ensuring a large safety margin to prevent hyperkalemia.',
+  'K⁺ secretion in principal cells of collecting duct: Primary active transport through the basolateral Na⁺/K⁺ pump, passive diffusion through luminal ROMK K⁺-channels (controlled by aldosterone).',
+  'K⁺ reabsorption in A-type intercalated cells of collecting duct: Primary active transport through luminal H⁺/K⁺ pump, passive diffusion through basolateral K⁺-channels (controlled directly by EC K⁺).',
+],
+
+// **LO-5** (Topic-80) [CRITICAL]
+// >>Describe the factors that regulate K⁺ secretion in the collecting duct<< (i.e., aldosterone, plasma K⁺)
+// >>and distinguish these from factors that alter secretion at this site<< (i.e., luminal fluid flow rate, acid-base disturbances, anion delivery)
+officialDefinitions: [
+  'Principal cells — mechanism of K⁺ secretion: The cells in the collecting duct that secrete K⁺ are called principal cells. The secretion process is a two-step process: (1) Uptake of K⁺ from interstitium by Na⁺/K⁺ ATPase pump. (2) Passive diffusion into the tubular lumen by ROMK and BK channels.',
+  'REGULATOR — Aldosterone: Aldosterone controls gene expression (Na/K pump, ENaC, ROMK) by binding to the mineralocorticoid receptor (MR). Specificity is ensured by the unique pre-receptor mechanism — the enzyme 11β-BHSDH inactivates cortisol. Aldosterone stimulates Na⁺/K⁺ ATPase and increases the number of K⁺ channels, increasing permeability. Total aldosterone deficiency causes lethal hyperkalemia.',
+  'REGULATOR — Plasma K⁺ concentration: Increased ECF K⁺ concentration stimulates K⁺ secretion via: (1) Na⁺/K⁺ ATPase stimulation, (2) increased K⁺ gradient, (3) synthesis of K⁺ channels, (4) stimulation of aldosterone secretion. K⁺ reabsorption in A-type intercalated cells is controlled directly by EC K⁺ (via luminal H⁺/K⁺ pump).',
+  'ALTERING FACTOR — Luminal fluid flow rate: Diuretics acting BEFORE the collecting duct INCREASE luminal flow in the collecting duct, therefore they also INCREASE K⁺ secretion → hypokalemia develops. These diuretics require dietary potassium supplement. Mechanism: increased flow flushes out secreted K⁺, preventing concentration buildup, and activates BK channels due to high flow, increasing K⁺ conductance. Diuretics acting on the collecting duct (ENaC inhibitor amiloride, and aldosterone-antagonist spironolactone) are, however, "K⁺-sparing" diuretics.',
+  'ALTERING FACTOR — Acid-base disturbances: EC pH and K⁺ are inversely coupled to each other: acidosis ↔ hyperkalemia, alkalosis ↔ hypokalemia. Alkalosis increases K⁺ secretion (H⁺ leaves ECF, enters cells → K⁺ leaves cells to maintain electroneutrality). Acidosis decreases K⁺ secretion (H⁺ enters cells from ECF → K⁺ enters ECF to maintain electroneutrality). In the collecting duct, H⁺ secretion is coupled to K⁺ reabsorption.',
+  'ALTERING FACTOR — Luminal anion delivery: Large anions (e.g., HCO₃⁻, sulfate) increase lumen electronegativity, enhancing the electrochemical driving force for K⁺ secretion into the tubular lumen.',
+  'Intercalated cells — K⁺ reabsorption in K⁺ depletion: In severe K⁺ depletion, Type A intercalated cells reabsorb K⁺ through H⁺/K⁺ ATPase in the luminal membrane (linked to acidosis). In excess K⁺: Type B intercalated cells secrete K⁺ into the tubular lumen.',
+],
+```

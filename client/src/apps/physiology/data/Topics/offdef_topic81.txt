@@ -1,0 +1,116 @@
+```javascript
+// **LO-1** (Topic-81)
+// Identify the normal range of dietary Ca²⁺ and phosphate intake, major storage pools of Ca²⁺ and phosphate,
+// and major routes of Ca²⁺ and phosphate loss from the body
+officialDefinitions: [
+  'Dietary intake: RDA for Ca²⁺: 1 g/day (25 mmol/day), net absorption: 200 mg/day (5 mmol/day). Phosphate (PO₄²⁻): 1 g/day (1000 mg/day).',
+  'Ca²⁺ storage pools: Bones (99%) — the primary reservoir and nonexchangeable (nonlabile) calcium pool. ECF: 1 g (0.025 mol). Cells and organelles: ~1% — small intracellular storage. Plasma Ca²⁺: Total Ca²⁺: 2.1–2.6 mmol/L (50% ionized, 40% protein-bound, 10% complex salts). Ionized (free) Ca²⁺: 1.16–1.32 mmol/L — biologically active and under homeostatic control.',
+  'Phosphate storage pools: Bones (85%) — major phosphate reservoir. Cells (14–15%) — involved in ATP production and metabolism. Extracellular fluid (0–1%) — circulating phosphate. Plasma phosphate concentration (HPO₄²⁻/H₂PO₄⁻): 0.8–1.2 mmol/L (50% ionized, 40% complex salts, 10% protein-bound).',
+  'Major routes of Ca²⁺ loss: Urine: ~100 mg/day (2.5–7.5 mmol/day, = 1–3% of filtered amount). Feces: ~900 mg/day (unabsorbed dietary Ca²⁺). The balance between the daily amount of absorbed (GIS) and excreted (kidney) calcium determines calcium balance.',
+  'Calcium balance states: Positive calcium balance: until the end of net bone formation. Negative calcium balance: due to osteoporosis (especially in postmenopausal women, peak bone mass is 30% less). Increased Ca²⁺ demand: pregnancy, lactation (nursing), growth.',
+  'GI handling of calcium: Passive paracellular absorption (~50%). Transcellular active absorption via specific membrane and intracellular proteins (TRPV channels, calbindins, PMCA and NCX transporters), regulated by calcitriol. Net absorption is ~20% (max. 30%) of dietary intake.',
+],
+
+// **LO-2** (Topic-81) [CRITICAL]
+// >>Identify the tubular sites of Ca²⁺ reabsorption.<< Calculate the normal filtered load of Ca²⁺.
+// Calculate the normal filtered load of phosphate. Identify the tubular sites of phosphate reabsorption.
+// Identify the tubular transport mechanisms that are hormonally regulated
+officialDefinitions: [
+  'Filtered load of Ca²⁺ calculation: The free, ionized Ca²⁺ is filtered. Filtered load = GFR × plasma [Ca²⁺] = 180 L/day × 1.4 mmol/L = 270 mmol/day (~10 g/day). Excretion: 1–3% of filtered amount: 2.5–7.5 mmol/day.',
+  'Ca²⁺ reabsorption — Proximal tubule: ~65% (some sources 90% proximal tubule + loop combined). Passive paracellular transport. Not regulated by PTH.',
+  'Ca²⁺ reabsorption — Loop of Henle (thick ascending limb): ~25–30% reabsorbed. Passive paracellular transport. 90% of filtered Ca²⁺ is reabsorbed in the proximal tubule and the loop of Henle by passive paracellular transport.',
+  'Ca²⁺ reabsorption — Distal convoluted tubule (active, PTH-regulated): 5–10% reabsorbed in the distal convoluted tubule. Active transcellular transport. Mechanism: free diffusion through luminal Ca²⁺ channels (TRPV5), followed by primary or secondary active transport through the basolateral membrane. This mechanism is ACTIVATED by PTH. Direct effect of EC Ca²⁺ on Ca²⁺ reabsorption: Ca²⁺ activates Ca²⁺-sensor receptors that inhibit Ca²⁺ reabsorption — a kind of "autoregulation."',
+  'Filtered load of phosphate calculation: Free phosphate (Pᵢ) is freely filtered. Filtered load = GFR × plasma [Pᵢ] = 180 L/day × 1.2 mmol/L = 216–240 mmol/day.',
+  'Phosphate reabsorption — Proximal convoluted tubule: 85–95% is reabsorbed in the proximal convoluted segment. Glucose-type reabsorption: secondary active transport with Na⁺ (has Tₘₐₓ!). PTH inhibits phosphate reabsorption in the proximal tubule. Calcitriol stimulates intestinal phosphate absorption.',
+  'Hormonally regulated tubular transport mechanisms: PTH — in proximal tubular cells: inhibits phosphate reabsorption (via Na⁺/phosphate cotransporter); in distal tubule: increases Ca²⁺ reabsorption (via TRPV5 channels and transport proteins); stimulates calcitriol synthesis (via 1α-hydroxylase). Calcitriol — stimulates intestinal Ca²⁺ and phosphate absorption; inhibits 1α-hydroxylase (negative feedback on own synthesis).',
+],
+
+// **LO-3** (Topic-81)
+// Know the cells of origin for parathyroid hormone (PTH), its biosynthesis and degradation
+officialDefinitions: [
+  'Source and anatomy: Parathyroid glands (4 glands), located on the posterior surface of the thyroid gland. Chief cells — primarily responsible for sensing extracellular calcium levels and secreting parathyroid hormone (PTH). Related molecules: PTHrP (parathyroid hormone-related protein, paraneoplastic).',
+  'PTH structure: 84 amino acid peptide hormone. Half-life in circulation: ~5 min.',
+  'Biosynthesis (step-by-step): (1) Synthesis begins on ribosomes as preproPTH (115 amino acids). (2) A 25-amino acid signal peptide is cleaved as it enters the rough endoplasmic reticulum (RER), forming proPTH (90 amino acids). (3) ProPTH is transported to the Golgi apparatus, where 6 additional amino acids are removed, yielding the final active PTH (84 amino acids). (4) PTH is packaged into secretory granules and stored until secretion is required. (5) Secretion is regulated by extracellular Ca²⁺ levels: low plasma Ca²⁺ → increased PTH secretion; high plasma Ca²⁺ → decreased PTH secretion.',
+  'Degradation: PTH has a short half-life of about 5 minutes in circulation. Metabolism occurs in the liver and kidney, where it is broken down into inactive fragments. The biologically active portion is the N-terminal fragment, which is rapidly degraded. The C-terminal fragments are biologically inactive but have a longer half-life and are cleared by the kidneys.',
+],
+
+// **LO-4** (Topic-81) [CRITICAL]
+// >>Describe the regulation of PTH secretion and the role of the Ca²⁺-sensing receptor<<
+officialDefinitions: [
+  'Core principle: PTH secretion is tightly coupled to normal EC Ca²⁺. Ca²⁺ inhibits PTH through stimulation of cell membrane Ca²⁺-sensor receptors (7TM/G-protein). Calcitriol also inhibits PTH (genomal effect — suppresses PTH gene expression).',
+  'Ca²⁺-sensing receptor (CaSR) — structure and location: Located on the chief cells of the parathyroid gland. Functions as a G-protein-coupled receptor (GPCR) that detects extracellular Ca²⁺ concentrations (7 transmembrane receptor, very sensitive to Ca²⁺).',
+  'High plasma Ca²⁺ → inhibition of PTH secretion: Extracellular Ca²⁺ binds to the CaSR on the membrane of parathyroid chief cells. CaSR activation stimulates phospholipase C (PLC), which increases intracellular IP₃ and DAG levels, leading to release of calcium from intracellular stores. Increased intracellular calcium inhibits PTH secretion through negative feedback.',
+  'Low plasma Ca²⁺ → stimulation of PTH secretion: When Ca²⁺ levels drop, CaSR is not activated. This leads to reduction in PLC activity, resulting in lower intracellular IP₃ and DAG. Intracellular calcium levels decrease, removing inhibition on PTH secretion. As a result, PTH is secreted to restore calcium homeostasis. The vesicles containing PTH merge with the cell membrane and PTH is released into the bloodstream.',
+  'Calcitriol feedback on PTH: Calcitriol also inhibits PTH (genomal effect — suppresses PTH gene expression). Synthesis of calcitriol is stimulated by PTH, hypocalcemia, and hypophosphatemia.',
+],
+
+// **LO-5** (Topic-81) [CRITICAL]
+// >>List the target organs and cell types for PTH and describe its effects on each<<
+officialDefinitions: [
+  'Overall function of PTH: Effect of PTH: to prevent hypocalcaemia. PTH acts via 7TM receptor with Gs/cAMP or Gq/PLC/IP₃ stimulation.',
+  'Target organ — Bone (osteoblasts and osteoclasts): PTH promotes osteolysis: complex effect — direct on osteocytes, indirect on osteoclasts. Mechanism: PTH stimulates osteoblasts to increase RANKL (Receptor Activator of Nuclear factor Kappa-B Ligand) production; production of OPG (osteoprotegerin) is inhibited by PTH. RANKL binds to RANK receptors on pre-osteoclasts → promotes fusion and activation → multinucleated mature osteoclasts resorb bone. Osteoclasts secrete acid (H⁺) and proteolytic enzymes (cathepsin K, acid phosphatases) to dissolve bone. This releases Ca²⁺ and Pᵢ (inorganic phosphate) into circulation. Two phases: immediate effect (activation of existing osteoclasts) and delayed effect (recruitment and proliferation of new osteoclasts).',
+  'Target organ — Kidney (renal tubular cells): In the proximal tubular cells: inhibits phosphate reabsorption (phosphaturia) and stimulates calcitriol synthesis (via 1α-hydroxylase). In the distal tubule: increases calcium reabsorption (via stimulation of luminal Ca²⁺ channels TRPV5 and Ca²⁺ transport proteins — PTH activates Gs/cAMP → protein kinase A → increases calcium transport proteins embedded in the membrane).',
+  'Target organ — Intestine (enterocytes, indirect effect): PTH does not directly act on the intestines but stimulates the conversion of 25-hydroxycholecalciferol into the active form 1,25-dihydroxycholecalciferol (calcitriol) in the kidneys. Calcitriol then enhances intestinal calcium AND phosphate absorption via TRPV5/6 channels, calbindins, PMCA and NCX transporters.',
+  'RANKL–RANK–OPG system summary: RANK: Receptor for the Activation of Nuclear factor Kappa-B (present on early osteoclasts). RANKL: present in osteoblast membranes — production stimulated by PTH, calcitriol, also cytokines, prostaglandins, and cortisol. Osteoprotegerin (OPG): soluble decoy protein that INHIBITS RANKL–RANK binding — produced by osteoblasts (production inhibited by PTH, stimulated by estrogen).',
+],
+
+// **LO-6** (Topic-81)
+// Understand the causes and consequences of a) over-secretion, and b) under-secretion of PTH,
+// as well as its therapeutic use. Explain the symptoms of latent tetany (Chvostek's and Trousseau's sign)
+officialDefinitions: [
+  'Hypoparathyroidism (under-secretion of PTH): Occurs when the parathyroid glands fail to secrete sufficient PTH. Leads to reduced osteoclastic resorption of calcium from bones. Results in low blood calcium (hypocalcemia), causing: tetany (neuromuscular hyperexcitability), muscle spasms including laryngeal spasms that can cause airway obstruction. Treatment: administer PTH and vitamin D to help restore calcium homeostasis.',
+  'Hyperparathyroidism (over-secretion of PTH): Caused by parathyroid tumors or hypocalcemia-driven PTH overproduction. Leads to: excessive bone resorption → weak bones and increased risk of fractures. Hypercalcemia (high calcium levels in blood). Increased phosphate excretion in urine → hypophosphatemia. Complications: bone diseases (osteoporosis, osteitis fibrosa cystica), metastatic calcifications (soft tissue calcium deposition — the EC concentrations of calcium and inorganic phosphate are close to their solubility limit — further increases might evoke precipitation of insoluble Ca²⁺-salts in soft tissues, e.g., kidney: nephrocalcinosis), kidney stones. Treatment: adjust diet, increase hydration, and in severe cases surgical removal of the parathyroid gland.',
+  'Tetany mechanism: Ionized Ca²⁺ plays roles in many physiologic processes, but neuromuscular excitability is MOST sensitive to hypocalcaemia. The activation threshold of voltage-gated Na⁺ channels is strongly dependent on the EC Ca²⁺ concentration. Tetany means uncontrolled muscular spasms that can involve laryngeal and respiratory muscles causing death. Latent tetany: no spontaneous spasms yet, but enhanced excitability can be shown by special tests.',
+  'Trousseau\'s sign: Mild hypoxia induced by blood pressure cuff inflation triggers CARPAL spasm: muscle cramps in the forearm/hand muscles.',
+  'Chvostek\'s sign: Tap the facial nerve either just anterior to the earlobe or below the zygomatic arch and the corner of the mouth. A positive response varies from twitching of the lip at the corner of the mouth to spasm of all facial muscles, depending on the severity of hypocalcaemia.',
+],
+
+// **LO-7** (Topic-81) [CRITICAL]
+// >>Identify the sources of vitamin D and diagram the biosynthetic pathway and the organs involved
+// in modifying it to the biologically active 1,25(OH₂)D₃ (1-25 dihydroxycholecalciferol, calcitriol)<<
+officialDefinitions: [
+  'Sources of vitamin D: Calcitriol is an endogenous substance — we need exogenous supply (RDA: 600 IU) only because of limited exposure to UV light. Pro-hormones (dietary forms): D₂ — ergocalciferol (plants, mushrooms exposed to sunlight); D₃ — cholecalciferol (animals: fatty fish, liver, egg yolk). Fortified foods: dairy products, cereals, orange juice.',
+  'UV light synthesis (skin — Step 1): In the skin, 7-dehydrocholesterol (7-OH-cholesterol) is converted by UV light (UVB) to cholecalciferol (vitamin D₃). Only outdoors (glass is a UV filter). "Vitamin D winter" — the more away from the equator, the less UVB in winter sunshine. ~10–20 min daily direct exposure of ~25% of body surface in midday sun is sufficient. Production decreases with age; blood concentration is decreased by amount of adipose tissue. Dark skin and sunscreen block UVB (thus vitamin D production).',
+  'Liver hydroxylation (Step 2): Cholecalciferol (vitamin D₃) undergoes first hydroxylation in the liver by the enzyme 25-hydroxylase. Produces 25-hydroxycholecalciferol (25-hydroxy vitamin D, calcidiol) — the major circulating form of vitamin D.',
+  'Kidney activation (Step 3 — the regulated step): 25-hydroxycholecalciferol is transported to the kidney, where it undergoes a second hydroxylation by the enzyme 1α-hydroxylase, located in renal proximal tubule epithelial cells. Produces 1,25-dihydroxycholecalciferol (1,25-dihydroxy vitamin D, calcitriol) — the ACTIVE form of vitamin D. This is the regulated step: synthesis stimulated by PTH, hypocalcemia, hypophosphatemia. Decreased PTH → increased Ca and P → produces 24,25(OH)₂D₃ (inactive pathway) instead of 1,25(OH)₂D₃.',
+  'Vitamin D RDA: Endogenous substance — RDA: 600 IU/day (between 1–70 years of age). Vitamin D-substitution: first 2 years of life; vitamin D-fortified milk products, oily fish, vegetable oils, margarines, dietary supplements. D-hypervitaminosis is possible with excess supplementation.',
+],
+
+// **LO-8** (Topic-81) [CRITICAL]
+// >>Identify the target organs and cellular mechanisms of action for calcitriol<<
+officialDefinitions: [
+  'Cellular mechanism of action (VDR): Calcitriol utilizes intracellular receptors (VDR — Vitamin D Receptor) to regulate gene expression. Calcitriol binds to VDR, a nuclear receptor found in most cells. The VDR forms a complex with the Retinoid X Receptor (RXR). This complex binds to Vitamin D Response Elements (VDREs) in the DNA, altering gene expression (similar mechanism to steroid hormones).',
+  'Target organ — GIS (intestinal enterocytes): Stimulates intestinal calcium AND phosphate absorption. Mechanism: stimulates transcription of calcium-binding proteins (calbindin), which facilitates calcium transport across the brush border of enterocytes via TRPV5/6 channels. Stimulates calcium ATPase (PMCA1b) and Na⁺/Ca²⁺ exchanger (NCX1) at the basolateral membrane. Enhances phosphate absorption through increased phosphate flux across the gut.',
+  'Target organ — Bone (osteoblasts and osteoclasts): Direct effect: osteolysis (promotes osteoclast activation via RANKL–RANK signaling — RANKL production is stimulated by calcitriol in osteoblasts). Indirect effect: promotes mineralization. Works with PTH to stimulate osteoclast activity, releasing calcium and phosphate from bones. Also plays a role in bone mineralization, ensuring proper deposition of calcium and phosphate.',
+  'Target organ — Kidney (renal proximal tubule): Inhibits the expression of 1α-hydroxylase (negative feedback on own synthesis). Increases calcium reabsorption in the distal tubules. Enhances phosphate reabsorption, reducing urinary loss.',
+  'Target organ — Parathyroid gland: Inhibits the synthesis of PTH — negative feedback. Calcitriol inhibits PTH gene transcription, reducing PTH secretion.',
+  'Non-specific effects: Non-specific anti-proliferative and anti-inflammatory effects. Exhibits anti-proliferative and anti-inflammatory effects in various tissues, including the immune system and skin.',
+],
+
+// **LO-9** (Topic-81)
+// Describe the negative feedback relationship between PTH and calcitriol
+officialDefinitions: [
+  'PTH stimulates calcitriol production: Synthesis of calcitriol is stimulated by PTH. PTH stimulates 1α-hydroxylase in the kidney, increasing production of calcitriol. In the absence of PTH, almost no calcitriol is formed.',
+  'Calcitriol suppresses PTH secretion: Calcitriol inhibits the synthesis of PTH (genomal effect — suppresses PTH gene expression in the parathyroid gland). Calcitriol also promotes intestinal calcium absorption, leading to an increase in plasma calcium. Elevated calcium levels provide negative feedback to the Ca²⁺-sensing receptor (CaSR) in the parathyroid glands, further inhibiting PTH release.',
+  'Calcitriol negative feedback on own synthesis: Calcitriol inhibits the expression of 1α-hydroxylase (kidney) — negative feedback on its own synthesis. High plasma calcium or phosphate levels also inhibit 1α-hydroxylase to prevent excess vitamin D activation. In conditions of high PTH + low Ca + low P → 1α-hydroxylase is active → produces 1,25(OH)₂D₃. Decreased PTH + increased Ca and P → produces 24,25(OH)₂D₃ (the inactive pathway).',
+  'Integrated loop summary: Low plasma Ca²⁺ → stimulates PTH secretion → PTH stimulates 1α-hydroxylase in kidney → produces calcitriol → calcitriol increases intestinal Ca²⁺ absorption and renal Ca²⁺ reabsorption → plasma Ca²⁺ rises → Ca²⁺ activates CaSR on parathyroid chief cells → inhibits PTH → calcitriol synthesis decreases. EXCLUSIVELY endocrine regulation of EC ionized Ca²⁺.',
+],
+
+// **LO-10** (Topic-81)
+// Describe the consequences of vitamin D deficiency and vitamin D excess
+officialDefinitions: [
+  'Vitamin D deficiency: Most commonly results from inadequate sunlight exposure and inadequate nutritional intake of vitamin D. Vitamin D-substitution recommended in first 2 years of life.',
+  'Vitamin D deficiency — consequences: Osteomalacia (bone softening): the ratio of mineral to organic material is reduced — bone mineralization is affected. Vitamin D deficiency in adults, parathormone overproduction. Rickets (rachitis): historical consequence of D-hypovitaminosis (now managed with vitamin D substitution and fortified foods). Osteopenia/Osteoporosis: bones are fragile and brittle, loss of both mineral and organic materials (reduction of bone mass). Increased fracture risk. Muscle twitching and weakness.',
+  'Vitamin D excess (D-hypervitaminosis): Causes abnormally high blood concentration of calcium (hypercalcemia). The EC concentrations of calcium and inorganic phosphate are close to their solubility limit — further increases might evoke precipitation of insoluble Ca²⁺-salts in the soft tissues (e.g., kidney — nephrocalcinosis). Overcalcification of the bones, soft tissues, heart, and kidneys. Hypertension. Symptoms: dehydration, vomiting, decreased appetite, fatigue, muscle weakness. In case of extreme excess → bone resorption.',
+],
+
+// **LO-11** (Topic-81)
+// Name the stimuli that can promote secretion of calcitonin, its actions,
+// and identify which (if any) are physiologically important
+officialDefinitions: [
+  'Source and structure: Produced by the parafollicular C (clear) cells of the thyroid gland. 32 amino acid peptide. Related peptide: CGRP (calcitonin gene-related peptide, found in neurons). Same Ca²⁺-sensor receptor is coupled to a different transduction mechanism (compared to parathyroid chief cells).',
+  'Stimuli for calcitonin secretion: Elevated calcium levels (hypercalcemia) STIMULATE calcitonin release — the primary physiological stimulus. Gastrointestinal hormones (e.g., gastrin) — stimulate calcitonin release after a meal. Certain pharmacological agents.',
+  'Actions of calcitonin: Major effect: inhibition of bone resorption (osteoclasts) to decrease plasma calcium. Calcitonin decreases the resorptive activity of osteoclasts (direct receptors for calcitonin on osteoclasts). Reduces the osteolytic effect of osteocytic membranes. Promotes deposition of calcium in bone instead of resorption. Inhibits formation of new osteoclasts (prolonged effect). Minor effects: decreases renal calcium reabsorption (increasing calcium excretion); reduces intestinal calcium absorption; opposes PTH effects.',
+  'Physiological importance: Physiologic significance is uncertain — no symptoms of deficiency. Calcitonin plays a minor role in calcium homeostasis in adults because PTH is the primary regulator of calcium balance. May have a more significant role in children and during pregnancy/lactation — protecting bones from excessive resorption.',
+],
+```
